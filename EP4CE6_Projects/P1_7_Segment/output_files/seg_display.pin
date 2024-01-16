@@ -201,11 +201,11 @@ seg[3]                       : 129       : output : 3.3-V LVTTL       :         
 VCCIO8                       : 130       : power  :                   : 3.3V    : 8         :                
 GND                          : 131       : gnd    :                   :         :           :                
 seg[4]                       : 132       : output : 3.3-V LVTTL       :         : 8         : Y              
-dig[0]                       : 133       : output : 3.3-V LVTTL       :         : 8         : Y              
+sel[0]                       : 133       : output : 3.3-V LVTTL       :         : 8         : Y              
 VCCINT                       : 134       : power  :                   : 1.2V    :           :                
-dig[1]                       : 135       : output : 3.3-V LVTTL       :         : 8         : Y              
-dig[2]                       : 136       : output : 3.3-V LVTTL       :         : 8         : Y              
-dig[3]                       : 137       : output : 3.3-V LVTTL       :         : 8         : Y              
+sel[1]                       : 135       : output : 3.3-V LVTTL       :         : 8         : Y              
+sel[2]                       : 136       : output : 3.3-V LVTTL       :         : 8         : Y              
+sel[3]                       : 137       : output : 3.3-V LVTTL       :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 138       :        :                   :         : 8         :                
 VCCIO8                       : 139       : power  :                   : 3.3V    : 8         :                
 GND                          : 140       : gnd    :                   :         :           :                

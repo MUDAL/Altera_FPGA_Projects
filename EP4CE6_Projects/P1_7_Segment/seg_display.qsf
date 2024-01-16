@@ -80,7 +80,6 @@ set_location_assignment PIN_129 -to seg[3]
 set_location_assignment PIN_132 -to seg[4]
 set_location_assignment PIN_126 -to seg[5]
 set_location_assignment PIN_124 -to seg[6]
-set_location_assignment PIN_127 -to seg[7]
 set_global_assignment -name VHDL_FILE counter.vhd
 set_global_assignment -name VHDL_FILE seg_counter.vhd
 set_global_assignment -name VHDL_FILE seg_rom.vhd
@@ -88,9 +87,14 @@ set_location_assignment PIN_25 -to rst_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rst_n
 set_location_assignment PIN_23 -to clk
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
-set_location_assignment PIN_137 -to dig[3]
-set_location_assignment PIN_136 -to dig[2]
-set_location_assignment PIN_135 -to dig[1]
-set_location_assignment PIN_133 -to dig[0]
 set_global_assignment -name QIP_FILE pll.qip
+set_location_assignment PIN_133 -to sel[0]
+set_location_assignment PIN_137 -to sel[3]
+set_location_assignment PIN_136 -to sel[2]
+set_location_assignment PIN_135 -to sel[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sel[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sel[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sel[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sel[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sel
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
