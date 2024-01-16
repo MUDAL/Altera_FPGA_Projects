@@ -1,0 +1,496 @@
+|seg_display
+rst_n => seg_counter:counter_1.rst_n
+rst_n => seg_counter:counter_2.rst_n
+rst_n => seg_counter:counter_3.rst_n
+rst_n => seg_counter:counter_4.rst_n
+clk => seg_counter:counter_1.clk
+clk => seg_counter:counter_2.clk
+clk => seg_counter:counter_3.clk
+clk => seg_counter:counter_4.clk
+seg[0] <= seg_rom:rom.data_out[0]
+seg[1] <= seg_rom:rom.data_out[1]
+seg[2] <= seg_rom:rom.data_out[2]
+seg[3] <= seg_rom:rom.data_out[3]
+seg[4] <= seg_rom:rom.data_out[4]
+seg[5] <= seg_rom:rom.data_out[5]
+seg[6] <= seg_rom:rom.data_out[6]
+dig[0] <= <VCC>
+dig[1] <= <VCC>
+dig[2] <= <GND>
+dig[3] <= <VCC>
+
+
+|seg_display|seg_counter:counter_1
+rst_n => pll:clock_10KHz.areset
+rst_n => count[0].ACLR
+rst_n => count[1].ACLR
+rst_n => count[2].ACLR
+rst_n => count[3].ACLR
+rst_n => clk_counter[0].ACLR
+rst_n => clk_counter[1].ACLR
+rst_n => clk_counter[2].ACLR
+rst_n => clk_counter[3].ACLR
+rst_n => clk_counter[4].ACLR
+rst_n => clk_counter[5].ACLR
+rst_n => clk_counter[6].ACLR
+rst_n => clk_counter[7].ACLR
+rst_n => clk_counter[8].ACLR
+rst_n => clk_counter[9].ACLR
+rst_n => clk_counter[10].ACLR
+rst_n => clk_counter[11].ACLR
+rst_n => clk_counter[12].ACLR
+rst_n => clk_counter[13].ACLR
+rst_n => clk_counter[14].ACLR
+rst_n => clk_counter[15].ACLR
+rst_n => clk_counter[16].ACLR
+rst_n => clk_counter[17].ACLR
+rst_n => clk_counter[18].ACLR
+rst_n => clk_counter[19].ACLR
+rst_n => clk_counter[20].ACLR
+rst_n => clk_counter[21].ACLR
+rst_n => clk_counter[22].ACLR
+rst_n => clk_counter[23].ACLR
+clk => pll:clock_10KHz.inclk0
+en => ~NO_FANOUT~
+count_out[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+count_out[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+count_out[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+count_out[3] <= count[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|seg_display|seg_counter:counter_1|pll:clock_10KHz
+areset => altpll:altpll_component.areset
+inclk0 => altpll:altpll_component.inclk[0]
+c0 <= altpll:altpll_component.clk[0]
+
+
+|seg_display|seg_counter:counter_1|pll:clock_10KHz|altpll:altpll_component
+inclk[0] => pll_altpll1:auto_generated.inclk[0]
+inclk[1] => pll_altpll1:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => pll_altpll1:auto_generated.areset
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= <GND>
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|seg_display|seg_counter:counter_1|pll:clock_10KHz|altpll:altpll_component|pll_altpll1:auto_generated
+areset => pll1.ARESET
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+
+
+|seg_display|seg_counter:counter_2
+rst_n => pll:clock_10KHz.areset
+rst_n => count[0].ACLR
+rst_n => count[1].ACLR
+rst_n => count[2].ACLR
+rst_n => count[3].ACLR
+rst_n => clk_counter[0].ACLR
+rst_n => clk_counter[1].ACLR
+rst_n => clk_counter[2].ACLR
+rst_n => clk_counter[3].ACLR
+rst_n => clk_counter[4].ACLR
+rst_n => clk_counter[5].ACLR
+rst_n => clk_counter[6].ACLR
+rst_n => clk_counter[7].ACLR
+rst_n => clk_counter[8].ACLR
+rst_n => clk_counter[9].ACLR
+rst_n => clk_counter[10].ACLR
+rst_n => clk_counter[11].ACLR
+rst_n => clk_counter[12].ACLR
+rst_n => clk_counter[13].ACLR
+rst_n => clk_counter[14].ACLR
+rst_n => clk_counter[15].ACLR
+rst_n => clk_counter[16].ACLR
+rst_n => clk_counter[17].ACLR
+rst_n => clk_counter[18].ACLR
+rst_n => clk_counter[19].ACLR
+rst_n => clk_counter[20].ACLR
+rst_n => clk_counter[21].ACLR
+rst_n => clk_counter[22].ACLR
+rst_n => clk_counter[23].ACLR
+clk => pll:clock_10KHz.inclk0
+en => ~NO_FANOUT~
+count_out[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+count_out[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+count_out[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+count_out[3] <= count[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|seg_display|seg_counter:counter_2|pll:clock_10KHz
+areset => altpll:altpll_component.areset
+inclk0 => altpll:altpll_component.inclk[0]
+c0 <= altpll:altpll_component.clk[0]
+
+
+|seg_display|seg_counter:counter_2|pll:clock_10KHz|altpll:altpll_component
+inclk[0] => pll_altpll1:auto_generated.inclk[0]
+inclk[1] => pll_altpll1:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => pll_altpll1:auto_generated.areset
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= <GND>
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|seg_display|seg_counter:counter_2|pll:clock_10KHz|altpll:altpll_component|pll_altpll1:auto_generated
+areset => pll1.ARESET
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+
+
+|seg_display|seg_counter:counter_3
+rst_n => pll:clock_10KHz.areset
+rst_n => count[0].ACLR
+rst_n => count[1].ACLR
+rst_n => count[2].ACLR
+rst_n => count[3].ACLR
+rst_n => clk_counter[0].ACLR
+rst_n => clk_counter[1].ACLR
+rst_n => clk_counter[2].ACLR
+rst_n => clk_counter[3].ACLR
+rst_n => clk_counter[4].ACLR
+rst_n => clk_counter[5].ACLR
+rst_n => clk_counter[6].ACLR
+rst_n => clk_counter[7].ACLR
+rst_n => clk_counter[8].ACLR
+rst_n => clk_counter[9].ACLR
+rst_n => clk_counter[10].ACLR
+rst_n => clk_counter[11].ACLR
+rst_n => clk_counter[12].ACLR
+rst_n => clk_counter[13].ACLR
+rst_n => clk_counter[14].ACLR
+rst_n => clk_counter[15].ACLR
+rst_n => clk_counter[16].ACLR
+rst_n => clk_counter[17].ACLR
+rst_n => clk_counter[18].ACLR
+rst_n => clk_counter[19].ACLR
+rst_n => clk_counter[20].ACLR
+rst_n => clk_counter[21].ACLR
+rst_n => clk_counter[22].ACLR
+rst_n => clk_counter[23].ACLR
+clk => pll:clock_10KHz.inclk0
+en => ~NO_FANOUT~
+count_out[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+count_out[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+count_out[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+count_out[3] <= count[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|seg_display|seg_counter:counter_3|pll:clock_10KHz
+areset => altpll:altpll_component.areset
+inclk0 => altpll:altpll_component.inclk[0]
+c0 <= altpll:altpll_component.clk[0]
+
+
+|seg_display|seg_counter:counter_3|pll:clock_10KHz|altpll:altpll_component
+inclk[0] => pll_altpll1:auto_generated.inclk[0]
+inclk[1] => pll_altpll1:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => pll_altpll1:auto_generated.areset
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= <GND>
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|seg_display|seg_counter:counter_3|pll:clock_10KHz|altpll:altpll_component|pll_altpll1:auto_generated
+areset => pll1.ARESET
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+
+
+|seg_display|seg_counter:counter_4
+rst_n => pll:clock_10KHz.areset
+rst_n => count[0].ACLR
+rst_n => count[1].ACLR
+rst_n => count[2].ACLR
+rst_n => count[3].ACLR
+rst_n => clk_counter[0].ACLR
+rst_n => clk_counter[1].ACLR
+rst_n => clk_counter[2].ACLR
+rst_n => clk_counter[3].ACLR
+rst_n => clk_counter[4].ACLR
+rst_n => clk_counter[5].ACLR
+rst_n => clk_counter[6].ACLR
+rst_n => clk_counter[7].ACLR
+rst_n => clk_counter[8].ACLR
+rst_n => clk_counter[9].ACLR
+rst_n => clk_counter[10].ACLR
+rst_n => clk_counter[11].ACLR
+rst_n => clk_counter[12].ACLR
+rst_n => clk_counter[13].ACLR
+rst_n => clk_counter[14].ACLR
+rst_n => clk_counter[15].ACLR
+rst_n => clk_counter[16].ACLR
+rst_n => clk_counter[17].ACLR
+rst_n => clk_counter[18].ACLR
+rst_n => clk_counter[19].ACLR
+rst_n => clk_counter[20].ACLR
+rst_n => clk_counter[21].ACLR
+rst_n => clk_counter[22].ACLR
+rst_n => clk_counter[23].ACLR
+clk => pll:clock_10KHz.inclk0
+en => ~NO_FANOUT~
+count_out[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+count_out[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+count_out[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+count_out[3] <= count[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|seg_display|seg_counter:counter_4|pll:clock_10KHz
+areset => altpll:altpll_component.areset
+inclk0 => altpll:altpll_component.inclk[0]
+c0 <= altpll:altpll_component.clk[0]
+
+
+|seg_display|seg_counter:counter_4|pll:clock_10KHz|altpll:altpll_component
+inclk[0] => pll_altpll1:auto_generated.inclk[0]
+inclk[1] => pll_altpll1:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => pll_altpll1:auto_generated.areset
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= <GND>
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|seg_display|seg_counter:counter_4|pll:clock_10KHz|altpll:altpll_component|pll_altpll1:auto_generated
+areset => pll1.ARESET
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+
+
+|seg_display|seg_rom:rom
+addr[0] => rom.RADDR
+addr[1] => rom.RADDR1
+addr[2] => rom.RADDR2
+addr[3] => rom.RADDR3
+data_out[0] <= rom.DATAOUT
+data_out[1] <= rom.DATAOUT1
+data_out[2] <= rom.DATAOUT2
+data_out[3] <= rom.DATAOUT3
+data_out[4] <= rom.DATAOUT4
+data_out[5] <= rom.DATAOUT5
+data_out[6] <= rom.DATAOUT6
+
+

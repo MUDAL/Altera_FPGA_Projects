@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Jan 16 22:19:15 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : seg_display
+Top-level Entity Name : seg_display
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 50 / 6,272 ( < 1 % )
+    Total combinational functions : 50 / 6,272 ( < 1 % )
+    Dedicated logic registers : 28 / 6,272 ( < 1 % )
+Total registers : 28
+Total pins : 13 / 92 ( 14 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )
