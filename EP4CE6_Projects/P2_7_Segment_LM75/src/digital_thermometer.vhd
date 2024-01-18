@@ -18,10 +18,10 @@ library work;
 entity digital_thermometer is
 	port(rst_n: in std_logic;
 		  clk: in std_logic;
-		  --LM75
-		  -- *Put I2C port signals here *
-		  -- ************************
-		  --7-segment display
+		  --I2C signals for LM75
+		  sda: inout std_logic;
+		  scl: out std_logic;
+		  --Signals for 7-segment display
 		  dp: out std_logic;
 		  seg: out std_logic_vector(6 downto 0);
 		  sel: out std_logic_vector(3 downto 0));
@@ -30,4 +30,8 @@ end digital_thermometer;
 architecture digital_thermometer_rtl of digital_thermometer is
 begin
 	
+	display: entity work.seg_display(seg_display_rtl)
+	port map(rst_n => rst_n, clk => clk, bcd => "000010000011", fp => '1',
+				dp => dp, seg => seg, sel => sel);
+				
 end digital_thermometer_rtl;
