@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "01/17/2024 00:34:30"
+-- DATE "01/18/2024 18:29:59"
 
 -- 
 -- Device: Altera EP4CE6E22C8 Package TQFP144
@@ -38,8 +38,8 @@ ENTITY 	seg_display IS
     PORT (
 	rst_n : IN std_logic;
 	clk : IN std_logic;
-	seg : OUT std_logic_vector(6 DOWNTO 0);
-	sel : OUT std_logic_vector(3 DOWNTO 0)
+	seg : BUFFER std_logic_vector(6 DOWNTO 0);
+	sel : BUFFER std_logic_vector(3 DOWNTO 0)
 	);
 END seg_display;
 

@@ -1,10 +1,9 @@
 vendor_name = ModelSim
-source_file = 1, L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P1_7_Segment/seg_display.vhd
-source_file = 1, counter.vhd
-source_file = 1, L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P1_7_Segment/seg_counter.vhd
-source_file = 1, L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P1_7_Segment/seg_rom.vhd
-source_file = 1, L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P1_7_Segment/pll.qip
-source_file = 1, L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P1_7_Segment/pll.vhd
+source_file = 1, L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P1_7_Segment/src/seg_display.vhd
+source_file = 1, L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P1_7_Segment/src/seg_counter.vhd
+source_file = 1, L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P1_7_Segment/src/seg_rom.vhd
+source_file = 1, L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P1_7_Segment/IP/pll/pll.qip
+source_file = 1, L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P1_7_Segment/IP/pll/pll.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
