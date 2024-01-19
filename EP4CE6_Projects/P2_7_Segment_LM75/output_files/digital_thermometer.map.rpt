@@ -1,5 +1,5 @@
 Analysis & Synthesis report for digital_thermometer
-Fri Jan 19 01:42:55 2024
+Fri Jan 19 13:44:51 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jan 19 01:42:55 2024       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan 19 13:44:51 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; digital_thermometer                         ;
 ; Top-level Entity Name              ; digital_thermometer                         ;
@@ -305,7 +305,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -315,7 +315,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Jan 19 01:42:42 2024
+    Info: Processing started: Fri Jan 19 13:44:30 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off digital_thermometer -c digital_thermometer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -370,8 +370,8 @@ Info (21057): Implemented 51 device resources after synthesis - the final resour
     Info (21061): Implemented 35 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
     Info: Peak virtual memory: 4780 megabytes
-    Info: Processing ended: Fri Jan 19 01:42:55 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Processing ended: Fri Jan 19 13:44:51 2024
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:28
 
 

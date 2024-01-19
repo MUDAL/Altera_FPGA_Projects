@@ -94,7 +94,7 @@ begin
 	generic map(place_value => 1000)
 	port map(rst_n => rst_n, clk => clk, en => '1', count_out => digit(3));	
 	
-	--Converts a digit's current value to BCD to drive the display
+	--Converts a digit's current value to signals to drive the display
 	rom: entity work.seg_rom(seg_rom_rtl)
 	port map(addr => digit(to_integer(digit_index)), data_out => seg);
 	
