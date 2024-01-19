@@ -24,9 +24,11 @@ entity i2c_reader is
 end i2c_reader;
 
 architecture i2c_reader_rtl of i2c_reader is
+	signal clk_out: std_logic;
 begin
-
+	
+	scl <= clk_out;
 	clock_100KHz: entity altera_mf.pll(syn)
-	port map(areset => not rst_n, inclk0 => clk, c0 => scl);  
+	port map(areset => not rst_n, inclk0 => clk, c0 => clk_out);  
 		
 end i2c_reader_rtl;

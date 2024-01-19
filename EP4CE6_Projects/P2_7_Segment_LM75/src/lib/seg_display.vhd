@@ -80,7 +80,7 @@ begin
 		end if;	
 	end process;
 	
-	--Logic to trigger (active low) the decimal point for the tens digit
+	--Logic to trigger (active low) the decimal point for the units digit
 	with digit_index select
 		dp <= '0' when to_unsigned(1,digit_index'length),
 				'1' when others;
