@@ -97,7 +97,7 @@ begin
 		if rst_n = '0' then
 			hundreds_reg <= (others => '0');
 			tens_reg <= (others => '0');
-			num_reg <= unsigned(dec);
+			num_reg <= (others => '0');
 			bcd_reg <= (others => '0');
 			done_reg <= '0';	
 		elsif rising_edge(clk) then
