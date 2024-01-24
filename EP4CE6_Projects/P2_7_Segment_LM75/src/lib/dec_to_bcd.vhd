@@ -47,14 +47,12 @@ begin
 		end case;
 	end process;
   
-	state_register: process(clk)
+	state_register: process(rst_n,clk)
 	begin
-		if rising_edge(clk) then
-			if rst_n = '0' then
-				state <= ST_IDLE;
-			else
-				state <= next_state;
-			end if;
+		if rst_n = '0' then
+			state <= ST_IDLE;	
+		elsif rising_edge(clk) then
+			state <= next_state;
 		end if;
 	end process;
   
@@ -94,22 +92,20 @@ begin
   
 	bcd <= std_logic_vector(bcd_reg);
 	done <= done_reg;
-	registered_output: process(clk)
+	registered_output: process(rst_n,clk)
 	begin
-		if rising_edge(clk) then
-			if rst_n = '0' then
-				hundreds_reg <= (others => '0');
-				tens_reg <= (others => '0');
-				num_reg <= unsigned(dec);
-				bcd_reg <= (others => '0');
-				done_reg <= '0';
-			else
-				hundreds_reg <= hundreds;
-				tens_reg <= tens;
-				num_reg <= num;
-				bcd_reg <= bcd_next;
-				done_reg <= done_next;
-			end if;
+		if rst_n = '0' then
+			hundreds_reg <= (others => '0');
+			tens_reg <= (others => '0');
+			num_reg <= unsigned(dec);
+			bcd_reg <= (others => '0');
+			done_reg <= '0';	
+		elsif rising_edge(clk) then
+			hundreds_reg <= hundreds;
+			tens_reg <= tens;
+			num_reg <= num;
+			bcd_reg <= bcd_next;
+			done_reg <= done_next;
 		end if;
 	end process;
   
