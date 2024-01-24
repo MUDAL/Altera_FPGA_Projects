@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Jan 24 21:21:40 2024
+Fitter Status : Successful - Thu Jan 25 00:01:36 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : digital_thermometer
 Top-level Entity Name : digital_thermometer
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 204 / 6,272 ( 3 % )
-    Total combinational functions : 201 / 6,272 ( 3 % )
+Total logic elements : 205 / 6,272 ( 3 % )
+    Total combinational functions : 203 / 6,272 ( 3 % )
     Dedicated logic registers : 82 / 6,272 ( 1 % )
 Total registers : 82
 Total pins : 16 / 92 ( 17 % )

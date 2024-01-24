@@ -26,7 +26,7 @@ end i2c_reader;
 
 architecture i2c_reader_rtl of i2c_reader is
    constant addr: std_logic_vector(0 to 7) := "Z00Z000Z";--I2C addr, R/W = 1
-	type i2c_state is (ST_IDLE, ST_START, ST_COMM, ST_DONE, ST_STOP);
+	type i2c_state is (ST_IDLE, ST_START, ST_COMM, ST_DONE, ST_STOP, ST_RESTART);
 	signal state: i2c_state;
 	signal index: integer range 0 to 26;
 	signal i2c_buff: std_logic_vector(0 to 17);
@@ -54,7 +54,7 @@ begin
 			scl <= 'Z';
 		elsif rising_edge(clk) then
 			case state is
-				when ST_IDLE =>
+				when ST_IDLE | ST_RESTART =>
 					scl <= 'Z';
 				when ST_START | ST_COMM | ST_DONE =>
 					if clk_count <= to_unsigned(249,clk_count'length) then
@@ -105,15 +105,8 @@ begin
 							index <= index + 1;
 						end if;
 					end if;								
-					--Receive slave ACK
-					if index = 8 then
-						if clk_count = to_unsigned(124,clk_count'length) then
-							i2c_buff(index - 8) <= sda;
-							index <= index + 1;
-						end if;
-					end if;							
-					--Read high byte
-					if index > 8 and index <= 16 then
+					--Receive slave ACK (index 8) and high byte (index 9 to 16)
+					if index >= 8 and index <= 16 then
 						if clk_count = to_unsigned(124,clk_count'length) then
 							i2c_buff(index - 8) <= sda;
 							index <= index + 1;
@@ -152,7 +145,9 @@ begin
 				when ST_STOP =>
 					if clk_count = to_unsigned(124,clk_count'length) then
 						sda <= 'Z';
+						state <= ST_RESTART;
 					end if;
+				when ST_RESTART =>
 					if en = '0' then
 						done <= '0';
 						state <= ST_IDLE;
