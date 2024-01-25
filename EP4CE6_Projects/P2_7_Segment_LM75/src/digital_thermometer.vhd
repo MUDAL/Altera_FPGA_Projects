@@ -15,6 +15,7 @@ library work;
 --   c. I2C reader
 --   d. Shift register and counters
 --   e. Other combinational logic
+--   f. Control path
 
 entity digital_thermometer is
 	port(rst_n: in std_logic;
@@ -31,17 +32,36 @@ end digital_thermometer;
 architecture digital_thermometer_rtl of digital_thermometer is
 	signal i2c_data: std_logic_vector(8 downto 0);
 	signal bcd: std_logic_vector(11 downto 0);
+	signal en: std_logic;
 	signal i2c_done: std_logic;
-	signal dec_to_bcd_done: std_logic;
+	signal conversion_done: std_logic;
+	signal clk_count: unsigned(27 downto 0);
 begin
 	
+	--Controller: To coordinate temperature sensing and data output ....
+	-- by toggling the 'en' signal of the I2C core periodically.
+	control_path: process(rst_n,clk)
+	begin
+		if rst_n = '0' then
+			clk_count <= (others => '0');
+			en <= '1';
+		elsif rising_edge(clk) then
+			if clk_count = to_unsigned(24_999_999,clk_count'length) then
+				clk_count <= (others => '0');
+				en <= not conversion_done;
+			else
+				clk_count <= clk_count + 1;
+			end if;
+		end if;
+	end process;
+	
 	lm75_i2c: entity work.i2c_reader(i2c_reader_rtl)
-	port map(rst_n => rst_n, clk => clk, en => '1', sda => sda, 
+	port map(rst_n => rst_n, clk => clk, en => en, sda => sda, 
 				scl => scl, data_out => i2c_data, done => i2c_done);
 	
 	i2c_data_to_bcd: entity work.dec_to_bcd(dec_to_bcd_rtl)
 	port map(rst_n => rst_n, clk => clk, en => i2c_done, dec => i2c_data(8 downto 1),
-				bcd => bcd, done => dec_to_bcd_done);
+				bcd => bcd, done => conversion_done);
 	
 	display: entity work.seg_display(seg_display_rtl)
 	port map(rst_n => rst_n, clk => clk, bcd => bcd, fp => i2c_data(0),
