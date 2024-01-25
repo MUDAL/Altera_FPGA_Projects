@@ -39,7 +39,7 @@ architecture digital_thermometer_rtl of digital_thermometer is
 begin
 	
 	--Controller: To coordinate temperature sensing and data output ....
-	-- by toggling the 'en' signal of the I2C core periodically.
+	-- by periodically toggling the 'en' signal of the I2C core.
 	control_path: process(rst_n,clk)
 	begin
 		if rst_n = '0' then

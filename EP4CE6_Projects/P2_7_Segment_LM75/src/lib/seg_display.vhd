@@ -55,7 +55,7 @@ begin
 	shift_register: process(rst_n,clk)
 	begin
 		if rst_n = '0' then
-			shift_reg <= "1110"; --select 'units' digit by default
+			shift_reg <= "1110";
 		elsif rising_edge(clk) then
 			if count = to_unsigned(time_to_switch_digit,count'length) then
 				shift_reg(3 downto 1) <= shift_reg(2 downto 0);
