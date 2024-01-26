@@ -1,5 +1,5 @@
 Analysis & Synthesis report for digital_thermometer
-Thu Jan 25 23:29:05 2024
+Fri Jan 26 09:36:18 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,13 +48,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 25 23:29:05 2024       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan 26 09:36:18 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; digital_thermometer                         ;
 ; Top-level Entity Name              ; digital_thermometer                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 250                                         ;
-;     Total combinational functions  ; 236                                         ;
+; Total logic elements               ; 252                                         ;
+;     Total combinational functions  ; 238                                         ;
 ;     Dedicated logic registers      ; 111                                         ;
 ; Total registers                    ; 111                                         ;
 ; Total pins                         ; 16                                          ;
@@ -190,16 +190,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 250       ;
+; Estimated Total logic elements              ; 252       ;
 ;                                             ;           ;
-; Total combinational functions               ; 236       ;
+; Total combinational functions               ; 238       ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 100       ;
 ;     -- 3 input functions                    ; 37        ;
-;     -- <=2 input functions                  ; 99        ;
+;     -- <=2 input functions                  ; 101       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 173       ;
+;     -- normal mode                          ; 175       ;
 ;     -- arithmetic mode                      ; 63        ;
 ;                                             ;           ;
 ; Total registers                             ; 111       ;
@@ -213,7 +213,7 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 111       ;
 ; Total fan-out                               ; 1097      ;
-; Average fan-out                             ; 2.89      ;
+; Average fan-out                             ; 2.87      ;
 +---------------------------------------------+-----------+
 
 
@@ -222,9 +222,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name         ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+---------------------+--------------+
-; |digital_thermometer            ; 236 (49)            ; 111 (27)                  ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |digital_thermometer                                 ; digital_thermometer ; work         ;
+; |digital_thermometer            ; 238 (49)            ; 111 (27)                  ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |digital_thermometer                                 ; digital_thermometer ; work         ;
 ;    |dec_to_bcd:i2c_data_to_bcd| ; 56 (56)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd      ; dec_to_bcd          ; work         ;
-;    |i2c_reader:lm75_i2c|        ; 85 (85)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_thermometer|i2c_reader:lm75_i2c             ; i2c_reader          ; work         ;
+;    |i2c_reader:lm75_i2c|        ; 87 (87)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_thermometer|i2c_reader:lm75_i2c             ; i2c_reader          ; work         ;
 ;    |seg_display:display|        ; 46 (39)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_thermometer|seg_display:display             ; seg_display         ; work         ;
 ;       |seg_rom:rom|             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_thermometer|seg_display:display|seg_rom:rom ; seg_rom             ; work         ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+---------------------+--------------+
@@ -284,7 +284,7 @@ Encoding Type:  One-Hot
 ; Number of registers using Synchronous Load   ; 4     ;
 ; Number of registers using Asynchronous Clear ; 111   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 25    ;
+; Number of registers using Clock Enable       ; 21    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -324,22 +324,22 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; boundary_port         ; 16                          ;
 ; cycloneiii_ff         ; 111                         ;
-;     CLR               ; 86                          ;
-;     ENA CLR           ; 21                          ;
+;     CLR               ; 90                          ;
+;     ENA CLR           ; 17                          ;
 ;     ENA CLR SLD       ; 4                           ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 241                         ;
+; cycloneiii_lcell_comb ; 243                         ;
 ;     arith             ; 63                          ;
 ;         2 data inputs ; 61                          ;
 ;         3 data inputs ; 2                           ;
-;     normal            ; 178                         ;
+;     normal            ; 180                         ;
 ;         1 data inputs ; 14                          ;
-;         2 data inputs ; 29                          ;
+;         2 data inputs ; 31                          ;
 ;         3 data inputs ; 35                          ;
 ;         4 data inputs ; 100                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.49                        ;
+; Average LUT depth     ; 3.46                        ;
 +-----------------------+-----------------------------+
 
 
@@ -348,7 +348,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -358,7 +358,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Jan 25 23:28:19 2024
+    Info: Processing started: Fri Jan 26 09:35:59 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off digital_thermometer -c digital_thermometer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -397,15 +397,15 @@ Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal 
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 266 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 268 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 13 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 250 logic cells
+    Info (21061): Implemented 252 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Thu Jan 25 23:29:05 2024
-    Info: Elapsed time: 00:00:46
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Fri Jan 26 09:36:18 2024
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:33
 
 

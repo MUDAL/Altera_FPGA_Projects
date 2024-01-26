@@ -121,6 +121,8 @@ begin
 					if index = 17 then
 						if clks = to_unsigned(mid_low_pulse,clks'length) then
 							sda <= '0';
+						end if;
+						if clks = to_unsigned(mid_high_pulse,clks'length) then
 							index <= index + 1;
 						end if;						
 					end if;								

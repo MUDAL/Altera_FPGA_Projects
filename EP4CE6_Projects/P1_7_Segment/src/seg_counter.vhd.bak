@@ -1,8 +1,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-library altera_mf;
-use altera_mf.all;
+LIBRARY altera_mf;
+USE altera_mf.all;
 
 --4-bit generic counter for each digit or segment ...
 --of the 4-digit 7 segment display
