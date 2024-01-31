@@ -13,10 +13,10 @@ library work;
 --5. bcd: BCD equivalent of LM75 sensor's data to be displayed
 
 --NB: Place value					| Digit Index
---			Floating-point			|		0
---			Units						|		1
---			Tens						|		2
---			Hundreds					|		3
+--			Celsius					|		0
+--			Floating-point		   |		1
+--			Units						|		2
+--			Tens					   |		3
 
 entity seg_display is
 	port(rst_n: in std_logic;
@@ -30,6 +30,7 @@ end seg_display;
 
 architecture seg_display_rtl of seg_display is
 	constant time_to_switch_digit: integer range 0 to 9_999 := 9_999;
+	constant rom_celsius: integer := 10; --ROM address to display Celsius(C)	
 	type digit_type is array(0 to 3) of std_logic_vector(3 downto 0);
 	signal digit: digit_type;
 	signal digit_index: unsigned(2 downto 0);
@@ -80,18 +81,19 @@ begin
 		end if;	
 	end process;
 	
+	--Celsius unit for rightmost segment
+	digit(0) <= std_logic_vector(to_unsigned(rom_celsius,digit(0)'length));
 	--Logic to trigger (active low) the decimal point for the units digit
 	with digit_index select
-		dp <= '0' when to_unsigned(1,digit_index'length),
+		dp <= '0' when to_unsigned(2,digit_index'length),
 				'1' when others;
 	--Floating-point digit = '5' if 'fp = 1', else it equals '0'
 	with fp select
-		digit(0) <= std_logic_vector(to_unsigned(5,digit(0)'length)) when '1',
-					   std_logic_vector(to_unsigned(0,digit(0)'length)) when others;
+		digit(1) <= std_logic_vector(to_unsigned(5,digit(1)'length)) when '1',
+					   std_logic_vector(to_unsigned(0,digit(1)'length)) when others;
 	--Other place values
-	digit(1) <= bcd(3 downto 0);
-	digit(2) <= bcd(7 downto 4);
-	digit(3) <= bcd(11 downto 8);
+	digit(2) <= bcd(3 downto 0);
+	digit(3) <= bcd(7 downto 4);
 	
 	--Converts a digit's current value to signals to drive the display
 	rom: entity work.seg_rom(seg_rom_rtl)

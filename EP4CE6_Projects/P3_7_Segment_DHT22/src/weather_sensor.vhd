@@ -3,6 +3,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 library work;
 
+--Project: Temperature + Humidity sensing using DHT22 and 7-segment display.
+
+--Details:
+--1. "Active low" reset and 7-segment display
+--2. 50MHz system clock
+--3. The design is divided into different parts:
+--	  a. ROM  
+--   b. Decimal to BCD converter
+--   c. One-wire interface
+--   d. Shift register and counters
+--   e. Other combinational logic
+--   f. Control paths
+
 entity weather_sensor is
 	port(rst_n: in std_logic;
 		  clk: in std_logic;
@@ -14,45 +27,57 @@ entity weather_sensor is
 end weather_sensor;
 
 architecture weather_sensor_rtl of weather_sensor is
-	signal en: std_logic;
+	signal en_dht22: std_logic;
+	signal en_converter: std_logic;
 	signal dec: std_logic_vector(15 downto 0);
 	signal bcd: std_logic_vector(11 downto 0);
-	signal done: std_logic;
+	signal dht22_done: std_logic;
 	signal conversion_done: std_logic;
 	signal valid: std_logic;
 	signal param: std_logic;
-	--signal count: unsigned(31 downto 0);
+	signal one_wire_count: unsigned(26 downto 0);
+	signal converter_count: unsigned(9 downto 0);
 begin
---	control_path: process(rst_n,clk)
---	begin
---		if rst_n = '0' then
---		elsif rising_edge(clk) then
---		end if;
---	end process;
+	control_path: process(rst_n,clk)
+	begin
+		if rst_n = '0' then
+			one_wire_count <= (others => '0');
+			en_dht22 <= '1';
+			param <= '0';
+		elsif rising_edge(clk) then
+			if one_wire_count = to_unsigned(99_999_999,one_wire_count'length) then
+				one_wire_count <= (others => '0');
+				en_dht22 <= not dht22_done;
+				param <= not param;
+			else
+				one_wire_count <= one_wire_count + 1;
+			end if;
+		end if;
+	end process;
 	
---	process(rst_n,clk)
---	begin
---		if rst_n = '0' then
---			count <= (others => '0');
---			en <= '0';
---		elsif rising_edge(clk) then
---			if count = to_unsigned(99_999_999,count'length) then
---				count <= (others => '0');
---				en <= not conversion_done;
---			else
---				count <= count + 1;
---			end if;
---		end if;
---	end process;
+	process(rst_n,clk)
+	begin
+		if rst_n = '0' then
+			converter_count <= (others => '0');
+			en_converter <= '0';
+		elsif rising_edge(clk) then
+			if converter_count = to_unsigned(999,converter_count'length) then
+				converter_count <= (others => '0');
+				en_converter <= not conversion_done;
+			else
+				converter_count <= converter_count + 1;
+			end if;
+		end if;
+	end process;
 	
 	led <= not valid;
 	dht22_one_wire: entity work.one_wire(one_wire_rtl)
-	port map(rst_n => rst_n, clk => clk, en => '1', param => param,
-				io => io, data_out => dec, done => done, valid => valid);
+	port map(rst_n => rst_n, clk => clk, en => en_dht22, param => param,
+				io => io, data_out => dec, done => dht22_done, valid => valid);
 	
 	dht22_data_bcd: entity work.dec_to_bcd(dec_to_bcd_rtl)
 	generic map(data_width => 16)
-	port map(rst_n => rst_n, clk => clk, en => done, dec => dec,
+	port map(rst_n => rst_n, clk => clk, en => en_converter, dec => dec,
 				bcd => bcd, done => conversion_done);
 	
 	display: entity work.seg_display(seg_display_rtl)

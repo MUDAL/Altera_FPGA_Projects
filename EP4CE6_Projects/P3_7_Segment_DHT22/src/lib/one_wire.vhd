@@ -2,6 +2,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
+--Module to read data from DHT22 sensor via one-wire protocol.
+-- From the DHT22 datasheet, there are 40 data bits that can be  
+-- read from the sensor. From the most significant byte to the   
+-- least significant byte, the following parameters are read  
+-- respectively: Humidity integral, Humidity decimal,   
+-- Temperature integral, Temperature decimal, and checksum.
+
+-- Final data is read by dividing 16-bit humidity or temperature data  
+-- by 10. Data validity is checked using the checksum byte.
+
+
 entity one_wire is
 	port(rst_n: in std_logic;
 		  clk: in std_logic;
@@ -134,6 +145,7 @@ begin
 				count_en <= '1';
 				done <= '1';
 			when ST_CHECK =>
+				done <= '1';
 				if check_sum = unsigned(data_buff(32 to 39)) then
 					valid <= '1';
 				end if;
