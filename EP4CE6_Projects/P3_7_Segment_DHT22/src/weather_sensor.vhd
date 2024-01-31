@@ -38,7 +38,9 @@ architecture weather_sensor_rtl of weather_sensor is
 	signal one_wire_count: unsigned(26 downto 0);
 	signal converter_count: unsigned(9 downto 0);
 begin
-	control_path: process(rst_n,clk)
+	-- Control paths: Periodically control the one-wire and data conversion 
+   --	(decimal to BCD) cores.
+	control_path_1: process(rst_n,clk)
 	begin
 		if rst_n = '0' then
 			one_wire_count <= (others => '0');
@@ -55,7 +57,7 @@ begin
 		end if;
 	end process;
 	
-	process(rst_n,clk)
+	control_path_2: process(rst_n,clk)
 	begin
 		if rst_n = '0' then
 			converter_count <= (others => '0');
@@ -70,7 +72,7 @@ begin
 		end if;
 	end process;
 	
-	led <= not valid;
+	led <= not valid; --Set when new sensor data is valid. 
 	dht22_one_wire: entity work.one_wire(one_wire_rtl)
 	port map(rst_n => rst_n, clk => clk, en => en_dht22, param => param,
 				io => io, data_out => dec, done => dht22_done, valid => valid);
