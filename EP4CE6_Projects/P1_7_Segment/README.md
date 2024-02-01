@@ -1,6 +1,6 @@
 # Interfacing the EP4CE6 FPGA board with a 4-digit 7-segment display  
 
-## Task  
+## Description    
 - Implementing a 0000 to 9999 counter on an FPGA and displaying the counts on a 7-segment display.
 - The counter increments every second and rolls over to 0000 after 9999.
 
