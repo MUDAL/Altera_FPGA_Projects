@@ -22,7 +22,11 @@ To run the demo, you can just go straight to the programming step and skip the c
 
 ## Project file structure  
 - The **VHDL** design files are located in the **src** directory  
-- The top-level design is the **seg_display.vhd**  
+- The top-level design is the **seg_display.vhd**
+
+## Video demo  
+[Demo of 0000-9999 counter](https://drive.google.com/file/d/18HfrSjUTn52hrJCpAqxuSTBJbvyD67L0/view?usp=sharing)  
+
 
 
 
