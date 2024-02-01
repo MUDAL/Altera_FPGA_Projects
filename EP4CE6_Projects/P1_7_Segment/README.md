@@ -15,5 +15,5 @@
 - After Quartus opens, click on the ``Processing`` tab  
 - Click on ``Start Compilation``  
 - After compilation, click on ``Program Device(Open Programmer)``  
-- Load the demo project into the FPGA  
+- When the Programmer window opens, load the demo project into the FPGA by clicking ``Start``  
 
