@@ -1,0 +1,19 @@
+# Interfacing the EP4CE6 FPGA board with a 4-digit 7-segment display  
+
+## Task  
+- Implementing a 0000 to 9999 counter on an FPGA and displaying the counts on a 7-segment display.  
+
+## Tools  
+- EP4CE6E22C8N Cyclone IV FPGA development board  
+- Intel Quartus Prime 20.1  
+
+## How to use  
+- Clone the ``Altera_FPGA_Projects`` repository  
+- Open the the ``EP4CE6_Projects/P1_7_Segment/`` directory  
+- Open the ``seg_display.qpf`` project file  
+- Intel Quartus Prime should open after the previous step  
+- After Quartus opens, click on the ``Processing`` tab  
+- Click on ``Start Compilation``  
+- After compilation, click on ``Program Device(Open Programmer)``  
+- Load the demo project into the FPGA  
+
