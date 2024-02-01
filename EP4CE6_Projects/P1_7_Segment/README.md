@@ -20,6 +20,9 @@
 
 To run the demo, you can just go straight to the programming step and skip the compilation since it has already been done.  
 
+## Project file structure  
+- The **VHDL** design files are located in the **src** directory  
+- The top-level design is the **seg_display.vhd**  
 
 
 
