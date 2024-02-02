@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 --ROM: to map digits to signals to drive the 7 segment display.
---g,f,e,d,c,b,a are the individial LED segments.
+--g,f,e,d,c,b,a are the individual LED segments.
 entity seg_rom is
   port(addr: in std_logic_vector(3 downto 0);
        data_out: out std_logic_vector(6 downto 0));
