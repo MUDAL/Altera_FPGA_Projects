@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "01/31/2024 14:40:55"
+-- DATE "02/02/2024 16:28:15"
 
 -- 
 -- Device: Altera EP4CE6E22C8 Package TQFP144
@@ -81,11 +81,11 @@ ENTITY 	weather_sensor IS
     PORT (
 	rst_n : IN std_logic;
 	clk : IN std_logic;
-	io : INOUT std_logic;
-	led : OUT std_logic;
-	dp : OUT std_logic;
-	seg : OUT std_logic_vector(6 DOWNTO 0);
-	sel : OUT std_logic_vector(3 DOWNTO 0)
+	io : BUFFER std_logic;
+	led : BUFFER std_logic;
+	dp : BUFFER std_logic;
+	seg : BUFFER std_logic_vector(6 DOWNTO 0);
+	sel : BUFFER std_logic_vector(3 DOWNTO 0)
 	);
 END weather_sensor;
 
@@ -120,6 +120,7 @@ SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
 SIGNAL ww_rst_n : std_logic;
 SIGNAL ww_clk : std_logic;
+SIGNAL ww_io : std_logic;
 SIGNAL ww_led : std_logic;
 SIGNAL ww_dp : std_logic;
 SIGNAL ww_seg : std_logic_vector(6 DOWNTO 0);
@@ -751,6 +752,7 @@ BEGIN
 
 ww_rst_n <= rst_n;
 ww_clk <= clk;
+io <= ww_io;
 led <= ww_led;
 dp <= ww_dp;
 seg <= ww_seg;
@@ -1737,7 +1739,7 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => io,
+	i => ww_io,
 	o => \io~input_o\);
 
 -- Location: LCCOMB_X26_Y20_N10
@@ -11316,7 +11318,7 @@ ww_sel(2) <= \sel[2]~output_o\;
 
 ww_sel(3) <= \sel[3]~output_o\;
 
-io <= \io~output_o\;
+ww_io <= \io~output_o\;
 END structure;
 
 
