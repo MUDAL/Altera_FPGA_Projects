@@ -1,5 +1,5 @@
 Analysis & Synthesis report for distance_sensor
-Sun Feb 04 22:01:02 2024
+Mon Feb 05 00:29:26 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -51,15 +51,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Feb 04 22:01:02 2024       ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 05 00:29:26 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; distance_sensor                             ;
 ; Top-level Entity Name              ; distance_sensor                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 436                                         ;
-;     Total combinational functions  ; 418                                         ;
-;     Dedicated logic registers      ; 152                                         ;
-; Total registers                    ; 152                                         ;
+; Total logic elements               ; 440                                         ;
+;     Total combinational functions  ; 422                                         ;
+;     Dedicated logic registers      ; 154                                         ;
+; Total registers                    ; 154                                         ;
 ; Total pins                         ; 16                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -216,20 +216,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 436       ;
+; Estimated Total logic elements              ; 440       ;
 ;                                             ;           ;
-; Total combinational functions               ; 418       ;
+; Total combinational functions               ; 422       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 150       ;
-;     -- 3 input functions                    ; 72        ;
-;     -- <=2 input functions                  ; 196       ;
+;     -- 4 input functions                    ; 152       ;
+;     -- 3 input functions                    ; 76        ;
+;     -- <=2 input functions                  ; 194       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 237       ;
+;     -- normal mode                          ; 241       ;
 ;     -- arithmetic mode                      ; 181       ;
 ;                                             ;           ;
-; Total registers                             ; 152       ;
-;     -- Dedicated logic registers            ; 152       ;
+; Total registers                             ; 154       ;
+;     -- Dedicated logic registers            ; 154       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 16        ;
@@ -237,8 +237,8 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 152       ;
-; Total fan-out                               ; 1841      ;
+; Maximum fan-out                             ; 154       ;
+; Total fan-out                               ; 1863      ;
 ; Average fan-out                             ; 3.06      ;
 +---------------------------------------------+-----------+
 
@@ -248,9 +248,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                ; Entity Name     ; Library Name ;
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |distance_sensor                            ; 418 (50)            ; 152 (29)                  ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |distance_sensor                                                                                                   ; distance_sensor ; work         ;
-;    |dec_to_bcd:dec_to_bcd_inst|             ; 208 (208)           ; 57 (57)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst                                                                        ; dec_to_bcd      ; work         ;
-;    |hcsr04:hcsr04_inst|                     ; 63 (63)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|hcsr04:hcsr04_inst                                                                                ; hcsr04          ; work         ;
+; |distance_sensor                            ; 422 (49)            ; 154 (27)                  ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |distance_sensor                                                                                                   ; distance_sensor ; work         ;
+;    |dec_to_bcd:dec_to_bcd_inst|             ; 210 (210)           ; 57 (57)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst                                                                        ; dec_to_bcd      ; work         ;
+;    |hcsr04:hcsr04_inst|                     ; 65 (65)             ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|hcsr04:hcsr04_inst                                                                                ; hcsr04          ; work         ;
 ;    |lpm_mult:Mult0|                         ; 52 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|lpm_mult:Mult0                                                                                    ; lpm_mult        ; work         ;
 ;       |multcore:mult_core|                  ; 52 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|lpm_mult:Mult0|multcore:mult_core                                                                 ; multcore        ; work         ;
 ;          |mpar_add:padder|                  ; 20 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                 ; mpar_add        ; work         ;
@@ -258,7 +258,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |add_sub_lgh:auto_generated| ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_lgh:auto_generated ; add_sub_lgh     ; work         ;
 ;             |lpm_add_sub:adder[1]|          ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                            ; lpm_add_sub     ; work         ;
 ;                |add_sub_lgh:auto_generated| ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_lgh:auto_generated ; add_sub_lgh     ; work         ;
-;    |seg_display:display_inst|               ; 45 (38)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|seg_display:display_inst                                                                          ; seg_display     ; work         ;
+;    |seg_display:display_inst|               ; 46 (39)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|seg_display:display_inst                                                                          ; seg_display     ; work         ;
 ;       |seg_rom:rom|                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|seg_display:display_inst|seg_rom:rom                                                              ; seg_rom         ; work         ;
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -290,18 +290,18 @@ Encoding Type:  One-Hot
 +------------------+---------------+------------------+-----------------+---------------+---------------+
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+-----------------------------------------+----------------------------------------+
-; Register name                           ; Reason for Removal                     ;
-+-----------------------------------------+----------------------------------------+
-; dec_to_bcd:dec_to_bcd_inst|num_reg[0,1] ; Stuck at GND due to stuck port data_in ;
-; dec_to_bcd:dec_to_bcd_inst|num_reg[2]   ; Lost fanout                            ;
-; seg_display:display_inst|digit_index[2] ; Stuck at GND due to stuck port data_in ;
-; seg_display:display_inst|count[0]       ; Merged with clks[0]                    ;
-; seg_display:display_inst|count[1]       ; Merged with clks[1]                    ;
-; Total Number of Removed Registers = 6   ;                                        ;
-+-----------------------------------------+----------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++-----------------------------------------+-----------------------------------------------+
+; Register name                           ; Reason for Removal                            ;
++-----------------------------------------+-----------------------------------------------+
+; dec_to_bcd:dec_to_bcd_inst|num_reg[0,1] ; Stuck at GND due to stuck port data_in        ;
+; dec_to_bcd:dec_to_bcd_inst|num_reg[2]   ; Lost fanout                                   ;
+; seg_display:display_inst|digit_index[2] ; Stuck at GND due to stuck port data_in        ;
+; clks[0]                                 ; Merged with seg_display:display_inst|count[0] ;
+; clks[1]                                 ; Merged with seg_display:display_inst|count[1] ;
+; Total Number of Removed Registers = 6   ;                                               ;
++-----------------------------------------+-----------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -309,10 +309,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 152   ;
+; Total registers                              ; 154   ;
 ; Number of registers using Synchronous Clear  ; 22    ;
 ; Number of registers using Synchronous Load   ; 33    ;
-; Number of registers using Asynchronous Clear ; 152   ;
+; Number of registers using Asynchronous Clear ; 154   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 74    ;
 ; Number of registers using Preset             ; 0     ;
@@ -324,10 +324,10 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; en                                     ; 6       ;
 ; seg_display:display_inst|shift_reg[1]  ; 2       ;
 ; seg_display:display_inst|shift_reg[2]  ; 2       ;
 ; seg_display:display_inst|shift_reg[3]  ; 2       ;
+; en                                     ; 5       ;
 ; Total number of inverted registers = 4 ;         ;
 +----------------------------------------+---------+
 
@@ -337,14 +337,14 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |distance_sensor|hcsr04:hcsr04_inst|micro_clks[7]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |distance_sensor|hcsr04:hcsr04_inst|clks[2]             ;
-; 7:1                ; 18 bits   ; 72 LEs        ; 54 LEs               ; 18 LEs                 ; Yes        ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst|num_reg[16] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |distance_sensor|hcsr04:hcsr04_inst|pos_reg[7]          ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |distance_sensor|seg_display:display_inst|Mux4          ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst|Selector0   ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |distance_sensor|hcsr04:hcsr04_inst|Selector0           ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |distance_sensor|hcsr04:hcsr04_inst|Selector4           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |distance_sensor|hcsr04:hcsr04_inst|micro_clks[15]      ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |distance_sensor|hcsr04:hcsr04_inst|clks[5]             ;
+; 7:1                ; 18 bits   ; 72 LEs        ; 54 LEs               ; 18 LEs                 ; Yes        ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst|num_reg[18] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |distance_sensor|hcsr04:hcsr04_inst|pos_reg[10]         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |distance_sensor|seg_display:display_inst|Mux2          ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst|Selector2   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |distance_sensor|hcsr04:hcsr04_inst|Selector3           ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |distance_sensor|hcsr04:hcsr04_inst|Selector2           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
@@ -419,24 +419,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 16                          ;
-; cycloneiii_ff         ; 152                         ;
-;     CLR               ; 72                          ;
+; cycloneiii_ff         ; 154                         ;
+;     CLR               ; 74                          ;
 ;     CLR SCLR          ; 6                           ;
 ;     ENA CLR           ; 25                          ;
 ;     ENA CLR SCLR      ; 16                          ;
 ;     ENA CLR SLD       ; 33                          ;
-; cycloneiii_lcell_comb ; 424                         ;
+; cycloneiii_lcell_comb ; 427                         ;
 ;     arith             ; 181                         ;
 ;         2 data inputs ; 147                         ;
 ;         3 data inputs ; 34                          ;
-;     normal            ; 243                         ;
-;         1 data inputs ; 20                          ;
-;         2 data inputs ; 35                          ;
-;         3 data inputs ; 38                          ;
-;         4 data inputs ; 150                         ;
+;     normal            ; 246                         ;
+;         1 data inputs ; 19                          ;
+;         2 data inputs ; 33                          ;
+;         3 data inputs ; 42                          ;
+;         4 data inputs ; 152                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 4.03                        ;
+; Average LUT depth     ; 4.01                        ;
 +-----------------------+-----------------------------+
 
 
@@ -455,7 +455,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Feb 04 22:00:48 2024
+    Info: Processing started: Mon Feb 05 00:29:12 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off distance_sensor -c distance_sensor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -466,8 +466,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file src/lib
     Info (12022): Found design unit 1: seg_rom-seg_rom_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/seg_rom.vhd Line: 12
     Info (12023): Found entity 1: seg_rom File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/seg_rom.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/dec_to_bcd.vhd
-    Info (12022): Found design unit 1: dec_to_bcd-dec_to_bcd_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/dec_to_bcd.vhd Line: 17
-    Info (12023): Found entity 1: dec_to_bcd File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/dec_to_bcd.vhd Line: 7
+    Info (12022): Found design unit 1: dec_to_bcd-dec_to_bcd_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/dec_to_bcd.vhd Line: 19
+    Info (12023): Found entity 1: dec_to_bcd File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/dec_to_bcd.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/seg_display.vhd
     Info (12022): Found design unit 1: seg_display-seg_display_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/seg_display.vhd Line: 30
     Info (12023): Found entity 1: seg_display File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/seg_display.vhd Line: 21
@@ -512,20 +512,20 @@ Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:ext
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
-Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 33
+Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/seg_display.vhd Line: 56
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 452 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 456 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 436 logic cells
+    Info (21061): Implemented 440 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 4797 megabytes
-    Info: Processing ended: Sun Feb 04 22:01:02 2024
+    Info: Processing ended: Mon Feb 05 00:29:26 2024
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Total CPU time (on all processors): 00:00:30
 
 

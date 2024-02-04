@@ -26,12 +26,16 @@ architecture hcsr04_rtl of hcsr04 is
 	signal cnt_en_reg: std_logic;
 	signal clks: unsigned(5 downto 0);
 	signal micro_clks: unsigned(15 downto 0);
+	signal trig_next: std_logic; --Sensor trigger
+	signal trig_reg: std_logic;	
 	signal new_io: std_logic; --current sample of 'echo' signal
 	signal new_io_reg: std_logic;
 	signal old_io: std_logic; --previous sample of 'echo' signal
 	signal old_io_reg: std_logic;
-	signal pos_edge: unsigned(15 downto 0);
+	signal pos_edge: unsigned(15 downto 0); --Echo: +ve edge (or pulse width)
 	signal pos_reg: unsigned(15 downto 0);
+	signal done_next: std_logic;
+	signal done_reg: std_logic;
 begin
 	counters: process(rst_n,clk)
 	begin
@@ -90,36 +94,31 @@ begin
 	end process;
 	
 	combinational_outputs: 
-	process(state,en,micro_clks,echo,new_io_reg,old_io_reg,pos_reg,cnt_en_reg)
+	process(state,en,micro_clks,echo,trig_reg,new_io_reg,old_io_reg,
+			  pos_reg,cnt_en_reg,done_reg)
 	begin
-		trig <= '0';
-		cnt_en <= cnt_en_reg;
+		trig_next <= trig_reg;
 		new_io <= new_io_reg;
 		old_io <= old_io_reg;
 		pos_edge <= pos_reg;
-		done <= '0';
+		cnt_en <= cnt_en_reg;
+		done_next <= done_reg;
 		case state is
 			when ST_IDLE =>
-				if en = '1' then
-					trig <= '1';
-					cnt_en <= '1';
-				else
-					cnt_en <= '0';
-				end if;
+				trig_next <= '0';
+				cnt_en <= '0';
+				done_next <= '0';
 			when ST_TRIG =>
 				if micro_clks = to_unsigned(TRIG_PULSE - 1,micro_clks'length) then
+					trig_next <= '0';
 					cnt_en <= '0';
 				else
-					trig <= '1';
+					trig_next <= '1';
 					cnt_en <= '1';
 				end if;
 			when ST_SAMPLE => 
 				new_io <= echo;
-				if old_io_reg = '1' then
-					cnt_en <= '1';
-				else
-					cnt_en <= '0';
-				end if;
+				cnt_en <= old_io_reg;
 			when ST_MEASURE =>
 				if new_io_reg = '1' and old_io_reg = '0' then
 					cnt_en <= '1';
@@ -131,24 +130,30 @@ begin
 					pos_edge <= micro_clks - pos_reg;--pulse width (microseconds)
 				end if;
 			when ST_DONE =>
-				done <= '1';
+				done_next <= '1';
 		end case;
 	end process;
 	
+	trig <= trig_reg;
 	pulse <= std_logic_vector(pos_reg);
+	done <= done_reg;
 	
 	registered_outputs: process(rst_n,clk)
 	begin
 		if rst_n = '0' then
+			trig_reg <= '0';
 			new_io_reg <= '0';
 			old_io_reg <= '0';
 			pos_reg <= (others => '0');
 			cnt_en_reg <= '0';
+			done_reg <= '0';
 		elsif rising_edge(clk) then
+			trig_reg <= trig_next;
 			new_io_reg <= new_io;
 			old_io_reg <= old_io;
 			pos_reg <= pos_edge;
 			cnt_en_reg <= cnt_en;
+			done_reg <= done_next;
 		end if;
 	end process;
 	

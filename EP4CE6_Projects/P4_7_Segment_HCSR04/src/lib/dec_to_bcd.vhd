@@ -2,7 +2,9 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
---Decimal to BCD converter
+--Decimal to BCD converter  
+--NB: I believe there are more efficient algorithms (e.g. the Double Dabble) ...
+-- that can achieve this task and I'll encourage you to try them out.
 
 entity dec_to_bcd is
 	generic(data_width: integer := 24);
@@ -15,6 +17,18 @@ entity dec_to_bcd is
 end dec_to_bcd;
 
 architecture dec_to_bcd_rtl of dec_to_bcd is
+	--Maximum pulse width = 23200uS (dMax x c = 400 x 58)
+	--dMax = maximum distance = 400cm and c = constant (Check datasheet)
+	--Distance = pulse width / 58
+	--To avoid division and extensive FPGA resource utilization, 
+	--I have taken 1/58 as 172. 
+	--Maximum distance is approximately = 23200 * 172 = 3,990,400.
+	--Using the value above (3,990,400), the following place values will be 
+	--required to display an approximate distance in centimeters for all 
+	--readings:
+	--1. Millionth 2. Hundred thousands 3. Ten thousands and 4. Thousands.
+	--Hundreds, Tens, Units, and Tenths of the display are respectively 
+	--scaled to the place values above using the two constants below:  
 	constant FACTOR: integer := 10000;
 	constant FACTOR_DIV_10: integer := FACTOR / 10;
 	type fsm is (ST_IDLE, ST_CALC, ST_DONE);
@@ -79,7 +93,8 @@ begin
 				hundreds <= (others => '0');
 				tens <= (others => '0');
 				unit <= (others => '0');
-				num <= unsigned(dec);     
+				tenths <= (others => '0');
+				num <= unsigned(dec);				
 			when ST_CALC =>
 				if num_reg >= to_unsigned(100 * FACTOR,num_reg'length) then
 					hundreds <= hundreds_reg + 1;
