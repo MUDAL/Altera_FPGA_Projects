@@ -1,11 +1,11 @@
-Fitter Status : Successful - Sun Feb 04 21:56:52 2024
+Fitter Status : Successful - Sun Feb 04 22:01:09 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : distance_sensor
 Top-level Entity Name : distance_sensor
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 438 / 6,272 ( 7 % )
+Total logic elements : 436 / 6,272 ( 7 % )
     Total combinational functions : 418 / 6,272 ( 7 % )
     Dedicated logic registers : 152 / 6,272 ( 2 % )
 Total registers : 152
