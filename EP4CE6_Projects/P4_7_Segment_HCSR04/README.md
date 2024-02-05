@@ -29,5 +29,7 @@ To run the demo, you can just go straight to the programming step and skip the c
 ## Video demo  
 
 ## Pinouts  
-![Pin Planner](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/048389ad-e6f4-4bea-835e-26554a32d0e9)  
+![PP_4](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/15e88835-f6bf-49bd-af3e-d34e7ea3d236)  
+
+
 
