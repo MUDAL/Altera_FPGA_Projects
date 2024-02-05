@@ -27,6 +27,9 @@ To run the demo, you can just go straight to the programming step and skip the c
 ## Video demo  
 [Demo of 0000-9999 counter](https://drive.google.com/file/d/18HfrSjUTn52hrJCpAqxuSTBJbvyD67L0/view?usp=sharing)  
 
+## Pinouts  
+- Check the Location column in the image below for the pin mappings used in this project.  
+![PP_1](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/7777a5f1-e19d-4855-8cc9-40cfad824e8b)
 
 
 
