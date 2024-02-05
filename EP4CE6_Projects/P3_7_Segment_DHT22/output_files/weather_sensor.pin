@@ -31,7 +31,7 @@
  --                  Bank 2:       3.3V
  --                  Bank 3:       2.5V
  --                  Bank 4:       2.5V
- --                  Bank 5:       2.5V
+ --                  Bank 5:       3.3V
  --                  Bank 6:       2.5V
  --                  Bank 7:       3.3V
  --                  Bank 8:       3.3V
@@ -149,10 +149,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 77        :        :                   :      
 VCCINT                       : 78        : power  :                   : 1.2V    :           :                
 GND                          : 79        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 80        :        :                   :         : 5         :                
-VCCIO5                       : 81        : power  :                   : 2.5V    : 5         :                
+VCCIO5                       : 81        : power  :                   : 3.3V    : 5         :                
 GND                          : 82        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 83        :        :                   :         : 5         :                
-led                          : 84        : output : 2.5 V             :         : 5         : Y              
+led                          : 84        : output : 3.3-V LVTTL       :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 85        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 86        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 87        :        :                   :         : 5         :                

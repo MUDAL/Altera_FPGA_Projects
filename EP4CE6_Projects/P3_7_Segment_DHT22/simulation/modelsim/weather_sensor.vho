@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "02/04/2024 21:06:14"
+-- DATE "02/05/2024 21:12:08"
 
 -- 
 -- Device: Altera EP4CE6E22C8 Package TQFP144
@@ -90,7 +90,7 @@ ENTITY 	weather_sensor IS
 END weather_sensor;
 
 -- Design Ports Information
--- led	=>  Location: PIN_84,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- led	=>  Location: PIN_84,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
 -- dp	=>  Location: PIN_127,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
 -- seg[0]	=>  Location: PIN_128,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
 -- seg[1]	=>  Location: PIN_121,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA

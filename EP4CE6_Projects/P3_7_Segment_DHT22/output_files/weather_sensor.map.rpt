@@ -1,5 +1,5 @@
 Analysis & Synthesis report for weather_sensor
-Sun Feb 04 21:05:58 2024
+Mon Feb 05 21:11:10 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Feb 04 21:05:58 2024       ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 05 21:11:10 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; weather_sensor                              ;
 ; Top-level Entity Name              ; weather_sensor                              ;
@@ -169,7 +169,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -361,7 +361,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -371,7 +371,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Feb 04 21:05:44 2024
+    Info: Processing started: Mon Feb 05 21:10:32 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off weather_sensor -c weather_sensor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -416,9 +416,9 @@ Info (21057): Implemented 468 device resources after synthesis - the final resou
     Info (21060): Implemented 1 bidirectional pins
     Info (21061): Implemented 452 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4781 megabytes
-    Info: Processing ended: Sun Feb 04 21:05:58 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Mon Feb 05 21:11:10 2024
+    Info: Elapsed time: 00:00:38
+    Info: Total CPU time (on all processors): 00:00:32
 
 
