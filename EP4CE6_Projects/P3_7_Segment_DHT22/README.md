@@ -29,6 +29,9 @@ To run the demo, you can just go straight to the programming step and skip the c
 ## Video demo  
 [FPGA and DHT22 demo](https://drive.google.com/file/d/1Pk7GPQSu7bS2-IVy8dPdvYJIUd7pJAdc/view?usp=sharing)  
 
+## Pinouts  
+- Check the **Location** column in the image below for the pin mappings used in this project.  
+![PP_3](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/beb583dd-44c8-4b77-8591-7ee5843d913f)  
 
 
 
