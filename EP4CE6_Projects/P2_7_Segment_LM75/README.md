@@ -27,6 +27,8 @@ To run the demo, you can just go straight to the programming step and skip the c
 ## Video demo  
 [FPGA and LM75 demo](https://drive.google.com/file/d/1IZYVgDwNJIAutpPY_AHlGprcI9oUSNfm/view?usp=sharing)
 
-
+## Pinouts  
+- Check the **Location** column in the image below for the pin mappings used in this project.
+![PP_2](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/69888839-1d70-479d-b965-18ce3b878e52)
 
 
