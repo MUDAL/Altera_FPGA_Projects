@@ -28,7 +28,7 @@ entity seg_display is
 end seg_display;
 
 architecture seg_display_rtl of seg_display is
-	constant time_to_switch_digit: integer range 0 to 9_999 := 9_999;
+	constant TIME_TO_SWITCH_DIGIT: integer range 0 to 9_999 := 9_999;
 	type digit_type is array(0 to 3) of std_logic_vector(3 downto 0);
 	signal digit: digit_type;
 	signal digit_index: unsigned(2 downto 0);
@@ -41,7 +41,7 @@ begin
 		if rst_n = '0' then
 			count <= (others => '0');
 		elsif rising_edge(clk) then
-			if count = to_unsigned(time_to_switch_digit,count'length) then 
+			if count = to_unsigned(TIME_TO_SWITCH_DIGIT,count'length) then 
 				count <= (others => '0');
 			else
 				count <= count + 1;
@@ -56,7 +56,7 @@ begin
 		if rst_n = '0' then
 			shift_reg <= "1110";
 		elsif rising_edge(clk) then
-			if count = to_unsigned(time_to_switch_digit,count'length) then
+			if count = to_unsigned(TIME_TO_SWITCH_DIGIT,count'length) then
 				shift_reg(3 downto 1) <= shift_reg(2 downto 0);
 				shift_reg(0) <= shift_reg(3);
 			end if;
@@ -69,7 +69,7 @@ begin
 		if rst_n = '0' then
 			digit_index <= (others => '0');
 		elsif rising_edge(clk) then
-			if count = to_unsigned(time_to_switch_digit,count'length) then
+			if count = to_unsigned(TIME_TO_SWITCH_DIGIT,count'length) then
 				if digit_index = to_unsigned(3,digit_index'length) then
 					digit_index <= (others => '0');
 				else

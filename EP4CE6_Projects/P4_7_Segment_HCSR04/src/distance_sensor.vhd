@@ -46,7 +46,7 @@ begin
 			clks <= (others => '0');
 			en <= '1';
 		elsif rising_edge(clk) then
-			if clks = to_unsigned(49_999_999,clks'length) then
+			if clks = to_unsigned(37_499_999,clks'length) then
 				clks <= (others => '0');
 				en <= not conversion_done;
 			else
