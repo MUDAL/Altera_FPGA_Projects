@@ -53,17 +53,17 @@ clk => count[15].CLK
 clk => seg_counter:counter_2.clk
 clk => seg_counter:counter_3.clk
 clk => seg_counter:counter_4.clk
-seg[0] << seg_rom:rom.data_out[0]
-seg[1] << seg_rom:rom.data_out[1]
-seg[2] << seg_rom:rom.data_out[2]
-seg[3] << seg_rom:rom.data_out[3]
-seg[4] << seg_rom:rom.data_out[4]
-seg[5] << seg_rom:rom.data_out[5]
-seg[6] << seg_rom:rom.data_out[6]
-sel[0] << shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
-sel[1] << shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
-sel[2] << shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
-sel[3] << shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+seg[0] <= seg_rom:rom.data_out[0]
+seg[1] <= seg_rom:rom.data_out[1]
+seg[2] <= seg_rom:rom.data_out[2]
+seg[3] <= seg_rom:rom.data_out[3]
+seg[4] <= seg_rom:rom.data_out[4]
+seg[5] <= seg_rom:rom.data_out[5]
+seg[6] <= seg_rom:rom.data_out[6]
+sel[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+sel[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+sel[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |seg_display|seg_counter:counter_1
