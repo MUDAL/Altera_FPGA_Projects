@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Feb 06 20:52:12 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : weather_sensor
+Top-level Entity Name : weather_sensor
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 419 / 6,272 ( 7 % )
+    Total combinational functions : 412 / 6,272 ( 7 % )
+    Dedicated logic registers : 193 / 6,272 ( 3 % )
+Total registers : 193
+Total pins : 16 / 92 ( 17 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
