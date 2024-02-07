@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Feb 06 23:55:18 2024
+Analysis & Synthesis Status : Successful - Wed Feb 07 23:37:58 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : distance_sensor
 Top-level Entity Name : distance_sensor
 Family : Cyclone IV E
-Total logic elements : 438
-    Total combinational functions : 420
+Total logic elements : 436
+    Total combinational functions : 418
     Dedicated logic registers : 154
 Total registers : 154
 Total pins : 16

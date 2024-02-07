@@ -18,7 +18,7 @@ end hcsr04;
 architecture hcsr04_rtl of hcsr04 is
 	--50MHz clock: 50 cycles = 1uS
 	constant CLKS_PER_US: integer := 50;
-	constant TRIG_PULSE: integer := 15; --15uS trigger pulse
+	constant TRIG_PULSE: integer := 10; --10uS trigger pulse
 	type fsm is (ST_IDLE, ST_TRIG, ST_SAMPLE, ST_MEASURE, ST_DONE);
 	signal state: fsm;
 	signal next_state: fsm;
