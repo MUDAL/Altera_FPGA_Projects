@@ -1,7 +1,7 @@
 # Interfacing the EP4CE6 FPGA board with an HCSR04 sensor and a 4-digit 7-segment display  
 
 ## Description    
-- Implementing a distance measurement system using an EP4CE6 FPGA board, an HCSR04 sensor, and a 7-segment display
+- Measuring distance in centimeters using an EP4CE6 FPGA board, an HCSR04 sensor, and a 7-segment display
 
 ## Tools  
 - EP4CE6E22C8N Cyclone IV FPGA development board
