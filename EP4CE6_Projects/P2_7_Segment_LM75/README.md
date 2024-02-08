@@ -15,9 +15,7 @@
 - After Quartus opens, click on the ``Processing`` tab  
 - Click on ``Start Compilation``  
 - After compilation, click on ``Program Device(Open Programmer)``  
-- When the Programmer window opens, load the demo project into the FPGA by clicking ``Start``
-
-To run the demo, you can just go straight to the programming step and skip the compilation since it has already been done.  
+- When the Programmer window opens, load the demo project into the FPGA by clicking ``Start`` 
 
 ## Project file structure  
 - The **VHDL** design files are located in the **src** and **lib** directories  
