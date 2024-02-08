@@ -25,6 +25,7 @@
 - The other modules or design files are located in the **lib** directory  
 
 ## Video demo  
+![FPGA and HCSR04](https://drive.google.com/file/d/1daxeoCYMT9oGF4qxWWH_68sKgZeNWnto/view?usp=sharing)  
 
 ## Pinouts  
 - Check the **Location** column in the image below for the pin mappings used in this project.    
