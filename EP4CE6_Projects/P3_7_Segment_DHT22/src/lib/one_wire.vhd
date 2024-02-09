@@ -76,7 +76,7 @@ begin
 				end if;
 			when ST_START =>
 				if clks = START_PULSE then
-					next_state <= ST_WAIT_1; --Wait for DHT22's response (160uS)
+					next_state <= ST_WAIT_1;
 				end if;
 			when ST_WAIT_1 =>
 				next_state <= ST_PRE_ACK;
@@ -146,7 +146,7 @@ begin
 				if check_sum = unsigned(data_buff(32 to 39)) then
 					valid <= '1';
 				end if;
-			when others => --Wait states (1 cycle to allow 'clks' to be cleared)
+			when others => --WAIT states (1 cycle to allow 'clks' to be cleared)
 				count_en <= '0';
 				done <= '0';
 				valid <= '0';
