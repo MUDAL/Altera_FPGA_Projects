@@ -124,7 +124,7 @@ begin
 		end if;
 	end process;
 	
-	combinational_outputs: process(state,en,clks,bit_count,check_sum,data_buff)
+	combinational_outputs: process(state,check_sum,data_buff)
 	begin
 		case state is
 			when ST_IDLE =>
