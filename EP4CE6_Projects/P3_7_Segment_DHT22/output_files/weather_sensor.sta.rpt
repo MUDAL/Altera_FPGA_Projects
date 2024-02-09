@@ -1,5 +1,5 @@
 Timing Analyzer report for weather_sensor
-Thu Feb 08 19:28:08 2024
+Fri Feb 09 19:42:07 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -104,7 +104,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.1%      ;
+;     Processor 2            ;   1.7%      ;
 +----------------------------+-------------+
 
 
@@ -122,7 +122,7 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 142.57 MHz ; 142.57 MHz      ; clk        ;      ;
+; 147.82 MHz ; 147.82 MHz      ; clk        ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -138,7 +138,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+--------------------+
 ; Clock ; Slack  ; End Point TNS      ;
 +-------+--------+--------------------+
-; clk   ; -6.014 ; -751.266           ;
+; clk   ; -5.765 ; -722.873           ;
 +-------+--------+--------------------+
 
 
@@ -168,116 +168,116 @@ No paths to report.
 +-------+--------+----------------------------------+
 ; Clock ; Slack  ; End Point TNS                    ;
 +-------+--------+----------------------------------+
-; clk   ; -3.000 ; -288.504                         ;
+; clk   ; -3.000 ; -294.452                         ;
 +-------+--------+----------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                           ;
-+--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; -6.014 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.396      ; 7.411      ;
-; -6.013 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.396      ; 7.410      ;
-; -6.013 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.410      ;
-; -5.999 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.387      ; 7.387      ;
-; -5.998 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.387      ; 7.386      ;
-; -5.976 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.396      ; 7.373      ;
-; -5.975 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.396      ; 7.372      ;
-; -5.975 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.372      ;
-; -5.961 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.387      ; 7.349      ;
-; -5.960 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.387      ; 7.348      ;
-; -5.930 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.396      ; 7.327      ;
-; -5.929 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.396      ; 7.326      ;
-; -5.929 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.326      ;
-; -5.915 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.387      ; 7.303      ;
-; -5.914 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.387      ; 7.302      ;
-; -5.906 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.399      ; 7.306      ;
-; -5.905 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.399      ; 7.305      ;
-; -5.905 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.399      ; 7.305      ;
-; -5.891 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.282      ;
-; -5.890 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.281      ;
-; -5.870 ; one_wire:dht22_one_wire|clks[0]       ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.396      ; 7.267      ;
-; -5.869 ; one_wire:dht22_one_wire|clks[0]       ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.396      ; 7.266      ;
-; -5.869 ; one_wire:dht22_one_wire|clks[0]       ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.266      ;
-; -5.855 ; one_wire:dht22_one_wire|clks[0]       ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.387      ; 7.243      ;
-; -5.854 ; one_wire:dht22_one_wire|clks[0]       ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.387      ; 7.242      ;
-; -5.836 ; one_wire:dht22_one_wire|clks[5]       ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.396      ; 7.233      ;
-; -5.835 ; one_wire:dht22_one_wire|clks[5]       ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.396      ; 7.232      ;
-; -5.835 ; one_wire:dht22_one_wire|clks[5]       ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.232      ;
-; -5.821 ; one_wire:dht22_one_wire|clks[5]       ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.387      ; 7.209      ;
-; -5.820 ; one_wire:dht22_one_wire|clks[5]       ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.387      ; 7.208      ;
-; -5.815 ; one_wire:dht22_one_wire|clk_stamp[5]  ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.399      ; 7.215      ;
-; -5.814 ; one_wire:dht22_one_wire|clk_stamp[5]  ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.399      ; 7.214      ;
-; -5.814 ; one_wire:dht22_one_wire|clk_stamp[5]  ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.399      ; 7.214      ;
-; -5.800 ; one_wire:dht22_one_wire|clk_stamp[5]  ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.191      ;
-; -5.800 ; one_wire:dht22_one_wire|clk_stamp[4]  ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.399      ; 7.200      ;
-; -5.799 ; one_wire:dht22_one_wire|clk_stamp[5]  ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.190      ;
-; -5.799 ; one_wire:dht22_one_wire|clk_stamp[4]  ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.399      ; 7.199      ;
-; -5.799 ; one_wire:dht22_one_wire|clk_stamp[4]  ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.399      ; 7.199      ;
-; -5.791 ; one_wire:dht22_one_wire|clk_stamp[1]  ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.399      ; 7.191      ;
-; -5.790 ; one_wire:dht22_one_wire|clk_stamp[1]  ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.399      ; 7.190      ;
-; -5.790 ; one_wire:dht22_one_wire|clk_stamp[1]  ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.399      ; 7.190      ;
-; -5.785 ; one_wire:dht22_one_wire|clk_stamp[4]  ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.176      ;
-; -5.784 ; one_wire:dht22_one_wire|clk_stamp[4]  ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.175      ;
-; -5.776 ; one_wire:dht22_one_wire|clk_stamp[1]  ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.167      ;
-; -5.775 ; one_wire:dht22_one_wire|clk_stamp[1]  ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.166      ;
-; -5.738 ; one_wire:dht22_one_wire|clks[6]       ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.396      ; 7.135      ;
-; -5.737 ; one_wire:dht22_one_wire|clks[6]       ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.396      ; 7.134      ;
-; -5.737 ; one_wire:dht22_one_wire|clks[6]       ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.134      ;
-; -5.723 ; one_wire:dht22_one_wire|clks[6]       ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.387      ; 7.111      ;
-; -5.722 ; one_wire:dht22_one_wire|clks[6]       ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.387      ; 7.110      ;
-; -5.679 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[11] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.070      ;
-; -5.679 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[7]  ; clk          ; clk         ; 1.000        ; 0.390      ; 7.070      ;
-; -5.679 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.070      ;
-; -5.679 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.070      ;
-; -5.678 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[12] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.069      ;
-; -5.678 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.390      ; 7.069      ;
-; -5.678 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.069      ;
-; -5.678 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[15] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.069      ;
-; -5.675 ; one_wire:dht22_one_wire|clk_stamp[0]  ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.399      ; 7.075      ;
-; -5.674 ; one_wire:dht22_one_wire|clk_stamp[0]  ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.399      ; 7.074      ;
-; -5.674 ; one_wire:dht22_one_wire|clk_stamp[0]  ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.399      ; 7.074      ;
-; -5.667 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[2]  ; clk          ; clk         ; 1.000        ; 0.386      ; 7.054      ;
-; -5.663 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[1]  ; clk          ; clk         ; 1.000        ; 0.386      ; 7.050      ;
-; -5.660 ; one_wire:dht22_one_wire|clk_stamp[0]  ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.051      ;
-; -5.659 ; one_wire:dht22_one_wire|clk_stamp[0]  ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.050      ;
-; -5.644 ; one_wire:dht22_one_wire|clk_stamp[6]  ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.399      ; 7.044      ;
-; -5.643 ; one_wire:dht22_one_wire|clk_stamp[6]  ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.399      ; 7.043      ;
-; -5.643 ; one_wire:dht22_one_wire|clk_stamp[6]  ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.399      ; 7.043      ;
-; -5.641 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[11] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.032      ;
-; -5.641 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[7]  ; clk          ; clk         ; 1.000        ; 0.390      ; 7.032      ;
-; -5.641 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.032      ;
-; -5.641 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.032      ;
-; -5.640 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[12] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.031      ;
-; -5.640 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.390      ; 7.031      ;
-; -5.640 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.031      ;
-; -5.640 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[15] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.031      ;
-; -5.629 ; one_wire:dht22_one_wire|clk_stamp[6]  ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.020      ;
-; -5.629 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[2]  ; clk          ; clk         ; 1.000        ; 0.386      ; 7.016      ;
-; -5.628 ; one_wire:dht22_one_wire|clk_stamp[6]  ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.390      ; 7.019      ;
-; -5.625 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[1]  ; clk          ; clk         ; 1.000        ; 0.386      ; 7.012      ;
-; -5.607 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.390      ; 6.998      ;
-; -5.607 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[27] ; clk          ; clk         ; 1.000        ; 0.390      ; 6.998      ;
-; -5.606 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[3]  ; clk          ; clk         ; 1.000        ; 0.390      ; 6.997      ;
-; -5.600 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[16] ; clk          ; clk         ; 1.000        ; 0.382      ; 6.983      ;
-; -5.600 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[18] ; clk          ; clk         ; 1.000        ; 0.382      ; 6.983      ;
-; -5.595 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[11] ; clk          ; clk         ; 1.000        ; 0.390      ; 6.986      ;
-; -5.595 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[7]  ; clk          ; clk         ; 1.000        ; 0.390      ; 6.986      ;
-; -5.595 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.390      ; 6.986      ;
-; -5.595 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.390      ; 6.986      ;
-; -5.594 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[12] ; clk          ; clk         ; 1.000        ; 0.390      ; 6.985      ;
-; -5.594 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.390      ; 6.985      ;
-; -5.594 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.390      ; 6.985      ;
-; -5.594 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[15] ; clk          ; clk         ; 1.000        ; 0.390      ; 6.985      ;
-; -5.583 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[2]  ; clk          ; clk         ; 1.000        ; 0.386      ; 6.970      ;
-; -5.579 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[1]  ; clk          ; clk         ; 1.000        ; 0.386      ; 6.966      ;
-; -5.571 ; dec_to_bcd:dht22_data_bcd|num_reg[11] ; dec_to_bcd:dht22_data_bcd|num_reg[13] ; clk          ; clk         ; 1.000        ; -0.081     ; 6.491      ;
-; -5.571 ; dec_to_bcd:dht22_data_bcd|num_reg[11] ; dec_to_bcd:dht22_data_bcd|num_reg[14] ; clk          ; clk         ; 1.000        ; -0.081     ; 6.491      ;
-; -5.571 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[11] ; clk          ; clk         ; 1.000        ; 0.393      ; 6.965      ;
-; -5.571 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[7]  ; clk          ; clk         ; 1.000        ; 0.393      ; 6.965      ;
-; -5.571 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.393      ; 6.965      ;
-+--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                          ;
++--------+--------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -5.765 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.162      ;
+; -5.764 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.161      ;
+; -5.763 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.160      ;
+; -5.762 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.159      ;
+; -5.761 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.158      ;
+; -5.758 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.155      ;
+; -5.758 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.155      ;
+; -5.757 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.154      ;
+; -5.756 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.153      ;
+; -5.756 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.153      ;
+; -5.755 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.152      ;
+; -5.755 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.152      ;
+; -5.754 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.151      ;
+; -5.754 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.151      ;
+; -5.753 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.150      ;
+; -5.752 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.149      ;
+; -5.751 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.148      ;
+; -5.749 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.146      ;
+; -5.748 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.145      ;
+; -5.747 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.144      ;
+; -5.746 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.143      ;
+; -5.745 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.142      ;
+; -5.745 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.142      ;
+; -5.745 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.142      ;
+; -5.743 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.140      ;
+; -5.742 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.139      ;
+; -5.741 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.138      ;
+; -5.737 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.134      ;
+; -5.736 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.133      ;
+; -5.734 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.131      ;
+; -5.733 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.130      ;
+; -5.732 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.129      ;
+; -5.732 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.129      ;
+; -5.716 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.113      ;
+; -5.715 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.112      ;
+; -5.714 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.111      ;
+; -5.713 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.110      ;
+; -5.712 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.109      ;
+; -5.709 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.106      ;
+; -5.707 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.104      ;
+; -5.706 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.103      ;
+; -5.705 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.102      ;
+; -5.704 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.101      ;
+; -5.704 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.101      ;
+; -5.703 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.100      ;
+; -5.703 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.100      ;
+; -5.702 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.099      ;
+; -5.701 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.098      ;
+; -5.700 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.097      ;
+; -5.697 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.094      ;
+; -5.695 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.092      ;
+; -5.694 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.091      ;
+; -5.693 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.090      ;
+; -5.692 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.089      ;
+; -5.691 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.088      ;
+; -5.649 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.046      ;
+; -5.648 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.045      ;
+; -5.647 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.044      ;
+; -5.646 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.043      ;
+; -5.645 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.042      ;
+; -5.645 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.042      ;
+; -5.644 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.041      ;
+; -5.643 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.040      ;
+; -5.642 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.039      ;
+; -5.642 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.039      ;
+; -5.641 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.038      ;
+; -5.641 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.038      ;
+; -5.640 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.037      ;
+; -5.640 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.037      ;
+; -5.639 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.036      ;
+; -5.639 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.036      ;
+; -5.638 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.035      ;
+; -5.638 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.035      ;
+; -5.638 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.035      ;
+; -5.637 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.034      ;
+; -5.637 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.034      ;
+; -5.636 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.033      ;
+; -5.636 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.033      ;
+; -5.635 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.032      ;
+; -5.634 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.031      ;
+; -5.634 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.031      ;
+; -5.633 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.030      ;
+; -5.632 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.029      ;
+; -5.632 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.029      ;
+; -5.631 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.028      ;
+; -5.630 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.027      ;
+; -5.629 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.026      ;
+; -5.628 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[9]  ; clk          ; clk         ; 1.000        ; 0.388      ; 7.017      ;
+; -5.628 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.388      ; 7.017      ;
+; -5.628 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.025      ;
+; -5.627 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[6]  ; clk          ; clk         ; 1.000        ; 0.388      ; 7.016      ;
+; -5.627 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[14] ; clk          ; clk         ; 1.000        ; 0.388      ; 7.016      ;
+; -5.626 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.388      ; 7.015      ;
+; -5.625 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.022      ;
+; -5.624 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.021      ;
+; -5.623 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.020      ;
+; -5.622 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.019      ;
+; -5.621 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.396      ; 7.018      ;
+; -5.621 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[9]  ; clk          ; clk         ; 1.000        ; 0.388      ; 7.010      ;
+; -5.621 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.388      ; 7.010      ;
++--------+--------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -285,64 +285,69 @@ No paths to report.
 +-------+-----------------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                     ; To Node                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.433 ; one_wire:dht22_one_wire|data_buff[34]         ; one_wire:dht22_one_wire|data_buff[34]         ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
 ; 0.433 ; one_wire:dht22_one_wire|data_buff[38]         ; one_wire:dht22_one_wire|data_buff[38]         ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
-; 0.433 ; one_wire:dht22_one_wire|data_buff[25]         ; one_wire:dht22_one_wire|data_buff[25]         ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; one_wire:dht22_one_wire|data_buff[0]          ; one_wire:dht22_one_wire|data_buff[0]          ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; one_wire:dht22_one_wire|data_buff[8]          ; one_wire:dht22_one_wire|data_buff[8]          ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; one_wire:dht22_one_wire|data_buff[1]          ; one_wire:dht22_one_wire|data_buff[1]          ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; one_wire:dht22_one_wire|data_buff[16]         ; one_wire:dht22_one_wire|data_buff[16]         ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; one_wire:dht22_one_wire|data_buff[24]         ; one_wire:dht22_one_wire|data_buff[24]         ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; one_wire:dht22_one_wire|data_buff[17]         ; one_wire:dht22_one_wire|data_buff[17]         ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; one_wire:dht22_one_wire|data_buff[3]          ; one_wire:dht22_one_wire|data_buff[3]          ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
 ; 0.433 ; one_wire:dht22_one_wire|data_buff[26]         ; one_wire:dht22_one_wire|data_buff[26]         ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; one_wire:dht22_one_wire|data_buff[27]         ; one_wire:dht22_one_wire|data_buff[27]         ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; one_wire:dht22_one_wire|data_buff[19]         ; one_wire:dht22_one_wire|data_buff[19]         ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; one_wire:dht22_one_wire|data_buff[5]          ; one_wire:dht22_one_wire|data_buff[5]          ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; one_wire:dht22_one_wire|data_buff[15]         ; one_wire:dht22_one_wire|data_buff[15]         ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; one_wire:dht22_one_wire|data_buff[7]          ; one_wire:dht22_one_wire|data_buff[7]          ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[33]         ; one_wire:dht22_one_wire|data_buff[33]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[32]         ; one_wire:dht22_one_wire|data_buff[32]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; one_wire:dht22_one_wire|data_buff[34]         ; one_wire:dht22_one_wire|data_buff[34]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[35]         ; one_wire:dht22_one_wire|data_buff[35]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[36]         ; one_wire:dht22_one_wire|data_buff[36]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[37]         ; one_wire:dht22_one_wire|data_buff[37]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[39]         ; one_wire:dht22_one_wire|data_buff[39]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[0]          ; one_wire:dht22_one_wire|data_buff[0]          ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[8]          ; one_wire:dht22_one_wire|data_buff[8]          ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[1]          ; one_wire:dht22_one_wire|data_buff[1]          ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[9]          ; one_wire:dht22_one_wire|data_buff[9]          ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[16]         ; one_wire:dht22_one_wire|data_buff[16]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[24]         ; one_wire:dht22_one_wire|data_buff[24]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[17]         ; one_wire:dht22_one_wire|data_buff[17]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; one_wire:dht22_one_wire|data_buff[25]         ; one_wire:dht22_one_wire|data_buff[25]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[10]         ; one_wire:dht22_one_wire|data_buff[10]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[2]          ; one_wire:dht22_one_wire|data_buff[2]          ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[11]         ; one_wire:dht22_one_wire|data_buff[11]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[3]          ; one_wire:dht22_one_wire|data_buff[3]          ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[18]         ; one_wire:dht22_one_wire|data_buff[18]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[19]         ; one_wire:dht22_one_wire|data_buff[19]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[27]         ; one_wire:dht22_one_wire|data_buff[27]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[12]         ; one_wire:dht22_one_wire|data_buff[12]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[4]          ; one_wire:dht22_one_wire|data_buff[4]          ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; one_wire:dht22_one_wire|data_buff[12]         ; one_wire:dht22_one_wire|data_buff[12]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[13]         ; one_wire:dht22_one_wire|data_buff[13]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[5]          ; one_wire:dht22_one_wire|data_buff[5]          ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[20]         ; one_wire:dht22_one_wire|data_buff[20]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[28]         ; one_wire:dht22_one_wire|data_buff[28]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; one_wire:dht22_one_wire|data_buff[20]         ; one_wire:dht22_one_wire|data_buff[20]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[21]         ; one_wire:dht22_one_wire|data_buff[21]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[29]         ; one_wire:dht22_one_wire|data_buff[29]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[6]          ; one_wire:dht22_one_wire|data_buff[6]          ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[14]         ; one_wire:dht22_one_wire|data_buff[14]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[7]          ; one_wire:dht22_one_wire|data_buff[7]          ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[15]         ; one_wire:dht22_one_wire|data_buff[15]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[30]         ; one_wire:dht22_one_wire|data_buff[30]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[22]         ; one_wire:dht22_one_wire|data_buff[22]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; one_wire:dht22_one_wire|data_buff[23]         ; one_wire:dht22_one_wire|data_buff[23]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; one_wire:dht22_one_wire|data_buff[30]         ; one_wire:dht22_one_wire|data_buff[30]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; one_wire:dht22_one_wire|data_buff[31]         ; one_wire:dht22_one_wire|data_buff[31]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; one_wire:dht22_one_wire|data_buff[23]         ; one_wire:dht22_one_wire|data_buff[23]         ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.453 ; dec_to_bcd:dht22_data_bcd|tens_reg[3]         ; dec_to_bcd:dht22_data_bcd|tens_reg[3]         ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; dec_to_bcd:dht22_data_bcd|num_reg[0]          ; dec_to_bcd:dht22_data_bcd|num_reg[0]          ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; seg_display:display|digit_index[1]            ; seg_display:display|digit_index[1]            ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; one_wire:dht22_one_wire|io~en                 ; one_wire:dht22_one_wire|io~en                 ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
-; 0.453 ; dec_to_bcd:dht22_data_bcd|done_reg            ; dec_to_bcd:dht22_data_bcd|done_reg            ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
-; 0.453 ; dec_to_bcd:dht22_data_bcd|state.ST_DONE       ; dec_to_bcd:dht22_data_bcd|state.ST_DONE       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; dec_to_bcd:dht22_data_bcd|state.ST_CALC       ; dec_to_bcd:dht22_data_bcd|state.ST_CALC       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; dec_to_bcd:dht22_data_bcd|state.ST_DONE       ; dec_to_bcd:dht22_data_bcd|state.ST_DONE       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; dec_to_bcd:dht22_data_bcd|state.ST_IDLE       ; dec_to_bcd:dht22_data_bcd|state.ST_IDLE       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; dec_to_bcd:dht22_data_bcd|done_reg            ; dec_to_bcd:dht22_data_bcd|done_reg            ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; en_converter                                  ; en_converter                                  ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; one_wire:dht22_one_wire|state.ST_IDLE         ; one_wire:dht22_one_wire|state.ST_IDLE         ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; one_wire:dht22_one_wire|state.ST_CHECK        ; one_wire:dht22_one_wire|state.ST_CHECK        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; one_wire:dht22_one_wire|state.ST_START        ; one_wire:dht22_one_wire|state.ST_START        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
-; 0.453 ; one_wire:dht22_one_wire|state.ST_PRE_ACK      ; one_wire:dht22_one_wire|state.ST_PRE_ACK      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; one_wire:dht22_one_wire|state.ST_ACK          ; one_wire:dht22_one_wire|state.ST_ACK          ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
-; 0.453 ; one_wire:dht22_one_wire|state.ST_DONE         ; one_wire:dht22_one_wire|state.ST_DONE         ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; one_wire:dht22_one_wire|state.ST_PRE_ACK      ; one_wire:dht22_one_wire|state.ST_PRE_ACK      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; one_wire:dht22_one_wire|bit_count[3]          ; one_wire:dht22_one_wire|bit_count[3]          ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; one_wire:dht22_one_wire|bit_count[0]          ; one_wire:dht22_one_wire|bit_count[0]          ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; one_wire:dht22_one_wire|bit_count[1]          ; one_wire:dht22_one_wire|bit_count[1]          ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; one_wire:dht22_one_wire|bit_count[2]          ; one_wire:dht22_one_wire|bit_count[2]          ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; one_wire:dht22_one_wire|bit_count[4]          ; one_wire:dht22_one_wire|bit_count[4]          ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; one_wire:dht22_one_wire|bit_count[5]          ; one_wire:dht22_one_wire|bit_count[5]          ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; one_wire:dht22_one_wire|old_io                ; one_wire:dht22_one_wire|old_io                ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
-; 0.453 ; one_wire:dht22_one_wire|state.ST_IDLE         ; one_wire:dht22_one_wire|state.ST_IDLE         ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; one_wire:dht22_one_wire|new_io                ; one_wire:dht22_one_wire|new_io                ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
-; 0.454 ; dec_to_bcd:dht22_data_bcd|tens_reg[3]         ; dec_to_bcd:dht22_data_bcd|tens_reg[3]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[3]     ; dec_to_bcd:dht22_data_bcd|hundreds_reg[3]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; dec_to_bcd:dht22_data_bcd|tens_reg[2]         ; dec_to_bcd:dht22_data_bcd|tens_reg[2]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[2]     ; dec_to_bcd:dht22_data_bcd|hundreds_reg[2]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
@@ -350,41 +355,36 @@ No paths to report.
 ; 0.454 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[1]     ; dec_to_bcd:dht22_data_bcd|hundreds_reg[1]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[0]     ; dec_to_bcd:dht22_data_bcd|hundreds_reg[0]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; dec_to_bcd:dht22_data_bcd|tens_reg[0]         ; dec_to_bcd:dht22_data_bcd|tens_reg[0]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; one_wire:dht22_one_wire|bit_count[4]          ; one_wire:dht22_one_wire|bit_count[4]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; one_wire:dht22_one_wire|bit_count[5]          ; one_wire:dht22_one_wire|bit_count[5]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; one_wire:dht22_one_wire|bit_count[3]          ; one_wire:dht22_one_wire|bit_count[3]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; one_wire:dht22_one_wire|bit_count[2]          ; one_wire:dht22_one_wire|bit_count[2]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; one_wire:dht22_one_wire|bit_count[1]          ; one_wire:dht22_one_wire|bit_count[1]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; one_wire:dht22_one_wire|bit_count[0]          ; one_wire:dht22_one_wire|bit_count[0]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.464 ; seg_display:display|digit_index[0]            ; seg_display:display|digit_index[0]            ; clk          ; clk         ; 0.000        ; 0.082      ; 0.758      ;
 ; 0.465 ; param                                         ; param                                         ; clk          ; clk         ; 0.000        ; 0.081      ; 0.758      ;
-; 0.502 ; dec_to_bcd:dht22_data_bcd|num_reg[0]          ; dec_to_bcd:dht22_data_bcd|bcd_reg[0]          ; clk          ; clk         ; 0.000        ; 0.081      ; 0.795      ;
-; 0.509 ; seg_display:display|shift_reg[0]              ; seg_display:display|shift_reg[1]              ; clk          ; clk         ; 0.000        ; 0.082      ; 0.803      ;
-; 0.525 ; seg_display:display|shift_reg[1]              ; seg_display:display|shift_reg[2]              ; clk          ; clk         ; 0.000        ; 0.082      ; 0.819      ;
-; 0.525 ; one_wire:dht22_one_wire|clks[19]              ; one_wire:dht22_one_wire|clks[19]              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.818      ;
-; 0.540 ; en_dht22                                      ; one_wire:dht22_one_wire|state.ST_CHECK        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.833      ;
-; 0.541 ; en_dht22                                      ; one_wire:dht22_one_wire|state.ST_IDLE         ; clk          ; clk         ; 0.000        ; 0.081      ; 0.834      ;
-; 0.555 ; one_wire:dht22_one_wire|state.ST_CHECK        ; en_dht22                                      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.848      ;
-; 0.649 ; seg_display:display|shift_reg[3]              ; seg_display:display|shift_reg[0]              ; clk          ; clk         ; 0.000        ; 0.082      ; 0.943      ;
-; 0.697 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[3]     ; dec_to_bcd:dht22_data_bcd|bcd_reg[11]         ; clk          ; clk         ; 0.000        ; 0.079      ; 0.988      ;
-; 0.700 ; dec_to_bcd:dht22_data_bcd|tens_reg[2]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[6]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.992      ;
-; 0.724 ; dec_to_bcd:dht22_data_bcd|tens_reg[0]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[4]          ; clk          ; clk         ; 0.000        ; 0.080      ; 1.016      ;
-; 0.725 ; seg_display:display|shift_reg[2]              ; seg_display:display|shift_reg[3]              ; clk          ; clk         ; 0.000        ; 0.082      ; 1.019      ;
-; 0.744 ; one_wire_count[4]                             ; one_wire_count[4]                             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.037      ;
-; 0.745 ; converter_count[4]                            ; converter_count[4]                            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.038      ;
-; 0.745 ; one_wire_count[9]                             ; one_wire_count[9]                             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.038      ;
-; 0.746 ; one_wire_count[6]                             ; one_wire_count[6]                             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.039      ;
-; 0.747 ; one_wire_count[7]                             ; one_wire_count[7]                             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.040      ;
-; 0.747 ; one_wire_count[5]                             ; one_wire_count[5]                             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.040      ;
-; 0.760 ; seg_display:display|count[5]                  ; seg_display:display|count[5]                  ; clk          ; clk         ; 0.000        ; 0.082      ; 1.054      ;
-; 0.761 ; seg_display:display|count[11]                 ; seg_display:display|count[11]                 ; clk          ; clk         ; 0.000        ; 0.082      ; 1.055      ;
-; 0.761 ; one_wire_count[12]                            ; one_wire_count[12]                            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
-; 0.762 ; seg_display:display|count[15]                 ; seg_display:display|count[15]                 ; clk          ; clk         ; 0.000        ; 0.082      ; 1.056      ;
-; 0.762 ; seg_display:display|count[7]                  ; seg_display:display|count[7]                  ; clk          ; clk         ; 0.000        ; 0.082      ; 1.056      ;
-; 0.762 ; one_wire:dht22_one_wire|clks[11]              ; one_wire:dht22_one_wire|clks[11]              ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
-; 0.762 ; one_wire_count[11]                            ; one_wire_count[11]                            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
-; 0.762 ; one_wire_count[10]                            ; one_wire_count[10]                            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
-; 0.763 ; seg_display:display|count[6]                  ; seg_display:display|count[6]                  ; clk          ; clk         ; 0.000        ; 0.082      ; 1.057      ;
+; 0.466 ; seg_display:display|digit_index[0]            ; seg_display:display|digit_index[0]            ; clk          ; clk         ; 0.000        ; 0.080      ; 0.758      ;
+; 0.510 ; seg_display:display|shift_reg[3]              ; seg_display:display|shift_reg[0]              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.802      ;
+; 0.524 ; en_converter                                  ; dec_to_bcd:dht22_data_bcd|done_reg            ; clk          ; clk         ; 0.000        ; 0.081      ; 0.817      ;
+; 0.544 ; one_wire:dht22_one_wire|state.ST_SAMPLE       ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; clk          ; clk         ; 0.000        ; 0.081      ; 0.837      ;
+; 0.586 ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; one_wire:dht22_one_wire|state.ST_SAMPLE       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.879      ;
+; 0.653 ; seg_display:display|shift_reg[0]              ; seg_display:display|shift_reg[1]              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.945      ;
+; 0.664 ; en_dht22                                      ; one_wire:dht22_one_wire|state.ST_WAIT_3       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.957      ;
+; 0.666 ; en_dht22                                      ; one_wire:dht22_one_wire|state.ST_WAIT_1       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.959      ;
+; 0.692 ; one_wire:dht22_one_wire|state.ST_CHECK        ; en_dht22                                      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.985      ;
+; 0.698 ; dec_to_bcd:dht22_data_bcd|tens_reg[3]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[7]          ; clk          ; clk         ; 0.000        ; 0.081      ; 0.991      ;
+; 0.699 ; dec_to_bcd:dht22_data_bcd|num_reg[0]          ; dec_to_bcd:dht22_data_bcd|bcd_reg[0]          ; clk          ; clk         ; 0.000        ; 0.081      ; 0.992      ;
+; 0.701 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[3]     ; dec_to_bcd:dht22_data_bcd|bcd_reg[11]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.993      ;
+; 0.723 ; dec_to_bcd:dht22_data_bcd|tens_reg[1]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[5]          ; clk          ; clk         ; 0.000        ; 0.080      ; 1.015      ;
+; 0.724 ; seg_display:display|shift_reg[2]              ; seg_display:display|shift_reg[3]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.016      ;
+; 0.728 ; seg_display:display|shift_reg[1]              ; seg_display:display|shift_reg[2]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.020      ;
+; 0.740 ; dec_to_bcd:dht22_data_bcd|tens_reg[0]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[4]          ; clk          ; clk         ; 0.000        ; 0.080      ; 1.032      ;
+; 0.745 ; one_wire_count[10]                            ; one_wire_count[10]                            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.037      ;
+; 0.745 ; one_wire_count[4]                             ; one_wire_count[4]                             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.037      ;
+; 0.746 ; one_wire_count[9]                             ; one_wire_count[9]                             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.038      ;
+; 0.747 ; one_wire_count[6]                             ; one_wire_count[6]                             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.039      ;
+; 0.748 ; converter_count[4]                            ; converter_count[4]                            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.040      ;
+; 0.748 ; one_wire_count[7]                             ; one_wire_count[7]                             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.040      ;
+; 0.748 ; one_wire_count[5]                             ; one_wire_count[5]                             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.040      ;
+; 0.760 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[1]     ; dec_to_bcd:dht22_data_bcd|bcd_reg[9]          ; clk          ; clk         ; 0.000        ; 0.079      ; 1.051      ;
+; 0.762 ; seg_display:display|count[11]                 ; seg_display:display|count[11]                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.762 ; seg_display:display|count[5]                  ; seg_display:display|count[5]                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.762 ; one_wire_count[12]                            ; one_wire_count[12]                            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.762 ; seg_display:display|count[3]                  ; seg_display:display|count[3]                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.763 ; one_wire_count[11]                            ; one_wire_count[11]                            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
 +-------+-----------------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -399,7 +399,7 @@ No synchronizer chains to report.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 152.6 MHz ; 152.6 MHz       ; clk        ;      ;
+; 158.3 MHz ; 158.3 MHz       ; clk        ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -409,7 +409,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; clk   ; -5.553 ; -686.091          ;
+; clk   ; -5.317 ; -660.263          ;
 +-------+--------+-------------------+
 
 
@@ -439,116 +439,116 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; clk   ; -3.000 ; -288.504                        ;
+; clk   ; -3.000 ; -294.452                        ;
 +-------+--------+---------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                            ;
-+--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; -5.553 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.932      ;
-; -5.551 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.930      ;
-; -5.551 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.377      ; 6.930      ;
-; -5.522 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.894      ;
-; -5.521 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.893      ;
-; -5.507 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.886      ;
-; -5.505 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.884      ;
-; -5.505 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.377      ; 6.884      ;
-; -5.502 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.881      ;
-; -5.500 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.879      ;
-; -5.500 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.377      ; 6.879      ;
-; -5.476 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.848      ;
-; -5.475 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.847      ;
-; -5.471 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.843      ;
-; -5.470 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.842      ;
-; -5.434 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.813      ;
-; -5.433 ; one_wire:dht22_one_wire|clks[0]       ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.812      ;
-; -5.432 ; one_wire:dht22_one_wire|clk_stamp[5]  ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.811      ;
-; -5.432 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.811      ;
-; -5.432 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.377      ; 6.811      ;
-; -5.431 ; one_wire:dht22_one_wire|clks[0]       ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.810      ;
-; -5.431 ; one_wire:dht22_one_wire|clks[0]       ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.377      ; 6.810      ;
-; -5.430 ; one_wire:dht22_one_wire|clk_stamp[5]  ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.809      ;
-; -5.430 ; one_wire:dht22_one_wire|clk_stamp[5]  ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.377      ; 6.809      ;
-; -5.403 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.775      ;
-; -5.402 ; one_wire:dht22_one_wire|clks[0]       ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.774      ;
-; -5.402 ; one_wire:dht22_one_wire|clks[1]       ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.774      ;
-; -5.401 ; one_wire:dht22_one_wire|clks[0]       ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.773      ;
-; -5.401 ; one_wire:dht22_one_wire|clk_stamp[5]  ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.773      ;
-; -5.400 ; one_wire:dht22_one_wire|clk_stamp[5]  ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.772      ;
-; -5.393 ; one_wire:dht22_one_wire|clk_stamp[4]  ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.772      ;
-; -5.391 ; one_wire:dht22_one_wire|clk_stamp[4]  ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.770      ;
-; -5.391 ; one_wire:dht22_one_wire|clk_stamp[4]  ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.377      ; 6.770      ;
-; -5.372 ; one_wire:dht22_one_wire|clks[6]       ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.751      ;
-; -5.370 ; one_wire:dht22_one_wire|clks[6]       ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.749      ;
-; -5.370 ; one_wire:dht22_one_wire|clks[6]       ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.377      ; 6.749      ;
-; -5.364 ; one_wire:dht22_one_wire|clk_stamp[1]  ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.743      ;
-; -5.362 ; one_wire:dht22_one_wire|clk_stamp[4]  ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.734      ;
-; -5.362 ; one_wire:dht22_one_wire|clk_stamp[1]  ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.741      ;
-; -5.362 ; one_wire:dht22_one_wire|clk_stamp[1]  ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.377      ; 6.741      ;
-; -5.361 ; one_wire:dht22_one_wire|clk_stamp[4]  ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.733      ;
-; -5.349 ; one_wire:dht22_one_wire|clks[5]       ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.728      ;
-; -5.347 ; one_wire:dht22_one_wire|clks[5]       ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.726      ;
-; -5.347 ; one_wire:dht22_one_wire|clks[5]       ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.377      ; 6.726      ;
-; -5.341 ; one_wire:dht22_one_wire|clks[6]       ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.713      ;
-; -5.340 ; one_wire:dht22_one_wire|clks[6]       ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.712      ;
-; -5.333 ; one_wire:dht22_one_wire|clk_stamp[1]  ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.705      ;
-; -5.332 ; one_wire:dht22_one_wire|clk_stamp[1]  ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.704      ;
-; -5.318 ; one_wire:dht22_one_wire|clks[5]       ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.690      ;
-; -5.317 ; one_wire:dht22_one_wire|clks[5]       ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.689      ;
-; -5.216 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[11] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.594      ;
-; -5.215 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[12] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.593      ;
-; -5.215 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.376      ; 6.593      ;
-; -5.215 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.593      ;
-; -5.215 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[7]  ; clk          ; clk         ; 1.000        ; 0.376      ; 6.593      ;
-; -5.215 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[15] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.593      ;
-; -5.215 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.593      ;
-; -5.215 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.593      ;
-; -5.207 ; one_wire:dht22_one_wire|clk_stamp[0]  ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.586      ;
-; -5.205 ; one_wire:dht22_one_wire|clk_stamp[0]  ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.584      ;
-; -5.205 ; one_wire:dht22_one_wire|clk_stamp[0]  ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.377      ; 6.584      ;
-; -5.204 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[2]  ; clk          ; clk         ; 1.000        ; 0.368      ; 6.574      ;
-; -5.200 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[1]  ; clk          ; clk         ; 1.000        ; 0.368      ; 6.570      ;
-; -5.188 ; one_wire:dht22_one_wire|clk_stamp[6]  ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.567      ;
-; -5.186 ; one_wire:dht22_one_wire|clk_stamp[6]  ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.565      ;
-; -5.186 ; one_wire:dht22_one_wire|clk_stamp[6]  ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.377      ; 6.565      ;
-; -5.176 ; one_wire:dht22_one_wire|clk_stamp[0]  ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.548      ;
-; -5.175 ; one_wire:dht22_one_wire|clk_stamp[0]  ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.547      ;
-; -5.170 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[11] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.548      ;
-; -5.169 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[12] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.547      ;
-; -5.169 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.376      ; 6.547      ;
-; -5.169 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.547      ;
-; -5.169 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[7]  ; clk          ; clk         ; 1.000        ; 0.376      ; 6.547      ;
-; -5.169 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[15] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.547      ;
-; -5.169 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.547      ;
-; -5.169 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.547      ;
-; -5.165 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[11] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.543      ;
-; -5.164 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[12] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.542      ;
-; -5.164 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.376      ; 6.542      ;
-; -5.164 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.542      ;
-; -5.164 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[7]  ; clk          ; clk         ; 1.000        ; 0.376      ; 6.542      ;
-; -5.164 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[15] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.542      ;
-; -5.164 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.542      ;
-; -5.164 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.542      ;
-; -5.158 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[2]  ; clk          ; clk         ; 1.000        ; 0.368      ; 6.528      ;
-; -5.157 ; one_wire:dht22_one_wire|clk_stamp[6]  ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.529      ;
-; -5.156 ; one_wire:dht22_one_wire|clk_stamp[6]  ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.370      ; 6.528      ;
-; -5.154 ; one_wire:dht22_one_wire|clks[3]       ; one_wire:dht22_one_wire|data_buff[1]  ; clk          ; clk         ; 1.000        ; 0.368      ; 6.524      ;
-; -5.153 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[2]  ; clk          ; clk         ; 1.000        ; 0.368      ; 6.523      ;
-; -5.151 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.371      ; 6.524      ;
-; -5.151 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[27] ; clk          ; clk         ; 1.000        ; 0.371      ; 6.524      ;
-; -5.150 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[3]  ; clk          ; clk         ; 1.000        ; 0.371      ; 6.523      ;
-; -5.149 ; one_wire:dht22_one_wire|clk_stamp[3]  ; one_wire:dht22_one_wire|data_buff[1]  ; clk          ; clk         ; 1.000        ; 0.368      ; 6.519      ;
-; -5.144 ; one_wire:dht22_one_wire|clks[4]       ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.523      ;
-; -5.142 ; one_wire:dht22_one_wire|clks[4]       ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.377      ; 6.521      ;
-; -5.142 ; one_wire:dht22_one_wire|clks[4]       ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.377      ; 6.521      ;
-; -5.141 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[16] ; clk          ; clk         ; 1.000        ; 0.371      ; 6.514      ;
-; -5.141 ; one_wire:dht22_one_wire|clks[2]       ; one_wire:dht22_one_wire|data_buff[18] ; clk          ; clk         ; 1.000        ; 0.371      ; 6.514      ;
-; -5.119 ; dec_to_bcd:dht22_data_bcd|num_reg[11] ; dec_to_bcd:dht22_data_bcd|num_reg[13] ; clk          ; clk         ; 1.000        ; -0.073     ; 6.048      ;
-; -5.119 ; dec_to_bcd:dht22_data_bcd|num_reg[11] ; dec_to_bcd:dht22_data_bcd|num_reg[14] ; clk          ; clk         ; 1.000        ; -0.073     ; 6.048      ;
-+--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                           ;
++--------+--------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -5.317 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.695      ;
+; -5.317 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.695      ;
+; -5.315 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.693      ;
+; -5.314 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.692      ;
+; -5.314 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.692      ;
+; -5.311 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.689      ;
+; -5.309 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.687      ;
+; -5.308 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.686      ;
+; -5.307 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.685      ;
+; -5.306 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.684      ;
+; -5.305 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.683      ;
+; -5.286 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.666      ;
+; -5.286 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.666      ;
+; -5.284 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.664      ;
+; -5.283 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.663      ;
+; -5.283 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.663      ;
+; -5.280 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.660      ;
+; -5.278 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.656      ;
+; -5.278 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.656      ;
+; -5.278 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.658      ;
+; -5.277 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.657      ;
+; -5.276 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.654      ;
+; -5.276 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.656      ;
+; -5.275 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.653      ;
+; -5.275 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.655      ;
+; -5.274 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.652      ;
+; -5.274 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.654      ;
+; -5.271 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.649      ;
+; -5.269 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.647      ;
+; -5.267 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.645      ;
+; -5.267 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.645      ;
+; -5.266 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.644      ;
+; -5.265 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.643      ;
+; -5.264 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.644      ;
+; -5.264 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.644      ;
+; -5.262 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.642      ;
+; -5.261 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.641      ;
+; -5.261 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.641      ;
+; -5.258 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.638      ;
+; -5.256 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.636      ;
+; -5.255 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.635      ;
+; -5.254 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.634      ;
+; -5.253 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.633      ;
+; -5.252 ; one_wire:dht22_one_wire|clk_stamp[7] ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.632      ;
+; -5.245 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.623      ;
+; -5.245 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.623      ;
+; -5.243 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.621      ;
+; -5.242 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.620      ;
+; -5.242 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.620      ;
+; -5.239 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.617      ;
+; -5.237 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.615      ;
+; -5.236 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.614      ;
+; -5.235 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.613      ;
+; -5.234 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.612      ;
+; -5.233 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.611      ;
+; -5.226 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.604      ;
+; -5.226 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.604      ;
+; -5.224 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.602      ;
+; -5.223 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.601      ;
+; -5.223 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.601      ;
+; -5.220 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.598      ;
+; -5.218 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.596      ;
+; -5.217 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.595      ;
+; -5.216 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.594      ;
+; -5.215 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.593      ;
+; -5.214 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.592      ;
+; -5.207 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[9]  ; clk          ; clk         ; 1.000        ; 0.366      ; 6.575      ;
+; -5.207 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.366      ; 6.575      ;
+; -5.206 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[6]  ; clk          ; clk         ; 1.000        ; 0.366      ; 6.574      ;
+; -5.206 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[14] ; clk          ; clk         ; 1.000        ; 0.366      ; 6.574      ;
+; -5.205 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.366      ; 6.573      ;
+; -5.189 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.567      ;
+; -5.189 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.567      ;
+; -5.188 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.566      ;
+; -5.188 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.566      ;
+; -5.187 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.565      ;
+; -5.186 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.564      ;
+; -5.186 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.564      ;
+; -5.186 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.564      ;
+; -5.185 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.563      ;
+; -5.185 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.563      ;
+; -5.184 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.564      ;
+; -5.184 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.564      ;
+; -5.183 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.561      ;
+; -5.182 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.560      ;
+; -5.182 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.562      ;
+; -5.181 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.561      ;
+; -5.181 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.561      ;
+; -5.181 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.559      ;
+; -5.180 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.558      ;
+; -5.180 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.558      ;
+; -5.179 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.557      ;
+; -5.179 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.557      ;
+; -5.178 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.556      ;
+; -5.178 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.558      ;
+; -5.178 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.556      ;
+; -5.177 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.555      ;
+; -5.177 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.555      ;
+; -5.176 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.376      ; 6.554      ;
+; -5.176 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.378      ; 6.556      ;
++--------+--------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -556,106 +556,106 @@ No paths to report.
 +-------+-----------------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                     ; To Node                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.383 ; one_wire:dht22_one_wire|data_buff[33]         ; one_wire:dht22_one_wire|data_buff[33]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[32]         ; one_wire:dht22_one_wire|data_buff[32]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[34]         ; one_wire:dht22_one_wire|data_buff[34]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[35]         ; one_wire:dht22_one_wire|data_buff[35]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[36]         ; one_wire:dht22_one_wire|data_buff[36]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[37]         ; one_wire:dht22_one_wire|data_buff[37]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[38]         ; one_wire:dht22_one_wire|data_buff[38]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[39]         ; one_wire:dht22_one_wire|data_buff[39]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[0]          ; one_wire:dht22_one_wire|data_buff[0]          ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[8]          ; one_wire:dht22_one_wire|data_buff[8]          ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
-; 0.383 ; one_wire:dht22_one_wire|data_buff[1]          ; one_wire:dht22_one_wire|data_buff[1]          ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[9]          ; one_wire:dht22_one_wire|data_buff[9]          ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[1]          ; one_wire:dht22_one_wire|data_buff[1]          ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[16]         ; one_wire:dht22_one_wire|data_buff[16]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[24]         ; one_wire:dht22_one_wire|data_buff[24]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[25]         ; one_wire:dht22_one_wire|data_buff[25]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
-; 0.383 ; one_wire:dht22_one_wire|data_buff[10]         ; one_wire:dht22_one_wire|data_buff[10]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[17]         ; one_wire:dht22_one_wire|data_buff[17]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[2]          ; one_wire:dht22_one_wire|data_buff[2]          ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
-; 0.383 ; one_wire:dht22_one_wire|data_buff[11]         ; one_wire:dht22_one_wire|data_buff[11]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[3]          ; one_wire:dht22_one_wire|data_buff[3]          ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
-; 0.383 ; one_wire:dht22_one_wire|data_buff[18]         ; one_wire:dht22_one_wire|data_buff[18]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[26]         ; one_wire:dht22_one_wire|data_buff[26]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[27]         ; one_wire:dht22_one_wire|data_buff[27]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
-; 0.383 ; one_wire:dht22_one_wire|data_buff[12]         ; one_wire:dht22_one_wire|data_buff[12]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[19]         ; one_wire:dht22_one_wire|data_buff[19]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[4]          ; one_wire:dht22_one_wire|data_buff[4]          ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[12]         ; one_wire:dht22_one_wire|data_buff[12]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[5]          ; one_wire:dht22_one_wire|data_buff[5]          ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[13]         ; one_wire:dht22_one_wire|data_buff[13]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[28]         ; one_wire:dht22_one_wire|data_buff[28]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[20]         ; one_wire:dht22_one_wire|data_buff[20]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[21]         ; one_wire:dht22_one_wire|data_buff[21]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
-; 0.383 ; one_wire:dht22_one_wire|data_buff[7]          ; one_wire:dht22_one_wire|data_buff[7]          ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[29]         ; one_wire:dht22_one_wire|data_buff[29]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[6]          ; one_wire:dht22_one_wire|data_buff[6]          ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[14]         ; one_wire:dht22_one_wire|data_buff[14]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[15]         ; one_wire:dht22_one_wire|data_buff[15]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; one_wire:dht22_one_wire|data_buff[7]          ; one_wire:dht22_one_wire|data_buff[7]          ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[22]         ; one_wire:dht22_one_wire|data_buff[22]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; one_wire:dht22_one_wire|data_buff[23]         ; one_wire:dht22_one_wire|data_buff[23]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[33]         ; one_wire:dht22_one_wire|data_buff[33]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[35]         ; one_wire:dht22_one_wire|data_buff[35]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[36]         ; one_wire:dht22_one_wire|data_buff[36]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[37]         ; one_wire:dht22_one_wire|data_buff[37]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[39]         ; one_wire:dht22_one_wire|data_buff[39]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[24]         ; one_wire:dht22_one_wire|data_buff[24]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[17]         ; one_wire:dht22_one_wire|data_buff[17]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[19]         ; one_wire:dht22_one_wire|data_buff[19]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[5]          ; one_wire:dht22_one_wire|data_buff[5]          ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[20]         ; one_wire:dht22_one_wire|data_buff[20]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[28]         ; one_wire:dht22_one_wire|data_buff[28]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[29]         ; one_wire:dht22_one_wire|data_buff[29]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[6]          ; one_wire:dht22_one_wire|data_buff[6]          ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; one_wire:dht22_one_wire|data_buff[14]         ; one_wire:dht22_one_wire|data_buff[14]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
+; 0.384 ; one_wire:dht22_one_wire|data_buff[10]         ; one_wire:dht22_one_wire|data_buff[10]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
+; 0.384 ; one_wire:dht22_one_wire|data_buff[11]         ; one_wire:dht22_one_wire|data_buff[11]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
+; 0.384 ; one_wire:dht22_one_wire|data_buff[18]         ; one_wire:dht22_one_wire|data_buff[18]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
 ; 0.384 ; one_wire:dht22_one_wire|data_buff[30]         ; one_wire:dht22_one_wire|data_buff[30]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
 ; 0.384 ; one_wire:dht22_one_wire|data_buff[31]         ; one_wire:dht22_one_wire|data_buff[31]         ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
+; 0.401 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[2]     ; dec_to_bcd:dht22_data_bcd|hundreds_reg[2]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[1]     ; dec_to_bcd:dht22_data_bcd|hundreds_reg[1]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[0]     ; dec_to_bcd:dht22_data_bcd|hundreds_reg[0]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; one_wire:dht22_one_wire|io~en                 ; one_wire:dht22_one_wire|io~en                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; one_wire:dht22_one_wire|state.ST_IDLE         ; one_wire:dht22_one_wire|state.ST_IDLE         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; one_wire:dht22_one_wire|state.ST_CHECK        ; one_wire:dht22_one_wire|state.ST_CHECK        ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; one_wire:dht22_one_wire|state.ST_START        ; one_wire:dht22_one_wire|state.ST_START        ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; one_wire:dht22_one_wire|state.ST_PRE_ACK      ; one_wire:dht22_one_wire|state.ST_PRE_ACK      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; one_wire:dht22_one_wire|state.ST_ACK          ; one_wire:dht22_one_wire|state.ST_ACK          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; one_wire:dht22_one_wire|state.ST_DONE         ; one_wire:dht22_one_wire|state.ST_DONE         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; one_wire:dht22_one_wire|bit_count[4]          ; one_wire:dht22_one_wire|bit_count[4]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; one_wire:dht22_one_wire|bit_count[5]          ; one_wire:dht22_one_wire|bit_count[5]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; one_wire:dht22_one_wire|old_io                ; one_wire:dht22_one_wire|old_io                ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; one_wire:dht22_one_wire|bit_count[3]          ; one_wire:dht22_one_wire|bit_count[3]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; one_wire:dht22_one_wire|bit_count[2]          ; one_wire:dht22_one_wire|bit_count[2]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; one_wire:dht22_one_wire|bit_count[1]          ; one_wire:dht22_one_wire|bit_count[1]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; one_wire:dht22_one_wire|bit_count[0]          ; one_wire:dht22_one_wire|bit_count[0]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; one_wire:dht22_one_wire|state.ST_IDLE         ; one_wire:dht22_one_wire|state.ST_IDLE         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; one_wire:dht22_one_wire|new_io                ; one_wire:dht22_one_wire|new_io                ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.402 ; dec_to_bcd:dht22_data_bcd|tens_reg[3]         ; dec_to_bcd:dht22_data_bcd|tens_reg[3]         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[3]     ; dec_to_bcd:dht22_data_bcd|hundreds_reg[3]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; dec_to_bcd:dht22_data_bcd|tens_reg[2]         ; dec_to_bcd:dht22_data_bcd|tens_reg[2]         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[2]     ; dec_to_bcd:dht22_data_bcd|hundreds_reg[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; dec_to_bcd:dht22_data_bcd|tens_reg[1]         ; dec_to_bcd:dht22_data_bcd|tens_reg[1]         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[1]     ; dec_to_bcd:dht22_data_bcd|hundreds_reg[1]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[0]     ; dec_to_bcd:dht22_data_bcd|hundreds_reg[0]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; dec_to_bcd:dht22_data_bcd|num_reg[0]          ; dec_to_bcd:dht22_data_bcd|num_reg[0]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; dec_to_bcd:dht22_data_bcd|tens_reg[0]         ; dec_to_bcd:dht22_data_bcd|tens_reg[0]         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; seg_display:display|digit_index[1]            ; seg_display:display|digit_index[1]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dht22_data_bcd|done_reg            ; dec_to_bcd:dht22_data_bcd|done_reg            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dht22_data_bcd|state.ST_DONE       ; dec_to_bcd:dht22_data_bcd|state.ST_DONE       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; dec_to_bcd:dht22_data_bcd|state.ST_CALC       ; dec_to_bcd:dht22_data_bcd|state.ST_CALC       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dht22_data_bcd|state.ST_DONE       ; dec_to_bcd:dht22_data_bcd|state.ST_DONE       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; dec_to_bcd:dht22_data_bcd|state.ST_IDLE       ; dec_to_bcd:dht22_data_bcd|state.ST_IDLE       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dht22_data_bcd|done_reg            ; dec_to_bcd:dht22_data_bcd|done_reg            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; en_converter                                  ; en_converter                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.415 ; seg_display:display|digit_index[0]            ; seg_display:display|digit_index[0]            ; clk          ; clk         ; 0.000        ; 0.074      ; 0.684      ;
+; 0.402 ; one_wire:dht22_one_wire|state.ST_ACK          ; one_wire:dht22_one_wire|state.ST_ACK          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; one_wire:dht22_one_wire|state.ST_PRE_ACK      ; one_wire:dht22_one_wire|state.ST_PRE_ACK      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; one_wire:dht22_one_wire|bit_count[3]          ; one_wire:dht22_one_wire|bit_count[3]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; one_wire:dht22_one_wire|bit_count[0]          ; one_wire:dht22_one_wire|bit_count[0]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; one_wire:dht22_one_wire|bit_count[1]          ; one_wire:dht22_one_wire|bit_count[1]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; one_wire:dht22_one_wire|bit_count[2]          ; one_wire:dht22_one_wire|bit_count[2]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; one_wire:dht22_one_wire|bit_count[4]          ; one_wire:dht22_one_wire|bit_count[4]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; one_wire:dht22_one_wire|bit_count[5]          ; one_wire:dht22_one_wire|bit_count[5]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.416 ; seg_display:display|digit_index[0]            ; seg_display:display|digit_index[0]            ; clk          ; clk         ; 0.000        ; 0.073      ; 0.684      ;
 ; 0.417 ; param                                         ; param                                         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.684      ;
-; 0.469 ; seg_display:display|shift_reg[0]              ; seg_display:display|shift_reg[1]              ; clk          ; clk         ; 0.000        ; 0.074      ; 0.738      ;
-; 0.471 ; dec_to_bcd:dht22_data_bcd|num_reg[0]          ; dec_to_bcd:dht22_data_bcd|bcd_reg[0]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.738      ;
-; 0.485 ; one_wire:dht22_one_wire|clks[19]              ; one_wire:dht22_one_wire|clks[19]              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.752      ;
-; 0.490 ; seg_display:display|shift_reg[1]              ; seg_display:display|shift_reg[2]              ; clk          ; clk         ; 0.000        ; 0.074      ; 0.759      ;
-; 0.496 ; en_dht22                                      ; one_wire:dht22_one_wire|state.ST_CHECK        ; clk          ; clk         ; 0.000        ; 0.073      ; 0.764      ;
-; 0.497 ; en_dht22                                      ; one_wire:dht22_one_wire|state.ST_IDLE         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.765      ;
-; 0.521 ; one_wire:dht22_one_wire|state.ST_CHECK        ; en_dht22                                      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.789      ;
-; 0.598 ; seg_display:display|shift_reg[3]              ; seg_display:display|shift_reg[0]              ; clk          ; clk         ; 0.000        ; 0.074      ; 0.867      ;
-; 0.624 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[3]     ; dec_to_bcd:dht22_data_bcd|bcd_reg[11]         ; clk          ; clk         ; 0.000        ; 0.069      ; 0.888      ;
-; 0.647 ; dec_to_bcd:dht22_data_bcd|tens_reg[2]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[6]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.914      ;
-; 0.667 ; seg_display:display|shift_reg[2]              ; seg_display:display|shift_reg[3]              ; clk          ; clk         ; 0.000        ; 0.074      ; 0.936      ;
-; 0.671 ; dec_to_bcd:dht22_data_bcd|tens_reg[0]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[4]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.938      ;
+; 0.469 ; seg_display:display|shift_reg[3]              ; seg_display:display|shift_reg[0]              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.737      ;
+; 0.495 ; en_converter                                  ; dec_to_bcd:dht22_data_bcd|done_reg            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.762      ;
+; 0.508 ; one_wire:dht22_one_wire|state.ST_SAMPLE       ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; clk          ; clk         ; 0.000        ; 0.073      ; 0.776      ;
+; 0.547 ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; one_wire:dht22_one_wire|state.ST_SAMPLE       ; clk          ; clk         ; 0.000        ; 0.073      ; 0.815      ;
+; 0.601 ; seg_display:display|shift_reg[0]              ; seg_display:display|shift_reg[1]              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.869      ;
+; 0.621 ; en_dht22                                      ; one_wire:dht22_one_wire|state.ST_WAIT_3       ; clk          ; clk         ; 0.000        ; 0.073      ; 0.889      ;
+; 0.623 ; en_dht22                                      ; one_wire:dht22_one_wire|state.ST_WAIT_1       ; clk          ; clk         ; 0.000        ; 0.073      ; 0.891      ;
+; 0.645 ; dec_to_bcd:dht22_data_bcd|tens_reg[3]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[7]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.912      ;
+; 0.646 ; dec_to_bcd:dht22_data_bcd|num_reg[0]          ; dec_to_bcd:dht22_data_bcd|bcd_reg[0]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.913      ;
+; 0.646 ; one_wire:dht22_one_wire|state.ST_CHECK        ; en_dht22                                      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.914      ;
+; 0.648 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[3]     ; dec_to_bcd:dht22_data_bcd|bcd_reg[11]         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.915      ;
+; 0.666 ; seg_display:display|shift_reg[2]              ; seg_display:display|shift_reg[3]              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.934      ;
+; 0.669 ; seg_display:display|shift_reg[1]              ; seg_display:display|shift_reg[2]              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.937      ;
+; 0.673 ; dec_to_bcd:dht22_data_bcd|tens_reg[1]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[5]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.940      ;
+; 0.676 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[1]     ; dec_to_bcd:dht22_data_bcd|bcd_reg[9]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.943      ;
+; 0.683 ; dec_to_bcd:dht22_data_bcd|tens_reg[0]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[4]          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.950      ;
+; 0.693 ; one_wire_count[10]                            ; one_wire_count[10]                            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.960      ;
 ; 0.693 ; one_wire_count[9]                             ; one_wire_count[9]                             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.960      ;
 ; 0.693 ; one_wire_count[4]                             ; one_wire_count[4]                             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.960      ;
 ; 0.694 ; one_wire_count[6]                             ; one_wire_count[6]                             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.961      ;
-; 0.695 ; converter_count[4]                            ; converter_count[4]                            ; clk          ; clk         ; 0.000        ; 0.073      ; 0.963      ;
+; 0.695 ; converter_count[4]                            ; converter_count[4]                            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.962      ;
 ; 0.698 ; one_wire_count[7]                             ; one_wire_count[7]                             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.965      ;
 ; 0.698 ; one_wire_count[5]                             ; one_wire_count[5]                             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.965      ;
-; 0.704 ; seg_display:display|count[11]                 ; seg_display:display|count[11]                 ; clk          ; clk         ; 0.000        ; 0.074      ; 0.973      ;
-; 0.704 ; seg_display:display|count[5]                  ; seg_display:display|count[5]                  ; clk          ; clk         ; 0.000        ; 0.074      ; 0.973      ;
-; 0.706 ; seg_display:display|count[15]                 ; seg_display:display|count[15]                 ; clk          ; clk         ; 0.000        ; 0.074      ; 0.975      ;
-; 0.706 ; seg_display:display|count[6]                  ; seg_display:display|count[6]                  ; clk          ; clk         ; 0.000        ; 0.074      ; 0.975      ;
-; 0.707 ; seg_display:display|count[7]                  ; seg_display:display|count[7]                  ; clk          ; clk         ; 0.000        ; 0.074      ; 0.976      ;
+; 0.705 ; seg_display:display|count[3]                  ; seg_display:display|count[3]                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.706 ; seg_display:display|count[11]                 ; seg_display:display|count[11]                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; seg_display:display|count[5]                  ; seg_display:display|count[5]                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
 ; 0.707 ; one_wire_count[17]                            ; one_wire_count[17]                            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
 ; 0.707 ; one_wire_count[12]                            ; one_wire_count[12]                            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
-; 0.707 ; one_wire_count[11]                            ; one_wire_count[11]                            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
-; 0.708 ; one_wire:dht22_one_wire|clks[11]              ; one_wire:dht22_one_wire|clks[11]              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
 +-------+-----------------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -670,7 +670,7 @@ No synchronizer chains to report.
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; clk   ; -2.034 ; -216.420          ;
+; clk   ; -1.945 ; -201.793          ;
 +-------+--------+-------------------+
 
 
@@ -700,7 +700,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; clk   ; -3.000 ; -253.348                        ;
+; clk   ; -3.000 ; -258.220                        ;
 +-------+--------+---------------------------------+
 
 
@@ -709,106 +709,106 @@ No paths to report.
 +--------+--------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                            ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; -2.034 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.149      ; 3.170      ;
-; -2.033 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.149      ; 3.169      ;
-; -2.027 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.153      ; 3.167      ;
-; -2.025 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.153      ; 3.165      ;
-; -2.025 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.153      ; 3.165      ;
-; -1.990 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.149      ; 3.126      ;
-; -1.989 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.149      ; 3.125      ;
-; -1.987 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.149      ; 3.123      ;
-; -1.986 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.149      ; 3.122      ;
-; -1.983 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.153      ; 3.123      ;
-; -1.981 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.153      ; 3.121      ;
-; -1.981 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.153      ; 3.121      ;
-; -1.980 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.153      ; 3.120      ;
-; -1.978 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.153      ; 3.118      ;
-; -1.978 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.153      ; 3.118      ;
-; -1.948 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.149      ; 3.084      ;
-; -1.947 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.149      ; 3.083      ;
-; -1.942 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.149      ; 3.078      ;
-; -1.941 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.153      ; 3.081      ;
-; -1.941 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.149      ; 3.077      ;
-; -1.939 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.153      ; 3.079      ;
-; -1.939 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.153      ; 3.079      ;
-; -1.936 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.074      ;
-; -1.935 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.153      ; 3.075      ;
-; -1.935 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.073      ;
-; -1.933 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.153      ; 3.073      ;
-; -1.933 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.153      ; 3.073      ;
-; -1.929 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.071      ;
-; -1.927 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.069      ;
-; -1.927 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.069      ;
-; -1.899 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[2]  ; clk          ; clk         ; 1.000        ; 0.149      ; 3.035      ;
-; -1.897 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.035      ;
-; -1.896 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.034      ;
-; -1.895 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[1]  ; clk          ; clk         ; 1.000        ; 0.149      ; 3.031      ;
-; -1.890 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.032      ;
-; -1.888 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.030      ;
-; -1.888 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.030      ;
-; -1.885 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[11] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.023      ;
-; -1.885 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[12] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.023      ;
-; -1.885 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.151      ; 3.023      ;
-; -1.885 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[7]  ; clk          ; clk         ; 1.000        ; 0.151      ; 3.023      ;
-; -1.885 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.023      ;
-; -1.885 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.023      ;
-; -1.884 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.022      ;
-; -1.884 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[15] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.022      ;
-; -1.868 ; one_wire:dht22_one_wire|clk_stamp[0] ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.006      ;
-; -1.867 ; one_wire:dht22_one_wire|clk_stamp[1] ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.005      ;
-; -1.867 ; one_wire:dht22_one_wire|clk_stamp[6] ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.005      ;
-; -1.867 ; one_wire:dht22_one_wire|clk_stamp[0] ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.005      ;
-; -1.866 ; one_wire:dht22_one_wire|clk_stamp[1] ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.004      ;
-; -1.866 ; one_wire:dht22_one_wire|clk_stamp[6] ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.151      ; 3.004      ;
-; -1.861 ; one_wire:dht22_one_wire|clk_stamp[0] ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.003      ;
-; -1.860 ; one_wire:dht22_one_wire|clk_stamp[1] ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.002      ;
-; -1.860 ; one_wire:dht22_one_wire|clk_stamp[6] ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.002      ;
-; -1.859 ; one_wire:dht22_one_wire|clk_stamp[0] ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.001      ;
-; -1.859 ; one_wire:dht22_one_wire|clk_stamp[0] ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.001      ;
-; -1.858 ; one_wire:dht22_one_wire|clk_stamp[1] ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.000      ;
-; -1.858 ; one_wire:dht22_one_wire|clk_stamp[1] ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.000      ;
-; -1.858 ; one_wire:dht22_one_wire|clk_stamp[6] ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.000      ;
-; -1.858 ; one_wire:dht22_one_wire|clk_stamp[6] ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.000      ;
-; -1.855 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[2]  ; clk          ; clk         ; 1.000        ; 0.149      ; 2.991      ;
-; -1.852 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[2]  ; clk          ; clk         ; 1.000        ; 0.149      ; 2.988      ;
-; -1.851 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[1]  ; clk          ; clk         ; 1.000        ; 0.149      ; 2.987      ;
-; -1.850 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[16] ; clk          ; clk         ; 1.000        ; 0.147      ; 2.984      ;
-; -1.850 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[18] ; clk          ; clk         ; 1.000        ; 0.147      ; 2.984      ;
-; -1.848 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.153      ; 2.988      ;
-; -1.848 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[1]  ; clk          ; clk         ; 1.000        ; 0.149      ; 2.984      ;
-; -1.847 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[27] ; clk          ; clk         ; 1.000        ; 0.153      ; 2.987      ;
-; -1.846 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[3]  ; clk          ; clk         ; 1.000        ; 0.153      ; 2.986      ;
-; -1.844 ; one_wire:dht22_one_wire|clk_stamp[5] ; one_wire:dht22_one_wire|data_buff[26] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.982      ;
-; -1.843 ; one_wire:dht22_one_wire|clk_stamp[5] ; one_wire:dht22_one_wire|data_buff[34] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.981      ;
-; -1.841 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[11] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.979      ;
-; -1.841 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[12] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.979      ;
-; -1.841 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.151      ; 2.979      ;
-; -1.841 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[7]  ; clk          ; clk         ; 1.000        ; 0.151      ; 2.979      ;
-; -1.841 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.979      ;
-; -1.841 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.979      ;
-; -1.840 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.978      ;
-; -1.840 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[15] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.978      ;
-; -1.838 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[11] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.976      ;
-; -1.838 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[12] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.976      ;
-; -1.838 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.151      ; 2.976      ;
-; -1.838 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[7]  ; clk          ; clk         ; 1.000        ; 0.151      ; 2.976      ;
-; -1.838 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.976      ;
-; -1.838 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.976      ;
-; -1.837 ; one_wire:dht22_one_wire|clk_stamp[5] ; one_wire:dht22_one_wire|data_buff[0]  ; clk          ; clk         ; 1.000        ; 0.155      ; 2.979      ;
-; -1.837 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.975      ;
-; -1.837 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[15] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.975      ;
-; -1.835 ; one_wire:dht22_one_wire|clk_stamp[5] ; one_wire:dht22_one_wire|data_buff[8]  ; clk          ; clk         ; 1.000        ; 0.155      ; 2.977      ;
-; -1.835 ; one_wire:dht22_one_wire|clk_stamp[5] ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.977      ;
-; -1.829 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[31] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.967      ;
-; -1.828 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[14] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.966      ;
-; -1.827 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.965      ;
-; -1.827 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[17] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.965      ;
-; -1.826 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.964      ;
-; -1.825 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.963      ;
-; -1.825 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[6]  ; clk          ; clk         ; 1.000        ; 0.151      ; 2.963      ;
-; -1.824 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.962      ;
-; -1.822 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[19] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.960      ;
-; -1.822 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[28] ; clk          ; clk         ; 1.000        ; 0.151      ; 2.960      ;
+; -1.945 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.087      ;
+; -1.943 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.085      ;
+; -1.942 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.084      ;
+; -1.941 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.083      ;
+; -1.940 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.082      ;
+; -1.936 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.078      ;
+; -1.935 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.077      ;
+; -1.933 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.075      ;
+; -1.932 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.074      ;
+; -1.932 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.074      ;
+; -1.931 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.073      ;
+; -1.919 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.061      ;
+; -1.917 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.059      ;
+; -1.916 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.058      ;
+; -1.915 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.057      ;
+; -1.914 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.056      ;
+; -1.913 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.055      ;
+; -1.911 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.053      ;
+; -1.910 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.052      ;
+; -1.910 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.052      ;
+; -1.909 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.051      ;
+; -1.909 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.051      ;
+; -1.908 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.050      ;
+; -1.907 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.049      ;
+; -1.906 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.048      ;
+; -1.906 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.048      ;
+; -1.905 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.047      ;
+; -1.904 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.046      ;
+; -1.903 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.045      ;
+; -1.901 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.043      ;
+; -1.900 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.042      ;
+; -1.900 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.042      ;
+; -1.899 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.041      ;
+; -1.879 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.021      ;
+; -1.877 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.019      ;
+; -1.876 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.018      ;
+; -1.875 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[9]  ; clk          ; clk         ; 1.000        ; 0.148      ; 3.010      ;
+; -1.875 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.148      ; 3.010      ;
+; -1.875 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.017      ;
+; -1.874 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.016      ;
+; -1.873 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[6]  ; clk          ; clk         ; 1.000        ; 0.148      ; 3.008      ;
+; -1.873 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[14] ; clk          ; clk         ; 1.000        ; 0.148      ; 3.008      ;
+; -1.872 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.148      ; 3.007      ;
+; -1.870 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.012      ;
+; -1.869 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.156      ; 3.012      ;
+; -1.869 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.011      ;
+; -1.867 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.156      ; 3.010      ;
+; -1.867 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.009      ;
+; -1.866 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.156      ; 3.009      ;
+; -1.866 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.008      ;
+; -1.866 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.008      ;
+; -1.865 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.156      ; 3.008      ;
+; -1.865 ; one_wire:dht22_one_wire|clks[5]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.007      ;
+; -1.865 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.007      ;
+; -1.864 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.156      ; 3.007      ;
+; -1.863 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.005      ;
+; -1.862 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.004      ;
+; -1.861 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.003      ;
+; -1.860 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.156      ; 3.003      ;
+; -1.860 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.002      ;
+; -1.859 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.156      ; 3.002      ;
+; -1.857 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.156      ; 3.000      ;
+; -1.856 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.156      ; 2.999      ;
+; -1.856 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.156      ; 2.999      ;
+; -1.856 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.998      ;
+; -1.855 ; one_wire:dht22_one_wire|clk_stamp[4] ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.156      ; 2.998      ;
+; -1.855 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.997      ;
+; -1.853 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.995      ;
+; -1.852 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[10] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.987      ;
+; -1.852 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[11] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.987      ;
+; -1.852 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.994      ;
+; -1.852 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[20] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.994      ;
+; -1.851 ; one_wire:dht22_one_wire|clks[0]      ; one_wire:dht22_one_wire|data_buff[21] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.993      ;
+; -1.850 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[18] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.985      ;
+; -1.850 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[30] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.985      ;
+; -1.850 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[31] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.985      ;
+; -1.849 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[9]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.984      ;
+; -1.849 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.984      ;
+; -1.847 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[6]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.982      ;
+; -1.847 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[14] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.982      ;
+; -1.846 ; one_wire:dht22_one_wire|clks[2]      ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.981      ;
+; -1.843 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[9]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.978      ;
+; -1.843 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[4]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.978      ;
+; -1.842 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.984      ;
+; -1.841 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[6]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.976      ;
+; -1.841 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[14] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.976      ;
+; -1.840 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.982      ;
+; -1.840 ; one_wire:dht22_one_wire|clks[1]      ; one_wire:dht22_one_wire|data_buff[22] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.975      ;
+; -1.839 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[25] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.981      ;
+; -1.838 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[32] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.980      ;
+; -1.837 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[35] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.979      ;
+; -1.833 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[12] ; clk          ; clk         ; 1.000        ; 0.149      ; 2.969      ;
+; -1.833 ; one_wire:dht22_one_wire|clks[3]      ; one_wire:dht22_one_wire|data_buff[28] ; clk          ; clk         ; 1.000        ; 0.149      ; 2.969      ;
+; -1.833 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[33] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.975      ;
+; -1.832 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[37] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.974      ;
+; -1.831 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.973      ;
+; -1.830 ; one_wire:dht22_one_wire|clk_stamp[3] ; one_wire:dht22_one_wire|data_buff[39] ; clk          ; clk         ; 1.000        ; 0.156      ; 2.973      ;
+; -1.830 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[13] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.972      ;
+; -1.829 ; one_wire:dht22_one_wire|clks[8]      ; one_wire:dht22_one_wire|data_buff[23] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.971      ;
+; -1.829 ; one_wire:dht22_one_wire|clks[4]      ; one_wire:dht22_one_wire|data_buff[36] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.971      ;
 +--------+--------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -817,46 +817,54 @@ No paths to report.
 +-------+-----------------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                     ; To Node                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.178 ; one_wire:dht22_one_wire|data_buff[38]         ; one_wire:dht22_one_wire|data_buff[38]         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
-; 0.178 ; one_wire:dht22_one_wire|data_buff[9]          ; one_wire:dht22_one_wire|data_buff[9]          ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; one_wire:dht22_one_wire|data_buff[33]         ; one_wire:dht22_one_wire|data_buff[33]         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; one_wire:dht22_one_wire|data_buff[32]         ; one_wire:dht22_one_wire|data_buff[32]         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; one_wire:dht22_one_wire|data_buff[35]         ; one_wire:dht22_one_wire|data_buff[35]         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; one_wire:dht22_one_wire|data_buff[36]         ; one_wire:dht22_one_wire|data_buff[36]         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; one_wire:dht22_one_wire|data_buff[37]         ; one_wire:dht22_one_wire|data_buff[37]         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; one_wire:dht22_one_wire|data_buff[39]         ; one_wire:dht22_one_wire|data_buff[39]         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
 ; 0.178 ; one_wire:dht22_one_wire|data_buff[25]         ; one_wire:dht22_one_wire|data_buff[25]         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; one_wire:dht22_one_wire|data_buff[13]         ; one_wire:dht22_one_wire|data_buff[13]         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; one_wire:dht22_one_wire|data_buff[20]         ; one_wire:dht22_one_wire|data_buff[20]         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
 ; 0.178 ; one_wire:dht22_one_wire|data_buff[21]         ; one_wire:dht22_one_wire|data_buff[21]         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[33]         ; one_wire:dht22_one_wire|data_buff[33]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[32]         ; one_wire:dht22_one_wire|data_buff[32]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.178 ; one_wire:dht22_one_wire|data_buff[23]         ; one_wire:dht22_one_wire|data_buff[23]         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[34]         ; one_wire:dht22_one_wire|data_buff[34]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[35]         ; one_wire:dht22_one_wire|data_buff[35]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[36]         ; one_wire:dht22_one_wire|data_buff[36]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[37]         ; one_wire:dht22_one_wire|data_buff[37]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[39]         ; one_wire:dht22_one_wire|data_buff[39]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; one_wire:dht22_one_wire|data_buff[38]         ; one_wire:dht22_one_wire|data_buff[38]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[0]          ; one_wire:dht22_one_wire|data_buff[0]          ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[8]          ; one_wire:dht22_one_wire|data_buff[8]          ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[1]          ; one_wire:dht22_one_wire|data_buff[1]          ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; one_wire:dht22_one_wire|data_buff[16]         ; one_wire:dht22_one_wire|data_buff[16]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[24]         ; one_wire:dht22_one_wire|data_buff[24]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[17]         ; one_wire:dht22_one_wire|data_buff[17]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[10]         ; one_wire:dht22_one_wire|data_buff[10]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[2]          ; one_wire:dht22_one_wire|data_buff[2]          ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[11]         ; one_wire:dht22_one_wire|data_buff[11]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[3]          ; one_wire:dht22_one_wire|data_buff[3]          ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; one_wire:dht22_one_wire|data_buff[11]         ; one_wire:dht22_one_wire|data_buff[11]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[26]         ; one_wire:dht22_one_wire|data_buff[26]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[19]         ; one_wire:dht22_one_wire|data_buff[19]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; one_wire:dht22_one_wire|data_buff[18]         ; one_wire:dht22_one_wire|data_buff[18]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[27]         ; one_wire:dht22_one_wire|data_buff[27]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; one_wire:dht22_one_wire|data_buff[19]         ; one_wire:dht22_one_wire|data_buff[19]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[12]         ; one_wire:dht22_one_wire|data_buff[12]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[4]          ; one_wire:dht22_one_wire|data_buff[4]          ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[13]         ; one_wire:dht22_one_wire|data_buff[13]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[5]          ; one_wire:dht22_one_wire|data_buff[5]          ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[20]         ; one_wire:dht22_one_wire|data_buff[20]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[28]         ; one_wire:dht22_one_wire|data_buff[28]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[29]         ; one_wire:dht22_one_wire|data_buff[29]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[6]          ; one_wire:dht22_one_wire|data_buff[6]          ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[14]         ; one_wire:dht22_one_wire|data_buff[14]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[7]          ; one_wire:dht22_one_wire|data_buff[7]          ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[15]         ; one_wire:dht22_one_wire|data_buff[15]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; one_wire:dht22_one_wire|data_buff[7]          ; one_wire:dht22_one_wire|data_buff[7]          ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[30]         ; one_wire:dht22_one_wire|data_buff[30]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[22]         ; one_wire:dht22_one_wire|data_buff[22]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; one_wire:dht22_one_wire|data_buff[23]         ; one_wire:dht22_one_wire|data_buff[23]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; one_wire:dht22_one_wire|data_buff[31]         ; one_wire:dht22_one_wire|data_buff[31]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.180 ; one_wire:dht22_one_wire|data_buff[16]         ; one_wire:dht22_one_wire|data_buff[16]         ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
-; 0.180 ; one_wire:dht22_one_wire|data_buff[18]         ; one_wire:dht22_one_wire|data_buff[18]         ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; one_wire:dht22_one_wire|data_buff[9]          ; one_wire:dht22_one_wire|data_buff[9]          ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; one_wire:dht22_one_wire|data_buff[4]          ; one_wire:dht22_one_wire|data_buff[4]          ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; one_wire:dht22_one_wire|data_buff[6]          ; one_wire:dht22_one_wire|data_buff[6]          ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; one_wire:dht22_one_wire|data_buff[14]         ; one_wire:dht22_one_wire|data_buff[14]         ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; one_wire:dht22_one_wire|data_buff[22]         ; one_wire:dht22_one_wire|data_buff[22]         ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.186 ; one_wire:dht22_one_wire|bit_count[3]          ; one_wire:dht22_one_wire|bit_count[3]          ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; one_wire:dht22_one_wire|bit_count[0]          ; one_wire:dht22_one_wire|bit_count[0]          ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; one_wire:dht22_one_wire|bit_count[1]          ; one_wire:dht22_one_wire|bit_count[1]          ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; one_wire:dht22_one_wire|bit_count[2]          ; one_wire:dht22_one_wire|bit_count[2]          ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; one_wire:dht22_one_wire|bit_count[4]          ; one_wire:dht22_one_wire|bit_count[4]          ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; one_wire:dht22_one_wire|old_io                ; one_wire:dht22_one_wire|old_io                ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; one_wire:dht22_one_wire|new_io                ; one_wire:dht22_one_wire|new_io                ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
 ; 0.187 ; dec_to_bcd:dht22_data_bcd|tens_reg[3]         ; dec_to_bcd:dht22_data_bcd|tens_reg[3]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[3]     ; dec_to_bcd:dht22_data_bcd|hundreds_reg[3]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; dec_to_bcd:dht22_data_bcd|tens_reg[2]         ; dec_to_bcd:dht22_data_bcd|tens_reg[2]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
@@ -866,57 +874,49 @@ No paths to report.
 ; 0.187 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[0]     ; dec_to_bcd:dht22_data_bcd|hundreds_reg[0]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; dec_to_bcd:dht22_data_bcd|num_reg[0]          ; dec_to_bcd:dht22_data_bcd|num_reg[0]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; dec_to_bcd:dht22_data_bcd|tens_reg[0]         ; dec_to_bcd:dht22_data_bcd|tens_reg[0]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; seg_display:display|digit_index[1]            ; seg_display:display|digit_index[1]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; one_wire:dht22_one_wire|io~en                 ; one_wire:dht22_one_wire|io~en                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; dec_to_bcd:dht22_data_bcd|done_reg            ; dec_to_bcd:dht22_data_bcd|done_reg            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; dec_to_bcd:dht22_data_bcd|state.ST_DONE       ; dec_to_bcd:dht22_data_bcd|state.ST_DONE       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; dec_to_bcd:dht22_data_bcd|state.ST_CALC       ; dec_to_bcd:dht22_data_bcd|state.ST_CALC       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; dec_to_bcd:dht22_data_bcd|state.ST_DONE       ; dec_to_bcd:dht22_data_bcd|state.ST_DONE       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; dec_to_bcd:dht22_data_bcd|state.ST_IDLE       ; dec_to_bcd:dht22_data_bcd|state.ST_IDLE       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; dec_to_bcd:dht22_data_bcd|done_reg            ; dec_to_bcd:dht22_data_bcd|done_reg            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; en_converter                                  ; en_converter                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; one_wire:dht22_one_wire|state.ST_IDLE         ; one_wire:dht22_one_wire|state.ST_IDLE         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; one_wire:dht22_one_wire|state.ST_CHECK        ; one_wire:dht22_one_wire|state.ST_CHECK        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; one_wire:dht22_one_wire|state.ST_START        ; one_wire:dht22_one_wire|state.ST_START        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; one_wire:dht22_one_wire|state.ST_PRE_ACK      ; one_wire:dht22_one_wire|state.ST_PRE_ACK      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; one_wire:dht22_one_wire|state.ST_ACK          ; one_wire:dht22_one_wire|state.ST_ACK          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; one_wire:dht22_one_wire|state.ST_DONE         ; one_wire:dht22_one_wire|state.ST_DONE         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; one_wire:dht22_one_wire|bit_count[4]          ; one_wire:dht22_one_wire|bit_count[4]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; one_wire:dht22_one_wire|state.ST_PRE_ACK      ; one_wire:dht22_one_wire|state.ST_PRE_ACK      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; one_wire:dht22_one_wire|bit_count[5]          ; one_wire:dht22_one_wire|bit_count[5]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; one_wire:dht22_one_wire|old_io                ; one_wire:dht22_one_wire|old_io                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; one_wire:dht22_one_wire|bit_count[3]          ; one_wire:dht22_one_wire|bit_count[3]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; one_wire:dht22_one_wire|bit_count[2]          ; one_wire:dht22_one_wire|bit_count[2]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; one_wire:dht22_one_wire|bit_count[1]          ; one_wire:dht22_one_wire|bit_count[1]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; one_wire:dht22_one_wire|bit_count[0]          ; one_wire:dht22_one_wire|bit_count[0]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; one_wire:dht22_one_wire|state.ST_IDLE         ; one_wire:dht22_one_wire|state.ST_IDLE         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; one_wire:dht22_one_wire|new_io                ; one_wire:dht22_one_wire|new_io                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.188 ; seg_display:display|digit_index[1]            ; seg_display:display|digit_index[1]            ; clk          ; clk         ; 0.000        ; 0.035      ; 0.307      ;
 ; 0.194 ; seg_display:display|digit_index[0]            ; seg_display:display|digit_index[0]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.314      ;
-; 0.194 ; param                                         ; param                                         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.314      ;
-; 0.195 ; dec_to_bcd:dht22_data_bcd|num_reg[0]          ; dec_to_bcd:dht22_data_bcd|bcd_reg[0]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.315      ;
-; 0.205 ; seg_display:display|shift_reg[1]              ; seg_display:display|shift_reg[2]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.325      ;
-; 0.210 ; seg_display:display|shift_reg[0]              ; seg_display:display|shift_reg[1]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.330      ;
-; 0.213 ; one_wire:dht22_one_wire|clks[19]              ; one_wire:dht22_one_wire|clks[19]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.333      ;
-; 0.221 ; one_wire:dht22_one_wire|state.ST_CHECK        ; en_dht22                                      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.341      ;
-; 0.224 ; en_dht22                                      ; one_wire:dht22_one_wire|state.ST_CHECK        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.344      ;
-; 0.225 ; en_dht22                                      ; one_wire:dht22_one_wire|state.ST_IDLE         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.345      ;
-; 0.263 ; seg_display:display|shift_reg[3]              ; seg_display:display|shift_reg[0]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.383      ;
-; 0.264 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[3]     ; dec_to_bcd:dht22_data_bcd|bcd_reg[11]         ; clk          ; clk         ; 0.000        ; 0.034      ; 0.382      ;
-; 0.268 ; dec_to_bcd:dht22_data_bcd|tens_reg[2]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[6]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.388      ;
-; 0.281 ; seg_display:display|shift_reg[2]              ; seg_display:display|shift_reg[3]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.401      ;
-; 0.281 ; dec_to_bcd:dht22_data_bcd|tens_reg[0]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[4]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.401      ;
-; 0.298 ; converter_count[4]                            ; converter_count[4]                            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.419      ;
-; 0.298 ; one_wire_count[9]                             ; one_wire_count[9]                             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.418      ;
+; 0.195 ; param                                         ; param                                         ; clk          ; clk         ; 0.000        ; 0.035      ; 0.314      ;
+; 0.207 ; en_converter                                  ; dec_to_bcd:dht22_data_bcd|done_reg            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.327      ;
+; 0.209 ; seg_display:display|shift_reg[3]              ; seg_display:display|shift_reg[0]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.329      ;
+; 0.215 ; one_wire:dht22_one_wire|state.ST_SAMPLE       ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; clk          ; clk         ; 0.000        ; 0.037      ; 0.336      ;
+; 0.236 ; one_wire:dht22_one_wire|state.ST_PROCESS_DATA ; one_wire:dht22_one_wire|state.ST_SAMPLE       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.357      ;
+; 0.266 ; seg_display:display|shift_reg[0]              ; seg_display:display|shift_reg[1]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.386      ;
+; 0.266 ; dec_to_bcd:dht22_data_bcd|tens_reg[3]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[7]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.386      ;
+; 0.267 ; dec_to_bcd:dht22_data_bcd|num_reg[0]          ; dec_to_bcd:dht22_data_bcd|bcd_reg[0]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.387      ;
+; 0.269 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[3]     ; dec_to_bcd:dht22_data_bcd|bcd_reg[11]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.389      ;
+; 0.273 ; en_dht22                                      ; one_wire:dht22_one_wire|state.ST_WAIT_3       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.393      ;
+; 0.275 ; en_dht22                                      ; one_wire:dht22_one_wire|state.ST_WAIT_1       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.395      ;
+; 0.279 ; seg_display:display|shift_reg[2]              ; seg_display:display|shift_reg[3]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.399      ;
+; 0.280 ; one_wire:dht22_one_wire|state.ST_CHECK        ; en_dht22                                      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.400      ;
+; 0.281 ; seg_display:display|shift_reg[1]              ; seg_display:display|shift_reg[2]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.401      ;
+; 0.282 ; dec_to_bcd:dht22_data_bcd|tens_reg[1]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[5]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.402      ;
+; 0.287 ; dec_to_bcd:dht22_data_bcd|tens_reg[0]         ; dec_to_bcd:dht22_data_bcd|bcd_reg[4]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.407      ;
+; 0.288 ; dec_to_bcd:dht22_data_bcd|hundreds_reg[1]     ; dec_to_bcd:dht22_data_bcd|bcd_reg[9]          ; clk          ; clk         ; 0.000        ; 0.035      ; 0.407      ;
+; 0.298 ; one_wire_count[10]                            ; one_wire_count[10]                            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.418      ;
 ; 0.298 ; one_wire_count[6]                             ; one_wire_count[6]                             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.418      ;
 ; 0.298 ; one_wire_count[4]                             ; one_wire_count[4]                             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.418      ;
-; 0.299 ; one_wire_count[5]                             ; one_wire_count[5]                             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; converter_count[4]                            ; converter_count[4]                            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; one_wire_count[9]                             ; one_wire_count[9]                             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
 ; 0.300 ; one_wire_count[7]                             ; one_wire_count[7]                             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.420      ;
-; 0.303 ; seg_display:display|count[15]                 ; seg_display:display|count[15]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.424      ;
-; 0.304 ; seg_display:display|count[11]                 ; seg_display:display|count[11]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
-; 0.304 ; seg_display:display|count[5]                  ; seg_display:display|count[5]                  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
-; 0.305 ; seg_display:display|count[7]                  ; seg_display:display|count[7]                  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
-; 0.305 ; seg_display:display|count[6]                  ; seg_display:display|count[6]                  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
-; 0.305 ; one_wire:dht22_one_wire|clks[11]              ; one_wire:dht22_one_wire|clks[11]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; one_wire_count[12]                            ; one_wire_count[12]                            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; one_wire_count[11]                            ; one_wire_count[11]                            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
-; 0.306 ; seg_display:display|count[14]                 ; seg_display:display|count[14]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.300 ; one_wire_count[5]                             ; one_wire_count[5]                             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.304 ; seg_display:display|count[15]                 ; seg_display:display|count[15]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; seg_display:display|count[3]                  ; seg_display:display|count[3]                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.305 ; seg_display:display|count[6]                  ; seg_display:display|count[6]                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; seg_display:display|count[11]                 ; seg_display:display|count[11]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; seg_display:display|count[5]                  ; seg_display:display|count[5]                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
 +-------+-----------------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -931,10 +931,10 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -6.014   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; -6.014   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -751.266 ; 0.0   ; 0.0      ; 0.0     ; -288.504            ;
-;  clk             ; -751.266 ; 0.000 ; N/A      ; N/A     ; -288.504            ;
+; Worst-case Slack ; -5.765   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -5.765   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -722.873 ; 0.0   ; 0.0      ; 0.0     ; -294.452            ;
+;  clk             ; -722.873 ; 0.000 ; N/A      ; N/A     ; -294.452            ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -1053,7 +1053,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 23414    ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 21598    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1063,7 +1063,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 23414    ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 21598    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1088,7 +1088,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 193   ; 193  ;
+; Unconstrained Input Port Paths  ; 197   ; 197  ;
 ; Unconstrained Output Ports      ; 14    ; 14   ;
 ; Unconstrained Output Port Paths ; 150   ; 150  ;
 +---------------------------------+-------+------+
@@ -1173,7 +1173,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 08 19:28:05 2024
+    Info: Processing started: Fri Feb 09 19:42:05 2024
 Info: Command: quartus_sta weather_sensor -c weather_sensor
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1190,10 +1190,10 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.014
+Info (332146): Worst-case setup slack is -5.765
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.014            -751.266 clk 
+    Info (332119):    -5.765            -722.873 clk 
 Info (332146): Worst-case hold slack is 0.433
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1203,17 +1203,17 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -288.504 clk 
+    Info (332119):    -3.000            -294.452 clk 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.553
+Info (332146): Worst-case setup slack is -5.317
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.553            -686.091 clk 
+    Info (332119):    -5.317            -660.263 clk 
 Info (332146): Worst-case hold slack is 0.383
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1223,15 +1223,15 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -288.504 clk 
+    Info (332119):    -3.000            -294.452 clk 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.034
+Info (332146): Worst-case setup slack is -1.945
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.034            -216.420 clk 
+    Info (332119):    -1.945            -201.793 clk 
 Info (332146): Worst-case hold slack is 0.178
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1241,13 +1241,13 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -253.348 clk 
+    Info (332119):    -3.000            -258.220 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4741 megabytes
-    Info: Processing ended: Thu Feb 08 19:28:08 2024
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4730 megabytes
+    Info: Processing ended: Fri Feb 09 19:42:07 2024
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

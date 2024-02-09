@@ -32,13 +32,16 @@ architecture one_wire_rtl of one_wire is
 	--ACK period: about 160uS
 	--Bit 0: 26-28uS after initial 50uS for each DHT22 bit
 	--Bit 1: 69-71uS after initial 50uS for each DHT22 bit
+	--FSM 'WAIT' states are added to ensure counters are properly ........
+	--synchronously cleared before they're used in a new state.
 	constant START_PULSE: integer := 899_999;
 	constant PRE_ACK_PULSE: integer := 1999;
 	constant MAX_BIT_PULSE: integer := 2499;
 	constant BIT_LOW_PULSE: integer := 2499;
 	constant ACK_PERIOD: integer := 7999;
-	type one_wire_state is (ST_IDLE, ST_START, ST_PRE_ACK, ST_ACK, 
-									ST_SAMPLE, ST_PROCESS_DATA, ST_DONE, ST_CHECK);
+	type one_wire_state is (ST_IDLE, ST_START, ST_WAIT_1, ST_PRE_ACK, ST_WAIT_2,
+									ST_ACK, ST_WAIT_3, ST_SAMPLE, ST_PROCESS_DATA, 
+									ST_WAIT_4, ST_DONE, ST_CHECK);
 	signal state: one_wire_state;
 	signal next_state: one_wire_state;
 	signal bit_count: integer range 0 to 40; --40 data bits + redundant bit
@@ -63,7 +66,7 @@ begin
 		end if;
 	end process;	
 	
-	state_transition: process(state,en,clks,bit_count,new_io,old_io)
+	next_state_logic: process(state,en,clks,bit_count,new_io,old_io)
 	begin
 		next_state <= state;
 		case state is
@@ -73,26 +76,34 @@ begin
 				end if;
 			when ST_START =>
 				if clks = START_PULSE then
-					next_state <= ST_PRE_ACK; --Wait for DHT22's response (160uS)
+					next_state <= ST_WAIT_1; --Wait for DHT22's response (160uS)
 				end if;
+			when ST_WAIT_1 =>
+				next_state <= ST_PRE_ACK;
 			when ST_PRE_ACK =>
 				if clks = PRE_ACK_PULSE then
-					next_state <= ST_ACK;
+					next_state <= ST_WAIT_2;
 				end if;
+			when ST_WAIT_2 =>
+				next_state <= ST_ACK;
 			when ST_ACK =>	
 				if clks = ACK_PERIOD then
-					next_state <= ST_SAMPLE;
+					next_state <= ST_WAIT_3;
 				end if;
+			when ST_WAIT_3 =>
+				next_state <= ST_SAMPLE;
 			when ST_SAMPLE =>
 				next_state <= ST_PROCESS_DATA;
 			when ST_PROCESS_DATA =>
 				if bit_count = 40 then
-					next_state <= ST_DONE;
+					next_state <= ST_WAIT_4;
 				else
 					if new_io = old_io then
 						next_state <= ST_SAMPLE;
 					end if;
 				end if;
+			when ST_WAIT_4 =>
+				next_state <= ST_DONE;
 			when ST_DONE =>
 				if clks = BIT_LOW_PULSE then
 					next_state <= ST_CHECK;
@@ -115,40 +126,30 @@ begin
 	
 	combinational_outputs: process(state,en,clks,bit_count,check_sum,data_buff)
 	begin
-		count_en <= '0';
-		done <= '0';
-		valid <= '0';
 		case state is
 			when ST_IDLE =>
-				if en = '1' then
-					count_en <= '1';
-				end if;
-			when ST_START =>
-				if clks /= START_PULSE then
-					count_en <= '1';
-				end if;
-			when ST_PRE_ACK =>
-				if clks /= PRE_ACK_PULSE then
-					count_en <= '1';
-				end if;
-			when ST_ACK =>
-				if clks /= ACK_PERIOD then
-					count_en <= '1';
-				end if;
-			when ST_SAMPLE =>
+				count_en <= '0';
+				done <= '0';
+				valid <= '0';
+			when ST_START | ST_PRE_ACK | ST_ACK | ST_SAMPLE | ST_PROCESS_DATA =>
 				count_en <= '1';
-			when ST_PROCESS_DATA =>
-				if bit_count /= 40 then
-					count_en <= '1';
-				end if;
+				done <= '0';
+				valid <= '0';
 			when ST_DONE =>
 				count_en <= '1';
 				done <= '1';
+				valid <= '0';
 			when ST_CHECK =>
+				count_en <= '0';
 				done <= '1';
+				valid <= '0';
 				if check_sum = unsigned(data_buff(32 to 39)) then
 					valid <= '1';
 				end if;
+			when others => --Wait states (1 cycle to allow 'clks' to be cleared)
+				count_en <= '0';
+				done <= '0';
+				valid <= '0';
 		end case;
 	end process;
 	
@@ -178,7 +179,7 @@ begin
 						old_io <= '1';
 						clk_stamp <= clks;
 					elsif new_io = '0' and old_io = '1' then
-						if clks - clk_stamp >= MAX_BIT_PULSE then
+						if (clks - clk_stamp) >= MAX_BIT_PULSE then
 							data_buff(bit_count) <= '1';
 						else
 							data_buff(bit_count) <= '0';
@@ -188,7 +189,7 @@ begin
 					end if;			
 				when ST_DONE =>
 					bit_count <= 0;
-					if clks >= BIT_LOW_PULSE then
+					if clks = BIT_LOW_PULSE then
 						io <= 'Z'; --Release one-wire data line
 					end if;
 				when others =>

@@ -6,12 +6,16 @@ state.ST_CALC 0 1 1
 state.ST_DONE 1 0 1 
 
 State Machine - |weather_sensor|one_wire:dht22_one_wire|state
-Name state.ST_CHECK state.ST_DONE state.ST_PROCESS_DATA state.ST_SAMPLE state.ST_ACK state.ST_PRE_ACK state.ST_START state.ST_IDLE 
-state.ST_IDLE 0 0 0 0 0 0 0 0 
-state.ST_START 0 0 0 0 0 0 1 1 
-state.ST_PRE_ACK 0 0 0 0 0 1 0 1 
-state.ST_ACK 0 0 0 0 1 0 0 1 
-state.ST_SAMPLE 0 0 0 1 0 0 0 1 
-state.ST_PROCESS_DATA 0 0 1 0 0 0 0 1 
-state.ST_DONE 0 1 0 0 0 0 0 1 
-state.ST_CHECK 1 0 0 0 0 0 0 1 
+Name state.ST_CHECK state.ST_DONE state.ST_WAIT_4 state.ST_PROCESS_DATA state.ST_SAMPLE state.ST_WAIT_3 state.ST_ACK state.ST_WAIT_2 state.ST_PRE_ACK state.ST_WAIT_1 state.ST_START state.ST_IDLE 
+state.ST_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+state.ST_START 0 0 0 0 0 0 0 0 0 0 1 1 
+state.ST_WAIT_1 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ST_PRE_ACK 0 0 0 0 0 0 0 0 1 0 0 1 
+state.ST_WAIT_2 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ST_ACK 0 0 0 0 0 0 1 0 0 0 0 1 
+state.ST_WAIT_3 0 0 0 0 0 1 0 0 0 0 0 1 
+state.ST_SAMPLE 0 0 0 0 1 0 0 0 0 0 0 1 
+state.ST_PROCESS_DATA 0 0 0 1 0 0 0 0 0 0 0 1 
+state.ST_WAIT_4 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ST_DONE 0 1 0 0 0 0 0 0 0 0 0 1 
+state.ST_CHECK 1 0 0 0 0 0 0 0 0 0 0 1 

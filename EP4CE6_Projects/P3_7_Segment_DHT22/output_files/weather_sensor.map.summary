@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Thu Feb 08 19:27:54 2024
+Analysis & Synthesis Status : Successful - Fri Feb 09 19:41:54 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : weather_sensor
 Top-level Entity Name : weather_sensor
 Family : Cyclone IV E
-Total logic elements : 452
-    Total combinational functions : 418
-    Dedicated logic registers : 192
-Total registers : 192
+Total logic elements : 449
+    Total combinational functions : 415
+    Dedicated logic registers : 196
+Total registers : 196
 Total pins : 16
 Total virtual pins : 0
 Total memory bits : 0
