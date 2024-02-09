@@ -92,7 +92,7 @@ begin
 	end process;
 	
 	combinational_outputs: 
-	process(state,en,micro_clks,echo,trig_reg,new_io_reg,
+	process(state,micro_clks,echo,trig_reg,new_io_reg,
 			  old_io_reg,pos_reg,done_reg)
 	begin
 		trig_next <= trig_reg;

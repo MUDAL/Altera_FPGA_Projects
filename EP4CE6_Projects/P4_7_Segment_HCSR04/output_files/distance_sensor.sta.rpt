@@ -1,5 +1,5 @@
 Timing Analyzer report for distance_sensor
-Fri Feb 09 23:42:56 2024
+Fri Feb 09 23:57:08 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -99,12 +99,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
+; Average used               ; 1.07        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   5.2%      ;
+;     Processor 2            ;   7.0%      ;
 +----------------------------+-------------+
 
 
@@ -210,8 +210,8 @@ No paths to report.
 ; -5.828 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[14] ; clk          ; clk         ; 1.000        ; -0.079     ; 6.750      ;
 ; -5.824 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; clk          ; clk         ; 1.000        ; -0.079     ; 6.746      ;
 ; -5.812 ; dec_to_bcd:dec_to_bcd_inst|num_reg[15] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; clk          ; clk         ; 1.000        ; -0.555     ; 6.258      ;
-; -5.800 ; dec_to_bcd:dec_to_bcd_inst|num_reg[21] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; clk          ; clk         ; 1.000        ; -0.534     ; 6.267      ;
 ; -5.800 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[14] ; clk          ; clk         ; 1.000        ; -0.094     ; 6.707      ;
+; -5.800 ; dec_to_bcd:dec_to_bcd_inst|num_reg[21] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; clk          ; clk         ; 1.000        ; -0.534     ; 6.267      ;
 ; -5.797 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; clk          ; clk         ; 1.000        ; -0.080     ; 6.718      ;
 ; -5.796 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; clk          ; clk         ; 1.000        ; -0.094     ; 6.703      ;
 ; -5.795 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; clk          ; clk         ; 1.000        ; -0.079     ; 6.717      ;
@@ -228,8 +228,8 @@ No paths to report.
 ; -5.747 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; clk          ; clk         ; 1.000        ; -0.080     ; 6.668      ;
 ; -5.746 ; hcsr04:hcsr04_inst|pos_reg[0]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; clk          ; clk         ; 1.000        ; -0.077     ; 6.670      ;
 ; -5.733 ; hcsr04:hcsr04_inst|pos_reg[11]         ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; clk          ; clk         ; 1.000        ; -0.078     ; 6.656      ;
-; -5.731 ; dec_to_bcd:dec_to_bcd_inst|num_reg[21] ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; clk          ; clk         ; 1.000        ; -0.532     ; 6.200      ;
 ; -5.731 ; dec_to_bcd:dec_to_bcd_inst|num_reg[15] ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; clk          ; clk         ; 1.000        ; -0.541     ; 6.191      ;
+; -5.731 ; dec_to_bcd:dec_to_bcd_inst|num_reg[21] ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; clk          ; clk         ; 1.000        ; -0.532     ; 6.200      ;
 ; -5.726 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; clk          ; clk         ; 1.000        ; -0.077     ; 6.650      ;
 ; -5.722 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[14] ; clk          ; clk         ; 1.000        ; -0.079     ; 6.644      ;
 ; -5.718 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; clk          ; clk         ; 1.000        ; -0.079     ; 6.640      ;
@@ -248,8 +248,8 @@ No paths to report.
 ; -5.685 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; clk          ; clk         ; 1.000        ; -0.080     ; 6.606      ;
 ; -5.684 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; clk          ; clk         ; 1.000        ; -0.080     ; 6.605      ;
 ; -5.681 ; hcsr04:hcsr04_inst|pos_reg[4]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; clk          ; clk         ; 1.000        ; -0.078     ; 6.604      ;
-; -5.679 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; clk          ; clk         ; 1.000        ; -0.076     ; 6.604      ;
 ; -5.679 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; clk          ; clk         ; 1.000        ; -0.093     ; 6.587      ;
+; -5.679 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; clk          ; clk         ; 1.000        ; -0.076     ; 6.604      ;
 ; -5.677 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; clk          ; clk         ; 1.000        ; -0.080     ; 6.598      ;
 ; -5.674 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; clk          ; clk         ; 1.000        ; -0.078     ; 6.597      ;
 ; -5.671 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; clk          ; clk         ; 1.000        ; -0.080     ; 6.592      ;
@@ -266,11 +266,11 @@ No paths to report.
 ; -5.653 ; dec_to_bcd:dec_to_bcd_inst|num_reg[14] ; dec_to_bcd:dec_to_bcd_inst|num_reg[14] ; clk          ; clk         ; 1.000        ; -0.080     ; 6.574      ;
 ; -5.652 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; clk          ; clk         ; 1.000        ; -0.081     ; 6.572      ;
 ; -5.652 ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[14] ; clk          ; clk         ; 1.000        ; -0.079     ; 6.574      ;
+; -5.649 ; dec_to_bcd:dec_to_bcd_inst|num_reg[15] ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; clk          ; clk         ; 1.000        ; -0.540     ; 6.110      ;
 ; -5.649 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; clk          ; clk         ; 1.000        ; -0.078     ; 6.572      ;
 ; -5.649 ; dec_to_bcd:dec_to_bcd_inst|num_reg[21] ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; clk          ; clk         ; 1.000        ; -0.531     ; 6.119      ;
 ; -5.649 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; clk          ; clk         ; 1.000        ; -0.080     ; 6.570      ;
 ; -5.649 ; dec_to_bcd:dec_to_bcd_inst|num_reg[14] ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; clk          ; clk         ; 1.000        ; -0.080     ; 6.570      ;
-; -5.649 ; dec_to_bcd:dec_to_bcd_inst|num_reg[15] ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; clk          ; clk         ; 1.000        ; -0.540     ; 6.110      ;
 ; -5.648 ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; clk          ; clk         ; 1.000        ; -0.079     ; 6.570      ;
 ; -5.647 ; dec_to_bcd:dec_to_bcd_inst|num_reg[21] ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; clk          ; clk         ; 1.000        ; -0.535     ; 6.113      ;
 ; -5.646 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; clk          ; clk         ; 1.000        ; -0.081     ; 6.566      ;
@@ -297,6 +297,12 @@ No paths to report.
 ; 0.453 ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; en                                         ; en                                         ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.454 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[2]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[2]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[0] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[0] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[0]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[0]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[3] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[3] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[2] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[2] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
@@ -325,17 +331,11 @@ No paths to report.
 ; 0.454 ; hcsr04:hcsr04_inst|new_io_reg              ; hcsr04:hcsr04_inst|new_io_reg              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; hcsr04:hcsr04_inst|done_reg                ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[2]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[2]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[0] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[0] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[0]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[0]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.464 ; seg_display:display_inst|digit_index[0]    ; seg_display:display_inst|digit_index[0]    ; clk          ; clk         ; 0.000        ; 0.082      ; 0.758      ;
 ; 0.466 ; hcsr04:hcsr04_inst|state.ST_TRIG           ; hcsr04:hcsr04_inst|state.ST_TRIG           ; clk          ; clk         ; 0.000        ; 0.080      ; 0.758      ;
 ; 0.508 ; seg_display:display_inst|shift_reg[0]      ; seg_display:display_inst|shift_reg[1]      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.802      ;
-; 0.527 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.819      ;
 ; 0.527 ; seg_display:display_inst|shift_reg[2]      ; seg_display:display_inst|shift_reg[3]      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.821      ;
+; 0.527 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.819      ;
 ; 0.535 ; hcsr04:hcsr04_inst|new_io_reg              ; hcsr04:hcsr04_inst|state.ST_SAMPLE         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.827      ;
 ; 0.551 ; hcsr04:hcsr04_inst|new_io_reg              ; hcsr04:hcsr04_inst|old_io_reg              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.843      ;
 ; 0.651 ; seg_display:display_inst|shift_reg[3]      ; seg_display:display_inst|shift_reg[0]      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.945      ;
@@ -352,8 +352,8 @@ No paths to report.
 ; 0.744 ; clks[8]                                    ; clks[8]                                    ; clk          ; clk         ; 0.000        ; 0.082      ; 1.038      ;
 ; 0.744 ; clks[2]                                    ; clks[2]                                    ; clk          ; clk         ; 0.000        ; 0.082      ; 1.038      ;
 ; 0.745 ; clks[3]                                    ; clks[3]                                    ; clk          ; clk         ; 0.000        ; 0.082      ; 1.039      ;
-; 0.747 ; hcsr04:hcsr04_inst|clks[3]                 ; hcsr04:hcsr04_inst|clks[3]                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.039      ;
 ; 0.747 ; clks[5]                                    ; clks[5]                                    ; clk          ; clk         ; 0.000        ; 0.082      ; 1.041      ;
+; 0.747 ; hcsr04:hcsr04_inst|clks[3]                 ; hcsr04:hcsr04_inst|clks[3]                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.039      ;
 ; 0.748 ; hcsr04:hcsr04_inst|clks[1]                 ; hcsr04:hcsr04_inst|clks[1]                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.040      ;
 ; 0.750 ; hcsr04:hcsr04_inst|clks[2]                 ; hcsr04:hcsr04_inst|clks[2]                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.042      ;
 ; 0.755 ; hcsr04:hcsr04_inst|clks[5]                 ; hcsr04:hcsr04_inst|clks[5]                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.047      ;
@@ -363,13 +363,13 @@ No paths to report.
 ; 0.761 ; seg_display:display_inst|count[11]         ; seg_display:display_inst|count[11]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.055      ;
 ; 0.761 ; clks[20]                                   ; clks[20]                                   ; clk          ; clk         ; 0.000        ; 0.082      ; 1.055      ;
 ; 0.761 ; clks[16]                                   ; clks[16]                                   ; clk          ; clk         ; 0.000        ; 0.082      ; 1.055      ;
-; 0.762 ; hcsr04:hcsr04_inst|pos_reg[3]              ; hcsr04:hcsr04_inst|pos_reg[3]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
 ; 0.762 ; seg_display:display_inst|count[7]          ; seg_display:display_inst|count[7]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.056      ;
 ; 0.762 ; seg_display:display_inst|count[15]         ; seg_display:display_inst|count[15]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.056      ;
 ; 0.762 ; seg_display:display_inst|count[6]          ; seg_display:display_inst|count[6]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.056      ;
 ; 0.762 ; clks[24]                                   ; clks[24]                                   ; clk          ; clk         ; 0.000        ; 0.082      ; 1.056      ;
 ; 0.762 ; clks[18]                                   ; clks[18]                                   ; clk          ; clk         ; 0.000        ; 0.082      ; 1.056      ;
 ; 0.762 ; clks[6]                                    ; clks[6]                                    ; clk          ; clk         ; 0.000        ; 0.082      ; 1.056      ;
+; 0.762 ; hcsr04:hcsr04_inst|pos_reg[3]              ; hcsr04:hcsr04_inst|pos_reg[3]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
 ; 0.763 ; seg_display:display_inst|count[2]          ; seg_display:display_inst|count[2]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.057      ;
 ; 0.763 ; clks[26]                                   ; clks[26]                                   ; clk          ; clk         ; 0.000        ; 0.082      ; 1.057      ;
 ; 0.763 ; clks[19]                                   ; clks[19]                                   ; clk          ; clk         ; 0.000        ; 0.082      ; 1.057      ;
@@ -378,8 +378,8 @@ No paths to report.
 ; 0.764 ; seg_display:display_inst|count[14]         ; seg_display:display_inst|count[14]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.058      ;
 ; 0.764 ; seg_display:display_inst|count[12]         ; seg_display:display_inst|count[12]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.058      ;
 ; 0.764 ; clks[23]                                   ; clks[23]                                   ; clk          ; clk         ; 0.000        ; 0.082      ; 1.058      ;
-; 0.765 ; hcsr04:hcsr04_inst|clks[0]                 ; hcsr04:hcsr04_inst|clks[0]                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
 ; 0.765 ; clks[27]                                   ; clks[27]                                   ; clk          ; clk         ; 0.000        ; 0.082      ; 1.059      ;
+; 0.765 ; hcsr04:hcsr04_inst|clks[0]                 ; hcsr04:hcsr04_inst|clks[0]                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
 ; 0.766 ; hcsr04:hcsr04_inst|pos_reg[4]              ; hcsr04:hcsr04_inst|pos_reg[4]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
 ; 0.772 ; seg_display:display_inst|digit_index[0]    ; seg_display:display_inst|digit_index[1]    ; clk          ; clk         ; 0.000        ; 0.082      ; 1.066      ;
 ; 0.774 ; hcsr04:hcsr04_inst|state.ST_SAMPLE         ; hcsr04:hcsr04_inst|new_io_reg              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.066      ;
@@ -562,18 +562,6 @@ No paths to report.
 ; 0.385 ; dec_to_bcd:dec_to_bcd_inst|tens_reg[0]     ; dec_to_bcd:dec_to_bcd_inst|tens_reg[0]     ; clk          ; clk         ; 0.000        ; 0.089      ; 0.669      ;
 ; 0.401 ; seg_display:display_inst|digit_index[1]    ; seg_display:display_inst|digit_index[1]    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; en                                         ; en                                         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[2]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[0] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[0] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[0]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[0]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[3] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[3] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[2] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[2] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
@@ -598,6 +586,18 @@ No paths to report.
 ; 0.402 ; hcsr04:hcsr04_inst|new_io_reg              ; hcsr04:hcsr04_inst|new_io_reg              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; hcsr04:hcsr04_inst|done_reg                ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[2]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[0] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[0] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[0]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[0]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.403 ; hcsr04:hcsr04_inst|micro_clks[0]           ; hcsr04:hcsr04_inst|micro_clks[0]           ; clk          ; clk         ; 0.000        ; 0.071      ; 0.669      ;
 ; 0.403 ; hcsr04:hcsr04_inst|micro_clks[1]           ; hcsr04:hcsr04_inst|micro_clks[1]           ; clk          ; clk         ; 0.000        ; 0.071      ; 0.669      ;
 ; 0.403 ; hcsr04:hcsr04_inst|micro_clks[2]           ; hcsr04:hcsr04_inst|micro_clks[2]           ; clk          ; clk         ; 0.000        ; 0.071      ; 0.669      ;
@@ -623,16 +623,16 @@ No paths to report.
 ; 0.693 ; clks[10]                                   ; clks[10]                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.961      ;
 ; 0.694 ; clks[8]                                    ; clks[8]                                    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.962      ;
 ; 0.694 ; clks[2]                                    ; clks[2]                                    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.962      ;
-; 0.697 ; clks[5]                                    ; clks[5]                                    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.965      ;
 ; 0.697 ; hcsr04:hcsr04_inst|clks[1]                 ; hcsr04:hcsr04_inst|clks[1]                 ; clk          ; clk         ; 0.000        ; 0.071      ; 0.963      ;
+; 0.697 ; clks[5]                                    ; clks[5]                                    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.965      ;
 ; 0.698 ; hcsr04:hcsr04_inst|clks[3]                 ; hcsr04:hcsr04_inst|clks[3]                 ; clk          ; clk         ; 0.000        ; 0.071      ; 0.964      ;
 ; 0.699 ; hcsr04:hcsr04_inst|clks[2]                 ; hcsr04:hcsr04_inst|clks[2]                 ; clk          ; clk         ; 0.000        ; 0.071      ; 0.965      ;
 ; 0.704 ; seg_display:display_inst|count[3]          ; seg_display:display_inst|count[3]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.972      ;
+; 0.705 ; hcsr04:hcsr04_inst|pos_reg[3]              ; hcsr04:hcsr04_inst|pos_reg[3]              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; hcsr04:hcsr04_inst|clks[5]                 ; hcsr04:hcsr04_inst|clks[5]                 ; clk          ; clk         ; 0.000        ; 0.071      ; 0.971      ;
 ; 0.705 ; seg_display:display_inst|count[5]          ; seg_display:display_inst|count[5]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.973      ;
 ; 0.705 ; seg_display:display_inst|count[11]         ; seg_display:display_inst|count[11]         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.973      ;
 ; 0.705 ; clks[20]                                   ; clks[20]                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.973      ;
-; 0.705 ; hcsr04:hcsr04_inst|pos_reg[3]              ; hcsr04:hcsr04_inst|pos_reg[3]              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
-; 0.705 ; hcsr04:hcsr04_inst|clks[5]                 ; hcsr04:hcsr04_inst|clks[5]                 ; clk          ; clk         ; 0.000        ; 0.071      ; 0.971      ;
 ; 0.707 ; seg_display:display_inst|count[15]         ; seg_display:display_inst|count[15]         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.975      ;
 ; 0.707 ; seg_display:display_inst|count[6]          ; seg_display:display_inst|count[6]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.975      ;
 ; 0.707 ; clks[19]                                   ; clks[19]                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.975      ;
@@ -641,21 +641,21 @@ No paths to report.
 ; 0.707 ; clks[6]                                    ; clks[6]                                    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.975      ;
 ; 0.708 ; seg_display:display_inst|count[7]          ; seg_display:display_inst|count[7]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.976      ;
 ; 0.708 ; clks[24]                                   ; clks[24]                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.976      ;
+; 0.709 ; hcsr04:hcsr04_inst|clks[4]                 ; hcsr04:hcsr04_inst|clks[4]                 ; clk          ; clk         ; 0.000        ; 0.071      ; 0.975      ;
 ; 0.709 ; seg_display:display_inst|count[2]          ; seg_display:display_inst|count[2]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.977      ;
 ; 0.709 ; clks[27]                                   ; clks[27]                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.977      ;
 ; 0.709 ; clks[26]                                   ; clks[26]                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.977      ;
 ; 0.709 ; clks[15]                                   ; clks[15]                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.977      ;
-; 0.709 ; hcsr04:hcsr04_inst|clks[4]                 ; hcsr04:hcsr04_inst|clks[4]                 ; clk          ; clk         ; 0.000        ; 0.071      ; 0.975      ;
 ; 0.710 ; seg_display:display_inst|count[12]         ; seg_display:display_inst|count[12]         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.978      ;
 ; 0.710 ; clks[7]                                    ; clks[7]                                    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.978      ;
+; 0.711 ; hcsr04:hcsr04_inst|pos_reg[4]              ; hcsr04:hcsr04_inst|pos_reg[4]              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
 ; 0.711 ; seg_display:display_inst|count[14]         ; seg_display:display_inst|count[14]         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.979      ;
 ; 0.711 ; clks[23]                                   ; clks[23]                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.979      ;
-; 0.711 ; hcsr04:hcsr04_inst|pos_reg[4]              ; hcsr04:hcsr04_inst|pos_reg[4]              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
 ; 0.717 ; seg_display:display_inst|digit_index[0]    ; seg_display:display_inst|digit_index[1]    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.985      ;
 ; 0.718 ; hcsr04:hcsr04_inst|clks[0]                 ; hcsr04:hcsr04_inst|clks[0]                 ; clk          ; clk         ; 0.000        ; 0.071      ; 0.984      ;
 ; 0.723 ; hcsr04:hcsr04_inst|state.ST_SAMPLE         ; hcsr04:hcsr04_inst|new_io_reg              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.990      ;
-; 0.728 ; seg_display:display_inst|count[1]          ; seg_display:display_inst|count[1]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.996      ;
 ; 0.728 ; hcsr04:hcsr04_inst|pos_reg[5]              ; hcsr04:hcsr04_inst|pos_reg[5]              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.995      ;
+; 0.728 ; seg_display:display_inst|count[1]          ; seg_display:display_inst|count[1]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.996      ;
 +-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -1167,7 +1167,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 09 23:42:53 2024
+    Info: Processing started: Fri Feb 09 23:57:06 2024
 Info: Command: quartus_sta distance_sensor -c distance_sensor
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1239,9 +1239,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4735 megabytes
-    Info: Processing ended: Fri Feb 09 23:42:56 2024
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4734 megabytes
+    Info: Processing ended: Fri Feb 09 23:57:08 2024
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
