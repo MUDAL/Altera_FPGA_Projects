@@ -44,13 +44,20 @@ architecture one_wire_rtl of one_wire is
 									ST_WAIT_4, ST_DONE, ST_CHECK);
 	signal state: one_wire_state;
 	signal next_state: one_wire_state;
+	signal io_next: std_logic;
+	signal io_reg: std_logic;
 	signal bit_count: integer range 0 to 40; --40 data bits + redundant bit
+	signal bit_count_reg: integer range 0 to 40;
 	signal clks: unsigned(19 downto 0);
 	signal clk_stamp: unsigned(19 downto 0);
+	signal clk_stamp_reg: unsigned(19 downto 0);
 	signal count_en: std_logic;
 	signal data_buff: std_logic_vector(0 to 39);
+	signal data_buff_reg: std_logic_vector(0 to 39);
 	signal new_io: std_logic;
+	signal new_io_reg: std_logic;
 	signal old_io: std_logic;
+	signal old_io_reg: std_logic;
 	signal check_sum: unsigned(7 downto 0);
 begin
 	clock_counter: process(rst_n,clk)
@@ -66,7 +73,7 @@ begin
 		end if;
 	end process;	
 	
-	next_state_logic: process(state,en,clks,bit_count,new_io,old_io)
+	next_state_logic: process(state,en,clks,bit_count_reg,new_io_reg,old_io_reg)
 	begin
 		next_state <= state;
 		case state is
@@ -95,10 +102,10 @@ begin
 			when ST_SAMPLE =>
 				next_state <= ST_PROCESS_DATA;
 			when ST_PROCESS_DATA =>
-				if bit_count = 40 then
+				if bit_count_reg = 40 then
 					next_state <= ST_WAIT_4;
 				else
-					if new_io = old_io then
+					if new_io_reg = old_io_reg then
 						next_state <= ST_SAMPLE;
 					end if;
 				end if;
@@ -124,93 +131,117 @@ begin
 		end if;
 	end process;
 	
-	combinational_outputs: process(state,check_sum,data_buff)
+	moore_outputs: process(state)
 	begin
 		case state is
 			when ST_IDLE =>
 				count_en <= '0';
 				done <= '0';
-				valid <= '0';
 			when ST_START | ST_PRE_ACK | ST_ACK | ST_SAMPLE | ST_PROCESS_DATA =>
 				count_en <= '1';
 				done <= '0';
-				valid <= '0';
 			when ST_DONE =>
 				count_en <= '1';
 				done <= '1';
-				valid <= '0';
 			when ST_CHECK =>
 				count_en <= '0';
 				done <= '1';
-				valid <= '0';
-				if check_sum = unsigned(data_buff(32 to 39)) then
-					valid <= '1';
-				end if;
 			when others => --WAIT states (1 cycle to allow 'clks' to be cleared)
 				count_en <= '0';
 				done <= '0';
-				valid <= '0';
 		end case;
+	end process;
+	
+	mealy_outputs: process(state,en,clks,io,io_reg, bit_count_reg,clk_stamp_reg, 
+								  data_buff_reg,new_io_reg,old_io_reg,check_sum)
+	begin
+		io_next <= io_reg;
+		bit_count <= bit_count_reg;
+		clk_stamp <= clk_stamp_reg;
+		data_buff <= data_buff_reg;
+		new_io <= new_io_reg;
+		old_io <= old_io_reg;
+		valid <= '0';
+		case state is
+			when ST_IDLE =>
+				if en = '1' then
+					io_next <= '0';
+				end if;
+			when ST_START =>
+				if clks = START_PULSE then
+					io_next <= '1';
+				end if;
+			when ST_SAMPLE =>
+				new_io <= io;
+			when ST_PROCESS_DATA =>
+				if new_io_reg = '1' and old_io_reg = '0' then
+					old_io <= '1';
+					clk_stamp <= clks;
+				elsif new_io_reg = '0' and old_io_reg = '1' then
+					if (clks - clk_stamp_reg) >= MAX_BIT_PULSE then
+						data_buff(bit_count_reg) <= '1';
+					else
+						data_buff(bit_count_reg) <= '0';
+					end if;
+					bit_count <= bit_count_reg + 1;
+					old_io <= '0';						
+				end if;			
+			when ST_DONE =>
+				bit_count <= 0;
+				if clks = BIT_LOW_PULSE then
+					io_next <= '1'; --Release one-wire data line
+				end if;
+			when ST_CHECK =>
+				if check_sum = unsigned(data_buff_reg(32 to 39)) then
+					valid <= '1';
+				end if;			
+			when others =>
+		end case;	
 	end process;
 	
 	registered_outputs: process(rst_n,clk)
 	begin
 		if rst_n = '0' then
-			io <= 'Z';
-			bit_count <= 0;
-			clk_stamp <= (others => '0');
-			data_buff <= (others => '0');
-			new_io <= '0';
-			old_io <= '0';
+			io_reg <= '1';
+			bit_count_reg <= 0;
+			clk_stamp_reg <= (others => '0');
+			data_buff_reg <= (others => '0');
+			new_io_reg <= '0';
+			old_io_reg <= '0';
 		elsif rising_edge(clk) then
-			case state is
-				when ST_IDLE =>
-					if en = '1' then
-						io <= '0';
-					end if;
-				when ST_START =>
-					if clks = START_PULSE then
-						io <= 'Z';
-					end if;
-				when ST_SAMPLE =>
-					new_io <= io;
-				when ST_PROCESS_DATA =>
-					if new_io = '1' and old_io = '0' then
-						old_io <= '1';
-						clk_stamp <= clks;
-					elsif new_io = '0' and old_io = '1' then
-						if (clks - clk_stamp) >= MAX_BIT_PULSE then
-							data_buff(bit_count) <= '1';
-						else
-							data_buff(bit_count) <= '0';
-						end if;
-						bit_count <= bit_count + 1;
-						old_io <= '0';						
-					end if;			
-				when ST_DONE =>
-					bit_count <= 0;
-					if clks = BIT_LOW_PULSE then
-						io <= 'Z'; --Release one-wire data line
-					end if;
-				when others =>
-			end case;
+			io_reg <= io_next;
+			bit_count_reg <= bit_count;
+			clk_stamp_reg <= clk_stamp;
+			data_buff_reg <= data_buff;
+			new_io_reg <= new_io;
+			old_io_reg <= old_io;		
 		end if;
 	end process;
 	
-	output_data_selector: process(param,data_buff)
+	--io = 'Z' (High impedance) implies release of one-wire data line
+	tristate_buffer: process(io_reg)
+	begin
+		if io_reg = '1' then
+			io <= 'Z';
+		else
+			io <= '0';
+		end if;
+	end process;
+	
+	output_data_selector: process(param,data_buff_reg)
 	begin
 		if param = '0' then
-			data_out <= data_buff(0 to 15); --Humidity
+			data_out <= data_buff_reg(0 to 15); --Humidity
 		else
-			data_out <= data_buff(16 to 31); --Temperature
+			data_out <= data_buff_reg(16 to 31); --Temperature
 		end if;
 	end process;
 	
 	--Check sum = Humidity integral + Humidity decimal +
 	--            Temperature integral + Temperature decimal
-	check_sum_calc: check_sum <= unsigned(data_buff(0 to 7))   + 
-										  unsigned(data_buff(8 to 15))  +
-										  unsigned(data_buff(16 to 23)) +
-										  unsigned(data_buff(24 to 31));
+	check_sum_calc: check_sum <= unsigned(data_buff_reg(0 to 7))   + 
+										  unsigned(data_buff_reg(8 to 15))  +
+										  unsigned(data_buff_reg(16 to 23)) +
+										  unsigned(data_buff_reg(24 to 31));
 	
 end architecture one_wire_rtl;

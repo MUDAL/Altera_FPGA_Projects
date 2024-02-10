@@ -1,5 +1,5 @@
 Analysis & Synthesis report for weather_sensor
-Fri Feb 09 20:26:56 2024
+Sat Feb 10 22:58:21 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Feb 09 20:26:56 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sat Feb 10 22:58:21 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; weather_sensor                              ;
 ; Top-level Entity Name              ; weather_sensor                              ;
@@ -196,8 +196,8 @@ https://fpgasoftware.intel.com/eula.
 ; Total combinational functions               ; 415       ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 177       ;
-;     -- 3 input functions                    ; 83        ;
-;     -- <=2 input functions                  ; 155       ;
+;     -- 3 input functions                    ; 84        ;
+;     -- <=2 input functions                  ; 154       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
 ;     -- normal mode                          ; 276       ;
@@ -213,7 +213,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 196       ;
-; Total fan-out                               ; 1950      ;
+; Total fan-out                               ; 1951      ;
 ; Average fan-out                             ; 3.03      ;
 +---------------------------------------------+-----------+
 
@@ -270,16 +270,15 @@ Encoding Type:  One-Hot
 +---------------------------------------+------------------------------------------+
 ; Register name                         ; Reason for Removal                       ;
 +---------------------------------------+------------------------------------------+
-; one_wire:dht22_one_wire|io~reg0       ; Stuck at GND due to stuck port data_in   ;
 ; seg_display:display|digit_index[2]    ; Stuck at GND due to stuck port data_in   ;
 ; converter_count[0]                    ; Merged with seg_display:display|count[0] ;
 ; one_wire_count[0]                     ; Merged with seg_display:display|count[0] ;
-; converter_count[1]                    ; Merged with seg_display:display|count[1] ;
 ; one_wire_count[1]                     ; Merged with seg_display:display|count[1] ;
+; converter_count[1]                    ; Merged with seg_display:display|count[1] ;
 ; converter_count[2]                    ; Merged with one_wire_count[2]            ;
 ; one_wire_count[2]                     ; Merged with seg_display:display|count[2] ;
 ; one_wire_count[3]                     ; Merged with seg_display:display|count[3] ;
-; Total Number of Removed Registers = 9 ;                                          ;
+; Total Number of Removed Registers = 8 ;                                          ;
 +---------------------------------------+------------------------------------------+
 
 
@@ -306,8 +305,9 @@ Encoding Type:  One-Hot
 ; seg_display:display|shift_reg[1]       ; 2       ;
 ; seg_display:display|shift_reg[2]       ; 2       ;
 ; seg_display:display|shift_reg[3]       ; 2       ;
-; en_dht22                               ; 6       ;
-; Total number of inverted registers = 4 ;         ;
+; en_dht22                               ; 7       ;
+; one_wire:dht22_one_wire|io_reg         ; 2       ;
+; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
 
@@ -351,8 +351,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 43                          ;
 ;     normal            ; 282                         ;
 ;         1 data inputs ; 17                          ;
-;         2 data inputs ; 48                          ;
-;         3 data inputs ; 40                          ;
+;         2 data inputs ; 47                          ;
+;         3 data inputs ; 41                          ;
 ;         4 data inputs ; 177                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.80                        ;
@@ -375,7 +375,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 09 20:26:42 2024
+    Info: Processing started: Sat Feb 10 22:58:07 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off weather_sensor -c weather_sensor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -420,8 +420,8 @@ Info (21057): Implemented 465 device resources after synthesis - the final resou
     Info (21060): Implemented 1 bidirectional pins
     Info (21061): Implemented 449 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4774 megabytes
-    Info: Processing ended: Fri Feb 09 20:26:56 2024
+    Info: Peak virtual memory: 4782 megabytes
+    Info: Processing ended: Sat Feb 10 22:58:21 2024
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:29
 
