@@ -1,5 +1,5 @@
 Analysis & Synthesis report for digital_thermometer
-Sat Feb 10 14:28:11 2024
+Sat Feb 10 14:45:59 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 10 14:28:11 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sat Feb 10 14:45:59 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; digital_thermometer                         ;
 ; Top-level Entity Name              ; digital_thermometer                         ;
@@ -195,8 +195,8 @@ https://fpgasoftware.intel.com/eula.
 ; Total combinational functions               ; 232       ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 92        ;
-;     -- 3 input functions                    ; 37        ;
-;     -- <=2 input functions                  ; 103       ;
+;     -- 3 input functions                    ; 41        ;
+;     -- <=2 input functions                  ; 99        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
 ;     -- normal mode                          ; 169       ;
@@ -212,8 +212,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 106       ;
-; Total fan-out                               ; 1060      ;
-; Average fan-out                             ; 2.86      ;
+; Total fan-out                               ; 1064      ;
+; Average fan-out                             ; 2.87      ;
 +---------------------------------------------+-----------+
 
 
@@ -312,11 +312,11 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 ; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd|num_reg[7] ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |digital_thermometer|i2c_reader:lm75_i2c|index[1]          ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; Yes        ; |digital_thermometer|i2c_reader:lm75_i2c|index[1]          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |digital_thermometer|seg_display:display|Mux4              ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |digital_thermometer|seg_display:display|Mux1              ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd|Selector2  ;
-; 20:1               ; 10 bits   ; 130 LEs       ; 70 LEs               ; 60 LEs                 ; No         ; |digital_thermometer|i2c_reader:lm75_i2c|Selector6         ;
+; 20:1               ; 10 bits   ; 130 LEs       ; 70 LEs               ; 60 LEs                 ; No         ; |digital_thermometer|i2c_reader:lm75_i2c|Selector1         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 
 
@@ -338,12 +338,12 @@ Encoding Type:  One-Hot
 ;         3 data inputs ; 2                           ;
 ;     normal            ; 174                         ;
 ;         1 data inputs ; 14                          ;
-;         2 data inputs ; 33                          ;
-;         3 data inputs ; 35                          ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 39                          ;
 ;         4 data inputs ; 92                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.43                        ;
+; Average LUT depth     ; 3.45                        ;
 +-----------------------+-----------------------------+
 
 
@@ -362,7 +362,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Feb 10 14:27:58 2024
+    Info: Processing started: Sat Feb 10 14:45:46 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off digital_thermometer -c digital_thermometer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -407,8 +407,8 @@ Info (21057): Implemented 258 device resources after synthesis - the final resou
     Info (21060): Implemented 1 bidirectional pins
     Info (21061): Implemented 242 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4772 megabytes
-    Info: Processing ended: Sat Feb 10 14:28:11 2024
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Sat Feb 10 14:45:59 2024
     Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:27
 
