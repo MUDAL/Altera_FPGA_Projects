@@ -33,7 +33,9 @@ architecture i2c_reader_rtl of i2c_reader is
 	constant HALF_SCL_CYCLE: integer := 249; --Half of SCL cycle
 	constant MID_LOW_PULSE: integer := 374; --Midpoint of low SCL pulse
 	constant FULL_SCL_CYCLE: integer := 499; --Full SCL cycle
-	type i2c_state is (ST_IDLE, ST_START, ST_COMM, ST_DONE, ST_STOP, ST_RESTART);
+	type i2c_state is (ST_IDLE, ST_START, ST_SEND_ADDR, ST_GET_ACK_HIGH_BYTE,
+							 ST_SEND_ACK, ST_GET_LOW_BYTE, ST_SEND_NACK, ST_DONE, 
+							 ST_STOP, ST_RESTART);
 	signal state: i2c_state;
 	signal next_state: i2c_state;
 	signal index: integer range 0 to 26;
@@ -63,17 +65,17 @@ begin
 		elsif rising_edge(clk) then
 			case state is
 				when ST_IDLE | ST_RESTART =>
-					scl <= 'Z';
-				when ST_START | ST_COMM | ST_DONE =>
+					scl <= 'Z';	
+				when ST_STOP =>
+					if clks <= to_unsigned(HALF_SCL_CYCLE,clks'length) then
+						scl <= 'Z';
+					end if;
+				when others =>
 					if clks <= to_unsigned(HALF_SCL_CYCLE,clks'length) then
 						scl <= 'Z';
 					else
 						scl <= '0';
-					end if;	
-				when ST_STOP =>
-					if clks <= to_unsigned(HALF_SCL_CYCLE,clks'length) then
-						scl <= 'Z';
-					end if;				
+					end if;					
 			end case;
 		end if;
 	end process;
@@ -90,14 +92,28 @@ begin
 				end if;			
 			when ST_START =>
 				if clks > to_unsigned(HALF_SCL_CYCLE,clks'length) then
-					next_state <= ST_COMM;
+					next_state <= ST_SEND_ADDR;
 				end if;			
-			when ST_COMM =>
+			when ST_SEND_ADDR =>
+				if index = 8 then
+					next_state <= ST_GET_ACK_HIGH_BYTE;
+				end if;
+			when ST_GET_ACK_HIGH_BYTE =>
+				if index = 17 then
+					next_state <= ST_SEND_ACK;
+				end if;
+			when ST_SEND_ACK =>
+				if index = 18 then
+					next_state <= ST_GET_LOW_BYTE;
+				end if;
+			when ST_GET_LOW_BYTE =>
 				if index = 26 then
-					if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
-						next_state <= ST_DONE;
-					end if;								
-				end if;			
+					next_state <= ST_SEND_NACK;
+				end if;
+			when ST_SEND_NACK =>
+				if index = 0 then
+					next_state <= ST_DONE;
+				end if;
 			when ST_DONE =>
 				if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
 					next_state <= ST_STOP;
@@ -156,48 +172,40 @@ begin
 							sda <= '0';
 						end if;
 					end if;					
-				when ST_COMM =>
-					--Send slave address
-					if index <= 7 then
-						if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
-							sda <= ADDR(index);
-						end if;
-						if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
-							index <= index + 1;
-						end if;
-					end if;								
+				when ST_SEND_ADDR =>
+					if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
+						sda <= ADDR(index);
+					end if;
+					if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
+						index <= index + 1;
+					end if;
+				when ST_GET_ACK_HIGH_BYTE =>
 					--Receive slave ACK (index 8) and high byte (index 9 to 16)
-					if index >= 8 and index <= 16 then
-						if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
-							i2c_buff(index - 8) <= sda;
-							index <= index + 1;
-						end if;					
-					end if;		
+					if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
+						i2c_buff(index - 8) <= sda;
+						index <= index + 1;
+					end if;					
+				when ST_SEND_ACK =>
 					--Send master ACK
-					if index = 17 then
-						if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
-							sda <= '0';
-						end if;
-						if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
-							index <= index + 1;
-						end if;						
+					if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
+						sda <= '0';
+					end if;
+					if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
+						index <= index + 1;
+					end if;						
+				when ST_GET_LOW_BYTE =>
+					--Read low byte (index 18 to 25)
+					if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
+						i2c_buff(index - 8) <= sda;
+					end if;
+					if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
+						index <= index + 1;
+					end if;
+				when ST_SEND_NACK =>
+					if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
+						sda <= 'Z';
+						index <= 0;
 					end if;								
-					--Read low byte
-					if index > 17 and index <= 25 then
-						if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
-							i2c_buff(index - 8) <= sda;
-						end if;
-						if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
-							index <= index + 1;
-						end if;
-					end if;
-					--Send master NACK
-					if index = 26 then
-						if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
-							sda <= 'Z';
-							index <= 0;
-						end if;								
-					end if;
 				when ST_DONE =>
 					if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
 						sda <= '0';
