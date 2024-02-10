@@ -144,7 +144,6 @@ en => next_state.OUTPUTSELECT
 en => next_state.OUTPUTSELECT
 en => next_state.OUTPUTSELECT
 en => next_state.OUTPUTSELECT
-en => Selector15.IN4
 en => sda.IN1
 en => next_state.OUTPUTSELECT
 en => next_state.OUTPUTSELECT
@@ -167,7 +166,7 @@ data_out[5] <= i2c_buff[4].DB_MAX_OUTPUT_PORT_TYPE
 data_out[6] <= i2c_buff[3].DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= i2c_buff[2].DB_MAX_OUTPUT_PORT_TYPE
 data_out[8] <= i2c_buff[1].DB_MAX_OUTPUT_PORT_TYPE
-done <= Selector15.DB_MAX_OUTPUT_PORT_TYPE
+done <= WideNor1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |digital_thermometer|dec_to_bcd:i2c_data_to_bcd

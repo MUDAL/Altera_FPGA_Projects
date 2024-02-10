@@ -138,17 +138,11 @@ begin
 		end if;
 	end process;	
 	
-	combinational_outputs:
-	process(state,en)
+	combinational_output: process(state)
 	begin	
 		case state is									
-			when ST_DONE | ST_STOP =>
+			when ST_DONE | ST_STOP | ST_RESTART =>
 				done <= '1';
-			when ST_RESTART =>
-				done <= '1';
-				if en = '0' then
-					done <= '0';
-				end if;
 			when others =>
 				done <= '0';			
 		end case;
