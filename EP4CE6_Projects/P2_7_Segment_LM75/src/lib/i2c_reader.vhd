@@ -25,9 +25,7 @@ entity i2c_reader is
 end i2c_reader;
 
 architecture i2c_reader_rtl of i2c_reader is
-	--I2C address (RW = 1): 10010001. The ones are replaced with Z because a
-	--logic high (or '1') means a device releases the SDA line (high impedance).
-   constant ADDR: std_logic_vector(0 to 7) := "Z00Z000Z";--I2C ADDR, R/W = 1
+   constant ADDR: std_logic_vector(0 to 7) := "10010001";--I2C ADDR, R/W = 1
 	constant MID_HIGH_PULSE: integer := 124; --Midpoint of high SCL pulse
 	constant START_CYCLE: integer := 149; --For the start condition
 	constant HALF_SCL_CYCLE: integer := 249; --Half of SCL cycle
@@ -38,8 +36,12 @@ architecture i2c_reader_rtl of i2c_reader is
 							 ST_STOP, ST_RESTART);
 	signal state: i2c_state;
 	signal next_state: i2c_state;
+	signal sda_next: std_logic;
+	signal sda_reg: std_logic;
 	signal index: integer range 0 to 26;
+	signal index_reg: integer range 0 to 26;
 	signal i2c_buff: std_logic_vector(0 to 17);
+	signal i2c_buff_reg: std_logic_vector(0 to 17);
 	signal clks: unsigned(8 downto 0); --Number of system clocks in SCL	
 begin
 	
@@ -80,7 +82,7 @@ begin
 		end if;
 	end process;
 	
-	next_state_logic: process(state,en,clks,index)
+	next_state_logic: process(state,en,clks,index_reg)
 	begin
 		next_state <= state;
 		case state is
@@ -93,23 +95,23 @@ begin
 					next_state <= ST_SEND_ADDR;
 				end if;			
 			when ST_SEND_ADDR =>
-				if index = 8 then
+				if index_reg = 8 then
 					next_state <= ST_GET_ACK_HIGH_BYTE;
 				end if;
 			when ST_GET_ACK_HIGH_BYTE =>
-				if index = 17 then
+				if index_reg = 17 then
 					next_state <= ST_SEND_ACK;
 				end if;
 			when ST_SEND_ACK =>
-				if index = 18 then
+				if index_reg = 18 then
 					next_state <= ST_GET_LOW_BYTE;
 				end if;
 			when ST_GET_LOW_BYTE =>
-				if index = 26 then
+				if index_reg = 26 then
 					next_state <= ST_SEND_NACK;
 				end if;
 			when ST_SEND_NACK =>
-				if index = 0 then
+				if index_reg = 0 then
 					next_state <= ST_DONE;
 				end if;
 			when ST_DONE =>
@@ -136,7 +138,7 @@ begin
 		end if;
 	end process;	
 	
-	combinational_output: process(state)
+	moore_output: process(state)
 	begin	
 		case state is									
 			when ST_DONE | ST_STOP | ST_RESTART =>
@@ -145,64 +147,84 @@ begin
 				done <= '0';			
 		end case;
 	end process;	
-
+	
+	mealy_outputs: process(state,en,clks,sda,sda_reg,index_reg,i2c_buff_reg)
+	begin
+		sda_next <= sda_reg;
+		index <= index_reg;
+		i2c_buff <= i2c_buff_reg;
+		case state is
+			when ST_IDLE =>
+				sda_next <= '1';
+				if en = '1' and clks = to_unsigned(START_CYCLE,clks'length) then
+					sda_next <= '0';
+				end if;					
+			when ST_SEND_ADDR =>
+				if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
+					sda_next <= ADDR(index_reg);
+				elsif clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
+					index <= index_reg + 1;
+				end if;
+			when ST_GET_ACK_HIGH_BYTE =>
+				--Receive slave ACK (index 8) and high byte (index 9 to 16)
+				if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
+					i2c_buff(index_reg - 8) <= sda;
+					index <= index_reg + 1;
+				end if;					
+			when ST_SEND_ACK =>
+				--Send master ACK
+				if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
+					sda_next <= '0';
+				elsif clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
+					index <= index_reg + 1;
+				end if;						
+			when ST_GET_LOW_BYTE =>
+				--Read low byte (index 18 to 25)
+				if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
+					i2c_buff(index_reg - 8) <= sda;
+				elsif clks = to_unsigned(MID_LOW_PULSE,clks'length) then
+					index <= index_reg + 1;
+				end if;
+			when ST_SEND_NACK =>
+				if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
+					sda_next <= '1';
+					index <= 0;
+				end if;								
+			when ST_DONE =>
+				if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
+					sda_next <= '0';
+				end if;
+			when ST_STOP =>
+				if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
+					sda_next <= '1';
+				end if;
+			when others =>
+		end case;	
+	end process;
+	
+	--SDA = 'Z' (releasing SDA line) implies a logic high.
+	tristate_buffer: process(sda_reg)
+	begin
+		if sda_reg = '1' then
+			sda <= 'Z';
+		else
+			sda <= '0';
+		end if;
+	end process;
+	
 	--bit 9 of 'data_out' is redundant. [Read bits from left to right]
-	data_out <= i2c_buff(1 to 8) & i2c_buff(10);
+	data_out <= i2c_buff_reg(1 to 8) & i2c_buff_reg(10);
 	
 	registered_outputs: process(rst_n,clk)
 	begin
 		if rst_n = '0' then
-			sda <= 'Z';
-			index <= 0;
-			i2c_buff <= (others => '0');
+			sda_reg <= '1';
+			index_reg <= 0;
+			i2c_buff_reg <= (others => '0');
 		elsif rising_edge(clk) then
-			case state is
-				when ST_IDLE =>
-					sda <= 'Z';
-					if en = '1' and clks = to_unsigned(START_CYCLE,clks'length) then
-						sda <= '0';
-					end if;					
-				when ST_SEND_ADDR =>
-					if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
-						sda <= ADDR(index);
-					elsif clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
-						index <= index + 1;
-					end if;
-				when ST_GET_ACK_HIGH_BYTE =>
-					--Receive slave ACK (index 8) and high byte (index 9 to 16)
-					if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
-						i2c_buff(index - 8) <= sda;
-						index <= index + 1;
-					end if;					
-				when ST_SEND_ACK =>
-					--Send master ACK
-					if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
-						sda <= '0';
-					elsif clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
-						index <= index + 1;
-					end if;						
-				when ST_GET_LOW_BYTE =>
-					--Read low byte (index 18 to 25)
-					if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
-						i2c_buff(index - 8) <= sda;
-					elsif clks = to_unsigned(MID_LOW_PULSE,clks'length) then
-						index <= index + 1;
-					end if;
-				when ST_SEND_NACK =>
-					if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
-						sda <= 'Z';
-						index <= 0;
-					end if;								
-				when ST_DONE =>
-					if clks = to_unsigned(MID_LOW_PULSE,clks'length) then
-						sda <= '0';
-					end if;
-				when ST_STOP =>
-					if clks = to_unsigned(MID_HIGH_PULSE,clks'length) then
-						sda <= 'Z';
-					end if;
-				when others =>
-			end case;
+			sda_reg <= sda_next;
+			index_reg <= index;
+			i2c_buff_reg <= i2c_buff;
 		end if;
 	end process;
 	
