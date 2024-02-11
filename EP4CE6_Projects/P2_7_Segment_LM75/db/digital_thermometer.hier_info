@@ -94,6 +94,7 @@ rst_n => index_reg[1].ACLR
 rst_n => index_reg[2].ACLR
 rst_n => index_reg[3].ACLR
 rst_n => index_reg[4].ACLR
+rst_n => scl_reg.PRESET
 rst_n => sda_reg.PRESET
 rst_n => clks[0].ACLR
 rst_n => clks[1].ACLR
@@ -104,7 +105,6 @@ rst_n => clks[5].ACLR
 rst_n => clks[6].ACLR
 rst_n => clks[7].ACLR
 rst_n => clks[8].ACLR
-rst_n => scl~en.ACLR
 rst_n => state~3.DATAIN
 clk => i2c_buff_reg[10].CLK
 clk => i2c_buff_reg[8].CLK
@@ -120,9 +120,8 @@ clk => index_reg[1].CLK
 clk => index_reg[2].CLK
 clk => index_reg[3].CLK
 clk => index_reg[4].CLK
+clk => scl_reg.CLK
 clk => sda_reg.CLK
-clk => scl~reg0.CLK
-clk => scl~en.CLK
 clk => clks[0].CLK
 clk => clks[1].CLK
 clk => clks[2].CLK
@@ -155,7 +154,7 @@ data_out[5] <= i2c_buff_reg[4].DB_MAX_OUTPUT_PORT_TYPE
 data_out[6] <= i2c_buff_reg[3].DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= i2c_buff_reg[2].DB_MAX_OUTPUT_PORT_TYPE
 data_out[8] <= i2c_buff_reg[1].DB_MAX_OUTPUT_PORT_TYPE
-done <= WideNor1.DB_MAX_OUTPUT_PORT_TYPE
+done <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |digital_thermometer|dec_to_bcd:i2c_data_to_bcd

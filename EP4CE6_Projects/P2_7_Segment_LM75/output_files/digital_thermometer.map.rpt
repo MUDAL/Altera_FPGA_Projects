@@ -1,5 +1,5 @@
 Analysis & Synthesis report for digital_thermometer
-Sat Feb 10 22:19:45 2024
+Sun Feb 11 10:15:45 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 10 22:19:45 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun Feb 11 10:15:45 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; digital_thermometer                         ;
 ; Top-level Entity Name              ; digital_thermometer                         ;
@@ -267,13 +267,12 @@ Encoding Type:  One-Hot
 +---------------------------------------+------------------------------------------+
 ; Register name                         ; Reason for Removal                       ;
 +---------------------------------------+------------------------------------------+
-; i2c_reader:lm75_i2c|scl~reg0          ; Stuck at GND due to stuck port data_in   ;
 ; seg_display:display|digit_index[2]    ; Stuck at GND due to stuck port data_in   ;
 ; clk_count[0]                          ; Merged with seg_display:display|count[0] ;
 ; i2c_reader:lm75_i2c|clks[0]           ; Merged with seg_display:display|count[0] ;
-; clk_count[1]                          ; Merged with seg_display:display|count[1] ;
 ; i2c_reader:lm75_i2c|clks[1]           ; Merged with seg_display:display|count[1] ;
-; Total Number of Removed Registers = 6 ;                                          ;
+; clk_count[1]                          ; Merged with seg_display:display|count[1] ;
+; Total Number of Removed Registers = 5 ;                                          ;
 +---------------------------------------+------------------------------------------+
 
 
@@ -300,9 +299,10 @@ Encoding Type:  One-Hot
 ; seg_display:display|shift_reg[1]       ; 2       ;
 ; seg_display:display|shift_reg[2]       ; 2       ;
 ; seg_display:display|shift_reg[3]       ; 2       ;
+; i2c_reader:lm75_i2c|scl_reg            ; 2       ;
 ; en                                     ; 4       ;
 ; i2c_reader:lm75_i2c|sda_reg            ; 2       ;
-; Total number of inverted registers = 5 ;         ;
+; Total number of inverted registers = 6 ;         ;
 +----------------------------------------+---------+
 
 
@@ -311,11 +311,11 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd|num_reg[7] ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; Yes        ; |digital_thermometer|i2c_reader:lm75_i2c|index_reg[4]      ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd|num_reg[6] ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; Yes        ; |digital_thermometer|i2c_reader:lm75_i2c|index_reg[0]      ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |digital_thermometer|seg_display:display|Mux4              ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |digital_thermometer|seg_display:display|Mux1              ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd|Selector2  ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd|Selector1  ;
 ; 20:1               ; 10 bits   ; 130 LEs       ; 70 LEs               ; 60 LEs                 ; No         ; |digital_thermometer|i2c_reader:lm75_i2c|Selector8         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 
@@ -362,7 +362,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Feb 10 22:19:32 2024
+    Info: Processing started: Sun Feb 11 10:15:32 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off digital_thermometer -c digital_thermometer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -408,8 +408,8 @@ Info (21057): Implemented 258 device resources after synthesis - the final resou
     Info (21061): Implemented 242 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 4780 megabytes
-    Info: Processing ended: Sat Feb 10 22:19:45 2024
+    Info: Processing ended: Sun Feb 11 10:15:45 2024
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Total CPU time (on all processors): 00:00:24
 
 

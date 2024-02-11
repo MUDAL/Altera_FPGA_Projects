@@ -1,5 +1,5 @@
 Fitter report for digital_thermometer
-Sat Feb 10 22:19:51 2024
+Sun Feb 11 10:15:52 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -40,10 +40,8 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  32. I/O Rules Matrix
  33. Fitter Device Options
  34. Operating Settings and Conditions
- 35. Estimated Delay Added for Hold Timing Summary
- 36. Estimated Delay Added for Hold Timing Details
- 37. Fitter Messages
- 38. Fitter Suppressed Messages
+ 35. Fitter Messages
+ 36. Fitter Suppressed Messages
 
 
 
@@ -70,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sat Feb 10 22:19:51 2024       ;
+; Fitter Status                      ; Successful - Sun Feb 11 10:15:52 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; digital_thermometer                         ;
 ; Top-level Entity Name              ; digital_thermometer                         ;
@@ -163,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.3%      ;
+;     Processor 2            ;   1.2%      ;
 +----------------------------+-------------+
 
 
@@ -260,8 +258,8 @@ The pin-out file can be found in L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )       ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )       ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )       ;
-; Average interconnect usage (total/H/V)      ; 0.3% / 0.3% / 0.2%  ;
-; Peak interconnect usage (total/H/V)         ; 0.8% / 0.9% / 0.7%  ;
+; Average interconnect usage (total/H/V)      ; 0.3% / 0.4% / 0.2%  ;
+; Peak interconnect usage (total/H/V)         ; 1.0% / 1.0% / 1.0%  ;
 ; Maximum fan-out                             ; 106                 ;
 ; Highest non-global fan-out                  ; 18                  ;
 ; Total fan-out                               ; 1075                ;
@@ -604,9 +602,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Compilation Hierarchy Node      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                  ; Entity Name         ; Library Name ;
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------+---------------------+--------------+
 ; |digital_thermometer            ; 234 (49)    ; 106 (27)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 16   ; 0            ; 128 (22)     ; 2 (0)             ; 104 (27)         ; |digital_thermometer                                 ; digital_thermometer ; work         ;
-;    |dec_to_bcd:i2c_data_to_bcd| ; 55 (55)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (31)      ; 0 (0)             ; 24 (24)          ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd      ; dec_to_bcd          ; work         ;
+;    |dec_to_bcd:i2c_data_to_bcd| ; 54 (54)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (30)      ; 0 (0)             ; 24 (24)          ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd      ; dec_to_bcd          ; work         ;
 ;    |i2c_reader:lm75_i2c|        ; 90 (90)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 57 (57)      ; 0 (0)             ; 33 (33)          ; |digital_thermometer|i2c_reader:lm75_i2c             ; i2c_reader          ; work         ;
-;    |seg_display:display|        ; 46 (39)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (11)      ; 2 (2)             ; 26 (26)          ; |digital_thermometer|seg_display:display             ; seg_display         ; work         ;
+;    |seg_display:display|        ; 46 (39)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (12)      ; 2 (2)             ; 25 (25)          ; |digital_thermometer|seg_display:display             ; seg_display         ; work         ;
 ;       |seg_rom:rom|             ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |digital_thermometer|seg_display:display|seg_rom:rom ; seg_rom             ; work         ;
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -630,7 +628,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sel[1] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; sel[2] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; sel[3] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; sda    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; sda    ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; clk    ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; rst_n  ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +--------+----------+---------------+---------------+-----------------------+-----+------+
@@ -642,15 +640,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                           ; Pad To Core Index ; Setting ;
 +-----------------------------------------------+-------------------+---------+
 ; sda                                           ;                   ;         ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[10]~0 ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[4]~1  ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[5]~2  ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[6]~3  ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[2]~4  ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[3]~5  ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[1]~6  ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[7]~7  ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[8]~8  ; 0                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[10]~0 ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[4]~1  ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[5]~2  ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[6]~3  ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[2]~4  ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[3]~5  ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[1]~6  ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[7]~7  ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[8]~8  ; 1                 ; 6       ;
 ; clk                                           ;                   ;         ;
 ; rst_n                                         ;                   ;         ;
 +-----------------------------------------------+-------------------+---------+
@@ -662,13 +660,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                     ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; clk                                      ; PIN_23             ; 106     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; dec_to_bcd:i2c_data_to_bcd|bcd_reg[0]~0  ; LCCOMB_X22_Y20_N16 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; dec_to_bcd:i2c_data_to_bcd|num_reg[7]~0  ; LCCOMB_X23_Y20_N28 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; dec_to_bcd:i2c_data_to_bcd|state.ST_CALC ; FF_X21_Y20_N13     ; 18      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; i2c_reader:lm75_i2c|index_reg[4]~11      ; LCCOMB_X25_Y17_N12 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; i2c_reader:lm75_i2c|state.ST_SEND_NACK   ; FF_X24_Y17_N21     ; 10      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; dec_to_bcd:i2c_data_to_bcd|bcd_reg[0]~0  ; LCCOMB_X23_Y21_N12 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; dec_to_bcd:i2c_data_to_bcd|num_reg[6]~0  ; LCCOMB_X22_Y21_N0  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; dec_to_bcd:i2c_data_to_bcd|state.ST_CALC ; FF_X24_Y21_N23     ; 18      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; i2c_reader:lm75_i2c|index_reg[0]~11      ; LCCOMB_X25_Y19_N14 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; i2c_reader:lm75_i2c|state.ST_SEND_NACK   ; FF_X24_Y19_N15     ; 10      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 ; rst_n                                    ; PIN_25             ; 106     ; Async. clear ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; seg_display:display|Equal0~4             ; LCCOMB_X19_Y17_N14 ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; seg_display:display|Equal0~4             ; LCCOMB_X17_Y19_N18 ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -677,7 +675,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk   ; PIN_23   ; 106     ; 31                                   ; Global Clock         ; GCLK2            ; --                        ;
+; clk   ; PIN_23   ; 106     ; 21                                   ; Global Clock         ; GCLK2            ; --                        ;
 ; rst_n ; PIN_25   ; 106     ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
@@ -687,14 +685,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 236 / 32,401 ( < 1 % ) ;
+; Block interconnects   ; 254 / 32,401 ( < 1 % ) ;
 ; C16 interconnects     ; 1 / 1,326 ( < 1 % )    ;
-; C4 interconnects      ; 54 / 21,816 ( < 1 % )  ;
-; Direct links          ; 106 / 32,401 ( < 1 % ) ;
+; C4 interconnects      ; 61 / 21,816 ( < 1 % )  ;
+; Direct links          ; 125 / 32,401 ( < 1 % ) ;
 ; Global clocks         ; 2 / 10 ( 20 % )        ;
 ; Local interconnects   ; 155 / 10,320 ( 2 % )   ;
-; R24 interconnects     ; 0 / 1,289 ( 0 % )      ;
-; R4 interconnects      ; 96 / 28,186 ( < 1 % )  ;
+; R24 interconnects     ; 1 / 1,289 ( < 1 % )    ;
+; R4 interconnects      ; 103 / 28,186 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
@@ -708,17 +706,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 0                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 1                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 0                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 1                            ;
 ; 12                                          ; 0                            ;
-; 13                                          ; 0                            ;
-; 14                                          ; 0                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 3                            ;
 ; 15                                          ; 0                            ;
-; 16                                          ; 13                           ;
+; 16                                          ; 10                           ;
 +---------------------------------------------+------------------------------+
 
 
@@ -727,11 +725,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------+------------------------------+
 ; LAB-wide Signals  (Average = 1.82) ; Number of LABs  (Total = 17) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 14                           ;
-; 1 Clock                            ; 14                           ;
-; 1 Clock enable                     ; 1                            ;
+; 1 Async. clear                     ; 15                           ;
+; 1 Clock                            ; 15                           ;
 ; 1 Sync. clear                      ; 1                            ;
-; 1 Sync. load                       ; 1                            ;
 +------------------------------------+------------------------------+
 
 
@@ -746,53 +742,54 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 0                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 1                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
+; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
+; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 1                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 1                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 2                            ;
+; 18                                           ; 1                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 0                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 2                            ;
 ; 23                                           ; 0                            ;
-; 24                                           ; 1                            ;
-; 25                                           ; 4                            ;
-; 26                                           ; 0                            ;
+; 24                                           ; 2                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 1                            ;
 ; 27                                           ; 2                            ;
-; 28                                           ; 1                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.59) ; Number of LABs  (Total = 17) ;
+; Number of Signals Sourced Out  (Average = 9.82) ; Number of LABs  (Total = 17) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 1                            ;
 ; 2                                               ; 0                            ;
 ; 3                                               ; 0                            ;
 ; 4                                               ; 0                            ;
-; 5                                               ; 1                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 2                            ;
+; 5                                               ; 0                            ;
+; 6                                               ; 0                            ;
+; 7                                               ; 4                            ;
 ; 8                                               ; 0                            ;
 ; 9                                               ; 3                            ;
-; 10                                              ; 3                            ;
-; 11                                              ; 1                            ;
-; 12                                              ; 2                            ;
+; 10                                              ; 0                            ;
+; 11                                              ; 3                            ;
+; 12                                              ; 4                            ;
 ; 13                                              ; 0                            ;
 ; 14                                              ; 1                            ;
-; 15                                              ; 1                            ;
+; 15                                              ; 0                            ;
 ; 16                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
@@ -800,7 +797,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 13.06) ; Number of LABs  (Total = 17) ;
+; Number of Distinct Inputs  (Average = 13.82) ; Number of LABs  (Total = 17) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
@@ -808,26 +805,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3                                            ; 0                            ;
 ; 4                                            ; 2                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 2                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 3                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 1                            ;
-; 10                                           ; 1                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 2                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 2                            ;
-; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 3                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
 ; 16                                           ; 0                            ;
-; 17                                           ; 1                            ;
+; 17                                           ; 0                            ;
 ; 18                                           ; 1                            ;
-; 19                                           ; 2                            ;
+; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 2                            ;
+; 23                                           ; 1                            ;
 ; 24                                           ; 0                            ;
-; 25                                           ; 1                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -946,25 +946,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
-This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
-
-
-+------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                ;
-+-----------------------------+----------------------------+-------------------+
-; Source Register             ; Destination Register       ; Delay Added in ns ;
-+-----------------------------+----------------------------+-------------------+
-; i2c_reader:lm75_i2c|clks[8] ; i2c_reader:lm75_i2c|scl~en ; 0.074             ;
-+-----------------------------+----------------------------+-------------------+
-Note: This table only shows the top 1 path(s) that have the largest delay added for hold.
-
-
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
@@ -1010,7 +991,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X11_Y12 to location X22_Y24
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1024,9 +1005,9 @@ Warning (169177): 3 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin rst_n uses I/O standard 3.3-V LVTTL at 25 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/digital_thermometer.vhd Line: 21
 Info (144001): Generated suppressed messages file L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/output_files/digital_thermometer.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5226 megabytes
-    Info: Processing ended: Sat Feb 10 22:19:52 2024
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 5231 megabytes
+    Info: Processing ended: Sun Feb 11 10:15:53 2024
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
 
 

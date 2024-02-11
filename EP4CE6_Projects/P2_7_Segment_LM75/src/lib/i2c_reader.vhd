@@ -38,6 +38,8 @@ architecture i2c_reader_rtl of i2c_reader is
 	signal next_state: i2c_state;
 	signal sda_next: std_logic;
 	signal sda_reg: std_logic;
+	signal scl_next: std_logic;
+	signal scl_reg: std_logic;
 	signal index: integer range 0 to 26;
 	signal index_reg: integer range 0 to 26;
 	signal i2c_buff: std_logic_vector(0 to 17);
@@ -56,29 +58,6 @@ begin
 			else
 				clks <= clks + 1;
 			end if;
-		end if;
-	end process;
-	
-	--Generates I2C clock (SCL)
-	scl_clock_gen: process(rst_n,clk)
-	begin
-		if rst_n = '0' then
-			scl <= 'Z';
-		elsif rising_edge(clk) then
-			case state is
-				when ST_IDLE | ST_RESTART =>
-					scl <= 'Z';	
-				when ST_STOP =>
-					if clks <= to_unsigned(HALF_SCL_CYCLE,clks'length) then
-						scl <= 'Z';
-					end if;
-				when others =>
-					if clks <= to_unsigned(HALF_SCL_CYCLE,clks'length) then
-						scl <= 'Z';
-					else
-						scl <= '0';
-					end if;					
-			end case;
 		end if;
 	end process;
 	
@@ -201,16 +180,31 @@ begin
 			when others =>
 		end case;	
 	end process;
-	
-	--SDA = 'Z' (releasing SDA line) implies a logic high.
-	tristate_buffer: process(sda_reg)
+
+	--Generates I2C clock (SCL)
+	scl_clock_gen_mealy_output: process(state,clks,scl_reg)
 	begin
-		if sda_reg = '1' then
-			sda <= 'Z';
-		else
-			sda <= '0';
-		end if;
-	end process;
+		scl_next <= scl_reg;
+		case state is
+			when ST_IDLE | ST_RESTART =>
+				scl_next <= '1';	
+			when ST_STOP =>
+				if clks <= to_unsigned(HALF_SCL_CYCLE,clks'length) then
+					scl_next <= '1';
+				end if;
+			when others =>
+				if clks <= to_unsigned(HALF_SCL_CYCLE,clks'length) then
+					scl_next <= '1';
+				else
+					scl_next <= '0';
+				end if;					
+		end case;
+	end process;	
+	
+	--SDA/SCL = 'Z' (releasing SDA/SCL line) implies a logic high.
+	tristate_buffers: 
+	sda <= 'Z' when sda_reg = '1' else '0';
+	scl <= 'Z' when scl_reg = '1' else '0';
 	
 	--bit 9 of 'data_out' is redundant. [Read bits from left to right]
 	data_out <= i2c_buff_reg(1 to 8) & i2c_buff_reg(10);
@@ -219,10 +213,12 @@ begin
 	begin
 		if rst_n = '0' then
 			sda_reg <= '1';
+			scl_reg <= '1';
 			index_reg <= 0;
 			i2c_buff_reg <= (others => '0');
 		elsif rising_edge(clk) then
 			sda_reg <= sda_next;
+			scl_reg <= scl_next;
 			index_reg <= index;
 			i2c_buff_reg <= i2c_buff;
 		end if;
