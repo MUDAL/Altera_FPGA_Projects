@@ -131,13 +131,18 @@ begin
 		end if;
 	end process;
 	
-	moore_outputs: process(state)
+	moore_outputs: process(state,io,new_io_reg)
 	begin
+		new_io <= new_io_reg;
 		case state is
 			when ST_IDLE =>
 				count_en <= '0';
 				done <= '0';
-			when ST_START | ST_PRE_ACK | ST_ACK | ST_SAMPLE | ST_PROCESS_DATA =>
+			when ST_START | ST_PRE_ACK | ST_ACK | ST_PROCESS_DATA =>
+				count_en <= '1';
+				done <= '0';
+			when ST_SAMPLE => 
+				new_io <= io;
 				count_en <= '1';
 				done <= '0';
 			when ST_DONE =>
@@ -152,14 +157,13 @@ begin
 		end case;
 	end process;
 	
-	mealy_outputs: process(state,en,clks,io,io_reg, bit_count_reg,clk_stamp_reg, 
+	mealy_outputs: process(state,en,clks,io_reg,bit_count_reg,clk_stamp_reg, 
 								  data_buff_reg,new_io_reg,old_io_reg,check_sum)
 	begin
 		io_next <= io_reg;
 		bit_count <= bit_count_reg;
 		clk_stamp <= clk_stamp_reg;
 		data_buff <= data_buff_reg;
-		new_io <= new_io_reg;
 		old_io <= old_io_reg;
 		valid <= '0';
 		case state is
@@ -171,8 +175,6 @@ begin
 				if clks = START_PULSE then
 					io_next <= '1';
 				end if;
-			when ST_SAMPLE =>
-				new_io <= io;
 			when ST_PROCESS_DATA =>
 				if new_io_reg = '1' and old_io_reg = '0' then
 					old_io <= '1';

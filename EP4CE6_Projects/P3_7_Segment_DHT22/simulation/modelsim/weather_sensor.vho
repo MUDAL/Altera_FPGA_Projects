@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "02/10/2024 22:58:35"
+-- DATE "02/13/2024 23:09:53"
 
 -- 
 -- Device: Altera EP4CE6E22C8 Package TQFP144
@@ -143,70 +143,9 @@ SIGNAL \sel[2]~output_o\ : std_logic;
 SIGNAL \sel[3]~output_o\ : std_logic;
 SIGNAL \clk~input_o\ : std_logic;
 SIGNAL \clk~inputclkctrl_outclk\ : std_logic;
-SIGNAL \io~input_o\ : std_logic;
-SIGNAL \dht22_one_wire|new_io_reg~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|clks[0]~20_combout\ : std_logic;
 SIGNAL \rst_n~input_o\ : std_logic;
 SIGNAL \rst_n~inputclkctrl_outclk\ : std_logic;
-SIGNAL \dht22_one_wire|new_io_reg~q\ : std_logic;
-SIGNAL \dht22_one_wire|old_io_reg~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|old_io_reg~q\ : std_logic;
-SIGNAL \dht22_one_wire|next_state_logic~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|clks[0]~20_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Equal4~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Equal1~3_combout\ : std_logic;
-SIGNAL \dht22_one_wire|clks[12]~45\ : std_logic;
-SIGNAL \dht22_one_wire|clks[13]~46_combout\ : std_logic;
-SIGNAL \dht22_one_wire|clks[13]~47\ : std_logic;
-SIGNAL \dht22_one_wire|clks[14]~48_combout\ : std_logic;
-SIGNAL \dht22_one_wire|clks[14]~49\ : std_logic;
-SIGNAL \dht22_one_wire|clks[15]~50_combout\ : std_logic;
-SIGNAL \dht22_one_wire|clks[15]~51\ : std_logic;
-SIGNAL \dht22_one_wire|clks[16]~52_combout\ : std_logic;
-SIGNAL \dht22_one_wire|clks[16]~53\ : std_logic;
-SIGNAL \dht22_one_wire|clks[17]~54_combout\ : std_logic;
-SIGNAL \dht22_one_wire|clks[17]~55\ : std_logic;
-SIGNAL \dht22_one_wire|clks[18]~56_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Equal1~1_combout\ : std_logic;
-SIGNAL \dht22_one_wire|clks[18]~57\ : std_logic;
-SIGNAL \dht22_one_wire|clks[19]~58_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Equal1~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Equal1~2_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Equal1~4_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector9~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector9~3_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector9~2_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector9~4_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector9~5_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector12~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector2~2_combout\ : std_logic;
-SIGNAL \dht22_one_wire|state.ST_WAIT_1~q\ : std_logic;
-SIGNAL \dht22_one_wire|Equal1~5_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Equal1~6_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector9~9_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector3~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|state.ST_PRE_ACK~q\ : std_logic;
-SIGNAL \dht22_one_wire|Selector4~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|state.ST_WAIT_2~q\ : std_logic;
-SIGNAL \dht22_one_wire|WideOr6~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|WideOr0~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector9~7_combout\ : std_logic;
-SIGNAL \dht22_one_wire|WideOr0~1_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector9~8_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector11~2_combout\ : std_logic;
-SIGNAL \dht22_one_wire|state.ST_CHECK~q\ : std_logic;
-SIGNAL \dht22_one_wire|state.ST_IDLE~2_combout\ : std_logic;
-SIGNAL \dht22_one_wire|state.ST_IDLE~q\ : std_logic;
-SIGNAL \dht22_one_wire|WideOr6~combout\ : std_logic;
-SIGNAL \dht22_one_wire|clks[0]~21\ : std_logic;
-SIGNAL \dht22_one_wire|clks[1]~22_combout\ : std_logic;
-SIGNAL \dht22_one_wire|clks[1]~23\ : std_logic;
-SIGNAL \dht22_one_wire|clks[2]~24_combout\ : std_logic;
-SIGNAL \dht22_one_wire|clks[2]~25\ : std_logic;
-SIGNAL \dht22_one_wire|clks[3]~26_combout\ : std_logic;
-SIGNAL \dht22_one_wire|clks[3]~27\ : std_logic;
-SIGNAL \dht22_one_wire|clks[4]~28_combout\ : std_logic;
-SIGNAL \dht22_one_wire|clks[4]~29\ : std_logic;
-SIGNAL \dht22_one_wire|clks[5]~30_combout\ : std_logic;
 SIGNAL \dht22_one_wire|clks[5]~31\ : std_logic;
 SIGNAL \dht22_one_wire|clks[6]~32_combout\ : std_logic;
 SIGNAL \dht22_one_wire|clks[6]~33\ : std_logic;
@@ -217,23 +156,63 @@ SIGNAL \dht22_one_wire|clks[8]~37\ : std_logic;
 SIGNAL \dht22_one_wire|clks[9]~38_combout\ : std_logic;
 SIGNAL \dht22_one_wire|clks[9]~39\ : std_logic;
 SIGNAL \dht22_one_wire|clks[10]~40_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Equal4~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|clks[10]~41\ : std_logic;
 SIGNAL \dht22_one_wire|clks[11]~42_combout\ : std_logic;
 SIGNAL \dht22_one_wire|clks[11]~43\ : std_logic;
 SIGNAL \dht22_one_wire|clks[12]~44_combout\ : std_logic;
+SIGNAL \dht22_one_wire|clks[12]~45\ : std_logic;
+SIGNAL \dht22_one_wire|clks[13]~46_combout\ : std_logic;
+SIGNAL \dht22_one_wire|clks[13]~47\ : std_logic;
+SIGNAL \dht22_one_wire|clks[14]~48_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Equal1~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|clks[14]~49\ : std_logic;
+SIGNAL \dht22_one_wire|clks[15]~50_combout\ : std_logic;
+SIGNAL \dht22_one_wire|clks[15]~51\ : std_logic;
+SIGNAL \dht22_one_wire|clks[16]~52_combout\ : std_logic;
+SIGNAL \dht22_one_wire|clks[16]~53\ : std_logic;
+SIGNAL \dht22_one_wire|clks[17]~54_combout\ : std_logic;
+SIGNAL \dht22_one_wire|clks[17]~55\ : std_logic;
+SIGNAL \dht22_one_wire|clks[18]~56_combout\ : std_logic;
+SIGNAL \dht22_one_wire|clks[18]~57\ : std_logic;
+SIGNAL \dht22_one_wire|clks[19]~58_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Equal1~1_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Equal1~2_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Equal1~3_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Equal1~4_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector10~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector10~1_combout\ : std_logic;
+SIGNAL \dht22_one_wire|state.ST_DONE~q\ : std_logic;
+SIGNAL \dht22_one_wire|Selector9~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector12~0_combout\ : std_logic;
+SIGNAL \io~input_o\ : std_logic;
+SIGNAL \dht22_one_wire|new_io_reg~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|new_io_reg~q\ : std_logic;
+SIGNAL \dht22_one_wire|old_io_reg~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|state.ST_IDLE~2_combout\ : std_logic;
+SIGNAL \dht22_one_wire|state.ST_IDLE~q\ : std_logic;
+SIGNAL \dht22_one_wire|Selector9~1_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector2~2_combout\ : std_logic;
+SIGNAL \dht22_one_wire|state.ST_WAIT_1~q\ : std_logic;
+SIGNAL \dht22_one_wire|Equal1~5_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Equal1~6_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector3~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|state.ST_PRE_ACK~q\ : std_logic;
+SIGNAL \dht22_one_wire|Selector9~7_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Equal2~2_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Equal2~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Equal2~1_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Equal2~2_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Equal2~3_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector4~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|state.ST_WAIT_2~q\ : std_logic;
 SIGNAL \dht22_one_wire|Selector5~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|state.ST_ACK~q\ : std_logic;
 SIGNAL \dht22_one_wire|Selector9~6_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector6~2_combout\ : std_logic;
-SIGNAL \dht22_one_wire|state.ST_WAIT_3~q\ : std_logic;
-SIGNAL \dht22_one_wire|Selector7~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|state.ST_SAMPLE~q\ : std_logic;
-SIGNAL \dht22_one_wire|Selector8~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|state.ST_PROCESS_DATA~q\ : std_logic;
+SIGNAL \dht22_one_wire|WideOr0~1_combout\ : std_logic;
+SIGNAL \dht22_one_wire|WideOr0~2_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector1~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|state.ST_START~q\ : std_logic;
+SIGNAL \dht22_one_wire|WideNor0~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|WideOr8~combout\ : std_logic;
 SIGNAL \dht22_one_wire|mealy_outputs~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add2~0_combout\ : std_logic;
@@ -247,19 +226,26 @@ SIGNAL \dht22_one_wire|Selector16~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add2~5\ : std_logic;
 SIGNAL \dht22_one_wire|Add2~6_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Selector15~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Equal3~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add2~7\ : std_logic;
 SIGNAL \dht22_one_wire|Add2~8_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Selector14~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Equal3~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add2~9\ : std_logic;
 SIGNAL \dht22_one_wire|Add2~10_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Selector13~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Equal3~1_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector9~10_combout\ : std_logic;
-SIGNAL \dht22_one_wire|state.ST_WAIT_4~q\ : std_logic;
-SIGNAL \dht22_one_wire|Selector10~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector10~1_combout\ : std_logic;
-SIGNAL \dht22_one_wire|state.ST_DONE~q\ : std_logic;
+SIGNAL \dht22_one_wire|Selector8~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|state.ST_PROCESS_DATA~q\ : std_logic;
+SIGNAL \dht22_one_wire|old_io_reg~q\ : std_logic;
+SIGNAL \dht22_one_wire|next_state_logic~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector6~2_combout\ : std_logic;
+SIGNAL \dht22_one_wire|state.ST_WAIT_3~q\ : std_logic;
+SIGNAL \dht22_one_wire|Selector7~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|state.ST_SAMPLE~q\ : std_logic;
+SIGNAL \dht22_one_wire|WideOr0~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector9~8_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector11~2_combout\ : std_logic;
+SIGNAL \dht22_one_wire|state.ST_CHECK~q\ : std_logic;
 SIGNAL \dht22_one_wire|done~combout\ : std_logic;
 SIGNAL \display|Add0~0_combout\ : std_logic;
 SIGNAL \display|Add0~1\ : std_logic;
@@ -276,7 +262,6 @@ SIGNAL \Add0~7\ : std_logic;
 SIGNAL \Add0~8_combout\ : std_logic;
 SIGNAL \Add0~9\ : std_logic;
 SIGNAL \Add0~10_combout\ : std_logic;
-SIGNAL \Equal0~6_combout\ : std_logic;
 SIGNAL \Add0~11\ : std_logic;
 SIGNAL \Add0~12_combout\ : std_logic;
 SIGNAL \Add0~13\ : std_logic;
@@ -296,8 +281,6 @@ SIGNAL \one_wire_count~10_combout\ : std_logic;
 SIGNAL \Add0~25\ : std_logic;
 SIGNAL \Add0~26_combout\ : std_logic;
 SIGNAL \one_wire_count~9_combout\ : std_logic;
-SIGNAL \Equal0~4_combout\ : std_logic;
-SIGNAL \Equal0~5_combout\ : std_logic;
 SIGNAL \Add0~27\ : std_logic;
 SIGNAL \Add0~28_combout\ : std_logic;
 SIGNAL \one_wire_count~8_combout\ : std_logic;
@@ -310,6 +293,7 @@ SIGNAL \Add0~33\ : std_logic;
 SIGNAL \Add0~34_combout\ : std_logic;
 SIGNAL \one_wire_count~6_combout\ : std_logic;
 SIGNAL \Equal0~2_combout\ : std_logic;
+SIGNAL \display|Equal0~0_combout\ : std_logic;
 SIGNAL \Add0~35\ : std_logic;
 SIGNAL \Add0~36_combout\ : std_logic;
 SIGNAL \Add0~37\ : std_logic;
@@ -321,7 +305,6 @@ SIGNAL \one_wire_count~4_combout\ : std_logic;
 SIGNAL \Add0~41\ : std_logic;
 SIGNAL \Add0~42_combout\ : std_logic;
 SIGNAL \one_wire_count~3_combout\ : std_logic;
-SIGNAL \Equal0~1_combout\ : std_logic;
 SIGNAL \Add0~43\ : std_logic;
 SIGNAL \Add0~44_combout\ : std_logic;
 SIGNAL \one_wire_count~2_combout\ : std_logic;
@@ -334,21 +317,37 @@ SIGNAL \Add0~49\ : std_logic;
 SIGNAL \Add0~50_combout\ : std_logic;
 SIGNAL \one_wire_count~0_combout\ : std_logic;
 SIGNAL \Equal0~0_combout\ : std_logic;
-SIGNAL \display|Equal0~0_combout\ : std_logic;
+SIGNAL \Equal0~1_combout\ : std_logic;
 SIGNAL \Equal0~3_combout\ : std_logic;
+SIGNAL \Equal0~4_combout\ : std_logic;
+SIGNAL \Equal0~5_combout\ : std_logic;
+SIGNAL \Equal0~6_combout\ : std_logic;
 SIGNAL \Equal0~7_combout\ : std_logic;
 SIGNAL \en_dht22~q\ : std_logic;
-SIGNAL \dht22_one_wire|Selector9~1_combout\ : std_logic;
-SIGNAL \dht22_one_wire|WideOr0~2_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Selector1~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|state.ST_START~q\ : std_logic;
-SIGNAL \dht22_one_wire|WideOr8~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector9~9_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector9~10_combout\ : std_logic;
+SIGNAL \dht22_one_wire|state.ST_WAIT_4~q\ : std_logic;
+SIGNAL \dht22_one_wire|WideOr6~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|WideOr6~combout\ : std_logic;
+SIGNAL \dht22_one_wire|clks[0]~21\ : std_logic;
+SIGNAL \dht22_one_wire|clks[1]~22_combout\ : std_logic;
+SIGNAL \dht22_one_wire|clks[1]~23\ : std_logic;
+SIGNAL \dht22_one_wire|clks[2]~24_combout\ : std_logic;
+SIGNAL \dht22_one_wire|clks[2]~25\ : std_logic;
+SIGNAL \dht22_one_wire|clks[3]~26_combout\ : std_logic;
+SIGNAL \dht22_one_wire|clks[3]~27\ : std_logic;
+SIGNAL \dht22_one_wire|clks[4]~28_combout\ : std_logic;
+SIGNAL \dht22_one_wire|clks[4]~29\ : std_logic;
+SIGNAL \dht22_one_wire|clks[5]~30_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector9~3_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector9~2_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector9~4_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Selector9~5_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Selector12~1_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Selector12~2_combout\ : std_logic;
 SIGNAL \dht22_one_wire|io_reg~q\ : std_logic;
-SIGNAL \dht22_one_wire|Decoder0~10_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Decoder0~7_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Decoder0~8_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Equal3~2_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Decoder0~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|clk_stamp_reg[19]~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~1\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~3\ : std_logic;
@@ -370,20 +369,20 @@ SIGNAL \dht22_one_wire|Add1~33\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~35\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~37\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~38_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add1~34_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~36_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add1~34_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~32_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~30_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~26_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~28_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~24_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~18_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add1~22_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~20_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add1~8_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add1~22_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~10_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add1~4_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add1~8_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add1~4_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~2_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add1~6_combout\ : std_logic;
 SIGNAL \dht22_one_wire|LessThan0~1_combout\ : std_logic;
@@ -396,75 +395,44 @@ SIGNAL \dht22_one_wire|LessThan0~3_combout\ : std_logic;
 SIGNAL \dht22_one_wire|LessThan0~4_combout\ : std_logic;
 SIGNAL \dht22_one_wire|LessThan0~5_combout\ : std_logic;
 SIGNAL \dht22_one_wire|LessThan0~6_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[13]~18_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Decoder0~9_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[5]~19_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Decoder0~3_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[14]~6_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[6]~7_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Decoder0~2_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[7]~9_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[15]~8_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add3~1\ : std_logic;
-SIGNAL \dht22_one_wire|Add3~3\ : std_logic;
-SIGNAL \dht22_one_wire|Add3~4_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[32]~30_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Decoder0~13_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Decoder0~10_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[33]~39_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Decoder0~4_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Decoder0~6_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[21]~15_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Decoder0~12_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[29]~14_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[22]~3_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Decoder0~5_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[30]~2_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[31]~4_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[23]~5_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add4~1\ : std_logic;
-SIGNAL \dht22_one_wire|Add4~3\ : std_logic;
-SIGNAL \dht22_one_wire|Add4~4_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add4~2_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add3~2_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add4~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add3~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|check_sum[0]~1\ : std_logic;
-SIGNAL \dht22_one_wire|check_sum[1]~3\ : std_logic;
-SIGNAL \dht22_one_wire|check_sum[2]~4_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Decoder0~11_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[20]~13_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[28]~12_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add4~5\ : std_logic;
-SIGNAL \dht22_one_wire|Add4~6_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[12]~16_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[4]~17_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add3~5\ : std_logic;
-SIGNAL \dht22_one_wire|Add3~6_combout\ : std_logic;
-SIGNAL \dht22_one_wire|check_sum[2]~5\ : std_logic;
-SIGNAL \dht22_one_wire|check_sum[3]~6_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Equal3~2_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Decoder0~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Decoder0~1_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[36]~11_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[37]~10_combout\ : std_logic;
-SIGNAL \dht22_one_wire|valid~1_combout\ : std_logic;
-SIGNAL \dht22_one_wire|check_sum[0]~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|check_sum[1]~2_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[39]~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[38]~1_combout\ : std_logic;
-SIGNAL \dht22_one_wire|valid~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Decoder0~19_combout\ : std_logic;
 SIGNAL \dht22_one_wire|data_buff_reg[25]~33_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Decoder0~20_combout\ : std_logic;
 SIGNAL \dht22_one_wire|data_buff_reg[17]~34_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Decoder0~14_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Decoder0~3_combout\ : std_logic;
 SIGNAL \dht22_one_wire|data_buff_reg[26]~22_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Decoder0~15_combout\ : std_logic;
 SIGNAL \dht22_one_wire|data_buff_reg[18]~23_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[27]~24_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Decoder0~16_combout\ : std_logic;
 SIGNAL \dht22_one_wire|data_buff_reg[19]~25_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Decoder0~2_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[27]~24_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Decoder0~6_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Decoder0~11_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[20]~13_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Decoder0~5_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[28]~12_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[21]~15_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Decoder0~12_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[29]~14_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[30]~2_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[22]~3_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[23]~5_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[31]~4_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add4~1\ : std_logic;
+SIGNAL \dht22_one_wire|Add4~3\ : std_logic;
+SIGNAL \dht22_one_wire|Add4~5\ : std_logic;
 SIGNAL \dht22_one_wire|Add4~7\ : std_logic;
 SIGNAL \dht22_one_wire|Add4~9\ : std_logic;
 SIGNAL \dht22_one_wire|Add4~11\ : std_logic;
 SIGNAL \dht22_one_wire|Add4~12_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Decoder0~7_combout\ : std_logic;
 SIGNAL \dht22_one_wire|data_buff_reg[1]~38_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Decoder0~17_combout\ : std_logic;
 SIGNAL \dht22_one_wire|data_buff_reg[9]~37_combout\ : std_logic;
@@ -472,26 +440,43 @@ SIGNAL \dht22_one_wire|data_buff_reg[2]~27_combout\ : std_logic;
 SIGNAL \dht22_one_wire|data_buff_reg[10]~26_combout\ : std_logic;
 SIGNAL \dht22_one_wire|data_buff_reg[3]~29_combout\ : std_logic;
 SIGNAL \dht22_one_wire|data_buff_reg[11]~28_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Decoder0~8_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[12]~16_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Decoder0~9_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[4]~17_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[13]~18_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[5]~19_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[14]~6_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[6]~7_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[7]~9_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[15]~8_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add3~1\ : std_logic;
+SIGNAL \dht22_one_wire|Add3~3\ : std_logic;
+SIGNAL \dht22_one_wire|Add3~5\ : std_logic;
 SIGNAL \dht22_one_wire|Add3~7\ : std_logic;
 SIGNAL \dht22_one_wire|Add3~9\ : std_logic;
 SIGNAL \dht22_one_wire|Add3~11\ : std_logic;
 SIGNAL \dht22_one_wire|Add3~12_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add3~10_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add4~10_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Add4~8_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add3~10_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Add3~8_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add4~8_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add4~6_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add3~6_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add4~4_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add3~4_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add3~2_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add4~2_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add3~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Add4~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|check_sum[0]~1\ : std_logic;
+SIGNAL \dht22_one_wire|check_sum[1]~3\ : std_logic;
+SIGNAL \dht22_one_wire|check_sum[2]~5\ : std_logic;
 SIGNAL \dht22_one_wire|check_sum[3]~7\ : std_logic;
 SIGNAL \dht22_one_wire|check_sum[4]~9\ : std_logic;
 SIGNAL \dht22_one_wire|check_sum[5]~11\ : std_logic;
 SIGNAL \dht22_one_wire|check_sum[6]~12_combout\ : std_logic;
-SIGNAL \dht22_one_wire|Decoder0~13_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[33]~39_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Equal5~0_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[35]~20_combout\ : std_logic;
-SIGNAL \dht22_one_wire|check_sum[4]~8_combout\ : std_logic;
-SIGNAL \dht22_one_wire|check_sum[5]~10_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[34]~21_combout\ : std_logic;
-SIGNAL \dht22_one_wire|valid~2_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Decoder0~21_combout\ : std_logic;
 SIGNAL \dht22_one_wire|data_buff_reg[8]~35_combout\ : std_logic;
 SIGNAL \dht22_one_wire|Decoder0~22_combout\ : std_logic;
@@ -506,8 +491,23 @@ SIGNAL \dht22_one_wire|Add4~13\ : std_logic;
 SIGNAL \dht22_one_wire|Add4~14_combout\ : std_logic;
 SIGNAL \dht22_one_wire|check_sum[6]~13\ : std_logic;
 SIGNAL \dht22_one_wire|check_sum[7]~14_combout\ : std_logic;
-SIGNAL \dht22_one_wire|data_buff_reg[32]~30_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[35]~20_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[34]~21_combout\ : std_logic;
+SIGNAL \dht22_one_wire|check_sum[5]~10_combout\ : std_logic;
+SIGNAL \dht22_one_wire|check_sum[4]~8_combout\ : std_logic;
+SIGNAL \dht22_one_wire|valid~2_combout\ : std_logic;
 SIGNAL \dht22_one_wire|valid~3_combout\ : std_logic;
+SIGNAL \dht22_one_wire|Decoder0~1_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[37]~10_combout\ : std_logic;
+SIGNAL \dht22_one_wire|check_sum[2]~4_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[36]~11_combout\ : std_logic;
+SIGNAL \dht22_one_wire|check_sum[3]~6_combout\ : std_logic;
+SIGNAL \dht22_one_wire|valid~1_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[38]~1_combout\ : std_logic;
+SIGNAL \dht22_one_wire|data_buff_reg[39]~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|check_sum[1]~2_combout\ : std_logic;
+SIGNAL \dht22_one_wire|check_sum[0]~0_combout\ : std_logic;
+SIGNAL \dht22_one_wire|valid~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|valid~4_combout\ : std_logic;
 SIGNAL \display|digit_index[0]~1_combout\ : std_logic;
 SIGNAL \display|Add0~7\ : std_logic;
@@ -530,6 +530,8 @@ SIGNAL \display|Add0~20_combout\ : std_logic;
 SIGNAL \display|count~1_combout\ : std_logic;
 SIGNAL \display|Add0~21\ : std_logic;
 SIGNAL \display|Add0~22_combout\ : std_logic;
+SIGNAL \display|Equal0~2_combout\ : std_logic;
+SIGNAL \display|Equal0~3_combout\ : std_logic;
 SIGNAL \display|Add0~23\ : std_logic;
 SIGNAL \display|Add0~24_combout\ : std_logic;
 SIGNAL \display|Add0~25\ : std_logic;
@@ -540,114 +542,11 @@ SIGNAL \display|Add0~28_combout\ : std_logic;
 SIGNAL \display|Add0~29\ : std_logic;
 SIGNAL \display|Add0~30_combout\ : std_logic;
 SIGNAL \display|Equal0~1_combout\ : std_logic;
-SIGNAL \display|Equal0~3_combout\ : std_logic;
-SIGNAL \display|Equal0~2_combout\ : std_logic;
 SIGNAL \display|Equal0~4_combout\ : std_logic;
 SIGNAL \display|digit_index[1]~0_combout\ : std_logic;
 SIGNAL \display|Mux0~0_combout\ : std_logic;
 SIGNAL \param~0_combout\ : std_logic;
 SIGNAL \param~q\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|num_reg[1]~3_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|LessThan0~2_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~9\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~10_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~7\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~9\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~11\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~12_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector19~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector19~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|num_reg[8]~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|num_reg[8]~2_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~11\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~12_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~13\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~14_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector18~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector18~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~15\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~16_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector17~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~13\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~14_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector17~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~17\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~18_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector16~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~15\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~16_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector16~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~17\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~18_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~19\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~20_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector15~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector15~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~19\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~20_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~21\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~22_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector14~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector14~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|LessThan0~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|LessThan0~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|LessThan0~3_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|num~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|num_reg[1]~4_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|num_reg[1]~5_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~1\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~2_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector24~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector24~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~1\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~2_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~3\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~4_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector23~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector23~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~5\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~6_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector22~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~3\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~4_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector22~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~5\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~6_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~8_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector21~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector21~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~7\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~8_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~10_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector20~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector20~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|LessThan3~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~21\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~22_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~23\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~24_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector13~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector13~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector2~4_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|num~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|num_reg[8]~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~23\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~24_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~25\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~26_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector12~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector12~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~25\ : std_logic;
-SIGNAL \dht22_data_bcd|Add1~26_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~27\ : std_logic;
-SIGNAL \dht22_data_bcd|Add3~28_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector11~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector11~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|done_reg~3_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|done_reg~2_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|done_reg~q\ : std_logic;
 SIGNAL \Add1~1_cout\ : std_logic;
 SIGNAL \Add1~3_cout\ : std_logic;
 SIGNAL \Add1~4_combout\ : std_logic;
@@ -672,45 +571,145 @@ SIGNAL \converter_count~0_combout\ : std_logic;
 SIGNAL \Equal1~0_combout\ : std_logic;
 SIGNAL \Equal1~1_combout\ : std_logic;
 SIGNAL \Equal1~2_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|num_reg[1]~3_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|num_reg[1]~4_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|num_reg[1]~5_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~1\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~2_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector24~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector24~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~3\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~5\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~7\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~8_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~9\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~10_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector20~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector20~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~11\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~12_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector19~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~9\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~10_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector19~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~13\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~14_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector18~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~11\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~12_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector18~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~13\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~14_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~15\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~16_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector17~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector17~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~15\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~16_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~17\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~18_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector16~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector16~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~17\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~18_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~19\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~20_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector15~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector15~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~19\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~20_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~21\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~22_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector14~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector14~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~21\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~22_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~23\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~24_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector13~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector13~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~25\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~26_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector12~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~23\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~24_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector12~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~25\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~26_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~27\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~28_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector11~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector11~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|num_reg[8]~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|num_reg[8]~2_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~1\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~2_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~3\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~4_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector23~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector23~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~5\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~7\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~8_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector21~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~6_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector21~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector2~4_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|LessThan3~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|LessThan0~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|LessThan0~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|num~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|done_reg~3_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|done_reg~2_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|done_reg~q\ : std_logic;
 SIGNAL \en_converter~0_combout\ : std_logic;
 SIGNAL \en_converter~q\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector2~5_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector2~6_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|Selector2~7_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|state.ST_IDLE~0_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|state.ST_IDLE~q\ : std_logic;
 SIGNAL \dht22_data_bcd|Selector2~8_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|state.ST_DONE~q\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector2~6_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector2~5_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|Selector1~0_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|state.ST_CALC~q\ : std_logic;
+SIGNAL \dht22_data_bcd|num_reg[8]~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add3~6_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector22~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Add1~4_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector22~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|LessThan0~2_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|LessThan0~3_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|num~1_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|Selector10~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|bcd_reg[4]~feeder_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|bcd_reg[0]~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector6~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|num_reg[0]~6_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|num_reg[0]~7_combout\ : std_logic;
-SIGNAL \display|Mux4~0_combout\ : std_logic;
-SIGNAL \display|Mux4~1_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|Selector9~0_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|Selector9~1_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|Selector8~0_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|Selector8~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector7~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector7~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|bcd_reg[0]~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector6~0_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|Selector5~0_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|Selector5~1_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|Selector4~3_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|Selector4~2_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector3~0_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|Selector3~1_combout\ : std_logic;
+SIGNAL \display|Mux1~0_combout\ : std_logic;
+SIGNAL \display|Mux1~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|bcd_reg[9]~feeder_combout\ : std_logic;
+SIGNAL \display|Mux3~0_combout\ : std_logic;
+SIGNAL \display|Mux3~1_combout\ : std_logic;
 SIGNAL \dht22_data_bcd|bcd_reg[10]~feeder_combout\ : std_logic;
 SIGNAL \display|Mux2~0_combout\ : std_logic;
 SIGNAL \display|Mux2~1_combout\ : std_logic;
-SIGNAL \display|Mux3~0_combout\ : std_logic;
-SIGNAL \display|Mux3~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector7~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector7~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector3~0_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|Selector3~1_combout\ : std_logic;
-SIGNAL \dht22_data_bcd|bcd_reg[11]~feeder_combout\ : std_logic;
-SIGNAL \display|Mux1~0_combout\ : std_logic;
-SIGNAL \display|Mux1~1_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|num_reg[0]~6_combout\ : std_logic;
+SIGNAL \dht22_data_bcd|num_reg[0]~7_combout\ : std_logic;
+SIGNAL \display|Mux4~0_combout\ : std_logic;
+SIGNAL \display|Mux4~1_combout\ : std_logic;
 SIGNAL \display|rom|rom~0_combout\ : std_logic;
 SIGNAL \display|rom|rom~1_combout\ : std_logic;
 SIGNAL \display|rom|rom~2_combout\ : std_logic;
@@ -719,28 +718,27 @@ SIGNAL \display|rom|rom~4_combout\ : std_logic;
 SIGNAL \display|rom|rom~5_combout\ : std_logic;
 SIGNAL \display|rom|rom~6_combout\ : std_logic;
 SIGNAL \display|shift_reg[1]~1_combout\ : std_logic;
-SIGNAL \display|shift_reg[2]~feeder_combout\ : std_logic;
 SIGNAL \display|shift_reg[3]~feeder_combout\ : std_logic;
 SIGNAL \display|shift_reg[0]~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|clks\ : std_logic_vector(19 DOWNTO 0);
 SIGNAL \dht22_one_wire|data_buff_reg\ : std_logic_vector(0 TO 39);
-SIGNAL converter_count : std_logic_vector(9 DOWNTO 0);
 SIGNAL \display|digit_index\ : std_logic_vector(2 DOWNTO 0);
 SIGNAL \display|count\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL \dht22_data_bcd|bcd_reg\ : std_logic_vector(11 DOWNTO 0);
 SIGNAL \dht22_one_wire|bit_count_reg\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL one_wire_count : std_logic_vector(26 DOWNTO 0);
+SIGNAL converter_count : std_logic_vector(9 DOWNTO 0);
 SIGNAL \display|shift_reg\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \dht22_data_bcd|tens_reg\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \dht22_one_wire|clk_stamp_reg\ : std_logic_vector(19 DOWNTO 0);
 SIGNAL \dht22_data_bcd|num_reg\ : std_logic_vector(15 DOWNTO 0);
+SIGNAL one_wire_count : std_logic_vector(26 DOWNTO 0);
 SIGNAL \dht22_data_bcd|hundreds_reg\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \dht22_one_wire|ALT_INV_io_reg~q\ : std_logic;
 SIGNAL \dht22_one_wire|ALT_INV_state.ST_PROCESS_DATA~q\ : std_logic;
 SIGNAL \display|ALT_INV_shift_reg\ : std_logic_vector(3 DOWNTO 1);
 SIGNAL \display|rom|ALT_INV_rom~6_combout\ : std_logic;
 SIGNAL \display|ALT_INV_Mux0~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|ALT_INV_valid~4_combout\ : std_logic;
+SIGNAL \dht22_one_wire|ALT_INV_io_reg~q\ : std_logic;
 
 COMPONENT hard_block
     PORT (
@@ -765,7 +763,6 @@ ww_devpor <= devpor;
 \rst_n~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \rst_n~input_o\);
 
 \clk~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \clk~input_o\);
-\dht22_one_wire|ALT_INV_io_reg~q\ <= NOT \dht22_one_wire|io_reg~q\;
 \dht22_one_wire|ALT_INV_state.ST_PROCESS_DATA~q\ <= NOT \dht22_one_wire|state.ST_PROCESS_DATA~q\;
 \display|ALT_INV_shift_reg\(3) <= NOT \display|shift_reg\(3);
 \display|ALT_INV_shift_reg\(2) <= NOT \display|shift_reg\(2);
@@ -773,6 +770,7 @@ ww_devpor <= devpor;
 \display|rom|ALT_INV_rom~6_combout\ <= NOT \display|rom|rom~6_combout\;
 \display|ALT_INV_Mux0~0_combout\ <= NOT \display|Mux0~0_combout\;
 \dht22_one_wire|ALT_INV_valid~4_combout\ <= NOT \dht22_one_wire|valid~4_combout\;
+\dht22_one_wire|ALT_INV_io_reg~q\ <= NOT \dht22_one_wire|io_reg~q\;
 auto_generated_inst : hard_block
 PORT MAP (
 	devoe => ww_devoe,
@@ -972,32 +970,22 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \clk~inputclkctrl_outclk\);
 
--- Location: IOIBUF_X28_Y24_N8
-\io~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_io,
-	o => \io~input_o\);
-
--- Location: LCCOMB_X21_Y22_N28
-\dht22_one_wire|new_io_reg~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X23_Y14_N12
+\dht22_one_wire|clks[0]~20\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|new_io_reg~0_combout\ = (\dht22_one_wire|state.ST_SAMPLE~q\ & ((\io~input_o\))) # (!\dht22_one_wire|state.ST_SAMPLE~q\ & (\dht22_one_wire|new_io_reg~q\))
+-- \dht22_one_wire|clks[0]~20_combout\ = \dht22_one_wire|clks\(0) $ (VCC)
+-- \dht22_one_wire|clks[0]~21\ = CARRY(\dht22_one_wire|clks\(0))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111101000001010",
+	lut_mask => "0101010110101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|new_io_reg~q\,
-	datac => \dht22_one_wire|state.ST_SAMPLE~q\,
-	datad => \io~input_o\,
-	combout => \dht22_one_wire|new_io_reg~0_combout\);
+	dataa => \dht22_one_wire|clks\(0),
+	datad => VCC,
+	combout => \dht22_one_wire|clks[0]~20_combout\,
+	cout => \dht22_one_wire|clks[0]~21\);
 
 -- Location: IOIBUF_X0_Y11_N22
 \rst_n~input\ : cycloneive_io_ibuf
@@ -1023,1001 +1011,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \rst_n~inputclkctrl_outclk\);
 
--- Location: FF_X21_Y21_N17
-\dht22_one_wire|new_io_reg\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \dht22_one_wire|new_io_reg~0_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sload => VCC,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|new_io_reg~q\);
-
--- Location: LCCOMB_X17_Y22_N20
-\dht22_one_wire|old_io_reg~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|old_io_reg~0_combout\ = (\dht22_one_wire|old_io_reg~q\ & ((!\dht22_one_wire|next_state_logic~0_combout\))) # (!\dht22_one_wire|old_io_reg~q\ & (\dht22_one_wire|new_io_reg~q\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000110011111100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|new_io_reg~q\,
-	datac => \dht22_one_wire|old_io_reg~q\,
-	datad => \dht22_one_wire|next_state_logic~0_combout\,
-	combout => \dht22_one_wire|old_io_reg~0_combout\);
-
--- Location: FF_X17_Y22_N21
-\dht22_one_wire|old_io_reg\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|old_io_reg~0_combout\,
-	asdata => \dht22_one_wire|old_io_reg~q\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sload => \dht22_one_wire|ALT_INV_state.ST_PROCESS_DATA~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|old_io_reg~q\);
-
--- Location: LCCOMB_X18_Y21_N0
-\dht22_one_wire|next_state_logic~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|next_state_logic~0_combout\ = \dht22_one_wire|old_io_reg~q\ $ (\dht22_one_wire|new_io_reg~q\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001111001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|old_io_reg~q\,
-	datad => \dht22_one_wire|new_io_reg~q\,
-	combout => \dht22_one_wire|next_state_logic~0_combout\);
-
--- Location: LCCOMB_X19_Y21_N12
-\dht22_one_wire|clks[0]~20\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|clks[0]~20_combout\ = \dht22_one_wire|clks\(0) $ (VCC)
--- \dht22_one_wire|clks[0]~21\ = CARRY(\dht22_one_wire|clks\(0))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010110101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|clks\(0),
-	datad => VCC,
-	combout => \dht22_one_wire|clks[0]~20_combout\,
-	cout => \dht22_one_wire|clks[0]~21\);
-
--- Location: LCCOMB_X19_Y21_N8
-\dht22_one_wire|Equal4~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Equal4~0_combout\ = (!\dht22_one_wire|clks\(2) & (!\dht22_one_wire|clks\(3) & (!\dht22_one_wire|clks\(9) & !\dht22_one_wire|clks\(10))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|clks\(2),
-	datab => \dht22_one_wire|clks\(3),
-	datac => \dht22_one_wire|clks\(9),
-	datad => \dht22_one_wire|clks\(10),
-	combout => \dht22_one_wire|Equal4~0_combout\);
-
--- Location: LCCOMB_X18_Y21_N8
-\dht22_one_wire|Equal1~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Equal1~3_combout\ = (\dht22_one_wire|clks\(7) & (\dht22_one_wire|clks\(6) & (!\dht22_one_wire|clks\(4) & !\dht22_one_wire|clks\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|clks\(7),
-	datab => \dht22_one_wire|clks\(6),
-	datac => \dht22_one_wire|clks\(4),
-	datad => \dht22_one_wire|clks\(5),
-	combout => \dht22_one_wire|Equal1~3_combout\);
-
--- Location: LCCOMB_X19_Y20_N4
-\dht22_one_wire|clks[12]~44\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|clks[12]~44_combout\ = (\dht22_one_wire|clks\(12) & (\dht22_one_wire|clks[11]~43\ $ (GND))) # (!\dht22_one_wire|clks\(12) & (!\dht22_one_wire|clks[11]~43\ & VCC))
--- \dht22_one_wire|clks[12]~45\ = CARRY((\dht22_one_wire|clks\(12) & !\dht22_one_wire|clks[11]~43\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|clks\(12),
-	datad => VCC,
-	cin => \dht22_one_wire|clks[11]~43\,
-	combout => \dht22_one_wire|clks[12]~44_combout\,
-	cout => \dht22_one_wire|clks[12]~45\);
-
--- Location: LCCOMB_X19_Y20_N6
-\dht22_one_wire|clks[13]~46\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|clks[13]~46_combout\ = (\dht22_one_wire|clks\(13) & (!\dht22_one_wire|clks[12]~45\)) # (!\dht22_one_wire|clks\(13) & ((\dht22_one_wire|clks[12]~45\) # (GND)))
--- \dht22_one_wire|clks[13]~47\ = CARRY((!\dht22_one_wire|clks[12]~45\) # (!\dht22_one_wire|clks\(13)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|clks\(13),
-	datad => VCC,
-	cin => \dht22_one_wire|clks[12]~45\,
-	combout => \dht22_one_wire|clks[13]~46_combout\,
-	cout => \dht22_one_wire|clks[13]~47\);
-
--- Location: FF_X19_Y20_N7
-\dht22_one_wire|clks[13]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|clks[13]~46_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sclr => \dht22_one_wire|WideOr6~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|clks\(13));
-
--- Location: LCCOMB_X19_Y20_N8
-\dht22_one_wire|clks[14]~48\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|clks[14]~48_combout\ = (\dht22_one_wire|clks\(14) & (\dht22_one_wire|clks[13]~47\ $ (GND))) # (!\dht22_one_wire|clks\(14) & (!\dht22_one_wire|clks[13]~47\ & VCC))
--- \dht22_one_wire|clks[14]~49\ = CARRY((\dht22_one_wire|clks\(14) & !\dht22_one_wire|clks[13]~47\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|clks\(14),
-	datad => VCC,
-	cin => \dht22_one_wire|clks[13]~47\,
-	combout => \dht22_one_wire|clks[14]~48_combout\,
-	cout => \dht22_one_wire|clks[14]~49\);
-
--- Location: FF_X19_Y20_N9
-\dht22_one_wire|clks[14]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|clks[14]~48_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sclr => \dht22_one_wire|WideOr6~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|clks\(14));
-
--- Location: LCCOMB_X19_Y20_N10
-\dht22_one_wire|clks[15]~50\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|clks[15]~50_combout\ = (\dht22_one_wire|clks\(15) & (!\dht22_one_wire|clks[14]~49\)) # (!\dht22_one_wire|clks\(15) & ((\dht22_one_wire|clks[14]~49\) # (GND)))
--- \dht22_one_wire|clks[15]~51\ = CARRY((!\dht22_one_wire|clks[14]~49\) # (!\dht22_one_wire|clks\(15)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|clks\(15),
-	datad => VCC,
-	cin => \dht22_one_wire|clks[14]~49\,
-	combout => \dht22_one_wire|clks[15]~50_combout\,
-	cout => \dht22_one_wire|clks[15]~51\);
-
--- Location: FF_X19_Y20_N11
-\dht22_one_wire|clks[15]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|clks[15]~50_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sclr => \dht22_one_wire|WideOr6~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|clks\(15));
-
--- Location: LCCOMB_X19_Y20_N12
-\dht22_one_wire|clks[16]~52\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|clks[16]~52_combout\ = (\dht22_one_wire|clks\(16) & (\dht22_one_wire|clks[15]~51\ $ (GND))) # (!\dht22_one_wire|clks\(16) & (!\dht22_one_wire|clks[15]~51\ & VCC))
--- \dht22_one_wire|clks[16]~53\ = CARRY((\dht22_one_wire|clks\(16) & !\dht22_one_wire|clks[15]~51\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|clks\(16),
-	datad => VCC,
-	cin => \dht22_one_wire|clks[15]~51\,
-	combout => \dht22_one_wire|clks[16]~52_combout\,
-	cout => \dht22_one_wire|clks[16]~53\);
-
--- Location: FF_X19_Y20_N13
-\dht22_one_wire|clks[16]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|clks[16]~52_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sclr => \dht22_one_wire|WideOr6~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|clks\(16));
-
--- Location: LCCOMB_X19_Y20_N14
-\dht22_one_wire|clks[17]~54\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|clks[17]~54_combout\ = (\dht22_one_wire|clks\(17) & (!\dht22_one_wire|clks[16]~53\)) # (!\dht22_one_wire|clks\(17) & ((\dht22_one_wire|clks[16]~53\) # (GND)))
--- \dht22_one_wire|clks[17]~55\ = CARRY((!\dht22_one_wire|clks[16]~53\) # (!\dht22_one_wire|clks\(17)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|clks\(17),
-	datad => VCC,
-	cin => \dht22_one_wire|clks[16]~53\,
-	combout => \dht22_one_wire|clks[17]~54_combout\,
-	cout => \dht22_one_wire|clks[17]~55\);
-
--- Location: FF_X19_Y20_N15
-\dht22_one_wire|clks[17]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|clks[17]~54_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sclr => \dht22_one_wire|WideOr6~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|clks\(17));
-
--- Location: LCCOMB_X19_Y20_N16
-\dht22_one_wire|clks[18]~56\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|clks[18]~56_combout\ = (\dht22_one_wire|clks\(18) & (\dht22_one_wire|clks[17]~55\ $ (GND))) # (!\dht22_one_wire|clks\(18) & (!\dht22_one_wire|clks[17]~55\ & VCC))
--- \dht22_one_wire|clks[18]~57\ = CARRY((\dht22_one_wire|clks\(18) & !\dht22_one_wire|clks[17]~55\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|clks\(18),
-	datad => VCC,
-	cin => \dht22_one_wire|clks[17]~55\,
-	combout => \dht22_one_wire|clks[18]~56_combout\,
-	cout => \dht22_one_wire|clks[18]~57\);
-
--- Location: FF_X19_Y20_N17
-\dht22_one_wire|clks[18]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|clks[18]~56_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sclr => \dht22_one_wire|WideOr6~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|clks\(18));
-
--- Location: LCCOMB_X19_Y20_N26
-\dht22_one_wire|Equal1~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Equal1~1_combout\ = (!\dht22_one_wire|clks\(13) & (!\dht22_one_wire|clks\(18) & (!\dht22_one_wire|clks\(15) & !\dht22_one_wire|clks\(16))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|clks\(13),
-	datab => \dht22_one_wire|clks\(18),
-	datac => \dht22_one_wire|clks\(15),
-	datad => \dht22_one_wire|clks\(16),
-	combout => \dht22_one_wire|Equal1~1_combout\);
-
--- Location: LCCOMB_X19_Y20_N18
-\dht22_one_wire|clks[19]~58\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|clks[19]~58_combout\ = \dht22_one_wire|clks[18]~57\ $ (\dht22_one_wire|clks\(19))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111111110000",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datad => \dht22_one_wire|clks\(19),
-	cin => \dht22_one_wire|clks[18]~57\,
-	combout => \dht22_one_wire|clks[19]~58_combout\);
-
--- Location: FF_X19_Y20_N19
-\dht22_one_wire|clks[19]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|clks[19]~58_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sclr => \dht22_one_wire|WideOr6~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|clks\(19));
-
--- Location: LCCOMB_X19_Y20_N28
-\dht22_one_wire|Equal1~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Equal1~0_combout\ = (\dht22_one_wire|clks\(0) & (\dht22_one_wire|clks\(1) & (!\dht22_one_wire|clks\(14) & \dht22_one_wire|clks\(8))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000100000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|clks\(0),
-	datab => \dht22_one_wire|clks\(1),
-	datac => \dht22_one_wire|clks\(14),
-	datad => \dht22_one_wire|clks\(8),
-	combout => \dht22_one_wire|Equal1~0_combout\);
-
--- Location: LCCOMB_X19_Y20_N20
-\dht22_one_wire|Equal1~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Equal1~2_combout\ = (\dht22_one_wire|Equal1~1_combout\ & (!\dht22_one_wire|clks\(19) & (!\dht22_one_wire|clks\(17) & \dht22_one_wire|Equal1~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Equal1~1_combout\,
-	datab => \dht22_one_wire|clks\(19),
-	datac => \dht22_one_wire|clks\(17),
-	datad => \dht22_one_wire|Equal1~0_combout\,
-	combout => \dht22_one_wire|Equal1~2_combout\);
-
--- Location: LCCOMB_X22_Y21_N18
-\dht22_one_wire|Equal1~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Equal1~4_combout\ = (\dht22_one_wire|Equal1~3_combout\ & (!\dht22_one_wire|clks\(12) & \dht22_one_wire|Equal1~2_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000101000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Equal1~3_combout\,
-	datac => \dht22_one_wire|clks\(12),
-	datad => \dht22_one_wire|Equal1~2_combout\,
-	combout => \dht22_one_wire|Equal1~4_combout\);
-
--- Location: LCCOMB_X22_Y21_N24
-\dht22_one_wire|Selector9~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector9~0_combout\ = (\dht22_one_wire|state.ST_DONE~q\ & (\dht22_one_wire|clks\(11) & (\dht22_one_wire|Equal4~0_combout\ & \dht22_one_wire|Equal1~4_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|state.ST_DONE~q\,
-	datab => \dht22_one_wire|clks\(11),
-	datac => \dht22_one_wire|Equal4~0_combout\,
-	datad => \dht22_one_wire|Equal1~4_combout\,
-	combout => \dht22_one_wire|Selector9~0_combout\);
-
--- Location: LCCOMB_X19_Y21_N6
-\dht22_one_wire|Selector9~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector9~3_combout\ = (!\dht22_one_wire|clks\(5) & (!\dht22_one_wire|clks\(10) & (\dht22_one_wire|clks\(7) & \dht22_one_wire|state.ST_START~q\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|clks\(5),
-	datab => \dht22_one_wire|clks\(10),
-	datac => \dht22_one_wire|clks\(7),
-	datad => \dht22_one_wire|state.ST_START~q\,
-	combout => \dht22_one_wire|Selector9~3_combout\);
-
--- Location: LCCOMB_X19_Y20_N22
-\dht22_one_wire|Selector9~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector9~2_combout\ = (\dht22_one_wire|Equal1~0_combout\ & (!\dht22_one_wire|clks\(17) & \dht22_one_wire|Equal2~1_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000110000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|Equal1~0_combout\,
-	datac => \dht22_one_wire|clks\(17),
-	datad => \dht22_one_wire|Equal2~1_combout\,
-	combout => \dht22_one_wire|Selector9~2_combout\);
-
--- Location: LCCOMB_X19_Y20_N24
-\dht22_one_wire|Selector9~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector9~4_combout\ = (\dht22_one_wire|clks\(13) & (\dht22_one_wire|clks\(18) & (\dht22_one_wire|clks\(15) & \dht22_one_wire|clks\(16))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|clks\(13),
-	datab => \dht22_one_wire|clks\(18),
-	datac => \dht22_one_wire|clks\(15),
-	datad => \dht22_one_wire|clks\(16),
-	combout => \dht22_one_wire|Selector9~4_combout\);
-
--- Location: LCCOMB_X19_Y20_N30
-\dht22_one_wire|Selector9~5\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector9~5_combout\ = (\dht22_one_wire|Selector9~3_combout\ & (\dht22_one_wire|clks\(19) & (\dht22_one_wire|Selector9~2_combout\ & \dht22_one_wire|Selector9~4_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Selector9~3_combout\,
-	datab => \dht22_one_wire|clks\(19),
-	datac => \dht22_one_wire|Selector9~2_combout\,
-	datad => \dht22_one_wire|Selector9~4_combout\,
-	combout => \dht22_one_wire|Selector9~5_combout\);
-
--- Location: LCCOMB_X22_Y21_N0
-\dht22_one_wire|Selector12~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector12~0_combout\ = (!\dht22_one_wire|Selector9~0_combout\ & !\dht22_one_wire|Selector9~5_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|Selector9~0_combout\,
-	datad => \dht22_one_wire|Selector9~5_combout\,
-	combout => \dht22_one_wire|Selector12~0_combout\);
-
--- Location: LCCOMB_X22_Y21_N8
-\dht22_one_wire|Selector2~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector2~2_combout\ = (\dht22_one_wire|Selector9~5_combout\ & (\dht22_one_wire|Selector9~8_combout\ & ((!\dht22_one_wire|state.ST_CHECK~q\) # (!\en_dht22~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100110000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \en_dht22~q\,
-	datab => \dht22_one_wire|Selector9~5_combout\,
-	datac => \dht22_one_wire|state.ST_CHECK~q\,
-	datad => \dht22_one_wire|Selector9~8_combout\,
-	combout => \dht22_one_wire|Selector2~2_combout\);
-
--- Location: FF_X22_Y21_N9
-\dht22_one_wire|state.ST_WAIT_1\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|Selector2~2_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|state.ST_WAIT_1~q\);
-
--- Location: LCCOMB_X19_Y21_N4
-\dht22_one_wire|Equal1~5\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Equal1~5_combout\ = (\dht22_one_wire|clks\(2) & (\dht22_one_wire|clks\(3) & (\dht22_one_wire|clks\(9) & \dht22_one_wire|clks\(10))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|clks\(2),
-	datab => \dht22_one_wire|clks\(3),
-	datac => \dht22_one_wire|clks\(9),
-	datad => \dht22_one_wire|clks\(10),
-	combout => \dht22_one_wire|Equal1~5_combout\);
-
--- Location: LCCOMB_X22_Y21_N6
-\dht22_one_wire|Equal1~6\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Equal1~6_combout\ = (\dht22_one_wire|Equal1~5_combout\ & (!\dht22_one_wire|clks\(11) & \dht22_one_wire|Equal1~4_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000101000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Equal1~5_combout\,
-	datac => \dht22_one_wire|clks\(11),
-	datad => \dht22_one_wire|Equal1~4_combout\,
-	combout => \dht22_one_wire|Equal1~6_combout\);
-
--- Location: LCCOMB_X21_Y21_N28
-\dht22_one_wire|Selector9~9\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector9~9_combout\ = (\en_dht22~q\ & \dht22_one_wire|state.ST_CHECK~q\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \en_dht22~q\,
-	datad => \dht22_one_wire|state.ST_CHECK~q\,
-	combout => \dht22_one_wire|Selector9~9_combout\);
-
--- Location: LCCOMB_X21_Y21_N14
-\dht22_one_wire|Selector3~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector3~0_combout\ = (\dht22_one_wire|state.ST_WAIT_1~q\) # ((\dht22_one_wire|state.ST_PRE_ACK~q\ & !\dht22_one_wire|Equal1~6_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110011111100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|state.ST_WAIT_1~q\,
-	datac => \dht22_one_wire|state.ST_PRE_ACK~q\,
-	datad => \dht22_one_wire|Equal1~6_combout\,
-	combout => \dht22_one_wire|Selector3~0_combout\);
-
--- Location: FF_X21_Y21_N15
-\dht22_one_wire|state.ST_PRE_ACK\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|Selector3~0_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|state.ST_PRE_ACK~q\);
-
--- Location: LCCOMB_X22_Y21_N26
-\dht22_one_wire|Selector4~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector4~0_combout\ = (\dht22_one_wire|Equal1~6_combout\ & (!\dht22_one_wire|Selector9~9_combout\ & (\dht22_one_wire|state.ST_PRE_ACK~q\ & \dht22_one_wire|Selector9~8_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Equal1~6_combout\,
-	datab => \dht22_one_wire|Selector9~9_combout\,
-	datac => \dht22_one_wire|state.ST_PRE_ACK~q\,
-	datad => \dht22_one_wire|Selector9~8_combout\,
-	combout => \dht22_one_wire|Selector4~0_combout\);
-
--- Location: FF_X22_Y21_N27
-\dht22_one_wire|state.ST_WAIT_2\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|Selector4~0_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|state.ST_WAIT_2~q\);
-
--- Location: LCCOMB_X21_Y21_N8
-\dht22_one_wire|WideOr6~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|WideOr6~0_combout\ = (!\dht22_one_wire|state.ST_WAIT_3~q\ & (!\dht22_one_wire|state.ST_WAIT_1~q\ & (!\dht22_one_wire|state.ST_WAIT_4~q\ & !\dht22_one_wire|state.ST_WAIT_2~q\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|state.ST_WAIT_3~q\,
-	datab => \dht22_one_wire|state.ST_WAIT_1~q\,
-	datac => \dht22_one_wire|state.ST_WAIT_4~q\,
-	datad => \dht22_one_wire|state.ST_WAIT_2~q\,
-	combout => \dht22_one_wire|WideOr6~0_combout\);
-
--- Location: LCCOMB_X21_Y21_N16
-\dht22_one_wire|WideOr0~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|WideOr0~0_combout\ = (!\dht22_one_wire|state.ST_SAMPLE~q\ & \dht22_one_wire|WideOr6~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100010001000100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|state.ST_SAMPLE~q\,
-	datab => \dht22_one_wire|WideOr6~0_combout\,
-	combout => \dht22_one_wire|WideOr0~0_combout\);
-
--- Location: LCCOMB_X18_Y22_N28
-\dht22_one_wire|Selector9~7\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector9~7_combout\ = (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & ((\dht22_one_wire|Equal3~1_combout\) # (\dht22_one_wire|old_io_reg~q\ $ (!\dht22_one_wire|new_io_reg~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110000010110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Equal3~1_combout\,
-	datab => \dht22_one_wire|old_io_reg~q\,
-	datac => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
-	datad => \dht22_one_wire|new_io_reg~q\,
-	combout => \dht22_one_wire|Selector9~7_combout\);
-
--- Location: LCCOMB_X22_Y21_N10
-\dht22_one_wire|WideOr0~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|WideOr0~1_combout\ = (!\dht22_one_wire|Selector9~6_combout\ & (!\dht22_one_wire|Selector9~7_combout\ & ((!\dht22_one_wire|Equal1~6_combout\) # (!\dht22_one_wire|state.ST_PRE_ACK~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100000011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|state.ST_PRE_ACK~q\,
-	datab => \dht22_one_wire|Selector9~6_combout\,
-	datac => \dht22_one_wire|Selector9~7_combout\,
-	datad => \dht22_one_wire|Equal1~6_combout\,
-	combout => \dht22_one_wire|WideOr0~1_combout\);
-
--- Location: LCCOMB_X22_Y21_N12
-\dht22_one_wire|Selector9~8\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector9~8_combout\ = (\dht22_one_wire|Selector9~1_combout\) # (((!\dht22_one_wire|WideOr0~1_combout\) # (!\dht22_one_wire|WideOr0~0_combout\)) # (!\dht22_one_wire|Selector12~0_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1011111111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Selector9~1_combout\,
-	datab => \dht22_one_wire|Selector12~0_combout\,
-	datac => \dht22_one_wire|WideOr0~0_combout\,
-	datad => \dht22_one_wire|WideOr0~1_combout\,
-	combout => \dht22_one_wire|Selector9~8_combout\);
-
--- Location: LCCOMB_X22_Y21_N28
-\dht22_one_wire|Selector11~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector11~2_combout\ = (\dht22_one_wire|state.ST_CHECK~q\ & (!\en_dht22~q\ & ((\dht22_one_wire|Selector9~0_combout\) # (!\dht22_one_wire|Selector9~8_combout\)))) # (!\dht22_one_wire|state.ST_CHECK~q\ & 
--- (((\dht22_one_wire|Selector9~0_combout\ & \dht22_one_wire|Selector9~8_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100110001010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \en_dht22~q\,
-	datab => \dht22_one_wire|Selector9~0_combout\,
-	datac => \dht22_one_wire|state.ST_CHECK~q\,
-	datad => \dht22_one_wire|Selector9~8_combout\,
-	combout => \dht22_one_wire|Selector11~2_combout\);
-
--- Location: FF_X22_Y21_N29
-\dht22_one_wire|state.ST_CHECK\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|Selector11~2_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|state.ST_CHECK~q\);
-
--- Location: LCCOMB_X22_Y21_N22
-\dht22_one_wire|state.ST_IDLE~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|state.ST_IDLE~2_combout\ = (\en_dht22~q\ & (!\dht22_one_wire|state.ST_CHECK~q\ & ((\dht22_one_wire|state.ST_IDLE~q\) # (\dht22_one_wire|Selector9~8_combout\)))) # (!\en_dht22~q\ & (((\dht22_one_wire|state.ST_IDLE~q\) # 
--- (\dht22_one_wire|Selector9~8_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111011101110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \en_dht22~q\,
-	datab => \dht22_one_wire|state.ST_CHECK~q\,
-	datac => \dht22_one_wire|state.ST_IDLE~q\,
-	datad => \dht22_one_wire|Selector9~8_combout\,
-	combout => \dht22_one_wire|state.ST_IDLE~2_combout\);
-
--- Location: FF_X22_Y21_N23
-\dht22_one_wire|state.ST_IDLE\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|state.ST_IDLE~2_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|state.ST_IDLE~q\);
-
--- Location: LCCOMB_X21_Y21_N4
-\dht22_one_wire|WideOr6\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|WideOr6~combout\ = (\dht22_one_wire|state.ST_CHECK~q\) # ((!\dht22_one_wire|state.ST_IDLE~q\) # (!\dht22_one_wire|WideOr6~0_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100111111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|state.ST_CHECK~q\,
-	datac => \dht22_one_wire|WideOr6~0_combout\,
-	datad => \dht22_one_wire|state.ST_IDLE~q\,
-	combout => \dht22_one_wire|WideOr6~combout\);
-
--- Location: FF_X19_Y21_N13
-\dht22_one_wire|clks[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|clks[0]~20_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sclr => \dht22_one_wire|WideOr6~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|clks\(0));
-
--- Location: LCCOMB_X19_Y21_N14
-\dht22_one_wire|clks[1]~22\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|clks[1]~22_combout\ = (\dht22_one_wire|clks\(1) & (!\dht22_one_wire|clks[0]~21\)) # (!\dht22_one_wire|clks\(1) & ((\dht22_one_wire|clks[0]~21\) # (GND)))
--- \dht22_one_wire|clks[1]~23\ = CARRY((!\dht22_one_wire|clks[0]~21\) # (!\dht22_one_wire|clks\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|clks\(1),
-	datad => VCC,
-	cin => \dht22_one_wire|clks[0]~21\,
-	combout => \dht22_one_wire|clks[1]~22_combout\,
-	cout => \dht22_one_wire|clks[1]~23\);
-
--- Location: FF_X19_Y21_N15
-\dht22_one_wire|clks[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|clks[1]~22_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sclr => \dht22_one_wire|WideOr6~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|clks\(1));
-
--- Location: LCCOMB_X19_Y21_N16
-\dht22_one_wire|clks[2]~24\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|clks[2]~24_combout\ = (\dht22_one_wire|clks\(2) & (\dht22_one_wire|clks[1]~23\ $ (GND))) # (!\dht22_one_wire|clks\(2) & (!\dht22_one_wire|clks[1]~23\ & VCC))
--- \dht22_one_wire|clks[2]~25\ = CARRY((\dht22_one_wire|clks\(2) & !\dht22_one_wire|clks[1]~23\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|clks\(2),
-	datad => VCC,
-	cin => \dht22_one_wire|clks[1]~23\,
-	combout => \dht22_one_wire|clks[2]~24_combout\,
-	cout => \dht22_one_wire|clks[2]~25\);
-
--- Location: FF_X19_Y21_N17
-\dht22_one_wire|clks[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|clks[2]~24_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sclr => \dht22_one_wire|WideOr6~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|clks\(2));
-
--- Location: LCCOMB_X19_Y21_N18
-\dht22_one_wire|clks[3]~26\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|clks[3]~26_combout\ = (\dht22_one_wire|clks\(3) & (!\dht22_one_wire|clks[2]~25\)) # (!\dht22_one_wire|clks\(3) & ((\dht22_one_wire|clks[2]~25\) # (GND)))
--- \dht22_one_wire|clks[3]~27\ = CARRY((!\dht22_one_wire|clks[2]~25\) # (!\dht22_one_wire|clks\(3)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|clks\(3),
-	datad => VCC,
-	cin => \dht22_one_wire|clks[2]~25\,
-	combout => \dht22_one_wire|clks[3]~26_combout\,
-	cout => \dht22_one_wire|clks[3]~27\);
-
--- Location: FF_X19_Y21_N19
-\dht22_one_wire|clks[3]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|clks[3]~26_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sclr => \dht22_one_wire|WideOr6~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|clks\(3));
-
--- Location: LCCOMB_X19_Y21_N20
-\dht22_one_wire|clks[4]~28\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|clks[4]~28_combout\ = (\dht22_one_wire|clks\(4) & (\dht22_one_wire|clks[3]~27\ $ (GND))) # (!\dht22_one_wire|clks\(4) & (!\dht22_one_wire|clks[3]~27\ & VCC))
--- \dht22_one_wire|clks[4]~29\ = CARRY((\dht22_one_wire|clks\(4) & !\dht22_one_wire|clks[3]~27\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|clks\(4),
-	datad => VCC,
-	cin => \dht22_one_wire|clks[3]~27\,
-	combout => \dht22_one_wire|clks[4]~28_combout\,
-	cout => \dht22_one_wire|clks[4]~29\);
-
--- Location: FF_X19_Y21_N21
-\dht22_one_wire|clks[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|clks[4]~28_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sclr => \dht22_one_wire|WideOr6~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|clks\(4));
-
--- Location: LCCOMB_X19_Y21_N22
+-- Location: LCCOMB_X23_Y14_N22
 \dht22_one_wire|clks[5]~30\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|clks[5]~30_combout\ = (\dht22_one_wire|clks\(5) & (!\dht22_one_wire|clks[4]~29\)) # (!\dht22_one_wire|clks\(5) & ((\dht22_one_wire|clks[4]~29\) # (GND)))
@@ -2035,23 +1029,7 @@ PORT MAP (
 	combout => \dht22_one_wire|clks[5]~30_combout\,
 	cout => \dht22_one_wire|clks[5]~31\);
 
--- Location: FF_X19_Y21_N23
-\dht22_one_wire|clks[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|clks[5]~30_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sclr => \dht22_one_wire|WideOr6~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|clks\(5));
-
--- Location: LCCOMB_X19_Y21_N24
+-- Location: LCCOMB_X23_Y14_N24
 \dht22_one_wire|clks[6]~32\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|clks[6]~32_combout\ = (\dht22_one_wire|clks\(6) & (\dht22_one_wire|clks[5]~31\ $ (GND))) # (!\dht22_one_wire|clks\(6) & (!\dht22_one_wire|clks[5]~31\ & VCC))
@@ -2069,7 +1047,7 @@ PORT MAP (
 	combout => \dht22_one_wire|clks[6]~32_combout\,
 	cout => \dht22_one_wire|clks[6]~33\);
 
--- Location: FF_X19_Y21_N25
+-- Location: FF_X23_Y14_N25
 \dht22_one_wire|clks[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2085,7 +1063,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clks\(6));
 
--- Location: LCCOMB_X19_Y21_N26
+-- Location: LCCOMB_X23_Y14_N26
 \dht22_one_wire|clks[7]~34\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|clks[7]~34_combout\ = (\dht22_one_wire|clks\(7) & (!\dht22_one_wire|clks[6]~33\)) # (!\dht22_one_wire|clks\(7) & ((\dht22_one_wire|clks[6]~33\) # (GND)))
@@ -2103,7 +1081,7 @@ PORT MAP (
 	combout => \dht22_one_wire|clks[7]~34_combout\,
 	cout => \dht22_one_wire|clks[7]~35\);
 
--- Location: FF_X19_Y21_N27
+-- Location: FF_X23_Y14_N27
 \dht22_one_wire|clks[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2119,7 +1097,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clks\(7));
 
--- Location: LCCOMB_X19_Y21_N28
+-- Location: LCCOMB_X23_Y14_N28
 \dht22_one_wire|clks[8]~36\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|clks[8]~36_combout\ = (\dht22_one_wire|clks\(8) & (\dht22_one_wire|clks[7]~35\ $ (GND))) # (!\dht22_one_wire|clks\(8) & (!\dht22_one_wire|clks[7]~35\ & VCC))
@@ -2137,7 +1115,7 @@ PORT MAP (
 	combout => \dht22_one_wire|clks[8]~36_combout\,
 	cout => \dht22_one_wire|clks[8]~37\);
 
--- Location: FF_X19_Y21_N29
+-- Location: FF_X23_Y14_N29
 \dht22_one_wire|clks[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2153,7 +1131,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clks\(8));
 
--- Location: LCCOMB_X19_Y21_N30
+-- Location: LCCOMB_X23_Y14_N30
 \dht22_one_wire|clks[9]~38\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|clks[9]~38_combout\ = (\dht22_one_wire|clks\(9) & (!\dht22_one_wire|clks[8]~37\)) # (!\dht22_one_wire|clks\(9) & ((\dht22_one_wire|clks[8]~37\) # (GND)))
@@ -2171,7 +1149,7 @@ PORT MAP (
 	combout => \dht22_one_wire|clks[9]~38_combout\,
 	cout => \dht22_one_wire|clks[9]~39\);
 
--- Location: FF_X19_Y21_N31
+-- Location: FF_X23_Y14_N31
 \dht22_one_wire|clks[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2187,7 +1165,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clks\(9));
 
--- Location: LCCOMB_X19_Y20_N0
+-- Location: LCCOMB_X23_Y13_N0
 \dht22_one_wire|clks[10]~40\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|clks[10]~40_combout\ = (\dht22_one_wire|clks\(10) & (\dht22_one_wire|clks[9]~39\ $ (GND))) # (!\dht22_one_wire|clks\(10) & (!\dht22_one_wire|clks[9]~39\ & VCC))
@@ -2205,7 +1183,7 @@ PORT MAP (
 	combout => \dht22_one_wire|clks[10]~40_combout\,
 	cout => \dht22_one_wire|clks[10]~41\);
 
--- Location: FF_X19_Y20_N1
+-- Location: FF_X23_Y13_N1
 \dht22_one_wire|clks[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2221,7 +1199,24 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clks\(10));
 
--- Location: LCCOMB_X19_Y20_N2
+-- Location: LCCOMB_X24_Y14_N8
+\dht22_one_wire|Equal4~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Equal4~0_combout\ = (!\dht22_one_wire|clks\(2) & (!\dht22_one_wire|clks\(9) & (!\dht22_one_wire|clks\(3) & !\dht22_one_wire|clks\(10))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|clks\(2),
+	datab => \dht22_one_wire|clks\(9),
+	datac => \dht22_one_wire|clks\(3),
+	datad => \dht22_one_wire|clks\(10),
+	combout => \dht22_one_wire|Equal4~0_combout\);
+
+-- Location: LCCOMB_X23_Y13_N2
 \dht22_one_wire|clks[11]~42\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|clks[11]~42_combout\ = (\dht22_one_wire|clks\(11) & (!\dht22_one_wire|clks[10]~41\)) # (!\dht22_one_wire|clks\(11) & ((\dht22_one_wire|clks[10]~41\) # (GND)))
@@ -2239,7 +1234,7 @@ PORT MAP (
 	combout => \dht22_one_wire|clks[11]~42_combout\,
 	cout => \dht22_one_wire|clks[11]~43\);
 
--- Location: FF_X19_Y20_N3
+-- Location: FF_X23_Y13_N3
 \dht22_one_wire|clks[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2255,7 +1250,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clks\(11));
 
--- Location: FF_X19_Y20_N5
+-- Location: LCCOMB_X23_Y13_N4
+\dht22_one_wire|clks[12]~44\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|clks[12]~44_combout\ = (\dht22_one_wire|clks\(12) & (\dht22_one_wire|clks[11]~43\ $ (GND))) # (!\dht22_one_wire|clks\(12) & (!\dht22_one_wire|clks[11]~43\ & VCC))
+-- \dht22_one_wire|clks[12]~45\ = CARRY((\dht22_one_wire|clks\(12) & !\dht22_one_wire|clks[11]~43\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|clks\(12),
+	datad => VCC,
+	cin => \dht22_one_wire|clks[11]~43\,
+	combout => \dht22_one_wire|clks[12]~44_combout\,
+	cout => \dht22_one_wire|clks[12]~45\);
+
+-- Location: FF_X23_Y13_N5
 \dht22_one_wire|clks[12]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2271,27 +1284,78 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clks\(12));
 
--- Location: LCCOMB_X19_Y21_N10
-\dht22_one_wire|Equal2~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X23_Y13_N6
+\dht22_one_wire|clks[13]~46\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Equal2~0_combout\ = (\dht22_one_wire|clks\(9) & (\dht22_one_wire|clks\(3) & (\dht22_one_wire|clks\(2) & \dht22_one_wire|clks\(4))))
+-- \dht22_one_wire|clks[13]~46_combout\ = (\dht22_one_wire|clks\(13) & (!\dht22_one_wire|clks[12]~45\)) # (!\dht22_one_wire|clks\(13) & ((\dht22_one_wire|clks[12]~45\) # (GND)))
+-- \dht22_one_wire|clks[13]~47\ = CARRY((!\dht22_one_wire|clks[12]~45\) # (!\dht22_one_wire|clks\(13)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
+	lut_mask => "0101101001011111",
+	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|clks\(9),
-	datab => \dht22_one_wire|clks\(3),
-	datac => \dht22_one_wire|clks\(2),
-	datad => \dht22_one_wire|clks\(4),
-	combout => \dht22_one_wire|Equal2~0_combout\);
+	dataa => \dht22_one_wire|clks\(13),
+	datad => VCC,
+	cin => \dht22_one_wire|clks[12]~45\,
+	combout => \dht22_one_wire|clks[13]~46_combout\,
+	cout => \dht22_one_wire|clks[13]~47\);
 
--- Location: LCCOMB_X19_Y21_N0
-\dht22_one_wire|Equal2~1\ : cycloneive_lcell_comb
+-- Location: FF_X23_Y13_N7
+\dht22_one_wire|clks[13]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|clks[13]~46_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sclr => \dht22_one_wire|WideOr6~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|clks\(13));
+
+-- Location: LCCOMB_X23_Y13_N8
+\dht22_one_wire|clks[14]~48\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Equal2~1_combout\ = (\dht22_one_wire|clks\(12) & (!\dht22_one_wire|clks\(6) & (\dht22_one_wire|clks\(11) & \dht22_one_wire|Equal2~0_combout\)))
+-- \dht22_one_wire|clks[14]~48_combout\ = (\dht22_one_wire|clks\(14) & (\dht22_one_wire|clks[13]~47\ $ (GND))) # (!\dht22_one_wire|clks\(14) & (!\dht22_one_wire|clks[13]~47\ & VCC))
+-- \dht22_one_wire|clks[14]~49\ = CARRY((\dht22_one_wire|clks\(14) & !\dht22_one_wire|clks[13]~47\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|clks\(14),
+	datad => VCC,
+	cin => \dht22_one_wire|clks[13]~47\,
+	combout => \dht22_one_wire|clks[14]~48_combout\,
+	cout => \dht22_one_wire|clks[14]~49\);
+
+-- Location: FF_X23_Y13_N9
+\dht22_one_wire|clks[14]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|clks[14]~48_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sclr => \dht22_one_wire|WideOr6~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|clks\(14));
+
+-- Location: LCCOMB_X23_Y13_N30
+\dht22_one_wire|Equal1~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Equal1~0_combout\ = (\dht22_one_wire|clks\(0) & (!\dht22_one_wire|clks\(14) & (\dht22_one_wire|clks\(8) & \dht22_one_wire|clks\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2299,13 +1363,545 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|clks\(12),
-	datab => \dht22_one_wire|clks\(6),
-	datac => \dht22_one_wire|clks\(11),
-	datad => \dht22_one_wire|Equal2~0_combout\,
-	combout => \dht22_one_wire|Equal2~1_combout\);
+	dataa => \dht22_one_wire|clks\(0),
+	datab => \dht22_one_wire|clks\(14),
+	datac => \dht22_one_wire|clks\(8),
+	datad => \dht22_one_wire|clks\(1),
+	combout => \dht22_one_wire|Equal1~0_combout\);
 
--- Location: LCCOMB_X19_Y21_N2
+-- Location: LCCOMB_X23_Y13_N10
+\dht22_one_wire|clks[15]~50\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|clks[15]~50_combout\ = (\dht22_one_wire|clks\(15) & (!\dht22_one_wire|clks[14]~49\)) # (!\dht22_one_wire|clks\(15) & ((\dht22_one_wire|clks[14]~49\) # (GND)))
+-- \dht22_one_wire|clks[15]~51\ = CARRY((!\dht22_one_wire|clks[14]~49\) # (!\dht22_one_wire|clks\(15)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101001011111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|clks\(15),
+	datad => VCC,
+	cin => \dht22_one_wire|clks[14]~49\,
+	combout => \dht22_one_wire|clks[15]~50_combout\,
+	cout => \dht22_one_wire|clks[15]~51\);
+
+-- Location: FF_X23_Y13_N11
+\dht22_one_wire|clks[15]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|clks[15]~50_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sclr => \dht22_one_wire|WideOr6~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|clks\(15));
+
+-- Location: LCCOMB_X23_Y13_N12
+\dht22_one_wire|clks[16]~52\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|clks[16]~52_combout\ = (\dht22_one_wire|clks\(16) & (\dht22_one_wire|clks[15]~51\ $ (GND))) # (!\dht22_one_wire|clks\(16) & (!\dht22_one_wire|clks[15]~51\ & VCC))
+-- \dht22_one_wire|clks[16]~53\ = CARRY((\dht22_one_wire|clks\(16) & !\dht22_one_wire|clks[15]~51\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|clks\(16),
+	datad => VCC,
+	cin => \dht22_one_wire|clks[15]~51\,
+	combout => \dht22_one_wire|clks[16]~52_combout\,
+	cout => \dht22_one_wire|clks[16]~53\);
+
+-- Location: FF_X23_Y13_N13
+\dht22_one_wire|clks[16]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|clks[16]~52_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sclr => \dht22_one_wire|WideOr6~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|clks\(16));
+
+-- Location: LCCOMB_X23_Y13_N14
+\dht22_one_wire|clks[17]~54\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|clks[17]~54_combout\ = (\dht22_one_wire|clks\(17) & (!\dht22_one_wire|clks[16]~53\)) # (!\dht22_one_wire|clks\(17) & ((\dht22_one_wire|clks[16]~53\) # (GND)))
+-- \dht22_one_wire|clks[17]~55\ = CARRY((!\dht22_one_wire|clks[16]~53\) # (!\dht22_one_wire|clks\(17)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|clks\(17),
+	datad => VCC,
+	cin => \dht22_one_wire|clks[16]~53\,
+	combout => \dht22_one_wire|clks[17]~54_combout\,
+	cout => \dht22_one_wire|clks[17]~55\);
+
+-- Location: FF_X23_Y13_N15
+\dht22_one_wire|clks[17]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|clks[17]~54_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sclr => \dht22_one_wire|WideOr6~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|clks\(17));
+
+-- Location: LCCOMB_X23_Y13_N16
+\dht22_one_wire|clks[18]~56\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|clks[18]~56_combout\ = (\dht22_one_wire|clks\(18) & (\dht22_one_wire|clks[17]~55\ $ (GND))) # (!\dht22_one_wire|clks\(18) & (!\dht22_one_wire|clks[17]~55\ & VCC))
+-- \dht22_one_wire|clks[18]~57\ = CARRY((\dht22_one_wire|clks\(18) & !\dht22_one_wire|clks[17]~55\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|clks\(18),
+	datad => VCC,
+	cin => \dht22_one_wire|clks[17]~55\,
+	combout => \dht22_one_wire|clks[18]~56_combout\,
+	cout => \dht22_one_wire|clks[18]~57\);
+
+-- Location: FF_X23_Y13_N17
+\dht22_one_wire|clks[18]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|clks[18]~56_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sclr => \dht22_one_wire|WideOr6~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|clks\(18));
+
+-- Location: LCCOMB_X23_Y13_N18
+\dht22_one_wire|clks[19]~58\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|clks[19]~58_combout\ = \dht22_one_wire|clks[18]~57\ $ (\dht22_one_wire|clks\(19))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111111110000",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datad => \dht22_one_wire|clks\(19),
+	cin => \dht22_one_wire|clks[18]~57\,
+	combout => \dht22_one_wire|clks[19]~58_combout\);
+
+-- Location: FF_X23_Y13_N19
+\dht22_one_wire|clks[19]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|clks[19]~58_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sclr => \dht22_one_wire|WideOr6~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|clks\(19));
+
+-- Location: LCCOMB_X23_Y13_N20
+\dht22_one_wire|Equal1~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Equal1~1_combout\ = (!\dht22_one_wire|clks\(15) & (!\dht22_one_wire|clks\(18) & (!\dht22_one_wire|clks\(16) & !\dht22_one_wire|clks\(13))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|clks\(15),
+	datab => \dht22_one_wire|clks\(18),
+	datac => \dht22_one_wire|clks\(16),
+	datad => \dht22_one_wire|clks\(13),
+	combout => \dht22_one_wire|Equal1~1_combout\);
+
+-- Location: LCCOMB_X23_Y13_N22
+\dht22_one_wire|Equal1~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Equal1~2_combout\ = (\dht22_one_wire|Equal1~0_combout\ & (!\dht22_one_wire|clks\(19) & (!\dht22_one_wire|clks\(17) & \dht22_one_wire|Equal1~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Equal1~0_combout\,
+	datab => \dht22_one_wire|clks\(19),
+	datac => \dht22_one_wire|clks\(17),
+	datad => \dht22_one_wire|Equal1~1_combout\,
+	combout => \dht22_one_wire|Equal1~2_combout\);
+
+-- Location: LCCOMB_X23_Y14_N4
+\dht22_one_wire|Equal1~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Equal1~3_combout\ = (!\dht22_one_wire|clks\(5) & (!\dht22_one_wire|clks\(4) & (\dht22_one_wire|clks\(7) & \dht22_one_wire|clks\(6))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|clks\(5),
+	datab => \dht22_one_wire|clks\(4),
+	datac => \dht22_one_wire|clks\(7),
+	datad => \dht22_one_wire|clks\(6),
+	combout => \dht22_one_wire|Equal1~3_combout\);
+
+-- Location: LCCOMB_X24_Y17_N16
+\dht22_one_wire|Equal1~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Equal1~4_combout\ = (!\dht22_one_wire|clks\(12) & (\dht22_one_wire|Equal1~2_combout\ & \dht22_one_wire|Equal1~3_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|clks\(12),
+	datac => \dht22_one_wire|Equal1~2_combout\,
+	datad => \dht22_one_wire|Equal1~3_combout\,
+	combout => \dht22_one_wire|Equal1~4_combout\);
+
+-- Location: LCCOMB_X24_Y17_N12
+\dht22_one_wire|Selector10~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector10~0_combout\ = (\dht22_one_wire|state.ST_DONE~q\ & (((!\dht22_one_wire|clks\(11)) # (!\dht22_one_wire|Equal1~4_combout\)) # (!\dht22_one_wire|Equal4~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Equal4~0_combout\,
+	datab => \dht22_one_wire|Equal1~4_combout\,
+	datac => \dht22_one_wire|clks\(11),
+	datad => \dht22_one_wire|state.ST_DONE~q\,
+	combout => \dht22_one_wire|Selector10~0_combout\);
+
+-- Location: LCCOMB_X24_Y17_N6
+\dht22_one_wire|Selector10~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector10~1_combout\ = (\dht22_one_wire|state.ST_WAIT_4~q\) # (\dht22_one_wire|Selector10~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|state.ST_WAIT_4~q\,
+	datad => \dht22_one_wire|Selector10~0_combout\,
+	combout => \dht22_one_wire|Selector10~1_combout\);
+
+-- Location: FF_X24_Y17_N7
+\dht22_one_wire|state.ST_DONE\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|Selector10~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|state.ST_DONE~q\);
+
+-- Location: LCCOMB_X24_Y17_N2
+\dht22_one_wire|Selector9~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector9~0_combout\ = (\dht22_one_wire|Equal4~0_combout\ & (\dht22_one_wire|clks\(11) & (\dht22_one_wire|state.ST_DONE~q\ & \dht22_one_wire|Equal1~4_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Equal4~0_combout\,
+	datab => \dht22_one_wire|clks\(11),
+	datac => \dht22_one_wire|state.ST_DONE~q\,
+	datad => \dht22_one_wire|Equal1~4_combout\,
+	combout => \dht22_one_wire|Selector9~0_combout\);
+
+-- Location: LCCOMB_X23_Y17_N6
+\dht22_one_wire|Selector12~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector12~0_combout\ = (!\dht22_one_wire|Selector9~5_combout\ & !\dht22_one_wire|Selector9~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \dht22_one_wire|Selector9~5_combout\,
+	datad => \dht22_one_wire|Selector9~0_combout\,
+	combout => \dht22_one_wire|Selector12~0_combout\);
+
+-- Location: IOIBUF_X28_Y24_N8
+\io~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_io,
+	o => \io~input_o\);
+
+-- Location: LCCOMB_X24_Y17_N30
+\dht22_one_wire|new_io_reg~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|new_io_reg~0_combout\ = (\dht22_one_wire|state.ST_SAMPLE~q\ & ((\io~input_o\))) # (!\dht22_one_wire|state.ST_SAMPLE~q\ & (\dht22_one_wire|new_io_reg~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|state.ST_SAMPLE~q\,
+	datac => \dht22_one_wire|new_io_reg~q\,
+	datad => \io~input_o\,
+	combout => \dht22_one_wire|new_io_reg~0_combout\);
+
+-- Location: FF_X24_Y17_N31
+\dht22_one_wire|new_io_reg\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|new_io_reg~0_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|new_io_reg~q\);
+
+-- Location: LCCOMB_X24_Y17_N20
+\dht22_one_wire|old_io_reg~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|old_io_reg~0_combout\ = (\dht22_one_wire|old_io_reg~q\ & ((!\dht22_one_wire|next_state_logic~0_combout\))) # (!\dht22_one_wire|old_io_reg~q\ & (\dht22_one_wire|new_io_reg~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000101011111010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|new_io_reg~q\,
+	datac => \dht22_one_wire|old_io_reg~q\,
+	datad => \dht22_one_wire|next_state_logic~0_combout\,
+	combout => \dht22_one_wire|old_io_reg~0_combout\);
+
+-- Location: LCCOMB_X23_Y17_N30
+\dht22_one_wire|state.ST_IDLE~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|state.ST_IDLE~2_combout\ = (\dht22_one_wire|state.ST_CHECK~q\ & (!\en_dht22~q\ & ((\dht22_one_wire|state.ST_IDLE~q\) # (\dht22_one_wire|Selector9~8_combout\)))) # (!\dht22_one_wire|state.ST_CHECK~q\ & (((\dht22_one_wire|state.ST_IDLE~q\) # 
+-- (\dht22_one_wire|Selector9~8_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111011101110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|state.ST_CHECK~q\,
+	datab => \en_dht22~q\,
+	datac => \dht22_one_wire|state.ST_IDLE~q\,
+	datad => \dht22_one_wire|Selector9~8_combout\,
+	combout => \dht22_one_wire|state.ST_IDLE~2_combout\);
+
+-- Location: FF_X23_Y17_N31
+\dht22_one_wire|state.ST_IDLE\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|state.ST_IDLE~2_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|state.ST_IDLE~q\);
+
+-- Location: LCCOMB_X23_Y17_N8
+\dht22_one_wire|Selector9~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector9~1_combout\ = (!\en_dht22~q\ & !\dht22_one_wire|state.ST_IDLE~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001100000011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \en_dht22~q\,
+	datac => \dht22_one_wire|state.ST_IDLE~q\,
+	combout => \dht22_one_wire|Selector9~1_combout\);
+
+-- Location: LCCOMB_X23_Y17_N22
+\dht22_one_wire|Selector2~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector2~2_combout\ = (\dht22_one_wire|Selector9~5_combout\ & (\dht22_one_wire|Selector9~8_combout\ & ((!\en_dht22~q\) # (!\dht22_one_wire|state.ST_CHECK~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|state.ST_CHECK~q\,
+	datab => \en_dht22~q\,
+	datac => \dht22_one_wire|Selector9~5_combout\,
+	datad => \dht22_one_wire|Selector9~8_combout\,
+	combout => \dht22_one_wire|Selector2~2_combout\);
+
+-- Location: FF_X23_Y17_N23
+\dht22_one_wire|state.ST_WAIT_1\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|Selector2~2_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|state.ST_WAIT_1~q\);
+
+-- Location: LCCOMB_X24_Y14_N2
+\dht22_one_wire|Equal1~5\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Equal1~5_combout\ = (\dht22_one_wire|clks\(2) & (\dht22_one_wire|clks\(9) & (\dht22_one_wire|clks\(3) & \dht22_one_wire|clks\(10))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|clks\(2),
+	datab => \dht22_one_wire|clks\(9),
+	datac => \dht22_one_wire|clks\(3),
+	datad => \dht22_one_wire|clks\(10),
+	combout => \dht22_one_wire|Equal1~5_combout\);
+
+-- Location: LCCOMB_X24_Y17_N18
+\dht22_one_wire|Equal1~6\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Equal1~6_combout\ = (\dht22_one_wire|Equal1~5_combout\ & (!\dht22_one_wire|clks\(11) & \dht22_one_wire|Equal1~4_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010001000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Equal1~5_combout\,
+	datab => \dht22_one_wire|clks\(11),
+	datad => \dht22_one_wire|Equal1~4_combout\,
+	combout => \dht22_one_wire|Equal1~6_combout\);
+
+-- Location: LCCOMB_X24_Y17_N24
+\dht22_one_wire|Selector3~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector3~0_combout\ = (\dht22_one_wire|state.ST_WAIT_1~q\) # ((\dht22_one_wire|state.ST_PRE_ACK~q\ & !\dht22_one_wire|Equal1~6_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|state.ST_WAIT_1~q\,
+	datac => \dht22_one_wire|state.ST_PRE_ACK~q\,
+	datad => \dht22_one_wire|Equal1~6_combout\,
+	combout => \dht22_one_wire|Selector3~0_combout\);
+
+-- Location: FF_X24_Y17_N25
+\dht22_one_wire|state.ST_PRE_ACK\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|Selector3~0_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|state.ST_PRE_ACK~q\);
+
+-- Location: LCCOMB_X24_Y17_N28
+\dht22_one_wire|Selector9~7\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector9~7_combout\ = (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & ((\dht22_one_wire|Equal3~1_combout\) # (\dht22_one_wire|new_io_reg~q\ $ (!\dht22_one_wire|old_io_reg~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000010010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|new_io_reg~q\,
+	datab => \dht22_one_wire|old_io_reg~q\,
+	datac => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
+	datad => \dht22_one_wire|Equal3~1_combout\,
+	combout => \dht22_one_wire|Selector9~7_combout\);
+
+-- Location: LCCOMB_X24_Y14_N0
 \dht22_one_wire|Equal2~2\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Equal2~2_combout\ = (\dht22_one_wire|clks\(5) & (!\dht22_one_wire|clks\(7) & \dht22_one_wire|clks\(10)))
@@ -2321,39 +1917,105 @@ PORT MAP (
 	datad => \dht22_one_wire|clks\(10),
 	combout => \dht22_one_wire|Equal2~2_combout\);
 
--- Location: LCCOMB_X22_Y21_N16
-\dht22_one_wire|Equal2~3\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X23_Y14_N6
+\dht22_one_wire|Equal2~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Equal2~3_combout\ = (\dht22_one_wire|Equal1~2_combout\ & (\dht22_one_wire|Equal2~2_combout\ & \dht22_one_wire|Equal2~1_combout\))
+-- \dht22_one_wire|Equal2~0_combout\ = (\dht22_one_wire|clks\(2) & (\dht22_one_wire|clks\(4) & (\dht22_one_wire|clks\(9) & \dht22_one_wire|clks\(3))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100000000000000",
+	lut_mask => "1000000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \dht22_one_wire|Equal1~2_combout\,
-	datac => \dht22_one_wire|Equal2~2_combout\,
+	dataa => \dht22_one_wire|clks\(2),
+	datab => \dht22_one_wire|clks\(4),
+	datac => \dht22_one_wire|clks\(9),
+	datad => \dht22_one_wire|clks\(3),
+	combout => \dht22_one_wire|Equal2~0_combout\);
+
+-- Location: LCCOMB_X23_Y14_N8
+\dht22_one_wire|Equal2~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Equal2~1_combout\ = (\dht22_one_wire|Equal2~0_combout\ & (!\dht22_one_wire|clks\(6) & (\dht22_one_wire|clks\(11) & \dht22_one_wire|clks\(12))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Equal2~0_combout\,
+	datab => \dht22_one_wire|clks\(6),
+	datac => \dht22_one_wire|clks\(11),
+	datad => \dht22_one_wire|clks\(12),
+	combout => \dht22_one_wire|Equal2~1_combout\);
+
+-- Location: LCCOMB_X24_Y17_N26
+\dht22_one_wire|Equal2~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Equal2~3_combout\ = (\dht22_one_wire|Equal2~2_combout\ & (\dht22_one_wire|Equal1~2_combout\ & \dht22_one_wire|Equal2~1_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Equal2~2_combout\,
+	datac => \dht22_one_wire|Equal1~2_combout\,
 	datad => \dht22_one_wire|Equal2~1_combout\,
 	combout => \dht22_one_wire|Equal2~3_combout\);
 
--- Location: LCCOMB_X21_Y21_N24
-\dht22_one_wire|Selector5~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X23_Y17_N28
+\dht22_one_wire|Selector4~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Selector5~0_combout\ = (\dht22_one_wire|state.ST_WAIT_2~q\) # ((\dht22_one_wire|state.ST_ACK~q\ & !\dht22_one_wire|Equal2~3_combout\))
+-- \dht22_one_wire|Selector4~0_combout\ = (!\dht22_one_wire|Selector9~9_combout\ & (\dht22_one_wire|Equal1~6_combout\ & (\dht22_one_wire|state.ST_PRE_ACK~q\ & \dht22_one_wire|Selector9~8_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110011111100",
+	lut_mask => "0100000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	dataa => \dht22_one_wire|Selector9~9_combout\,
+	datab => \dht22_one_wire|Equal1~6_combout\,
+	datac => \dht22_one_wire|state.ST_PRE_ACK~q\,
+	datad => \dht22_one_wire|Selector9~8_combout\,
+	combout => \dht22_one_wire|Selector4~0_combout\);
+
+-- Location: FF_X23_Y17_N29
+\dht22_one_wire|state.ST_WAIT_2\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|Selector4~0_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|state.ST_WAIT_2~q\);
+
+-- Location: LCCOMB_X24_Y17_N0
+\dht22_one_wire|Selector5~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector5~0_combout\ = (\dht22_one_wire|state.ST_WAIT_2~q\) # ((!\dht22_one_wire|Equal2~3_combout\ & \dht22_one_wire|state.ST_ACK~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101110011011100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Equal2~3_combout\,
 	datab => \dht22_one_wire|state.ST_WAIT_2~q\,
 	datac => \dht22_one_wire|state.ST_ACK~q\,
-	datad => \dht22_one_wire|Equal2~3_combout\,
 	combout => \dht22_one_wire|Selector5~0_combout\);
 
--- Location: FF_X21_Y21_N25
+-- Location: FF_X24_Y17_N1
 \dht22_one_wire|state.ST_ACK\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2368,10 +2030,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|state.ST_ACK~q\);
 
--- Location: LCCOMB_X22_Y21_N20
+-- Location: LCCOMB_X24_Y17_N14
 \dht22_one_wire|Selector9~6\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Selector9~6_combout\ = (\dht22_one_wire|Equal2~1_combout\ & (\dht22_one_wire|state.ST_ACK~q\ & (\dht22_one_wire|Equal2~2_combout\ & \dht22_one_wire|Equal1~2_combout\)))
+-- \dht22_one_wire|Selector9~6_combout\ = (\dht22_one_wire|Equal1~2_combout\ & (\dht22_one_wire|state.ST_ACK~q\ & (\dht22_one_wire|Equal2~2_combout\ & \dht22_one_wire|Equal2~1_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2379,31 +2041,65 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Equal2~1_combout\,
+	dataa => \dht22_one_wire|Equal1~2_combout\,
 	datab => \dht22_one_wire|state.ST_ACK~q\,
 	datac => \dht22_one_wire|Equal2~2_combout\,
-	datad => \dht22_one_wire|Equal1~2_combout\,
+	datad => \dht22_one_wire|Equal2~1_combout\,
 	combout => \dht22_one_wire|Selector9~6_combout\);
 
--- Location: LCCOMB_X22_Y21_N4
-\dht22_one_wire|Selector6~2\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X24_Y17_N22
+\dht22_one_wire|WideOr0~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Selector6~2_combout\ = (\dht22_one_wire|Selector9~6_combout\ & (\dht22_one_wire|Selector9~8_combout\ & ((!\dht22_one_wire|state.ST_CHECK~q\) # (!\en_dht22~q\))))
+-- \dht22_one_wire|WideOr0~1_combout\ = (!\dht22_one_wire|Selector9~7_combout\ & (!\dht22_one_wire|Selector9~6_combout\ & ((!\dht22_one_wire|Equal1~6_combout\) # (!\dht22_one_wire|state.ST_PRE_ACK~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100110000000000",
+	lut_mask => "0000000100000011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \en_dht22~q\,
-	datab => \dht22_one_wire|Selector9~6_combout\,
-	datac => \dht22_one_wire|state.ST_CHECK~q\,
-	datad => \dht22_one_wire|Selector9~8_combout\,
-	combout => \dht22_one_wire|Selector6~2_combout\);
+	dataa => \dht22_one_wire|state.ST_PRE_ACK~q\,
+	datab => \dht22_one_wire|Selector9~7_combout\,
+	datac => \dht22_one_wire|Selector9~6_combout\,
+	datad => \dht22_one_wire|Equal1~6_combout\,
+	combout => \dht22_one_wire|WideOr0~1_combout\);
 
--- Location: FF_X22_Y21_N5
-\dht22_one_wire|state.ST_WAIT_3\ : dffeas
+-- Location: LCCOMB_X23_Y17_N18
+\dht22_one_wire|WideOr0~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|WideOr0~2_combout\ = (!\dht22_one_wire|Selector9~5_combout\ & (\dht22_one_wire|WideOr0~1_combout\ & (\dht22_one_wire|WideOr0~0_combout\ & !\dht22_one_wire|Selector9~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000001000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Selector9~5_combout\,
+	datab => \dht22_one_wire|WideOr0~1_combout\,
+	datac => \dht22_one_wire|WideOr0~0_combout\,
+	datad => \dht22_one_wire|Selector9~0_combout\,
+	combout => \dht22_one_wire|WideOr0~2_combout\);
+
+-- Location: LCCOMB_X23_Y17_N12
+\dht22_one_wire|Selector1~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector1~0_combout\ = (!\dht22_one_wire|Selector9~9_combout\ & (\dht22_one_wire|WideOr0~2_combout\ & ((\dht22_one_wire|Selector9~1_combout\) # (\dht22_one_wire|state.ST_START~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101010000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Selector9~9_combout\,
+	datab => \dht22_one_wire|Selector9~1_combout\,
+	datac => \dht22_one_wire|state.ST_START~q\,
+	datad => \dht22_one_wire|WideOr0~2_combout\,
+	combout => \dht22_one_wire|Selector1~0_combout\);
+
+-- Location: FF_X23_Y17_N13
+\dht22_one_wire|state.ST_START\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2411,113 +2107,64 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|Selector6~2_combout\,
+	d => \dht22_one_wire|Selector1~0_combout\,
 	clrn => \rst_n~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \dht22_one_wire|state.ST_WAIT_3~q\);
+	q => \dht22_one_wire|state.ST_START~q\);
 
--- Location: LCCOMB_X21_Y21_N22
-\dht22_one_wire|Selector7~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X23_Y16_N0
+\dht22_one_wire|WideNor0~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Selector7~0_combout\ = (\dht22_one_wire|state.ST_WAIT_3~q\) # ((!\dht22_one_wire|Equal3~1_combout\ & (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & !\dht22_one_wire|next_state_logic~0_combout\)))
+-- \dht22_one_wire|WideNor0~0_combout\ = (!\dht22_one_wire|state.ST_DONE~q\ & !\dht22_one_wire|state.ST_PROCESS_DATA~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111100000100",
+	lut_mask => "0000000000001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Equal3~1_combout\,
-	datab => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
-	datac => \dht22_one_wire|next_state_logic~0_combout\,
-	datad => \dht22_one_wire|state.ST_WAIT_3~q\,
-	combout => \dht22_one_wire|Selector7~0_combout\);
+	datac => \dht22_one_wire|state.ST_DONE~q\,
+	datad => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
+	combout => \dht22_one_wire|WideNor0~0_combout\);
 
--- Location: FF_X21_Y21_N23
-\dht22_one_wire|state.ST_SAMPLE\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|Selector7~0_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|state.ST_SAMPLE~q\);
-
--- Location: LCCOMB_X21_Y21_N2
-\dht22_one_wire|Selector8~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector8~0_combout\ = (\dht22_one_wire|state.ST_SAMPLE~q\) # ((\dht22_one_wire|next_state_logic~0_combout\ & (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & !\dht22_one_wire|Equal3~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101011101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|state.ST_SAMPLE~q\,
-	datab => \dht22_one_wire|next_state_logic~0_combout\,
-	datac => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
-	datad => \dht22_one_wire|Equal3~1_combout\,
-	combout => \dht22_one_wire|Selector8~0_combout\);
-
--- Location: FF_X21_Y21_N3
-\dht22_one_wire|state.ST_PROCESS_DATA\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|Selector8~0_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|state.ST_PROCESS_DATA~q\);
-
--- Location: LCCOMB_X21_Y21_N0
+-- Location: LCCOMB_X23_Y16_N30
 \dht22_one_wire|WideOr8\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|WideOr8~combout\ = (((!\dht22_one_wire|state.ST_PROCESS_DATA~q\ & !\dht22_one_wire|state.ST_DONE~q\)) # (!\dht22_one_wire|state.ST_IDLE~q\)) # (!\dht22_one_wire|WideOr8~0_combout\)
+-- \dht22_one_wire|WideOr8~combout\ = (\dht22_one_wire|state.ST_START~q\) # ((\dht22_one_wire|WideNor0~0_combout\) # ((\dht22_one_wire|state.ST_CHECK~q\) # (!\dht22_one_wire|state.ST_IDLE~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101011111111111",
+	lut_mask => "1111111111101111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|WideOr8~0_combout\,
-	datab => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
-	datac => \dht22_one_wire|state.ST_DONE~q\,
-	datad => \dht22_one_wire|state.ST_IDLE~q\,
+	dataa => \dht22_one_wire|state.ST_START~q\,
+	datab => \dht22_one_wire|WideNor0~0_combout\,
+	datac => \dht22_one_wire|state.ST_IDLE~q\,
+	datad => \dht22_one_wire|state.ST_CHECK~q\,
 	combout => \dht22_one_wire|WideOr8~combout\);
 
--- Location: LCCOMB_X17_Y22_N18
+-- Location: LCCOMB_X26_Y17_N4
 \dht22_one_wire|mealy_outputs~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|mealy_outputs~0_combout\ = (!\dht22_one_wire|new_io_reg~q\ & \dht22_one_wire|old_io_reg~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011001100000000",
+	lut_mask => "0000111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \dht22_one_wire|new_io_reg~q\,
+	datac => \dht22_one_wire|new_io_reg~q\,
 	datad => \dht22_one_wire|old_io_reg~q\,
 	combout => \dht22_one_wire|mealy_outputs~0_combout\);
 
--- Location: LCCOMB_X17_Y22_N4
+-- Location: LCCOMB_X25_Y17_N2
 \dht22_one_wire|Add2~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Add2~0_combout\ = (\dht22_one_wire|bit_count_reg\(0) & (\dht22_one_wire|mealy_outputs~0_combout\ $ (VCC))) # (!\dht22_one_wire|bit_count_reg\(0) & (\dht22_one_wire|mealy_outputs~0_combout\ & VCC))
--- \dht22_one_wire|Add2~1\ = CARRY((\dht22_one_wire|bit_count_reg\(0) & \dht22_one_wire|mealy_outputs~0_combout\))
+-- \dht22_one_wire|Add2~0_combout\ = (\dht22_one_wire|mealy_outputs~0_combout\ & (\dht22_one_wire|bit_count_reg\(0) $ (VCC))) # (!\dht22_one_wire|mealy_outputs~0_combout\ & (\dht22_one_wire|bit_count_reg\(0) & VCC))
+-- \dht22_one_wire|Add2~1\ = CARRY((\dht22_one_wire|mealy_outputs~0_combout\ & \dht22_one_wire|bit_count_reg\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2525,13 +2172,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(0),
-	datab => \dht22_one_wire|mealy_outputs~0_combout\,
+	dataa => \dht22_one_wire|mealy_outputs~0_combout\,
+	datab => \dht22_one_wire|bit_count_reg\(0),
 	datad => VCC,
 	combout => \dht22_one_wire|Add2~0_combout\,
 	cout => \dht22_one_wire|Add2~1\);
 
--- Location: LCCOMB_X17_Y22_N30
+-- Location: LCCOMB_X25_Y17_N30
 \dht22_one_wire|Selector18~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Selector18~0_combout\ = (\dht22_one_wire|WideOr8~combout\ & ((\dht22_one_wire|bit_count_reg\(0)) # ((\dht22_one_wire|state.ST_PROCESS_DATA~q\ & \dht22_one_wire|Add2~0_combout\)))) # (!\dht22_one_wire|WideOr8~combout\ & 
@@ -2549,7 +2196,7 @@ PORT MAP (
 	datad => \dht22_one_wire|Add2~0_combout\,
 	combout => \dht22_one_wire|Selector18~0_combout\);
 
--- Location: FF_X17_Y22_N31
+-- Location: FF_X25_Y17_N31
 \dht22_one_wire|bit_count_reg[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2564,7 +2211,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|bit_count_reg\(0));
 
--- Location: LCCOMB_X17_Y22_N6
+-- Location: LCCOMB_X25_Y17_N4
 \dht22_one_wire|Add2~2\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add2~2_combout\ = (\dht22_one_wire|bit_count_reg\(1) & (!\dht22_one_wire|Add2~1\)) # (!\dht22_one_wire|bit_count_reg\(1) & ((\dht22_one_wire|Add2~1\) # (GND)))
@@ -2572,17 +2219,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111111",
+	lut_mask => "0101101001011111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \dht22_one_wire|bit_count_reg\(1),
+	dataa => \dht22_one_wire|bit_count_reg\(1),
 	datad => VCC,
 	cin => \dht22_one_wire|Add2~1\,
 	combout => \dht22_one_wire|Add2~2_combout\,
 	cout => \dht22_one_wire|Add2~3\);
 
--- Location: LCCOMB_X17_Y22_N24
+-- Location: LCCOMB_X25_Y16_N0
 \dht22_one_wire|Selector17~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Selector17~0_combout\ = (\dht22_one_wire|WideOr8~combout\ & ((\dht22_one_wire|bit_count_reg\(1)) # ((\dht22_one_wire|state.ST_PROCESS_DATA~q\ & \dht22_one_wire|Add2~2_combout\)))) # (!\dht22_one_wire|WideOr8~combout\ & 
@@ -2600,7 +2247,7 @@ PORT MAP (
 	datad => \dht22_one_wire|Add2~2_combout\,
 	combout => \dht22_one_wire|Selector17~0_combout\);
 
--- Location: FF_X17_Y22_N25
+-- Location: FF_X25_Y16_N1
 \dht22_one_wire|bit_count_reg[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2615,7 +2262,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|bit_count_reg\(1));
 
--- Location: LCCOMB_X17_Y22_N8
+-- Location: LCCOMB_X25_Y17_N6
 \dht22_one_wire|Add2~4\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add2~4_combout\ = (\dht22_one_wire|bit_count_reg\(2) & (\dht22_one_wire|Add2~3\ $ (GND))) # (!\dht22_one_wire|bit_count_reg\(2) & (!\dht22_one_wire|Add2~3\ & VCC))
@@ -2623,21 +2270,21 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010010100001010",
+	lut_mask => "1100001100001100",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(2),
+	datab => \dht22_one_wire|bit_count_reg\(2),
 	datad => VCC,
 	cin => \dht22_one_wire|Add2~3\,
 	combout => \dht22_one_wire|Add2~4_combout\,
 	cout => \dht22_one_wire|Add2~5\);
 
--- Location: LCCOMB_X17_Y22_N26
+-- Location: LCCOMB_X25_Y17_N24
 \dht22_one_wire|Selector16~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Selector16~0_combout\ = (\dht22_one_wire|WideOr8~combout\ & ((\dht22_one_wire|bit_count_reg\(2)) # ((\dht22_one_wire|Add2~4_combout\ & \dht22_one_wire|state.ST_PROCESS_DATA~q\)))) # (!\dht22_one_wire|WideOr8~combout\ & 
--- (\dht22_one_wire|Add2~4_combout\ & ((\dht22_one_wire|state.ST_PROCESS_DATA~q\))))
+-- \dht22_one_wire|Selector16~0_combout\ = (\dht22_one_wire|WideOr8~combout\ & ((\dht22_one_wire|bit_count_reg\(2)) # ((\dht22_one_wire|state.ST_PROCESS_DATA~q\ & \dht22_one_wire|Add2~4_combout\)))) # (!\dht22_one_wire|WideOr8~combout\ & 
+-- (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & ((\dht22_one_wire|Add2~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2646,12 +2293,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \dht22_one_wire|WideOr8~combout\,
-	datab => \dht22_one_wire|Add2~4_combout\,
+	datab => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
 	datac => \dht22_one_wire|bit_count_reg\(2),
-	datad => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
+	datad => \dht22_one_wire|Add2~4_combout\,
 	combout => \dht22_one_wire|Selector16~0_combout\);
 
--- Location: FF_X17_Y22_N27
+-- Location: FF_X25_Y17_N25
 \dht22_one_wire|bit_count_reg[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2666,7 +2313,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|bit_count_reg\(2));
 
--- Location: LCCOMB_X17_Y22_N10
+-- Location: LCCOMB_X25_Y17_N8
 \dht22_one_wire|Add2~6\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add2~6_combout\ = (\dht22_one_wire|bit_count_reg\(3) & (!\dht22_one_wire|Add2~5\)) # (!\dht22_one_wire|bit_count_reg\(3) & ((\dht22_one_wire|Add2~5\) # (GND)))
@@ -2684,7 +2331,7 @@ PORT MAP (
 	combout => \dht22_one_wire|Add2~6_combout\,
 	cout => \dht22_one_wire|Add2~7\);
 
--- Location: LCCOMB_X17_Y22_N16
+-- Location: LCCOMB_X25_Y17_N18
 \dht22_one_wire|Selector15~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Selector15~0_combout\ = (\dht22_one_wire|WideOr8~combout\ & ((\dht22_one_wire|bit_count_reg\(3)) # ((\dht22_one_wire|state.ST_PROCESS_DATA~q\ & \dht22_one_wire|Add2~6_combout\)))) # (!\dht22_one_wire|WideOr8~combout\ & 
@@ -2702,7 +2349,7 @@ PORT MAP (
 	datad => \dht22_one_wire|Add2~6_combout\,
 	combout => \dht22_one_wire|Selector15~0_combout\);
 
--- Location: FF_X17_Y22_N17
+-- Location: FF_X25_Y17_N19
 \dht22_one_wire|bit_count_reg[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2717,23 +2364,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|bit_count_reg\(3));
 
--- Location: LCCOMB_X18_Y22_N24
-\dht22_one_wire|Equal3~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Equal3~0_combout\ = (!\dht22_one_wire|bit_count_reg\(1) & (!\dht22_one_wire|bit_count_reg\(2) & !\dht22_one_wire|bit_count_reg\(0)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|bit_count_reg\(1),
-	datac => \dht22_one_wire|bit_count_reg\(2),
-	datad => \dht22_one_wire|bit_count_reg\(0),
-	combout => \dht22_one_wire|Equal3~0_combout\);
-
--- Location: LCCOMB_X17_Y22_N12
+-- Location: LCCOMB_X25_Y17_N10
 \dht22_one_wire|Add2~8\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add2~8_combout\ = (\dht22_one_wire|bit_count_reg\(4) & (\dht22_one_wire|Add2~7\ $ (GND))) # (!\dht22_one_wire|bit_count_reg\(4) & (!\dht22_one_wire|Add2~7\ & VCC))
@@ -2751,7 +2382,7 @@ PORT MAP (
 	combout => \dht22_one_wire|Add2~8_combout\,
 	cout => \dht22_one_wire|Add2~9\);
 
--- Location: LCCOMB_X17_Y22_N0
+-- Location: LCCOMB_X25_Y17_N28
 \dht22_one_wire|Selector14~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Selector14~0_combout\ = (\dht22_one_wire|WideOr8~combout\ & ((\dht22_one_wire|bit_count_reg\(4)) # ((\dht22_one_wire|state.ST_PROCESS_DATA~q\ & \dht22_one_wire|Add2~8_combout\)))) # (!\dht22_one_wire|WideOr8~combout\ & 
@@ -2769,7 +2400,7 @@ PORT MAP (
 	datad => \dht22_one_wire|Add2~8_combout\,
 	combout => \dht22_one_wire|Selector14~0_combout\);
 
--- Location: FF_X17_Y22_N1
+-- Location: FF_X25_Y17_N29
 \dht22_one_wire|bit_count_reg[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2784,7 +2415,23 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|bit_count_reg\(4));
 
--- Location: LCCOMB_X17_Y22_N14
+-- Location: LCCOMB_X25_Y16_N30
+\dht22_one_wire|Equal3~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Equal3~0_combout\ = (!\dht22_one_wire|bit_count_reg\(0) & (!\dht22_one_wire|bit_count_reg\(1) & !\dht22_one_wire|bit_count_reg\(2)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000100000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|bit_count_reg\(0),
+	datab => \dht22_one_wire|bit_count_reg\(1),
+	datac => \dht22_one_wire|bit_count_reg\(2),
+	combout => \dht22_one_wire|Equal3~0_combout\);
+
+-- Location: LCCOMB_X25_Y17_N12
 \dht22_one_wire|Add2~10\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add2~10_combout\ = \dht22_one_wire|Add2~9\ $ (\dht22_one_wire|bit_count_reg\(5))
@@ -2799,11 +2446,11 @@ PORT MAP (
 	cin => \dht22_one_wire|Add2~9\,
 	combout => \dht22_one_wire|Add2~10_combout\);
 
--- Location: LCCOMB_X17_Y22_N2
+-- Location: LCCOMB_X25_Y17_N0
 \dht22_one_wire|Selector13~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Selector13~0_combout\ = (\dht22_one_wire|WideOr8~combout\ & ((\dht22_one_wire|bit_count_reg\(5)) # ((\dht22_one_wire|Add2~10_combout\ & \dht22_one_wire|state.ST_PROCESS_DATA~q\)))) # (!\dht22_one_wire|WideOr8~combout\ & 
--- (\dht22_one_wire|Add2~10_combout\ & ((\dht22_one_wire|state.ST_PROCESS_DATA~q\))))
+-- \dht22_one_wire|Selector13~0_combout\ = (\dht22_one_wire|WideOr8~combout\ & ((\dht22_one_wire|bit_count_reg\(5)) # ((\dht22_one_wire|state.ST_PROCESS_DATA~q\ & \dht22_one_wire|Add2~10_combout\)))) # (!\dht22_one_wire|WideOr8~combout\ & 
+-- (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & ((\dht22_one_wire|Add2~10_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2812,12 +2459,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \dht22_one_wire|WideOr8~combout\,
-	datab => \dht22_one_wire|Add2~10_combout\,
+	datab => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
 	datac => \dht22_one_wire|bit_count_reg\(5),
-	datad => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
+	datad => \dht22_one_wire|Add2~10_combout\,
 	combout => \dht22_one_wire|Selector13~0_combout\);
 
--- Location: FF_X17_Y22_N3
+-- Location: FF_X25_Y17_N1
 \dht22_one_wire|bit_count_reg[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2832,27 +2479,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|bit_count_reg\(5));
 
--- Location: LCCOMB_X18_Y22_N30
+-- Location: LCCOMB_X25_Y17_N26
 \dht22_one_wire|Equal3~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Equal3~1_combout\ = (\dht22_one_wire|bit_count_reg\(3) & (\dht22_one_wire|Equal3~0_combout\ & (!\dht22_one_wire|bit_count_reg\(4) & \dht22_one_wire|bit_count_reg\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000100000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(3),
-	datab => \dht22_one_wire|Equal3~0_combout\,
-	datac => \dht22_one_wire|bit_count_reg\(4),
-	datad => \dht22_one_wire|bit_count_reg\(5),
-	combout => \dht22_one_wire|Equal3~1_combout\);
-
--- Location: LCCOMB_X21_Y21_N26
-\dht22_one_wire|Selector9~10\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector9~10_combout\ = (\dht22_one_wire|Equal3~1_combout\ & (!\dht22_one_wire|Selector9~9_combout\ & (\dht22_one_wire|Selector9~8_combout\ & \dht22_one_wire|state.ST_PROCESS_DATA~q\)))
+-- \dht22_one_wire|Equal3~1_combout\ = (\dht22_one_wire|bit_count_reg\(3) & (!\dht22_one_wire|bit_count_reg\(4) & (\dht22_one_wire|Equal3~0_combout\ & \dht22_one_wire|bit_count_reg\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2860,14 +2490,31 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Equal3~1_combout\,
-	datab => \dht22_one_wire|Selector9~9_combout\,
-	datac => \dht22_one_wire|Selector9~8_combout\,
-	datad => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
-	combout => \dht22_one_wire|Selector9~10_combout\);
+	dataa => \dht22_one_wire|bit_count_reg\(3),
+	datab => \dht22_one_wire|bit_count_reg\(4),
+	datac => \dht22_one_wire|Equal3~0_combout\,
+	datad => \dht22_one_wire|bit_count_reg\(5),
+	combout => \dht22_one_wire|Equal3~1_combout\);
 
--- Location: FF_X21_Y21_N27
-\dht22_one_wire|state.ST_WAIT_4\ : dffeas
+-- Location: LCCOMB_X24_Y17_N4
+\dht22_one_wire|Selector8~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector8~0_combout\ = (\dht22_one_wire|state.ST_SAMPLE~q\) # ((\dht22_one_wire|next_state_logic~0_combout\ & (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & !\dht22_one_wire|Equal3~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011101100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|next_state_logic~0_combout\,
+	datab => \dht22_one_wire|state.ST_SAMPLE~q\,
+	datac => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
+	datad => \dht22_one_wire|Equal3~1_combout\,
+	combout => \dht22_one_wire|Selector8~0_combout\);
+
+-- Location: FF_X24_Y17_N5
+\dht22_one_wire|state.ST_PROCESS_DATA\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2875,46 +2522,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|Selector9~10_combout\,
+	d => \dht22_one_wire|Selector8~0_combout\,
 	clrn => \rst_n~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \dht22_one_wire|state.ST_WAIT_4~q\);
+	q => \dht22_one_wire|state.ST_PROCESS_DATA~q\);
 
--- Location: LCCOMB_X21_Y21_N10
-\dht22_one_wire|Selector10~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector10~0_combout\ = (\dht22_one_wire|state.ST_DONE~q\ & (((!\dht22_one_wire|Equal1~4_combout\) # (!\dht22_one_wire|Equal4~0_combout\)) # (!\dht22_one_wire|clks\(11))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100110011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|clks\(11),
-	datab => \dht22_one_wire|state.ST_DONE~q\,
-	datac => \dht22_one_wire|Equal4~0_combout\,
-	datad => \dht22_one_wire|Equal1~4_combout\,
-	combout => \dht22_one_wire|Selector10~0_combout\);
-
--- Location: LCCOMB_X21_Y21_N12
-\dht22_one_wire|Selector10~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector10~1_combout\ = (\dht22_one_wire|state.ST_WAIT_4~q\) # (\dht22_one_wire|Selector10~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \dht22_one_wire|state.ST_WAIT_4~q\,
-	datad => \dht22_one_wire|Selector10~0_combout\,
-	combout => \dht22_one_wire|Selector10~1_combout\);
-
--- Location: FF_X21_Y21_N13
-\dht22_one_wire|state.ST_DONE\ : dffeas
+-- Location: FF_X24_Y17_N21
+\dht22_one_wire|old_io_reg\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2922,16 +2537,162 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|Selector10~1_combout\,
+	d => \dht22_one_wire|old_io_reg~0_combout\,
+	asdata => \dht22_one_wire|old_io_reg~q\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sload => \dht22_one_wire|ALT_INV_state.ST_PROCESS_DATA~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|old_io_reg~q\);
+
+-- Location: LCCOMB_X26_Y17_N14
+\dht22_one_wire|next_state_logic~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|next_state_logic~0_combout\ = \dht22_one_wire|old_io_reg~q\ $ (\dht22_one_wire|new_io_reg~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101001011010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|old_io_reg~q\,
+	datac => \dht22_one_wire|new_io_reg~q\,
+	combout => \dht22_one_wire|next_state_logic~0_combout\);
+
+-- Location: LCCOMB_X23_Y17_N2
+\dht22_one_wire|Selector6~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector6~2_combout\ = (\dht22_one_wire|Selector9~6_combout\ & (\dht22_one_wire|Selector9~8_combout\ & ((!\en_dht22~q\) # (!\dht22_one_wire|state.ST_CHECK~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|state.ST_CHECK~q\,
+	datab => \en_dht22~q\,
+	datac => \dht22_one_wire|Selector9~6_combout\,
+	datad => \dht22_one_wire|Selector9~8_combout\,
+	combout => \dht22_one_wire|Selector6~2_combout\);
+
+-- Location: FF_X23_Y17_N3
+\dht22_one_wire|state.ST_WAIT_3\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|Selector6~2_combout\,
 	clrn => \rst_n~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \dht22_one_wire|state.ST_DONE~q\);
+	q => \dht22_one_wire|state.ST_WAIT_3~q\);
 
--- Location: LCCOMB_X21_Y21_N6
+-- Location: LCCOMB_X24_Y17_N8
+\dht22_one_wire|Selector7~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector7~0_combout\ = (\dht22_one_wire|state.ST_WAIT_3~q\) # ((!\dht22_one_wire|next_state_logic~0_combout\ & (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & !\dht22_one_wire|Equal3~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000011110100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|next_state_logic~0_combout\,
+	datab => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
+	datac => \dht22_one_wire|state.ST_WAIT_3~q\,
+	datad => \dht22_one_wire|Equal3~1_combout\,
+	combout => \dht22_one_wire|Selector7~0_combout\);
+
+-- Location: FF_X24_Y17_N9
+\dht22_one_wire|state.ST_SAMPLE\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|Selector7~0_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|state.ST_SAMPLE~q\);
+
+-- Location: LCCOMB_X24_Y17_N10
+\dht22_one_wire|WideOr0~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|WideOr0~0_combout\ = (!\dht22_one_wire|state.ST_SAMPLE~q\ & \dht22_one_wire|WideOr6~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|state.ST_SAMPLE~q\,
+	datac => \dht22_one_wire|WideOr6~0_combout\,
+	combout => \dht22_one_wire|WideOr0~0_combout\);
+
+-- Location: LCCOMB_X23_Y17_N16
+\dht22_one_wire|Selector9~8\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector9~8_combout\ = (((\dht22_one_wire|Selector9~1_combout\) # (!\dht22_one_wire|WideOr0~1_combout\)) # (!\dht22_one_wire|WideOr0~0_combout\)) # (!\dht22_one_wire|Selector12~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111011111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Selector12~0_combout\,
+	datab => \dht22_one_wire|WideOr0~0_combout\,
+	datac => \dht22_one_wire|Selector9~1_combout\,
+	datad => \dht22_one_wire|WideOr0~1_combout\,
+	combout => \dht22_one_wire|Selector9~8_combout\);
+
+-- Location: LCCOMB_X23_Y17_N20
+\dht22_one_wire|Selector11~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector11~2_combout\ = (\dht22_one_wire|state.ST_CHECK~q\ & (!\en_dht22~q\ & ((\dht22_one_wire|Selector9~0_combout\) # (!\dht22_one_wire|Selector9~8_combout\)))) # (!\dht22_one_wire|state.ST_CHECK~q\ & 
+-- (\dht22_one_wire|Selector9~0_combout\ & ((\dht22_one_wire|Selector9~8_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010101000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Selector9~0_combout\,
+	datab => \en_dht22~q\,
+	datac => \dht22_one_wire|state.ST_CHECK~q\,
+	datad => \dht22_one_wire|Selector9~8_combout\,
+	combout => \dht22_one_wire|Selector11~2_combout\);
+
+-- Location: FF_X23_Y17_N21
+\dht22_one_wire|state.ST_CHECK\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|Selector11~2_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|state.ST_CHECK~q\);
+
+-- Location: LCCOMB_X22_Y17_N22
 \dht22_one_wire|done\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|done~combout\ = (\dht22_one_wire|state.ST_DONE~q\) # (\dht22_one_wire|state.ST_CHECK~q\)
+-- \dht22_one_wire|done~combout\ = (\dht22_one_wire|state.ST_CHECK~q\) # (\dht22_one_wire|state.ST_DONE~q\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2939,11 +2700,11 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \dht22_one_wire|state.ST_DONE~q\,
-	datad => \dht22_one_wire|state.ST_CHECK~q\,
+	datac => \dht22_one_wire|state.ST_CHECK~q\,
+	datad => \dht22_one_wire|state.ST_DONE~q\,
 	combout => \dht22_one_wire|done~combout\);
 
--- Location: LCCOMB_X11_Y21_N0
+-- Location: LCCOMB_X22_Y19_N0
 \display|Add0~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~0_combout\ = \display|count\(0) $ (VCC)
@@ -2960,7 +2721,7 @@ PORT MAP (
 	combout => \display|Add0~0_combout\,
 	cout => \display|Add0~1\);
 
--- Location: FF_X11_Y21_N1
+-- Location: FF_X22_Y19_N1
 \display|count[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2975,7 +2736,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(0));
 
--- Location: LCCOMB_X11_Y21_N2
+-- Location: LCCOMB_X22_Y19_N2
 \display|Add0~2\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~2_combout\ = (\display|count\(1) & (!\display|Add0~1\)) # (!\display|count\(1) & ((\display|Add0~1\) # (GND)))
@@ -2993,7 +2754,7 @@ PORT MAP (
 	combout => \display|Add0~2_combout\,
 	cout => \display|Add0~3\);
 
--- Location: FF_X11_Y21_N3
+-- Location: FF_X22_Y19_N3
 \display|count[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3008,7 +2769,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(1));
 
--- Location: LCCOMB_X11_Y21_N4
+-- Location: LCCOMB_X22_Y19_N4
 \display|Add0~4\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~4_combout\ = (\display|count\(2) & (\display|Add0~3\ $ (GND))) # (!\display|count\(2) & (!\display|Add0~3\ & VCC))
@@ -3026,7 +2787,7 @@ PORT MAP (
 	combout => \display|Add0~4_combout\,
 	cout => \display|Add0~5\);
 
--- Location: FF_X11_Y21_N5
+-- Location: FF_X22_Y19_N5
 \display|count[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3041,7 +2802,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(2));
 
--- Location: LCCOMB_X11_Y21_N6
+-- Location: LCCOMB_X22_Y19_N6
 \display|Add0~6\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~6_combout\ = (\display|count\(3) & (!\display|Add0~5\)) # (!\display|count\(3) & ((\display|Add0~5\) # (GND)))
@@ -3059,7 +2820,7 @@ PORT MAP (
 	combout => \display|Add0~6_combout\,
 	cout => \display|Add0~7\);
 
--- Location: FF_X11_Y21_N7
+-- Location: FF_X22_Y19_N7
 \display|count[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3074,10 +2835,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(3));
 
--- Location: LCCOMB_X10_Y20_N6
+-- Location: LCCOMB_X21_Y18_N6
 \Add0~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Add0~1_cout\ = CARRY((\display|count\(0) & \display|count\(1)))
+-- \Add0~1_cout\ = CARRY((\display|count\(1) & \display|count\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3085,44 +2846,44 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|count\(0),
-	datab => \display|count\(1),
+	dataa => \display|count\(1),
+	datab => \display|count\(0),
 	datad => VCC,
 	cout => \Add0~1_cout\);
 
--- Location: LCCOMB_X10_Y20_N8
+-- Location: LCCOMB_X21_Y18_N8
 \Add0~3\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~3_cout\ = CARRY((!\Add0~1_cout\) # (!\display|count\(2)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001011111",
+	lut_mask => "0000000000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|count\(2),
+	datab => \display|count\(2),
 	datad => VCC,
 	cin => \Add0~1_cout\,
 	cout => \Add0~3_cout\);
 
--- Location: LCCOMB_X10_Y20_N10
+-- Location: LCCOMB_X21_Y18_N10
 \Add0~5\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~5_cout\ = CARRY((\display|count\(3) & !\Add0~3_cout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000001010",
+	lut_mask => "0000000000001100",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|count\(3),
+	datab => \display|count\(3),
 	datad => VCC,
 	cin => \Add0~3_cout\,
 	cout => \Add0~5_cout\);
 
--- Location: LCCOMB_X10_Y20_N12
+-- Location: LCCOMB_X21_Y18_N12
 \Add0~6\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~6_combout\ = (one_wire_count(4) & (!\Add0~5_cout\)) # (!one_wire_count(4) & ((\Add0~5_cout\) # (GND)))
@@ -3140,7 +2901,7 @@ PORT MAP (
 	combout => \Add0~6_combout\,
 	cout => \Add0~7\);
 
--- Location: FF_X10_Y20_N13
+-- Location: FF_X21_Y18_N13
 \one_wire_count[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3155,7 +2916,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(4));
 
--- Location: LCCOMB_X10_Y20_N14
+-- Location: LCCOMB_X21_Y18_N14
 \Add0~8\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~8_combout\ = (one_wire_count(5) & (\Add0~7\ $ (GND))) # (!one_wire_count(5) & (!\Add0~7\ & VCC))
@@ -3173,7 +2934,7 @@ PORT MAP (
 	combout => \Add0~8_combout\,
 	cout => \Add0~9\);
 
--- Location: FF_X10_Y20_N15
+-- Location: FF_X21_Y18_N15
 \one_wire_count[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3188,7 +2949,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(5));
 
--- Location: LCCOMB_X10_Y20_N16
+-- Location: LCCOMB_X21_Y18_N16
 \Add0~10\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~10_combout\ = (one_wire_count(6) & (!\Add0~9\)) # (!one_wire_count(6) & ((\Add0~9\) # (GND)))
@@ -3206,7 +2967,7 @@ PORT MAP (
 	combout => \Add0~10_combout\,
 	cout => \Add0~11\);
 
--- Location: FF_X10_Y20_N17
+-- Location: FF_X21_Y18_N17
 \one_wire_count[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3221,23 +2982,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(6));
 
--- Location: LCCOMB_X10_Y20_N4
-\Equal0~6\ : cycloneive_lcell_comb
--- Equation(s):
--- \Equal0~6_combout\ = (one_wire_count(4) & (one_wire_count(5) & one_wire_count(6)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => one_wire_count(4),
-	datac => one_wire_count(5),
-	datad => one_wire_count(6),
-	combout => \Equal0~6_combout\);
-
--- Location: LCCOMB_X10_Y20_N18
+-- Location: LCCOMB_X21_Y18_N18
 \Add0~12\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~12_combout\ = (one_wire_count(7) & (\Add0~11\ $ (GND))) # (!one_wire_count(7) & (!\Add0~11\ & VCC))
@@ -3255,7 +3000,7 @@ PORT MAP (
 	combout => \Add0~12_combout\,
 	cout => \Add0~13\);
 
--- Location: FF_X10_Y20_N19
+-- Location: FF_X21_Y18_N19
 \one_wire_count[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3270,7 +3015,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(7));
 
--- Location: LCCOMB_X10_Y20_N20
+-- Location: LCCOMB_X21_Y18_N20
 \Add0~14\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~14_combout\ = (one_wire_count(8) & (!\Add0~13\)) # (!one_wire_count(8) & ((\Add0~13\) # (GND)))
@@ -3288,22 +3033,22 @@ PORT MAP (
 	combout => \Add0~14_combout\,
 	cout => \Add0~15\);
 
--- Location: LCCOMB_X10_Y20_N0
+-- Location: LCCOMB_X21_Y18_N0
 \one_wire_count~11\ : cycloneive_lcell_comb
 -- Equation(s):
--- \one_wire_count~11_combout\ = (!\Equal0~7_combout\ & \Add0~14_combout\)
+-- \one_wire_count~11_combout\ = (\Add0~14_combout\ & !\Equal0~7_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000111100000000",
+	lut_mask => "0000000011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \Equal0~7_combout\,
-	datad => \Add0~14_combout\,
+	datab => \Add0~14_combout\,
+	datad => \Equal0~7_combout\,
 	combout => \one_wire_count~11_combout\);
 
--- Location: FF_X10_Y20_N1
+-- Location: FF_X21_Y18_N1
 \one_wire_count[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3318,7 +3063,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(8));
 
--- Location: LCCOMB_X10_Y20_N22
+-- Location: LCCOMB_X21_Y18_N22
 \Add0~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~16_combout\ = (one_wire_count(9) & (\Add0~15\ $ (GND))) # (!one_wire_count(9) & (!\Add0~15\ & VCC))
@@ -3336,7 +3081,7 @@ PORT MAP (
 	combout => \Add0~16_combout\,
 	cout => \Add0~17\);
 
--- Location: FF_X10_Y20_N23
+-- Location: FF_X21_Y18_N23
 \one_wire_count[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3351,7 +3096,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(9));
 
--- Location: LCCOMB_X10_Y20_N24
+-- Location: LCCOMB_X21_Y18_N24
 \Add0~18\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~18_combout\ = (one_wire_count(10) & (!\Add0~17\)) # (!one_wire_count(10) & ((\Add0~17\) # (GND)))
@@ -3369,7 +3114,7 @@ PORT MAP (
 	combout => \Add0~18_combout\,
 	cout => \Add0~19\);
 
--- Location: FF_X10_Y20_N25
+-- Location: FF_X21_Y18_N25
 \one_wire_count[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3384,7 +3129,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(10));
 
--- Location: LCCOMB_X10_Y20_N26
+-- Location: LCCOMB_X21_Y18_N26
 \Add0~20\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~20_combout\ = (one_wire_count(11) & (\Add0~19\ $ (GND))) # (!one_wire_count(11) & (!\Add0~19\ & VCC))
@@ -3402,7 +3147,7 @@ PORT MAP (
 	combout => \Add0~20_combout\,
 	cout => \Add0~21\);
 
--- Location: FF_X10_Y20_N27
+-- Location: FF_X21_Y18_N27
 \one_wire_count[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3417,7 +3162,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(11));
 
--- Location: LCCOMB_X10_Y20_N28
+-- Location: LCCOMB_X21_Y18_N28
 \Add0~22\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~22_combout\ = (one_wire_count(12) & (!\Add0~21\)) # (!one_wire_count(12) & ((\Add0~21\) # (GND)))
@@ -3435,7 +3180,7 @@ PORT MAP (
 	combout => \Add0~22_combout\,
 	cout => \Add0~23\);
 
--- Location: FF_X10_Y20_N29
+-- Location: FF_X21_Y18_N29
 \one_wire_count[12]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3450,7 +3195,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(12));
 
--- Location: LCCOMB_X10_Y20_N30
+-- Location: LCCOMB_X21_Y18_N30
 \Add0~24\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~24_combout\ = (one_wire_count(13) & (\Add0~23\ $ (GND))) # (!one_wire_count(13) & (!\Add0~23\ & VCC))
@@ -3468,7 +3213,7 @@ PORT MAP (
 	combout => \Add0~24_combout\,
 	cout => \Add0~25\);
 
--- Location: LCCOMB_X11_Y19_N10
+-- Location: LCCOMB_X22_Y17_N18
 \one_wire_count~10\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \one_wire_count~10_combout\ = (!\Equal0~7_combout\ & \Add0~24_combout\)
@@ -3483,7 +3228,7 @@ PORT MAP (
 	datad => \Add0~24_combout\,
 	combout => \one_wire_count~10_combout\);
 
--- Location: FF_X11_Y19_N11
+-- Location: FF_X22_Y17_N19
 \one_wire_count[13]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3498,7 +3243,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(13));
 
--- Location: LCCOMB_X10_Y19_N0
+-- Location: LCCOMB_X21_Y17_N0
 \Add0~26\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~26_combout\ = (one_wire_count(14) & (!\Add0~25\)) # (!one_wire_count(14) & ((\Add0~25\) # (GND)))
@@ -3506,32 +3251,32 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101001011111",
+	lut_mask => "0011110000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => one_wire_count(14),
+	datab => one_wire_count(14),
 	datad => VCC,
 	cin => \Add0~25\,
 	combout => \Add0~26_combout\,
 	cout => \Add0~27\);
 
--- Location: LCCOMB_X11_Y19_N4
+-- Location: LCCOMB_X22_Y17_N8
 \one_wire_count~9\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \one_wire_count~9_combout\ = (!\Equal0~7_combout\ & \Add0~26_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101000001010000",
+	lut_mask => "0011000000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Equal0~7_combout\,
+	datab => \Equal0~7_combout\,
 	datac => \Add0~26_combout\,
 	combout => \one_wire_count~9_combout\);
 
--- Location: FF_X11_Y19_N5
+-- Location: FF_X22_Y17_N9
 \one_wire_count[14]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3546,41 +3291,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(14));
 
--- Location: LCCOMB_X11_Y19_N24
-\Equal0~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \Equal0~4_combout\ = (one_wire_count(13) & (one_wire_count(14) & (!one_wire_count(12) & !one_wire_count(11))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => one_wire_count(13),
-	datab => one_wire_count(14),
-	datac => one_wire_count(12),
-	datad => one_wire_count(11),
-	combout => \Equal0~4_combout\);
-
--- Location: LCCOMB_X10_Y20_N2
-\Equal0~5\ : cycloneive_lcell_comb
--- Equation(s):
--- \Equal0~5_combout\ = (!one_wire_count(8) & (one_wire_count(7) & (!one_wire_count(9) & !one_wire_count(10))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => one_wire_count(8),
-	datab => one_wire_count(7),
-	datac => one_wire_count(9),
-	datad => one_wire_count(10),
-	combout => \Equal0~5_combout\);
-
--- Location: LCCOMB_X10_Y19_N2
+-- Location: LCCOMB_X21_Y17_N2
 \Add0~28\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~28_combout\ = (one_wire_count(15) & (\Add0~27\ $ (GND))) # (!one_wire_count(15) & (!\Add0~27\ & VCC))
@@ -3588,17 +3299,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => one_wire_count(15),
+	dataa => one_wire_count(15),
 	datad => VCC,
 	cin => \Add0~27\,
 	combout => \Add0~28_combout\,
 	cout => \Add0~29\);
 
--- Location: LCCOMB_X11_Y19_N22
+-- Location: LCCOMB_X22_Y17_N30
 \one_wire_count~8\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \one_wire_count~8_combout\ = (!\Equal0~7_combout\ & \Add0~28_combout\)
@@ -3613,7 +3324,7 @@ PORT MAP (
 	datad => \Add0~28_combout\,
 	combout => \one_wire_count~8_combout\);
 
--- Location: FF_X11_Y19_N23
+-- Location: FF_X22_Y17_N31
 \one_wire_count[15]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3628,7 +3339,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(15));
 
--- Location: LCCOMB_X10_Y19_N4
+-- Location: LCCOMB_X21_Y17_N4
 \Add0~30\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~30_combout\ = (one_wire_count(16) & (!\Add0~29\)) # (!one_wire_count(16) & ((\Add0~29\) # (GND)))
@@ -3636,32 +3347,32 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111111",
+	lut_mask => "0101101001011111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => one_wire_count(16),
+	dataa => one_wire_count(16),
 	datad => VCC,
 	cin => \Add0~29\,
 	combout => \Add0~30_combout\,
 	cout => \Add0~31\);
 
--- Location: LCCOMB_X11_Y19_N16
+-- Location: LCCOMB_X22_Y17_N20
 \one_wire_count~7\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \one_wire_count~7_combout\ = (!\Equal0~7_combout\ & \Add0~30_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101000001010000",
+	lut_mask => "0011000000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Equal0~7_combout\,
+	datab => \Equal0~7_combout\,
 	datac => \Add0~30_combout\,
 	combout => \one_wire_count~7_combout\);
 
--- Location: FF_X11_Y19_N17
+-- Location: FF_X22_Y17_N21
 \one_wire_count[16]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3676,7 +3387,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(16));
 
--- Location: LCCOMB_X10_Y19_N6
+-- Location: LCCOMB_X21_Y17_N6
 \Add0~32\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~32_combout\ = (one_wire_count(17) & (\Add0~31\ $ (GND))) # (!one_wire_count(17) & (!\Add0~31\ & VCC))
@@ -3694,7 +3405,7 @@ PORT MAP (
 	combout => \Add0~32_combout\,
 	cout => \Add0~33\);
 
--- Location: FF_X10_Y19_N7
+-- Location: FF_X21_Y17_N7
 \one_wire_count[17]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3709,7 +3420,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(17));
 
--- Location: LCCOMB_X10_Y19_N8
+-- Location: LCCOMB_X21_Y17_N8
 \Add0~34\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~34_combout\ = (one_wire_count(18) & (!\Add0~33\)) # (!one_wire_count(18) & ((\Add0~33\) # (GND)))
@@ -3717,17 +3428,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111111",
+	lut_mask => "0101101001011111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => one_wire_count(18),
+	dataa => one_wire_count(18),
 	datad => VCC,
 	cin => \Add0~33\,
 	combout => \Add0~34_combout\,
 	cout => \Add0~35\);
 
--- Location: LCCOMB_X11_Y19_N18
+-- Location: LCCOMB_X22_Y17_N2
 \one_wire_count~6\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \one_wire_count~6_combout\ = (!\Equal0~7_combout\ & \Add0~34_combout\)
@@ -3742,7 +3453,7 @@ PORT MAP (
 	datad => \Add0~34_combout\,
 	combout => \one_wire_count~6_combout\);
 
--- Location: FF_X11_Y19_N19
+-- Location: FF_X22_Y17_N3
 \one_wire_count[18]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3757,10 +3468,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(18));
 
--- Location: LCCOMB_X11_Y19_N12
+-- Location: LCCOMB_X22_Y17_N12
 \Equal0~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Equal0~2_combout\ = (one_wire_count(15) & (one_wire_count(16) & (!one_wire_count(17) & one_wire_count(18))))
+-- \Equal0~2_combout\ = (one_wire_count(15) & (one_wire_count(18) & (!one_wire_count(17) & one_wire_count(16))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3769,12 +3480,29 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => one_wire_count(15),
-	datab => one_wire_count(16),
+	datab => one_wire_count(18),
 	datac => one_wire_count(17),
-	datad => one_wire_count(18),
+	datad => one_wire_count(16),
 	combout => \Equal0~2_combout\);
 
--- Location: LCCOMB_X10_Y19_N10
+-- Location: LCCOMB_X21_Y19_N12
+\display|Equal0~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \display|Equal0~0_combout\ = (\display|count\(3) & (\display|count\(1) & (\display|count\(0) & \display|count\(2))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \display|count\(3),
+	datab => \display|count\(1),
+	datac => \display|count\(0),
+	datad => \display|count\(2),
+	combout => \display|Equal0~0_combout\);
+
+-- Location: LCCOMB_X21_Y17_N10
 \Add0~36\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~36_combout\ = (one_wire_count(19) & (\Add0~35\ $ (GND))) # (!one_wire_count(19) & (!\Add0~35\ & VCC))
@@ -3792,7 +3520,7 @@ PORT MAP (
 	combout => \Add0~36_combout\,
 	cout => \Add0~37\);
 
--- Location: FF_X10_Y19_N11
+-- Location: FF_X21_Y17_N11
 \one_wire_count[19]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3807,7 +3535,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(19));
 
--- Location: LCCOMB_X10_Y19_N12
+-- Location: LCCOMB_X21_Y17_N12
 \Add0~38\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~38_combout\ = (one_wire_count(20) & (!\Add0~37\)) # (!one_wire_count(20) & ((\Add0~37\) # (GND)))
@@ -3825,7 +3553,7 @@ PORT MAP (
 	combout => \Add0~38_combout\,
 	cout => \Add0~39\);
 
--- Location: LCCOMB_X10_Y19_N26
+-- Location: LCCOMB_X21_Y17_N26
 \one_wire_count~5\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \one_wire_count~5_combout\ = (!\Equal0~7_combout\ & \Add0~38_combout\)
@@ -3840,7 +3568,7 @@ PORT MAP (
 	datad => \Add0~38_combout\,
 	combout => \one_wire_count~5_combout\);
 
--- Location: FF_X10_Y19_N27
+-- Location: FF_X21_Y17_N27
 \one_wire_count[20]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3855,7 +3583,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(20));
 
--- Location: LCCOMB_X10_Y19_N14
+-- Location: LCCOMB_X21_Y17_N14
 \Add0~40\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~40_combout\ = (one_wire_count(21) & (\Add0~39\ $ (GND))) # (!one_wire_count(21) & (!\Add0~39\ & VCC))
@@ -3863,17 +3591,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => one_wire_count(21),
+	dataa => one_wire_count(21),
 	datad => VCC,
 	cin => \Add0~39\,
 	combout => \Add0~40_combout\,
 	cout => \Add0~41\);
 
--- Location: LCCOMB_X11_Y19_N14
+-- Location: LCCOMB_X22_Y17_N6
 \one_wire_count~4\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \one_wire_count~4_combout\ = (!\Equal0~7_combout\ & \Add0~40_combout\)
@@ -3888,7 +3616,7 @@ PORT MAP (
 	datad => \Add0~40_combout\,
 	combout => \one_wire_count~4_combout\);
 
--- Location: FF_X11_Y19_N15
+-- Location: FF_X22_Y17_N7
 \one_wire_count[21]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3903,7 +3631,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(21));
 
--- Location: LCCOMB_X10_Y19_N16
+-- Location: LCCOMB_X21_Y17_N16
 \Add0~42\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~42_combout\ = (one_wire_count(22) & (!\Add0~41\)) # (!one_wire_count(22) & ((\Add0~41\) # (GND)))
@@ -3921,22 +3649,22 @@ PORT MAP (
 	combout => \Add0~42_combout\,
 	cout => \Add0~43\);
 
--- Location: LCCOMB_X11_Y19_N8
+-- Location: LCCOMB_X22_Y17_N28
 \one_wire_count~3\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \one_wire_count~3_combout\ = (!\Equal0~7_combout\ & \Add0~42_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101000001010000",
+	lut_mask => "0011000000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Equal0~7_combout\,
+	datab => \Equal0~7_combout\,
 	datac => \Add0~42_combout\,
 	combout => \one_wire_count~3_combout\);
 
--- Location: FF_X11_Y19_N9
+-- Location: FF_X22_Y17_N29
 \one_wire_count[22]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3951,24 +3679,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(22));
 
--- Location: LCCOMB_X11_Y19_N20
-\Equal0~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \Equal0~1_combout\ = (one_wire_count(20) & (one_wire_count(21) & (one_wire_count(22) & !one_wire_count(19))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000010000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => one_wire_count(20),
-	datab => one_wire_count(21),
-	datac => one_wire_count(22),
-	datad => one_wire_count(19),
-	combout => \Equal0~1_combout\);
-
--- Location: LCCOMB_X10_Y19_N18
+-- Location: LCCOMB_X21_Y17_N18
 \Add0~44\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~44_combout\ = (one_wire_count(23) & (\Add0~43\ $ (GND))) # (!one_wire_count(23) & (!\Add0~43\ & VCC))
@@ -3976,17 +3687,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => one_wire_count(23),
+	dataa => one_wire_count(23),
 	datad => VCC,
 	cin => \Add0~43\,
 	combout => \Add0~44_combout\,
 	cout => \Add0~45\);
 
--- Location: LCCOMB_X11_Y19_N28
+-- Location: LCCOMB_X22_Y17_N4
 \one_wire_count~2\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \one_wire_count~2_combout\ = (!\Equal0~7_combout\ & \Add0~44_combout\)
@@ -4001,7 +3712,7 @@ PORT MAP (
 	datad => \Add0~44_combout\,
 	combout => \one_wire_count~2_combout\);
 
--- Location: FF_X11_Y19_N29
+-- Location: FF_X22_Y17_N5
 \one_wire_count[23]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4016,7 +3727,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(23));
 
--- Location: LCCOMB_X10_Y19_N20
+-- Location: LCCOMB_X21_Y17_N20
 \Add0~46\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~46_combout\ = (one_wire_count(24) & (!\Add0~45\)) # (!one_wire_count(24) & ((\Add0~45\) # (GND)))
@@ -4034,7 +3745,7 @@ PORT MAP (
 	combout => \Add0~46_combout\,
 	cout => \Add0~47\);
 
--- Location: LCCOMB_X10_Y19_N28
+-- Location: LCCOMB_X21_Y17_N28
 \one_wire_count~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \one_wire_count~1_combout\ = (!\Equal0~7_combout\ & \Add0~46_combout\)
@@ -4049,7 +3760,7 @@ PORT MAP (
 	datad => \Add0~46_combout\,
 	combout => \one_wire_count~1_combout\);
 
--- Location: FF_X10_Y19_N29
+-- Location: FF_X21_Y17_N29
 \one_wire_count[24]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4064,7 +3775,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(24));
 
--- Location: LCCOMB_X10_Y19_N22
+-- Location: LCCOMB_X21_Y17_N22
 \Add0~48\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~48_combout\ = (one_wire_count(25) & (\Add0~47\ $ (GND))) # (!one_wire_count(25) & (!\Add0~47\ & VCC))
@@ -4082,7 +3793,7 @@ PORT MAP (
 	combout => \Add0~48_combout\,
 	cout => \Add0~49\);
 
--- Location: FF_X10_Y19_N23
+-- Location: FF_X21_Y17_N23
 \one_wire_count[25]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4097,7 +3808,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(25));
 
--- Location: LCCOMB_X10_Y19_N24
+-- Location: LCCOMB_X21_Y17_N24
 \Add0~50\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add0~50_combout\ = one_wire_count(26) $ (\Add0~49\)
@@ -4112,7 +3823,7 @@ PORT MAP (
 	cin => \Add0~49\,
 	combout => \Add0~50_combout\);
 
--- Location: LCCOMB_X10_Y19_N30
+-- Location: LCCOMB_X21_Y17_N30
 \one_wire_count~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \one_wire_count~0_combout\ = (!\Equal0~7_combout\ & \Add0~50_combout\)
@@ -4127,7 +3838,7 @@ PORT MAP (
 	datad => \Add0~50_combout\,
 	combout => \one_wire_count~0_combout\);
 
--- Location: FF_X10_Y19_N31
+-- Location: FF_X21_Y17_N31
 \one_wire_count[26]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4142,44 +3853,44 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => one_wire_count(26));
 
--- Location: LCCOMB_X11_Y19_N30
+-- Location: LCCOMB_X22_Y17_N26
 \Equal0~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Equal0~0_combout\ = (!one_wire_count(25) & (one_wire_count(23) & (one_wire_count(24) & one_wire_count(26))))
+-- \Equal0~0_combout\ = (one_wire_count(24) & (!one_wire_count(25) & (one_wire_count(23) & one_wire_count(26))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100000000000000",
+	lut_mask => "0010000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => one_wire_count(25),
-	datab => one_wire_count(23),
-	datac => one_wire_count(24),
+	dataa => one_wire_count(24),
+	datab => one_wire_count(25),
+	datac => one_wire_count(23),
 	datad => one_wire_count(26),
 	combout => \Equal0~0_combout\);
 
--- Location: LCCOMB_X10_Y21_N8
-\display|Equal0~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X22_Y17_N24
+\Equal0~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \display|Equal0~0_combout\ = (\display|count\(2) & (\display|count\(1) & (\display|count\(0) & \display|count\(3))))
+-- \Equal0~1_combout\ = (one_wire_count(21) & (one_wire_count(22) & (one_wire_count(20) & !one_wire_count(19))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000000000000000",
+	lut_mask => "0000000010000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|count\(2),
-	datab => \display|count\(1),
-	datac => \display|count\(0),
-	datad => \display|count\(3),
-	combout => \display|Equal0~0_combout\);
+	dataa => one_wire_count(21),
+	datab => one_wire_count(22),
+	datac => one_wire_count(20),
+	datad => one_wire_count(19),
+	combout => \Equal0~1_combout\);
 
--- Location: LCCOMB_X11_Y19_N6
+-- Location: LCCOMB_X22_Y17_N10
 \Equal0~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Equal0~3_combout\ = (\Equal0~2_combout\ & (\Equal0~1_combout\ & (\Equal0~0_combout\ & \display|Equal0~0_combout\)))
+-- \Equal0~3_combout\ = (\Equal0~2_combout\ & (\display|Equal0~0_combout\ & (\Equal0~0_combout\ & \Equal0~1_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4188,15 +3899,65 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Equal0~2_combout\,
-	datab => \Equal0~1_combout\,
+	datab => \display|Equal0~0_combout\,
 	datac => \Equal0~0_combout\,
-	datad => \display|Equal0~0_combout\,
+	datad => \Equal0~1_combout\,
 	combout => \Equal0~3_combout\);
 
--- Location: LCCOMB_X11_Y19_N26
+-- Location: LCCOMB_X22_Y17_N0
+\Equal0~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Equal0~4_combout\ = (!one_wire_count(11) & (one_wire_count(14) & (!one_wire_count(12) & one_wire_count(13))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000010000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => one_wire_count(11),
+	datab => one_wire_count(14),
+	datac => one_wire_count(12),
+	datad => one_wire_count(13),
+	combout => \Equal0~4_combout\);
+
+-- Location: LCCOMB_X21_Y18_N2
+\Equal0~5\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Equal0~5_combout\ = (one_wire_count(7) & (!one_wire_count(10) & (!one_wire_count(9) & !one_wire_count(8))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => one_wire_count(7),
+	datab => one_wire_count(10),
+	datac => one_wire_count(9),
+	datad => one_wire_count(8),
+	combout => \Equal0~5_combout\);
+
+-- Location: LCCOMB_X21_Y18_N4
+\Equal0~6\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Equal0~6_combout\ = (one_wire_count(6) & (one_wire_count(5) & one_wire_count(4)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => one_wire_count(6),
+	datac => one_wire_count(5),
+	datad => one_wire_count(4),
+	combout => \Equal0~6_combout\);
+
+-- Location: LCCOMB_X22_Y17_N14
 \Equal0~7\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Equal0~7_combout\ = (\Equal0~6_combout\ & (\Equal0~4_combout\ & (\Equal0~5_combout\ & \Equal0~3_combout\)))
+-- \Equal0~7_combout\ = (\Equal0~3_combout\ & (\Equal0~4_combout\ & (\Equal0~5_combout\ & \Equal0~6_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4204,13 +3965,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Equal0~6_combout\,
+	dataa => \Equal0~3_combout\,
 	datab => \Equal0~4_combout\,
 	datac => \Equal0~5_combout\,
-	datad => \Equal0~3_combout\,
+	datad => \Equal0~6_combout\,
 	combout => \Equal0~7_combout\);
 
--- Location: FF_X21_Y21_N7
+-- Location: FF_X22_Y17_N23
 en_dht22 : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4226,57 +3987,40 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \en_dht22~q\);
 
--- Location: LCCOMB_X21_Y21_N20
-\dht22_one_wire|Selector9~1\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X23_Y17_N10
+\dht22_one_wire|Selector9~9\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Selector9~1_combout\ = (!\en_dht22~q\ & !\dht22_one_wire|state.ST_IDLE~q\)
+-- \dht22_one_wire|Selector9~9_combout\ = (\en_dht22~q\ & \dht22_one_wire|state.ST_CHECK~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001010101",
+	lut_mask => "1100110000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \en_dht22~q\,
-	datad => \dht22_one_wire|state.ST_IDLE~q\,
-	combout => \dht22_one_wire|Selector9~1_combout\);
+	datab => \en_dht22~q\,
+	datad => \dht22_one_wire|state.ST_CHECK~q\,
+	combout => \dht22_one_wire|Selector9~9_combout\);
 
--- Location: LCCOMB_X22_Y21_N2
-\dht22_one_wire|WideOr0~2\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X23_Y17_N24
+\dht22_one_wire|Selector9~10\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|WideOr0~2_combout\ = (!\dht22_one_wire|Selector9~5_combout\ & (!\dht22_one_wire|Selector9~0_combout\ & (\dht22_one_wire|WideOr0~0_combout\ & \dht22_one_wire|WideOr0~1_combout\)))
+-- \dht22_one_wire|Selector9~10_combout\ = (!\dht22_one_wire|Selector9~9_combout\ & (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & (\dht22_one_wire|Equal3~1_combout\ & \dht22_one_wire|Selector9~8_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001000000000000",
+	lut_mask => "0100000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Selector9~5_combout\,
-	datab => \dht22_one_wire|Selector9~0_combout\,
-	datac => \dht22_one_wire|WideOr0~0_combout\,
-	datad => \dht22_one_wire|WideOr0~1_combout\,
-	combout => \dht22_one_wire|WideOr0~2_combout\);
+	dataa => \dht22_one_wire|Selector9~9_combout\,
+	datab => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
+	datac => \dht22_one_wire|Equal3~1_combout\,
+	datad => \dht22_one_wire|Selector9~8_combout\,
+	combout => \dht22_one_wire|Selector9~10_combout\);
 
--- Location: LCCOMB_X22_Y21_N14
-\dht22_one_wire|Selector1~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector1~0_combout\ = (!\dht22_one_wire|Selector9~9_combout\ & (\dht22_one_wire|WideOr0~2_combout\ & ((\dht22_one_wire|Selector9~1_combout\) # (\dht22_one_wire|state.ST_START~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Selector9~1_combout\,
-	datab => \dht22_one_wire|Selector9~9_combout\,
-	datac => \dht22_one_wire|state.ST_START~q\,
-	datad => \dht22_one_wire|WideOr0~2_combout\,
-	combout => \dht22_one_wire|Selector1~0_combout\);
-
--- Location: FF_X22_Y21_N15
-\dht22_one_wire|state.ST_START\ : dffeas
+-- Location: FF_X23_Y17_N25
+\dht22_one_wire|state.ST_WAIT_4\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -4284,63 +4028,315 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|Selector1~0_combout\,
+	d => \dht22_one_wire|Selector9~10_combout\,
 	clrn => \rst_n~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \dht22_one_wire|state.ST_START~q\);
+	q => \dht22_one_wire|state.ST_WAIT_4~q\);
 
--- Location: LCCOMB_X21_Y21_N30
-\dht22_one_wire|WideOr8~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X23_Y17_N26
+\dht22_one_wire|WideOr6~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|WideOr8~0_combout\ = (!\dht22_one_wire|state.ST_START~q\ & (!\dht22_one_wire|state.ST_SAMPLE~q\ & !\dht22_one_wire|state.ST_CHECK~q\))
+-- \dht22_one_wire|WideOr6~0_combout\ = (!\dht22_one_wire|state.ST_WAIT_4~q\ & (!\dht22_one_wire|state.ST_WAIT_3~q\ & (!\dht22_one_wire|state.ST_WAIT_1~q\ & !\dht22_one_wire|state.ST_WAIT_2~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000000101",
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|state.ST_WAIT_4~q\,
+	datab => \dht22_one_wire|state.ST_WAIT_3~q\,
+	datac => \dht22_one_wire|state.ST_WAIT_1~q\,
+	datad => \dht22_one_wire|state.ST_WAIT_2~q\,
+	combout => \dht22_one_wire|WideOr6~0_combout\);
+
+-- Location: LCCOMB_X23_Y17_N4
+\dht22_one_wire|WideOr6\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|WideOr6~combout\ = ((\dht22_one_wire|state.ST_CHECK~q\) # (!\dht22_one_wire|state.ST_IDLE~q\)) # (!\dht22_one_wire|WideOr6~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101111111011111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|WideOr6~0_combout\,
+	datab => \dht22_one_wire|state.ST_CHECK~q\,
+	datac => \dht22_one_wire|state.ST_IDLE~q\,
+	combout => \dht22_one_wire|WideOr6~combout\);
+
+-- Location: FF_X23_Y14_N13
+\dht22_one_wire|clks[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|clks[0]~20_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sclr => \dht22_one_wire|WideOr6~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|clks\(0));
+
+-- Location: LCCOMB_X23_Y14_N14
+\dht22_one_wire|clks[1]~22\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|clks[1]~22_combout\ = (\dht22_one_wire|clks\(1) & (!\dht22_one_wire|clks[0]~21\)) # (!\dht22_one_wire|clks\(1) & ((\dht22_one_wire|clks[0]~21\) # (GND)))
+-- \dht22_one_wire|clks[1]~23\ = CARRY((!\dht22_one_wire|clks[0]~21\) # (!\dht22_one_wire|clks\(1)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|clks\(1),
+	datad => VCC,
+	cin => \dht22_one_wire|clks[0]~21\,
+	combout => \dht22_one_wire|clks[1]~22_combout\,
+	cout => \dht22_one_wire|clks[1]~23\);
+
+-- Location: FF_X23_Y14_N15
+\dht22_one_wire|clks[1]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|clks[1]~22_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sclr => \dht22_one_wire|WideOr6~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|clks\(1));
+
+-- Location: LCCOMB_X23_Y14_N16
+\dht22_one_wire|clks[2]~24\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|clks[2]~24_combout\ = (\dht22_one_wire|clks\(2) & (\dht22_one_wire|clks[1]~23\ $ (GND))) # (!\dht22_one_wire|clks\(2) & (!\dht22_one_wire|clks[1]~23\ & VCC))
+-- \dht22_one_wire|clks[2]~25\ = CARRY((\dht22_one_wire|clks\(2) & !\dht22_one_wire|clks[1]~23\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|clks\(2),
+	datad => VCC,
+	cin => \dht22_one_wire|clks[1]~23\,
+	combout => \dht22_one_wire|clks[2]~24_combout\,
+	cout => \dht22_one_wire|clks[2]~25\);
+
+-- Location: FF_X23_Y14_N17
+\dht22_one_wire|clks[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|clks[2]~24_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sclr => \dht22_one_wire|WideOr6~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|clks\(2));
+
+-- Location: LCCOMB_X23_Y14_N18
+\dht22_one_wire|clks[3]~26\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|clks[3]~26_combout\ = (\dht22_one_wire|clks\(3) & (!\dht22_one_wire|clks[2]~25\)) # (!\dht22_one_wire|clks\(3) & ((\dht22_one_wire|clks[2]~25\) # (GND)))
+-- \dht22_one_wire|clks[3]~27\ = CARRY((!\dht22_one_wire|clks[2]~25\) # (!\dht22_one_wire|clks\(3)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|clks\(3),
+	datad => VCC,
+	cin => \dht22_one_wire|clks[2]~25\,
+	combout => \dht22_one_wire|clks[3]~26_combout\,
+	cout => \dht22_one_wire|clks[3]~27\);
+
+-- Location: FF_X23_Y14_N19
+\dht22_one_wire|clks[3]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|clks[3]~26_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sclr => \dht22_one_wire|WideOr6~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|clks\(3));
+
+-- Location: LCCOMB_X23_Y14_N20
+\dht22_one_wire|clks[4]~28\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|clks[4]~28_combout\ = (\dht22_one_wire|clks\(4) & (\dht22_one_wire|clks[3]~27\ $ (GND))) # (!\dht22_one_wire|clks\(4) & (!\dht22_one_wire|clks[3]~27\ & VCC))
+-- \dht22_one_wire|clks[4]~29\ = CARRY((\dht22_one_wire|clks\(4) & !\dht22_one_wire|clks[3]~27\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|clks\(4),
+	datad => VCC,
+	cin => \dht22_one_wire|clks[3]~27\,
+	combout => \dht22_one_wire|clks[4]~28_combout\,
+	cout => \dht22_one_wire|clks[4]~29\);
+
+-- Location: FF_X23_Y14_N21
+\dht22_one_wire|clks[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|clks[4]~28_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sclr => \dht22_one_wire|WideOr6~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|clks\(4));
+
+-- Location: FF_X23_Y14_N23
+\dht22_one_wire|clks[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|clks[5]~30_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sclr => \dht22_one_wire|WideOr6~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|clks\(5));
+
+-- Location: LCCOMB_X23_Y14_N10
+\dht22_one_wire|Selector9~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector9~3_combout\ = (!\dht22_one_wire|clks\(5) & (!\dht22_one_wire|clks\(10) & (\dht22_one_wire|clks\(7) & \dht22_one_wire|state.ST_START~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|clks\(5),
+	datab => \dht22_one_wire|clks\(10),
+	datac => \dht22_one_wire|clks\(7),
+	datad => \dht22_one_wire|state.ST_START~q\,
+	combout => \dht22_one_wire|Selector9~3_combout\);
+
+-- Location: LCCOMB_X22_Y13_N16
+\dht22_one_wire|Selector9~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector9~2_combout\ = (\dht22_one_wire|Equal1~0_combout\ & (!\dht22_one_wire|clks\(17) & \dht22_one_wire|Equal2~1_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000101000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Equal1~0_combout\,
+	datac => \dht22_one_wire|clks\(17),
+	datad => \dht22_one_wire|Equal2~1_combout\,
+	combout => \dht22_one_wire|Selector9~2_combout\);
+
+-- Location: LCCOMB_X23_Y13_N28
+\dht22_one_wire|Selector9~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector9~4_combout\ = (\dht22_one_wire|clks\(15) & (\dht22_one_wire|clks\(18) & (\dht22_one_wire|clks\(16) & \dht22_one_wire|clks\(13))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|clks\(15),
+	datab => \dht22_one_wire|clks\(18),
+	datac => \dht22_one_wire|clks\(16),
+	datad => \dht22_one_wire|clks\(13),
+	combout => \dht22_one_wire|Selector9~4_combout\);
+
+-- Location: LCCOMB_X23_Y13_N26
+\dht22_one_wire|Selector9~5\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector9~5_combout\ = (\dht22_one_wire|Selector9~3_combout\ & (\dht22_one_wire|clks\(19) & (\dht22_one_wire|Selector9~2_combout\ & \dht22_one_wire|Selector9~4_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Selector9~3_combout\,
+	datab => \dht22_one_wire|clks\(19),
+	datac => \dht22_one_wire|Selector9~2_combout\,
+	datad => \dht22_one_wire|Selector9~4_combout\,
+	combout => \dht22_one_wire|Selector9~5_combout\);
+
+-- Location: LCCOMB_X23_Y17_N14
+\dht22_one_wire|Selector12~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Selector12~1_combout\ = (\dht22_one_wire|state.ST_START~q\) # (((\dht22_one_wire|state.ST_CHECK~q\) # (!\dht22_one_wire|Selector9~1_combout\)) # (!\dht22_one_wire|WideNor0~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111110111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \dht22_one_wire|state.ST_START~q\,
-	datac => \dht22_one_wire|state.ST_SAMPLE~q\,
+	datab => \dht22_one_wire|WideNor0~0_combout\,
+	datac => \dht22_one_wire|Selector9~1_combout\,
 	datad => \dht22_one_wire|state.ST_CHECK~q\,
-	combout => \dht22_one_wire|WideOr8~0_combout\);
-
--- Location: LCCOMB_X21_Y21_N18
-\dht22_one_wire|Selector12~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Selector12~1_combout\ = (\en_dht22~q\) # ((\dht22_one_wire|state.ST_DONE~q\) # ((\dht22_one_wire|state.ST_PROCESS_DATA~q\) # (\dht22_one_wire|state.ST_IDLE~q\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \en_dht22~q\,
-	datab => \dht22_one_wire|state.ST_DONE~q\,
-	datac => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
-	datad => \dht22_one_wire|state.ST_IDLE~q\,
 	combout => \dht22_one_wire|Selector12~1_combout\);
 
--- Location: LCCOMB_X22_Y21_N30
+-- Location: LCCOMB_X23_Y17_N0
 \dht22_one_wire|Selector12~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Selector12~2_combout\ = (\dht22_one_wire|Selector12~0_combout\ & ((\dht22_one_wire|io_reg~q\) # ((\dht22_one_wire|WideOr8~0_combout\ & !\dht22_one_wire|Selector12~1_combout\))))
+-- \dht22_one_wire|Selector12~2_combout\ = (!\dht22_one_wire|Selector9~5_combout\ & (!\dht22_one_wire|Selector9~0_combout\ & ((\dht22_one_wire|io_reg~q\) # (!\dht22_one_wire|Selector12~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111001000000000",
+	lut_mask => "0000000001010001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|WideOr8~0_combout\,
+	dataa => \dht22_one_wire|Selector9~5_combout\,
 	datab => \dht22_one_wire|Selector12~1_combout\,
 	datac => \dht22_one_wire|io_reg~q\,
-	datad => \dht22_one_wire|Selector12~0_combout\,
+	datad => \dht22_one_wire|Selector9~0_combout\,
 	combout => \dht22_one_wire|Selector12~2_combout\);
 
--- Location: FF_X22_Y21_N31
+-- Location: FF_X23_Y17_N1
 \dht22_one_wire|io_reg\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4355,71 +4351,55 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|io_reg~q\);
 
--- Location: LCCOMB_X16_Y22_N30
-\dht22_one_wire|Decoder0~10\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X25_Y17_N20
+\dht22_one_wire|Equal3~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Decoder0~10_combout\ = (\dht22_one_wire|bit_count_reg\(0) & !\dht22_one_wire|bit_count_reg\(1))
+-- \dht22_one_wire|Equal3~2_combout\ = (\dht22_one_wire|bit_count_reg\(5) & !\dht22_one_wire|bit_count_reg\(4))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011110000",
+	lut_mask => "0000000011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \dht22_one_wire|bit_count_reg\(0),
-	datad => \dht22_one_wire|bit_count_reg\(1),
-	combout => \dht22_one_wire|Decoder0~10_combout\);
+	datab => \dht22_one_wire|bit_count_reg\(5),
+	datad => \dht22_one_wire|bit_count_reg\(4),
+	combout => \dht22_one_wire|Equal3~2_combout\);
 
--- Location: LCCOMB_X18_Y22_N18
-\dht22_one_wire|Decoder0~7\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X25_Y17_N14
+\dht22_one_wire|Decoder0~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Decoder0~7_combout\ = (!\dht22_one_wire|bit_count_reg\(4) & (\dht22_one_wire|mealy_outputs~0_combout\ & (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & !\dht22_one_wire|bit_count_reg\(5))))
+-- \dht22_one_wire|Decoder0~0_combout\ = (!\dht22_one_wire|bit_count_reg\(3) & (\dht22_one_wire|Equal3~2_combout\ & (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & \dht22_one_wire|mealy_outputs~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001000000",
+	lut_mask => "0100000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(4),
-	datab => \dht22_one_wire|mealy_outputs~0_combout\,
+	dataa => \dht22_one_wire|bit_count_reg\(3),
+	datab => \dht22_one_wire|Equal3~2_combout\,
 	datac => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
-	datad => \dht22_one_wire|bit_count_reg\(5),
-	combout => \dht22_one_wire|Decoder0~7_combout\);
+	datad => \dht22_one_wire|mealy_outputs~0_combout\,
+	combout => \dht22_one_wire|Decoder0~0_combout\);
 
--- Location: LCCOMB_X16_Y20_N28
-\dht22_one_wire|Decoder0~8\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~8_combout\ = (\dht22_one_wire|bit_count_reg\(2) & (\dht22_one_wire|bit_count_reg\(3) & \dht22_one_wire|Decoder0~7_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(2),
-	datac => \dht22_one_wire|bit_count_reg\(3),
-	datad => \dht22_one_wire|Decoder0~7_combout\,
-	combout => \dht22_one_wire|Decoder0~8_combout\);
-
--- Location: LCCOMB_X18_Y21_N6
+-- Location: LCCOMB_X24_Y16_N8
 \dht22_one_wire|clk_stamp_reg[19]~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|clk_stamp_reg[19]~0_combout\ = (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & (!\dht22_one_wire|old_io_reg~q\ & \dht22_one_wire|new_io_reg~q\))
+-- \dht22_one_wire|clk_stamp_reg[19]~0_combout\ = (\dht22_one_wire|new_io_reg~q\ & (!\dht22_one_wire|old_io_reg~q\ & \dht22_one_wire|state.ST_PROCESS_DATA~q\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000101000000000",
+	lut_mask => "0010000000100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
-	datac => \dht22_one_wire|old_io_reg~q\,
-	datad => \dht22_one_wire|new_io_reg~q\,
+	dataa => \dht22_one_wire|new_io_reg~q\,
+	datab => \dht22_one_wire|old_io_reg~q\,
+	datac => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
 	combout => \dht22_one_wire|clk_stamp_reg[19]~0_combout\);
 
--- Location: FF_X18_Y20_N19
+-- Location: FF_X24_Y13_N19
 \dht22_one_wire|clk_stamp_reg[19]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4436,7 +4416,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(19));
 
--- Location: FF_X18_Y20_N17
+-- Location: FF_X24_Y13_N17
 \dht22_one_wire|clk_stamp_reg[18]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4453,7 +4433,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(18));
 
--- Location: FF_X18_Y20_N15
+-- Location: FF_X24_Y13_N15
 \dht22_one_wire|clk_stamp_reg[17]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4470,7 +4450,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(17));
 
--- Location: FF_X18_Y20_N13
+-- Location: FF_X24_Y13_N13
 \dht22_one_wire|clk_stamp_reg[16]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4487,7 +4467,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(16));
 
--- Location: FF_X18_Y20_N11
+-- Location: FF_X24_Y13_N11
 \dht22_one_wire|clk_stamp_reg[15]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4504,7 +4484,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(15));
 
--- Location: FF_X18_Y20_N9
+-- Location: FF_X24_Y13_N9
 \dht22_one_wire|clk_stamp_reg[14]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4521,7 +4501,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(14));
 
--- Location: FF_X18_Y20_N7
+-- Location: FF_X24_Y13_N7
 \dht22_one_wire|clk_stamp_reg[13]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4538,7 +4518,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(13));
 
--- Location: FF_X18_Y20_N5
+-- Location: FF_X24_Y13_N5
 \dht22_one_wire|clk_stamp_reg[12]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4555,7 +4535,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(12));
 
--- Location: FF_X18_Y20_N3
+-- Location: FF_X24_Y13_N3
 \dht22_one_wire|clk_stamp_reg[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4572,7 +4552,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(11));
 
--- Location: FF_X18_Y20_N1
+-- Location: FF_X24_Y13_N1
 \dht22_one_wire|clk_stamp_reg[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4589,7 +4569,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(10));
 
--- Location: FF_X18_Y21_N31
+-- Location: FF_X24_Y14_N31
 \dht22_one_wire|clk_stamp_reg[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4606,7 +4586,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(9));
 
--- Location: FF_X18_Y21_N29
+-- Location: FF_X24_Y14_N29
 \dht22_one_wire|clk_stamp_reg[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4623,7 +4603,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(8));
 
--- Location: FF_X18_Y21_N27
+-- Location: FF_X24_Y14_N27
 \dht22_one_wire|clk_stamp_reg[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4640,7 +4620,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(7));
 
--- Location: FF_X18_Y21_N25
+-- Location: FF_X24_Y14_N25
 \dht22_one_wire|clk_stamp_reg[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4657,7 +4637,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(6));
 
--- Location: FF_X18_Y21_N23
+-- Location: FF_X24_Y14_N23
 \dht22_one_wire|clk_stamp_reg[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4674,7 +4654,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(5));
 
--- Location: FF_X18_Y21_N21
+-- Location: FF_X24_Y14_N21
 \dht22_one_wire|clk_stamp_reg[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4691,7 +4671,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(4));
 
--- Location: FF_X18_Y21_N19
+-- Location: FF_X24_Y14_N19
 \dht22_one_wire|clk_stamp_reg[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4708,7 +4688,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(3));
 
--- Location: FF_X18_Y21_N17
+-- Location: FF_X24_Y14_N17
 \dht22_one_wire|clk_stamp_reg[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4725,7 +4705,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(2));
 
--- Location: FF_X18_Y21_N15
+-- Location: FF_X24_Y14_N15
 \dht22_one_wire|clk_stamp_reg[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4742,7 +4722,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(1));
 
--- Location: FF_X18_Y21_N13
+-- Location: FF_X24_Y14_N13
 \dht22_one_wire|clk_stamp_reg[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4759,25 +4739,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|clk_stamp_reg\(0));
 
--- Location: LCCOMB_X18_Y21_N12
+-- Location: LCCOMB_X24_Y14_N12
 \dht22_one_wire|Add1~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Add1~0_combout\ = (\dht22_one_wire|clk_stamp_reg\(0) & (\dht22_one_wire|clks\(0) $ (VCC))) # (!\dht22_one_wire|clk_stamp_reg\(0) & ((\dht22_one_wire|clks\(0)) # (GND)))
+-- \dht22_one_wire|Add1~0_combout\ = (\dht22_one_wire|clks\(0) & ((GND) # (!\dht22_one_wire|clk_stamp_reg\(0)))) # (!\dht22_one_wire|clks\(0) & (\dht22_one_wire|clk_stamp_reg\(0) $ (GND)))
 -- \dht22_one_wire|Add1~1\ = CARRY((\dht22_one_wire|clks\(0)) # (!\dht22_one_wire|clk_stamp_reg\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0110011011011101",
+	lut_mask => "0110011010111011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|clk_stamp_reg\(0),
-	datab => \dht22_one_wire|clks\(0),
+	dataa => \dht22_one_wire|clks\(0),
+	datab => \dht22_one_wire|clk_stamp_reg\(0),
 	datad => VCC,
 	combout => \dht22_one_wire|Add1~0_combout\,
 	cout => \dht22_one_wire|Add1~1\);
 
--- Location: LCCOMB_X18_Y21_N14
+-- Location: LCCOMB_X24_Y14_N14
 \dht22_one_wire|Add1~2\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~2_combout\ = (\dht22_one_wire|clk_stamp_reg\(1) & ((\dht22_one_wire|clks\(1) & (!\dht22_one_wire|Add1~1\)) # (!\dht22_one_wire|clks\(1) & ((\dht22_one_wire|Add1~1\) # (GND))))) # (!\dht22_one_wire|clk_stamp_reg\(1) & 
@@ -4797,7 +4777,7 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~2_combout\,
 	cout => \dht22_one_wire|Add1~3\);
 
--- Location: LCCOMB_X18_Y21_N16
+-- Location: LCCOMB_X24_Y14_N16
 \dht22_one_wire|Add1~4\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~4_combout\ = ((\dht22_one_wire|clks\(2) $ (\dht22_one_wire|clk_stamp_reg\(2) $ (\dht22_one_wire|Add1~3\)))) # (GND)
@@ -4816,7 +4796,7 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~4_combout\,
 	cout => \dht22_one_wire|Add1~5\);
 
--- Location: LCCOMB_X18_Y21_N18
+-- Location: LCCOMB_X24_Y14_N18
 \dht22_one_wire|Add1~6\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~6_combout\ = (\dht22_one_wire|clk_stamp_reg\(3) & ((\dht22_one_wire|clks\(3) & (!\dht22_one_wire|Add1~5\)) # (!\dht22_one_wire|clks\(3) & ((\dht22_one_wire|Add1~5\) # (GND))))) # (!\dht22_one_wire|clk_stamp_reg\(3) & 
@@ -4836,7 +4816,7 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~6_combout\,
 	cout => \dht22_one_wire|Add1~7\);
 
--- Location: LCCOMB_X18_Y21_N20
+-- Location: LCCOMB_X24_Y14_N20
 \dht22_one_wire|Add1~8\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~8_combout\ = ((\dht22_one_wire|clks\(4) $ (\dht22_one_wire|clk_stamp_reg\(4) $ (\dht22_one_wire|Add1~7\)))) # (GND)
@@ -4855,46 +4835,46 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~8_combout\,
 	cout => \dht22_one_wire|Add1~9\);
 
--- Location: LCCOMB_X18_Y21_N22
+-- Location: LCCOMB_X24_Y14_N22
 \dht22_one_wire|Add1~10\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Add1~10_combout\ = (\dht22_one_wire|clk_stamp_reg\(5) & ((\dht22_one_wire|clks\(5) & (!\dht22_one_wire|Add1~9\)) # (!\dht22_one_wire|clks\(5) & ((\dht22_one_wire|Add1~9\) # (GND))))) # (!\dht22_one_wire|clk_stamp_reg\(5) & 
--- ((\dht22_one_wire|clks\(5) & (\dht22_one_wire|Add1~9\ & VCC)) # (!\dht22_one_wire|clks\(5) & (!\dht22_one_wire|Add1~9\))))
--- \dht22_one_wire|Add1~11\ = CARRY((\dht22_one_wire|clk_stamp_reg\(5) & ((!\dht22_one_wire|Add1~9\) # (!\dht22_one_wire|clks\(5)))) # (!\dht22_one_wire|clk_stamp_reg\(5) & (!\dht22_one_wire|clks\(5) & !\dht22_one_wire|Add1~9\)))
+-- \dht22_one_wire|Add1~10_combout\ = (\dht22_one_wire|clks\(5) & ((\dht22_one_wire|clk_stamp_reg\(5) & (!\dht22_one_wire|Add1~9\)) # (!\dht22_one_wire|clk_stamp_reg\(5) & (\dht22_one_wire|Add1~9\ & VCC)))) # (!\dht22_one_wire|clks\(5) & 
+-- ((\dht22_one_wire|clk_stamp_reg\(5) & ((\dht22_one_wire|Add1~9\) # (GND))) # (!\dht22_one_wire|clk_stamp_reg\(5) & (!\dht22_one_wire|Add1~9\))))
+-- \dht22_one_wire|Add1~11\ = CARRY((\dht22_one_wire|clks\(5) & (\dht22_one_wire|clk_stamp_reg\(5) & !\dht22_one_wire|Add1~9\)) # (!\dht22_one_wire|clks\(5) & ((\dht22_one_wire|clk_stamp_reg\(5)) # (!\dht22_one_wire|Add1~9\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0110100100101011",
+	lut_mask => "0110100101001101",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|clk_stamp_reg\(5),
-	datab => \dht22_one_wire|clks\(5),
+	dataa => \dht22_one_wire|clks\(5),
+	datab => \dht22_one_wire|clk_stamp_reg\(5),
 	datad => VCC,
 	cin => \dht22_one_wire|Add1~9\,
 	combout => \dht22_one_wire|Add1~10_combout\,
 	cout => \dht22_one_wire|Add1~11\);
 
--- Location: LCCOMB_X18_Y21_N24
+-- Location: LCCOMB_X24_Y14_N24
 \dht22_one_wire|Add1~12\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Add1~12_combout\ = ((\dht22_one_wire|clk_stamp_reg\(6) $ (\dht22_one_wire|clks\(6) $ (\dht22_one_wire|Add1~11\)))) # (GND)
--- \dht22_one_wire|Add1~13\ = CARRY((\dht22_one_wire|clk_stamp_reg\(6) & (\dht22_one_wire|clks\(6) & !\dht22_one_wire|Add1~11\)) # (!\dht22_one_wire|clk_stamp_reg\(6) & ((\dht22_one_wire|clks\(6)) # (!\dht22_one_wire|Add1~11\))))
+-- \dht22_one_wire|Add1~12_combout\ = ((\dht22_one_wire|clks\(6) $ (\dht22_one_wire|clk_stamp_reg\(6) $ (\dht22_one_wire|Add1~11\)))) # (GND)
+-- \dht22_one_wire|Add1~13\ = CARRY((\dht22_one_wire|clks\(6) & ((!\dht22_one_wire|Add1~11\) # (!\dht22_one_wire|clk_stamp_reg\(6)))) # (!\dht22_one_wire|clks\(6) & (!\dht22_one_wire|clk_stamp_reg\(6) & !\dht22_one_wire|Add1~11\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1001011001001101",
+	lut_mask => "1001011000101011",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|clk_stamp_reg\(6),
-	datab => \dht22_one_wire|clks\(6),
+	dataa => \dht22_one_wire|clks\(6),
+	datab => \dht22_one_wire|clk_stamp_reg\(6),
 	datad => VCC,
 	cin => \dht22_one_wire|Add1~11\,
 	combout => \dht22_one_wire|Add1~12_combout\,
 	cout => \dht22_one_wire|Add1~13\);
 
--- Location: LCCOMB_X18_Y21_N26
+-- Location: LCCOMB_X24_Y14_N26
 \dht22_one_wire|Add1~14\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~14_combout\ = (\dht22_one_wire|clks\(7) & ((\dht22_one_wire|clk_stamp_reg\(7) & (!\dht22_one_wire|Add1~13\)) # (!\dht22_one_wire|clk_stamp_reg\(7) & (\dht22_one_wire|Add1~13\ & VCC)))) # (!\dht22_one_wire|clks\(7) & 
@@ -4914,7 +4894,7 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~14_combout\,
 	cout => \dht22_one_wire|Add1~15\);
 
--- Location: LCCOMB_X18_Y21_N28
+-- Location: LCCOMB_X24_Y14_N28
 \dht22_one_wire|Add1~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~16_combout\ = ((\dht22_one_wire|clks\(8) $ (\dht22_one_wire|clk_stamp_reg\(8) $ (\dht22_one_wire|Add1~15\)))) # (GND)
@@ -4933,7 +4913,7 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~16_combout\,
 	cout => \dht22_one_wire|Add1~17\);
 
--- Location: LCCOMB_X18_Y21_N30
+-- Location: LCCOMB_X24_Y14_N30
 \dht22_one_wire|Add1~18\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~18_combout\ = (\dht22_one_wire|clk_stamp_reg\(9) & ((\dht22_one_wire|clks\(9) & (!\dht22_one_wire|Add1~17\)) # (!\dht22_one_wire|clks\(9) & ((\dht22_one_wire|Add1~17\) # (GND))))) # (!\dht22_one_wire|clk_stamp_reg\(9) & 
@@ -4953,7 +4933,7 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~18_combout\,
 	cout => \dht22_one_wire|Add1~19\);
 
--- Location: LCCOMB_X18_Y20_N0
+-- Location: LCCOMB_X24_Y13_N0
 \dht22_one_wire|Add1~20\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~20_combout\ = ((\dht22_one_wire|clks\(10) $ (\dht22_one_wire|clk_stamp_reg\(10) $ (\dht22_one_wire|Add1~19\)))) # (GND)
@@ -4972,7 +4952,7 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~20_combout\,
 	cout => \dht22_one_wire|Add1~21\);
 
--- Location: LCCOMB_X18_Y20_N2
+-- Location: LCCOMB_X24_Y13_N2
 \dht22_one_wire|Add1~22\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~22_combout\ = (\dht22_one_wire|clk_stamp_reg\(11) & ((\dht22_one_wire|clks\(11) & (!\dht22_one_wire|Add1~21\)) # (!\dht22_one_wire|clks\(11) & ((\dht22_one_wire|Add1~21\) # (GND))))) # (!\dht22_one_wire|clk_stamp_reg\(11) & 
@@ -4992,7 +4972,7 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~22_combout\,
 	cout => \dht22_one_wire|Add1~23\);
 
--- Location: LCCOMB_X18_Y20_N4
+-- Location: LCCOMB_X24_Y13_N4
 \dht22_one_wire|Add1~24\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~24_combout\ = ((\dht22_one_wire|clk_stamp_reg\(12) $ (\dht22_one_wire|clks\(12) $ (\dht22_one_wire|Add1~23\)))) # (GND)
@@ -5011,27 +4991,27 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~24_combout\,
 	cout => \dht22_one_wire|Add1~25\);
 
--- Location: LCCOMB_X18_Y20_N6
+-- Location: LCCOMB_X24_Y13_N6
 \dht22_one_wire|Add1~26\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Add1~26_combout\ = (\dht22_one_wire|clks\(13) & ((\dht22_one_wire|clk_stamp_reg\(13) & (!\dht22_one_wire|Add1~25\)) # (!\dht22_one_wire|clk_stamp_reg\(13) & (\dht22_one_wire|Add1~25\ & VCC)))) # (!\dht22_one_wire|clks\(13) & 
--- ((\dht22_one_wire|clk_stamp_reg\(13) & ((\dht22_one_wire|Add1~25\) # (GND))) # (!\dht22_one_wire|clk_stamp_reg\(13) & (!\dht22_one_wire|Add1~25\))))
--- \dht22_one_wire|Add1~27\ = CARRY((\dht22_one_wire|clks\(13) & (\dht22_one_wire|clk_stamp_reg\(13) & !\dht22_one_wire|Add1~25\)) # (!\dht22_one_wire|clks\(13) & ((\dht22_one_wire|clk_stamp_reg\(13)) # (!\dht22_one_wire|Add1~25\))))
+-- \dht22_one_wire|Add1~26_combout\ = (\dht22_one_wire|clk_stamp_reg\(13) & ((\dht22_one_wire|clks\(13) & (!\dht22_one_wire|Add1~25\)) # (!\dht22_one_wire|clks\(13) & ((\dht22_one_wire|Add1~25\) # (GND))))) # (!\dht22_one_wire|clk_stamp_reg\(13) & 
+-- ((\dht22_one_wire|clks\(13) & (\dht22_one_wire|Add1~25\ & VCC)) # (!\dht22_one_wire|clks\(13) & (!\dht22_one_wire|Add1~25\))))
+-- \dht22_one_wire|Add1~27\ = CARRY((\dht22_one_wire|clk_stamp_reg\(13) & ((!\dht22_one_wire|Add1~25\) # (!\dht22_one_wire|clks\(13)))) # (!\dht22_one_wire|clk_stamp_reg\(13) & (!\dht22_one_wire|clks\(13) & !\dht22_one_wire|Add1~25\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0110100101001101",
+	lut_mask => "0110100100101011",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|clks\(13),
-	datab => \dht22_one_wire|clk_stamp_reg\(13),
+	dataa => \dht22_one_wire|clk_stamp_reg\(13),
+	datab => \dht22_one_wire|clks\(13),
 	datad => VCC,
 	cin => \dht22_one_wire|Add1~25\,
 	combout => \dht22_one_wire|Add1~26_combout\,
 	cout => \dht22_one_wire|Add1~27\);
 
--- Location: LCCOMB_X18_Y20_N8
+-- Location: LCCOMB_X24_Y13_N8
 \dht22_one_wire|Add1~28\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~28_combout\ = ((\dht22_one_wire|clk_stamp_reg\(14) $ (\dht22_one_wire|clks\(14) $ (\dht22_one_wire|Add1~27\)))) # (GND)
@@ -5050,27 +5030,27 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~28_combout\,
 	cout => \dht22_one_wire|Add1~29\);
 
--- Location: LCCOMB_X18_Y20_N10
+-- Location: LCCOMB_X24_Y13_N10
 \dht22_one_wire|Add1~30\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Add1~30_combout\ = (\dht22_one_wire|clk_stamp_reg\(15) & ((\dht22_one_wire|clks\(15) & (!\dht22_one_wire|Add1~29\)) # (!\dht22_one_wire|clks\(15) & ((\dht22_one_wire|Add1~29\) # (GND))))) # (!\dht22_one_wire|clk_stamp_reg\(15) & 
--- ((\dht22_one_wire|clks\(15) & (\dht22_one_wire|Add1~29\ & VCC)) # (!\dht22_one_wire|clks\(15) & (!\dht22_one_wire|Add1~29\))))
--- \dht22_one_wire|Add1~31\ = CARRY((\dht22_one_wire|clk_stamp_reg\(15) & ((!\dht22_one_wire|Add1~29\) # (!\dht22_one_wire|clks\(15)))) # (!\dht22_one_wire|clk_stamp_reg\(15) & (!\dht22_one_wire|clks\(15) & !\dht22_one_wire|Add1~29\)))
+-- \dht22_one_wire|Add1~30_combout\ = (\dht22_one_wire|clks\(15) & ((\dht22_one_wire|clk_stamp_reg\(15) & (!\dht22_one_wire|Add1~29\)) # (!\dht22_one_wire|clk_stamp_reg\(15) & (\dht22_one_wire|Add1~29\ & VCC)))) # (!\dht22_one_wire|clks\(15) & 
+-- ((\dht22_one_wire|clk_stamp_reg\(15) & ((\dht22_one_wire|Add1~29\) # (GND))) # (!\dht22_one_wire|clk_stamp_reg\(15) & (!\dht22_one_wire|Add1~29\))))
+-- \dht22_one_wire|Add1~31\ = CARRY((\dht22_one_wire|clks\(15) & (\dht22_one_wire|clk_stamp_reg\(15) & !\dht22_one_wire|Add1~29\)) # (!\dht22_one_wire|clks\(15) & ((\dht22_one_wire|clk_stamp_reg\(15)) # (!\dht22_one_wire|Add1~29\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0110100100101011",
+	lut_mask => "0110100101001101",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|clk_stamp_reg\(15),
-	datab => \dht22_one_wire|clks\(15),
+	dataa => \dht22_one_wire|clks\(15),
+	datab => \dht22_one_wire|clk_stamp_reg\(15),
 	datad => VCC,
 	cin => \dht22_one_wire|Add1~29\,
 	combout => \dht22_one_wire|Add1~30_combout\,
 	cout => \dht22_one_wire|Add1~31\);
 
--- Location: LCCOMB_X18_Y20_N12
+-- Location: LCCOMB_X24_Y13_N12
 \dht22_one_wire|Add1~32\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~32_combout\ = ((\dht22_one_wire|clk_stamp_reg\(16) $ (\dht22_one_wire|clks\(16) $ (\dht22_one_wire|Add1~31\)))) # (GND)
@@ -5089,7 +5069,7 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~32_combout\,
 	cout => \dht22_one_wire|Add1~33\);
 
--- Location: LCCOMB_X18_Y20_N14
+-- Location: LCCOMB_X24_Y13_N14
 \dht22_one_wire|Add1~34\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~34_combout\ = (\dht22_one_wire|clk_stamp_reg\(17) & ((\dht22_one_wire|clks\(17) & (!\dht22_one_wire|Add1~33\)) # (!\dht22_one_wire|clks\(17) & ((\dht22_one_wire|Add1~33\) # (GND))))) # (!\dht22_one_wire|clk_stamp_reg\(17) & 
@@ -5109,7 +5089,7 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~34_combout\,
 	cout => \dht22_one_wire|Add1~35\);
 
--- Location: LCCOMB_X18_Y20_N16
+-- Location: LCCOMB_X24_Y13_N16
 \dht22_one_wire|Add1~36\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~36_combout\ = ((\dht22_one_wire|clks\(18) $ (\dht22_one_wire|clk_stamp_reg\(18) $ (\dht22_one_wire|Add1~35\)))) # (GND)
@@ -5128,40 +5108,40 @@ PORT MAP (
 	combout => \dht22_one_wire|Add1~36_combout\,
 	cout => \dht22_one_wire|Add1~37\);
 
--- Location: LCCOMB_X18_Y20_N18
+-- Location: LCCOMB_X24_Y13_N18
 \dht22_one_wire|Add1~38\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add1~38_combout\ = \dht22_one_wire|clks\(19) $ (\dht22_one_wire|Add1~37\ $ (!\dht22_one_wire|clk_stamp_reg\(19)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101010100101",
+	lut_mask => "0011110011000011",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|clks\(19),
+	datab => \dht22_one_wire|clks\(19),
 	datad => \dht22_one_wire|clk_stamp_reg\(19),
 	cin => \dht22_one_wire|Add1~37\,
 	combout => \dht22_one_wire|Add1~38_combout\);
 
--- Location: LCCOMB_X18_Y21_N4
+-- Location: LCCOMB_X24_Y14_N4
 \dht22_one_wire|LessThan0~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|LessThan0~1_combout\ = (!\dht22_one_wire|Add1~4_combout\ & (!\dht22_one_wire|Add1~6_combout\ & ((!\dht22_one_wire|Add1~2_combout\) # (!\dht22_one_wire|Add1~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000010101",
+	lut_mask => "0000000000010011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Add1~4_combout\,
-	datab => \dht22_one_wire|Add1~0_combout\,
+	dataa => \dht22_one_wire|Add1~0_combout\,
+	datab => \dht22_one_wire|Add1~4_combout\,
 	datac => \dht22_one_wire|Add1~2_combout\,
 	datad => \dht22_one_wire|Add1~6_combout\,
 	combout => \dht22_one_wire|LessThan0~1_combout\);
 
--- Location: LCCOMB_X18_Y21_N2
+-- Location: LCCOMB_X24_Y14_N6
 \dht22_one_wire|LessThan0~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|LessThan0~0_combout\ = ((!\dht22_one_wire|Add1~16_combout\) # (!\dht22_one_wire|Add1~14_combout\)) # (!\dht22_one_wire|Add1~12_combout\)
@@ -5177,10 +5157,10 @@ PORT MAP (
 	datad => \dht22_one_wire|Add1~16_combout\,
 	combout => \dht22_one_wire|LessThan0~0_combout\);
 
--- Location: LCCOMB_X18_Y21_N10
+-- Location: LCCOMB_X24_Y14_N10
 \dht22_one_wire|LessThan0~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|LessThan0~2_combout\ = (\dht22_one_wire|LessThan0~0_combout\) # ((!\dht22_one_wire|Add1~8_combout\ & (!\dht22_one_wire|Add1~10_combout\ & \dht22_one_wire|LessThan0~1_combout\)))
+-- \dht22_one_wire|LessThan0~2_combout\ = (\dht22_one_wire|LessThan0~0_combout\) # ((!\dht22_one_wire|Add1~10_combout\ & (!\dht22_one_wire|Add1~8_combout\ & \dht22_one_wire|LessThan0~1_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5188,30 +5168,30 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Add1~8_combout\,
-	datab => \dht22_one_wire|Add1~10_combout\,
+	dataa => \dht22_one_wire|Add1~10_combout\,
+	datab => \dht22_one_wire|Add1~8_combout\,
 	datac => \dht22_one_wire|LessThan0~1_combout\,
 	datad => \dht22_one_wire|LessThan0~0_combout\,
 	combout => \dht22_one_wire|LessThan0~2_combout\);
 
--- Location: LCCOMB_X18_Y20_N28
+-- Location: LCCOMB_X24_Y13_N24
 \dht22_one_wire|LessThan0~3\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|LessThan0~3_combout\ = ((!\dht22_one_wire|Add1~18_combout\ & (!\dht22_one_wire|Add1~20_combout\ & \dht22_one_wire|LessThan0~2_combout\))) # (!\dht22_one_wire|Add1~22_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011011100110011",
+	lut_mask => "0001111100001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \dht22_one_wire|Add1~18_combout\,
-	datab => \dht22_one_wire|Add1~22_combout\,
-	datac => \dht22_one_wire|Add1~20_combout\,
+	datab => \dht22_one_wire|Add1~20_combout\,
+	datac => \dht22_one_wire|Add1~22_combout\,
 	datad => \dht22_one_wire|LessThan0~2_combout\,
 	combout => \dht22_one_wire|LessThan0~3_combout\);
 
--- Location: LCCOMB_X18_Y20_N26
+-- Location: LCCOMB_X24_Y13_N22
 \dht22_one_wire|LessThan0~4\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|LessThan0~4_combout\ = (!\dht22_one_wire|Add1~26_combout\ & (!\dht22_one_wire|Add1~28_combout\ & (!\dht22_one_wire|Add1~24_combout\ & \dht22_one_wire|LessThan0~3_combout\)))
@@ -5228,7 +5208,7 @@ PORT MAP (
 	datad => \dht22_one_wire|LessThan0~3_combout\,
 	combout => \dht22_one_wire|LessThan0~4_combout\);
 
--- Location: LCCOMB_X18_Y20_N24
+-- Location: LCCOMB_X24_Y13_N20
 \dht22_one_wire|LessThan0~5\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|LessThan0~5_combout\ = (!\dht22_one_wire|Add1~32_combout\ & (!\dht22_one_wire|Add1~30_combout\ & \dht22_one_wire|LessThan0~4_combout\))
@@ -5244,10 +5224,10 @@ PORT MAP (
 	datac => \dht22_one_wire|LessThan0~4_combout\,
 	combout => \dht22_one_wire|LessThan0~5_combout\);
 
--- Location: LCCOMB_X18_Y20_N22
+-- Location: LCCOMB_X24_Y13_N26
 \dht22_one_wire|LessThan0~6\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|LessThan0~6_combout\ = (!\dht22_one_wire|Add1~38_combout\ & (!\dht22_one_wire|Add1~34_combout\ & (!\dht22_one_wire|Add1~36_combout\ & \dht22_one_wire|LessThan0~5_combout\)))
+-- \dht22_one_wire|LessThan0~6_combout\ = (!\dht22_one_wire|Add1~38_combout\ & (!\dht22_one_wire|Add1~36_combout\ & (!\dht22_one_wire|Add1~34_combout\ & \dht22_one_wire|LessThan0~5_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5256,16 +5236,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \dht22_one_wire|Add1~38_combout\,
-	datab => \dht22_one_wire|Add1~34_combout\,
-	datac => \dht22_one_wire|Add1~36_combout\,
+	datab => \dht22_one_wire|Add1~36_combout\,
+	datac => \dht22_one_wire|Add1~34_combout\,
 	datad => \dht22_one_wire|LessThan0~5_combout\,
 	combout => \dht22_one_wire|LessThan0~6_combout\);
 
--- Location: LCCOMB_X17_Y20_N24
-\dht22_one_wire|data_buff_reg[13]~18\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X28_Y13_N16
+\dht22_one_wire|data_buff_reg[32]~30\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|data_buff_reg[13]~18_combout\ = (\dht22_one_wire|Decoder0~10_combout\ & ((\dht22_one_wire|Decoder0~8_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~8_combout\ & (\dht22_one_wire|data_buff_reg\(13))))) # 
--- (!\dht22_one_wire|Decoder0~10_combout\ & (((\dht22_one_wire|data_buff_reg\(13)))))
+-- \dht22_one_wire|data_buff_reg[32]~30_combout\ = (\dht22_one_wire|Decoder0~0_combout\ & ((\dht22_one_wire|Equal3~0_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Equal3~0_combout\ & (\dht22_one_wire|data_buff_reg\(32))))) # 
+-- (!\dht22_one_wire|Decoder0~0_combout\ & (((\dht22_one_wire|data_buff_reg\(32)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5273,14 +5253,14 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~10_combout\,
-	datab => \dht22_one_wire|Decoder0~8_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(13),
+	dataa => \dht22_one_wire|Decoder0~0_combout\,
+	datab => \dht22_one_wire|Equal3~0_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(32),
 	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[13]~18_combout\);
+	combout => \dht22_one_wire|data_buff_reg[32]~30_combout\);
 
--- Location: FF_X17_Y20_N25
-\dht22_one_wire|data_buff_reg[13]\ : dffeas
+-- Location: FF_X28_Y13_N17
+\dht22_one_wire|data_buff_reg[32]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -5288,65 +5268,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[13]~18_combout\,
+	d => \dht22_one_wire|data_buff_reg[32]~30_combout\,
 	clrn => \rst_n~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(13));
+	q => \dht22_one_wire|data_buff_reg\(32));
 
--- Location: LCCOMB_X16_Y20_N6
-\dht22_one_wire|Decoder0~9\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X28_Y13_N10
+\dht22_one_wire|Decoder0~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Decoder0~9_combout\ = (\dht22_one_wire|bit_count_reg\(2) & (!\dht22_one_wire|bit_count_reg\(3) & \dht22_one_wire|Decoder0~7_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000101000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(2),
-	datac => \dht22_one_wire|bit_count_reg\(3),
-	datad => \dht22_one_wire|Decoder0~7_combout\,
-	combout => \dht22_one_wire|Decoder0~9_combout\);
-
--- Location: LCCOMB_X17_Y20_N14
-\dht22_one_wire|data_buff_reg[5]~19\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[5]~19_combout\ = (\dht22_one_wire|Decoder0~10_combout\ & ((\dht22_one_wire|Decoder0~9_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~9_combout\ & (\dht22_one_wire|data_buff_reg\(5))))) # 
--- (!\dht22_one_wire|Decoder0~10_combout\ & (((\dht22_one_wire|data_buff_reg\(5)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~10_combout\,
-	datab => \dht22_one_wire|Decoder0~9_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(5),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[5]~19_combout\);
-
--- Location: FF_X17_Y20_N15
-\dht22_one_wire|data_buff_reg[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[5]~19_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(5));
-
--- Location: LCCOMB_X16_Y22_N20
-\dht22_one_wire|Decoder0~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~3_combout\ = (!\dht22_one_wire|bit_count_reg\(0) & \dht22_one_wire|bit_count_reg\(1))
+-- \dht22_one_wire|Decoder0~13_combout\ = (!\dht22_one_wire|bit_count_reg\(2) & \dht22_one_wire|Decoder0~0_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5354,15 +5285,30 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \dht22_one_wire|bit_count_reg\(0),
-	datad => \dht22_one_wire|bit_count_reg\(1),
-	combout => \dht22_one_wire|Decoder0~3_combout\);
+	datac => \dht22_one_wire|bit_count_reg\(2),
+	datad => \dht22_one_wire|Decoder0~0_combout\,
+	combout => \dht22_one_wire|Decoder0~13_combout\);
 
--- Location: LCCOMB_X17_Y20_N8
-\dht22_one_wire|data_buff_reg[14]~6\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X25_Y16_N6
+\dht22_one_wire|Decoder0~10\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|data_buff_reg[14]~6_combout\ = (\dht22_one_wire|Decoder0~3_combout\ & ((\dht22_one_wire|Decoder0~8_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~8_combout\ & (\dht22_one_wire|data_buff_reg\(14))))) # 
--- (!\dht22_one_wire|Decoder0~3_combout\ & (((\dht22_one_wire|data_buff_reg\(14)))))
+-- \dht22_one_wire|Decoder0~10_combout\ = (!\dht22_one_wire|bit_count_reg\(1) & \dht22_one_wire|bit_count_reg\(0))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|bit_count_reg\(1),
+	datac => \dht22_one_wire|bit_count_reg\(0),
+	combout => \dht22_one_wire|Decoder0~10_combout\);
+
+-- Location: LCCOMB_X28_Y13_N30
+\dht22_one_wire|data_buff_reg[33]~39\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[33]~39_combout\ = (\dht22_one_wire|Decoder0~13_combout\ & ((\dht22_one_wire|Decoder0~10_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~10_combout\ & (\dht22_one_wire|data_buff_reg\(33))))) 
+-- # (!\dht22_one_wire|Decoder0~13_combout\ & (((\dht22_one_wire|data_buff_reg\(33)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5370,14 +5316,14 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~3_combout\,
-	datab => \dht22_one_wire|Decoder0~8_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(14),
+	dataa => \dht22_one_wire|Decoder0~13_combout\,
+	datab => \dht22_one_wire|Decoder0~10_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(33),
 	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[14]~6_combout\);
+	combout => \dht22_one_wire|data_buff_reg[33]~39_combout\);
 
--- Location: FF_X17_Y20_N9
-\dht22_one_wire|data_buff_reg[14]\ : dffeas
+-- Location: FF_X28_Y13_N31
+\dht22_one_wire|data_buff_reg[33]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -5385,17 +5331,163 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[14]~6_combout\,
+	d => \dht22_one_wire|data_buff_reg[33]~39_combout\,
 	clrn => \rst_n~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(14));
+	q => \dht22_one_wire|data_buff_reg\(33));
 
--- Location: LCCOMB_X18_Y20_N20
-\dht22_one_wire|data_buff_reg[6]~7\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X25_Y17_N16
+\dht22_one_wire|Decoder0~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|data_buff_reg[6]~7_combout\ = (\dht22_one_wire|Decoder0~3_combout\ & ((\dht22_one_wire|Decoder0~9_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~9_combout\ & ((\dht22_one_wire|data_buff_reg\(6)))))) # 
--- (!\dht22_one_wire|Decoder0~3_combout\ & (((\dht22_one_wire|data_buff_reg\(6)))))
+-- \dht22_one_wire|Decoder0~4_combout\ = (\dht22_one_wire|mealy_outputs~0_combout\ & (\dht22_one_wire|bit_count_reg\(4) & (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & !\dht22_one_wire|bit_count_reg\(5))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000010000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|mealy_outputs~0_combout\,
+	datab => \dht22_one_wire|bit_count_reg\(4),
+	datac => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
+	datad => \dht22_one_wire|bit_count_reg\(5),
+	combout => \dht22_one_wire|Decoder0~4_combout\);
+
+-- Location: LCCOMB_X25_Y16_N8
+\dht22_one_wire|Decoder0~19\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Decoder0~19_combout\ = (\dht22_one_wire|Decoder0~10_combout\ & (!\dht22_one_wire|bit_count_reg\(2) & (\dht22_one_wire|Decoder0~4_combout\ & \dht22_one_wire|bit_count_reg\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Decoder0~10_combout\,
+	datab => \dht22_one_wire|bit_count_reg\(2),
+	datac => \dht22_one_wire|Decoder0~4_combout\,
+	datad => \dht22_one_wire|bit_count_reg\(3),
+	combout => \dht22_one_wire|Decoder0~19_combout\);
+
+-- Location: LCCOMB_X26_Y13_N26
+\dht22_one_wire|data_buff_reg[25]~33\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[25]~33_combout\ = (\dht22_one_wire|Decoder0~19_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~19_combout\ & (\dht22_one_wire|data_buff_reg\(25)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000011111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|Decoder0~19_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(25),
+	datad => \dht22_one_wire|LessThan0~6_combout\,
+	combout => \dht22_one_wire|data_buff_reg[25]~33_combout\);
+
+-- Location: FF_X26_Y13_N27
+\dht22_one_wire|data_buff_reg[25]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[25]~33_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(25));
+
+-- Location: LCCOMB_X25_Y16_N18
+\dht22_one_wire|Decoder0~20\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Decoder0~20_combout\ = (!\dht22_one_wire|bit_count_reg\(3) & (!\dht22_one_wire|bit_count_reg\(2) & (\dht22_one_wire|bit_count_reg\(0) & !\dht22_one_wire|bit_count_reg\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|bit_count_reg\(3),
+	datab => \dht22_one_wire|bit_count_reg\(2),
+	datac => \dht22_one_wire|bit_count_reg\(0),
+	datad => \dht22_one_wire|bit_count_reg\(1),
+	combout => \dht22_one_wire|Decoder0~20_combout\);
+
+-- Location: LCCOMB_X25_Y14_N30
+\dht22_one_wire|data_buff_reg[17]~34\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[17]~34_combout\ = (\dht22_one_wire|Decoder0~4_combout\ & ((\dht22_one_wire|Decoder0~20_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~20_combout\ & (\dht22_one_wire|data_buff_reg\(17))))) # 
+-- (!\dht22_one_wire|Decoder0~4_combout\ & (((\dht22_one_wire|data_buff_reg\(17)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000011111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Decoder0~4_combout\,
+	datab => \dht22_one_wire|Decoder0~20_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(17),
+	datad => \dht22_one_wire|LessThan0~6_combout\,
+	combout => \dht22_one_wire|data_buff_reg[17]~34_combout\);
+
+-- Location: FF_X25_Y14_N31
+\dht22_one_wire|data_buff_reg[17]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[17]~34_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(17));
+
+-- Location: LCCOMB_X25_Y16_N26
+\dht22_one_wire|Decoder0~14\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Decoder0~14_combout\ = (\dht22_one_wire|bit_count_reg\(3) & (!\dht22_one_wire|bit_count_reg\(2) & \dht22_one_wire|Decoder0~4_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010000000100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|bit_count_reg\(3),
+	datab => \dht22_one_wire|bit_count_reg\(2),
+	datac => \dht22_one_wire|Decoder0~4_combout\,
+	combout => \dht22_one_wire|Decoder0~14_combout\);
+
+-- Location: LCCOMB_X25_Y16_N16
+\dht22_one_wire|Decoder0~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Decoder0~3_combout\ = (\dht22_one_wire|bit_count_reg\(1) & !\dht22_one_wire|bit_count_reg\(0))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000110000001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|bit_count_reg\(1),
+	datac => \dht22_one_wire|bit_count_reg\(0),
+	combout => \dht22_one_wire|Decoder0~3_combout\);
+
+-- Location: LCCOMB_X24_Y13_N28
+\dht22_one_wire|data_buff_reg[26]~22\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[26]~22_combout\ = (\dht22_one_wire|Decoder0~14_combout\ & ((\dht22_one_wire|Decoder0~3_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~3_combout\ & ((\dht22_one_wire|data_buff_reg\(26)))))) # 
+-- (!\dht22_one_wire|Decoder0~14_combout\ & (((\dht22_one_wire|data_buff_reg\(26)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5404,13 +5496,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \dht22_one_wire|LessThan0~6_combout\,
-	datab => \dht22_one_wire|Decoder0~3_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(6),
-	datad => \dht22_one_wire|Decoder0~9_combout\,
-	combout => \dht22_one_wire|data_buff_reg[6]~7_combout\);
+	datab => \dht22_one_wire|Decoder0~14_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(26),
+	datad => \dht22_one_wire|Decoder0~3_combout\,
+	combout => \dht22_one_wire|data_buff_reg[26]~22_combout\);
 
--- Location: FF_X18_Y20_N21
-\dht22_one_wire|data_buff_reg[6]\ : dffeas
+-- Location: FF_X24_Y13_N29
+\dht22_one_wire|data_buff_reg[26]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -5418,47 +5510,147 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[6]~7_combout\,
+	d => \dht22_one_wire|data_buff_reg[26]~22_combout\,
 	clrn => \rst_n~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(6));
+	q => \dht22_one_wire|data_buff_reg\(26));
 
--- Location: LCCOMB_X16_Y22_N14
+-- Location: LCCOMB_X25_Y16_N20
+\dht22_one_wire|Decoder0~15\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Decoder0~15_combout\ = (!\dht22_one_wire|bit_count_reg\(3) & (!\dht22_one_wire|bit_count_reg\(2) & (!\dht22_one_wire|bit_count_reg\(0) & \dht22_one_wire|bit_count_reg\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|bit_count_reg\(3),
+	datab => \dht22_one_wire|bit_count_reg\(2),
+	datac => \dht22_one_wire|bit_count_reg\(0),
+	datad => \dht22_one_wire|bit_count_reg\(1),
+	combout => \dht22_one_wire|Decoder0~15_combout\);
+
+-- Location: LCCOMB_X25_Y15_N16
+\dht22_one_wire|data_buff_reg[18]~23\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[18]~23_combout\ = (\dht22_one_wire|Decoder0~4_combout\ & ((\dht22_one_wire|Decoder0~15_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~15_combout\ & (\dht22_one_wire|data_buff_reg\(18))))) # 
+-- (!\dht22_one_wire|Decoder0~4_combout\ & (((\dht22_one_wire|data_buff_reg\(18)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000011111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Decoder0~4_combout\,
+	datab => \dht22_one_wire|Decoder0~15_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(18),
+	datad => \dht22_one_wire|LessThan0~6_combout\,
+	combout => \dht22_one_wire|data_buff_reg[18]~23_combout\);
+
+-- Location: FF_X25_Y15_N17
+\dht22_one_wire|data_buff_reg[18]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[18]~23_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(18));
+
+-- Location: LCCOMB_X25_Y16_N10
+\dht22_one_wire|Decoder0~16\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Decoder0~16_combout\ = (!\dht22_one_wire|bit_count_reg\(3) & (!\dht22_one_wire|bit_count_reg\(2) & (\dht22_one_wire|bit_count_reg\(0) & \dht22_one_wire|bit_count_reg\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|bit_count_reg\(3),
+	datab => \dht22_one_wire|bit_count_reg\(2),
+	datac => \dht22_one_wire|bit_count_reg\(0),
+	datad => \dht22_one_wire|bit_count_reg\(1),
+	combout => \dht22_one_wire|Decoder0~16_combout\);
+
+-- Location: LCCOMB_X25_Y14_N0
+\dht22_one_wire|data_buff_reg[19]~25\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[19]~25_combout\ = (\dht22_one_wire|Decoder0~4_combout\ & ((\dht22_one_wire|Decoder0~16_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~16_combout\ & (\dht22_one_wire|data_buff_reg\(19))))) # 
+-- (!\dht22_one_wire|Decoder0~4_combout\ & (((\dht22_one_wire|data_buff_reg\(19)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000011111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Decoder0~4_combout\,
+	datab => \dht22_one_wire|Decoder0~16_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(19),
+	datad => \dht22_one_wire|LessThan0~6_combout\,
+	combout => \dht22_one_wire|data_buff_reg[19]~25_combout\);
+
+-- Location: FF_X25_Y14_N1
+\dht22_one_wire|data_buff_reg[19]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[19]~25_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(19));
+
+-- Location: LCCOMB_X28_Y13_N18
 \dht22_one_wire|Decoder0~2\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Decoder0~2_combout\ = (\dht22_one_wire|bit_count_reg\(1) & \dht22_one_wire|bit_count_reg\(0))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100000011000000",
+	lut_mask => "1111000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \dht22_one_wire|bit_count_reg\(1),
-	datac => \dht22_one_wire|bit_count_reg\(0),
+	datac => \dht22_one_wire|bit_count_reg\(1),
+	datad => \dht22_one_wire|bit_count_reg\(0),
 	combout => \dht22_one_wire|Decoder0~2_combout\);
 
--- Location: LCCOMB_X17_Y20_N12
-\dht22_one_wire|data_buff_reg[7]~9\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X24_Y13_N30
+\dht22_one_wire|data_buff_reg[27]~24\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|data_buff_reg[7]~9_combout\ = (\dht22_one_wire|Decoder0~2_combout\ & ((\dht22_one_wire|Decoder0~9_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~9_combout\ & (\dht22_one_wire|data_buff_reg\(7))))) # 
--- (!\dht22_one_wire|Decoder0~2_combout\ & (((\dht22_one_wire|data_buff_reg\(7)))))
+-- \dht22_one_wire|data_buff_reg[27]~24_combout\ = (\dht22_one_wire|Decoder0~14_combout\ & ((\dht22_one_wire|Decoder0~2_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~2_combout\ & ((\dht22_one_wire|data_buff_reg\(27)))))) # 
+-- (!\dht22_one_wire|Decoder0~14_combout\ & (((\dht22_one_wire|data_buff_reg\(27)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111000011111000",
+	lut_mask => "0111010011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~2_combout\,
-	datab => \dht22_one_wire|Decoder0~9_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(7),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[7]~9_combout\);
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~14_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(27),
+	datad => \dht22_one_wire|Decoder0~2_combout\,
+	combout => \dht22_one_wire|data_buff_reg[27]~24_combout\);
 
--- Location: FF_X17_Y20_N13
-\dht22_one_wire|data_buff_reg[7]\ : dffeas
+-- Location: FF_X24_Y13_N31
+\dht22_one_wire|data_buff_reg[27]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -5466,140 +5658,48 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[7]~9_combout\,
+	d => \dht22_one_wire|data_buff_reg[27]~24_combout\,
 	clrn => \rst_n~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(7));
+	q => \dht22_one_wire|data_buff_reg\(27));
 
--- Location: LCCOMB_X17_Y20_N22
-\dht22_one_wire|data_buff_reg[15]~8\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[15]~8_combout\ = (\dht22_one_wire|Decoder0~2_combout\ & ((\dht22_one_wire|Decoder0~8_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~8_combout\ & (\dht22_one_wire|data_buff_reg\(15))))) # 
--- (!\dht22_one_wire|Decoder0~2_combout\ & (((\dht22_one_wire|data_buff_reg\(15)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~2_combout\,
-	datab => \dht22_one_wire|Decoder0~8_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(15),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[15]~8_combout\);
-
--- Location: FF_X17_Y20_N23
-\dht22_one_wire|data_buff_reg[15]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[15]~8_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(15));
-
--- Location: LCCOMB_X16_Y20_N12
-\dht22_one_wire|Add3~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Add3~0_combout\ = (\dht22_one_wire|data_buff_reg\(7) & (\dht22_one_wire|data_buff_reg\(15) $ (VCC))) # (!\dht22_one_wire|data_buff_reg\(7) & (\dht22_one_wire|data_buff_reg\(15) & VCC))
--- \dht22_one_wire|Add3~1\ = CARRY((\dht22_one_wire|data_buff_reg\(7) & \dht22_one_wire|data_buff_reg\(15)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110011010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(7),
-	datab => \dht22_one_wire|data_buff_reg\(15),
-	datad => VCC,
-	combout => \dht22_one_wire|Add3~0_combout\,
-	cout => \dht22_one_wire|Add3~1\);
-
--- Location: LCCOMB_X16_Y20_N14
-\dht22_one_wire|Add3~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Add3~2_combout\ = (\dht22_one_wire|data_buff_reg\(14) & ((\dht22_one_wire|data_buff_reg\(6) & (\dht22_one_wire|Add3~1\ & VCC)) # (!\dht22_one_wire|data_buff_reg\(6) & (!\dht22_one_wire|Add3~1\)))) # (!\dht22_one_wire|data_buff_reg\(14) & 
--- ((\dht22_one_wire|data_buff_reg\(6) & (!\dht22_one_wire|Add3~1\)) # (!\dht22_one_wire|data_buff_reg\(6) & ((\dht22_one_wire|Add3~1\) # (GND)))))
--- \dht22_one_wire|Add3~3\ = CARRY((\dht22_one_wire|data_buff_reg\(14) & (!\dht22_one_wire|data_buff_reg\(6) & !\dht22_one_wire|Add3~1\)) # (!\dht22_one_wire|data_buff_reg\(14) & ((!\dht22_one_wire|Add3~1\) # (!\dht22_one_wire|data_buff_reg\(6)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1001011000010111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(14),
-	datab => \dht22_one_wire|data_buff_reg\(6),
-	datad => VCC,
-	cin => \dht22_one_wire|Add3~1\,
-	combout => \dht22_one_wire|Add3~2_combout\,
-	cout => \dht22_one_wire|Add3~3\);
-
--- Location: LCCOMB_X16_Y20_N16
-\dht22_one_wire|Add3~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Add3~4_combout\ = ((\dht22_one_wire|data_buff_reg\(13) $ (\dht22_one_wire|data_buff_reg\(5) $ (!\dht22_one_wire|Add3~3\)))) # (GND)
--- \dht22_one_wire|Add3~5\ = CARRY((\dht22_one_wire|data_buff_reg\(13) & ((\dht22_one_wire|data_buff_reg\(5)) # (!\dht22_one_wire|Add3~3\))) # (!\dht22_one_wire|data_buff_reg\(13) & (\dht22_one_wire|data_buff_reg\(5) & !\dht22_one_wire|Add3~3\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110100110001110",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(13),
-	datab => \dht22_one_wire|data_buff_reg\(5),
-	datad => VCC,
-	cin => \dht22_one_wire|Add3~3\,
-	combout => \dht22_one_wire|Add3~4_combout\,
-	cout => \dht22_one_wire|Add3~5\);
-
--- Location: LCCOMB_X17_Y22_N28
-\dht22_one_wire|Decoder0~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~4_combout\ = (\dht22_one_wire|mealy_outputs~0_combout\ & (!\dht22_one_wire|bit_count_reg\(5) & (\dht22_one_wire|bit_count_reg\(4) & \dht22_one_wire|state.ST_PROCESS_DATA~q\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|mealy_outputs~0_combout\,
-	datab => \dht22_one_wire|bit_count_reg\(5),
-	datac => \dht22_one_wire|bit_count_reg\(4),
-	datad => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
-	combout => \dht22_one_wire|Decoder0~4_combout\);
-
--- Location: LCCOMB_X17_Y19_N14
+-- Location: LCCOMB_X26_Y13_N22
 \dht22_one_wire|Decoder0~6\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Decoder0~6_combout\ = (\dht22_one_wire|bit_count_reg\(2) & (!\dht22_one_wire|bit_count_reg\(3) & \dht22_one_wire|Decoder0~4_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000101000000000",
+	lut_mask => "0000110000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(2),
+	datab => \dht22_one_wire|bit_count_reg\(2),
 	datac => \dht22_one_wire|bit_count_reg\(3),
 	datad => \dht22_one_wire|Decoder0~4_combout\,
 	combout => \dht22_one_wire|Decoder0~6_combout\);
 
--- Location: LCCOMB_X17_Y19_N26
-\dht22_one_wire|data_buff_reg[21]~15\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X28_Y13_N24
+\dht22_one_wire|Decoder0~11\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|data_buff_reg[21]~15_combout\ = (\dht22_one_wire|Decoder0~10_combout\ & ((\dht22_one_wire|Decoder0~6_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~6_combout\ & (\dht22_one_wire|data_buff_reg\(21))))) # 
--- (!\dht22_one_wire|Decoder0~10_combout\ & (((\dht22_one_wire|data_buff_reg\(21)))))
+-- \dht22_one_wire|Decoder0~11_combout\ = (!\dht22_one_wire|bit_count_reg\(1) & !\dht22_one_wire|bit_count_reg\(0))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \dht22_one_wire|bit_count_reg\(1),
+	datad => \dht22_one_wire|bit_count_reg\(0),
+	combout => \dht22_one_wire|Decoder0~11_combout\);
+
+-- Location: LCCOMB_X26_Y13_N30
+\dht22_one_wire|data_buff_reg[20]~13\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[20]~13_combout\ = (\dht22_one_wire|Decoder0~6_combout\ & ((\dht22_one_wire|Decoder0~11_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~11_combout\ & (\dht22_one_wire|data_buff_reg\(20))))) # 
+-- (!\dht22_one_wire|Decoder0~6_combout\ & (((\dht22_one_wire|data_buff_reg\(20)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5607,14 +5707,14 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~10_combout\,
-	datab => \dht22_one_wire|Decoder0~6_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(21),
+	dataa => \dht22_one_wire|Decoder0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~11_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(20),
 	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[21]~15_combout\);
+	combout => \dht22_one_wire|data_buff_reg[20]~13_combout\);
 
--- Location: FF_X17_Y19_N27
-\dht22_one_wire|data_buff_reg[21]\ : dffeas
+-- Location: FF_X26_Y13_N31
+\dht22_one_wire|data_buff_reg[20]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -5622,94 +5722,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[21]~15_combout\,
+	d => \dht22_one_wire|data_buff_reg[20]~13_combout\,
 	clrn => \rst_n~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(21));
+	q => \dht22_one_wire|data_buff_reg\(20));
 
--- Location: LCCOMB_X14_Y20_N22
-\dht22_one_wire|Decoder0~12\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~12_combout\ = (\dht22_one_wire|Decoder0~10_combout\ & (\dht22_one_wire|bit_count_reg\(3) & (\dht22_one_wire|bit_count_reg\(2) & \dht22_one_wire|Decoder0~4_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~10_combout\,
-	datab => \dht22_one_wire|bit_count_reg\(3),
-	datac => \dht22_one_wire|bit_count_reg\(2),
-	datad => \dht22_one_wire|Decoder0~4_combout\,
-	combout => \dht22_one_wire|Decoder0~12_combout\);
-
--- Location: LCCOMB_X14_Y20_N24
-\dht22_one_wire|data_buff_reg[29]~14\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[29]~14_combout\ = (\dht22_one_wire|Decoder0~12_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~12_combout\ & (\dht22_one_wire|data_buff_reg\(29)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000011111010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~12_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(29),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[29]~14_combout\);
-
--- Location: FF_X14_Y20_N25
-\dht22_one_wire|data_buff_reg[29]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[29]~14_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(29));
-
--- Location: LCCOMB_X17_Y19_N24
-\dht22_one_wire|data_buff_reg[22]~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[22]~3_combout\ = (\dht22_one_wire|Decoder0~3_combout\ & ((\dht22_one_wire|Decoder0~6_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~6_combout\ & (\dht22_one_wire|data_buff_reg\(22))))) # 
--- (!\dht22_one_wire|Decoder0~3_combout\ & (((\dht22_one_wire|data_buff_reg\(22)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~3_combout\,
-	datab => \dht22_one_wire|Decoder0~6_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(22),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[22]~3_combout\);
-
--- Location: FF_X17_Y19_N25
-\dht22_one_wire|data_buff_reg[22]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[22]~3_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(22));
-
--- Location: LCCOMB_X14_Y20_N16
+-- Location: LCCOMB_X26_Y13_N24
 \dht22_one_wire|Decoder0~5\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Decoder0~5_combout\ = (\dht22_one_wire|bit_count_reg\(2) & (\dht22_one_wire|bit_count_reg\(3) & \dht22_one_wire|Decoder0~4_combout\))
@@ -5725,11 +5744,11 @@ PORT MAP (
 	datad => \dht22_one_wire|Decoder0~4_combout\,
 	combout => \dht22_one_wire|Decoder0~5_combout\);
 
--- Location: LCCOMB_X13_Y20_N28
-\dht22_one_wire|data_buff_reg[30]~2\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X26_Y13_N20
+\dht22_one_wire|data_buff_reg[28]~12\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|data_buff_reg[30]~2_combout\ = (\dht22_one_wire|Decoder0~3_combout\ & ((\dht22_one_wire|Decoder0~5_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~5_combout\ & (\dht22_one_wire|data_buff_reg\(30))))) # 
--- (!\dht22_one_wire|Decoder0~3_combout\ & (((\dht22_one_wire|data_buff_reg\(30)))))
+-- \dht22_one_wire|data_buff_reg[28]~12_combout\ = (\dht22_one_wire|Decoder0~5_combout\ & ((\dht22_one_wire|Decoder0~11_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~11_combout\ & (\dht22_one_wire|data_buff_reg\(28))))) # 
+-- (!\dht22_one_wire|Decoder0~5_combout\ & (((\dht22_one_wire|data_buff_reg\(28)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5737,13 +5756,127 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~3_combout\,
+	dataa => \dht22_one_wire|Decoder0~5_combout\,
+	datab => \dht22_one_wire|Decoder0~11_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(28),
+	datad => \dht22_one_wire|LessThan0~6_combout\,
+	combout => \dht22_one_wire|data_buff_reg[28]~12_combout\);
+
+-- Location: FF_X26_Y13_N21
+\dht22_one_wire|data_buff_reg[28]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[28]~12_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(28));
+
+-- Location: LCCOMB_X25_Y13_N14
+\dht22_one_wire|data_buff_reg[21]~15\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[21]~15_combout\ = (\dht22_one_wire|Decoder0~6_combout\ & ((\dht22_one_wire|Decoder0~10_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~10_combout\ & ((\dht22_one_wire|data_buff_reg\(21)))))) # 
+-- (!\dht22_one_wire|Decoder0~6_combout\ & (((\dht22_one_wire|data_buff_reg\(21)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~6_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(21),
+	datad => \dht22_one_wire|Decoder0~10_combout\,
+	combout => \dht22_one_wire|data_buff_reg[21]~15_combout\);
+
+-- Location: FF_X25_Y13_N15
+\dht22_one_wire|data_buff_reg[21]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[21]~15_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(21));
+
+-- Location: LCCOMB_X25_Y16_N28
+\dht22_one_wire|Decoder0~12\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Decoder0~12_combout\ = (\dht22_one_wire|Decoder0~10_combout\ & (\dht22_one_wire|bit_count_reg\(2) & (\dht22_one_wire|Decoder0~4_combout\ & \dht22_one_wire|bit_count_reg\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Decoder0~10_combout\,
+	datab => \dht22_one_wire|bit_count_reg\(2),
+	datac => \dht22_one_wire|Decoder0~4_combout\,
+	datad => \dht22_one_wire|bit_count_reg\(3),
+	combout => \dht22_one_wire|Decoder0~12_combout\);
+
+-- Location: LCCOMB_X26_Y13_N28
+\dht22_one_wire|data_buff_reg[29]~14\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[29]~14_combout\ = (\dht22_one_wire|Decoder0~12_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~12_combout\ & (\dht22_one_wire|data_buff_reg\(29)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000011111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|Decoder0~12_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(29),
+	datad => \dht22_one_wire|LessThan0~6_combout\,
+	combout => \dht22_one_wire|data_buff_reg[29]~14_combout\);
+
+-- Location: FF_X26_Y13_N29
+\dht22_one_wire|data_buff_reg[29]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[29]~14_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(29));
+
+-- Location: LCCOMB_X25_Y13_N20
+\dht22_one_wire|data_buff_reg[30]~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[30]~2_combout\ = (\dht22_one_wire|Decoder0~5_combout\ & ((\dht22_one_wire|Decoder0~3_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~3_combout\ & ((\dht22_one_wire|data_buff_reg\(30)))))) # 
+-- (!\dht22_one_wire|Decoder0~5_combout\ & (((\dht22_one_wire|data_buff_reg\(30)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
 	datab => \dht22_one_wire|Decoder0~5_combout\,
 	datac => \dht22_one_wire|data_buff_reg\(30),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
+	datad => \dht22_one_wire|Decoder0~3_combout\,
 	combout => \dht22_one_wire|data_buff_reg[30]~2_combout\);
 
--- Location: FF_X13_Y20_N29
+-- Location: FF_X25_Y13_N21
 \dht22_one_wire|data_buff_reg[30]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -5758,7 +5891,73 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|data_buff_reg\(30));
 
--- Location: LCCOMB_X13_Y20_N30
+-- Location: LCCOMB_X25_Y13_N18
+\dht22_one_wire|data_buff_reg[22]~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[22]~3_combout\ = (\dht22_one_wire|Decoder0~6_combout\ & ((\dht22_one_wire|Decoder0~3_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~3_combout\ & ((\dht22_one_wire|data_buff_reg\(22)))))) # 
+-- (!\dht22_one_wire|Decoder0~6_combout\ & (((\dht22_one_wire|data_buff_reg\(22)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~6_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(22),
+	datad => \dht22_one_wire|Decoder0~3_combout\,
+	combout => \dht22_one_wire|data_buff_reg[22]~3_combout\);
+
+-- Location: FF_X25_Y13_N19
+\dht22_one_wire|data_buff_reg[22]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[22]~3_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(22));
+
+-- Location: LCCOMB_X25_Y13_N16
+\dht22_one_wire|data_buff_reg[23]~5\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[23]~5_combout\ = (\dht22_one_wire|Decoder0~2_combout\ & ((\dht22_one_wire|Decoder0~6_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~6_combout\ & ((\dht22_one_wire|data_buff_reg\(23)))))) # 
+-- (!\dht22_one_wire|Decoder0~2_combout\ & (((\dht22_one_wire|data_buff_reg\(23)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~2_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(23),
+	datad => \dht22_one_wire|Decoder0~6_combout\,
+	combout => \dht22_one_wire|data_buff_reg[23]~5_combout\);
+
+-- Location: FF_X25_Y13_N17
+\dht22_one_wire|data_buff_reg[23]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[23]~5_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(23));
+
+-- Location: LCCOMB_X26_Y13_N0
 \dht22_one_wire|data_buff_reg[31]~4\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|data_buff_reg[31]~4_combout\ = (\dht22_one_wire|Decoder0~2_combout\ & ((\dht22_one_wire|Decoder0~5_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~5_combout\ & (\dht22_one_wire|data_buff_reg\(31))))) # 
@@ -5776,7 +5975,7 @@ PORT MAP (
 	datad => \dht22_one_wire|LessThan0~6_combout\,
 	combout => \dht22_one_wire|data_buff_reg[31]~4_combout\);
 
--- Location: FF_X13_Y20_N31
+-- Location: FF_X26_Y13_N1
 \dht22_one_wire|data_buff_reg[31]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -5791,44 +5990,11 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|data_buff_reg\(31));
 
--- Location: LCCOMB_X17_Y19_N2
-\dht22_one_wire|data_buff_reg[23]~5\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[23]~5_combout\ = (\dht22_one_wire|Decoder0~2_combout\ & ((\dht22_one_wire|Decoder0~6_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~6_combout\ & (\dht22_one_wire|data_buff_reg\(23))))) # 
--- (!\dht22_one_wire|Decoder0~2_combout\ & (((\dht22_one_wire|data_buff_reg\(23)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~2_combout\,
-	datab => \dht22_one_wire|Decoder0~6_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(23),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[23]~5_combout\);
-
--- Location: FF_X17_Y19_N3
-\dht22_one_wire|data_buff_reg[23]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[23]~5_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(23));
-
--- Location: LCCOMB_X13_Y20_N4
+-- Location: LCCOMB_X26_Y13_N4
 \dht22_one_wire|Add4~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Add4~0_combout\ = (\dht22_one_wire|data_buff_reg\(31) & (\dht22_one_wire|data_buff_reg\(23) $ (VCC))) # (!\dht22_one_wire|data_buff_reg\(31) & (\dht22_one_wire|data_buff_reg\(23) & VCC))
--- \dht22_one_wire|Add4~1\ = CARRY((\dht22_one_wire|data_buff_reg\(31) & \dht22_one_wire|data_buff_reg\(23)))
+-- \dht22_one_wire|Add4~0_combout\ = (\dht22_one_wire|data_buff_reg\(23) & (\dht22_one_wire|data_buff_reg\(31) $ (VCC))) # (!\dht22_one_wire|data_buff_reg\(23) & (\dht22_one_wire|data_buff_reg\(31) & VCC))
+-- \dht22_one_wire|Add4~1\ = CARRY((\dht22_one_wire|data_buff_reg\(23) & \dht22_one_wire|data_buff_reg\(31)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5836,18 +6002,18 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(31),
-	datab => \dht22_one_wire|data_buff_reg\(23),
+	dataa => \dht22_one_wire|data_buff_reg\(23),
+	datab => \dht22_one_wire|data_buff_reg\(31),
 	datad => VCC,
 	combout => \dht22_one_wire|Add4~0_combout\,
 	cout => \dht22_one_wire|Add4~1\);
 
--- Location: LCCOMB_X13_Y20_N6
+-- Location: LCCOMB_X26_Y13_N6
 \dht22_one_wire|Add4~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Add4~2_combout\ = (\dht22_one_wire|data_buff_reg\(22) & ((\dht22_one_wire|data_buff_reg\(30) & (\dht22_one_wire|Add4~1\ & VCC)) # (!\dht22_one_wire|data_buff_reg\(30) & (!\dht22_one_wire|Add4~1\)))) # (!\dht22_one_wire|data_buff_reg\(22) & 
--- ((\dht22_one_wire|data_buff_reg\(30) & (!\dht22_one_wire|Add4~1\)) # (!\dht22_one_wire|data_buff_reg\(30) & ((\dht22_one_wire|Add4~1\) # (GND)))))
--- \dht22_one_wire|Add4~3\ = CARRY((\dht22_one_wire|data_buff_reg\(22) & (!\dht22_one_wire|data_buff_reg\(30) & !\dht22_one_wire|Add4~1\)) # (!\dht22_one_wire|data_buff_reg\(22) & ((!\dht22_one_wire|Add4~1\) # (!\dht22_one_wire|data_buff_reg\(30)))))
+-- \dht22_one_wire|Add4~2_combout\ = (\dht22_one_wire|data_buff_reg\(30) & ((\dht22_one_wire|data_buff_reg\(22) & (\dht22_one_wire|Add4~1\ & VCC)) # (!\dht22_one_wire|data_buff_reg\(22) & (!\dht22_one_wire|Add4~1\)))) # (!\dht22_one_wire|data_buff_reg\(30) & 
+-- ((\dht22_one_wire|data_buff_reg\(22) & (!\dht22_one_wire|Add4~1\)) # (!\dht22_one_wire|data_buff_reg\(22) & ((\dht22_one_wire|Add4~1\) # (GND)))))
+-- \dht22_one_wire|Add4~3\ = CARRY((\dht22_one_wire|data_buff_reg\(30) & (!\dht22_one_wire|data_buff_reg\(22) & !\dht22_one_wire|Add4~1\)) # (!\dht22_one_wire|data_buff_reg\(30) & ((!\dht22_one_wire|Add4~1\) # (!\dht22_one_wire|data_buff_reg\(22)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5855,14 +6021,14 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(22),
-	datab => \dht22_one_wire|data_buff_reg\(30),
+	dataa => \dht22_one_wire|data_buff_reg\(30),
+	datab => \dht22_one_wire|data_buff_reg\(22),
 	datad => VCC,
 	cin => \dht22_one_wire|Add4~1\,
 	combout => \dht22_one_wire|Add4~2_combout\,
 	cout => \dht22_one_wire|Add4~3\);
 
--- Location: LCCOMB_X13_Y20_N8
+-- Location: LCCOMB_X26_Y13_N8
 \dht22_one_wire|Add4~4\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add4~4_combout\ = ((\dht22_one_wire|data_buff_reg\(21) $ (\dht22_one_wire|data_buff_reg\(29) $ (!\dht22_one_wire|Add4~3\)))) # (GND)
@@ -5881,147 +6047,7 @@ PORT MAP (
 	combout => \dht22_one_wire|Add4~4_combout\,
 	cout => \dht22_one_wire|Add4~5\);
 
--- Location: LCCOMB_X16_Y19_N12
-\dht22_one_wire|check_sum[0]~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|check_sum[0]~0_combout\ = (\dht22_one_wire|Add4~0_combout\ & (\dht22_one_wire|Add3~0_combout\ $ (VCC))) # (!\dht22_one_wire|Add4~0_combout\ & (\dht22_one_wire|Add3~0_combout\ & VCC))
--- \dht22_one_wire|check_sum[0]~1\ = CARRY((\dht22_one_wire|Add4~0_combout\ & \dht22_one_wire|Add3~0_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110011010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Add4~0_combout\,
-	datab => \dht22_one_wire|Add3~0_combout\,
-	datad => VCC,
-	combout => \dht22_one_wire|check_sum[0]~0_combout\,
-	cout => \dht22_one_wire|check_sum[0]~1\);
-
--- Location: LCCOMB_X16_Y19_N14
-\dht22_one_wire|check_sum[1]~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|check_sum[1]~2_combout\ = (\dht22_one_wire|Add4~2_combout\ & ((\dht22_one_wire|Add3~2_combout\ & (\dht22_one_wire|check_sum[0]~1\ & VCC)) # (!\dht22_one_wire|Add3~2_combout\ & (!\dht22_one_wire|check_sum[0]~1\)))) # 
--- (!\dht22_one_wire|Add4~2_combout\ & ((\dht22_one_wire|Add3~2_combout\ & (!\dht22_one_wire|check_sum[0]~1\)) # (!\dht22_one_wire|Add3~2_combout\ & ((\dht22_one_wire|check_sum[0]~1\) # (GND)))))
--- \dht22_one_wire|check_sum[1]~3\ = CARRY((\dht22_one_wire|Add4~2_combout\ & (!\dht22_one_wire|Add3~2_combout\ & !\dht22_one_wire|check_sum[0]~1\)) # (!\dht22_one_wire|Add4~2_combout\ & ((!\dht22_one_wire|check_sum[0]~1\) # 
--- (!\dht22_one_wire|Add3~2_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1001011000010111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Add4~2_combout\,
-	datab => \dht22_one_wire|Add3~2_combout\,
-	datad => VCC,
-	cin => \dht22_one_wire|check_sum[0]~1\,
-	combout => \dht22_one_wire|check_sum[1]~2_combout\,
-	cout => \dht22_one_wire|check_sum[1]~3\);
-
--- Location: LCCOMB_X16_Y19_N16
-\dht22_one_wire|check_sum[2]~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|check_sum[2]~4_combout\ = ((\dht22_one_wire|Add3~4_combout\ $ (\dht22_one_wire|Add4~4_combout\ $ (!\dht22_one_wire|check_sum[1]~3\)))) # (GND)
--- \dht22_one_wire|check_sum[2]~5\ = CARRY((\dht22_one_wire|Add3~4_combout\ & ((\dht22_one_wire|Add4~4_combout\) # (!\dht22_one_wire|check_sum[1]~3\))) # (!\dht22_one_wire|Add3~4_combout\ & (\dht22_one_wire|Add4~4_combout\ & 
--- !\dht22_one_wire|check_sum[1]~3\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110100110001110",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Add3~4_combout\,
-	datab => \dht22_one_wire|Add4~4_combout\,
-	datad => VCC,
-	cin => \dht22_one_wire|check_sum[1]~3\,
-	combout => \dht22_one_wire|check_sum[2]~4_combout\,
-	cout => \dht22_one_wire|check_sum[2]~5\);
-
--- Location: LCCOMB_X16_Y22_N28
-\dht22_one_wire|Decoder0~11\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~11_combout\ = (!\dht22_one_wire|bit_count_reg\(1) & !\dht22_one_wire|bit_count_reg\(0))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001100000011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|bit_count_reg\(1),
-	datac => \dht22_one_wire|bit_count_reg\(0),
-	combout => \dht22_one_wire|Decoder0~11_combout\);
-
--- Location: LCCOMB_X13_Y20_N26
-\dht22_one_wire|data_buff_reg[20]~13\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[20]~13_combout\ = (\dht22_one_wire|Decoder0~11_combout\ & ((\dht22_one_wire|Decoder0~6_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~6_combout\ & (\dht22_one_wire|data_buff_reg\(20))))) # 
--- (!\dht22_one_wire|Decoder0~11_combout\ & (((\dht22_one_wire|data_buff_reg\(20)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~11_combout\,
-	datab => \dht22_one_wire|Decoder0~6_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(20),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[20]~13_combout\);
-
--- Location: FF_X13_Y20_N27
-\dht22_one_wire|data_buff_reg[20]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[20]~13_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(20));
-
--- Location: LCCOMB_X13_Y20_N0
-\dht22_one_wire|data_buff_reg[28]~12\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[28]~12_combout\ = (\dht22_one_wire|Decoder0~11_combout\ & ((\dht22_one_wire|Decoder0~5_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~5_combout\ & (\dht22_one_wire|data_buff_reg\(28))))) # 
--- (!\dht22_one_wire|Decoder0~11_combout\ & (((\dht22_one_wire|data_buff_reg\(28)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~11_combout\,
-	datab => \dht22_one_wire|Decoder0~5_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(28),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[28]~12_combout\);
-
--- Location: FF_X13_Y20_N1
-\dht22_one_wire|data_buff_reg[28]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[28]~12_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(28));
-
--- Location: LCCOMB_X13_Y20_N10
+-- Location: LCCOMB_X26_Y13_N10
 \dht22_one_wire|Add4~6\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add4~6_combout\ = (\dht22_one_wire|data_buff_reg\(20) & ((\dht22_one_wire|data_buff_reg\(28) & (\dht22_one_wire|Add4~5\ & VCC)) # (!\dht22_one_wire|data_buff_reg\(28) & (!\dht22_one_wire|Add4~5\)))) # (!\dht22_one_wire|data_buff_reg\(20) & 
@@ -6041,7 +6067,312 @@ PORT MAP (
 	combout => \dht22_one_wire|Add4~6_combout\,
 	cout => \dht22_one_wire|Add4~7\);
 
--- Location: LCCOMB_X17_Y20_N20
+-- Location: LCCOMB_X26_Y13_N12
+\dht22_one_wire|Add4~8\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Add4~8_combout\ = ((\dht22_one_wire|data_buff_reg\(19) $ (\dht22_one_wire|data_buff_reg\(27) $ (!\dht22_one_wire|Add4~7\)))) # (GND)
+-- \dht22_one_wire|Add4~9\ = CARRY((\dht22_one_wire|data_buff_reg\(19) & ((\dht22_one_wire|data_buff_reg\(27)) # (!\dht22_one_wire|Add4~7\))) # (!\dht22_one_wire|data_buff_reg\(19) & (\dht22_one_wire|data_buff_reg\(27) & !\dht22_one_wire|Add4~7\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110001110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(19),
+	datab => \dht22_one_wire|data_buff_reg\(27),
+	datad => VCC,
+	cin => \dht22_one_wire|Add4~7\,
+	combout => \dht22_one_wire|Add4~8_combout\,
+	cout => \dht22_one_wire|Add4~9\);
+
+-- Location: LCCOMB_X26_Y13_N14
+\dht22_one_wire|Add4~10\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Add4~10_combout\ = (\dht22_one_wire|data_buff_reg\(26) & ((\dht22_one_wire|data_buff_reg\(18) & (\dht22_one_wire|Add4~9\ & VCC)) # (!\dht22_one_wire|data_buff_reg\(18) & (!\dht22_one_wire|Add4~9\)))) # (!\dht22_one_wire|data_buff_reg\(26) 
+-- & ((\dht22_one_wire|data_buff_reg\(18) & (!\dht22_one_wire|Add4~9\)) # (!\dht22_one_wire|data_buff_reg\(18) & ((\dht22_one_wire|Add4~9\) # (GND)))))
+-- \dht22_one_wire|Add4~11\ = CARRY((\dht22_one_wire|data_buff_reg\(26) & (!\dht22_one_wire|data_buff_reg\(18) & !\dht22_one_wire|Add4~9\)) # (!\dht22_one_wire|data_buff_reg\(26) & ((!\dht22_one_wire|Add4~9\) # (!\dht22_one_wire|data_buff_reg\(18)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011000010111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(26),
+	datab => \dht22_one_wire|data_buff_reg\(18),
+	datad => VCC,
+	cin => \dht22_one_wire|Add4~9\,
+	combout => \dht22_one_wire|Add4~10_combout\,
+	cout => \dht22_one_wire|Add4~11\);
+
+-- Location: LCCOMB_X26_Y13_N16
+\dht22_one_wire|Add4~12\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Add4~12_combout\ = ((\dht22_one_wire|data_buff_reg\(25) $ (\dht22_one_wire|data_buff_reg\(17) $ (!\dht22_one_wire|Add4~11\)))) # (GND)
+-- \dht22_one_wire|Add4~13\ = CARRY((\dht22_one_wire|data_buff_reg\(25) & ((\dht22_one_wire|data_buff_reg\(17)) # (!\dht22_one_wire|Add4~11\))) # (!\dht22_one_wire|data_buff_reg\(25) & (\dht22_one_wire|data_buff_reg\(17) & !\dht22_one_wire|Add4~11\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110001110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(25),
+	datab => \dht22_one_wire|data_buff_reg\(17),
+	datad => VCC,
+	cin => \dht22_one_wire|Add4~11\,
+	combout => \dht22_one_wire|Add4~12_combout\,
+	cout => \dht22_one_wire|Add4~13\);
+
+-- Location: LCCOMB_X25_Y17_N22
+\dht22_one_wire|Decoder0~7\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Decoder0~7_combout\ = (\dht22_one_wire|mealy_outputs~0_combout\ & (!\dht22_one_wire|bit_count_reg\(4) & (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & !\dht22_one_wire|bit_count_reg\(5))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|mealy_outputs~0_combout\,
+	datab => \dht22_one_wire|bit_count_reg\(4),
+	datac => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
+	datad => \dht22_one_wire|bit_count_reg\(5),
+	combout => \dht22_one_wire|Decoder0~7_combout\);
+
+-- Location: LCCOMB_X25_Y13_N30
+\dht22_one_wire|data_buff_reg[1]~38\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[1]~38_combout\ = (\dht22_one_wire|Decoder0~7_combout\ & ((\dht22_one_wire|Decoder0~20_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~20_combout\ & ((\dht22_one_wire|data_buff_reg\(1)))))) # 
+-- (!\dht22_one_wire|Decoder0~7_combout\ & (((\dht22_one_wire|data_buff_reg\(1)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~7_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(1),
+	datad => \dht22_one_wire|Decoder0~20_combout\,
+	combout => \dht22_one_wire|data_buff_reg[1]~38_combout\);
+
+-- Location: FF_X25_Y13_N31
+\dht22_one_wire|data_buff_reg[1]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[1]~38_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(1));
+
+-- Location: LCCOMB_X25_Y14_N28
+\dht22_one_wire|Decoder0~17\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Decoder0~17_combout\ = (!\dht22_one_wire|bit_count_reg\(2) & (\dht22_one_wire|Decoder0~7_combout\ & \dht22_one_wire|bit_count_reg\(3)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|bit_count_reg\(2),
+	datac => \dht22_one_wire|Decoder0~7_combout\,
+	datad => \dht22_one_wire|bit_count_reg\(3),
+	combout => \dht22_one_wire|Decoder0~17_combout\);
+
+-- Location: LCCOMB_X25_Y13_N12
+\dht22_one_wire|data_buff_reg[9]~37\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[9]~37_combout\ = (\dht22_one_wire|Decoder0~10_combout\ & ((\dht22_one_wire|Decoder0~17_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~17_combout\ & ((\dht22_one_wire|data_buff_reg\(9)))))) # 
+-- (!\dht22_one_wire|Decoder0~10_combout\ & (((\dht22_one_wire|data_buff_reg\(9)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~10_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(9),
+	datad => \dht22_one_wire|Decoder0~17_combout\,
+	combout => \dht22_one_wire|data_buff_reg[9]~37_combout\);
+
+-- Location: FF_X25_Y13_N13
+\dht22_one_wire|data_buff_reg[9]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[9]~37_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(9));
+
+-- Location: LCCOMB_X25_Y15_N30
+\dht22_one_wire|data_buff_reg[2]~27\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[2]~27_combout\ = (\dht22_one_wire|Decoder0~7_combout\ & ((\dht22_one_wire|Decoder0~15_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~15_combout\ & (\dht22_one_wire|data_buff_reg\(2))))) # 
+-- (!\dht22_one_wire|Decoder0~7_combout\ & (((\dht22_one_wire|data_buff_reg\(2)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000011111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Decoder0~7_combout\,
+	datab => \dht22_one_wire|Decoder0~15_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(2),
+	datad => \dht22_one_wire|LessThan0~6_combout\,
+	combout => \dht22_one_wire|data_buff_reg[2]~27_combout\);
+
+-- Location: FF_X25_Y15_N31
+\dht22_one_wire|data_buff_reg[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[2]~27_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(2));
+
+-- Location: LCCOMB_X25_Y13_N24
+\dht22_one_wire|data_buff_reg[10]~26\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[10]~26_combout\ = (\dht22_one_wire|Decoder0~3_combout\ & ((\dht22_one_wire|Decoder0~17_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~17_combout\ & ((\dht22_one_wire|data_buff_reg\(10)))))) # 
+-- (!\dht22_one_wire|Decoder0~3_combout\ & (((\dht22_one_wire|data_buff_reg\(10)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~3_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(10),
+	datad => \dht22_one_wire|Decoder0~17_combout\,
+	combout => \dht22_one_wire|data_buff_reg[10]~26_combout\);
+
+-- Location: FF_X25_Y13_N25
+\dht22_one_wire|data_buff_reg[10]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[10]~26_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(10));
+
+-- Location: LCCOMB_X25_Y13_N28
+\dht22_one_wire|data_buff_reg[3]~29\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[3]~29_combout\ = (\dht22_one_wire|Decoder0~7_combout\ & ((\dht22_one_wire|Decoder0~16_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~16_combout\ & ((\dht22_one_wire|data_buff_reg\(3)))))) # 
+-- (!\dht22_one_wire|Decoder0~7_combout\ & (((\dht22_one_wire|data_buff_reg\(3)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~7_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(3),
+	datad => \dht22_one_wire|Decoder0~16_combout\,
+	combout => \dht22_one_wire|data_buff_reg[3]~29_combout\);
+
+-- Location: FF_X25_Y13_N29
+\dht22_one_wire|data_buff_reg[3]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[3]~29_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(3));
+
+-- Location: LCCOMB_X25_Y13_N6
+\dht22_one_wire|data_buff_reg[11]~28\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[11]~28_combout\ = (\dht22_one_wire|Decoder0~2_combout\ & ((\dht22_one_wire|Decoder0~17_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~17_combout\ & ((\dht22_one_wire|data_buff_reg\(11)))))) # 
+-- (!\dht22_one_wire|Decoder0~2_combout\ & (((\dht22_one_wire|data_buff_reg\(11)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~2_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(11),
+	datad => \dht22_one_wire|Decoder0~17_combout\,
+	combout => \dht22_one_wire|data_buff_reg[11]~28_combout\);
+
+-- Location: FF_X25_Y13_N7
+\dht22_one_wire|data_buff_reg[11]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[11]~28_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(11));
+
+-- Location: LCCOMB_X28_Y13_N20
+\dht22_one_wire|Decoder0~8\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Decoder0~8_combout\ = (\dht22_one_wire|bit_count_reg\(3) & (\dht22_one_wire|bit_count_reg\(2) & \dht22_one_wire|Decoder0~7_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|bit_count_reg\(3),
+	datac => \dht22_one_wire|bit_count_reg\(2),
+	datad => \dht22_one_wire|Decoder0~7_combout\,
+	combout => \dht22_one_wire|Decoder0~8_combout\);
+
+-- Location: LCCOMB_X28_Y13_N0
 \dht22_one_wire|data_buff_reg[12]~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|data_buff_reg[12]~16_combout\ = (\dht22_one_wire|Decoder0~11_combout\ & ((\dht22_one_wire|Decoder0~8_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~8_combout\ & (\dht22_one_wire|data_buff_reg\(12))))) # 
@@ -6059,7 +6390,7 @@ PORT MAP (
 	datad => \dht22_one_wire|LessThan0~6_combout\,
 	combout => \dht22_one_wire|data_buff_reg[12]~16_combout\);
 
--- Location: FF_X17_Y20_N21
+-- Location: FF_X28_Y13_N1
 \dht22_one_wire|data_buff_reg[12]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6074,11 +6405,27 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|data_buff_reg\(12));
 
--- Location: LCCOMB_X17_Y20_N2
+-- Location: LCCOMB_X28_Y13_N6
+\dht22_one_wire|Decoder0~9\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Decoder0~9_combout\ = (!\dht22_one_wire|bit_count_reg\(3) & (\dht22_one_wire|bit_count_reg\(2) & \dht22_one_wire|Decoder0~7_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|bit_count_reg\(3),
+	datac => \dht22_one_wire|bit_count_reg\(2),
+	datad => \dht22_one_wire|Decoder0~7_combout\,
+	combout => \dht22_one_wire|Decoder0~9_combout\);
+
+-- Location: LCCOMB_X28_Y13_N26
 \dht22_one_wire|data_buff_reg[4]~17\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|data_buff_reg[4]~17_combout\ = (\dht22_one_wire|Decoder0~11_combout\ & ((\dht22_one_wire|Decoder0~9_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~9_combout\ & (\dht22_one_wire|data_buff_reg\(4))))) # 
--- (!\dht22_one_wire|Decoder0~11_combout\ & (((\dht22_one_wire|data_buff_reg\(4)))))
+-- \dht22_one_wire|data_buff_reg[4]~17_combout\ = (\dht22_one_wire|Decoder0~9_combout\ & ((\dht22_one_wire|Decoder0~11_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~11_combout\ & (\dht22_one_wire|data_buff_reg\(4))))) # 
+-- (!\dht22_one_wire|Decoder0~9_combout\ & (((\dht22_one_wire|data_buff_reg\(4)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6086,13 +6433,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~11_combout\,
-	datab => \dht22_one_wire|Decoder0~9_combout\,
+	dataa => \dht22_one_wire|Decoder0~9_combout\,
+	datab => \dht22_one_wire|Decoder0~11_combout\,
 	datac => \dht22_one_wire|data_buff_reg\(4),
 	datad => \dht22_one_wire|LessThan0~6_combout\,
 	combout => \dht22_one_wire|data_buff_reg[4]~17_combout\);
 
--- Location: FF_X17_Y20_N3
+-- Location: FF_X28_Y13_N27
 \dht22_one_wire|data_buff_reg[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6107,7 +6454,262 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|data_buff_reg\(4));
 
--- Location: LCCOMB_X16_Y20_N18
+-- Location: LCCOMB_X25_Y13_N8
+\dht22_one_wire|data_buff_reg[13]~18\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[13]~18_combout\ = (\dht22_one_wire|Decoder0~10_combout\ & ((\dht22_one_wire|Decoder0~8_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~8_combout\ & ((\dht22_one_wire|data_buff_reg\(13)))))) # 
+-- (!\dht22_one_wire|Decoder0~10_combout\ & (((\dht22_one_wire|data_buff_reg\(13)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~10_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(13),
+	datad => \dht22_one_wire|Decoder0~8_combout\,
+	combout => \dht22_one_wire|data_buff_reg[13]~18_combout\);
+
+-- Location: FF_X25_Y13_N9
+\dht22_one_wire|data_buff_reg[13]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[13]~18_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(13));
+
+-- Location: LCCOMB_X25_Y13_N26
+\dht22_one_wire|data_buff_reg[5]~19\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[5]~19_combout\ = (\dht22_one_wire|Decoder0~10_combout\ & ((\dht22_one_wire|Decoder0~9_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~9_combout\ & ((\dht22_one_wire|data_buff_reg\(5)))))) # 
+-- (!\dht22_one_wire|Decoder0~10_combout\ & (((\dht22_one_wire|data_buff_reg\(5)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~10_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(5),
+	datad => \dht22_one_wire|Decoder0~9_combout\,
+	combout => \dht22_one_wire|data_buff_reg[5]~19_combout\);
+
+-- Location: FF_X25_Y13_N27
+\dht22_one_wire|data_buff_reg[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[5]~19_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(5));
+
+-- Location: LCCOMB_X25_Y13_N10
+\dht22_one_wire|data_buff_reg[14]~6\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[14]~6_combout\ = (\dht22_one_wire|Decoder0~3_combout\ & ((\dht22_one_wire|Decoder0~8_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~8_combout\ & ((\dht22_one_wire|data_buff_reg\(14)))))) # 
+-- (!\dht22_one_wire|Decoder0~3_combout\ & (((\dht22_one_wire|data_buff_reg\(14)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~3_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(14),
+	datad => \dht22_one_wire|Decoder0~8_combout\,
+	combout => \dht22_one_wire|data_buff_reg[14]~6_combout\);
+
+-- Location: FF_X25_Y13_N11
+\dht22_one_wire|data_buff_reg[14]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[14]~6_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(14));
+
+-- Location: LCCOMB_X26_Y13_N2
+\dht22_one_wire|data_buff_reg[6]~7\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[6]~7_combout\ = (\dht22_one_wire|Decoder0~3_combout\ & ((\dht22_one_wire|Decoder0~9_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~9_combout\ & (\dht22_one_wire|data_buff_reg\(6))))) # 
+-- (!\dht22_one_wire|Decoder0~3_combout\ & (((\dht22_one_wire|data_buff_reg\(6)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000011111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Decoder0~3_combout\,
+	datab => \dht22_one_wire|Decoder0~9_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(6),
+	datad => \dht22_one_wire|LessThan0~6_combout\,
+	combout => \dht22_one_wire|data_buff_reg[6]~7_combout\);
+
+-- Location: FF_X26_Y13_N3
+\dht22_one_wire|data_buff_reg[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[6]~7_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(6));
+
+-- Location: LCCOMB_X28_Y13_N28
+\dht22_one_wire|data_buff_reg[7]~9\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[7]~9_combout\ = (\dht22_one_wire|Decoder0~9_combout\ & ((\dht22_one_wire|Decoder0~2_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~2_combout\ & (\dht22_one_wire|data_buff_reg\(7))))) # 
+-- (!\dht22_one_wire|Decoder0~9_combout\ & (((\dht22_one_wire|data_buff_reg\(7)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000011111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Decoder0~9_combout\,
+	datab => \dht22_one_wire|Decoder0~2_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(7),
+	datad => \dht22_one_wire|LessThan0~6_combout\,
+	combout => \dht22_one_wire|data_buff_reg[7]~9_combout\);
+
+-- Location: FF_X28_Y13_N29
+\dht22_one_wire|data_buff_reg[7]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[7]~9_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(7));
+
+-- Location: LCCOMB_X25_Y13_N0
+\dht22_one_wire|data_buff_reg[15]~8\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[15]~8_combout\ = (\dht22_one_wire|Decoder0~2_combout\ & ((\dht22_one_wire|Decoder0~8_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~8_combout\ & ((\dht22_one_wire|data_buff_reg\(15)))))) # 
+-- (!\dht22_one_wire|Decoder0~2_combout\ & (((\dht22_one_wire|data_buff_reg\(15)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~2_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(15),
+	datad => \dht22_one_wire|Decoder0~8_combout\,
+	combout => \dht22_one_wire|data_buff_reg[15]~8_combout\);
+
+-- Location: FF_X25_Y13_N1
+\dht22_one_wire|data_buff_reg[15]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[15]~8_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(15));
+
+-- Location: LCCOMB_X25_Y14_N12
+\dht22_one_wire|Add3~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Add3~0_combout\ = (\dht22_one_wire|data_buff_reg\(7) & (\dht22_one_wire|data_buff_reg\(15) $ (VCC))) # (!\dht22_one_wire|data_buff_reg\(7) & (\dht22_one_wire|data_buff_reg\(15) & VCC))
+-- \dht22_one_wire|Add3~1\ = CARRY((\dht22_one_wire|data_buff_reg\(7) & \dht22_one_wire|data_buff_reg\(15)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110011010001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(7),
+	datab => \dht22_one_wire|data_buff_reg\(15),
+	datad => VCC,
+	combout => \dht22_one_wire|Add3~0_combout\,
+	cout => \dht22_one_wire|Add3~1\);
+
+-- Location: LCCOMB_X25_Y14_N14
+\dht22_one_wire|Add3~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Add3~2_combout\ = (\dht22_one_wire|data_buff_reg\(14) & ((\dht22_one_wire|data_buff_reg\(6) & (\dht22_one_wire|Add3~1\ & VCC)) # (!\dht22_one_wire|data_buff_reg\(6) & (!\dht22_one_wire|Add3~1\)))) # (!\dht22_one_wire|data_buff_reg\(14) & 
+-- ((\dht22_one_wire|data_buff_reg\(6) & (!\dht22_one_wire|Add3~1\)) # (!\dht22_one_wire|data_buff_reg\(6) & ((\dht22_one_wire|Add3~1\) # (GND)))))
+-- \dht22_one_wire|Add3~3\ = CARRY((\dht22_one_wire|data_buff_reg\(14) & (!\dht22_one_wire|data_buff_reg\(6) & !\dht22_one_wire|Add3~1\)) # (!\dht22_one_wire|data_buff_reg\(14) & ((!\dht22_one_wire|Add3~1\) # (!\dht22_one_wire|data_buff_reg\(6)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011000010111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(14),
+	datab => \dht22_one_wire|data_buff_reg\(6),
+	datad => VCC,
+	cin => \dht22_one_wire|Add3~1\,
+	combout => \dht22_one_wire|Add3~2_combout\,
+	cout => \dht22_one_wire|Add3~3\);
+
+-- Location: LCCOMB_X25_Y14_N16
+\dht22_one_wire|Add3~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Add3~4_combout\ = ((\dht22_one_wire|data_buff_reg\(13) $ (\dht22_one_wire|data_buff_reg\(5) $ (!\dht22_one_wire|Add3~3\)))) # (GND)
+-- \dht22_one_wire|Add3~5\ = CARRY((\dht22_one_wire|data_buff_reg\(13) & ((\dht22_one_wire|data_buff_reg\(5)) # (!\dht22_one_wire|Add3~3\))) # (!\dht22_one_wire|data_buff_reg\(13) & (\dht22_one_wire|data_buff_reg\(5) & !\dht22_one_wire|Add3~3\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110001110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(13),
+	datab => \dht22_one_wire|data_buff_reg\(5),
+	datad => VCC,
+	cin => \dht22_one_wire|Add3~3\,
+	combout => \dht22_one_wire|Add3~4_combout\,
+	cout => \dht22_one_wire|Add3~5\);
+
+-- Location: LCCOMB_X25_Y14_N18
 \dht22_one_wire|Add3~6\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|Add3~6_combout\ = (\dht22_one_wire|data_buff_reg\(12) & ((\dht22_one_wire|data_buff_reg\(4) & (\dht22_one_wire|Add3~5\ & VCC)) # (!\dht22_one_wire|data_buff_reg\(4) & (!\dht22_one_wire|Add3~5\)))) # (!\dht22_one_wire|data_buff_reg\(12) & 
@@ -6127,7 +6729,124 @@ PORT MAP (
 	combout => \dht22_one_wire|Add3~6_combout\,
 	cout => \dht22_one_wire|Add3~7\);
 
--- Location: LCCOMB_X16_Y19_N18
+-- Location: LCCOMB_X25_Y14_N20
+\dht22_one_wire|Add3~8\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Add3~8_combout\ = ((\dht22_one_wire|data_buff_reg\(3) $ (\dht22_one_wire|data_buff_reg\(11) $ (!\dht22_one_wire|Add3~7\)))) # (GND)
+-- \dht22_one_wire|Add3~9\ = CARRY((\dht22_one_wire|data_buff_reg\(3) & ((\dht22_one_wire|data_buff_reg\(11)) # (!\dht22_one_wire|Add3~7\))) # (!\dht22_one_wire|data_buff_reg\(3) & (\dht22_one_wire|data_buff_reg\(11) & !\dht22_one_wire|Add3~7\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110001110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(3),
+	datab => \dht22_one_wire|data_buff_reg\(11),
+	datad => VCC,
+	cin => \dht22_one_wire|Add3~7\,
+	combout => \dht22_one_wire|Add3~8_combout\,
+	cout => \dht22_one_wire|Add3~9\);
+
+-- Location: LCCOMB_X25_Y14_N22
+\dht22_one_wire|Add3~10\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Add3~10_combout\ = (\dht22_one_wire|data_buff_reg\(2) & ((\dht22_one_wire|data_buff_reg\(10) & (\dht22_one_wire|Add3~9\ & VCC)) # (!\dht22_one_wire|data_buff_reg\(10) & (!\dht22_one_wire|Add3~9\)))) # (!\dht22_one_wire|data_buff_reg\(2) & 
+-- ((\dht22_one_wire|data_buff_reg\(10) & (!\dht22_one_wire|Add3~9\)) # (!\dht22_one_wire|data_buff_reg\(10) & ((\dht22_one_wire|Add3~9\) # (GND)))))
+-- \dht22_one_wire|Add3~11\ = CARRY((\dht22_one_wire|data_buff_reg\(2) & (!\dht22_one_wire|data_buff_reg\(10) & !\dht22_one_wire|Add3~9\)) # (!\dht22_one_wire|data_buff_reg\(2) & ((!\dht22_one_wire|Add3~9\) # (!\dht22_one_wire|data_buff_reg\(10)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011000010111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(2),
+	datab => \dht22_one_wire|data_buff_reg\(10),
+	datad => VCC,
+	cin => \dht22_one_wire|Add3~9\,
+	combout => \dht22_one_wire|Add3~10_combout\,
+	cout => \dht22_one_wire|Add3~11\);
+
+-- Location: LCCOMB_X25_Y14_N24
+\dht22_one_wire|Add3~12\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Add3~12_combout\ = ((\dht22_one_wire|data_buff_reg\(1) $ (\dht22_one_wire|data_buff_reg\(9) $ (!\dht22_one_wire|Add3~11\)))) # (GND)
+-- \dht22_one_wire|Add3~13\ = CARRY((\dht22_one_wire|data_buff_reg\(1) & ((\dht22_one_wire|data_buff_reg\(9)) # (!\dht22_one_wire|Add3~11\))) # (!\dht22_one_wire|data_buff_reg\(1) & (\dht22_one_wire|data_buff_reg\(9) & !\dht22_one_wire|Add3~11\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110001110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(1),
+	datab => \dht22_one_wire|data_buff_reg\(9),
+	datad => VCC,
+	cin => \dht22_one_wire|Add3~11\,
+	combout => \dht22_one_wire|Add3~12_combout\,
+	cout => \dht22_one_wire|Add3~13\);
+
+-- Location: LCCOMB_X29_Y13_N12
+\dht22_one_wire|check_sum[0]~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|check_sum[0]~0_combout\ = (\dht22_one_wire|Add3~0_combout\ & (\dht22_one_wire|Add4~0_combout\ $ (VCC))) # (!\dht22_one_wire|Add3~0_combout\ & (\dht22_one_wire|Add4~0_combout\ & VCC))
+-- \dht22_one_wire|check_sum[0]~1\ = CARRY((\dht22_one_wire|Add3~0_combout\ & \dht22_one_wire|Add4~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110011010001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Add3~0_combout\,
+	datab => \dht22_one_wire|Add4~0_combout\,
+	datad => VCC,
+	combout => \dht22_one_wire|check_sum[0]~0_combout\,
+	cout => \dht22_one_wire|check_sum[0]~1\);
+
+-- Location: LCCOMB_X29_Y13_N14
+\dht22_one_wire|check_sum[1]~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|check_sum[1]~2_combout\ = (\dht22_one_wire|Add3~2_combout\ & ((\dht22_one_wire|Add4~2_combout\ & (\dht22_one_wire|check_sum[0]~1\ & VCC)) # (!\dht22_one_wire|Add4~2_combout\ & (!\dht22_one_wire|check_sum[0]~1\)))) # 
+-- (!\dht22_one_wire|Add3~2_combout\ & ((\dht22_one_wire|Add4~2_combout\ & (!\dht22_one_wire|check_sum[0]~1\)) # (!\dht22_one_wire|Add4~2_combout\ & ((\dht22_one_wire|check_sum[0]~1\) # (GND)))))
+-- \dht22_one_wire|check_sum[1]~3\ = CARRY((\dht22_one_wire|Add3~2_combout\ & (!\dht22_one_wire|Add4~2_combout\ & !\dht22_one_wire|check_sum[0]~1\)) # (!\dht22_one_wire|Add3~2_combout\ & ((!\dht22_one_wire|check_sum[0]~1\) # 
+-- (!\dht22_one_wire|Add4~2_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011000010111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Add3~2_combout\,
+	datab => \dht22_one_wire|Add4~2_combout\,
+	datad => VCC,
+	cin => \dht22_one_wire|check_sum[0]~1\,
+	combout => \dht22_one_wire|check_sum[1]~2_combout\,
+	cout => \dht22_one_wire|check_sum[1]~3\);
+
+-- Location: LCCOMB_X29_Y13_N16
+\dht22_one_wire|check_sum[2]~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|check_sum[2]~4_combout\ = ((\dht22_one_wire|Add4~4_combout\ $ (\dht22_one_wire|Add3~4_combout\ $ (!\dht22_one_wire|check_sum[1]~3\)))) # (GND)
+-- \dht22_one_wire|check_sum[2]~5\ = CARRY((\dht22_one_wire|Add4~4_combout\ & ((\dht22_one_wire|Add3~4_combout\) # (!\dht22_one_wire|check_sum[1]~3\))) # (!\dht22_one_wire|Add4~4_combout\ & (\dht22_one_wire|Add3~4_combout\ & 
+-- !\dht22_one_wire|check_sum[1]~3\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110001110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Add4~4_combout\,
+	datab => \dht22_one_wire|Add3~4_combout\,
+	datad => VCC,
+	cin => \dht22_one_wire|check_sum[1]~3\,
+	combout => \dht22_one_wire|check_sum[2]~4_combout\,
+	cout => \dht22_one_wire|check_sum[2]~5\);
+
+-- Location: LCCOMB_X29_Y13_N18
 \dht22_one_wire|check_sum[3]~6\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|check_sum[3]~6_combout\ = (\dht22_one_wire|Add4~6_combout\ & ((\dht22_one_wire|Add3~6_combout\ & (\dht22_one_wire|check_sum[2]~5\ & VCC)) # (!\dht22_one_wire|Add3~6_combout\ & (!\dht22_one_wire|check_sum[2]~5\)))) # 
@@ -6148,836 +6867,11 @@ PORT MAP (
 	combout => \dht22_one_wire|check_sum[3]~6_combout\,
 	cout => \dht22_one_wire|check_sum[3]~7\);
 
--- Location: LCCOMB_X18_Y22_N2
-\dht22_one_wire|Equal3~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Equal3~2_combout\ = (!\dht22_one_wire|bit_count_reg\(4) & \dht22_one_wire|bit_count_reg\(5))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \dht22_one_wire|bit_count_reg\(4),
-	datad => \dht22_one_wire|bit_count_reg\(5),
-	combout => \dht22_one_wire|Equal3~2_combout\);
-
--- Location: LCCOMB_X18_Y22_N20
-\dht22_one_wire|Decoder0~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~0_combout\ = (!\dht22_one_wire|bit_count_reg\(3) & (\dht22_one_wire|Equal3~2_combout\ & (\dht22_one_wire|state.ST_PROCESS_DATA~q\ & \dht22_one_wire|mealy_outputs~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(3),
-	datab => \dht22_one_wire|Equal3~2_combout\,
-	datac => \dht22_one_wire|state.ST_PROCESS_DATA~q\,
-	datad => \dht22_one_wire|mealy_outputs~0_combout\,
-	combout => \dht22_one_wire|Decoder0~0_combout\);
-
--- Location: LCCOMB_X17_Y19_N0
-\dht22_one_wire|Decoder0~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~1_combout\ = (\dht22_one_wire|bit_count_reg\(2) & \dht22_one_wire|Decoder0~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \dht22_one_wire|bit_count_reg\(2),
-	datad => \dht22_one_wire|Decoder0~0_combout\,
-	combout => \dht22_one_wire|Decoder0~1_combout\);
-
--- Location: LCCOMB_X17_Y20_N10
-\dht22_one_wire|data_buff_reg[36]~11\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[36]~11_combout\ = (\dht22_one_wire|Decoder0~11_combout\ & ((\dht22_one_wire|Decoder0~1_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~1_combout\ & (\dht22_one_wire|data_buff_reg\(36))))) # 
--- (!\dht22_one_wire|Decoder0~11_combout\ & (((\dht22_one_wire|data_buff_reg\(36)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~11_combout\,
-	datab => \dht22_one_wire|Decoder0~1_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(36),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[36]~11_combout\);
-
--- Location: FF_X17_Y20_N11
-\dht22_one_wire|data_buff_reg[36]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[36]~11_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(36));
-
--- Location: LCCOMB_X17_Y19_N20
-\dht22_one_wire|data_buff_reg[37]~10\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[37]~10_combout\ = (\dht22_one_wire|Decoder0~1_combout\ & ((\dht22_one_wire|Decoder0~10_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~10_combout\ & (\dht22_one_wire|data_buff_reg\(37))))) # 
--- (!\dht22_one_wire|Decoder0~1_combout\ & (((\dht22_one_wire|data_buff_reg\(37)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~1_combout\,
-	datab => \dht22_one_wire|Decoder0~10_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(37),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[37]~10_combout\);
-
--- Location: FF_X17_Y19_N21
-\dht22_one_wire|data_buff_reg[37]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[37]~10_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(37));
-
--- Location: LCCOMB_X16_Y19_N30
-\dht22_one_wire|valid~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|valid~1_combout\ = (\dht22_one_wire|check_sum[2]~4_combout\ & (\dht22_one_wire|data_buff_reg\(37) & (\dht22_one_wire|check_sum[3]~6_combout\ $ (!\dht22_one_wire|data_buff_reg\(36))))) # (!\dht22_one_wire|check_sum[2]~4_combout\ & 
--- (!\dht22_one_wire|data_buff_reg\(37) & (\dht22_one_wire|check_sum[3]~6_combout\ $ (!\dht22_one_wire|data_buff_reg\(36)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000001001000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|check_sum[2]~4_combout\,
-	datab => \dht22_one_wire|check_sum[3]~6_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(36),
-	datad => \dht22_one_wire|data_buff_reg\(37),
-	combout => \dht22_one_wire|valid~1_combout\);
-
--- Location: LCCOMB_X17_Y19_N12
-\dht22_one_wire|data_buff_reg[39]~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[39]~0_combout\ = (\dht22_one_wire|Decoder0~2_combout\ & ((\dht22_one_wire|Decoder0~1_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~1_combout\ & (\dht22_one_wire|data_buff_reg\(39))))) # 
--- (!\dht22_one_wire|Decoder0~2_combout\ & (((\dht22_one_wire|data_buff_reg\(39)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~2_combout\,
-	datab => \dht22_one_wire|Decoder0~1_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(39),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[39]~0_combout\);
-
--- Location: FF_X17_Y19_N13
-\dht22_one_wire|data_buff_reg[39]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[39]~0_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(39));
-
--- Location: LCCOMB_X17_Y19_N18
-\dht22_one_wire|data_buff_reg[38]~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[38]~1_combout\ = (\dht22_one_wire|Decoder0~1_combout\ & ((\dht22_one_wire|Decoder0~3_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~3_combout\ & (\dht22_one_wire|data_buff_reg\(38))))) # 
--- (!\dht22_one_wire|Decoder0~1_combout\ & (((\dht22_one_wire|data_buff_reg\(38)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~1_combout\,
-	datab => \dht22_one_wire|Decoder0~3_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(38),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[38]~1_combout\);
-
--- Location: FF_X17_Y19_N19
-\dht22_one_wire|data_buff_reg[38]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[38]~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(38));
-
--- Location: LCCOMB_X16_Y19_N8
-\dht22_one_wire|valid~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|valid~0_combout\ = (\dht22_one_wire|check_sum[0]~0_combout\ & (\dht22_one_wire|data_buff_reg\(39) & (\dht22_one_wire|check_sum[1]~2_combout\ $ (!\dht22_one_wire|data_buff_reg\(38))))) # (!\dht22_one_wire|check_sum[0]~0_combout\ & 
--- (!\dht22_one_wire|data_buff_reg\(39) & (\dht22_one_wire|check_sum[1]~2_combout\ $ (!\dht22_one_wire|data_buff_reg\(38)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000010000100001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|check_sum[0]~0_combout\,
-	datab => \dht22_one_wire|check_sum[1]~2_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(39),
-	datad => \dht22_one_wire|data_buff_reg\(38),
-	combout => \dht22_one_wire|valid~0_combout\);
-
--- Location: LCCOMB_X17_Y19_N6
-\dht22_one_wire|Decoder0~19\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~19_combout\ = (\dht22_one_wire|Decoder0~10_combout\ & (!\dht22_one_wire|bit_count_reg\(2) & (\dht22_one_wire|bit_count_reg\(3) & \dht22_one_wire|Decoder0~4_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~10_combout\,
-	datab => \dht22_one_wire|bit_count_reg\(2),
-	datac => \dht22_one_wire|bit_count_reg\(3),
-	datad => \dht22_one_wire|Decoder0~4_combout\,
-	combout => \dht22_one_wire|Decoder0~19_combout\);
-
--- Location: LCCOMB_X17_Y19_N4
-\dht22_one_wire|data_buff_reg[25]~33\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[25]~33_combout\ = (\dht22_one_wire|Decoder0~19_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~19_combout\ & (\dht22_one_wire|data_buff_reg\(25)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000011111010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~19_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(25),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[25]~33_combout\);
-
--- Location: FF_X17_Y19_N5
-\dht22_one_wire|data_buff_reg[25]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[25]~33_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(25));
-
--- Location: LCCOMB_X18_Y22_N22
-\dht22_one_wire|Decoder0~20\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~20_combout\ = (!\dht22_one_wire|bit_count_reg\(2) & (!\dht22_one_wire|bit_count_reg\(1) & (!\dht22_one_wire|bit_count_reg\(3) & \dht22_one_wire|bit_count_reg\(0))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(2),
-	datab => \dht22_one_wire|bit_count_reg\(1),
-	datac => \dht22_one_wire|bit_count_reg\(3),
-	datad => \dht22_one_wire|bit_count_reg\(0),
-	combout => \dht22_one_wire|Decoder0~20_combout\);
-
--- Location: LCCOMB_X14_Y20_N8
-\dht22_one_wire|data_buff_reg[17]~34\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[17]~34_combout\ = (\dht22_one_wire|Decoder0~4_combout\ & ((\dht22_one_wire|Decoder0~20_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~20_combout\ & (\dht22_one_wire|data_buff_reg\(17))))) # 
--- (!\dht22_one_wire|Decoder0~4_combout\ & (((\dht22_one_wire|data_buff_reg\(17)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~4_combout\,
-	datab => \dht22_one_wire|Decoder0~20_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(17),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[17]~34_combout\);
-
--- Location: FF_X14_Y20_N9
-\dht22_one_wire|data_buff_reg[17]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[17]~34_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(17));
-
--- Location: LCCOMB_X14_Y20_N28
-\dht22_one_wire|Decoder0~14\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~14_combout\ = (!\dht22_one_wire|bit_count_reg\(2) & (\dht22_one_wire|bit_count_reg\(3) & \dht22_one_wire|Decoder0~4_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|bit_count_reg\(2),
-	datac => \dht22_one_wire|bit_count_reg\(3),
-	datad => \dht22_one_wire|Decoder0~4_combout\,
-	combout => \dht22_one_wire|Decoder0~14_combout\);
-
--- Location: LCCOMB_X13_Y20_N24
-\dht22_one_wire|data_buff_reg[26]~22\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[26]~22_combout\ = (\dht22_one_wire|Decoder0~3_combout\ & ((\dht22_one_wire|Decoder0~14_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~14_combout\ & (\dht22_one_wire|data_buff_reg\(26))))) # 
--- (!\dht22_one_wire|Decoder0~3_combout\ & (((\dht22_one_wire|data_buff_reg\(26)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~3_combout\,
-	datab => \dht22_one_wire|Decoder0~14_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(26),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[26]~22_combout\);
-
--- Location: FF_X13_Y20_N25
-\dht22_one_wire|data_buff_reg[26]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[26]~22_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(26));
-
--- Location: LCCOMB_X18_Y22_N4
-\dht22_one_wire|Decoder0~15\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~15_combout\ = (!\dht22_one_wire|bit_count_reg\(2) & (\dht22_one_wire|bit_count_reg\(1) & (!\dht22_one_wire|bit_count_reg\(3) & !\dht22_one_wire|bit_count_reg\(0))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(2),
-	datab => \dht22_one_wire|bit_count_reg\(1),
-	datac => \dht22_one_wire|bit_count_reg\(3),
-	datad => \dht22_one_wire|bit_count_reg\(0),
-	combout => \dht22_one_wire|Decoder0~15_combout\);
-
--- Location: LCCOMB_X17_Y20_N6
-\dht22_one_wire|data_buff_reg[18]~23\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[18]~23_combout\ = (\dht22_one_wire|Decoder0~4_combout\ & ((\dht22_one_wire|Decoder0~15_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~15_combout\ & (\dht22_one_wire|data_buff_reg\(18))))) # 
--- (!\dht22_one_wire|Decoder0~4_combout\ & (((\dht22_one_wire|data_buff_reg\(18)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~4_combout\,
-	datab => \dht22_one_wire|Decoder0~15_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(18),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[18]~23_combout\);
-
--- Location: FF_X17_Y20_N7
-\dht22_one_wire|data_buff_reg[18]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[18]~23_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(18));
-
--- Location: LCCOMB_X13_Y20_N22
-\dht22_one_wire|data_buff_reg[27]~24\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[27]~24_combout\ = (\dht22_one_wire|Decoder0~2_combout\ & ((\dht22_one_wire|Decoder0~14_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~14_combout\ & (\dht22_one_wire|data_buff_reg\(27))))) # 
--- (!\dht22_one_wire|Decoder0~2_combout\ & (((\dht22_one_wire|data_buff_reg\(27)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~2_combout\,
-	datab => \dht22_one_wire|Decoder0~14_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(27),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[27]~24_combout\);
-
--- Location: FF_X13_Y20_N23
-\dht22_one_wire|data_buff_reg[27]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[27]~24_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(27));
-
--- Location: LCCOMB_X17_Y22_N22
-\dht22_one_wire|Decoder0~16\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~16_combout\ = (\dht22_one_wire|bit_count_reg\(0) & (!\dht22_one_wire|bit_count_reg\(3) & (!\dht22_one_wire|bit_count_reg\(2) & \dht22_one_wire|bit_count_reg\(1))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(0),
-	datab => \dht22_one_wire|bit_count_reg\(3),
-	datac => \dht22_one_wire|bit_count_reg\(2),
-	datad => \dht22_one_wire|bit_count_reg\(1),
-	combout => \dht22_one_wire|Decoder0~16_combout\);
-
--- Location: LCCOMB_X14_Y20_N30
-\dht22_one_wire|data_buff_reg[19]~25\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[19]~25_combout\ = (\dht22_one_wire|Decoder0~16_combout\ & ((\dht22_one_wire|Decoder0~4_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~4_combout\ & (\dht22_one_wire|data_buff_reg\(19))))) # 
--- (!\dht22_one_wire|Decoder0~16_combout\ & (((\dht22_one_wire|data_buff_reg\(19)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~16_combout\,
-	datab => \dht22_one_wire|Decoder0~4_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(19),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[19]~25_combout\);
-
--- Location: FF_X14_Y20_N31
-\dht22_one_wire|data_buff_reg[19]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[19]~25_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(19));
-
--- Location: LCCOMB_X13_Y20_N12
-\dht22_one_wire|Add4~8\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Add4~8_combout\ = ((\dht22_one_wire|data_buff_reg\(27) $ (\dht22_one_wire|data_buff_reg\(19) $ (!\dht22_one_wire|Add4~7\)))) # (GND)
--- \dht22_one_wire|Add4~9\ = CARRY((\dht22_one_wire|data_buff_reg\(27) & ((\dht22_one_wire|data_buff_reg\(19)) # (!\dht22_one_wire|Add4~7\))) # (!\dht22_one_wire|data_buff_reg\(27) & (\dht22_one_wire|data_buff_reg\(19) & !\dht22_one_wire|Add4~7\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110100110001110",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(27),
-	datab => \dht22_one_wire|data_buff_reg\(19),
-	datad => VCC,
-	cin => \dht22_one_wire|Add4~7\,
-	combout => \dht22_one_wire|Add4~8_combout\,
-	cout => \dht22_one_wire|Add4~9\);
-
--- Location: LCCOMB_X13_Y20_N14
-\dht22_one_wire|Add4~10\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Add4~10_combout\ = (\dht22_one_wire|data_buff_reg\(26) & ((\dht22_one_wire|data_buff_reg\(18) & (\dht22_one_wire|Add4~9\ & VCC)) # (!\dht22_one_wire|data_buff_reg\(18) & (!\dht22_one_wire|Add4~9\)))) # (!\dht22_one_wire|data_buff_reg\(26) 
--- & ((\dht22_one_wire|data_buff_reg\(18) & (!\dht22_one_wire|Add4~9\)) # (!\dht22_one_wire|data_buff_reg\(18) & ((\dht22_one_wire|Add4~9\) # (GND)))))
--- \dht22_one_wire|Add4~11\ = CARRY((\dht22_one_wire|data_buff_reg\(26) & (!\dht22_one_wire|data_buff_reg\(18) & !\dht22_one_wire|Add4~9\)) # (!\dht22_one_wire|data_buff_reg\(26) & ((!\dht22_one_wire|Add4~9\) # (!\dht22_one_wire|data_buff_reg\(18)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1001011000010111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(26),
-	datab => \dht22_one_wire|data_buff_reg\(18),
-	datad => VCC,
-	cin => \dht22_one_wire|Add4~9\,
-	combout => \dht22_one_wire|Add4~10_combout\,
-	cout => \dht22_one_wire|Add4~11\);
-
--- Location: LCCOMB_X13_Y20_N16
-\dht22_one_wire|Add4~12\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Add4~12_combout\ = ((\dht22_one_wire|data_buff_reg\(25) $ (\dht22_one_wire|data_buff_reg\(17) $ (!\dht22_one_wire|Add4~11\)))) # (GND)
--- \dht22_one_wire|Add4~13\ = CARRY((\dht22_one_wire|data_buff_reg\(25) & ((\dht22_one_wire|data_buff_reg\(17)) # (!\dht22_one_wire|Add4~11\))) # (!\dht22_one_wire|data_buff_reg\(25) & (\dht22_one_wire|data_buff_reg\(17) & !\dht22_one_wire|Add4~11\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110100110001110",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(25),
-	datab => \dht22_one_wire|data_buff_reg\(17),
-	datad => VCC,
-	cin => \dht22_one_wire|Add4~11\,
-	combout => \dht22_one_wire|Add4~12_combout\,
-	cout => \dht22_one_wire|Add4~13\);
-
--- Location: LCCOMB_X14_Y20_N10
-\dht22_one_wire|data_buff_reg[1]~38\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[1]~38_combout\ = (\dht22_one_wire|Decoder0~20_combout\ & ((\dht22_one_wire|Decoder0~7_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~7_combout\ & (\dht22_one_wire|data_buff_reg\(1))))) # 
--- (!\dht22_one_wire|Decoder0~20_combout\ & (((\dht22_one_wire|data_buff_reg\(1)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~20_combout\,
-	datab => \dht22_one_wire|Decoder0~7_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(1),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[1]~38_combout\);
-
--- Location: FF_X14_Y20_N11
-\dht22_one_wire|data_buff_reg[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[1]~38_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(1));
-
--- Location: LCCOMB_X16_Y20_N8
-\dht22_one_wire|Decoder0~17\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~17_combout\ = (!\dht22_one_wire|bit_count_reg\(2) & (\dht22_one_wire|bit_count_reg\(3) & \dht22_one_wire|Decoder0~7_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(2),
-	datac => \dht22_one_wire|bit_count_reg\(3),
-	datad => \dht22_one_wire|Decoder0~7_combout\,
-	combout => \dht22_one_wire|Decoder0~17_combout\);
-
--- Location: LCCOMB_X17_Y20_N18
-\dht22_one_wire|data_buff_reg[9]~37\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[9]~37_combout\ = (\dht22_one_wire|Decoder0~17_combout\ & ((\dht22_one_wire|Decoder0~10_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~10_combout\ & (\dht22_one_wire|data_buff_reg\(9))))) # 
--- (!\dht22_one_wire|Decoder0~17_combout\ & (((\dht22_one_wire|data_buff_reg\(9)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~17_combout\,
-	datab => \dht22_one_wire|Decoder0~10_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(9),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[9]~37_combout\);
-
--- Location: FF_X17_Y20_N19
-\dht22_one_wire|data_buff_reg[9]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[9]~37_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(9));
-
--- Location: LCCOMB_X17_Y20_N30
-\dht22_one_wire|data_buff_reg[2]~27\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[2]~27_combout\ = (\dht22_one_wire|Decoder0~7_combout\ & ((\dht22_one_wire|Decoder0~15_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~15_combout\ & (\dht22_one_wire|data_buff_reg\(2))))) # 
--- (!\dht22_one_wire|Decoder0~7_combout\ & (((\dht22_one_wire|data_buff_reg\(2)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~7_combout\,
-	datab => \dht22_one_wire|Decoder0~15_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(2),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[2]~27_combout\);
-
--- Location: FF_X17_Y20_N31
-\dht22_one_wire|data_buff_reg[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[2]~27_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(2));
-
--- Location: LCCOMB_X17_Y20_N16
-\dht22_one_wire|data_buff_reg[10]~26\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[10]~26_combout\ = (\dht22_one_wire|Decoder0~17_combout\ & ((\dht22_one_wire|Decoder0~3_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~3_combout\ & (\dht22_one_wire|data_buff_reg\(10))))) # 
--- (!\dht22_one_wire|Decoder0~17_combout\ & (((\dht22_one_wire|data_buff_reg\(10)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~17_combout\,
-	datab => \dht22_one_wire|Decoder0~3_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(10),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[10]~26_combout\);
-
--- Location: FF_X17_Y20_N17
-\dht22_one_wire|data_buff_reg[10]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[10]~26_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(10));
-
--- Location: LCCOMB_X14_Y20_N12
-\dht22_one_wire|data_buff_reg[3]~29\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[3]~29_combout\ = (\dht22_one_wire|Decoder0~16_combout\ & ((\dht22_one_wire|Decoder0~7_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~7_combout\ & (\dht22_one_wire|data_buff_reg\(3))))) # 
--- (!\dht22_one_wire|Decoder0~16_combout\ & (((\dht22_one_wire|data_buff_reg\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~16_combout\,
-	datab => \dht22_one_wire|Decoder0~7_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(3),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[3]~29_combout\);
-
--- Location: FF_X14_Y20_N13
-\dht22_one_wire|data_buff_reg[3]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[3]~29_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(3));
-
--- Location: LCCOMB_X17_Y20_N0
-\dht22_one_wire|data_buff_reg[11]~28\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[11]~28_combout\ = (\dht22_one_wire|Decoder0~17_combout\ & ((\dht22_one_wire|Decoder0~2_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~2_combout\ & (\dht22_one_wire|data_buff_reg\(11))))) # 
--- (!\dht22_one_wire|Decoder0~17_combout\ & (((\dht22_one_wire|data_buff_reg\(11)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~17_combout\,
-	datab => \dht22_one_wire|Decoder0~2_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(11),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[11]~28_combout\);
-
--- Location: FF_X17_Y20_N1
-\dht22_one_wire|data_buff_reg[11]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[11]~28_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(11));
-
--- Location: LCCOMB_X16_Y20_N20
-\dht22_one_wire|Add3~8\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Add3~8_combout\ = ((\dht22_one_wire|data_buff_reg\(3) $ (\dht22_one_wire|data_buff_reg\(11) $ (!\dht22_one_wire|Add3~7\)))) # (GND)
--- \dht22_one_wire|Add3~9\ = CARRY((\dht22_one_wire|data_buff_reg\(3) & ((\dht22_one_wire|data_buff_reg\(11)) # (!\dht22_one_wire|Add3~7\))) # (!\dht22_one_wire|data_buff_reg\(3) & (\dht22_one_wire|data_buff_reg\(11) & !\dht22_one_wire|Add3~7\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110100110001110",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(3),
-	datab => \dht22_one_wire|data_buff_reg\(11),
-	datad => VCC,
-	cin => \dht22_one_wire|Add3~7\,
-	combout => \dht22_one_wire|Add3~8_combout\,
-	cout => \dht22_one_wire|Add3~9\);
-
--- Location: LCCOMB_X16_Y20_N22
-\dht22_one_wire|Add3~10\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Add3~10_combout\ = (\dht22_one_wire|data_buff_reg\(2) & ((\dht22_one_wire|data_buff_reg\(10) & (\dht22_one_wire|Add3~9\ & VCC)) # (!\dht22_one_wire|data_buff_reg\(10) & (!\dht22_one_wire|Add3~9\)))) # (!\dht22_one_wire|data_buff_reg\(2) & 
--- ((\dht22_one_wire|data_buff_reg\(10) & (!\dht22_one_wire|Add3~9\)) # (!\dht22_one_wire|data_buff_reg\(10) & ((\dht22_one_wire|Add3~9\) # (GND)))))
--- \dht22_one_wire|Add3~11\ = CARRY((\dht22_one_wire|data_buff_reg\(2) & (!\dht22_one_wire|data_buff_reg\(10) & !\dht22_one_wire|Add3~9\)) # (!\dht22_one_wire|data_buff_reg\(2) & ((!\dht22_one_wire|Add3~9\) # (!\dht22_one_wire|data_buff_reg\(10)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1001011000010111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(2),
-	datab => \dht22_one_wire|data_buff_reg\(10),
-	datad => VCC,
-	cin => \dht22_one_wire|Add3~9\,
-	combout => \dht22_one_wire|Add3~10_combout\,
-	cout => \dht22_one_wire|Add3~11\);
-
--- Location: LCCOMB_X16_Y20_N24
-\dht22_one_wire|Add3~12\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Add3~12_combout\ = ((\dht22_one_wire|data_buff_reg\(1) $ (\dht22_one_wire|data_buff_reg\(9) $ (!\dht22_one_wire|Add3~11\)))) # (GND)
--- \dht22_one_wire|Add3~13\ = CARRY((\dht22_one_wire|data_buff_reg\(1) & ((\dht22_one_wire|data_buff_reg\(9)) # (!\dht22_one_wire|Add3~11\))) # (!\dht22_one_wire|data_buff_reg\(1) & (\dht22_one_wire|data_buff_reg\(9) & !\dht22_one_wire|Add3~11\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110100110001110",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(1),
-	datab => \dht22_one_wire|data_buff_reg\(9),
-	datad => VCC,
-	cin => \dht22_one_wire|Add3~11\,
-	combout => \dht22_one_wire|Add3~12_combout\,
-	cout => \dht22_one_wire|Add3~13\);
-
--- Location: LCCOMB_X16_Y19_N20
+-- Location: LCCOMB_X29_Y13_N20
 \dht22_one_wire|check_sum[4]~8\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|check_sum[4]~8_combout\ = ((\dht22_one_wire|Add4~8_combout\ $ (\dht22_one_wire|Add3~8_combout\ $ (!\dht22_one_wire|check_sum[3]~7\)))) # (GND)
--- \dht22_one_wire|check_sum[4]~9\ = CARRY((\dht22_one_wire|Add4~8_combout\ & ((\dht22_one_wire|Add3~8_combout\) # (!\dht22_one_wire|check_sum[3]~7\))) # (!\dht22_one_wire|Add4~8_combout\ & (\dht22_one_wire|Add3~8_combout\ & 
+-- \dht22_one_wire|check_sum[4]~8_combout\ = ((\dht22_one_wire|Add3~8_combout\ $ (\dht22_one_wire|Add4~8_combout\ $ (!\dht22_one_wire|check_sum[3]~7\)))) # (GND)
+-- \dht22_one_wire|check_sum[4]~9\ = CARRY((\dht22_one_wire|Add3~8_combout\ & ((\dht22_one_wire|Add4~8_combout\) # (!\dht22_one_wire|check_sum[3]~7\))) # (!\dht22_one_wire|Add3~8_combout\ & (\dht22_one_wire|Add4~8_combout\ & 
 -- !\dht22_one_wire|check_sum[3]~7\)))
 
 -- pragma translate_off
@@ -6986,20 +6880,20 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Add4~8_combout\,
-	datab => \dht22_one_wire|Add3~8_combout\,
+	dataa => \dht22_one_wire|Add3~8_combout\,
+	datab => \dht22_one_wire|Add4~8_combout\,
 	datad => VCC,
 	cin => \dht22_one_wire|check_sum[3]~7\,
 	combout => \dht22_one_wire|check_sum[4]~8_combout\,
 	cout => \dht22_one_wire|check_sum[4]~9\);
 
--- Location: LCCOMB_X16_Y19_N22
+-- Location: LCCOMB_X29_Y13_N22
 \dht22_one_wire|check_sum[5]~10\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|check_sum[5]~10_combout\ = (\dht22_one_wire|Add3~10_combout\ & ((\dht22_one_wire|Add4~10_combout\ & (\dht22_one_wire|check_sum[4]~9\ & VCC)) # (!\dht22_one_wire|Add4~10_combout\ & (!\dht22_one_wire|check_sum[4]~9\)))) # 
--- (!\dht22_one_wire|Add3~10_combout\ & ((\dht22_one_wire|Add4~10_combout\ & (!\dht22_one_wire|check_sum[4]~9\)) # (!\dht22_one_wire|Add4~10_combout\ & ((\dht22_one_wire|check_sum[4]~9\) # (GND)))))
--- \dht22_one_wire|check_sum[5]~11\ = CARRY((\dht22_one_wire|Add3~10_combout\ & (!\dht22_one_wire|Add4~10_combout\ & !\dht22_one_wire|check_sum[4]~9\)) # (!\dht22_one_wire|Add3~10_combout\ & ((!\dht22_one_wire|check_sum[4]~9\) # 
--- (!\dht22_one_wire|Add4~10_combout\))))
+-- \dht22_one_wire|check_sum[5]~10_combout\ = (\dht22_one_wire|Add4~10_combout\ & ((\dht22_one_wire|Add3~10_combout\ & (\dht22_one_wire|check_sum[4]~9\ & VCC)) # (!\dht22_one_wire|Add3~10_combout\ & (!\dht22_one_wire|check_sum[4]~9\)))) # 
+-- (!\dht22_one_wire|Add4~10_combout\ & ((\dht22_one_wire|Add3~10_combout\ & (!\dht22_one_wire|check_sum[4]~9\)) # (!\dht22_one_wire|Add3~10_combout\ & ((\dht22_one_wire|check_sum[4]~9\) # (GND)))))
+-- \dht22_one_wire|check_sum[5]~11\ = CARRY((\dht22_one_wire|Add4~10_combout\ & (!\dht22_one_wire|Add3~10_combout\ & !\dht22_one_wire|check_sum[4]~9\)) # (!\dht22_one_wire|Add4~10_combout\ & ((!\dht22_one_wire|check_sum[4]~9\) # 
+-- (!\dht22_one_wire|Add3~10_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7007,14 +6901,14 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Add3~10_combout\,
-	datab => \dht22_one_wire|Add4~10_combout\,
+	dataa => \dht22_one_wire|Add4~10_combout\,
+	datab => \dht22_one_wire|Add3~10_combout\,
 	datad => VCC,
 	cin => \dht22_one_wire|check_sum[4]~9\,
 	combout => \dht22_one_wire|check_sum[5]~10_combout\,
 	cout => \dht22_one_wire|check_sum[5]~11\);
 
--- Location: LCCOMB_X16_Y19_N24
+-- Location: LCCOMB_X29_Y13_N24
 \dht22_one_wire|check_sum[6]~12\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|check_sum[6]~12_combout\ = ((\dht22_one_wire|Add4~12_combout\ $ (\dht22_one_wire|Add3~12_combout\ $ (!\dht22_one_wire|check_sum[5]~11\)))) # (GND)
@@ -7034,41 +6928,55 @@ PORT MAP (
 	combout => \dht22_one_wire|check_sum[6]~12_combout\,
 	cout => \dht22_one_wire|check_sum[6]~13\);
 
--- Location: LCCOMB_X17_Y19_N28
-\dht22_one_wire|Decoder0~13\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X29_Y13_N4
+\dht22_one_wire|Equal5~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Decoder0~13_combout\ = (!\dht22_one_wire|bit_count_reg\(2) & \dht22_one_wire|Decoder0~0_combout\)
+-- \dht22_one_wire|Equal5~0_combout\ = \dht22_one_wire|data_buff_reg\(33) $ (\dht22_one_wire|check_sum[6]~12_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000111100000000",
+	lut_mask => "0011001111001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \dht22_one_wire|bit_count_reg\(2),
-	datad => \dht22_one_wire|Decoder0~0_combout\,
-	combout => \dht22_one_wire|Decoder0~13_combout\);
+	datab => \dht22_one_wire|data_buff_reg\(33),
+	datad => \dht22_one_wire|check_sum[6]~12_combout\,
+	combout => \dht22_one_wire|Equal5~0_combout\);
 
--- Location: LCCOMB_X17_Y19_N10
-\dht22_one_wire|data_buff_reg[33]~39\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X25_Y16_N12
+\dht22_one_wire|Decoder0~21\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|data_buff_reg[33]~39_combout\ = (\dht22_one_wire|Decoder0~13_combout\ & ((\dht22_one_wire|Decoder0~10_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~10_combout\ & (\dht22_one_wire|data_buff_reg\(33))))) 
--- # (!\dht22_one_wire|Decoder0~13_combout\ & (((\dht22_one_wire|data_buff_reg\(33)))))
+-- \dht22_one_wire|Decoder0~21_combout\ = (\dht22_one_wire|bit_count_reg\(3) & (\dht22_one_wire|Equal3~0_combout\ & \dht22_one_wire|Decoder0~7_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111000011111000",
+	lut_mask => "1010000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~13_combout\,
-	datab => \dht22_one_wire|Decoder0~10_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(33),
+	dataa => \dht22_one_wire|bit_count_reg\(3),
+	datac => \dht22_one_wire|Equal3~0_combout\,
+	datad => \dht22_one_wire|Decoder0~7_combout\,
+	combout => \dht22_one_wire|Decoder0~21_combout\);
+
+-- Location: LCCOMB_X23_Y13_N24
+\dht22_one_wire|data_buff_reg[8]~35\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[8]~35_combout\ = (\dht22_one_wire|Decoder0~21_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~21_combout\ & (\dht22_one_wire|data_buff_reg\(8)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000011111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|Decoder0~21_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(8),
 	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[33]~39_combout\);
+	combout => \dht22_one_wire|data_buff_reg[8]~35_combout\);
 
--- Location: FF_X17_Y19_N11
-\dht22_one_wire|data_buff_reg[33]\ : dffeas
+-- Location: FF_X23_Y13_N25
+\dht22_one_wire|data_buff_reg[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -7076,28 +6984,208 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[33]~39_combout\,
+	d => \dht22_one_wire|data_buff_reg[8]~35_combout\,
 	clrn => \rst_n~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(33));
+	q => \dht22_one_wire|data_buff_reg\(8));
 
--- Location: LCCOMB_X16_Y19_N6
-\dht22_one_wire|Equal5~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X25_Y16_N14
+\dht22_one_wire|Decoder0~22\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Equal5~0_combout\ = \dht22_one_wire|check_sum[6]~12_combout\ $ (\dht22_one_wire|data_buff_reg\(33))
+-- \dht22_one_wire|Decoder0~22_combout\ = (!\dht22_one_wire|bit_count_reg\(3) & (\dht22_one_wire|Equal3~0_combout\ & \dht22_one_wire|Decoder0~7_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111100",
+	lut_mask => "0101000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \dht22_one_wire|check_sum[6]~12_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(33),
-	combout => \dht22_one_wire|Equal5~0_combout\);
+	dataa => \dht22_one_wire|bit_count_reg\(3),
+	datac => \dht22_one_wire|Equal3~0_combout\,
+	datad => \dht22_one_wire|Decoder0~7_combout\,
+	combout => \dht22_one_wire|Decoder0~22_combout\);
 
--- Location: LCCOMB_X17_Y20_N28
+-- Location: LCCOMB_X25_Y13_N2
+\dht22_one_wire|data_buff_reg[0]~36\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[0]~36_combout\ = (\dht22_one_wire|Decoder0~22_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~22_combout\ & ((\dht22_one_wire|data_buff_reg\(0))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010001110100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~22_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(0),
+	combout => \dht22_one_wire|data_buff_reg[0]~36_combout\);
+
+-- Location: FF_X25_Y13_N3
+\dht22_one_wire|data_buff_reg[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[0]~36_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(0));
+
+-- Location: LCCOMB_X25_Y14_N26
+\dht22_one_wire|Add3~14\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Add3~14_combout\ = \dht22_one_wire|data_buff_reg\(8) $ (\dht22_one_wire|Add3~13\ $ (\dht22_one_wire|data_buff_reg\(0)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010101011010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(8),
+	datad => \dht22_one_wire|data_buff_reg\(0),
+	cin => \dht22_one_wire|Add3~13\,
+	combout => \dht22_one_wire|Add3~14_combout\);
+
+-- Location: LCCOMB_X25_Y16_N4
+\dht22_one_wire|Equal3~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Equal3~3_combout\ = (\dht22_one_wire|bit_count_reg\(3) & (!\dht22_one_wire|bit_count_reg\(2) & (!\dht22_one_wire|bit_count_reg\(0) & !\dht22_one_wire|bit_count_reg\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|bit_count_reg\(3),
+	datab => \dht22_one_wire|bit_count_reg\(2),
+	datac => \dht22_one_wire|bit_count_reg\(0),
+	datad => \dht22_one_wire|bit_count_reg\(1),
+	combout => \dht22_one_wire|Equal3~3_combout\);
+
+-- Location: LCCOMB_X25_Y13_N22
+\dht22_one_wire|data_buff_reg[24]~31\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[24]~31_combout\ = (\dht22_one_wire|Equal3~3_combout\ & ((\dht22_one_wire|Decoder0~4_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~4_combout\ & ((\dht22_one_wire|data_buff_reg\(24)))))) # 
+-- (!\dht22_one_wire|Equal3~3_combout\ & (((\dht22_one_wire|data_buff_reg\(24)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Equal3~3_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(24),
+	datad => \dht22_one_wire|Decoder0~4_combout\,
+	combout => \dht22_one_wire|data_buff_reg[24]~31_combout\);
+
+-- Location: FF_X25_Y13_N23
+\dht22_one_wire|data_buff_reg[24]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[24]~31_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(24));
+
+-- Location: LCCOMB_X25_Y16_N2
+\dht22_one_wire|Decoder0~18\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Decoder0~18_combout\ = (!\dht22_one_wire|bit_count_reg\(3) & (!\dht22_one_wire|bit_count_reg\(2) & (!\dht22_one_wire|bit_count_reg\(0) & !\dht22_one_wire|bit_count_reg\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|bit_count_reg\(3),
+	datab => \dht22_one_wire|bit_count_reg\(2),
+	datac => \dht22_one_wire|bit_count_reg\(0),
+	datad => \dht22_one_wire|bit_count_reg\(1),
+	combout => \dht22_one_wire|Decoder0~18_combout\);
+
+-- Location: LCCOMB_X25_Y13_N4
+\dht22_one_wire|data_buff_reg[16]~32\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[16]~32_combout\ = (\dht22_one_wire|Decoder0~18_combout\ & ((\dht22_one_wire|Decoder0~4_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~4_combout\ & ((\dht22_one_wire|data_buff_reg\(16)))))) # 
+-- (!\dht22_one_wire|Decoder0~18_combout\ & (((\dht22_one_wire|data_buff_reg\(16)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|LessThan0~6_combout\,
+	datab => \dht22_one_wire|Decoder0~18_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(16),
+	datad => \dht22_one_wire|Decoder0~4_combout\,
+	combout => \dht22_one_wire|data_buff_reg[16]~32_combout\);
+
+-- Location: FF_X25_Y13_N5
+\dht22_one_wire|data_buff_reg[16]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[16]~32_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(16));
+
+-- Location: LCCOMB_X26_Y13_N18
+\dht22_one_wire|Add4~14\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Add4~14_combout\ = \dht22_one_wire|data_buff_reg\(24) $ (\dht22_one_wire|Add4~13\ $ (\dht22_one_wire|data_buff_reg\(16)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100111100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_one_wire|data_buff_reg\(24),
+	datad => \dht22_one_wire|data_buff_reg\(16),
+	cin => \dht22_one_wire|Add4~13\,
+	combout => \dht22_one_wire|Add4~14_combout\);
+
+-- Location: LCCOMB_X29_Y13_N26
+\dht22_one_wire|check_sum[7]~14\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|check_sum[7]~14_combout\ = \dht22_one_wire|Add3~14_combout\ $ (\dht22_one_wire|Add4~14_combout\ $ (\dht22_one_wire|check_sum[6]~13\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011010010110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Add3~14_combout\,
+	datab => \dht22_one_wire|Add4~14_combout\,
+	cin => \dht22_one_wire|check_sum[6]~13\,
+	combout => \dht22_one_wire|check_sum[7]~14_combout\);
+
+-- Location: LCCOMB_X28_Y13_N12
 \dht22_one_wire|data_buff_reg[35]~20\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|data_buff_reg[35]~20_combout\ = (\dht22_one_wire|Decoder0~13_combout\ & ((\dht22_one_wire|Decoder0~2_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~2_combout\ & (\dht22_one_wire|data_buff_reg\(35))))) # 
@@ -7115,7 +7203,7 @@ PORT MAP (
 	datad => \dht22_one_wire|LessThan0~6_combout\,
 	combout => \dht22_one_wire|data_buff_reg[35]~20_combout\);
 
--- Location: FF_X17_Y20_N29
+-- Location: FF_X28_Y13_N13
 \dht22_one_wire|data_buff_reg[35]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7130,7 +7218,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|data_buff_reg\(35));
 
--- Location: LCCOMB_X17_Y19_N16
+-- Location: LCCOMB_X28_Y13_N22
 \dht22_one_wire|data_buff_reg[34]~21\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_one_wire|data_buff_reg[34]~21_combout\ = (\dht22_one_wire|Decoder0~13_combout\ & ((\dht22_one_wire|Decoder0~3_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~3_combout\ & (\dht22_one_wire|data_buff_reg\(34))))) # 
@@ -7148,7 +7236,7 @@ PORT MAP (
 	datad => \dht22_one_wire|LessThan0~6_combout\,
 	combout => \dht22_one_wire|data_buff_reg[34]~21_combout\);
 
--- Location: FF_X17_Y19_N17
+-- Location: FF_X28_Y13_N23
 \dht22_one_wire|data_buff_reg[34]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7163,11 +7251,127 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_one_wire|data_buff_reg\(34));
 
--- Location: LCCOMB_X16_Y19_N28
+-- Location: LCCOMB_X29_Y13_N6
 \dht22_one_wire|valid~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|valid~2_combout\ = (\dht22_one_wire|data_buff_reg\(35) & (\dht22_one_wire|check_sum[4]~8_combout\ & (\dht22_one_wire|check_sum[5]~10_combout\ $ (!\dht22_one_wire|data_buff_reg\(34))))) # (!\dht22_one_wire|data_buff_reg\(35) & 
--- (!\dht22_one_wire|check_sum[4]~8_combout\ & (\dht22_one_wire|check_sum[5]~10_combout\ $ (!\dht22_one_wire|data_buff_reg\(34)))))
+-- \dht22_one_wire|valid~2_combout\ = (\dht22_one_wire|data_buff_reg\(35) & (\dht22_one_wire|check_sum[4]~8_combout\ & (\dht22_one_wire|data_buff_reg\(34) $ (!\dht22_one_wire|check_sum[5]~10_combout\)))) # (!\dht22_one_wire|data_buff_reg\(35) & 
+-- (!\dht22_one_wire|check_sum[4]~8_combout\ & (\dht22_one_wire|data_buff_reg\(34) $ (!\dht22_one_wire|check_sum[5]~10_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000001001000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(35),
+	datab => \dht22_one_wire|data_buff_reg\(34),
+	datac => \dht22_one_wire|check_sum[5]~10_combout\,
+	datad => \dht22_one_wire|check_sum[4]~8_combout\,
+	combout => \dht22_one_wire|valid~2_combout\);
+
+-- Location: LCCOMB_X29_Y13_N10
+\dht22_one_wire|valid~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|valid~3_combout\ = (!\dht22_one_wire|Equal5~0_combout\ & (\dht22_one_wire|valid~2_combout\ & (\dht22_one_wire|data_buff_reg\(32) $ (!\dht22_one_wire|check_sum[7]~14_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010000100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(32),
+	datab => \dht22_one_wire|Equal5~0_combout\,
+	datac => \dht22_one_wire|check_sum[7]~14_combout\,
+	datad => \dht22_one_wire|valid~2_combout\,
+	combout => \dht22_one_wire|valid~3_combout\);
+
+-- Location: LCCOMB_X28_Y13_N8
+\dht22_one_wire|Decoder0~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|Decoder0~1_combout\ = (\dht22_one_wire|bit_count_reg\(2) & \dht22_one_wire|Decoder0~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \dht22_one_wire|bit_count_reg\(2),
+	datad => \dht22_one_wire|Decoder0~0_combout\,
+	combout => \dht22_one_wire|Decoder0~1_combout\);
+
+-- Location: LCCOMB_X28_Y13_N14
+\dht22_one_wire|data_buff_reg[37]~10\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[37]~10_combout\ = (\dht22_one_wire|Decoder0~10_combout\ & ((\dht22_one_wire|Decoder0~1_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~1_combout\ & (\dht22_one_wire|data_buff_reg\(37))))) # 
+-- (!\dht22_one_wire|Decoder0~10_combout\ & (((\dht22_one_wire|data_buff_reg\(37)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000011111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Decoder0~10_combout\,
+	datab => \dht22_one_wire|Decoder0~1_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(37),
+	datad => \dht22_one_wire|LessThan0~6_combout\,
+	combout => \dht22_one_wire|data_buff_reg[37]~10_combout\);
+
+-- Location: FF_X28_Y13_N15
+\dht22_one_wire|data_buff_reg[37]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[37]~10_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(37));
+
+-- Location: LCCOMB_X29_Y13_N30
+\dht22_one_wire|data_buff_reg[36]~11\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|data_buff_reg[36]~11_combout\ = (\dht22_one_wire|Decoder0~1_combout\ & ((\dht22_one_wire|Decoder0~11_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~11_combout\ & (\dht22_one_wire|data_buff_reg\(36))))) # 
+-- (!\dht22_one_wire|Decoder0~1_combout\ & (((\dht22_one_wire|data_buff_reg\(36)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000011111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|Decoder0~1_combout\,
+	datab => \dht22_one_wire|Decoder0~11_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(36),
+	datad => \dht22_one_wire|LessThan0~6_combout\,
+	combout => \dht22_one_wire|data_buff_reg[36]~11_combout\);
+
+-- Location: FF_X29_Y13_N31
+\dht22_one_wire|data_buff_reg[36]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_one_wire|data_buff_reg[36]~11_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_one_wire|data_buff_reg\(36));
+
+-- Location: LCCOMB_X29_Y13_N8
+\dht22_one_wire|valid~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_one_wire|valid~1_combout\ = (\dht22_one_wire|data_buff_reg\(37) & (\dht22_one_wire|check_sum[2]~4_combout\ & (\dht22_one_wire|data_buff_reg\(36) $ (!\dht22_one_wire|check_sum[3]~6_combout\)))) # (!\dht22_one_wire|data_buff_reg\(37) & 
+-- (!\dht22_one_wire|check_sum[2]~4_combout\ & (\dht22_one_wire|data_buff_reg\(36) $ (!\dht22_one_wire|check_sum[3]~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7175,144 +7379,17 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(35),
-	datab => \dht22_one_wire|check_sum[4]~8_combout\,
-	datac => \dht22_one_wire|check_sum[5]~10_combout\,
-	datad => \dht22_one_wire|data_buff_reg\(34),
-	combout => \dht22_one_wire|valid~2_combout\);
+	dataa => \dht22_one_wire|data_buff_reg\(37),
+	datab => \dht22_one_wire|check_sum[2]~4_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(36),
+	datad => \dht22_one_wire|check_sum[3]~6_combout\,
+	combout => \dht22_one_wire|valid~1_combout\);
 
--- Location: LCCOMB_X16_Y20_N10
-\dht22_one_wire|Decoder0~21\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X28_Y13_N2
+\dht22_one_wire|data_buff_reg[38]~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Decoder0~21_combout\ = (\dht22_one_wire|Equal3~0_combout\ & (\dht22_one_wire|bit_count_reg\(3) & \dht22_one_wire|Decoder0~7_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|Equal3~0_combout\,
-	datac => \dht22_one_wire|bit_count_reg\(3),
-	datad => \dht22_one_wire|Decoder0~7_combout\,
-	combout => \dht22_one_wire|Decoder0~21_combout\);
-
--- Location: LCCOMB_X17_Y20_N4
-\dht22_one_wire|data_buff_reg[8]~35\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[8]~35_combout\ = (\dht22_one_wire|Decoder0~21_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~21_combout\ & (\dht22_one_wire|data_buff_reg\(8)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000011111010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~21_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(8),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[8]~35_combout\);
-
--- Location: FF_X17_Y20_N5
-\dht22_one_wire|data_buff_reg[8]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[8]~35_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(8));
-
--- Location: LCCOMB_X18_Y22_N12
-\dht22_one_wire|Decoder0~22\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Decoder0~22_combout\ = (\dht22_one_wire|Equal3~0_combout\ & (!\dht22_one_wire|bit_count_reg\(3) & \dht22_one_wire|Decoder0~7_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000110000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|Equal3~0_combout\,
-	datac => \dht22_one_wire|bit_count_reg\(3),
-	datad => \dht22_one_wire|Decoder0~7_combout\,
-	combout => \dht22_one_wire|Decoder0~22_combout\);
-
--- Location: LCCOMB_X18_Y20_N30
-\dht22_one_wire|data_buff_reg[0]~36\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[0]~36_combout\ = (\dht22_one_wire|Decoder0~22_combout\ & (!\dht22_one_wire|LessThan0~6_combout\)) # (!\dht22_one_wire|Decoder0~22_combout\ & ((\dht22_one_wire|data_buff_reg\(0))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010111110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|LessThan0~6_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(0),
-	datad => \dht22_one_wire|Decoder0~22_combout\,
-	combout => \dht22_one_wire|data_buff_reg[0]~36_combout\);
-
--- Location: FF_X18_Y20_N31
-\dht22_one_wire|data_buff_reg[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[0]~36_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(0));
-
--- Location: LCCOMB_X16_Y20_N26
-\dht22_one_wire|Add3~14\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Add3~14_combout\ = \dht22_one_wire|data_buff_reg\(8) $ (\dht22_one_wire|Add3~13\ $ (\dht22_one_wire|data_buff_reg\(0)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010101011010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(8),
-	datad => \dht22_one_wire|data_buff_reg\(0),
-	cin => \dht22_one_wire|Add3~13\,
-	combout => \dht22_one_wire|Add3~14_combout\);
-
--- Location: LCCOMB_X18_Y22_N6
-\dht22_one_wire|Equal3~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|Equal3~3_combout\ = (!\dht22_one_wire|bit_count_reg\(2) & (!\dht22_one_wire|bit_count_reg\(1) & (\dht22_one_wire|bit_count_reg\(3) & !\dht22_one_wire|bit_count_reg\(0))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(2),
-	datab => \dht22_one_wire|bit_count_reg\(1),
-	datac => \dht22_one_wire|bit_count_reg\(3),
-	datad => \dht22_one_wire|bit_count_reg\(0),
-	combout => \dht22_one_wire|Equal3~3_combout\);
-
--- Location: LCCOMB_X17_Y20_N26
-\dht22_one_wire|data_buff_reg[24]~31\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[24]~31_combout\ = (\dht22_one_wire|Decoder0~4_combout\ & ((\dht22_one_wire|Equal3~3_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Equal3~3_combout\ & (\dht22_one_wire|data_buff_reg\(24))))) # 
--- (!\dht22_one_wire|Decoder0~4_combout\ & (((\dht22_one_wire|data_buff_reg\(24)))))
+-- \dht22_one_wire|data_buff_reg[38]~1_combout\ = (\dht22_one_wire|Decoder0~3_combout\ & ((\dht22_one_wire|Decoder0~1_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~1_combout\ & (\dht22_one_wire|data_buff_reg\(38))))) # 
+-- (!\dht22_one_wire|Decoder0~3_combout\ & (((\dht22_one_wire|data_buff_reg\(38)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7320,14 +7397,14 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~4_combout\,
-	datab => \dht22_one_wire|Equal3~3_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(24),
+	dataa => \dht22_one_wire|Decoder0~3_combout\,
+	datab => \dht22_one_wire|Decoder0~1_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(38),
 	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[24]~31_combout\);
+	combout => \dht22_one_wire|data_buff_reg[38]~1_combout\);
 
--- Location: FF_X17_Y20_N27
-\dht22_one_wire|data_buff_reg[24]\ : dffeas
+-- Location: FF_X28_Y13_N3
+\dht22_one_wire|data_buff_reg[38]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -7335,34 +7412,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[24]~31_combout\,
+	d => \dht22_one_wire|data_buff_reg[38]~1_combout\,
 	clrn => \rst_n~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(24));
+	q => \dht22_one_wire|data_buff_reg\(38));
 
--- Location: LCCOMB_X18_Y22_N8
-\dht22_one_wire|Decoder0~18\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X28_Y13_N4
+\dht22_one_wire|data_buff_reg[39]~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Decoder0~18_combout\ = (!\dht22_one_wire|bit_count_reg\(2) & (!\dht22_one_wire|bit_count_reg\(1) & (!\dht22_one_wire|bit_count_reg\(3) & !\dht22_one_wire|bit_count_reg\(0))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|bit_count_reg\(2),
-	datab => \dht22_one_wire|bit_count_reg\(1),
-	datac => \dht22_one_wire|bit_count_reg\(3),
-	datad => \dht22_one_wire|bit_count_reg\(0),
-	combout => \dht22_one_wire|Decoder0~18_combout\);
-
--- Location: LCCOMB_X14_Y20_N14
-\dht22_one_wire|data_buff_reg[16]~32\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[16]~32_combout\ = (\dht22_one_wire|Decoder0~4_combout\ & ((\dht22_one_wire|Decoder0~18_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~18_combout\ & (\dht22_one_wire|data_buff_reg\(16))))) # 
--- (!\dht22_one_wire|Decoder0~4_combout\ & (((\dht22_one_wire|data_buff_reg\(16)))))
+-- \dht22_one_wire|data_buff_reg[39]~0_combout\ = (\dht22_one_wire|Decoder0~1_combout\ & ((\dht22_one_wire|Decoder0~2_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Decoder0~2_combout\ & (\dht22_one_wire|data_buff_reg\(39))))) # 
+-- (!\dht22_one_wire|Decoder0~1_combout\ & (((\dht22_one_wire|data_buff_reg\(39)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7370,14 +7430,14 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~4_combout\,
-	datab => \dht22_one_wire|Decoder0~18_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(16),
+	dataa => \dht22_one_wire|Decoder0~1_combout\,
+	datab => \dht22_one_wire|Decoder0~2_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(39),
 	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[16]~32_combout\);
+	combout => \dht22_one_wire|data_buff_reg[39]~0_combout\);
 
--- Location: FF_X14_Y20_N15
-\dht22_one_wire|data_buff_reg[16]\ : dffeas
+-- Location: FF_X28_Y13_N5
+\dht22_one_wire|data_buff_reg[39]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -7385,98 +7445,34 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[16]~32_combout\,
+	d => \dht22_one_wire|data_buff_reg[39]~0_combout\,
 	clrn => \rst_n~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(16));
+	q => \dht22_one_wire|data_buff_reg\(39));
 
--- Location: LCCOMB_X13_Y20_N18
-\dht22_one_wire|Add4~14\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X29_Y13_N28
+\dht22_one_wire|valid~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|Add4~14_combout\ = \dht22_one_wire|data_buff_reg\(24) $ (\dht22_one_wire|Add4~13\ $ (\dht22_one_wire|data_buff_reg\(16)))
+-- \dht22_one_wire|valid~0_combout\ = (\dht22_one_wire|data_buff_reg\(38) & (\dht22_one_wire|check_sum[1]~2_combout\ & (\dht22_one_wire|data_buff_reg\(39) $ (!\dht22_one_wire|check_sum[0]~0_combout\)))) # (!\dht22_one_wire|data_buff_reg\(38) & 
+-- (!\dht22_one_wire|check_sum[1]~2_combout\ & (\dht22_one_wire|data_buff_reg\(39) $ (!\dht22_one_wire|check_sum[0]~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010010101011010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(24),
-	datad => \dht22_one_wire|data_buff_reg\(16),
-	cin => \dht22_one_wire|Add4~13\,
-	combout => \dht22_one_wire|Add4~14_combout\);
-
--- Location: LCCOMB_X16_Y19_N26
-\dht22_one_wire|check_sum[7]~14\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|check_sum[7]~14_combout\ = \dht22_one_wire|Add3~14_combout\ $ (\dht22_one_wire|Add4~14_combout\ $ (\dht22_one_wire|check_sum[6]~13\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1001011010010110",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Add3~14_combout\,
-	datab => \dht22_one_wire|Add4~14_combout\,
-	cin => \dht22_one_wire|check_sum[6]~13\,
-	combout => \dht22_one_wire|check_sum[7]~14_combout\);
-
--- Location: LCCOMB_X17_Y19_N22
-\dht22_one_wire|data_buff_reg[32]~30\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|data_buff_reg[32]~30_combout\ = (\dht22_one_wire|Decoder0~0_combout\ & ((\dht22_one_wire|Equal3~0_combout\ & ((!\dht22_one_wire|LessThan0~6_combout\))) # (!\dht22_one_wire|Equal3~0_combout\ & (\dht22_one_wire|data_buff_reg\(32))))) # 
--- (!\dht22_one_wire|Decoder0~0_combout\ & (((\dht22_one_wire|data_buff_reg\(32)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
+	lut_mask => "1000010000100001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|Decoder0~0_combout\,
-	datab => \dht22_one_wire|Equal3~0_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(32),
-	datad => \dht22_one_wire|LessThan0~6_combout\,
-	combout => \dht22_one_wire|data_buff_reg[32]~30_combout\);
+	dataa => \dht22_one_wire|data_buff_reg\(38),
+	datab => \dht22_one_wire|data_buff_reg\(39),
+	datac => \dht22_one_wire|check_sum[1]~2_combout\,
+	datad => \dht22_one_wire|check_sum[0]~0_combout\,
+	combout => \dht22_one_wire|valid~0_combout\);
 
--- Location: FF_X17_Y19_N23
-\dht22_one_wire|data_buff_reg[32]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_one_wire|data_buff_reg[32]~30_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_one_wire|data_buff_reg\(32));
-
--- Location: LCCOMB_X16_Y19_N4
-\dht22_one_wire|valid~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_one_wire|valid~3_combout\ = (!\dht22_one_wire|Equal5~0_combout\ & (\dht22_one_wire|valid~2_combout\ & (\dht22_one_wire|check_sum[7]~14_combout\ $ (!\dht22_one_wire|data_buff_reg\(32)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100000000000100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|Equal5~0_combout\,
-	datab => \dht22_one_wire|valid~2_combout\,
-	datac => \dht22_one_wire|check_sum[7]~14_combout\,
-	datad => \dht22_one_wire|data_buff_reg\(32),
-	combout => \dht22_one_wire|valid~3_combout\);
-
--- Location: LCCOMB_X16_Y19_N10
+-- Location: LCCOMB_X29_Y13_N0
 \dht22_one_wire|valid~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_one_wire|valid~4_combout\ = (\dht22_one_wire|valid~1_combout\ & (\dht22_one_wire|valid~0_combout\ & (\dht22_one_wire|valid~3_combout\ & \dht22_one_wire|state.ST_CHECK~q\)))
+-- \dht22_one_wire|valid~4_combout\ = (\dht22_one_wire|valid~3_combout\ & (\dht22_one_wire|valid~1_combout\ & (\dht22_one_wire|state.ST_CHECK~q\ & \dht22_one_wire|valid~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7484,13 +7480,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_one_wire|valid~1_combout\,
-	datab => \dht22_one_wire|valid~0_combout\,
-	datac => \dht22_one_wire|valid~3_combout\,
-	datad => \dht22_one_wire|state.ST_CHECK~q\,
+	dataa => \dht22_one_wire|valid~3_combout\,
+	datab => \dht22_one_wire|valid~1_combout\,
+	datac => \dht22_one_wire|state.ST_CHECK~q\,
+	datad => \dht22_one_wire|valid~0_combout\,
 	combout => \dht22_one_wire|valid~4_combout\);
 
--- Location: LCCOMB_X13_Y18_N24
+-- Location: LCCOMB_X23_Y19_N8
 \display|digit_index[0]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|digit_index[0]~1_combout\ = !\display|digit_index\(0)
@@ -7504,7 +7500,7 @@ PORT MAP (
 	datac => \display|digit_index\(0),
 	combout => \display|digit_index[0]~1_combout\);
 
--- Location: LCCOMB_X11_Y21_N8
+-- Location: LCCOMB_X22_Y19_N8
 \display|Add0~8\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~8_combout\ = (\display|count\(4) & (\display|Add0~7\ $ (GND))) # (!\display|count\(4) & (!\display|Add0~7\ & VCC))
@@ -7522,7 +7518,7 @@ PORT MAP (
 	combout => \display|Add0~8_combout\,
 	cout => \display|Add0~9\);
 
--- Location: LCCOMB_X10_Y21_N14
+-- Location: LCCOMB_X21_Y19_N10
 \display|count~4\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|count~4_combout\ = (!\display|Equal0~4_combout\ & \display|Add0~8_combout\)
@@ -7537,7 +7533,7 @@ PORT MAP (
 	datac => \display|Add0~8_combout\,
 	combout => \display|count~4_combout\);
 
--- Location: FF_X10_Y21_N15
+-- Location: FF_X21_Y19_N11
 \display|count[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7552,7 +7548,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(4));
 
--- Location: LCCOMB_X11_Y21_N10
+-- Location: LCCOMB_X22_Y19_N10
 \display|Add0~10\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~10_combout\ = (\display|count\(5) & (!\display|Add0~9\)) # (!\display|count\(5) & ((\display|Add0~9\) # (GND)))
@@ -7570,7 +7566,7 @@ PORT MAP (
 	combout => \display|Add0~10_combout\,
 	cout => \display|Add0~11\);
 
--- Location: FF_X11_Y21_N11
+-- Location: FF_X22_Y19_N11
 \display|count[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7585,7 +7581,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(5));
 
--- Location: LCCOMB_X11_Y21_N12
+-- Location: LCCOMB_X22_Y19_N12
 \display|Add0~12\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~12_combout\ = (\display|count\(6) & (\display|Add0~11\ $ (GND))) # (!\display|count\(6) & (!\display|Add0~11\ & VCC))
@@ -7603,7 +7599,7 @@ PORT MAP (
 	combout => \display|Add0~12_combout\,
 	cout => \display|Add0~13\);
 
--- Location: FF_X11_Y21_N13
+-- Location: FF_X22_Y19_N13
 \display|count[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7618,7 +7614,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(6));
 
--- Location: LCCOMB_X11_Y21_N14
+-- Location: LCCOMB_X22_Y19_N14
 \display|Add0~14\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~14_combout\ = (\display|count\(7) & (!\display|Add0~13\)) # (!\display|count\(7) & ((\display|Add0~13\) # (GND)))
@@ -7636,7 +7632,7 @@ PORT MAP (
 	combout => \display|Add0~14_combout\,
 	cout => \display|Add0~15\);
 
--- Location: FF_X11_Y21_N15
+-- Location: FF_X22_Y19_N15
 \display|count[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7651,7 +7647,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(7));
 
--- Location: LCCOMB_X11_Y21_N16
+-- Location: LCCOMB_X22_Y19_N16
 \display|Add0~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~16_combout\ = (\display|count\(8) & (\display|Add0~15\ $ (GND))) # (!\display|count\(8) & (!\display|Add0~15\ & VCC))
@@ -7659,17 +7655,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \display|count\(8),
+	dataa => \display|count\(8),
 	datad => VCC,
 	cin => \display|Add0~15\,
 	combout => \display|Add0~16_combout\,
 	cout => \display|Add0~17\);
 
--- Location: LCCOMB_X10_Y21_N6
+-- Location: LCCOMB_X21_Y19_N14
 \display|count~3\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|count~3_combout\ = (!\display|Equal0~4_combout\ & \display|Add0~16_combout\)
@@ -7684,7 +7680,7 @@ PORT MAP (
 	datad => \display|Add0~16_combout\,
 	combout => \display|count~3_combout\);
 
--- Location: FF_X10_Y21_N7
+-- Location: FF_X21_Y19_N15
 \display|count[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7699,7 +7695,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(8));
 
--- Location: LCCOMB_X11_Y21_N18
+-- Location: LCCOMB_X22_Y19_N18
 \display|Add0~18\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~18_combout\ = (\display|count\(9) & (!\display|Add0~17\)) # (!\display|count\(9) & ((\display|Add0~17\) # (GND)))
@@ -7717,7 +7713,7 @@ PORT MAP (
 	combout => \display|Add0~18_combout\,
 	cout => \display|Add0~19\);
 
--- Location: LCCOMB_X10_Y21_N16
+-- Location: LCCOMB_X21_Y19_N16
 \display|count~2\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|count~2_combout\ = (!\display|Equal0~4_combout\ & \display|Add0~18_combout\)
@@ -7732,7 +7728,7 @@ PORT MAP (
 	datad => \display|Add0~18_combout\,
 	combout => \display|count~2_combout\);
 
--- Location: FF_X10_Y21_N17
+-- Location: FF_X21_Y19_N17
 \display|count[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7747,7 +7743,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(9));
 
--- Location: LCCOMB_X11_Y21_N20
+-- Location: LCCOMB_X22_Y19_N20
 \display|Add0~20\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~20_combout\ = (\display|count\(10) & (\display|Add0~19\ $ (GND))) # (!\display|count\(10) & (!\display|Add0~19\ & VCC))
@@ -7755,17 +7751,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \display|count\(10),
+	dataa => \display|count\(10),
 	datad => VCC,
 	cin => \display|Add0~19\,
 	combout => \display|Add0~20_combout\,
 	cout => \display|Add0~21\);
 
--- Location: LCCOMB_X10_Y21_N22
+-- Location: LCCOMB_X21_Y19_N26
 \display|count~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|count~1_combout\ = (!\display|Equal0~4_combout\ & \display|Add0~20_combout\)
@@ -7780,7 +7776,7 @@ PORT MAP (
 	datac => \display|Add0~20_combout\,
 	combout => \display|count~1_combout\);
 
--- Location: FF_X10_Y21_N23
+-- Location: FF_X21_Y19_N27
 \display|count[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7795,7 +7791,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(10));
 
--- Location: LCCOMB_X11_Y21_N22
+-- Location: LCCOMB_X22_Y19_N22
 \display|Add0~22\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~22_combout\ = (\display|count\(11) & (!\display|Add0~21\)) # (!\display|count\(11) & ((\display|Add0~21\) # (GND)))
@@ -7813,7 +7809,7 @@ PORT MAP (
 	combout => \display|Add0~22_combout\,
 	cout => \display|Add0~23\);
 
--- Location: FF_X11_Y21_N23
+-- Location: FF_X22_Y19_N23
 \display|count[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7828,7 +7824,41 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(11));
 
--- Location: LCCOMB_X11_Y21_N24
+-- Location: LCCOMB_X21_Y19_N28
+\display|Equal0~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \display|Equal0~2_combout\ = (\display|count\(10) & (\display|count\(9) & (\display|count\(8) & !\display|count\(11))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000010000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \display|count\(10),
+	datab => \display|count\(9),
+	datac => \display|count\(8),
+	datad => \display|count\(11),
+	combout => \display|Equal0~2_combout\);
+
+-- Location: LCCOMB_X21_Y19_N8
+\display|Equal0~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \display|Equal0~3_combout\ = (!\display|count\(6) & (!\display|count\(5) & (!\display|count\(7) & !\display|count\(4))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \display|count\(6),
+	datab => \display|count\(5),
+	datac => \display|count\(7),
+	datad => \display|count\(4),
+	combout => \display|Equal0~3_combout\);
+
+-- Location: LCCOMB_X22_Y19_N24
 \display|Add0~24\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~24_combout\ = (\display|count\(12) & (\display|Add0~23\ $ (GND))) # (!\display|count\(12) & (!\display|Add0~23\ & VCC))
@@ -7846,7 +7876,7 @@ PORT MAP (
 	combout => \display|Add0~24_combout\,
 	cout => \display|Add0~25\);
 
--- Location: FF_X11_Y21_N25
+-- Location: FF_X22_Y19_N25
 \display|count[12]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7861,7 +7891,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(12));
 
--- Location: LCCOMB_X11_Y21_N26
+-- Location: LCCOMB_X22_Y19_N26
 \display|Add0~26\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~26_combout\ = (\display|count\(13) & (!\display|Add0~25\)) # (!\display|count\(13) & ((\display|Add0~25\) # (GND)))
@@ -7869,17 +7899,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101001011111",
+	lut_mask => "0011110000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|count\(13),
+	datab => \display|count\(13),
 	datad => VCC,
 	cin => \display|Add0~25\,
 	combout => \display|Add0~26_combout\,
 	cout => \display|Add0~27\);
 
--- Location: LCCOMB_X10_Y21_N10
+-- Location: LCCOMB_X21_Y19_N6
 \display|count~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|count~0_combout\ = (!\display|Equal0~4_combout\ & \display|Add0~26_combout\)
@@ -7894,7 +7924,7 @@ PORT MAP (
 	datad => \display|Add0~26_combout\,
 	combout => \display|count~0_combout\);
 
--- Location: FF_X10_Y21_N11
+-- Location: FF_X21_Y19_N7
 \display|count[13]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7909,7 +7939,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(13));
 
--- Location: LCCOMB_X11_Y21_N28
+-- Location: LCCOMB_X22_Y19_N28
 \display|Add0~28\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~28_combout\ = (\display|count\(14) & (\display|Add0~27\ $ (GND))) # (!\display|count\(14) & (!\display|Add0~27\ & VCC))
@@ -7927,7 +7957,7 @@ PORT MAP (
 	combout => \display|Add0~28_combout\,
 	cout => \display|Add0~29\);
 
--- Location: FF_X11_Y21_N29
+-- Location: FF_X22_Y19_N29
 \display|count[14]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7942,7 +7972,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(14));
 
--- Location: LCCOMB_X11_Y21_N30
+-- Location: LCCOMB_X22_Y19_N30
 \display|Add0~30\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Add0~30_combout\ = \display|count\(15) $ (\display|Add0~29\)
@@ -7957,7 +7987,7 @@ PORT MAP (
 	cin => \display|Add0~29\,
 	combout => \display|Add0~30_combout\);
 
--- Location: FF_X11_Y21_N31
+-- Location: FF_X22_Y19_N31
 \display|count[15]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7972,61 +8002,27 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|count\(15));
 
--- Location: LCCOMB_X10_Y21_N12
+-- Location: LCCOMB_X21_Y19_N24
 \display|Equal0~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \display|Equal0~1_combout\ = (!\display|count\(15) & (!\display|count\(14) & (!\display|count\(12) & \display|count\(13))))
+-- \display|Equal0~1_combout\ = (\display|count\(13) & (!\display|count\(14) & (!\display|count\(15) & !\display|count\(12))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000100000000",
+	lut_mask => "0000000000000010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|count\(15),
+	dataa => \display|count\(13),
 	datab => \display|count\(14),
-	datac => \display|count\(12),
-	datad => \display|count\(13),
+	datac => \display|count\(15),
+	datad => \display|count\(12),
 	combout => \display|Equal0~1_combout\);
 
--- Location: LCCOMB_X10_Y21_N24
-\display|Equal0~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \display|Equal0~3_combout\ = (!\display|count\(4) & (!\display|count\(6) & (!\display|count\(7) & !\display|count\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \display|count\(4),
-	datab => \display|count\(6),
-	datac => \display|count\(7),
-	datad => \display|count\(5),
-	combout => \display|Equal0~3_combout\);
-
--- Location: LCCOMB_X10_Y21_N20
-\display|Equal0~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \display|Equal0~2_combout\ = (\display|count\(8) & (\display|count\(9) & (\display|count\(10) & !\display|count\(11))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000010000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \display|count\(8),
-	datab => \display|count\(9),
-	datac => \display|count\(10),
-	datad => \display|count\(11),
-	combout => \display|Equal0~2_combout\);
-
--- Location: LCCOMB_X10_Y21_N26
+-- Location: LCCOMB_X21_Y19_N30
 \display|Equal0~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \display|Equal0~4_combout\ = (\display|Equal0~1_combout\ & (\display|Equal0~3_combout\ & (\display|Equal0~0_combout\ & \display|Equal0~2_combout\)))
+-- \display|Equal0~4_combout\ = (\display|Equal0~0_combout\ & (\display|Equal0~2_combout\ & (\display|Equal0~3_combout\ & \display|Equal0~1_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8034,13 +8030,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|Equal0~1_combout\,
-	datab => \display|Equal0~3_combout\,
-	datac => \display|Equal0~0_combout\,
-	datad => \display|Equal0~2_combout\,
+	dataa => \display|Equal0~0_combout\,
+	datab => \display|Equal0~2_combout\,
+	datac => \display|Equal0~3_combout\,
+	datad => \display|Equal0~1_combout\,
 	combout => \display|Equal0~4_combout\);
 
--- Location: FF_X13_Y18_N25
+-- Location: FF_X23_Y19_N9
 \display|digit_index[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -8056,10 +8052,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|digit_index\(0));
 
--- Location: LCCOMB_X14_Y18_N16
+-- Location: LCCOMB_X24_Y18_N24
 \display|digit_index[1]~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \display|digit_index[1]~0_combout\ = \display|digit_index\(1) $ (((\display|digit_index\(0) & \display|Equal0~4_combout\)))
+-- \display|digit_index[1]~0_combout\ = \display|digit_index\(1) $ (((\display|Equal0~4_combout\ & \display|digit_index\(0))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8067,12 +8063,12 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \display|digit_index\(0),
+	datab => \display|Equal0~4_combout\,
 	datac => \display|digit_index\(1),
-	datad => \display|Equal0~4_combout\,
+	datad => \display|digit_index\(0),
 	combout => \display|digit_index[1]~0_combout\);
 
--- Location: FF_X14_Y18_N17
+-- Location: FF_X24_Y18_N25
 \display|digit_index[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -8087,22 +8083,22 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|digit_index\(1));
 
--- Location: LCCOMB_X16_Y18_N14
+-- Location: LCCOMB_X23_Y18_N22
 \display|Mux0~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|Mux0~0_combout\ = (!\display|digit_index\(0) & \display|digit_index\(1))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011000000110000",
+	lut_mask => "0101010100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \display|digit_index\(0),
-	datac => \display|digit_index\(1),
+	dataa => \display|digit_index\(0),
+	datad => \display|digit_index\(1),
 	combout => \display|Mux0~0_combout\);
 
--- Location: LCCOMB_X12_Y20_N12
+-- Location: LCCOMB_X22_Y17_N16
 \param~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \param~0_combout\ = !\param~q\
@@ -8116,7 +8112,7 @@ PORT MAP (
 	datac => \param~q\,
 	combout => \param~0_combout\);
 
--- Location: FF_X12_Y20_N13
+-- Location: FF_X22_Y17_N17
 param : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -8132,1549 +8128,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \param~q\);
 
--- Location: LCCOMB_X12_Y21_N0
-\dht22_data_bcd|Add1~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~0_combout\ = \dht22_data_bcd|num_reg\(2) $ (VCC)
--- \dht22_data_bcd|Add1~1\ = CARRY(\dht22_data_bcd|num_reg\(2))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001111001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(2),
-	datad => VCC,
-	combout => \dht22_data_bcd|Add1~0_combout\,
-	cout => \dht22_data_bcd|Add1~1\);
-
--- Location: LCCOMB_X14_Y20_N18
-\dht22_data_bcd|num_reg[1]~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|num_reg[1]~3_combout\ = (\param~q\ & (\dht22_one_wire|data_buff_reg\(30))) # (!\param~q\ & ((\dht22_one_wire|data_buff_reg\(14))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100111111000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_one_wire|data_buff_reg\(30),
-	datac => \param~q\,
-	datad => \dht22_one_wire|data_buff_reg\(14),
-	combout => \dht22_data_bcd|num_reg[1]~3_combout\);
-
--- Location: LCCOMB_X14_Y21_N2
-\dht22_data_bcd|Add3~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~0_combout\ = \dht22_data_bcd|num_reg\(1) $ (VCC)
--- \dht22_data_bcd|Add3~1\ = CARRY(\dht22_data_bcd|num_reg\(1))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010110101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(1),
-	datad => VCC,
-	combout => \dht22_data_bcd|Add3~0_combout\,
-	cout => \dht22_data_bcd|Add3~1\);
-
--- Location: LCCOMB_X13_Y21_N24
-\dht22_data_bcd|LessThan0~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|LessThan0~2_combout\ = (!\dht22_data_bcd|num_reg\(6) & (((!\dht22_data_bcd|num_reg\(2) & !\dht22_data_bcd|num_reg\(1))) # (!\dht22_data_bcd|num_reg\(3))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010100000111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(3),
-	datab => \dht22_data_bcd|num_reg\(2),
-	datac => \dht22_data_bcd|num_reg\(6),
-	datad => \dht22_data_bcd|num_reg\(1),
-	combout => \dht22_data_bcd|LessThan0~2_combout\);
-
--- Location: LCCOMB_X12_Y21_N8
-\dht22_data_bcd|Add1~8\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~8_combout\ = (\dht22_data_bcd|num_reg\(6) & (\dht22_data_bcd|Add1~7\ $ (GND))) # (!\dht22_data_bcd|num_reg\(6) & (!\dht22_data_bcd|Add1~7\ & VCC))
--- \dht22_data_bcd|Add1~9\ = CARRY((\dht22_data_bcd|num_reg\(6) & !\dht22_data_bcd|Add1~7\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(6),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add1~7\,
-	combout => \dht22_data_bcd|Add1~8_combout\,
-	cout => \dht22_data_bcd|Add1~9\);
-
--- Location: LCCOMB_X12_Y21_N10
-\dht22_data_bcd|Add1~10\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~10_combout\ = (\dht22_data_bcd|num_reg\(7) & (\dht22_data_bcd|Add1~9\ & VCC)) # (!\dht22_data_bcd|num_reg\(7) & (!\dht22_data_bcd|Add1~9\))
--- \dht22_data_bcd|Add1~11\ = CARRY((!\dht22_data_bcd|num_reg\(7) & !\dht22_data_bcd|Add1~9\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100000011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(7),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add1~9\,
-	combout => \dht22_data_bcd|Add1~10_combout\,
-	cout => \dht22_data_bcd|Add1~11\);
-
--- Location: LCCOMB_X14_Y21_N8
-\dht22_data_bcd|Add3~6\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~6_combout\ = (\dht22_data_bcd|num_reg\(4) & (\dht22_data_bcd|Add3~5\ & VCC)) # (!\dht22_data_bcd|num_reg\(4) & (!\dht22_data_bcd|Add3~5\))
--- \dht22_data_bcd|Add3~7\ = CARRY((!\dht22_data_bcd|num_reg\(4) & !\dht22_data_bcd|Add3~5\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100000101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(4),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add3~5\,
-	combout => \dht22_data_bcd|Add3~6_combout\,
-	cout => \dht22_data_bcd|Add3~7\);
-
--- Location: LCCOMB_X14_Y21_N10
-\dht22_data_bcd|Add3~8\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~8_combout\ = (\dht22_data_bcd|num_reg\(5) & ((GND) # (!\dht22_data_bcd|Add3~7\))) # (!\dht22_data_bcd|num_reg\(5) & (\dht22_data_bcd|Add3~7\ $ (GND)))
--- \dht22_data_bcd|Add3~9\ = CARRY((\dht22_data_bcd|num_reg\(5)) # (!\dht22_data_bcd|Add3~7\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101010101111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(5),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add3~7\,
-	combout => \dht22_data_bcd|Add3~8_combout\,
-	cout => \dht22_data_bcd|Add3~9\);
-
--- Location: LCCOMB_X14_Y21_N12
-\dht22_data_bcd|Add3~10\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~10_combout\ = (\dht22_data_bcd|num_reg\(6) & (\dht22_data_bcd|Add3~9\ & VCC)) # (!\dht22_data_bcd|num_reg\(6) & (!\dht22_data_bcd|Add3~9\))
--- \dht22_data_bcd|Add3~11\ = CARRY((!\dht22_data_bcd|num_reg\(6) & !\dht22_data_bcd|Add3~9\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100000011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(6),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add3~9\,
-	combout => \dht22_data_bcd|Add3~10_combout\,
-	cout => \dht22_data_bcd|Add3~11\);
-
--- Location: LCCOMB_X14_Y21_N14
-\dht22_data_bcd|Add3~12\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~12_combout\ = (\dht22_data_bcd|num_reg\(7) & ((GND) # (!\dht22_data_bcd|Add3~11\))) # (!\dht22_data_bcd|num_reg\(7) & (\dht22_data_bcd|Add3~11\ $ (GND)))
--- \dht22_data_bcd|Add3~13\ = CARRY((\dht22_data_bcd|num_reg\(7)) # (!\dht22_data_bcd|Add3~11\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110011001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(7),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add3~11\,
-	combout => \dht22_data_bcd|Add3~12_combout\,
-	cout => \dht22_data_bcd|Add3~13\);
-
--- Location: LCCOMB_X16_Y20_N2
-\dht22_data_bcd|Selector19~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector19~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~12_combout\) # ((\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_one_wire|data_buff_reg\(24) & 
--- !\dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101011011000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_CALC~q\,
-	datab => \dht22_data_bcd|Add3~12_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(24),
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector19~0_combout\);
-
--- Location: LCCOMB_X16_Y20_N30
-\dht22_data_bcd|Selector19~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector19~1_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|Selector19~0_combout\ & ((\dht22_data_bcd|Add1~10_combout\))) # (!\dht22_data_bcd|Selector19~0_combout\ & (\dht22_one_wire|data_buff_reg\(8))))) # 
--- (!\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|Selector19~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111001110001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(8),
-	datab => \dht22_data_bcd|num_reg[8]~0_combout\,
-	datac => \dht22_data_bcd|Add1~10_combout\,
-	datad => \dht22_data_bcd|Selector19~0_combout\,
-	combout => \dht22_data_bcd|Selector19~1_combout\);
-
--- Location: LCCOMB_X16_Y21_N10
-\dht22_data_bcd|num_reg[8]~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|num_reg[8]~1_combout\ = (!\dht22_data_bcd|num_reg\(15) & \dht22_data_bcd|num~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \dht22_data_bcd|num_reg\(15),
-	datad => \dht22_data_bcd|num~0_combout\,
-	combout => \dht22_data_bcd|num_reg[8]~1_combout\);
-
--- Location: LCCOMB_X16_Y21_N4
-\dht22_data_bcd|num_reg[8]~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|num_reg[8]~2_combout\ = (!\dht22_data_bcd|state.ST_DONE~q\ & (((!\dht22_data_bcd|num_reg[8]~1_combout\) # (!\dht22_data_bcd|LessThan0~3_combout\)) # (!\dht22_data_bcd|state.ST_CALC~q\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001010101010101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_DONE~q\,
-	datab => \dht22_data_bcd|state.ST_CALC~q\,
-	datac => \dht22_data_bcd|LessThan0~3_combout\,
-	datad => \dht22_data_bcd|num_reg[8]~1_combout\,
-	combout => \dht22_data_bcd|num_reg[8]~2_combout\);
-
--- Location: FF_X16_Y20_N31
-\dht22_data_bcd|num_reg[7]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector19~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(7));
-
--- Location: LCCOMB_X12_Y21_N12
-\dht22_data_bcd|Add1~12\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~12_combout\ = (\dht22_data_bcd|num_reg\(8) & ((GND) # (!\dht22_data_bcd|Add1~11\))) # (!\dht22_data_bcd|num_reg\(8) & (\dht22_data_bcd|Add1~11\ $ (GND)))
--- \dht22_data_bcd|Add1~13\ = CARRY((\dht22_data_bcd|num_reg\(8)) # (!\dht22_data_bcd|Add1~11\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101010101111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(8),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add1~11\,
-	combout => \dht22_data_bcd|Add1~12_combout\,
-	cout => \dht22_data_bcd|Add1~13\);
-
--- Location: LCCOMB_X14_Y21_N16
-\dht22_data_bcd|Add3~14\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~14_combout\ = (\dht22_data_bcd|num_reg\(8) & (\dht22_data_bcd|Add3~13\ & VCC)) # (!\dht22_data_bcd|num_reg\(8) & (!\dht22_data_bcd|Add3~13\))
--- \dht22_data_bcd|Add3~15\ = CARRY((!\dht22_data_bcd|num_reg\(8) & !\dht22_data_bcd|Add3~13\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100000101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(8),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add3~13\,
-	combout => \dht22_data_bcd|Add3~14_combout\,
-	cout => \dht22_data_bcd|Add3~15\);
-
--- Location: LCCOMB_X16_Y21_N2
-\dht22_data_bcd|Selector18~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector18~0_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & (\dht22_data_bcd|state.ST_CALC~q\)) # (!\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_data_bcd|Add3~14_combout\)) # 
--- (!\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_one_wire|data_buff_reg\(23))))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101100111001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg[8]~0_combout\,
-	datab => \dht22_data_bcd|state.ST_CALC~q\,
-	datac => \dht22_data_bcd|Add3~14_combout\,
-	datad => \dht22_one_wire|data_buff_reg\(23),
-	combout => \dht22_data_bcd|Selector18~0_combout\);
-
--- Location: LCCOMB_X16_Y21_N26
-\dht22_data_bcd|Selector18~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector18~1_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|Selector18~0_combout\ & ((\dht22_data_bcd|Add1~12_combout\))) # (!\dht22_data_bcd|Selector18~0_combout\ & (\dht22_one_wire|data_buff_reg\(7))))) # 
--- (!\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|Selector18~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111010110001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg[8]~0_combout\,
-	datab => \dht22_one_wire|data_buff_reg\(7),
-	datac => \dht22_data_bcd|Add1~12_combout\,
-	datad => \dht22_data_bcd|Selector18~0_combout\,
-	combout => \dht22_data_bcd|Selector18~1_combout\);
-
--- Location: FF_X16_Y21_N27
-\dht22_data_bcd|num_reg[8]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector18~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(8));
-
--- Location: LCCOMB_X14_Y21_N18
-\dht22_data_bcd|Add3~16\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~16_combout\ = (\dht22_data_bcd|num_reg\(9) & ((GND) # (!\dht22_data_bcd|Add3~15\))) # (!\dht22_data_bcd|num_reg\(9) & (\dht22_data_bcd|Add3~15\ $ (GND)))
--- \dht22_data_bcd|Add3~17\ = CARRY((\dht22_data_bcd|num_reg\(9)) # (!\dht22_data_bcd|Add3~15\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110011001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(9),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add3~15\,
-	combout => \dht22_data_bcd|Add3~16_combout\,
-	cout => \dht22_data_bcd|Add3~17\);
-
--- Location: LCCOMB_X13_Y21_N10
-\dht22_data_bcd|Selector17~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector17~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_data_bcd|Add3~16_combout\) # (\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(22) & 
--- ((!\dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011001010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(22),
-	datab => \dht22_data_bcd|Add3~16_combout\,
-	datac => \dht22_data_bcd|state.ST_CALC~q\,
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector17~0_combout\);
-
--- Location: LCCOMB_X12_Y21_N14
-\dht22_data_bcd|Add1~14\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~14_combout\ = (\dht22_data_bcd|num_reg\(9) & (\dht22_data_bcd|Add1~13\ & VCC)) # (!\dht22_data_bcd|num_reg\(9) & (!\dht22_data_bcd|Add1~13\))
--- \dht22_data_bcd|Add1~15\ = CARRY((!\dht22_data_bcd|num_reg\(9) & !\dht22_data_bcd|Add1~13\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100000101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(9),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add1~13\,
-	combout => \dht22_data_bcd|Add1~14_combout\,
-	cout => \dht22_data_bcd|Add1~15\);
-
--- Location: LCCOMB_X13_Y21_N20
-\dht22_data_bcd|Selector17~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector17~1_combout\ = (\dht22_data_bcd|Selector17~0_combout\ & (((\dht22_data_bcd|Add1~14_combout\) # (!\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|Selector17~0_combout\ & (\dht22_one_wire|data_buff_reg\(6) & 
--- (\dht22_data_bcd|num_reg[8]~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110101001001010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|Selector17~0_combout\,
-	datab => \dht22_one_wire|data_buff_reg\(6),
-	datac => \dht22_data_bcd|num_reg[8]~0_combout\,
-	datad => \dht22_data_bcd|Add1~14_combout\,
-	combout => \dht22_data_bcd|Selector17~1_combout\);
-
--- Location: FF_X13_Y21_N21
-\dht22_data_bcd|num_reg[9]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector17~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(9));
-
--- Location: LCCOMB_X14_Y21_N20
-\dht22_data_bcd|Add3~18\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~18_combout\ = (\dht22_data_bcd|num_reg\(10) & (\dht22_data_bcd|Add3~17\ & VCC)) # (!\dht22_data_bcd|num_reg\(10) & (!\dht22_data_bcd|Add3~17\))
--- \dht22_data_bcd|Add3~19\ = CARRY((!\dht22_data_bcd|num_reg\(10) & !\dht22_data_bcd|Add3~17\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100000101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(10),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add3~17\,
-	combout => \dht22_data_bcd|Add3~18_combout\,
-	cout => \dht22_data_bcd|Add3~19\);
-
--- Location: LCCOMB_X13_Y21_N28
-\dht22_data_bcd|Selector16~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector16~0_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|state.ST_CALC~q\)))) # (!\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~18_combout\))) # 
--- (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(21)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111010010100100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg[8]~0_combout\,
-	datab => \dht22_one_wire|data_buff_reg\(21),
-	datac => \dht22_data_bcd|state.ST_CALC~q\,
-	datad => \dht22_data_bcd|Add3~18_combout\,
-	combout => \dht22_data_bcd|Selector16~0_combout\);
-
--- Location: LCCOMB_X12_Y21_N16
-\dht22_data_bcd|Add1~16\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~16_combout\ = (\dht22_data_bcd|num_reg\(10) & ((GND) # (!\dht22_data_bcd|Add1~15\))) # (!\dht22_data_bcd|num_reg\(10) & (\dht22_data_bcd|Add1~15\ $ (GND)))
--- \dht22_data_bcd|Add1~17\ = CARRY((\dht22_data_bcd|num_reg\(10)) # (!\dht22_data_bcd|Add1~15\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110011001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(10),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add1~15\,
-	combout => \dht22_data_bcd|Add1~16_combout\,
-	cout => \dht22_data_bcd|Add1~17\);
-
--- Location: LCCOMB_X13_Y21_N14
-\dht22_data_bcd|Selector16~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector16~1_combout\ = (\dht22_data_bcd|Selector16~0_combout\ & (((\dht22_data_bcd|Add1~16_combout\) # (!\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|Selector16~0_combout\ & (\dht22_one_wire|data_buff_reg\(5) & 
--- ((\dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110001011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(5),
-	datab => \dht22_data_bcd|Selector16~0_combout\,
-	datac => \dht22_data_bcd|Add1~16_combout\,
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector16~1_combout\);
-
--- Location: FF_X13_Y21_N15
-\dht22_data_bcd|num_reg[10]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector16~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(10));
-
--- Location: LCCOMB_X12_Y21_N18
-\dht22_data_bcd|Add1~18\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~18_combout\ = (\dht22_data_bcd|num_reg\(11) & (\dht22_data_bcd|Add1~17\ & VCC)) # (!\dht22_data_bcd|num_reg\(11) & (!\dht22_data_bcd|Add1~17\))
--- \dht22_data_bcd|Add1~19\ = CARRY((!\dht22_data_bcd|num_reg\(11) & !\dht22_data_bcd|Add1~17\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100000011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(11),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add1~17\,
-	combout => \dht22_data_bcd|Add1~18_combout\,
-	cout => \dht22_data_bcd|Add1~19\);
-
--- Location: LCCOMB_X14_Y21_N22
-\dht22_data_bcd|Add3~20\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~20_combout\ = (\dht22_data_bcd|num_reg\(11) & ((GND) # (!\dht22_data_bcd|Add3~19\))) # (!\dht22_data_bcd|num_reg\(11) & (\dht22_data_bcd|Add3~19\ $ (GND)))
--- \dht22_data_bcd|Add3~21\ = CARRY((\dht22_data_bcd|num_reg\(11)) # (!\dht22_data_bcd|Add3~19\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101010101111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(11),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add3~19\,
-	combout => \dht22_data_bcd|Add3~20_combout\,
-	cout => \dht22_data_bcd|Add3~21\);
-
--- Location: LCCOMB_X13_Y21_N2
-\dht22_data_bcd|Selector15~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector15~0_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & (\dht22_data_bcd|state.ST_CALC~q\)) # (!\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~20_combout\))) # 
--- (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(20)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101110010011000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg[8]~0_combout\,
-	datab => \dht22_data_bcd|state.ST_CALC~q\,
-	datac => \dht22_one_wire|data_buff_reg\(20),
-	datad => \dht22_data_bcd|Add3~20_combout\,
-	combout => \dht22_data_bcd|Selector15~0_combout\);
-
--- Location: LCCOMB_X13_Y21_N0
-\dht22_data_bcd|Selector15~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector15~1_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|Selector15~0_combout\ & ((\dht22_data_bcd|Add1~18_combout\))) # (!\dht22_data_bcd|Selector15~0_combout\ & (\dht22_one_wire|data_buff_reg\(4))))) # 
--- (!\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|Selector15~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111010110001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg[8]~0_combout\,
-	datab => \dht22_one_wire|data_buff_reg\(4),
-	datac => \dht22_data_bcd|Add1~18_combout\,
-	datad => \dht22_data_bcd|Selector15~0_combout\,
-	combout => \dht22_data_bcd|Selector15~1_combout\);
-
--- Location: FF_X13_Y21_N1
-\dht22_data_bcd|num_reg[11]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector15~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(11));
-
--- Location: LCCOMB_X12_Y21_N20
-\dht22_data_bcd|Add1~20\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~20_combout\ = (\dht22_data_bcd|num_reg\(12) & ((GND) # (!\dht22_data_bcd|Add1~19\))) # (!\dht22_data_bcd|num_reg\(12) & (\dht22_data_bcd|Add1~19\ $ (GND)))
--- \dht22_data_bcd|Add1~21\ = CARRY((\dht22_data_bcd|num_reg\(12)) # (!\dht22_data_bcd|Add1~19\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110011001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(12),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add1~19\,
-	combout => \dht22_data_bcd|Add1~20_combout\,
-	cout => \dht22_data_bcd|Add1~21\);
-
--- Location: LCCOMB_X14_Y21_N24
-\dht22_data_bcd|Add3~22\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~22_combout\ = (\dht22_data_bcd|num_reg\(12) & (\dht22_data_bcd|Add3~21\ & VCC)) # (!\dht22_data_bcd|num_reg\(12) & (!\dht22_data_bcd|Add3~21\))
--- \dht22_data_bcd|Add3~23\ = CARRY((!\dht22_data_bcd|num_reg\(12) & !\dht22_data_bcd|Add3~21\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100000011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(12),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add3~21\,
-	combout => \dht22_data_bcd|Add3~22_combout\,
-	cout => \dht22_data_bcd|Add3~23\);
-
--- Location: LCCOMB_X14_Y20_N20
-\dht22_data_bcd|Selector14~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector14~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_data_bcd|Add3~22_combout\) # (\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(19) & 
--- ((!\dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011001010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(19),
-	datab => \dht22_data_bcd|Add3~22_combout\,
-	datac => \dht22_data_bcd|state.ST_CALC~q\,
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector14~0_combout\);
-
--- Location: LCCOMB_X14_Y20_N0
-\dht22_data_bcd|Selector14~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector14~1_combout\ = (\dht22_data_bcd|Selector14~0_combout\ & ((\dht22_data_bcd|Add1~20_combout\) # ((!\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|Selector14~0_combout\ & (((\dht22_one_wire|data_buff_reg\(3) & 
--- \dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1011100011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|Add1~20_combout\,
-	datab => \dht22_data_bcd|Selector14~0_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(3),
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector14~1_combout\);
-
--- Location: FF_X14_Y20_N1
-\dht22_data_bcd|num_reg[12]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector14~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(12));
-
--- Location: LCCOMB_X13_Y21_N6
-\dht22_data_bcd|LessThan0~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|LessThan0~0_combout\ = (!\dht22_data_bcd|num_reg\(12) & (!\dht22_data_bcd|num_reg\(10) & (!\dht22_data_bcd|num_reg\(11) & !\dht22_data_bcd|num_reg\(9))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(12),
-	datab => \dht22_data_bcd|num_reg\(10),
-	datac => \dht22_data_bcd|num_reg\(11),
-	datad => \dht22_data_bcd|num_reg\(9),
-	combout => \dht22_data_bcd|LessThan0~0_combout\);
-
--- Location: LCCOMB_X16_Y21_N24
-\dht22_data_bcd|LessThan0~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|LessThan0~1_combout\ = (!\dht22_data_bcd|num_reg\(7) & (!\dht22_data_bcd|num_reg\(8) & \dht22_data_bcd|LessThan0~0_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(7),
-	datac => \dht22_data_bcd|num_reg\(8),
-	datad => \dht22_data_bcd|LessThan0~0_combout\,
-	combout => \dht22_data_bcd|LessThan0~1_combout\);
-
--- Location: LCCOMB_X16_Y21_N8
-\dht22_data_bcd|LessThan0~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|LessThan0~3_combout\ = (!\dht22_data_bcd|num_reg\(5) & (!\dht22_data_bcd|num_reg\(4) & (\dht22_data_bcd|LessThan0~2_combout\ & \dht22_data_bcd|LessThan0~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(5),
-	datab => \dht22_data_bcd|num_reg\(4),
-	datac => \dht22_data_bcd|LessThan0~2_combout\,
-	datad => \dht22_data_bcd|LessThan0~1_combout\,
-	combout => \dht22_data_bcd|LessThan0~3_combout\);
-
--- Location: LCCOMB_X16_Y21_N14
-\dht22_data_bcd|num~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|num~1_combout\ = (!\dht22_data_bcd|num_reg\(15) & (!\dht22_data_bcd|LessThan0~3_combout\ & \dht22_data_bcd|num~0_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(15),
-	datac => \dht22_data_bcd|LessThan0~3_combout\,
-	datad => \dht22_data_bcd|num~0_combout\,
-	combout => \dht22_data_bcd|num~1_combout\);
-
--- Location: LCCOMB_X14_Y18_N12
-\dht22_data_bcd|num_reg[1]~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|num_reg[1]~4_combout\ = (\dht22_data_bcd|state.ST_DONE~q\ & (\dht22_data_bcd|num_reg\(1))) # (!\dht22_data_bcd|state.ST_DONE~q\ & ((\dht22_data_bcd|num~1_combout\ & ((\dht22_data_bcd|Add3~0_combout\))) # (!\dht22_data_bcd|num~1_combout\ & 
--- (\dht22_data_bcd|num_reg\(1)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101100011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_DONE~q\,
-	datab => \dht22_data_bcd|num_reg\(1),
-	datac => \dht22_data_bcd|Add3~0_combout\,
-	datad => \dht22_data_bcd|num~1_combout\,
-	combout => \dht22_data_bcd|num_reg[1]~4_combout\);
-
--- Location: LCCOMB_X14_Y18_N0
-\dht22_data_bcd|num_reg[1]~5\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|num_reg[1]~5_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_data_bcd|num_reg[1]~4_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|state.ST_DONE~q\ & ((\dht22_data_bcd|num_reg[1]~4_combout\))) # 
--- (!\dht22_data_bcd|state.ST_DONE~q\ & (\dht22_data_bcd|num_reg[1]~3_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111000000100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_CALC~q\,
-	datab => \dht22_data_bcd|num_reg[1]~3_combout\,
-	datac => \dht22_data_bcd|state.ST_DONE~q\,
-	datad => \dht22_data_bcd|num_reg[1]~4_combout\,
-	combout => \dht22_data_bcd|num_reg[1]~5_combout\);
-
--- Location: FF_X14_Y18_N1
-\dht22_data_bcd|num_reg[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|num_reg[1]~5_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(1));
-
--- Location: LCCOMB_X14_Y21_N4
-\dht22_data_bcd|Add3~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~2_combout\ = (\dht22_data_bcd|num_reg\(2) & (\dht22_data_bcd|Add3~1\ & VCC)) # (!\dht22_data_bcd|num_reg\(2) & (!\dht22_data_bcd|Add3~1\))
--- \dht22_data_bcd|Add3~3\ = CARRY((!\dht22_data_bcd|num_reg\(2) & !\dht22_data_bcd|Add3~1\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100000011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(2),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add3~1\,
-	combout => \dht22_data_bcd|Add3~2_combout\,
-	cout => \dht22_data_bcd|Add3~3\);
-
--- Location: LCCOMB_X13_Y20_N2
-\dht22_data_bcd|Selector24~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector24~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~2_combout\) # ((\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (((!\dht22_data_bcd|num_reg[8]~0_combout\ & 
--- \dht22_one_wire|data_buff_reg\(29)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100101111001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|Add3~2_combout\,
-	datab => \dht22_data_bcd|state.ST_CALC~q\,
-	datac => \dht22_data_bcd|num_reg[8]~0_combout\,
-	datad => \dht22_one_wire|data_buff_reg\(29),
-	combout => \dht22_data_bcd|Selector24~0_combout\);
-
--- Location: LCCOMB_X13_Y20_N20
-\dht22_data_bcd|Selector24~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector24~1_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|Selector24~0_combout\ & ((\dht22_data_bcd|Add1~0_combout\))) # (!\dht22_data_bcd|Selector24~0_combout\ & (\dht22_one_wire|data_buff_reg\(13))))) # 
--- (!\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|Selector24~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100111110100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(13),
-	datab => \dht22_data_bcd|Add1~0_combout\,
-	datac => \dht22_data_bcd|num_reg[8]~0_combout\,
-	datad => \dht22_data_bcd|Selector24~0_combout\,
-	combout => \dht22_data_bcd|Selector24~1_combout\);
-
--- Location: FF_X13_Y20_N21
-\dht22_data_bcd|num_reg[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector24~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(2));
-
--- Location: LCCOMB_X12_Y21_N2
-\dht22_data_bcd|Add1~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~2_combout\ = (\dht22_data_bcd|num_reg\(3) & (\dht22_data_bcd|Add1~1\ & VCC)) # (!\dht22_data_bcd|num_reg\(3) & (!\dht22_data_bcd|Add1~1\))
--- \dht22_data_bcd|Add1~3\ = CARRY((!\dht22_data_bcd|num_reg\(3) & !\dht22_data_bcd|Add1~1\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100000101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(3),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add1~1\,
-	combout => \dht22_data_bcd|Add1~2_combout\,
-	cout => \dht22_data_bcd|Add1~3\);
-
--- Location: LCCOMB_X14_Y21_N6
-\dht22_data_bcd|Add3~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~4_combout\ = (\dht22_data_bcd|num_reg\(3) & (\dht22_data_bcd|Add3~3\ $ (GND))) # (!\dht22_data_bcd|num_reg\(3) & (!\dht22_data_bcd|Add3~3\ & VCC))
--- \dht22_data_bcd|Add3~5\ = CARRY((\dht22_data_bcd|num_reg\(3) & !\dht22_data_bcd|Add3~3\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(3),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add3~3\,
-	combout => \dht22_data_bcd|Add3~4_combout\,
-	cout => \dht22_data_bcd|Add3~5\);
-
--- Location: LCCOMB_X13_Y21_N18
-\dht22_data_bcd|Selector23~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector23~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~4_combout\) # ((\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_one_wire|data_buff_reg\(28) & 
--- !\dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000010101100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|Add3~4_combout\,
-	datab => \dht22_one_wire|data_buff_reg\(28),
-	datac => \dht22_data_bcd|state.ST_CALC~q\,
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector23~0_combout\);
-
--- Location: LCCOMB_X13_Y21_N30
-\dht22_data_bcd|Selector23~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector23~1_combout\ = (\dht22_data_bcd|Selector23~0_combout\ & ((\dht22_data_bcd|Add1~2_combout\) # ((!\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|Selector23~0_combout\ & (((\dht22_one_wire|data_buff_reg\(12) & 
--- \dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1011100011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|Add1~2_combout\,
-	datab => \dht22_data_bcd|Selector23~0_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(12),
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector23~1_combout\);
-
--- Location: FF_X13_Y21_N31
-\dht22_data_bcd|num_reg[3]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector23~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(3));
-
--- Location: LCCOMB_X13_Y21_N12
-\dht22_data_bcd|Selector22~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector22~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_data_bcd|Add3~6_combout\) # (\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(27) & 
--- ((!\dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110011100010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(27),
-	datab => \dht22_data_bcd|state.ST_CALC~q\,
-	datac => \dht22_data_bcd|Add3~6_combout\,
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector22~0_combout\);
-
--- Location: LCCOMB_X12_Y21_N4
-\dht22_data_bcd|Add1~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~4_combout\ = (\dht22_data_bcd|num_reg\(4) & ((GND) # (!\dht22_data_bcd|Add1~3\))) # (!\dht22_data_bcd|num_reg\(4) & (\dht22_data_bcd|Add1~3\ $ (GND)))
--- \dht22_data_bcd|Add1~5\ = CARRY((\dht22_data_bcd|num_reg\(4)) # (!\dht22_data_bcd|Add1~3\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110011001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(4),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add1~3\,
-	combout => \dht22_data_bcd|Add1~4_combout\,
-	cout => \dht22_data_bcd|Add1~5\);
-
--- Location: LCCOMB_X13_Y21_N16
-\dht22_data_bcd|Selector22~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector22~1_combout\ = (\dht22_data_bcd|Selector22~0_combout\ & ((\dht22_data_bcd|Add1~4_combout\) # ((!\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|Selector22~0_combout\ & (((\dht22_one_wire|data_buff_reg\(11) & 
--- \dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101100010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|Selector22~0_combout\,
-	datab => \dht22_data_bcd|Add1~4_combout\,
-	datac => \dht22_one_wire|data_buff_reg\(11),
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector22~1_combout\);
-
--- Location: FF_X13_Y21_N17
-\dht22_data_bcd|num_reg[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector22~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(4));
-
--- Location: LCCOMB_X12_Y21_N6
-\dht22_data_bcd|Add1~6\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~6_combout\ = (\dht22_data_bcd|num_reg\(5) & (!\dht22_data_bcd|Add1~5\)) # (!\dht22_data_bcd|num_reg\(5) & ((\dht22_data_bcd|Add1~5\) # (GND)))
--- \dht22_data_bcd|Add1~7\ = CARRY((!\dht22_data_bcd|Add1~5\) # (!\dht22_data_bcd|num_reg\(5)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(5),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add1~5\,
-	combout => \dht22_data_bcd|Add1~6_combout\,
-	cout => \dht22_data_bcd|Add1~7\);
-
--- Location: LCCOMB_X13_Y21_N22
-\dht22_data_bcd|Selector21~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector21~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_data_bcd|Add3~8_combout\) # (\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(26) & 
--- ((!\dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110011100010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(26),
-	datab => \dht22_data_bcd|state.ST_CALC~q\,
-	datac => \dht22_data_bcd|Add3~8_combout\,
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector21~0_combout\);
-
--- Location: LCCOMB_X13_Y21_N26
-\dht22_data_bcd|Selector21~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector21~1_combout\ = (\dht22_data_bcd|Selector21~0_combout\ & (((\dht22_data_bcd|Add1~6_combout\) # (!\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|Selector21~0_combout\ & (\dht22_one_wire|data_buff_reg\(10) & 
--- ((\dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100101011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(10),
-	datab => \dht22_data_bcd|Add1~6_combout\,
-	datac => \dht22_data_bcd|Selector21~0_combout\,
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector21~1_combout\);
-
--- Location: FF_X13_Y21_N27
-\dht22_data_bcd|num_reg[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector21~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(5));
-
--- Location: LCCOMB_X13_Y21_N8
-\dht22_data_bcd|Selector20~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector20~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_data_bcd|Add3~10_combout\) # (\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(25) & 
--- ((!\dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110011100010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(25),
-	datab => \dht22_data_bcd|state.ST_CALC~q\,
-	datac => \dht22_data_bcd|Add3~10_combout\,
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector20~0_combout\);
-
--- Location: LCCOMB_X13_Y21_N4
-\dht22_data_bcd|Selector20~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector20~1_combout\ = (\dht22_data_bcd|Selector20~0_combout\ & ((\dht22_data_bcd|Add1~8_combout\) # ((!\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|Selector20~0_combout\ & (((\dht22_one_wire|data_buff_reg\(9) & 
--- \dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010110011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|Add1~8_combout\,
-	datab => \dht22_one_wire|data_buff_reg\(9),
-	datac => \dht22_data_bcd|Selector20~0_combout\,
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector20~1_combout\);
-
--- Location: FF_X13_Y21_N5
-\dht22_data_bcd|num_reg[6]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector20~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(6));
-
--- Location: LCCOMB_X12_Y21_N28
-\dht22_data_bcd|LessThan3~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|LessThan3~0_combout\ = ((!\dht22_data_bcd|num_reg\(2) & (!\dht22_data_bcd|num_reg\(3) & !\dht22_data_bcd|num_reg\(4)))) # (!\dht22_data_bcd|num_reg\(6))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010101010111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(6),
-	datab => \dht22_data_bcd|num_reg\(2),
-	datac => \dht22_data_bcd|num_reg\(3),
-	datad => \dht22_data_bcd|num_reg\(4),
-	combout => \dht22_data_bcd|LessThan3~0_combout\);
-
--- Location: LCCOMB_X12_Y21_N22
-\dht22_data_bcd|Add1~22\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~22_combout\ = (\dht22_data_bcd|num_reg\(13) & (\dht22_data_bcd|Add1~21\ & VCC)) # (!\dht22_data_bcd|num_reg\(13) & (!\dht22_data_bcd|Add1~21\))
--- \dht22_data_bcd|Add1~23\ = CARRY((!\dht22_data_bcd|num_reg\(13) & !\dht22_data_bcd|Add1~21\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100000011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(13),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add1~21\,
-	combout => \dht22_data_bcd|Add1~22_combout\,
-	cout => \dht22_data_bcd|Add1~23\);
-
--- Location: LCCOMB_X14_Y21_N26
-\dht22_data_bcd|Add3~24\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~24_combout\ = (\dht22_data_bcd|num_reg\(13) & ((GND) # (!\dht22_data_bcd|Add3~23\))) # (!\dht22_data_bcd|num_reg\(13) & (\dht22_data_bcd|Add3~23\ $ (GND)))
--- \dht22_data_bcd|Add3~25\ = CARRY((\dht22_data_bcd|num_reg\(13)) # (!\dht22_data_bcd|Add3~23\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101010101111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(13),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add3~23\,
-	combout => \dht22_data_bcd|Add3~24_combout\,
-	cout => \dht22_data_bcd|Add3~25\);
-
--- Location: LCCOMB_X16_Y20_N4
-\dht22_data_bcd|Selector13~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector13~0_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|state.ST_CALC~q\)))) # (!\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~24_combout\))) # 
--- (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(18)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111110000100010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(18),
-	datab => \dht22_data_bcd|num_reg[8]~0_combout\,
-	datac => \dht22_data_bcd|Add3~24_combout\,
-	datad => \dht22_data_bcd|state.ST_CALC~q\,
-	combout => \dht22_data_bcd|Selector13~0_combout\);
-
--- Location: LCCOMB_X16_Y20_N0
-\dht22_data_bcd|Selector13~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector13~1_combout\ = (\dht22_data_bcd|Selector13~0_combout\ & (((\dht22_data_bcd|Add1~22_combout\) # (!\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|Selector13~0_combout\ & (\dht22_one_wire|data_buff_reg\(2) & 
--- ((\dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100101011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(2),
-	datab => \dht22_data_bcd|Add1~22_combout\,
-	datac => \dht22_data_bcd|Selector13~0_combout\,
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector13~1_combout\);
-
--- Location: FF_X16_Y20_N1
-\dht22_data_bcd|num_reg[13]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector13~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(13));
-
--- Location: LCCOMB_X16_Y21_N28
-\dht22_data_bcd|Selector2~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector2~4_combout\ = (!\dht22_data_bcd|num_reg\(14) & !\dht22_data_bcd|num_reg\(13))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \dht22_data_bcd|num_reg\(14),
-	datad => \dht22_data_bcd|num_reg\(13),
-	combout => \dht22_data_bcd|Selector2~4_combout\);
-
--- Location: LCCOMB_X16_Y21_N18
-\dht22_data_bcd|num~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|num~0_combout\ = (\dht22_data_bcd|Selector2~4_combout\ & (\dht22_data_bcd|LessThan0~1_combout\ & ((\dht22_data_bcd|LessThan3~0_combout\) # (!\dht22_data_bcd|num_reg\(5)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000110000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|LessThan3~0_combout\,
-	datab => \dht22_data_bcd|Selector2~4_combout\,
-	datac => \dht22_data_bcd|num_reg\(5),
-	datad => \dht22_data_bcd|LessThan0~1_combout\,
-	combout => \dht22_data_bcd|num~0_combout\);
-
--- Location: LCCOMB_X16_Y21_N12
-\dht22_data_bcd|num_reg[8]~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|num_reg[8]~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|num_reg\(15)) # ((!\dht22_data_bcd|num~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (((!\param~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000101111001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(15),
-	datab => \dht22_data_bcd|state.ST_CALC~q\,
-	datac => \param~q\,
-	datad => \dht22_data_bcd|num~0_combout\,
-	combout => \dht22_data_bcd|num_reg[8]~0_combout\);
-
--- Location: LCCOMB_X12_Y21_N24
-\dht22_data_bcd|Add1~24\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~24_combout\ = (\dht22_data_bcd|num_reg\(14) & ((GND) # (!\dht22_data_bcd|Add1~23\))) # (!\dht22_data_bcd|num_reg\(14) & (\dht22_data_bcd|Add1~23\ $ (GND)))
--- \dht22_data_bcd|Add1~25\ = CARRY((\dht22_data_bcd|num_reg\(14)) # (!\dht22_data_bcd|Add1~23\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110011001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(14),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add1~23\,
-	combout => \dht22_data_bcd|Add1~24_combout\,
-	cout => \dht22_data_bcd|Add1~25\);
-
--- Location: LCCOMB_X14_Y21_N28
-\dht22_data_bcd|Add3~26\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~26_combout\ = (\dht22_data_bcd|num_reg\(14) & (\dht22_data_bcd|Add3~25\ & VCC)) # (!\dht22_data_bcd|num_reg\(14) & (!\dht22_data_bcd|Add3~25\))
--- \dht22_data_bcd|Add3~27\ = CARRY((!\dht22_data_bcd|num_reg\(14) & !\dht22_data_bcd|Add3~25\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100000011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|num_reg\(14),
-	datad => VCC,
-	cin => \dht22_data_bcd|Add3~25\,
-	combout => \dht22_data_bcd|Add3~26_combout\,
-	cout => \dht22_data_bcd|Add3~27\);
-
--- Location: LCCOMB_X14_Y20_N6
-\dht22_data_bcd|Selector12~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector12~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_data_bcd|Add3~26_combout\) # (\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(17) & 
--- ((!\dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101011100100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_CALC~q\,
-	datab => \dht22_one_wire|data_buff_reg\(17),
-	datac => \dht22_data_bcd|Add3~26_combout\,
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector12~0_combout\);
-
--- Location: LCCOMB_X14_Y20_N26
-\dht22_data_bcd|Selector12~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector12~1_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|Selector12~0_combout\ & ((\dht22_data_bcd|Add1~24_combout\))) # (!\dht22_data_bcd|Selector12~0_combout\ & (\dht22_one_wire|data_buff_reg\(1))))) # 
--- (!\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|Selector12~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111001110001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(1),
-	datab => \dht22_data_bcd|num_reg[8]~0_combout\,
-	datac => \dht22_data_bcd|Add1~24_combout\,
-	datad => \dht22_data_bcd|Selector12~0_combout\,
-	combout => \dht22_data_bcd|Selector12~1_combout\);
-
--- Location: FF_X14_Y20_N27
-\dht22_data_bcd|num_reg[14]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector12~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(14));
-
--- Location: LCCOMB_X12_Y21_N26
-\dht22_data_bcd|Add1~26\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add1~26_combout\ = \dht22_data_bcd|Add1~25\ $ (!\dht22_data_bcd|num_reg\(15))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000000001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datad => \dht22_data_bcd|num_reg\(15),
-	cin => \dht22_data_bcd|Add1~25\,
-	combout => \dht22_data_bcd|Add1~26_combout\);
-
--- Location: LCCOMB_X14_Y21_N30
-\dht22_data_bcd|Add3~28\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Add3~28_combout\ = \dht22_data_bcd|Add3~27\ $ (\dht22_data_bcd|num_reg\(15))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111111110000",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datad => \dht22_data_bcd|num_reg\(15),
-	cin => \dht22_data_bcd|Add3~27\,
-	combout => \dht22_data_bcd|Add3~28_combout\);
-
--- Location: LCCOMB_X14_Y21_N0
-\dht22_data_bcd|Selector11~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector11~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_data_bcd|Add3~28_combout\) # (\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(16) & 
--- ((!\dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101011100100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_CALC~q\,
-	datab => \dht22_one_wire|data_buff_reg\(16),
-	datac => \dht22_data_bcd|Add3~28_combout\,
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector11~0_combout\);
-
--- Location: LCCOMB_X16_Y21_N30
-\dht22_data_bcd|Selector11~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector11~1_combout\ = (\dht22_data_bcd|Selector11~0_combout\ & (((\dht22_data_bcd|Add1~26_combout\) # (!\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|Selector11~0_combout\ & (\dht22_one_wire|data_buff_reg\(0) & 
--- ((\dht22_data_bcd|num_reg[8]~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100101011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_one_wire|data_buff_reg\(0),
-	datab => \dht22_data_bcd|Add1~26_combout\,
-	datac => \dht22_data_bcd|Selector11~0_combout\,
-	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
-	combout => \dht22_data_bcd|Selector11~1_combout\);
-
--- Location: FF_X16_Y21_N31
-\dht22_data_bcd|num_reg[15]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector11~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(15));
-
--- Location: LCCOMB_X16_Y21_N22
-\dht22_data_bcd|done_reg~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|done_reg~3_combout\ = (!\dht22_data_bcd|num_reg\(15) & (\dht22_data_bcd|LessThan0~3_combout\ & (\dht22_data_bcd|state.ST_CALC~q\ & \dht22_data_bcd|num~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(15),
-	datab => \dht22_data_bcd|LessThan0~3_combout\,
-	datac => \dht22_data_bcd|state.ST_CALC~q\,
-	datad => \dht22_data_bcd|num~0_combout\,
-	combout => \dht22_data_bcd|done_reg~3_combout\);
-
--- Location: LCCOMB_X17_Y21_N22
-\dht22_data_bcd|done_reg~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|done_reg~2_combout\ = (\dht22_data_bcd|state.ST_DONE~q\ & (\en_converter~q\ & (\dht22_data_bcd|done_reg~q\))) # (!\dht22_data_bcd|state.ST_DONE~q\ & (((\dht22_data_bcd|done_reg~q\) # (\dht22_data_bcd|done_reg~3_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1011001110110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \en_converter~q\,
-	datab => \dht22_data_bcd|state.ST_DONE~q\,
-	datac => \dht22_data_bcd|done_reg~q\,
-	datad => \dht22_data_bcd|done_reg~3_combout\,
-	combout => \dht22_data_bcd|done_reg~2_combout\);
-
--- Location: FF_X17_Y21_N23
-\dht22_data_bcd|done_reg\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|done_reg~2_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|done_reg~q\);
-
--- Location: LCCOMB_X11_Y20_N8
+-- Location: LCCOMB_X22_Y18_N12
 \Add1~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Add1~1_cout\ = CARRY((\display|count\(1) & \display|count\(0)))
+-- \Add1~1_cout\ = CARRY((\display|count\(0) & \display|count\(1)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9682,28 +8139,28 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|count\(1),
-	datab => \display|count\(0),
+	dataa => \display|count\(0),
+	datab => \display|count\(1),
 	datad => VCC,
 	cout => \Add1~1_cout\);
 
--- Location: LCCOMB_X11_Y20_N10
+-- Location: LCCOMB_X22_Y18_N14
 \Add1~3\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add1~3_cout\ = CARRY((!\Add1~1_cout\) # (!\display|count\(2)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000111111",
+	lut_mask => "0000000001011111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \display|count\(2),
+	dataa => \display|count\(2),
 	datad => VCC,
 	cin => \Add1~1_cout\,
 	cout => \Add1~3_cout\);
 
--- Location: LCCOMB_X11_Y20_N12
+-- Location: LCCOMB_X22_Y18_N16
 \Add1~4\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add1~4_combout\ = (converter_count(3) & (\Add1~3_cout\ $ (GND))) # (!converter_count(3) & (!\Add1~3_cout\ & VCC))
@@ -9721,22 +8178,22 @@ PORT MAP (
 	combout => \Add1~4_combout\,
 	cout => \Add1~5\);
 
--- Location: LCCOMB_X11_Y20_N0
+-- Location: LCCOMB_X22_Y18_N2
 \converter_count~5\ : cycloneive_lcell_comb
 -- Equation(s):
--- \converter_count~5_combout\ = (\Add1~4_combout\ & !\Equal1~2_combout\)
+-- \converter_count~5_combout\ = (!\Equal1~2_combout\ & \Add1~4_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000101000001010",
+	lut_mask => "0101010100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Add1~4_combout\,
-	datac => \Equal1~2_combout\,
+	dataa => \Equal1~2_combout\,
+	datad => \Add1~4_combout\,
 	combout => \converter_count~5_combout\);
 
--- Location: FF_X11_Y20_N1
+-- Location: FF_X22_Y18_N3
 \converter_count[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -9751,7 +8208,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => converter_count(3));
 
--- Location: LCCOMB_X11_Y20_N14
+-- Location: LCCOMB_X22_Y18_N18
 \Add1~6\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add1~6_combout\ = (converter_count(4) & (!\Add1~5\)) # (!converter_count(4) & ((\Add1~5\) # (GND)))
@@ -9769,7 +8226,7 @@ PORT MAP (
 	combout => \Add1~6_combout\,
 	cout => \Add1~7\);
 
--- Location: FF_X11_Y20_N15
+-- Location: FF_X22_Y18_N19
 \converter_count[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -9784,7 +8241,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => converter_count(4));
 
--- Location: LCCOMB_X11_Y20_N16
+-- Location: LCCOMB_X22_Y18_N20
 \Add1~8\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add1~8_combout\ = (converter_count(5) & (\Add1~7\ $ (GND))) # (!converter_count(5) & (!\Add1~7\ & VCC))
@@ -9792,32 +8249,32 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => converter_count(5),
+	dataa => converter_count(5),
 	datad => VCC,
 	cin => \Add1~7\,
 	combout => \Add1~8_combout\,
 	cout => \Add1~9\);
 
--- Location: LCCOMB_X11_Y20_N2
+-- Location: LCCOMB_X22_Y18_N30
 \converter_count~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \converter_count~4_combout\ = (\Add1~8_combout\ & !\Equal1~2_combout\)
+-- \converter_count~4_combout\ = (!\Equal1~2_combout\ & \Add1~8_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000110000001100",
+	lut_mask => "0101010100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \Add1~8_combout\,
-	datac => \Equal1~2_combout\,
+	dataa => \Equal1~2_combout\,
+	datad => \Add1~8_combout\,
 	combout => \converter_count~4_combout\);
 
--- Location: FF_X11_Y20_N3
+-- Location: FF_X22_Y18_N31
 \converter_count[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -9832,7 +8289,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => converter_count(5));
 
--- Location: LCCOMB_X11_Y20_N18
+-- Location: LCCOMB_X22_Y18_N22
 \Add1~10\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add1~10_combout\ = (converter_count(6) & (!\Add1~9\)) # (!converter_count(6) & ((\Add1~9\) # (GND)))
@@ -9840,32 +8297,32 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101001011111",
+	lut_mask => "0011110000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => converter_count(6),
+	datab => converter_count(6),
 	datad => VCC,
 	cin => \Add1~9\,
 	combout => \Add1~10_combout\,
 	cout => \Add1~11\);
 
--- Location: LCCOMB_X11_Y20_N6
+-- Location: LCCOMB_X22_Y18_N0
 \converter_count~3\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \converter_count~3_combout\ = (\Add1~10_combout\ & !\Equal1~2_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000110000001100",
+	lut_mask => "0000000011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \Add1~10_combout\,
-	datac => \Equal1~2_combout\,
+	datac => \Add1~10_combout\,
+	datad => \Equal1~2_combout\,
 	combout => \converter_count~3_combout\);
 
--- Location: FF_X11_Y20_N7
+-- Location: FF_X22_Y18_N1
 \converter_count[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -9880,7 +8337,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => converter_count(6));
 
--- Location: LCCOMB_X11_Y20_N20
+-- Location: LCCOMB_X22_Y18_N24
 \Add1~12\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add1~12_combout\ = (converter_count(7) & (\Add1~11\ $ (GND))) # (!converter_count(7) & (!\Add1~11\ & VCC))
@@ -9888,32 +8345,32 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => converter_count(7),
+	dataa => converter_count(7),
 	datad => VCC,
 	cin => \Add1~11\,
 	combout => \Add1~12_combout\,
 	cout => \Add1~13\);
 
--- Location: LCCOMB_X11_Y20_N28
+-- Location: LCCOMB_X19_Y18_N10
 \converter_count~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \converter_count~2_combout\ = (\Add1~12_combout\ & !\Equal1~2_combout\)
+-- \converter_count~2_combout\ = (!\Equal1~2_combout\ & \Add1~12_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000110000001100",
+	lut_mask => "0011000000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \Add1~12_combout\,
-	datac => \Equal1~2_combout\,
+	datab => \Equal1~2_combout\,
+	datac => \Add1~12_combout\,
 	combout => \converter_count~2_combout\);
 
--- Location: FF_X11_Y20_N29
+-- Location: FF_X19_Y18_N11
 \converter_count[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -9928,7 +8385,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => converter_count(7));
 
--- Location: LCCOMB_X11_Y20_N22
+-- Location: LCCOMB_X22_Y18_N26
 \Add1~14\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add1~14_combout\ = (converter_count(8) & (!\Add1~13\)) # (!converter_count(8) & ((\Add1~13\) # (GND)))
@@ -9946,22 +8403,22 @@ PORT MAP (
 	combout => \Add1~14_combout\,
 	cout => \Add1~15\);
 
--- Location: LCCOMB_X11_Y20_N26
+-- Location: LCCOMB_X19_Y18_N28
 \converter_count~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \converter_count~1_combout\ = (!\Equal1~2_combout\ & \Add1~14_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101000001010000",
+	lut_mask => "0000111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Equal1~2_combout\,
-	datac => \Add1~14_combout\,
+	datac => \Equal1~2_combout\,
+	datad => \Add1~14_combout\,
 	combout => \converter_count~1_combout\);
 
--- Location: FF_X11_Y20_N27
+-- Location: FF_X19_Y18_N29
 \converter_count[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -9976,7 +8433,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => converter_count(8));
 
--- Location: LCCOMB_X11_Y20_N24
+-- Location: LCCOMB_X22_Y18_N28
 \Add1~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Add1~16_combout\ = converter_count(9) $ (!\Add1~15\)
@@ -9991,22 +8448,22 @@ PORT MAP (
 	cin => \Add1~15\,
 	combout => \Add1~16_combout\);
 
--- Location: LCCOMB_X11_Y20_N4
+-- Location: LCCOMB_X22_Y18_N8
 \converter_count~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \converter_count~0_combout\ = (\Add1~16_combout\ & !\Equal1~2_combout\)
+-- \converter_count~0_combout\ = (!\Equal1~2_combout\ & \Add1~16_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000110000001100",
+	lut_mask => "0101010100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \Add1~16_combout\,
-	datac => \Equal1~2_combout\,
+	dataa => \Equal1~2_combout\,
+	datad => \Add1~16_combout\,
 	combout => \converter_count~0_combout\);
 
--- Location: FF_X11_Y20_N5
+-- Location: FF_X22_Y18_N9
 \converter_count[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -10021,10 +8478,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => converter_count(9));
 
--- Location: LCCOMB_X12_Y20_N6
+-- Location: LCCOMB_X22_Y18_N10
 \Equal1~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Equal1~0_combout\ = (\display|count\(1) & (converter_count(9) & (\display|count\(0) & \display|count\(2))))
+-- \Equal1~0_combout\ = (\display|count\(2) & (converter_count(9) & (\display|count\(0) & \display|count\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -10032,16 +8489,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|count\(1),
+	dataa => \display|count\(2),
 	datab => converter_count(9),
 	datac => \display|count\(0),
-	datad => \display|count\(2),
+	datad => \display|count\(1),
 	combout => \Equal1~0_combout\);
 
--- Location: LCCOMB_X12_Y20_N24
+-- Location: LCCOMB_X22_Y18_N4
 \Equal1~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Equal1~1_combout\ = (converter_count(5) & (converter_count(6) & (converter_count(8) & converter_count(7))))
+-- \Equal1~1_combout\ = (converter_count(8) & (converter_count(6) & (converter_count(5) & converter_count(7))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -10049,46 +8506,1466 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => converter_count(5),
+	dataa => converter_count(8),
 	datab => converter_count(6),
-	datac => converter_count(8),
+	datac => converter_count(5),
 	datad => converter_count(7),
 	combout => \Equal1~1_combout\);
 
--- Location: LCCOMB_X11_Y20_N30
+-- Location: LCCOMB_X22_Y18_N6
 \Equal1~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Equal1~2_combout\ = (\Equal1~0_combout\ & (!converter_count(3) & (!converter_count(4) & \Equal1~1_combout\)))
+-- \Equal1~2_combout\ = (\Equal1~0_combout\ & (!converter_count(4) & (\Equal1~1_combout\ & !converter_count(3))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000001000000000",
+	lut_mask => "0000000000100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \Equal1~0_combout\,
-	datab => converter_count(3),
-	datac => converter_count(4),
-	datad => \Equal1~1_combout\,
+	datab => converter_count(4),
+	datac => \Equal1~1_combout\,
+	datad => converter_count(3),
 	combout => \Equal1~2_combout\);
 
--- Location: LCCOMB_X17_Y21_N28
-\en_converter~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X26_Y15_N0
+\dht22_data_bcd|Add1~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \en_converter~0_combout\ = (\Equal1~2_combout\ & (!\dht22_data_bcd|done_reg~q\)) # (!\Equal1~2_combout\ & ((\en_converter~q\)))
+-- \dht22_data_bcd|Add1~0_combout\ = \dht22_data_bcd|num_reg\(2) $ (VCC)
+-- \dht22_data_bcd|Add1~1\ = CARRY(\dht22_data_bcd|num_reg\(2))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101010111110000",
+	lut_mask => "0101010110101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_data_bcd|done_reg~q\,
+	dataa => \dht22_data_bcd|num_reg\(2),
+	datad => VCC,
+	combout => \dht22_data_bcd|Add1~0_combout\,
+	cout => \dht22_data_bcd|Add1~1\);
+
+-- Location: LCCOMB_X25_Y14_N10
+\dht22_data_bcd|num_reg[1]~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|num_reg[1]~3_combout\ = (\param~q\ & (\dht22_one_wire|data_buff_reg\(30))) # (!\param~q\ & ((\dht22_one_wire|data_buff_reg\(14))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010111110100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(30),
+	datac => \param~q\,
+	datad => \dht22_one_wire|data_buff_reg\(14),
+	combout => \dht22_data_bcd|num_reg[1]~3_combout\);
+
+-- Location: LCCOMB_X22_Y15_N0
+\dht22_data_bcd|Add3~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~0_combout\ = \dht22_data_bcd|num_reg\(1) $ (VCC)
+-- \dht22_data_bcd|Add3~1\ = CARRY(\dht22_data_bcd|num_reg\(1))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101010110101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(1),
+	datad => VCC,
+	combout => \dht22_data_bcd|Add3~0_combout\,
+	cout => \dht22_data_bcd|Add3~1\);
+
+-- Location: LCCOMB_X23_Y18_N4
+\dht22_data_bcd|num_reg[1]~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|num_reg[1]~4_combout\ = (\dht22_data_bcd|state.ST_DONE~q\ & (((\dht22_data_bcd|num_reg\(1))))) # (!\dht22_data_bcd|state.ST_DONE~q\ & ((\dht22_data_bcd|num~1_combout\ & (\dht22_data_bcd|Add3~0_combout\)) # (!\dht22_data_bcd|num~1_combout\ 
+-- & ((\dht22_data_bcd|num_reg\(1))))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110001011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Add3~0_combout\,
+	datab => \dht22_data_bcd|state.ST_DONE~q\,
+	datac => \dht22_data_bcd|num_reg\(1),
+	datad => \dht22_data_bcd|num~1_combout\,
+	combout => \dht22_data_bcd|num_reg[1]~4_combout\);
+
+-- Location: LCCOMB_X23_Y18_N6
+\dht22_data_bcd|num_reg[1]~5\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|num_reg[1]~5_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_data_bcd|num_reg[1]~4_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|state.ST_DONE~q\ & ((\dht22_data_bcd|num_reg[1]~4_combout\))) # 
+-- (!\dht22_data_bcd|state.ST_DONE~q\ & (\dht22_data_bcd|num_reg[1]~3_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000011100010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg[1]~3_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_data_bcd|num_reg[1]~4_combout\,
+	datad => \dht22_data_bcd|state.ST_DONE~q\,
+	combout => \dht22_data_bcd|num_reg[1]~5_combout\);
+
+-- Location: FF_X23_Y18_N7
+\dht22_data_bcd|num_reg[1]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|num_reg[1]~5_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(1));
+
+-- Location: LCCOMB_X22_Y15_N2
+\dht22_data_bcd|Add3~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~2_combout\ = (\dht22_data_bcd|num_reg\(2) & (\dht22_data_bcd|Add3~1\ & VCC)) # (!\dht22_data_bcd|num_reg\(2) & (!\dht22_data_bcd|Add3~1\))
+-- \dht22_data_bcd|Add3~3\ = CARRY((!\dht22_data_bcd|num_reg\(2) & !\dht22_data_bcd|Add3~1\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100000101",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(2),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add3~1\,
+	combout => \dht22_data_bcd|Add3~2_combout\,
+	cout => \dht22_data_bcd|Add3~3\);
+
+-- Location: LCCOMB_X23_Y15_N16
+\dht22_data_bcd|Selector24~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector24~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~2_combout\) # ((\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_one_wire|data_buff_reg\(29) & 
+-- !\dht22_data_bcd|num_reg[8]~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110010111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Add3~2_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_one_wire|data_buff_reg\(29),
+	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
+	combout => \dht22_data_bcd|Selector24~0_combout\);
+
+-- Location: LCCOMB_X24_Y15_N24
+\dht22_data_bcd|Selector24~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector24~1_combout\ = (\dht22_data_bcd|Selector24~0_combout\ & ((\dht22_data_bcd|Add1~0_combout\) # ((!\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|Selector24~0_combout\ & (((\dht22_one_wire|data_buff_reg\(13) & 
+-- \dht22_data_bcd|num_reg[8]~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010110011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Add1~0_combout\,
+	datab => \dht22_one_wire|data_buff_reg\(13),
+	datac => \dht22_data_bcd|Selector24~0_combout\,
+	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
+	combout => \dht22_data_bcd|Selector24~1_combout\);
+
+-- Location: LCCOMB_X26_Y15_N2
+\dht22_data_bcd|Add1~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add1~2_combout\ = (\dht22_data_bcd|num_reg\(3) & (\dht22_data_bcd|Add1~1\ & VCC)) # (!\dht22_data_bcd|num_reg\(3) & (!\dht22_data_bcd|Add1~1\))
+-- \dht22_data_bcd|Add1~3\ = CARRY((!\dht22_data_bcd|num_reg\(3) & !\dht22_data_bcd|Add1~1\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100000101",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(3),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add1~1\,
+	combout => \dht22_data_bcd|Add1~2_combout\,
+	cout => \dht22_data_bcd|Add1~3\);
+
+-- Location: LCCOMB_X26_Y15_N4
+\dht22_data_bcd|Add1~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add1~4_combout\ = (\dht22_data_bcd|num_reg\(4) & ((GND) # (!\dht22_data_bcd|Add1~3\))) # (!\dht22_data_bcd|num_reg\(4) & (\dht22_data_bcd|Add1~3\ $ (GND)))
+-- \dht22_data_bcd|Add1~5\ = CARRY((\dht22_data_bcd|num_reg\(4)) # (!\dht22_data_bcd|Add1~3\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110011001111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(4),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add1~3\,
+	combout => \dht22_data_bcd|Add1~4_combout\,
+	cout => \dht22_data_bcd|Add1~5\);
+
+-- Location: LCCOMB_X26_Y15_N6
+\dht22_data_bcd|Add1~6\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add1~6_combout\ = (\dht22_data_bcd|num_reg\(5) & (!\dht22_data_bcd|Add1~5\)) # (!\dht22_data_bcd|num_reg\(5) & ((\dht22_data_bcd|Add1~5\) # (GND)))
+-- \dht22_data_bcd|Add1~7\ = CARRY((!\dht22_data_bcd|Add1~5\) # (!\dht22_data_bcd|num_reg\(5)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101001011111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(5),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add1~5\,
+	combout => \dht22_data_bcd|Add1~6_combout\,
+	cout => \dht22_data_bcd|Add1~7\);
+
+-- Location: LCCOMB_X26_Y15_N8
+\dht22_data_bcd|Add1~8\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add1~8_combout\ = (\dht22_data_bcd|num_reg\(6) & (\dht22_data_bcd|Add1~7\ $ (GND))) # (!\dht22_data_bcd|num_reg\(6) & (!\dht22_data_bcd|Add1~7\ & VCC))
+-- \dht22_data_bcd|Add1~9\ = CARRY((\dht22_data_bcd|num_reg\(6) & !\dht22_data_bcd|Add1~7\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(6),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add1~7\,
+	combout => \dht22_data_bcd|Add1~8_combout\,
+	cout => \dht22_data_bcd|Add1~9\);
+
+-- Location: LCCOMB_X22_Y15_N8
+\dht22_data_bcd|Add3~8\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~8_combout\ = (\dht22_data_bcd|num_reg\(5) & ((GND) # (!\dht22_data_bcd|Add3~7\))) # (!\dht22_data_bcd|num_reg\(5) & (\dht22_data_bcd|Add3~7\ $ (GND)))
+-- \dht22_data_bcd|Add3~9\ = CARRY((\dht22_data_bcd|num_reg\(5)) # (!\dht22_data_bcd|Add3~7\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101010101111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(5),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add3~7\,
+	combout => \dht22_data_bcd|Add3~8_combout\,
+	cout => \dht22_data_bcd|Add3~9\);
+
+-- Location: LCCOMB_X22_Y15_N10
+\dht22_data_bcd|Add3~10\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~10_combout\ = (\dht22_data_bcd|num_reg\(6) & (\dht22_data_bcd|Add3~9\ & VCC)) # (!\dht22_data_bcd|num_reg\(6) & (!\dht22_data_bcd|Add3~9\))
+-- \dht22_data_bcd|Add3~11\ = CARRY((!\dht22_data_bcd|num_reg\(6) & !\dht22_data_bcd|Add3~9\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100000101",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(6),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add3~9\,
+	combout => \dht22_data_bcd|Add3~10_combout\,
+	cout => \dht22_data_bcd|Add3~11\);
+
+-- Location: LCCOMB_X26_Y15_N30
+\dht22_data_bcd|Selector20~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector20~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~10_combout\) # ((\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_one_wire|data_buff_reg\(25) & 
+-- !\dht22_data_bcd|num_reg[8]~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110010111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Add3~10_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_one_wire|data_buff_reg\(25),
+	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
+	combout => \dht22_data_bcd|Selector20~0_combout\);
+
+-- Location: LCCOMB_X26_Y15_N28
+\dht22_data_bcd|Selector20~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector20~1_combout\ = (\dht22_data_bcd|Selector20~0_combout\ & (((\dht22_data_bcd|Add1~8_combout\) # (!\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|Selector20~0_combout\ & (\dht22_one_wire|data_buff_reg\(9) & 
+-- ((\dht22_data_bcd|num_reg[8]~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100101011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(9),
+	datab => \dht22_data_bcd|Add1~8_combout\,
+	datac => \dht22_data_bcd|Selector20~0_combout\,
+	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
+	combout => \dht22_data_bcd|Selector20~1_combout\);
+
+-- Location: FF_X26_Y15_N29
+\dht22_data_bcd|num_reg[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector20~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(6));
+
+-- Location: LCCOMB_X22_Y15_N12
+\dht22_data_bcd|Add3~12\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~12_combout\ = (\dht22_data_bcd|num_reg\(7) & ((GND) # (!\dht22_data_bcd|Add3~11\))) # (!\dht22_data_bcd|num_reg\(7) & (\dht22_data_bcd|Add3~11\ $ (GND)))
+-- \dht22_data_bcd|Add3~13\ = CARRY((\dht22_data_bcd|num_reg\(7)) # (!\dht22_data_bcd|Add3~11\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110011001111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(7),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add3~11\,
+	combout => \dht22_data_bcd|Add3~12_combout\,
+	cout => \dht22_data_bcd|Add3~13\);
+
+-- Location: LCCOMB_X23_Y15_N0
+\dht22_data_bcd|Selector19~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector19~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~12_combout\) # ((\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_one_wire|data_buff_reg\(24) & 
+-- !\dht22_data_bcd|num_reg[8]~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110010111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Add3~12_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_one_wire|data_buff_reg\(24),
+	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
+	combout => \dht22_data_bcd|Selector19~0_combout\);
+
+-- Location: LCCOMB_X26_Y15_N10
+\dht22_data_bcd|Add1~10\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add1~10_combout\ = (\dht22_data_bcd|num_reg\(7) & (\dht22_data_bcd|Add1~9\ & VCC)) # (!\dht22_data_bcd|num_reg\(7) & (!\dht22_data_bcd|Add1~9\))
+-- \dht22_data_bcd|Add1~11\ = CARRY((!\dht22_data_bcd|num_reg\(7) & !\dht22_data_bcd|Add1~9\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100000101",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(7),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add1~9\,
+	combout => \dht22_data_bcd|Add1~10_combout\,
+	cout => \dht22_data_bcd|Add1~11\);
+
+-- Location: LCCOMB_X23_Y15_N10
+\dht22_data_bcd|Selector19~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector19~1_combout\ = (\dht22_data_bcd|Selector19~0_combout\ & (((\dht22_data_bcd|Add1~10_combout\) # (!\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|Selector19~0_combout\ & (\dht22_one_wire|data_buff_reg\(8) & 
+-- ((\dht22_data_bcd|num_reg[8]~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110001011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(8),
+	datab => \dht22_data_bcd|Selector19~0_combout\,
+	datac => \dht22_data_bcd|Add1~10_combout\,
+	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
+	combout => \dht22_data_bcd|Selector19~1_combout\);
+
+-- Location: FF_X23_Y15_N11
+\dht22_data_bcd|num_reg[7]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector19~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(7));
+
+-- Location: LCCOMB_X22_Y15_N14
+\dht22_data_bcd|Add3~14\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~14_combout\ = (\dht22_data_bcd|num_reg\(8) & (\dht22_data_bcd|Add3~13\ & VCC)) # (!\dht22_data_bcd|num_reg\(8) & (!\dht22_data_bcd|Add3~13\))
+-- \dht22_data_bcd|Add3~15\ = CARRY((!\dht22_data_bcd|num_reg\(8) & !\dht22_data_bcd|Add3~13\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100000011",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(8),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add3~13\,
+	combout => \dht22_data_bcd|Add3~14_combout\,
+	cout => \dht22_data_bcd|Add3~15\);
+
+-- Location: LCCOMB_X23_Y15_N26
+\dht22_data_bcd|Selector18~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector18~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~14_combout\) # ((\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_one_wire|data_buff_reg\(23) & 
+-- !\dht22_data_bcd|num_reg[8]~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110010111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Add3~14_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_one_wire|data_buff_reg\(23),
+	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
+	combout => \dht22_data_bcd|Selector18~0_combout\);
+
+-- Location: LCCOMB_X26_Y15_N12
+\dht22_data_bcd|Add1~12\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add1~12_combout\ = (\dht22_data_bcd|num_reg\(8) & ((GND) # (!\dht22_data_bcd|Add1~11\))) # (!\dht22_data_bcd|num_reg\(8) & (\dht22_data_bcd|Add1~11\ $ (GND)))
+-- \dht22_data_bcd|Add1~13\ = CARRY((\dht22_data_bcd|num_reg\(8)) # (!\dht22_data_bcd|Add1~11\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101010101111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(8),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add1~11\,
+	combout => \dht22_data_bcd|Add1~12_combout\,
+	cout => \dht22_data_bcd|Add1~13\);
+
+-- Location: LCCOMB_X23_Y15_N28
+\dht22_data_bcd|Selector18~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector18~1_combout\ = (\dht22_data_bcd|Selector18~0_combout\ & (((\dht22_data_bcd|Add1~12_combout\)) # (!\dht22_data_bcd|num_reg[8]~0_combout\))) # (!\dht22_data_bcd|Selector18~0_combout\ & (\dht22_data_bcd|num_reg[8]~0_combout\ & 
+-- ((\dht22_one_wire|data_buff_reg\(7)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110011010100010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Selector18~0_combout\,
+	datab => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datac => \dht22_data_bcd|Add1~12_combout\,
+	datad => \dht22_one_wire|data_buff_reg\(7),
+	combout => \dht22_data_bcd|Selector18~1_combout\);
+
+-- Location: FF_X23_Y15_N29
+\dht22_data_bcd|num_reg[8]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector18~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(8));
+
+-- Location: LCCOMB_X26_Y15_N14
+\dht22_data_bcd|Add1~14\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add1~14_combout\ = (\dht22_data_bcd|num_reg\(9) & (\dht22_data_bcd|Add1~13\ & VCC)) # (!\dht22_data_bcd|num_reg\(9) & (!\dht22_data_bcd|Add1~13\))
+-- \dht22_data_bcd|Add1~15\ = CARRY((!\dht22_data_bcd|num_reg\(9) & !\dht22_data_bcd|Add1~13\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100000101",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(9),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add1~13\,
+	combout => \dht22_data_bcd|Add1~14_combout\,
+	cout => \dht22_data_bcd|Add1~15\);
+
+-- Location: LCCOMB_X22_Y15_N16
+\dht22_data_bcd|Add3~16\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~16_combout\ = (\dht22_data_bcd|num_reg\(9) & ((GND) # (!\dht22_data_bcd|Add3~15\))) # (!\dht22_data_bcd|num_reg\(9) & (\dht22_data_bcd|Add3~15\ $ (GND)))
+-- \dht22_data_bcd|Add3~17\ = CARRY((\dht22_data_bcd|num_reg\(9)) # (!\dht22_data_bcd|Add3~15\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110011001111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(9),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add3~15\,
+	combout => \dht22_data_bcd|Add3~16_combout\,
+	cout => \dht22_data_bcd|Add3~17\);
+
+-- Location: LCCOMB_X25_Y15_N20
+\dht22_data_bcd|Selector17~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector17~0_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & (\dht22_data_bcd|state.ST_CALC~q\)) # (!\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~16_combout\))) # 
+-- (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(22)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101110010011000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_one_wire|data_buff_reg\(22),
+	datad => \dht22_data_bcd|Add3~16_combout\,
+	combout => \dht22_data_bcd|Selector17~0_combout\);
+
+-- Location: LCCOMB_X25_Y15_N0
+\dht22_data_bcd|Selector17~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector17~1_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|Selector17~0_combout\ & ((\dht22_data_bcd|Add1~14_combout\))) # (!\dht22_data_bcd|Selector17~0_combout\ & (\dht22_one_wire|data_buff_reg\(6))))) # 
+-- (!\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|Selector17~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111010110001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datab => \dht22_one_wire|data_buff_reg\(6),
+	datac => \dht22_data_bcd|Add1~14_combout\,
+	datad => \dht22_data_bcd|Selector17~0_combout\,
+	combout => \dht22_data_bcd|Selector17~1_combout\);
+
+-- Location: FF_X25_Y15_N1
+\dht22_data_bcd|num_reg[9]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector17~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(9));
+
+-- Location: LCCOMB_X26_Y15_N16
+\dht22_data_bcd|Add1~16\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add1~16_combout\ = (\dht22_data_bcd|num_reg\(10) & ((GND) # (!\dht22_data_bcd|Add1~15\))) # (!\dht22_data_bcd|num_reg\(10) & (\dht22_data_bcd|Add1~15\ $ (GND)))
+-- \dht22_data_bcd|Add1~17\ = CARRY((\dht22_data_bcd|num_reg\(10)) # (!\dht22_data_bcd|Add1~15\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110011001111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(10),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add1~15\,
+	combout => \dht22_data_bcd|Add1~16_combout\,
+	cout => \dht22_data_bcd|Add1~17\);
+
+-- Location: LCCOMB_X22_Y15_N18
+\dht22_data_bcd|Add3~18\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~18_combout\ = (\dht22_data_bcd|num_reg\(10) & (\dht22_data_bcd|Add3~17\ & VCC)) # (!\dht22_data_bcd|num_reg\(10) & (!\dht22_data_bcd|Add3~17\))
+-- \dht22_data_bcd|Add3~19\ = CARRY((!\dht22_data_bcd|num_reg\(10) & !\dht22_data_bcd|Add3~17\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100000011",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(10),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add3~17\,
+	combout => \dht22_data_bcd|Add3~18_combout\,
+	cout => \dht22_data_bcd|Add3~19\);
+
+-- Location: LCCOMB_X25_Y15_N2
+\dht22_data_bcd|Selector16~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector16~0_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & (\dht22_data_bcd|state.ST_CALC~q\)) # (!\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~18_combout\))) # 
+-- (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(21)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101110010011000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_one_wire|data_buff_reg\(21),
+	datad => \dht22_data_bcd|Add3~18_combout\,
+	combout => \dht22_data_bcd|Selector16~0_combout\);
+
+-- Location: LCCOMB_X25_Y15_N18
+\dht22_data_bcd|Selector16~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector16~1_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|Selector16~0_combout\ & ((\dht22_data_bcd|Add1~16_combout\))) # (!\dht22_data_bcd|Selector16~0_combout\ & (\dht22_one_wire|data_buff_reg\(5))))) # 
+-- (!\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|Selector16~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111010110001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datab => \dht22_one_wire|data_buff_reg\(5),
+	datac => \dht22_data_bcd|Add1~16_combout\,
+	datad => \dht22_data_bcd|Selector16~0_combout\,
+	combout => \dht22_data_bcd|Selector16~1_combout\);
+
+-- Location: FF_X25_Y15_N19
+\dht22_data_bcd|num_reg[10]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector16~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(10));
+
+-- Location: LCCOMB_X26_Y15_N18
+\dht22_data_bcd|Add1~18\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add1~18_combout\ = (\dht22_data_bcd|num_reg\(11) & (\dht22_data_bcd|Add1~17\ & VCC)) # (!\dht22_data_bcd|num_reg\(11) & (!\dht22_data_bcd|Add1~17\))
+-- \dht22_data_bcd|Add1~19\ = CARRY((!\dht22_data_bcd|num_reg\(11) & !\dht22_data_bcd|Add1~17\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100000011",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(11),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add1~17\,
+	combout => \dht22_data_bcd|Add1~18_combout\,
+	cout => \dht22_data_bcd|Add1~19\);
+
+-- Location: LCCOMB_X22_Y15_N20
+\dht22_data_bcd|Add3~20\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~20_combout\ = (\dht22_data_bcd|num_reg\(11) & ((GND) # (!\dht22_data_bcd|Add3~19\))) # (!\dht22_data_bcd|num_reg\(11) & (\dht22_data_bcd|Add3~19\ $ (GND)))
+-- \dht22_data_bcd|Add3~21\ = CARRY((\dht22_data_bcd|num_reg\(11)) # (!\dht22_data_bcd|Add3~19\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110011001111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(11),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add3~19\,
+	combout => \dht22_data_bcd|Add3~20_combout\,
+	cout => \dht22_data_bcd|Add3~21\);
+
+-- Location: LCCOMB_X25_Y15_N12
+\dht22_data_bcd|Selector15~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector15~0_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & (\dht22_data_bcd|state.ST_CALC~q\)) # (!\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~20_combout\))) # 
+-- (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(20)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101110010011000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_one_wire|data_buff_reg\(20),
+	datad => \dht22_data_bcd|Add3~20_combout\,
+	combout => \dht22_data_bcd|Selector15~0_combout\);
+
+-- Location: LCCOMB_X25_Y15_N4
+\dht22_data_bcd|Selector15~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector15~1_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|Selector15~0_combout\ & ((\dht22_data_bcd|Add1~18_combout\))) # (!\dht22_data_bcd|Selector15~0_combout\ & (\dht22_one_wire|data_buff_reg\(4))))) # 
+-- (!\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|Selector15~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100111110100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(4),
+	datab => \dht22_data_bcd|Add1~18_combout\,
+	datac => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datad => \dht22_data_bcd|Selector15~0_combout\,
+	combout => \dht22_data_bcd|Selector15~1_combout\);
+
+-- Location: FF_X25_Y15_N5
+\dht22_data_bcd|num_reg[11]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector15~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(11));
+
+-- Location: LCCOMB_X26_Y15_N20
+\dht22_data_bcd|Add1~20\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add1~20_combout\ = (\dht22_data_bcd|num_reg\(12) & ((GND) # (!\dht22_data_bcd|Add1~19\))) # (!\dht22_data_bcd|num_reg\(12) & (\dht22_data_bcd|Add1~19\ $ (GND)))
+-- \dht22_data_bcd|Add1~21\ = CARRY((\dht22_data_bcd|num_reg\(12)) # (!\dht22_data_bcd|Add1~19\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110011001111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(12),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add1~19\,
+	combout => \dht22_data_bcd|Add1~20_combout\,
+	cout => \dht22_data_bcd|Add1~21\);
+
+-- Location: LCCOMB_X22_Y15_N22
+\dht22_data_bcd|Add3~22\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~22_combout\ = (\dht22_data_bcd|num_reg\(12) & (\dht22_data_bcd|Add3~21\ & VCC)) # (!\dht22_data_bcd|num_reg\(12) & (!\dht22_data_bcd|Add3~21\))
+-- \dht22_data_bcd|Add3~23\ = CARRY((!\dht22_data_bcd|num_reg\(12) & !\dht22_data_bcd|Add3~21\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100000011",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(12),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add3~21\,
+	combout => \dht22_data_bcd|Add3~22_combout\,
+	cout => \dht22_data_bcd|Add3~23\);
+
+-- Location: LCCOMB_X25_Y15_N10
+\dht22_data_bcd|Selector14~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector14~0_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|state.ST_CALC~q\)))) # (!\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_data_bcd|Add3~22_combout\)) # 
+-- (!\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_one_wire|data_buff_reg\(19))))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101000001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Add3~22_combout\,
+	datab => \dht22_one_wire|data_buff_reg\(19),
+	datac => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datad => \dht22_data_bcd|state.ST_CALC~q\,
+	combout => \dht22_data_bcd|Selector14~0_combout\);
+
+-- Location: LCCOMB_X25_Y15_N22
+\dht22_data_bcd|Selector14~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector14~1_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|Selector14~0_combout\ & (\dht22_data_bcd|Add1~20_combout\)) # (!\dht22_data_bcd|Selector14~0_combout\ & ((\dht22_one_wire|data_buff_reg\(3)))))) # 
+-- (!\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|Selector14~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010111111000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Add1~20_combout\,
+	datab => \dht22_one_wire|data_buff_reg\(3),
+	datac => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datad => \dht22_data_bcd|Selector14~0_combout\,
+	combout => \dht22_data_bcd|Selector14~1_combout\);
+
+-- Location: FF_X25_Y15_N23
+\dht22_data_bcd|num_reg[12]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector14~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(12));
+
+-- Location: LCCOMB_X26_Y15_N22
+\dht22_data_bcd|Add1~22\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add1~22_combout\ = (\dht22_data_bcd|num_reg\(13) & (\dht22_data_bcd|Add1~21\ & VCC)) # (!\dht22_data_bcd|num_reg\(13) & (!\dht22_data_bcd|Add1~21\))
+-- \dht22_data_bcd|Add1~23\ = CARRY((!\dht22_data_bcd|num_reg\(13) & !\dht22_data_bcd|Add1~21\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100000011",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(13),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add1~21\,
+	combout => \dht22_data_bcd|Add1~22_combout\,
+	cout => \dht22_data_bcd|Add1~23\);
+
+-- Location: LCCOMB_X22_Y15_N24
+\dht22_data_bcd|Add3~24\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~24_combout\ = (\dht22_data_bcd|num_reg\(13) & ((GND) # (!\dht22_data_bcd|Add3~23\))) # (!\dht22_data_bcd|num_reg\(13) & (\dht22_data_bcd|Add3~23\ $ (GND)))
+-- \dht22_data_bcd|Add3~25\ = CARRY((\dht22_data_bcd|num_reg\(13)) # (!\dht22_data_bcd|Add3~23\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110011001111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(13),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add3~23\,
+	combout => \dht22_data_bcd|Add3~24_combout\,
+	cout => \dht22_data_bcd|Add3~25\);
+
+-- Location: LCCOMB_X25_Y15_N28
+\dht22_data_bcd|Selector13~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector13~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~24_combout\) # ((\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (((!\dht22_data_bcd|num_reg[8]~0_combout\ & 
+-- \dht22_one_wire|data_buff_reg\(18)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100101111001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Add3~24_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datad => \dht22_one_wire|data_buff_reg\(18),
+	combout => \dht22_data_bcd|Selector13~0_combout\);
+
+-- Location: LCCOMB_X25_Y15_N24
+\dht22_data_bcd|Selector13~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector13~1_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|Selector13~0_combout\ & (\dht22_data_bcd|Add1~22_combout\)) # (!\dht22_data_bcd|Selector13~0_combout\ & ((\dht22_one_wire|data_buff_reg\(2)))))) # 
+-- (!\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|Selector13~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101110110100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datab => \dht22_data_bcd|Add1~22_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(2),
+	datad => \dht22_data_bcd|Selector13~0_combout\,
+	combout => \dht22_data_bcd|Selector13~1_combout\);
+
+-- Location: FF_X25_Y15_N25
+\dht22_data_bcd|num_reg[13]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector13~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(13));
+
+-- Location: LCCOMB_X22_Y15_N26
+\dht22_data_bcd|Add3~26\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~26_combout\ = (\dht22_data_bcd|num_reg\(14) & (\dht22_data_bcd|Add3~25\ & VCC)) # (!\dht22_data_bcd|num_reg\(14) & (!\dht22_data_bcd|Add3~25\))
+-- \dht22_data_bcd|Add3~27\ = CARRY((!\dht22_data_bcd|num_reg\(14) & !\dht22_data_bcd|Add3~25\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100000101",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(14),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add3~25\,
+	combout => \dht22_data_bcd|Add3~26_combout\,
+	cout => \dht22_data_bcd|Add3~27\);
+
+-- Location: LCCOMB_X23_Y15_N12
+\dht22_data_bcd|Selector12~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector12~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_data_bcd|Add3~26_combout\) # (\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(17) & 
+-- ((!\dht22_data_bcd|num_reg[8]~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011100010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(17),
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_data_bcd|Add3~26_combout\,
+	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
+	combout => \dht22_data_bcd|Selector12~0_combout\);
+
+-- Location: LCCOMB_X26_Y15_N24
+\dht22_data_bcd|Add1~24\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add1~24_combout\ = (\dht22_data_bcd|num_reg\(14) & ((GND) # (!\dht22_data_bcd|Add1~23\))) # (!\dht22_data_bcd|num_reg\(14) & (\dht22_data_bcd|Add1~23\ $ (GND)))
+-- \dht22_data_bcd|Add1~25\ = CARRY((\dht22_data_bcd|num_reg\(14)) # (!\dht22_data_bcd|Add1~23\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110011001111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(14),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add1~23\,
+	combout => \dht22_data_bcd|Add1~24_combout\,
+	cout => \dht22_data_bcd|Add1~25\);
+
+-- Location: LCCOMB_X24_Y15_N0
+\dht22_data_bcd|Selector12~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector12~1_combout\ = (\dht22_data_bcd|Selector12~0_combout\ & (((\dht22_data_bcd|Add1~24_combout\)) # (!\dht22_data_bcd|num_reg[8]~0_combout\))) # (!\dht22_data_bcd|Selector12~0_combout\ & (\dht22_data_bcd|num_reg[8]~0_combout\ & 
+-- (\dht22_one_wire|data_buff_reg\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110101001100010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Selector12~0_combout\,
+	datab => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(1),
+	datad => \dht22_data_bcd|Add1~24_combout\,
+	combout => \dht22_data_bcd|Selector12~1_combout\);
+
+-- Location: FF_X24_Y15_N1
+\dht22_data_bcd|num_reg[14]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector12~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(14));
+
+-- Location: LCCOMB_X26_Y15_N26
+\dht22_data_bcd|Add1~26\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add1~26_combout\ = \dht22_data_bcd|Add1~25\ $ (!\dht22_data_bcd|num_reg\(15))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000000001111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datad => \dht22_data_bcd|num_reg\(15),
+	cin => \dht22_data_bcd|Add1~25\,
+	combout => \dht22_data_bcd|Add1~26_combout\);
+
+-- Location: LCCOMB_X22_Y15_N28
+\dht22_data_bcd|Add3~28\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~28_combout\ = \dht22_data_bcd|Add3~27\ $ (\dht22_data_bcd|num_reg\(15))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111111110000",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datad => \dht22_data_bcd|num_reg\(15),
+	cin => \dht22_data_bcd|Add3~27\,
+	combout => \dht22_data_bcd|Add3~28_combout\);
+
+-- Location: LCCOMB_X23_Y15_N24
+\dht22_data_bcd|Selector11~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector11~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~28_combout\) # ((\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_one_wire|data_buff_reg\(16) & 
+-- !\dht22_data_bcd|num_reg[8]~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110010111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Add3~28_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_one_wire|data_buff_reg\(16),
+	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
+	combout => \dht22_data_bcd|Selector11~0_combout\);
+
+-- Location: LCCOMB_X24_Y15_N14
+\dht22_data_bcd|Selector11~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector11~1_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|Selector11~0_combout\ & ((\dht22_data_bcd|Add1~26_combout\))) # (!\dht22_data_bcd|Selector11~0_combout\ & (\dht22_one_wire|data_buff_reg\(0))))) # 
+-- (!\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|Selector11~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111001110001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(0),
+	datab => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datac => \dht22_data_bcd|Add1~26_combout\,
+	datad => \dht22_data_bcd|Selector11~0_combout\,
+	combout => \dht22_data_bcd|Selector11~1_combout\);
+
+-- Location: FF_X24_Y15_N15
+\dht22_data_bcd|num_reg[15]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector11~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(15));
+
+-- Location: LCCOMB_X24_Y15_N6
+\dht22_data_bcd|num_reg[8]~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|num_reg[8]~1_combout\ = (!\dht22_data_bcd|num_reg\(15) & \dht22_data_bcd|num~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \dht22_data_bcd|num_reg\(15),
+	datad => \dht22_data_bcd|num~0_combout\,
+	combout => \dht22_data_bcd|num_reg[8]~1_combout\);
+
+-- Location: LCCOMB_X24_Y15_N12
+\dht22_data_bcd|num_reg[8]~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|num_reg[8]~2_combout\ = (!\dht22_data_bcd|state.ST_DONE~q\ & (((!\dht22_data_bcd|num_reg[8]~1_combout\) # (!\dht22_data_bcd|LessThan0~3_combout\)) # (!\dht22_data_bcd|state.ST_CALC~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001010101010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|state.ST_DONE~q\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_data_bcd|LessThan0~3_combout\,
+	datad => \dht22_data_bcd|num_reg[8]~1_combout\,
+	combout => \dht22_data_bcd|num_reg[8]~2_combout\);
+
+-- Location: FF_X24_Y15_N25
+\dht22_data_bcd|num_reg[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector24~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(2));
+
+-- Location: LCCOMB_X22_Y15_N4
+\dht22_data_bcd|Add3~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~4_combout\ = (\dht22_data_bcd|num_reg\(3) & (\dht22_data_bcd|Add3~3\ $ (GND))) # (!\dht22_data_bcd|num_reg\(3) & (!\dht22_data_bcd|Add3~3\ & VCC))
+-- \dht22_data_bcd|Add3~5\ = CARRY((\dht22_data_bcd|num_reg\(3) & !\dht22_data_bcd|Add3~3\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(3),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add3~3\,
+	combout => \dht22_data_bcd|Add3~4_combout\,
+	cout => \dht22_data_bcd|Add3~5\);
+
+-- Location: LCCOMB_X25_Y15_N14
+\dht22_data_bcd|Selector23~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector23~0_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|state.ST_CALC~q\)))) # (!\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~4_combout\))) # 
+-- (!\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_one_wire|data_buff_reg\(28)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101001000100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datab => \dht22_one_wire|data_buff_reg\(28),
+	datac => \dht22_data_bcd|Add3~4_combout\,
+	datad => \dht22_data_bcd|state.ST_CALC~q\,
+	combout => \dht22_data_bcd|Selector23~0_combout\);
+
+-- Location: LCCOMB_X25_Y15_N8
+\dht22_data_bcd|Selector23~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector23~1_combout\ = (\dht22_data_bcd|Selector23~0_combout\ & ((\dht22_data_bcd|Add1~2_combout\) # ((!\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|Selector23~0_combout\ & (((\dht22_data_bcd|num_reg[8]~0_combout\ & 
+-- \dht22_one_wire|data_buff_reg\(12)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1011110010001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Add1~2_combout\,
+	datab => \dht22_data_bcd|Selector23~0_combout\,
+	datac => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datad => \dht22_one_wire|data_buff_reg\(12),
+	combout => \dht22_data_bcd|Selector23~1_combout\);
+
+-- Location: FF_X25_Y15_N9
+\dht22_data_bcd|num_reg[3]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector23~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(3));
+
+-- Location: LCCOMB_X22_Y15_N6
+\dht22_data_bcd|Add3~6\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Add3~6_combout\ = (\dht22_data_bcd|num_reg\(4) & (\dht22_data_bcd|Add3~5\ & VCC)) # (!\dht22_data_bcd|num_reg\(4) & (!\dht22_data_bcd|Add3~5\))
+-- \dht22_data_bcd|Add3~7\ = CARRY((!\dht22_data_bcd|num_reg\(4) & !\dht22_data_bcd|Add3~5\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100000101",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(4),
+	datad => VCC,
+	cin => \dht22_data_bcd|Add3~5\,
+	combout => \dht22_data_bcd|Add3~6_combout\,
+	cout => \dht22_data_bcd|Add3~7\);
+
+-- Location: LCCOMB_X23_Y15_N6
+\dht22_data_bcd|Selector21~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector21~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~8_combout\) # ((\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_one_wire|data_buff_reg\(26) & 
+-- !\dht22_data_bcd|num_reg[8]~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110010111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Add3~8_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_one_wire|data_buff_reg\(26),
+	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
+	combout => \dht22_data_bcd|Selector21~0_combout\);
+
+-- Location: LCCOMB_X25_Y15_N26
+\dht22_data_bcd|Selector21~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector21~1_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|Selector21~0_combout\ & ((\dht22_data_bcd|Add1~6_combout\))) # (!\dht22_data_bcd|Selector21~0_combout\ & (\dht22_one_wire|data_buff_reg\(10))))) # 
+-- (!\dht22_data_bcd|num_reg[8]~0_combout\ & (\dht22_data_bcd|Selector21~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110110001100100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datab => \dht22_data_bcd|Selector21~0_combout\,
+	datac => \dht22_one_wire|data_buff_reg\(10),
+	datad => \dht22_data_bcd|Add1~6_combout\,
+	combout => \dht22_data_bcd|Selector21~1_combout\);
+
+-- Location: FF_X25_Y15_N27
+\dht22_data_bcd|num_reg[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector21~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(5));
+
+-- Location: LCCOMB_X24_Y15_N18
+\dht22_data_bcd|Selector2~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector2~4_combout\ = (!\dht22_data_bcd|num_reg\(14) & !\dht22_data_bcd|num_reg\(13))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000110011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|num_reg\(14),
+	datad => \dht22_data_bcd|num_reg\(13),
+	combout => \dht22_data_bcd|Selector2~4_combout\);
+
+-- Location: LCCOMB_X23_Y15_N8
+\dht22_data_bcd|LessThan3~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|LessThan3~0_combout\ = ((!\dht22_data_bcd|num_reg\(2) & (!\dht22_data_bcd|num_reg\(3) & !\dht22_data_bcd|num_reg\(4)))) # (!\dht22_data_bcd|num_reg\(6))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(2),
+	datab => \dht22_data_bcd|num_reg\(3),
+	datac => \dht22_data_bcd|num_reg\(4),
+	datad => \dht22_data_bcd|num_reg\(6),
+	combout => \dht22_data_bcd|LessThan3~0_combout\);
+
+-- Location: LCCOMB_X25_Y15_N6
+\dht22_data_bcd|LessThan0~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|LessThan0~0_combout\ = (!\dht22_data_bcd|num_reg\(12) & (!\dht22_data_bcd|num_reg\(10) & (!\dht22_data_bcd|num_reg\(11) & !\dht22_data_bcd|num_reg\(9))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(12),
+	datab => \dht22_data_bcd|num_reg\(10),
+	datac => \dht22_data_bcd|num_reg\(11),
+	datad => \dht22_data_bcd|num_reg\(9),
+	combout => \dht22_data_bcd|LessThan0~0_combout\);
+
+-- Location: LCCOMB_X23_Y15_N20
+\dht22_data_bcd|LessThan0~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|LessThan0~1_combout\ = (!\dht22_data_bcd|num_reg\(7) & (\dht22_data_bcd|LessThan0~0_combout\ & !\dht22_data_bcd|num_reg\(8)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000001010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(7),
+	datac => \dht22_data_bcd|LessThan0~0_combout\,
+	datad => \dht22_data_bcd|num_reg\(8),
+	combout => \dht22_data_bcd|LessThan0~1_combout\);
+
+-- Location: LCCOMB_X23_Y15_N14
+\dht22_data_bcd|num~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|num~0_combout\ = (\dht22_data_bcd|Selector2~4_combout\ & (\dht22_data_bcd|LessThan0~1_combout\ & ((\dht22_data_bcd|LessThan3~0_combout\) # (!\dht22_data_bcd|num_reg\(5)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100010000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(5),
+	datab => \dht22_data_bcd|Selector2~4_combout\,
+	datac => \dht22_data_bcd|LessThan3~0_combout\,
+	datad => \dht22_data_bcd|LessThan0~1_combout\,
+	combout => \dht22_data_bcd|num~0_combout\);
+
+-- Location: LCCOMB_X24_Y15_N22
+\dht22_data_bcd|done_reg~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|done_reg~3_combout\ = (\dht22_data_bcd|num~0_combout\ & (!\dht22_data_bcd|num_reg\(15) & (\dht22_data_bcd|LessThan0~3_combout\ & \dht22_data_bcd|state.ST_CALC~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num~0_combout\,
+	datab => \dht22_data_bcd|num_reg\(15),
+	datac => \dht22_data_bcd|LessThan0~3_combout\,
+	datad => \dht22_data_bcd|state.ST_CALC~q\,
+	combout => \dht22_data_bcd|done_reg~3_combout\);
+
+-- Location: LCCOMB_X24_Y18_N18
+\dht22_data_bcd|done_reg~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|done_reg~2_combout\ = (\dht22_data_bcd|state.ST_DONE~q\ & (((\dht22_data_bcd|done_reg~q\ & \en_converter~q\)))) # (!\dht22_data_bcd|state.ST_DONE~q\ & ((\dht22_data_bcd|done_reg~3_combout\) # ((\dht22_data_bcd|done_reg~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111010001010100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|state.ST_DONE~q\,
+	datab => \dht22_data_bcd|done_reg~3_combout\,
+	datac => \dht22_data_bcd|done_reg~q\,
+	datad => \en_converter~q\,
+	combout => \dht22_data_bcd|done_reg~2_combout\);
+
+-- Location: FF_X24_Y18_N19
+\dht22_data_bcd|done_reg\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|done_reg~2_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|done_reg~q\);
+
+-- Location: LCCOMB_X24_Y18_N12
+\en_converter~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \en_converter~0_combout\ = (\Equal1~2_combout\ & ((!\dht22_data_bcd|done_reg~q\))) # (!\Equal1~2_combout\ & (\en_converter~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000011111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \Equal1~2_combout\,
 	datac => \en_converter~q\,
-	datad => \Equal1~2_combout\,
+	datad => \dht22_data_bcd|done_reg~q\,
 	combout => \en_converter~0_combout\);
 
--- Location: FF_X17_Y21_N29
+-- Location: FF_X24_Y18_N13
 en_converter : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -10103,26 +9980,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \en_converter~q\);
 
--- Location: LCCOMB_X16_Y18_N16
-\dht22_data_bcd|Selector2~5\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X24_Y18_N4
+\dht22_data_bcd|Selector2~6\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_data_bcd|Selector2~5_combout\ = (\en_converter~q\ & (\dht22_data_bcd|state.ST_IDLE~q\)) # (!\en_converter~q\ & ((!\dht22_data_bcd|state.ST_DONE~q\)))
+-- \dht22_data_bcd|Selector2~6_combout\ = (\dht22_data_bcd|state.ST_DONE~q\ & !\en_converter~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101000001111",
+	lut_mask => "0000000010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_IDLE~q\,
-	datac => \dht22_data_bcd|state.ST_DONE~q\,
+	dataa => \dht22_data_bcd|state.ST_DONE~q\,
 	datad => \en_converter~q\,
-	combout => \dht22_data_bcd|Selector2~5_combout\);
+	combout => \dht22_data_bcd|Selector2~6_combout\);
 
--- Location: LCCOMB_X16_Y21_N16
+-- Location: LCCOMB_X24_Y15_N10
 \dht22_data_bcd|Selector2~7\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_data_bcd|Selector2~7_combout\ = (!\dht22_data_bcd|num_reg\(15) & (\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_data_bcd|LessThan0~3_combout\ & \dht22_data_bcd|Selector2~4_combout\)))
+-- \dht22_data_bcd|Selector2~7_combout\ = (!\dht22_data_bcd|num_reg\(15) & (\dht22_data_bcd|Selector2~4_combout\ & (\dht22_data_bcd|LessThan0~3_combout\ & \dht22_data_bcd|state.ST_CALC~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -10131,12 +10007,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \dht22_data_bcd|num_reg\(15),
-	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datab => \dht22_data_bcd|Selector2~4_combout\,
 	datac => \dht22_data_bcd|LessThan0~3_combout\,
-	datad => \dht22_data_bcd|Selector2~4_combout\,
+	datad => \dht22_data_bcd|state.ST_CALC~q\,
 	combout => \dht22_data_bcd|Selector2~7_combout\);
 
--- Location: LCCOMB_X16_Y18_N10
+-- Location: LCCOMB_X24_Y18_N14
 \dht22_data_bcd|state.ST_IDLE~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_data_bcd|state.ST_IDLE~0_combout\ = (\dht22_data_bcd|Selector2~5_combout\ & ((\dht22_data_bcd|Selector2~7_combout\ & (!\dht22_data_bcd|Selector2~6_combout\)) # (!\dht22_data_bcd|Selector2~7_combout\ & ((\dht22_data_bcd|state.ST_IDLE~q\))))) # 
@@ -10144,17 +10020,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101010111010001",
+	lut_mask => "0011001110110001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_data_bcd|Selector2~6_combout\,
-	datab => \dht22_data_bcd|Selector2~5_combout\,
+	dataa => \dht22_data_bcd|Selector2~5_combout\,
+	datab => \dht22_data_bcd|Selector2~6_combout\,
 	datac => \dht22_data_bcd|state.ST_IDLE~q\,
 	datad => \dht22_data_bcd|Selector2~7_combout\,
 	combout => \dht22_data_bcd|state.ST_IDLE~0_combout\);
 
--- Location: FF_X16_Y18_N11
+-- Location: FF_X24_Y18_N15
 \dht22_data_bcd|state.ST_IDLE\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -10169,7 +10045,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_data_bcd|state.ST_IDLE~q\);
 
--- Location: LCCOMB_X16_Y18_N26
+-- Location: LCCOMB_X24_Y18_N20
 \dht22_data_bcd|Selector2~8\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_data_bcd|Selector2~8_combout\ = (\dht22_data_bcd|state.ST_DONE~q\ & (\en_converter~q\ & ((\dht22_data_bcd|state.ST_IDLE~q\) # (\dht22_data_bcd|Selector2~7_combout\)))) # (!\dht22_data_bcd|state.ST_DONE~q\ & 
@@ -10177,17 +10053,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100111110000000",
+	lut_mask => "1010111110000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_IDLE~q\,
-	datab => \en_converter~q\,
+	dataa => \en_converter~q\,
+	datab => \dht22_data_bcd|state.ST_IDLE~q\,
 	datac => \dht22_data_bcd|state.ST_DONE~q\,
 	datad => \dht22_data_bcd|Selector2~7_combout\,
 	combout => \dht22_data_bcd|Selector2~8_combout\);
 
--- Location: FF_X16_Y18_N27
+-- Location: FF_X24_Y18_N21
 \dht22_data_bcd|state.ST_DONE\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -10202,39 +10078,40 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_data_bcd|state.ST_DONE~q\);
 
--- Location: LCCOMB_X16_Y18_N30
-\dht22_data_bcd|Selector2~6\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X24_Y18_N22
+\dht22_data_bcd|Selector2~5\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_data_bcd|Selector2~6_combout\ = (\dht22_data_bcd|state.ST_DONE~q\ & !\en_converter~q\)
+-- \dht22_data_bcd|Selector2~5_combout\ = (\en_converter~q\ & ((\dht22_data_bcd|state.ST_IDLE~q\))) # (!\en_converter~q\ & (!\dht22_data_bcd|state.ST_DONE~q\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011110000",
+	lut_mask => "1100110001010101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \dht22_data_bcd|state.ST_DONE~q\,
+	dataa => \dht22_data_bcd|state.ST_DONE~q\,
+	datab => \dht22_data_bcd|state.ST_IDLE~q\,
 	datad => \en_converter~q\,
-	combout => \dht22_data_bcd|Selector2~6_combout\);
+	combout => \dht22_data_bcd|Selector2~5_combout\);
 
--- Location: LCCOMB_X16_Y18_N4
+-- Location: LCCOMB_X24_Y18_N26
 \dht22_data_bcd|Selector1~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_data_bcd|Selector1~0_combout\ = (!\dht22_data_bcd|Selector2~7_combout\ & ((\dht22_data_bcd|Selector2~5_combout\ & ((\dht22_data_bcd|state.ST_CALC~q\))) # (!\dht22_data_bcd|Selector2~5_combout\ & (!\dht22_data_bcd|Selector2~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011010001",
+	lut_mask => "0000000010110001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_data_bcd|Selector2~6_combout\,
-	datab => \dht22_data_bcd|Selector2~5_combout\,
+	dataa => \dht22_data_bcd|Selector2~5_combout\,
+	datab => \dht22_data_bcd|Selector2~6_combout\,
 	datac => \dht22_data_bcd|state.ST_CALC~q\,
 	datad => \dht22_data_bcd|Selector2~7_combout\,
 	combout => \dht22_data_bcd|Selector1~0_combout\);
 
--- Location: FF_X16_Y18_N5
+-- Location: FF_X24_Y18_N27
 \dht22_data_bcd|state.ST_CALC\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -10249,25 +10126,144 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_data_bcd|state.ST_CALC~q\);
 
--- Location: LCCOMB_X14_Y18_N22
-\dht22_data_bcd|Selector10~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X24_Y15_N28
+\dht22_data_bcd|num_reg[8]~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_data_bcd|Selector10~0_combout\ = (\dht22_data_bcd|tens_reg\(0) & ((\dht22_data_bcd|state.ST_DONE~q\) # ((\dht22_data_bcd|state.ST_CALC~q\ & !\dht22_data_bcd|num~1_combout\)))) # (!\dht22_data_bcd|tens_reg\(0) & (\dht22_data_bcd|state.ST_CALC~q\ & 
--- ((\dht22_data_bcd|num~1_combout\))))
+-- \dht22_data_bcd|num_reg[8]~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_data_bcd|num_reg\(15)) # (!\dht22_data_bcd|num~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (!\param~q\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100101011100000",
+	lut_mask => "1101000111011101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_CALC~q\,
+	dataa => \param~q\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_data_bcd|num_reg\(15),
+	datad => \dht22_data_bcd|num~0_combout\,
+	combout => \dht22_data_bcd|num_reg[8]~0_combout\);
+
+-- Location: LCCOMB_X23_Y15_N22
+\dht22_data_bcd|Selector22~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector22~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Add3~6_combout\) # ((\dht22_data_bcd|num_reg[8]~0_combout\)))) # (!\dht22_data_bcd|state.ST_CALC~q\ & (((\dht22_one_wire|data_buff_reg\(27) & 
+-- !\dht22_data_bcd|num_reg[8]~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110010111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|Add3~6_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_one_wire|data_buff_reg\(27),
+	datad => \dht22_data_bcd|num_reg[8]~0_combout\,
+	combout => \dht22_data_bcd|Selector22~0_combout\);
+
+-- Location: LCCOMB_X23_Y15_N30
+\dht22_data_bcd|Selector22~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector22~1_combout\ = (\dht22_data_bcd|num_reg[8]~0_combout\ & ((\dht22_data_bcd|Selector22~0_combout\ & ((\dht22_data_bcd|Add1~4_combout\))) # (!\dht22_data_bcd|Selector22~0_combout\ & (\dht22_one_wire|data_buff_reg\(11))))) # 
+-- (!\dht22_data_bcd|num_reg[8]~0_combout\ & (((\dht22_data_bcd|Selector22~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111100000111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_one_wire|data_buff_reg\(11),
+	datab => \dht22_data_bcd|num_reg[8]~0_combout\,
+	datac => \dht22_data_bcd|Selector22~0_combout\,
+	datad => \dht22_data_bcd|Add1~4_combout\,
+	combout => \dht22_data_bcd|Selector22~1_combout\);
+
+-- Location: FF_X23_Y15_N31
+\dht22_data_bcd|num_reg[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector22~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|num_reg[8]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(4));
+
+-- Location: LCCOMB_X22_Y15_N30
+\dht22_data_bcd|LessThan0~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|LessThan0~2_combout\ = (!\dht22_data_bcd|num_reg\(6) & (((!\dht22_data_bcd|num_reg\(2) & !\dht22_data_bcd|num_reg\(1))) # (!\dht22_data_bcd|num_reg\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000100010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(6),
+	datab => \dht22_data_bcd|num_reg\(3),
+	datac => \dht22_data_bcd|num_reg\(2),
+	datad => \dht22_data_bcd|num_reg\(1),
+	combout => \dht22_data_bcd|LessThan0~2_combout\);
+
+-- Location: LCCOMB_X23_Y15_N4
+\dht22_data_bcd|LessThan0~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|LessThan0~3_combout\ = (!\dht22_data_bcd|num_reg\(4) & (\dht22_data_bcd|LessThan0~2_combout\ & (!\dht22_data_bcd|num_reg\(5) & \dht22_data_bcd|LessThan0~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000010000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num_reg\(4),
+	datab => \dht22_data_bcd|LessThan0~2_combout\,
+	datac => \dht22_data_bcd|num_reg\(5),
+	datad => \dht22_data_bcd|LessThan0~1_combout\,
+	combout => \dht22_data_bcd|LessThan0~3_combout\);
+
+-- Location: LCCOMB_X23_Y15_N2
+\dht22_data_bcd|num~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|num~1_combout\ = (!\dht22_data_bcd|LessThan0~3_combout\ & (\dht22_data_bcd|num~0_combout\ & !\dht22_data_bcd|num_reg\(15)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|LessThan0~3_combout\,
+	datac => \dht22_data_bcd|num~0_combout\,
+	datad => \dht22_data_bcd|num_reg\(15),
+	combout => \dht22_data_bcd|num~1_combout\);
+
+-- Location: LCCOMB_X23_Y18_N8
+\dht22_data_bcd|Selector10~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector10~0_combout\ = (\dht22_data_bcd|tens_reg\(0) & ((\dht22_data_bcd|state.ST_DONE~q\) # ((!\dht22_data_bcd|num~1_combout\ & \dht22_data_bcd|state.ST_CALC~q\)))) # (!\dht22_data_bcd|tens_reg\(0) & (\dht22_data_bcd|num~1_combout\ & 
+-- ((\dht22_data_bcd|state.ST_CALC~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101101011000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num~1_combout\,
 	datab => \dht22_data_bcd|state.ST_DONE~q\,
 	datac => \dht22_data_bcd|tens_reg\(0),
-	datad => \dht22_data_bcd|num~1_combout\,
+	datad => \dht22_data_bcd|state.ST_CALC~q\,
 	combout => \dht22_data_bcd|Selector10~0_combout\);
 
--- Location: FF_X14_Y18_N23
+-- Location: FF_X23_Y18_N9
 \dht22_data_bcd|tens_reg[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -10282,236 +10278,40 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_data_bcd|tens_reg\(0));
 
--- Location: LCCOMB_X16_Y18_N0
-\dht22_data_bcd|bcd_reg[4]~feeder\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|bcd_reg[4]~feeder_combout\ = \dht22_data_bcd|tens_reg\(0)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \dht22_data_bcd|tens_reg\(0),
-	combout => \dht22_data_bcd|bcd_reg[4]~feeder_combout\);
-
--- Location: LCCOMB_X16_Y21_N20
-\dht22_data_bcd|bcd_reg[0]~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|bcd_reg[0]~0_combout\ = (!\dht22_data_bcd|num_reg\(15) & (\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_data_bcd|LessThan0~3_combout\ & \dht22_data_bcd|num~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(15),
-	datab => \dht22_data_bcd|state.ST_CALC~q\,
-	datac => \dht22_data_bcd|LessThan0~3_combout\,
-	datad => \dht22_data_bcd|num~0_combout\,
-	combout => \dht22_data_bcd|bcd_reg[0]~0_combout\);
-
--- Location: FF_X16_Y18_N1
-\dht22_data_bcd|bcd_reg[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|bcd_reg[4]~feeder_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|bcd_reg\(4));
-
--- Location: LCCOMB_X17_Y21_N24
-\dht22_data_bcd|Selector6~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector6~0_combout\ = (\dht22_data_bcd|hundreds_reg\(0) & ((\dht22_data_bcd|state.ST_DONE~q\) # ((\dht22_data_bcd|num_reg[8]~1_combout\ & \dht22_data_bcd|state.ST_CALC~q\)))) # (!\dht22_data_bcd|hundreds_reg\(0) & 
--- (!\dht22_data_bcd|num_reg[8]~1_combout\ & (\dht22_data_bcd|state.ST_CALC~q\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111010010000100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg[8]~1_combout\,
-	datab => \dht22_data_bcd|state.ST_CALC~q\,
-	datac => \dht22_data_bcd|hundreds_reg\(0),
-	datad => \dht22_data_bcd|state.ST_DONE~q\,
-	combout => \dht22_data_bcd|Selector6~0_combout\);
-
--- Location: FF_X17_Y21_N25
-\dht22_data_bcd|hundreds_reg[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector6~0_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|hundreds_reg\(0));
-
--- Location: FF_X16_Y18_N23
-\dht22_data_bcd|bcd_reg[8]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \dht22_data_bcd|hundreds_reg\(0),
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sload => VCC,
-	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|bcd_reg\(8));
-
--- Location: LCCOMB_X16_Y18_N12
-\dht22_data_bcd|num_reg[0]~6\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|num_reg[0]~6_combout\ = (!\dht22_data_bcd|state.ST_IDLE~q\ & ((\param~q\ & (\dht22_one_wire|data_buff_reg\(31))) # (!\param~q\ & ((\dht22_one_wire|data_buff_reg\(15))))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000101000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_IDLE~q\,
-	datab => \param~q\,
-	datac => \dht22_one_wire|data_buff_reg\(31),
-	datad => \dht22_one_wire|data_buff_reg\(15),
-	combout => \dht22_data_bcd|num_reg[0]~6_combout\);
-
--- Location: LCCOMB_X16_Y18_N8
-\dht22_data_bcd|num_reg[0]~7\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|num_reg[0]~7_combout\ = (\dht22_data_bcd|num_reg[0]~6_combout\) # ((\dht22_data_bcd|num_reg\(0) & \dht22_data_bcd|state.ST_IDLE~q\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111101010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg[0]~6_combout\,
-	datac => \dht22_data_bcd|num_reg\(0),
-	datad => \dht22_data_bcd|state.ST_IDLE~q\,
-	combout => \dht22_data_bcd|num_reg[0]~7_combout\);
-
--- Location: FF_X16_Y18_N9
-\dht22_data_bcd|num_reg[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|num_reg[0]~7_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|num_reg\(0));
-
--- Location: FF_X16_Y18_N7
-\dht22_data_bcd|bcd_reg[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \dht22_data_bcd|num_reg\(0),
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sload => VCC,
-	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|bcd_reg\(0));
-
--- Location: LCCOMB_X16_Y18_N6
-\display|Mux4~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \display|Mux4~0_combout\ = (\display|digit_index\(1) & (((\display|digit_index\(0))))) # (!\display|digit_index\(1) & ((\display|digit_index\(0) & ((\dht22_data_bcd|bcd_reg\(0)))) # (!\display|digit_index\(0) & (!\param~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111101000010001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \display|digit_index\(1),
-	datab => \param~q\,
-	datac => \dht22_data_bcd|bcd_reg\(0),
-	datad => \display|digit_index\(0),
-	combout => \display|Mux4~0_combout\);
-
--- Location: LCCOMB_X16_Y18_N22
-\display|Mux4~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \display|Mux4~1_combout\ = (\display|digit_index\(1) & ((\display|Mux4~0_combout\ & ((\dht22_data_bcd|bcd_reg\(8)))) # (!\display|Mux4~0_combout\ & (\dht22_data_bcd|bcd_reg\(4))))) # (!\display|digit_index\(1) & (((\display|Mux4~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111010110001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \display|digit_index\(1),
-	datab => \dht22_data_bcd|bcd_reg\(4),
-	datac => \dht22_data_bcd|bcd_reg\(8),
-	datad => \display|Mux4~0_combout\,
-	combout => \display|Mux4~1_combout\);
-
--- Location: LCCOMB_X14_Y18_N10
+-- Location: LCCOMB_X23_Y18_N24
 \dht22_data_bcd|Selector9~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_data_bcd|Selector9~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_data_bcd|tens_reg\(1) $ (((\dht22_data_bcd|tens_reg\(0) & \dht22_data_bcd|num~1_combout\)))))
+-- \dht22_data_bcd|Selector9~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_data_bcd|tens_reg\(1) $ (((\dht22_data_bcd|num~1_combout\ & \dht22_data_bcd|tens_reg\(0))))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0010100010100000",
+	lut_mask => "0110110000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_CALC~q\,
-	datab => \dht22_data_bcd|tens_reg\(0),
-	datac => \dht22_data_bcd|tens_reg\(1),
-	datad => \dht22_data_bcd|num~1_combout\,
+	dataa => \dht22_data_bcd|num~1_combout\,
+	datab => \dht22_data_bcd|tens_reg\(1),
+	datac => \dht22_data_bcd|tens_reg\(0),
+	datad => \dht22_data_bcd|state.ST_CALC~q\,
 	combout => \dht22_data_bcd|Selector9~0_combout\);
 
--- Location: LCCOMB_X14_Y18_N30
+-- Location: LCCOMB_X23_Y18_N20
 \dht22_data_bcd|Selector9~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \dht22_data_bcd|Selector9~1_combout\ = (\dht22_data_bcd|Selector9~0_combout\) # ((\dht22_data_bcd|state.ST_DONE~q\ & \dht22_data_bcd|tens_reg\(1)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111110100000",
+	lut_mask => "1111111111000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_DONE~q\,
+	datab => \dht22_data_bcd|state.ST_DONE~q\,
 	datac => \dht22_data_bcd|tens_reg\(1),
 	datad => \dht22_data_bcd|Selector9~0_combout\,
 	combout => \dht22_data_bcd|Selector9~1_combout\);
 
--- Location: FF_X14_Y18_N31
+-- Location: FF_X23_Y18_N21
 \dht22_data_bcd|tens_reg[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -10526,41 +10326,41 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_data_bcd|tens_reg\(1));
 
--- Location: LCCOMB_X14_Y18_N28
+-- Location: LCCOMB_X23_Y18_N16
 \dht22_data_bcd|Selector8~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_data_bcd|Selector8~0_combout\ = (\dht22_data_bcd|tens_reg\(0) & (\dht22_data_bcd|tens_reg\(1) & \dht22_data_bcd|num~1_combout\))
+-- \dht22_data_bcd|Selector8~0_combout\ = (\dht22_data_bcd|tens_reg\(1) & (\dht22_data_bcd|tens_reg\(0) & \dht22_data_bcd|num~1_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010000000000000",
+	lut_mask => "1100000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_data_bcd|tens_reg\(0),
-	datac => \dht22_data_bcd|tens_reg\(1),
+	datab => \dht22_data_bcd|tens_reg\(1),
+	datac => \dht22_data_bcd|tens_reg\(0),
 	datad => \dht22_data_bcd|num~1_combout\,
 	combout => \dht22_data_bcd|Selector8~0_combout\);
 
--- Location: LCCOMB_X14_Y18_N8
+-- Location: LCCOMB_X23_Y18_N14
 \dht22_data_bcd|Selector8~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_data_bcd|Selector8~1_combout\ = (\dht22_data_bcd|tens_reg\(2) & ((\dht22_data_bcd|state.ST_DONE~q\) # ((\dht22_data_bcd|state.ST_CALC~q\ & !\dht22_data_bcd|Selector8~0_combout\)))) # (!\dht22_data_bcd|tens_reg\(2) & 
--- (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Selector8~0_combout\))))
+-- \dht22_data_bcd|Selector8~1_combout\ = (\dht22_data_bcd|tens_reg\(2) & ((\dht22_data_bcd|state.ST_DONE~q\) # ((!\dht22_data_bcd|Selector8~0_combout\ & \dht22_data_bcd|state.ST_CALC~q\)))) # (!\dht22_data_bcd|tens_reg\(2) & 
+-- (\dht22_data_bcd|Selector8~0_combout\ & (\dht22_data_bcd|state.ST_CALC~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100101011100000",
+	lut_mask => "1111100001001000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_CALC~q\,
-	datab => \dht22_data_bcd|state.ST_DONE~q\,
+	dataa => \dht22_data_bcd|Selector8~0_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
 	datac => \dht22_data_bcd|tens_reg\(2),
-	datad => \dht22_data_bcd|Selector8~0_combout\,
+	datad => \dht22_data_bcd|state.ST_DONE~q\,
 	combout => \dht22_data_bcd|Selector8~1_combout\);
 
--- Location: FF_X14_Y18_N9
+-- Location: FF_X23_Y18_N15
 \dht22_data_bcd|tens_reg[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -10575,307 +10375,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_data_bcd|tens_reg\(2));
 
--- Location: FF_X16_Y18_N19
-\dht22_data_bcd|bcd_reg[6]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \dht22_data_bcd|tens_reg\(2),
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sload => VCC,
-	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|bcd_reg\(6));
-
--- Location: FF_X16_Y18_N21
-\dht22_data_bcd|bcd_reg[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \dht22_data_bcd|num_reg\(2),
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sload => VCC,
-	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|bcd_reg\(2));
-
--- Location: LCCOMB_X17_Y21_N18
-\dht22_data_bcd|Selector5~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector5~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_data_bcd|hundreds_reg\(1) $ (((\dht22_data_bcd|hundreds_reg\(0) & !\dht22_data_bcd|num_reg[8]~1_combout\)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010000001100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|hundreds_reg\(1),
-	datab => \dht22_data_bcd|hundreds_reg\(0),
-	datac => \dht22_data_bcd|state.ST_CALC~q\,
-	datad => \dht22_data_bcd|num_reg[8]~1_combout\,
-	combout => \dht22_data_bcd|Selector5~0_combout\);
-
--- Location: LCCOMB_X17_Y21_N10
-\dht22_data_bcd|Selector5~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector5~1_combout\ = (\dht22_data_bcd|Selector5~0_combout\) # ((\dht22_data_bcd|state.ST_DONE~q\ & \dht22_data_bcd|hundreds_reg\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \dht22_data_bcd|state.ST_DONE~q\,
-	datac => \dht22_data_bcd|hundreds_reg\(1),
-	datad => \dht22_data_bcd|Selector5~0_combout\,
-	combout => \dht22_data_bcd|Selector5~1_combout\);
-
--- Location: FF_X17_Y21_N11
-\dht22_data_bcd|hundreds_reg[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector5~1_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|hundreds_reg\(1));
-
--- Location: LCCOMB_X16_Y21_N0
-\dht22_data_bcd|Selector4~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector4~3_combout\ = (\dht22_data_bcd|hundreds_reg\(1) & (\dht22_data_bcd|hundreds_reg\(0) & ((\dht22_data_bcd|num_reg\(15)) # (!\dht22_data_bcd|num~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1011000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|num_reg\(15),
-	datab => \dht22_data_bcd|num~0_combout\,
-	datac => \dht22_data_bcd|hundreds_reg\(1),
-	datad => \dht22_data_bcd|hundreds_reg\(0),
-	combout => \dht22_data_bcd|Selector4~3_combout\);
-
--- Location: LCCOMB_X17_Y21_N8
-\dht22_data_bcd|Selector4~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|Selector4~2_combout\ = (\dht22_data_bcd|hundreds_reg\(2) & ((\dht22_data_bcd|state.ST_DONE~q\) # ((!\dht22_data_bcd|Selector4~3_combout\ & \dht22_data_bcd|state.ST_CALC~q\)))) # (!\dht22_data_bcd|hundreds_reg\(2) & 
--- (\dht22_data_bcd|Selector4~3_combout\ & (\dht22_data_bcd|state.ST_CALC~q\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111100001001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|Selector4~3_combout\,
-	datab => \dht22_data_bcd|state.ST_CALC~q\,
-	datac => \dht22_data_bcd|hundreds_reg\(2),
-	datad => \dht22_data_bcd|state.ST_DONE~q\,
-	combout => \dht22_data_bcd|Selector4~2_combout\);
-
--- Location: FF_X17_Y21_N9
-\dht22_data_bcd|hundreds_reg[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|Selector4~2_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|hundreds_reg\(2));
-
--- Location: LCCOMB_X16_Y21_N6
-\dht22_data_bcd|bcd_reg[10]~feeder\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|bcd_reg[10]~feeder_combout\ = \dht22_data_bcd|hundreds_reg\(2)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \dht22_data_bcd|hundreds_reg\(2),
-	combout => \dht22_data_bcd|bcd_reg[10]~feeder_combout\);
-
--- Location: FF_X16_Y21_N7
-\dht22_data_bcd|bcd_reg[10]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|bcd_reg[10]~feeder_combout\,
-	clrn => \rst_n~inputclkctrl_outclk\,
-	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|bcd_reg\(10));
-
--- Location: LCCOMB_X16_Y18_N20
-\display|Mux2~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \display|Mux2~0_combout\ = (\display|digit_index\(0) & ((\display|digit_index\(1) & ((\dht22_data_bcd|bcd_reg\(10)))) # (!\display|digit_index\(1) & (\dht22_data_bcd|bcd_reg\(2)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100100001000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \display|digit_index\(1),
-	datab => \display|digit_index\(0),
-	datac => \dht22_data_bcd|bcd_reg\(2),
-	datad => \dht22_data_bcd|bcd_reg\(10),
-	combout => \display|Mux2~0_combout\);
-
--- Location: LCCOMB_X16_Y18_N18
-\display|Mux2~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \display|Mux2~1_combout\ = (\display|Mux2~0_combout\) # ((\display|digit_index\(1) & (!\display|digit_index\(0) & \dht22_data_bcd|bcd_reg\(6))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \display|digit_index\(1),
-	datab => \display|digit_index\(0),
-	datac => \dht22_data_bcd|bcd_reg\(6),
-	datad => \display|Mux2~0_combout\,
-	combout => \display|Mux2~1_combout\);
-
--- Location: FF_X16_Y21_N1
-\dht22_data_bcd|bcd_reg[9]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \dht22_data_bcd|hundreds_reg\(1),
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sload => VCC,
-	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|bcd_reg\(9));
-
--- Location: FF_X14_Y18_N27
-\dht22_data_bcd|bcd_reg[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \dht22_data_bcd|tens_reg\(1),
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sload => VCC,
-	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|bcd_reg\(5));
-
--- Location: LCCOMB_X14_Y18_N26
-\display|Mux3~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \display|Mux3~0_combout\ = (\display|digit_index\(0) & (\dht22_data_bcd|bcd_reg\(9) & ((\display|digit_index\(1))))) # (!\display|digit_index\(0) & (((\dht22_data_bcd|bcd_reg\(5)) # (!\display|digit_index\(1)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1011100000110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \dht22_data_bcd|bcd_reg\(9),
-	datab => \display|digit_index\(0),
-	datac => \dht22_data_bcd|bcd_reg\(5),
-	datad => \display|digit_index\(1),
-	combout => \display|Mux3~0_combout\);
-
--- Location: FF_X14_Y18_N5
-\dht22_data_bcd|bcd_reg[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \dht22_data_bcd|num_reg\(1),
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sload => VCC,
-	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|bcd_reg\(1));
-
--- Location: LCCOMB_X14_Y18_N4
-\display|Mux3~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \display|Mux3~1_combout\ = (\display|Mux3~0_combout\) # ((\dht22_data_bcd|bcd_reg\(1) & !\display|digit_index\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101011111010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \display|Mux3~0_combout\,
-	datac => \dht22_data_bcd|bcd_reg\(1),
-	datad => \display|digit_index\(1),
-	combout => \display|Mux3~1_combout\);
-
--- Location: FF_X16_Y18_N25
-\dht22_data_bcd|bcd_reg[3]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \dht22_data_bcd|num_reg\(3),
-	clrn => \rst_n~inputclkctrl_outclk\,
-	sload => VCC,
-	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \dht22_data_bcd|bcd_reg\(3));
-
--- Location: LCCOMB_X14_Y18_N18
+-- Location: LCCOMB_X23_Y18_N12
 \dht22_data_bcd|Selector7~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_data_bcd|Selector7~0_combout\ = (\dht22_data_bcd|tens_reg\(0) & (\dht22_data_bcd|tens_reg\(2) & (\dht22_data_bcd|tens_reg\(1) & \dht22_data_bcd|num~1_combout\)))
+-- \dht22_data_bcd|Selector7~0_combout\ = (\dht22_data_bcd|num~1_combout\ & (\dht22_data_bcd|tens_reg\(0) & (\dht22_data_bcd|tens_reg\(2) & \dht22_data_bcd|tens_reg\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -10883,31 +10386,31 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_data_bcd|tens_reg\(0),
-	datab => \dht22_data_bcd|tens_reg\(2),
-	datac => \dht22_data_bcd|tens_reg\(1),
-	datad => \dht22_data_bcd|num~1_combout\,
+	dataa => \dht22_data_bcd|num~1_combout\,
+	datab => \dht22_data_bcd|tens_reg\(0),
+	datac => \dht22_data_bcd|tens_reg\(2),
+	datad => \dht22_data_bcd|tens_reg\(1),
 	combout => \dht22_data_bcd|Selector7~0_combout\);
 
--- Location: LCCOMB_X14_Y18_N6
+-- Location: LCCOMB_X23_Y18_N26
 \dht22_data_bcd|Selector7~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_data_bcd|Selector7~1_combout\ = (\dht22_data_bcd|tens_reg\(3) & ((\dht22_data_bcd|state.ST_DONE~q\) # ((\dht22_data_bcd|state.ST_CALC~q\ & !\dht22_data_bcd|Selector7~0_combout\)))) # (!\dht22_data_bcd|tens_reg\(3) & 
--- (\dht22_data_bcd|state.ST_CALC~q\ & ((\dht22_data_bcd|Selector7~0_combout\))))
+-- \dht22_data_bcd|Selector7~1_combout\ = (\dht22_data_bcd|tens_reg\(3) & ((\dht22_data_bcd|state.ST_DONE~q\) # ((!\dht22_data_bcd|Selector7~0_combout\ & \dht22_data_bcd|state.ST_CALC~q\)))) # (!\dht22_data_bcd|tens_reg\(3) & 
+-- (\dht22_data_bcd|Selector7~0_combout\ & (\dht22_data_bcd|state.ST_CALC~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100101011100000",
+	lut_mask => "1111100001001000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_data_bcd|state.ST_CALC~q\,
-	datab => \dht22_data_bcd|state.ST_DONE~q\,
+	dataa => \dht22_data_bcd|Selector7~0_combout\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
 	datac => \dht22_data_bcd|tens_reg\(3),
-	datad => \dht22_data_bcd|Selector7~0_combout\,
+	datad => \dht22_data_bcd|state.ST_DONE~q\,
 	combout => \dht22_data_bcd|Selector7~1_combout\);
 
--- Location: FF_X14_Y18_N7
+-- Location: FF_X23_Y18_N27
 \dht22_data_bcd|tens_reg[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -10922,7 +10425,24 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_data_bcd|tens_reg\(3));
 
--- Location: FF_X16_Y18_N29
+-- Location: LCCOMB_X24_Y15_N20
+\dht22_data_bcd|bcd_reg[0]~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|bcd_reg[0]~0_combout\ = (\dht22_data_bcd|num~0_combout\ & (!\dht22_data_bcd|num_reg\(15) & (\dht22_data_bcd|LessThan0~3_combout\ & \dht22_data_bcd|state.ST_CALC~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|num~0_combout\,
+	datab => \dht22_data_bcd|num_reg\(15),
+	datac => \dht22_data_bcd|LessThan0~3_combout\,
+	datad => \dht22_data_bcd|state.ST_CALC~q\,
+	combout => \dht22_data_bcd|bcd_reg[0]~0_combout\);
+
+-- Location: FF_X23_Y18_N31
 \dht22_data_bcd|bcd_reg[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -10939,42 +10459,173 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_data_bcd|bcd_reg\(7));
 
--- Location: LCCOMB_X17_Y21_N12
-\dht22_data_bcd|Selector3~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X24_Y15_N30
+\dht22_data_bcd|Selector6~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_data_bcd|Selector3~0_combout\ = (!\dht22_data_bcd|num_reg[8]~1_combout\ & (\dht22_data_bcd|hundreds_reg\(0) & (\dht22_data_bcd|hundreds_reg\(2) & \dht22_data_bcd|hundreds_reg\(1))))
+-- \dht22_data_bcd|Selector6~0_combout\ = (\dht22_data_bcd|hundreds_reg\(0) & ((\dht22_data_bcd|state.ST_DONE~q\) # ((\dht22_data_bcd|state.ST_CALC~q\ & \dht22_data_bcd|num_reg[8]~1_combout\)))) # (!\dht22_data_bcd|hundreds_reg\(0) & 
+-- (((\dht22_data_bcd|state.ST_CALC~q\ & !\dht22_data_bcd|num_reg[8]~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100000000000000",
+	lut_mask => "1110000010101100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|state.ST_DONE~q\,
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_data_bcd|hundreds_reg\(0),
+	datad => \dht22_data_bcd|num_reg[8]~1_combout\,
+	combout => \dht22_data_bcd|Selector6~0_combout\);
+
+-- Location: FF_X24_Y15_N31
+\dht22_data_bcd|hundreds_reg[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector6~0_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|hundreds_reg\(0));
+
+-- Location: LCCOMB_X24_Y15_N8
+\dht22_data_bcd|Selector5~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector5~0_combout\ = (\dht22_data_bcd|state.ST_CALC~q\ & (\dht22_data_bcd|hundreds_reg\(1) $ (((!\dht22_data_bcd|num_reg[8]~1_combout\ & \dht22_data_bcd|hundreds_reg\(0))))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000110001000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \dht22_data_bcd|num_reg[8]~1_combout\,
-	datab => \dht22_data_bcd|hundreds_reg\(0),
-	datac => \dht22_data_bcd|hundreds_reg\(2),
+	datab => \dht22_data_bcd|state.ST_CALC~q\,
+	datac => \dht22_data_bcd|hundreds_reg\(0),
 	datad => \dht22_data_bcd|hundreds_reg\(1),
-	combout => \dht22_data_bcd|Selector3~0_combout\);
+	combout => \dht22_data_bcd|Selector5~0_combout\);
 
--- Location: LCCOMB_X17_Y21_N6
-\dht22_data_bcd|Selector3~1\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X24_Y15_N16
+\dht22_data_bcd|Selector5~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \dht22_data_bcd|Selector3~1_combout\ = (\dht22_data_bcd|hundreds_reg\(3) & ((\dht22_data_bcd|state.ST_DONE~q\) # ((!\dht22_data_bcd|Selector3~0_combout\ & \dht22_data_bcd|state.ST_CALC~q\)))) # (!\dht22_data_bcd|hundreds_reg\(3) & 
--- (\dht22_data_bcd|Selector3~0_combout\ & (\dht22_data_bcd|state.ST_CALC~q\)))
+-- \dht22_data_bcd|Selector5~1_combout\ = (\dht22_data_bcd|Selector5~0_combout\) # ((\dht22_data_bcd|state.ST_DONE~q\ & \dht22_data_bcd|hundreds_reg\(1)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111100001001000",
+	lut_mask => "1110110011101100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \dht22_data_bcd|Selector3~0_combout\,
+	dataa => \dht22_data_bcd|state.ST_DONE~q\,
+	datab => \dht22_data_bcd|Selector5~0_combout\,
+	datac => \dht22_data_bcd|hundreds_reg\(1),
+	combout => \dht22_data_bcd|Selector5~1_combout\);
+
+-- Location: FF_X24_Y15_N17
+\dht22_data_bcd|hundreds_reg[1]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector5~1_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|hundreds_reg\(1));
+
+-- Location: LCCOMB_X24_Y15_N4
+\dht22_data_bcd|Selector4~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector4~3_combout\ = (\dht22_data_bcd|hundreds_reg\(0) & (\dht22_data_bcd|hundreds_reg\(1) & ((\dht22_data_bcd|num_reg\(15)) # (!\dht22_data_bcd|num~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000010001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|hundreds_reg\(0),
+	datab => \dht22_data_bcd|hundreds_reg\(1),
+	datac => \dht22_data_bcd|num_reg\(15),
+	datad => \dht22_data_bcd|num~0_combout\,
+	combout => \dht22_data_bcd|Selector4~3_combout\);
+
+-- Location: LCCOMB_X24_Y15_N26
+\dht22_data_bcd|Selector4~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector4~2_combout\ = (\dht22_data_bcd|hundreds_reg\(2) & ((\dht22_data_bcd|state.ST_DONE~q\) # ((!\dht22_data_bcd|Selector4~3_combout\ & \dht22_data_bcd|state.ST_CALC~q\)))) # (!\dht22_data_bcd|hundreds_reg\(2) & 
+-- (((\dht22_data_bcd|Selector4~3_combout\ & \dht22_data_bcd|state.ST_CALC~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1011110010100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|state.ST_DONE~q\,
+	datab => \dht22_data_bcd|Selector4~3_combout\,
+	datac => \dht22_data_bcd|hundreds_reg\(2),
+	datad => \dht22_data_bcd|state.ST_CALC~q\,
+	combout => \dht22_data_bcd|Selector4~2_combout\);
+
+-- Location: FF_X24_Y15_N27
+\dht22_data_bcd|hundreds_reg[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|Selector4~2_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|hundreds_reg\(2));
+
+-- Location: LCCOMB_X24_Y15_N2
+\dht22_data_bcd|Selector3~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector3~0_combout\ = (\dht22_data_bcd|hundreds_reg\(0) & (\dht22_data_bcd|hundreds_reg\(1) & (\dht22_data_bcd|hundreds_reg\(2) & !\dht22_data_bcd|num_reg[8]~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000010000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|hundreds_reg\(0),
+	datab => \dht22_data_bcd|hundreds_reg\(1),
+	datac => \dht22_data_bcd|hundreds_reg\(2),
+	datad => \dht22_data_bcd|num_reg[8]~1_combout\,
+	combout => \dht22_data_bcd|Selector3~0_combout\);
+
+-- Location: LCCOMB_X24_Y18_N10
+\dht22_data_bcd|Selector3~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|Selector3~1_combout\ = (\dht22_data_bcd|hundreds_reg\(3) & ((\dht22_data_bcd|state.ST_DONE~q\) # ((\dht22_data_bcd|state.ST_CALC~q\ & !\dht22_data_bcd|Selector3~0_combout\)))) # (!\dht22_data_bcd|hundreds_reg\(3) & 
+-- (((\dht22_data_bcd|state.ST_CALC~q\ & \dht22_data_bcd|Selector3~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010110011100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|state.ST_DONE~q\,
 	datab => \dht22_data_bcd|state.ST_CALC~q\,
 	datac => \dht22_data_bcd|hundreds_reg\(3),
-	datad => \dht22_data_bcd|state.ST_DONE~q\,
+	datad => \dht22_data_bcd|Selector3~0_combout\,
 	combout => \dht22_data_bcd|Selector3~1_combout\);
 
--- Location: FF_X17_Y21_N7
+-- Location: FF_X24_Y18_N11
 \dht22_data_bcd|hundreds_reg[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -10989,21 +10640,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \dht22_data_bcd|hundreds_reg\(3));
 
--- Location: LCCOMB_X16_Y18_N2
-\dht22_data_bcd|bcd_reg[11]~feeder\ : cycloneive_lcell_comb
--- Equation(s):
--- \dht22_data_bcd|bcd_reg[11]~feeder_combout\ = \dht22_data_bcd|hundreds_reg\(3)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \dht22_data_bcd|hundreds_reg\(3),
-	combout => \dht22_data_bcd|bcd_reg[11]~feeder_combout\);
-
--- Location: FF_X16_Y18_N3
+-- Location: FF_X23_Y18_N23
 \dht22_data_bcd|bcd_reg[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -11012,69 +10649,415 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \dht22_data_bcd|bcd_reg[11]~feeder_combout\,
+	asdata => \dht22_data_bcd|hundreds_reg\(3),
 	clrn => \rst_n~inputclkctrl_outclk\,
+	sload => VCC,
 	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \dht22_data_bcd|bcd_reg\(11));
 
--- Location: LCCOMB_X16_Y18_N28
+-- Location: LCCOMB_X23_Y18_N30
 \display|Mux1~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \display|Mux1~0_combout\ = (\display|digit_index\(1) & ((\display|digit_index\(0) & ((\dht22_data_bcd|bcd_reg\(11)))) # (!\display|digit_index\(0) & (\dht22_data_bcd|bcd_reg\(7))))) # (!\display|digit_index\(1) & (!\display|digit_index\(0)))
+-- \display|Mux1~0_combout\ = (\display|digit_index\(0) & (\display|digit_index\(1) & ((\dht22_data_bcd|bcd_reg\(11))))) # (!\display|digit_index\(0) & (((\dht22_data_bcd|bcd_reg\(7))) # (!\display|digit_index\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011100100110001",
+	lut_mask => "1101100101010001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|digit_index\(1),
-	datab => \display|digit_index\(0),
+	dataa => \display|digit_index\(0),
+	datab => \display|digit_index\(1),
 	datac => \dht22_data_bcd|bcd_reg\(7),
 	datad => \dht22_data_bcd|bcd_reg\(11),
 	combout => \display|Mux1~0_combout\);
 
--- Location: LCCOMB_X16_Y18_N24
+-- Location: FF_X23_Y18_N19
+\dht22_data_bcd|bcd_reg[3]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \dht22_data_bcd|num_reg\(3),
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sload => VCC,
+	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|bcd_reg\(3));
+
+-- Location: LCCOMB_X23_Y18_N18
 \display|Mux1~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \display|Mux1~1_combout\ = (\display|Mux1~0_combout\) # ((!\display|digit_index\(1) & \dht22_data_bcd|bcd_reg\(3)))
+-- \display|Mux1~1_combout\ = (\display|Mux1~0_combout\) # ((\dht22_data_bcd|bcd_reg\(3) & !\display|digit_index\(1)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111101010000",
+	lut_mask => "1010101011111010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|digit_index\(1),
+	dataa => \display|Mux1~0_combout\,
 	datac => \dht22_data_bcd|bcd_reg\(3),
-	datad => \display|Mux1~0_combout\,
+	datad => \display|digit_index\(1),
 	combout => \display|Mux1~1_combout\);
 
--- Location: LCCOMB_X16_Y22_N12
-\display|rom|rom~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X24_Y18_N16
+\dht22_data_bcd|bcd_reg[9]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \display|rom|rom~0_combout\ = (\display|Mux4~1_combout\ & (!\display|Mux2~1_combout\ & (\display|Mux3~1_combout\ $ (!\display|Mux1~1_combout\)))) # (!\display|Mux4~1_combout\ & (\display|Mux2~1_combout\ & (!\display|Mux3~1_combout\ & 
--- !\display|Mux1~1_combout\)))
+-- \dht22_data_bcd|bcd_reg[9]~feeder_combout\ = \dht22_data_bcd|hundreds_reg\(1)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0010000000000110",
+	lut_mask => "1111111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|Mux4~1_combout\,
-	datab => \display|Mux2~1_combout\,
-	datac => \display|Mux3~1_combout\,
-	datad => \display|Mux1~1_combout\,
+	datad => \dht22_data_bcd|hundreds_reg\(1),
+	combout => \dht22_data_bcd|bcd_reg[9]~feeder_combout\);
+
+-- Location: FF_X24_Y18_N17
+\dht22_data_bcd|bcd_reg[9]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|bcd_reg[9]~feeder_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|bcd_reg\(9));
+
+-- Location: FF_X23_Y18_N3
+\dht22_data_bcd|bcd_reg[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \dht22_data_bcd|tens_reg\(1),
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sload => VCC,
+	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|bcd_reg\(5));
+
+-- Location: LCCOMB_X23_Y18_N2
+\display|Mux3~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \display|Mux3~0_combout\ = (\display|digit_index\(0) & (\dht22_data_bcd|bcd_reg\(9) & ((\display|digit_index\(1))))) # (!\display|digit_index\(0) & (((\dht22_data_bcd|bcd_reg\(5)) # (!\display|digit_index\(1)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101100001010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \display|digit_index\(0),
+	datab => \dht22_data_bcd|bcd_reg\(9),
+	datac => \dht22_data_bcd|bcd_reg\(5),
+	datad => \display|digit_index\(1),
+	combout => \display|Mux3~0_combout\);
+
+-- Location: FF_X23_Y18_N29
+\dht22_data_bcd|bcd_reg[1]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \dht22_data_bcd|num_reg\(1),
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sload => VCC,
+	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|bcd_reg\(1));
+
+-- Location: LCCOMB_X23_Y18_N28
+\display|Mux3~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \display|Mux3~1_combout\ = (\display|Mux3~0_combout\) # ((\dht22_data_bcd|bcd_reg\(1) & !\display|digit_index\(1)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \display|Mux3~0_combout\,
+	datac => \dht22_data_bcd|bcd_reg\(1),
+	datad => \display|digit_index\(1),
+	combout => \display|Mux3~1_combout\);
+
+-- Location: LCCOMB_X24_Y18_N30
+\dht22_data_bcd|bcd_reg[10]~feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|bcd_reg[10]~feeder_combout\ = \dht22_data_bcd|hundreds_reg\(2)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \dht22_data_bcd|hundreds_reg\(2),
+	combout => \dht22_data_bcd|bcd_reg[10]~feeder_combout\);
+
+-- Location: FF_X24_Y18_N31
+\dht22_data_bcd|bcd_reg[10]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|bcd_reg[10]~feeder_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|bcd_reg\(10));
+
+-- Location: FF_X24_Y18_N29
+\dht22_data_bcd|bcd_reg[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \dht22_data_bcd|num_reg\(2),
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sload => VCC,
+	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|bcd_reg\(2));
+
+-- Location: LCCOMB_X24_Y18_N28
+\display|Mux2~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \display|Mux2~0_combout\ = (\display|digit_index\(0) & ((\display|digit_index\(1) & (\dht22_data_bcd|bcd_reg\(10))) # (!\display|digit_index\(1) & ((\dht22_data_bcd|bcd_reg\(2))))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000100011000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|bcd_reg\(10),
+	datab => \display|digit_index\(0),
+	datac => \dht22_data_bcd|bcd_reg\(2),
+	datad => \display|digit_index\(1),
+	combout => \display|Mux2~0_combout\);
+
+-- Location: FF_X23_Y18_N11
+\dht22_data_bcd|bcd_reg[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \dht22_data_bcd|tens_reg\(2),
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sload => VCC,
+	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|bcd_reg\(6));
+
+-- Location: LCCOMB_X23_Y18_N10
+\display|Mux2~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \display|Mux2~1_combout\ = (\display|Mux2~0_combout\) # ((!\display|digit_index\(0) & (\dht22_data_bcd|bcd_reg\(6) & \display|digit_index\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101110011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \display|digit_index\(0),
+	datab => \display|Mux2~0_combout\,
+	datac => \dht22_data_bcd|bcd_reg\(6),
+	datad => \display|digit_index\(1),
+	combout => \display|Mux2~1_combout\);
+
+-- Location: LCCOMB_X25_Y14_N4
+\dht22_data_bcd|num_reg[0]~6\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|num_reg[0]~6_combout\ = (!\dht22_data_bcd|state.ST_IDLE~q\ & ((\param~q\ & ((\dht22_one_wire|data_buff_reg\(31)))) # (!\param~q\ & (\dht22_one_wire|data_buff_reg\(15)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101010000000100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \dht22_data_bcd|state.ST_IDLE~q\,
+	datab => \dht22_one_wire|data_buff_reg\(15),
+	datac => \param~q\,
+	datad => \dht22_one_wire|data_buff_reg\(31),
+	combout => \dht22_data_bcd|num_reg[0]~6_combout\);
+
+-- Location: LCCOMB_X24_Y18_N8
+\dht22_data_bcd|num_reg[0]~7\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \dht22_data_bcd|num_reg[0]~7_combout\ = (\dht22_data_bcd|num_reg[0]~6_combout\) # ((\dht22_data_bcd|state.ST_IDLE~q\ & \dht22_data_bcd|num_reg\(0)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \dht22_data_bcd|state.ST_IDLE~q\,
+	datac => \dht22_data_bcd|num_reg\(0),
+	datad => \dht22_data_bcd|num_reg[0]~6_combout\,
+	combout => \dht22_data_bcd|num_reg[0]~7_combout\);
+
+-- Location: FF_X24_Y18_N9
+\dht22_data_bcd|num_reg[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \dht22_data_bcd|num_reg[0]~7_combout\,
+	clrn => \rst_n~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|num_reg\(0));
+
+-- Location: FF_X24_Y18_N7
+\dht22_data_bcd|bcd_reg[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \dht22_data_bcd|num_reg\(0),
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sload => VCC,
+	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|bcd_reg\(0));
+
+-- Location: LCCOMB_X24_Y18_N6
+\display|Mux4~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \display|Mux4~0_combout\ = (\display|digit_index\(0) & (((\dht22_data_bcd|bcd_reg\(0)) # (\display|digit_index\(1))))) # (!\display|digit_index\(0) & (!\param~q\ & ((!\display|digit_index\(1)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011010001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \param~q\,
+	datab => \display|digit_index\(0),
+	datac => \dht22_data_bcd|bcd_reg\(0),
+	datad => \display|digit_index\(1),
+	combout => \display|Mux4~0_combout\);
+
+-- Location: FF_X23_Y18_N17
+\dht22_data_bcd|bcd_reg[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \dht22_data_bcd|tens_reg\(0),
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sload => VCC,
+	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|bcd_reg\(4));
+
+-- Location: FF_X23_Y18_N1
+\dht22_data_bcd|bcd_reg[8]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \dht22_data_bcd|hundreds_reg\(0),
+	clrn => \rst_n~inputclkctrl_outclk\,
+	sload => VCC,
+	ena => \dht22_data_bcd|bcd_reg[0]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dht22_data_bcd|bcd_reg\(8));
+
+-- Location: LCCOMB_X23_Y18_N0
+\display|Mux4~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \display|Mux4~1_combout\ = (\display|Mux4~0_combout\ & (((\dht22_data_bcd|bcd_reg\(8)) # (!\display|digit_index\(1))))) # (!\display|Mux4~0_combout\ & (\dht22_data_bcd|bcd_reg\(4) & ((\display|digit_index\(1)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110010010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \display|Mux4~0_combout\,
+	datab => \dht22_data_bcd|bcd_reg\(4),
+	datac => \dht22_data_bcd|bcd_reg\(8),
+	datad => \display|digit_index\(1),
+	combout => \display|Mux4~1_combout\);
+
+-- Location: LCCOMB_X22_Y22_N28
+\display|rom|rom~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \display|rom|rom~0_combout\ = (\display|Mux1~1_combout\ & (\display|Mux3~1_combout\ & (!\display|Mux2~1_combout\ & \display|Mux4~1_combout\))) # (!\display|Mux1~1_combout\ & (!\display|Mux3~1_combout\ & (\display|Mux2~1_combout\ $ 
+-- (\display|Mux4~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000100100010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \display|Mux1~1_combout\,
+	datab => \display|Mux3~1_combout\,
+	datac => \display|Mux2~1_combout\,
+	datad => \display|Mux4~1_combout\,
 	combout => \display|rom|rom~0_combout\);
 
--- Location: LCCOMB_X16_Y22_N26
+-- Location: LCCOMB_X22_Y22_N10
 \display|rom|rom~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \display|rom|rom~1_combout\ = (\display|Mux4~1_combout\ & (\display|Mux2~1_combout\ & (!\display|Mux3~1_combout\ & !\display|Mux1~1_combout\))) # (!\display|Mux4~1_combout\ & (\display|Mux3~1_combout\ & (\display|Mux2~1_combout\ $ 
--- (\display|Mux1~1_combout\))))
+-- \display|rom|rom~1_combout\ = (\display|Mux1~1_combout\ & (\display|Mux3~1_combout\ & (!\display|Mux2~1_combout\ & !\display|Mux4~1_combout\))) # (!\display|Mux1~1_combout\ & (\display|Mux2~1_combout\ & (\display|Mux3~1_combout\ $ 
+-- (\display|Mux4~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -11082,100 +11065,100 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|Mux4~1_combout\,
-	datab => \display|Mux2~1_combout\,
-	datac => \display|Mux3~1_combout\,
-	datad => \display|Mux1~1_combout\,
+	dataa => \display|Mux1~1_combout\,
+	datab => \display|Mux3~1_combout\,
+	datac => \display|Mux2~1_combout\,
+	datad => \display|Mux4~1_combout\,
 	combout => \display|rom|rom~1_combout\);
 
--- Location: LCCOMB_X16_Y22_N24
+-- Location: LCCOMB_X22_Y22_N12
 \display|rom|rom~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \display|rom|rom~2_combout\ = (!\display|Mux4~1_combout\ & (!\display|Mux2~1_combout\ & \display|Mux3~1_combout\))
+-- \display|rom|rom~2_combout\ = (\display|Mux3~1_combout\ & (!\display|Mux2~1_combout\ & !\display|Mux4~1_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001000000010000",
+	lut_mask => "0000000000001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|Mux4~1_combout\,
-	datab => \display|Mux2~1_combout\,
-	datac => \display|Mux3~1_combout\,
+	datab => \display|Mux3~1_combout\,
+	datac => \display|Mux2~1_combout\,
+	datad => \display|Mux4~1_combout\,
 	combout => \display|rom|rom~2_combout\);
 
--- Location: LCCOMB_X16_Y22_N22
+-- Location: LCCOMB_X22_Y22_N22
 \display|rom|rom~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \display|rom|rom~3_combout\ = (\display|Mux2~1_combout\ & (!\display|Mux1~1_combout\ & (\display|Mux4~1_combout\ $ (!\display|Mux3~1_combout\)))) # (!\display|Mux2~1_combout\ & (\display|Mux4~1_combout\ & (\display|Mux3~1_combout\ $ 
--- (!\display|Mux1~1_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010000010000110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \display|Mux4~1_combout\,
-	datab => \display|Mux2~1_combout\,
-	datac => \display|Mux3~1_combout\,
-	datad => \display|Mux1~1_combout\,
-	combout => \display|rom|rom~3_combout\);
-
--- Location: LCCOMB_X16_Y22_N4
-\display|rom|rom~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \display|rom|rom~4_combout\ = (\display|Mux3~1_combout\ & (\display|Mux4~1_combout\ & ((!\display|Mux1~1_combout\)))) # (!\display|Mux3~1_combout\ & ((\display|Mux2~1_combout\ & ((!\display|Mux1~1_combout\))) # (!\display|Mux2~1_combout\ & 
+-- \display|rom|rom~3_combout\ = (\display|Mux3~1_combout\ & (\display|Mux4~1_combout\ & (\display|Mux1~1_combout\ $ (\display|Mux2~1_combout\)))) # (!\display|Mux3~1_combout\ & (!\display|Mux1~1_combout\ & (\display|Mux2~1_combout\ $ 
 -- (\display|Mux4~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000001010101110",
+	lut_mask => "0100100100010000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|Mux4~1_combout\,
-	datab => \display|Mux2~1_combout\,
-	datac => \display|Mux3~1_combout\,
-	datad => \display|Mux1~1_combout\,
+	dataa => \display|Mux1~1_combout\,
+	datab => \display|Mux3~1_combout\,
+	datac => \display|Mux2~1_combout\,
+	datad => \display|Mux4~1_combout\,
+	combout => \display|rom|rom~3_combout\);
+
+-- Location: LCCOMB_X22_Y22_N0
+\display|rom|rom~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \display|rom|rom~4_combout\ = (\display|Mux3~1_combout\ & (!\display|Mux1~1_combout\ & ((\display|Mux4~1_combout\)))) # (!\display|Mux3~1_combout\ & ((\display|Mux2~1_combout\ & (!\display|Mux1~1_combout\)) # (!\display|Mux2~1_combout\ & 
+-- ((\display|Mux4~1_combout\)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101011100010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \display|Mux1~1_combout\,
+	datab => \display|Mux3~1_combout\,
+	datac => \display|Mux2~1_combout\,
+	datad => \display|Mux4~1_combout\,
 	combout => \display|rom|rom~4_combout\);
 
--- Location: LCCOMB_X16_Y22_N10
+-- Location: LCCOMB_X22_Y22_N6
 \display|rom|rom~5\ : cycloneive_lcell_comb
 -- Equation(s):
--- \display|rom|rom~5_combout\ = (!\display|Mux1~1_combout\ & ((\display|Mux4~1_combout\ & ((\display|Mux3~1_combout\) # (!\display|Mux2~1_combout\))) # (!\display|Mux4~1_combout\ & (!\display|Mux2~1_combout\ & \display|Mux3~1_combout\))))
+-- \display|rom|rom~5_combout\ = (!\display|Mux1~1_combout\ & ((\display|Mux3~1_combout\ & ((\display|Mux4~1_combout\) # (!\display|Mux2~1_combout\))) # (!\display|Mux3~1_combout\ & (!\display|Mux2~1_combout\ & \display|Mux4~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000010110010",
+	lut_mask => "0100010100000100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|Mux4~1_combout\,
-	datab => \display|Mux2~1_combout\,
-	datac => \display|Mux3~1_combout\,
-	datad => \display|Mux1~1_combout\,
+	dataa => \display|Mux1~1_combout\,
+	datab => \display|Mux3~1_combout\,
+	datac => \display|Mux2~1_combout\,
+	datad => \display|Mux4~1_combout\,
 	combout => \display|rom|rom~5_combout\);
 
--- Location: LCCOMB_X16_Y22_N8
+-- Location: LCCOMB_X22_Y22_N4
 \display|rom|rom~6\ : cycloneive_lcell_comb
 -- Equation(s):
--- \display|rom|rom~6_combout\ = (\display|Mux4~1_combout\ & ((\display|Mux1~1_combout\) # (\display|Mux2~1_combout\ $ (\display|Mux3~1_combout\)))) # (!\display|Mux4~1_combout\ & ((\display|Mux2~1_combout\) # (\display|Mux3~1_combout\ $ 
--- (\display|Mux1~1_combout\))))
+-- \display|rom|rom~6_combout\ = (\display|Mux4~1_combout\ & ((\display|Mux1~1_combout\) # (\display|Mux3~1_combout\ $ (\display|Mux2~1_combout\)))) # (!\display|Mux4~1_combout\ & ((\display|Mux2~1_combout\) # (\display|Mux1~1_combout\ $ 
+-- (\display|Mux3~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110111101111100",
+	lut_mask => "1011111011110110",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \display|Mux4~1_combout\,
-	datab => \display|Mux2~1_combout\,
-	datac => \display|Mux3~1_combout\,
-	datad => \display|Mux1~1_combout\,
+	dataa => \display|Mux1~1_combout\,
+	datab => \display|Mux3~1_combout\,
+	datac => \display|Mux2~1_combout\,
+	datad => \display|Mux4~1_combout\,
 	combout => \display|rom|rom~6_combout\);
 
--- Location: LCCOMB_X10_Y21_N18
+-- Location: LCCOMB_X21_Y19_N22
 \display|shift_reg[1]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|shift_reg[1]~1_combout\ = !\display|shift_reg\(0)
@@ -11189,7 +11172,7 @@ PORT MAP (
 	datad => \display|shift_reg\(0),
 	combout => \display|shift_reg[1]~1_combout\);
 
--- Location: FF_X10_Y21_N19
+-- Location: FF_X21_Y19_N23
 \display|shift_reg[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -11205,21 +11188,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|shift_reg\(1));
 
--- Location: LCCOMB_X10_Y21_N0
-\display|shift_reg[2]~feeder\ : cycloneive_lcell_comb
--- Equation(s):
--- \display|shift_reg[2]~feeder_combout\ = \display|shift_reg\(1)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \display|shift_reg\(1),
-	combout => \display|shift_reg[2]~feeder_combout\);
-
--- Location: FF_X10_Y21_N1
+-- Location: FF_X21_Y19_N1
 \display|shift_reg[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -11228,14 +11197,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \display|shift_reg[2]~feeder_combout\,
+	asdata => \display|shift_reg\(1),
 	clrn => \rst_n~inputclkctrl_outclk\,
+	sload => VCC,
 	ena => \display|Equal0~4_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \display|shift_reg\(2));
 
--- Location: LCCOMB_X10_Y21_N2
+-- Location: LCCOMB_X21_Y19_N2
 \display|shift_reg[3]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|shift_reg[3]~feeder_combout\ = \display|shift_reg\(2)
@@ -11249,7 +11219,7 @@ PORT MAP (
 	datad => \display|shift_reg\(2),
 	combout => \display|shift_reg[3]~feeder_combout\);
 
--- Location: FF_X10_Y21_N3
+-- Location: FF_X21_Y19_N3
 \display|shift_reg[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -11265,21 +11235,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \display|shift_reg\(3));
 
--- Location: LCCOMB_X10_Y21_N28
+-- Location: LCCOMB_X21_Y19_N20
 \display|shift_reg[0]~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \display|shift_reg[0]~0_combout\ = !\display|shift_reg\(3)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011111111",
+	lut_mask => "0000111100001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datad => \display|shift_reg\(3),
+	datac => \display|shift_reg\(3),
 	combout => \display|shift_reg[0]~0_combout\);
 
--- Location: FF_X10_Y21_N29
+-- Location: FF_X21_Y19_N21
 \display|shift_reg[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
