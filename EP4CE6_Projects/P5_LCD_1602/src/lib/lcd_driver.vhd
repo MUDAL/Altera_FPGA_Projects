@@ -160,22 +160,19 @@ begin
 				if clks < to_unsigned(EPW,clks'length) then
 					en_next <= '1';
 					db_next <= FS_CMD;
-				elsif clks = to_unsigned(EPW,clks'length) then
-					en_next <= '0';
 				elsif clks = to_unsigned(EPW + IET,clks'length) then
 					en_next <= '1';
 					db_next <= DISP_ON;
-				elsif clks = to_unsigned(2*EPW + IET,clks'length) then
-					en_next <= '0';
 				elsif clks = to_unsigned(2*EPW + 2*IET,clks'length) then
 					en_next <= '1';
 					db_next <= ENTRY_MODE;
-				elsif clks = to_unsigned(3*EPW + 2*IET,clks'length) then
-					en_next <= '0';
 				elsif clks = to_unsigned(3*EPW + 3*IET,clks'length) then
 					en_next <= '1';
 					db_next <= DISP_CLR;
-				elsif clks = to_unsigned(4*EPW + 3*IET,clks'length) then
+				elsif clks = to_unsigned(EPW,clks'length) or
+						clks = to_unsigned(2*EPW + IET,clks'length) or 
+						clks = to_unsigned(3*EPW + 2*IET,clks'length) or
+				      clks = to_unsigned(4*EPW + 3*IET,clks'length) then
 					en_next <= '0';
 				end if;
 			when ST_CHECK_DATA =>

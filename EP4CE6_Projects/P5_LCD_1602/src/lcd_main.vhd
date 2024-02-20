@@ -3,6 +3,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 library work;
 
+--FPGA Exercise: Displaying text on a 16x2 LCD module.
+--The data and instructions to drive the LCD's controller are ...
+--stored in a ROM (program memory).
+--The 'control path' traverses the ROM till it reaches the end (NULL).  
+--If the 'control path' hasn't reached the end of the ROM, a valid ....
+--instruction is fed to the 'LCD driver' to control the LCD module.
+
 entity lcd_main is
 	port(rst_n: in std_logic;
 		  clk: in std_logic;
@@ -35,7 +42,7 @@ begin
 	generic map(ADDR_WIDTH => ADDR_WIDTH)
 	port map(addr => std_logic_vector(addr), instruction => instruction);	
 	
-	rs_in <= instruction(8);
+	instruction_decoder: rs_in <= instruction(8);
 	d_in <= instruction(7 downto 0);	
 	
 	lcd_1602: entity work.lcd_driver(lcd_driver_rtl)
