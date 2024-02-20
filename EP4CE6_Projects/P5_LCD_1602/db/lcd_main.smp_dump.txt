@@ -1,0 +1,10 @@
+
+State Machine - |lcd_main|lcd_driver:lcd_1602|state
+Name state.ST_END state.ST_WRITE state.ST_CHECK_DATA state.ST_INIT_2 state.ST_WAIT state.ST_INIT_1 state.ST_IDLE 
+state.ST_IDLE 0 0 0 0 0 0 0 
+state.ST_INIT_1 0 0 0 0 0 1 1 
+state.ST_WAIT 0 0 0 0 1 0 1 
+state.ST_INIT_2 0 0 0 1 0 0 1 
+state.ST_CHECK_DATA 0 0 1 0 0 0 1 
+state.ST_WRITE 0 1 0 0 0 0 1 
+state.ST_END 1 0 0 0 0 0 1 

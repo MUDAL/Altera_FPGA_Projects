@@ -1,0 +1,13 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity lcd_driver is
+end lcd_driver;
+
+architecture lcd_driver_rtl of lcd_driver is
+begin
+
+end lcd_driver_rtl;
+
+
