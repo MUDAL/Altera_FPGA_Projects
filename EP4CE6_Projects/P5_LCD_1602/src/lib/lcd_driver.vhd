@@ -26,12 +26,13 @@ architecture lcd_driver_rtl of lcd_driver is
 	--Enable pulse width: minimum of 230 ns
 	--Enable cycle time: minimum of 500 ns
 	--Worst-case instruction execution time: 45 uS (Ignoring "Return Home")
-	constant PD: integer  := 749999; --Power-on Delay
-	constant FD1: integer := 204999; --1st Function Set Delay
-	constant FD2: integer := 4999; --2nd Function Set Delay
-	constant EPW: integer := 24; --Enable Pulse Width
-	constant ECT: integer := 49; --Enable Cycle Time
-	constant IET: integer := 2249; --Instruction Execution Time
+	--The 'Clear Display' instruction has a long execution time (> 1.6 ms)
+	constant PD: integer  := 750000; --Power-on Delay
+	constant FD1: integer := 205000; --1st Function Set Delay
+	constant FD2: integer := 5000; --2nd Function Set Delay
+	constant EPW: integer := 25; --Enable Pulse Width
+	constant ECT: integer := 50; --Enable Cycle Time
+	constant IET: integer := 2250; --Instruction Execution Time
 	-- INITIALIZATION COMMANDS
 	--Function Select: DB3 = '1' selects 2 lines and 5x8 font
 	--Display ON, Cursor OFF, Blinking cursor OFF
@@ -73,13 +74,13 @@ begin
 			when ST_IDLE =>
 				next_state <= ST_INIT_1;
 			when ST_INIT_1 =>
-				if clks = to_unsigned(PD + FD1 + FD2 + ECT + 1,clks'length) then
+				if clks = to_unsigned(PD + FD1 + FD2 + ECT + IET,clks'length) then
 					next_state <= ST_WAIT;
 				end if;
 			when ST_WAIT =>
 				next_state <= ST_INIT_2;
-			when ST_INIT_2 =>
-				if clks = to_unsigned(4*EPW + 40*IET,clks'length) then
+			when ST_INIT_2 => --Change state after executing 'Clear Display'
+				if clks = to_unsigned(4*ECT + 40*IET,clks'length) then
 					next_state <= ST_CHECK_DATA;
 				end if;
 			when ST_CHECK_DATA =>
@@ -145,14 +146,14 @@ begin
 		case state is
 			when ST_IDLE =>
 			when ST_INIT_1 => -- Power-on Initialization
-				if clks = to_unsigned(PD + 1,clks'length) or 
-					clks = to_unsigned(PD + FD1 + 1,clks'length) or
-					clks = to_unsigned(PD + FD1 + FD2 + 1,clks'length) then
+				if clks = to_unsigned(PD,clks'length) or 
+					clks = to_unsigned(PD + FD1,clks'length) or
+					clks = to_unsigned(PD + FD1 + FD2,clks'length) then
 					en_next <= '1';
 					db_next <= FS_CMD;
-				elsif clks = to_unsigned(PD + EPW + 1,clks'length) or 
-						clks = to_unsigned(PD + FD1 + EPW + 1,clks'length) or
-					   clks = to_unsigned(PD + FD1 + FD2 + EPW + 1,clks'length)	then
+				elsif clks = to_unsigned(PD + EPW,clks'length) or 
+						clks = to_unsigned(PD + FD1 + EPW,clks'length) or
+					   clks = to_unsigned(PD + FD1 + FD2 + EPW,clks'length) then
 					en_next <= '0';
 				end if;
 			when ST_WAIT =>
@@ -160,19 +161,19 @@ begin
 				if clks < to_unsigned(EPW,clks'length) then
 					en_next <= '1';
 					db_next <= FS_CMD;
-				elsif clks = to_unsigned(EPW + IET,clks'length) then
+				elsif clks = to_unsigned(ECT + IET,clks'length) then
 					en_next <= '1';
 					db_next <= DISP_ON;
-				elsif clks = to_unsigned(2*EPW + 2*IET,clks'length) then
+				elsif clks = to_unsigned(2*ECT + 2*IET,clks'length) then
 					en_next <= '1';
 					db_next <= ENTRY_MODE;
-				elsif clks = to_unsigned(3*EPW + 3*IET,clks'length) then
+				elsif clks = to_unsigned(3*ECT + 3*IET,clks'length) then
 					en_next <= '1';
 					db_next <= DISP_CLR;
 				elsif clks = to_unsigned(EPW,clks'length) or
-						clks = to_unsigned(2*EPW + IET,clks'length) or 
-						clks = to_unsigned(3*EPW + 2*IET,clks'length) or
-				      clks = to_unsigned(4*EPW + 3*IET,clks'length) then
+						clks = to_unsigned(EPW + ECT + IET,clks'length) or 
+						clks = to_unsigned(EPW + 2*ECT + 2*IET,clks'length) or
+				      clks = to_unsigned(EPW + 3*ECT + 3*IET,clks'length) then
 					en_next <= '0';
 				end if;
 			when ST_CHECK_DATA =>
