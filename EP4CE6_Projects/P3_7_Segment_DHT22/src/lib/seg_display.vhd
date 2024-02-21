@@ -29,7 +29,7 @@ entity seg_display is
 end seg_display;
 
 architecture seg_display_rtl of seg_display is
-	constant TIME_TO_SWITCH_DIGIT: integer range 0 to 9_999 := 9_999;
+	constant TIME_TO_SWITCH_DIGIT: integer := 9_999;
 	constant ROM_CELSIUS: integer := 10; --ROM address to display Celsius(C)
 	constant ROM_HUMID: integer := 11; --ROM address to display Humidity(H)
 	type digit_type is array(0 to 3) of std_logic_vector(3 downto 0);

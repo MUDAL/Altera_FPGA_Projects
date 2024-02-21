@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "02/13/2024 23:09:53"
+-- DATE "02/21/2024 19:51:03"
 
 -- 
 -- Device: Altera EP4CE6E22C8 Package TQFP144
@@ -81,11 +81,11 @@ ENTITY 	weather_sensor IS
     PORT (
 	rst_n : IN std_logic;
 	clk : IN std_logic;
-	io : BUFFER std_logic;
-	led : BUFFER std_logic;
-	dp : BUFFER std_logic;
-	seg : BUFFER std_logic_vector(6 DOWNTO 0);
-	sel : BUFFER std_logic_vector(3 DOWNTO 0)
+	io : INOUT std_logic;
+	led : OUT std_logic;
+	dp : OUT std_logic;
+	seg : OUT std_logic_vector(6 DOWNTO 0);
+	sel : OUT std_logic_vector(3 DOWNTO 0)
 	);
 END weather_sensor;
 
@@ -120,7 +120,6 @@ SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
 SIGNAL ww_rst_n : std_logic;
 SIGNAL ww_clk : std_logic;
-SIGNAL ww_io : std_logic;
 SIGNAL ww_led : std_logic;
 SIGNAL ww_dp : std_logic;
 SIGNAL ww_seg : std_logic_vector(6 DOWNTO 0);
@@ -733,12 +732,12 @@ SIGNAL \dht22_one_wire|clk_stamp_reg\ : std_logic_vector(19 DOWNTO 0);
 SIGNAL \dht22_data_bcd|num_reg\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL one_wire_count : std_logic_vector(26 DOWNTO 0);
 SIGNAL \dht22_data_bcd|hundreds_reg\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \dht22_one_wire|ALT_INV_io_reg~q\ : std_logic;
 SIGNAL \dht22_one_wire|ALT_INV_state.ST_PROCESS_DATA~q\ : std_logic;
 SIGNAL \display|ALT_INV_shift_reg\ : std_logic_vector(3 DOWNTO 1);
 SIGNAL \display|rom|ALT_INV_rom~6_combout\ : std_logic;
 SIGNAL \display|ALT_INV_Mux0~0_combout\ : std_logic;
 SIGNAL \dht22_one_wire|ALT_INV_valid~4_combout\ : std_logic;
-SIGNAL \dht22_one_wire|ALT_INV_io_reg~q\ : std_logic;
 
 COMPONENT hard_block
     PORT (
@@ -751,7 +750,6 @@ BEGIN
 
 ww_rst_n <= rst_n;
 ww_clk <= clk;
-io <= ww_io;
 led <= ww_led;
 dp <= ww_dp;
 seg <= ww_seg;
@@ -763,6 +761,7 @@ ww_devpor <= devpor;
 \rst_n~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \rst_n~input_o\);
 
 \clk~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \clk~input_o\);
+\dht22_one_wire|ALT_INV_io_reg~q\ <= NOT \dht22_one_wire|io_reg~q\;
 \dht22_one_wire|ALT_INV_state.ST_PROCESS_DATA~q\ <= NOT \dht22_one_wire|state.ST_PROCESS_DATA~q\;
 \display|ALT_INV_shift_reg\(3) <= NOT \display|shift_reg\(3);
 \display|ALT_INV_shift_reg\(2) <= NOT \display|shift_reg\(2);
@@ -770,7 +769,6 @@ ww_devpor <= devpor;
 \display|rom|ALT_INV_rom~6_combout\ <= NOT \display|rom|rom~6_combout\;
 \display|ALT_INV_Mux0~0_combout\ <= NOT \display|Mux0~0_combout\;
 \dht22_one_wire|ALT_INV_valid~4_combout\ <= NOT \dht22_one_wire|valid~4_combout\;
-\dht22_one_wire|ALT_INV_io_reg~q\ <= NOT \dht22_one_wire|io_reg~q\;
 auto_generated_inst : hard_block
 PORT MAP (
 	devoe => ww_devoe,
@@ -1690,7 +1688,7 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_io,
+	i => io,
 	o => \io~input_o\);
 
 -- Location: LCCOMB_X24_Y17_N30
@@ -11291,7 +11289,7 @@ ww_sel(2) <= \sel[2]~output_o\;
 
 ww_sel(3) <= \sel[3]~output_o\;
 
-ww_io <= \io~output_o\;
+io <= \io~output_o\;
 END structure;
 
 

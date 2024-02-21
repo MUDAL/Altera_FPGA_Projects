@@ -1,5 +1,5 @@
 Flow report for distance_sensor
-Fri Feb 09 23:57:10 2024
+Wed Feb 21 19:53:17 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Feb 09 23:57:10 2024       ;
+; Flow Status                        ; Successful - Wed Feb 21 19:53:17 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; distance_sensor                             ;
 ; Top-level Entity Name              ; distance_sensor                             ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/09/2024 23:56:40 ;
+; Start date & time ; 02/21/2024 19:52:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; distance_sensor     ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 190090210168440.170751940010516        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 190090210168440.170854156506256        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_ENTRY_SYNTHESIS_TOOL     ; Custom                                 ; <None>        ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -101,12 +101,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4798 MB             ; 00:00:27                           ;
-; Fitter               ; 00:00:07     ; 1.0                     ; 5233 MB             ; 00:00:07                           ;
+; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4797 MB             ; 00:00:29                           ;
+; Fitter               ; 00:00:07     ; 1.0                     ; 5229 MB             ; 00:00:07                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4676 MB             ; 00:00:01                           ;
 ; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4734 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
-; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:38                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:40                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

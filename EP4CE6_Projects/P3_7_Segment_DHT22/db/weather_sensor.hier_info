@@ -86,19 +86,19 @@ clk => one_wire_count[26].CLK
 clk => dec_to_bcd:dht22_data_bcd.clk
 clk => seg_display:display.clk
 io <> one_wire:dht22_one_wire.io
-led << one_wire:dht22_one_wire.valid
-dp << seg_display:display.dp
-seg[0] << seg_display:display.seg[0]
-seg[1] << seg_display:display.seg[1]
-seg[2] << seg_display:display.seg[2]
-seg[3] << seg_display:display.seg[3]
-seg[4] << seg_display:display.seg[4]
-seg[5] << seg_display:display.seg[5]
-seg[6] << seg_display:display.seg[6]
-sel[0] << seg_display:display.sel[0]
-sel[1] << seg_display:display.sel[1]
-sel[2] << seg_display:display.sel[2]
-sel[3] << seg_display:display.sel[3]
+led <= one_wire:dht22_one_wire.valid
+dp <= seg_display:display.dp
+seg[0] <= seg_display:display.seg[0]
+seg[1] <= seg_display:display.seg[1]
+seg[2] <= seg_display:display.seg[2]
+seg[3] <= seg_display:display.seg[3]
+seg[4] <= seg_display:display.seg[4]
+seg[5] <= seg_display:display.seg[5]
+seg[6] <= seg_display:display.seg[6]
+sel[0] <= seg_display:display.sel[0]
+sel[1] <= seg_display:display.sel[1]
+sel[2] <= seg_display:display.sel[2]
+sel[3] <= seg_display:display.sel[3]
 
 
 |weather_sensor|one_wire:dht22_one_wire

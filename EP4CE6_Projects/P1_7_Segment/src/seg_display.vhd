@@ -22,7 +22,7 @@ entity seg_display is
 end seg_display;
 
 architecture seg_display_rtl of seg_display is
-	constant TIME_TO_SWITCH_DIGIT: integer range 0 to 9_999 := 9_999;
+	constant TIME_TO_SWITCH_DIGIT: integer := 9_999;
 	type digit_type is array(0 to 3) of std_logic_vector(3 downto 0);
 	signal digit: digit_type;
 	signal count: unsigned(15 downto 0);
@@ -76,23 +76,23 @@ begin
 	
 	--Counter for 'units' digit
 	counter_1: entity work.seg_counter(seg_counter_rtl)
-	generic map(place_value => 1)
-	port map(rst_n => rst_n, clk => clk, en => '1', count_out => digit(0));
+	generic map(PLACE_VALUE => 1)
+	port map(rst_n => rst_n, clk => clk, en => '1', digit_out => digit(0));
 	
 	--Counter for 'tens' digit			   
 	counter_2: entity work.seg_counter(seg_counter_rtl)
-	generic map(place_value => 10)
-	port map(rst_n => rst_n, clk => clk, en => '1', count_out => digit(1));
+	generic map(PLACE_VALUE => 10)
+	port map(rst_n => rst_n, clk => clk, en => '1', digit_out => digit(1));
 	
 	--Counter for 'hundreds' digit			
 	counter_3: entity work.seg_counter(seg_counter_rtl)
-	generic map(place_value => 100)
-	port map(rst_n => rst_n, clk => clk, en => '1', count_out => digit(2));
+	generic map(PLACE_VALUE => 100)
+	port map(rst_n => rst_n, clk => clk, en => '1', digit_out => digit(2));
 	
 	--Counter for 'thousands' digit		
 	counter_4: entity work.seg_counter(seg_counter_rtl)
-	generic map(place_value => 1000)
-	port map(rst_n => rst_n, clk => clk, en => '1', count_out => digit(3));	
+	generic map(PLACE_VALUE => 1000)
+	port map(rst_n => rst_n, clk => clk, en => '1', digit_out => digit(3));	
 	
 	--Converts a digit's current value to signals to drive the display
 	rom: entity work.seg_rom(seg_rom_rtl)

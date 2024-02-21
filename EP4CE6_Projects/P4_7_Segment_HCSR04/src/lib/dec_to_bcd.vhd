@@ -7,11 +7,11 @@ use IEEE.NUMERIC_STD.ALL;
 -- that can achieve this task and I'll encourage you to try them out.
 
 entity dec_to_bcd is
-	generic(data_width: integer := 24);
+	generic(DATA_WIDTH: integer := 24);
 	port(rst_n: in std_logic;
 		  clk: in std_logic;
 		  en: in std_logic;
-		  dec: in std_logic_vector(data_width - 1 downto 0);
+		  dec: in std_logic_vector(DATA_WIDTH - 1 downto 0);
 		  bcd: out std_logic_vector(15 downto 0);
 		  done: out std_logic);
 end dec_to_bcd;
@@ -34,8 +34,8 @@ architecture dec_to_bcd_rtl of dec_to_bcd is
 	type fsm is (ST_IDLE, ST_CALC, ST_DONE);
 	signal state: fsm;
 	signal next_state: fsm;
-	signal num_reg: unsigned(data_width - 1 downto 0);
-	signal num: unsigned(data_width - 1 downto 0);
+	signal num_reg: unsigned(DATA_WIDTH - 1 downto 0);
+	signal num: unsigned(DATA_WIDTH - 1 downto 0);
 	signal hundreds_reg: unsigned(3 downto 0);
 	signal hundreds: unsigned(3 downto 0);
 	signal tens_reg: unsigned(3 downto 0);

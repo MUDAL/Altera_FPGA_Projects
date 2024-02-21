@@ -1,5 +1,5 @@
 Fitter report for weather_sensor
-Tue Feb 13 23:09:46 2024
+Wed Feb 21 19:50:56 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Feb 13 23:09:46 2024       ;
+; Fitter Status                      ; Successful - Wed Feb 21 19:50:56 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; weather_sensor                              ;
 ; Top-level Entity Name              ; weather_sensor                              ;
@@ -1010,7 +1010,7 @@ Warning (169177): 3 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
 Info (144001): Generated suppressed messages file L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P3_7_Segment_DHT22/output_files/weather_sensor.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 5229 megabytes
-    Info: Processing ended: Tue Feb 13 23:09:47 2024
+    Info: Processing ended: Wed Feb 21 19:50:56 2024
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
 

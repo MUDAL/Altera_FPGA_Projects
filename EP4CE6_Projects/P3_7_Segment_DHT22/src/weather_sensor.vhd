@@ -78,7 +78,7 @@ begin
 				io => io, data_out => dec, done => dht22_done, valid => valid);
 	
 	dht22_data_bcd: entity work.dec_to_bcd(dec_to_bcd_rtl)
-	generic map(data_width => 16)
+	generic map(DATA_WIDTH => 16)
 	port map(rst_n => rst_n, clk => clk, en => en_converter, dec => dec,
 				bcd => bcd, done => conversion_done);
 	
