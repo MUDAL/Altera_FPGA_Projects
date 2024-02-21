@@ -28,8 +28,8 @@ architecture lcd_driver_rtl of lcd_driver is
 	--Worst-case instruction execution time: 45 uS (Ignoring "Return Home")
 	--The 'Clear Display' instruction has a long execution time (> 1.6 ms)
 	constant PD: integer  := 750000; --Power-on Delay
-	constant FD1: integer := 205000; --1st Function Set Delay
-	constant FD2: integer := 5000; --2nd Function Set Delay
+	constant FD1: integer := 225000; --1st Function Set Delay
+	constant FD2: integer := 7300; --2nd Function Set Delay
 	constant EPW: integer := 25; --Enable Pulse Width
 	constant ECT: integer := 50; --Enable Cycle Time
 	constant IET: integer := 2250; --Instruction Execution Time
