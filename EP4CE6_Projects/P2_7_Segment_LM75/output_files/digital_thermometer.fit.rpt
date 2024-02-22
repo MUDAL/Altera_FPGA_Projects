@@ -1,5 +1,5 @@
 Fitter report for digital_thermometer
-Wed Feb 21 19:48:28 2024
+Thu Feb 22 19:07:59 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Feb 21 19:48:28 2024       ;
+; Fitter Status                      ; Successful - Thu Feb 22 19:07:59 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; digital_thermometer                         ;
 ; Top-level Entity Name              ; digital_thermometer                         ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.3%      ;
+;     Processor 2            ;   1.0%      ;
 +----------------------------+-------------+
 
 
@@ -992,12 +992,12 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.21 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.19 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 3 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin sda uses I/O standard 3.3-V LVTTL at 113 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/digital_thermometer.vhd Line: 24
@@ -1005,8 +1005,8 @@ Warning (169177): 3 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin rst_n uses I/O standard 3.3-V LVTTL at 25 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/digital_thermometer.vhd Line: 21
 Info (144001): Generated suppressed messages file L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/output_files/digital_thermometer.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5230 megabytes
-    Info: Processing ended: Wed Feb 21 19:48:28 2024
+    Info: Peak virtual memory: 5229 megabytes
+    Info: Processing ended: Thu Feb 22 19:08:00 2024
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 

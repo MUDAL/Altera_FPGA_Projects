@@ -64,19 +64,19 @@ clk => clks[27].CLK
 clk => dec_to_bcd:dec_to_bcd_inst.clk
 clk => seg_display:display_inst.clk
 echo => hcsr04:hcsr04_inst.echo
-trig << hcsr04:hcsr04_inst.trig
-dp << seg_display:display_inst.dp
-seg[0] << seg_display:display_inst.seg[0]
-seg[1] << seg_display:display_inst.seg[1]
-seg[2] << seg_display:display_inst.seg[2]
-seg[3] << seg_display:display_inst.seg[3]
-seg[4] << seg_display:display_inst.seg[4]
-seg[5] << seg_display:display_inst.seg[5]
-seg[6] << seg_display:display_inst.seg[6]
-sel[0] << seg_display:display_inst.sel[0]
-sel[1] << seg_display:display_inst.sel[1]
-sel[2] << seg_display:display_inst.sel[2]
-sel[3] << seg_display:display_inst.sel[3]
+trig <= hcsr04:hcsr04_inst.trig
+dp <= seg_display:display_inst.dp
+seg[0] <= seg_display:display_inst.seg[0]
+seg[1] <= seg_display:display_inst.seg[1]
+seg[2] <= seg_display:display_inst.seg[2]
+seg[3] <= seg_display:display_inst.seg[3]
+seg[4] <= seg_display:display_inst.seg[4]
+seg[5] <= seg_display:display_inst.seg[5]
+seg[6] <= seg_display:display_inst.seg[6]
+sel[0] <= seg_display:display_inst.sel[0]
+sel[1] <= seg_display:display_inst.sel[1]
+sel[2] <= seg_display:display_inst.sel[2]
+sel[3] <= seg_display:display_inst.sel[3]
 
 
 |distance_sensor|hcsr04:hcsr04_inst

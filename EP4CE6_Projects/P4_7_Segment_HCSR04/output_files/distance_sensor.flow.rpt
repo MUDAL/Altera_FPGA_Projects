@@ -1,5 +1,5 @@
 Flow report for distance_sensor
-Wed Feb 21 19:53:17 2024
+Thu Feb 22 19:03:48 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Feb 21 19:53:17 2024       ;
+; Flow Status                        ; Successful - Thu Feb 22 19:03:48 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; distance_sensor                             ;
 ; Top-level Entity Name              ; distance_sensor                             ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/21/2024 19:52:45 ;
+; Start date & time ; 02/22/2024 19:03:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; distance_sensor     ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 190090210168440.170854156506256        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 190090210168440.170862499405232        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_ENTRY_SYNTHESIS_TOOL     ; Custom                                 ; <None>        ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -101,12 +101,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4797 MB             ; 00:00:29                           ;
-; Fitter               ; 00:00:07     ; 1.0                     ; 5229 MB             ; 00:00:07                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4797 MB             ; 00:00:30                           ;
+; Fitter               ; 00:00:07     ; 1.0                     ; 5236 MB             ; 00:00:08                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4676 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4734 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
-; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:40                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4735 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4638 MB             ; 00:00:01                           ;
+; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

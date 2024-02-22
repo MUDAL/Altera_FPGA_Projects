@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "02/21/2024 19:53:17"
+-- DATE "02/22/2024 19:03:48"
 
 -- 
 -- Device: Altera EP4CE6E22C8 Package TQFP144
@@ -82,10 +82,10 @@ ENTITY 	distance_sensor IS
 	rst_n : IN std_logic;
 	clk : IN std_logic;
 	echo : IN std_logic;
-	trig : BUFFER std_logic;
-	dp : BUFFER std_logic;
-	seg : BUFFER std_logic_vector(6 DOWNTO 0);
-	sel : BUFFER std_logic_vector(3 DOWNTO 0)
+	trig : OUT std_logic;
+	dp : OUT std_logic;
+	seg : OUT std_logic_vector(6 DOWNTO 0);
+	sel : OUT std_logic_vector(3 DOWNTO 0)
 	);
 END distance_sensor;
 

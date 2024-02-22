@@ -9,17 +9,17 @@ clk => addr[0].CLK
 clk => addr[1].CLK
 clk => addr[2].CLK
 clk => addr[3].CLK
-rs << lcd_driver:lcd_1602.rs
-en << lcd_driver:lcd_1602.en
-rw << lcd_driver:lcd_1602.rw
-db[0] << lcd_driver:lcd_1602.db[0]
-db[1] << lcd_driver:lcd_1602.db[1]
-db[2] << lcd_driver:lcd_1602.db[2]
-db[3] << lcd_driver:lcd_1602.db[3]
-db[4] << lcd_driver:lcd_1602.db[4]
-db[5] << lcd_driver:lcd_1602.db[5]
-db[6] << lcd_driver:lcd_1602.db[6]
-db[7] << lcd_driver:lcd_1602.db[7]
+rs <= lcd_driver:lcd_1602.rs
+en <= lcd_driver:lcd_1602.en
+rw <= lcd_driver:lcd_1602.rw
+db[0] <= lcd_driver:lcd_1602.db[0]
+db[1] <= lcd_driver:lcd_1602.db[1]
+db[2] <= lcd_driver:lcd_1602.db[2]
+db[3] <= lcd_driver:lcd_1602.db[3]
+db[4] <= lcd_driver:lcd_1602.db[4]
+db[5] <= lcd_driver:lcd_1602.db[5]
+db[6] <= lcd_driver:lcd_1602.db[6]
+db[7] <= lcd_driver:lcd_1602.db[7]
 
 
 |lcd_main|prog_mem:program_memory

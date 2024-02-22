@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "02/21/2024 19:48:37"
+-- DATE "02/22/2024 19:08:07"
 
 -- 
 -- Device: Altera EP4CE6E22C8 Package TQFP144
@@ -81,11 +81,11 @@ ENTITY 	digital_thermometer IS
     PORT (
 	rst_n : IN std_logic;
 	clk : IN std_logic;
-	sda : BUFFER std_logic;
-	scl : BUFFER std_logic;
-	dp : BUFFER std_logic;
-	seg : BUFFER std_logic_vector(6 DOWNTO 0);
-	sel : BUFFER std_logic_vector(3 DOWNTO 0)
+	sda : INOUT std_logic;
+	scl : OUT std_logic;
+	dp : OUT std_logic;
+	seg : OUT std_logic_vector(6 DOWNTO 0);
+	sel : OUT std_logic_vector(3 DOWNTO 0)
 	);
 END digital_thermometer;
 
@@ -120,7 +120,6 @@ SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
 SIGNAL ww_rst_n : std_logic;
 SIGNAL ww_clk : std_logic;
-SIGNAL ww_sda : std_logic;
 SIGNAL ww_scl : std_logic;
 SIGNAL ww_dp : std_logic;
 SIGNAL ww_seg : std_logic_vector(6 DOWNTO 0);
@@ -486,7 +485,6 @@ BEGIN
 
 ww_rst_n <= rst_n;
 ww_clk <= clk;
-sda <= ww_sda;
 scl <= ww_scl;
 dp <= ww_dp;
 seg <= ww_seg;
@@ -2140,7 +2138,7 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_sda,
+	i => sda,
 	o => \sda~input_o\);
 
 -- Location: LCCOMB_X22_Y19_N14
@@ -6326,7 +6324,7 @@ ww_sel(2) <= \sel[2]~output_o\;
 
 ww_sel(3) <= \sel[3]~output_o\;
 
-ww_sda <= \sda~output_o\;
+sda <= \sda~output_o\;
 END structure;
 
 
