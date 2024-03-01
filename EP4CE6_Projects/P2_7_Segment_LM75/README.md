@@ -30,8 +30,10 @@
 ![PP_2](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/69888839-1d70-479d-b965-18ce3b878e52)
 
 ## Logic Analyzer Scans (Debugging the I2C protocol)  
-### 1. Start condition 32 Degree Celsius (32 in decimal -> 0x20 in hex)
+The data received from the LM75 sensor during this scan was 0x20 which translates to 32 in decimal. Therefore,  
+the temperature at that point was 32 degrees Celsius.
+### 1. Start condition
 ![i2c_start](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/9b604072-3510-46fc-86c2-94f13696dc7b)   
 
-### 2. Stop condition 32 Degree Celsius (32 in decimal -> 0x20 in hex) 
+### 2. Stop condition
 ![i2c_stop](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/7a26e543-74b4-4dd9-b4a5-3793e2226d4d)  
