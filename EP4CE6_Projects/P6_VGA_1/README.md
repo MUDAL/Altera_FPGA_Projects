@@ -1,14 +1,15 @@
 # Interfacing an FPGA with a VGA monitor 
 
 ## Description    
-- Displaying a binary (bitmap) image on a VGA monitor using an FPGA.  
+- Displaying a 398 x 438 binary (bitmap) image on a VGA monitor using an FPGA.  
 - The design and development processes involve VHDL and MATLAB.  
-- MATLAB is used for the following:  
-		1. Converting an RGB image to grayscale  
-		2. Converting the grayscale image to a binary image using thresholding  
-		3. Writing the binary image or bitmap into a file (Memory Initialization File)  
+- MATLAB is used for the following:   
+		1. Converting a grayscale image to a binary image using the thresholding algorithm  
+		2. Writing the binary image or bitmap into a file (Memory Initialization File)  
 - The Memory Initialization File (.mif) is required to load the bitmap into a frame buffer  
 or bitmap memory in the VHDL design at compilation time.
+- The 398 x 438 binary image is displayed on a 640 x 480 VGA monitor such that the spaces that are not
+covered by the image are displayed in blue.
 
 ## Tools  
 - EP4CE6E22C8N Cyclone IV FPGA development board
@@ -34,10 +35,15 @@ or bitmap memory in the VHDL design at compilation time.
 
 ## Pinouts  
 - Check the **Location** column in the image below for the pin mappings used in this project.    
+![PP_6](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/3b361a53-b01c-4ff2-b69f-af6d5dd7ba1a)  
+## Images    
+### 1. Grayscale Image (Original Image)    
+![test_image](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/7e216ce8-6392-4b67-b181-08206701c3ad)   
+### 2. Binary Image (MATLAB Generated)    
+![Olaoluwa_binary](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/843557bc-f56a-4f7f-a93c-e9a7831f2f5a)  
+### 3. Final Output (Binary Image) on VGA monitor  
+![20240301_115526](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/a6669afc-59f7-4056-92d1-b768f485ec71)  
 
-
-## Demo  
- 
 
 
 
