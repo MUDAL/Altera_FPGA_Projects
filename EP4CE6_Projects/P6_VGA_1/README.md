@@ -35,14 +35,18 @@ covered by the image are displayed in blue.
 
 ## Pinouts  
 - Check the **Location** column in the image below for the pin mappings used in this project.    
-![PP_6](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/3b361a53-b01c-4ff2-b69f-af6d5dd7ba1a)  
+![PP_6](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/3b361a53-b01c-4ff2-b69f-af6d5dd7ba1a)
+
+## Video Demo  
+[FPGA and VGA](https://drive.google.com/file/d/1PZm1XRNfcaJq4v5hTRurt_n4ybjiqp33/view?usp=sharing)   
 ## Images    
 ### 1. Grayscale Image (Original Image)    
 ![test_image](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/7e216ce8-6392-4b67-b181-08206701c3ad)   
 ### 2. Binary Image (MATLAB Generated)    
 ![Olaoluwa_binary](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/843557bc-f56a-4f7f-a93c-e9a7831f2f5a)  
 ### 3. Final Output (Binary Image) on VGA monitor  
-![20240301_115526](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/a6669afc-59f7-4056-92d1-b768f485ec71)  
+ ![20240303_094503](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/64d47288-3d06-4d2e-a575-811cfb104fb1)  
+
 
 
 
