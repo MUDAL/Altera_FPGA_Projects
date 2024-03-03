@@ -46,6 +46,10 @@ covered by the image are displayed in blue.
 ![Olaoluwa_binary](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/843557bc-f56a-4f7f-a93c-e9a7831f2f5a)  
 ### 3. Final Output (Binary Image) on VGA monitor  
  ![20240303_094503](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/64d47288-3d06-4d2e-a575-811cfb104fb1)  
+### 4. RTL Viewer  
+![RTL_viewer](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/41637fb9-0419-4f69-be40-ffce65dceed5)  
+### 5. Compilation Report (Resource Utilization)  
+![Resource_Utilization](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/7e78bd0f-432f-4165-bf0a-5f40c52c67e2)  
 
 
 
