@@ -64,19 +64,19 @@ clk => clk_count[27].CLK
 clk => dec_to_bcd:i2c_data_to_bcd.clk
 clk => seg_display:display.clk
 sda <> i2c_reader:lm75_i2c.sda
-scl <= i2c_reader:lm75_i2c.scl
-dp <= seg_display:display.dp
-seg[0] <= seg_display:display.seg[0]
-seg[1] <= seg_display:display.seg[1]
-seg[2] <= seg_display:display.seg[2]
-seg[3] <= seg_display:display.seg[3]
-seg[4] <= seg_display:display.seg[4]
-seg[5] <= seg_display:display.seg[5]
-seg[6] <= seg_display:display.seg[6]
-sel[0] <= seg_display:display.sel[0]
-sel[1] <= seg_display:display.sel[1]
-sel[2] <= seg_display:display.sel[2]
-sel[3] <= seg_display:display.sel[3]
+scl << i2c_reader:lm75_i2c.scl
+dp << seg_display:display.dp
+seg[0] << seg_display:display.seg[0]
+seg[1] << seg_display:display.seg[1]
+seg[2] << seg_display:display.seg[2]
+seg[3] << seg_display:display.seg[3]
+seg[4] << seg_display:display.seg[4]
+seg[5] << seg_display:display.seg[5]
+seg[6] << seg_display:display.seg[6]
+sel[0] << seg_display:display.sel[0]
+sel[1] << seg_display:display.sel[1]
+sel[2] << seg_display:display.sel[2]
+sel[3] << seg_display:display.sel[3]
 
 
 |digital_thermometer|i2c_reader:lm75_i2c
