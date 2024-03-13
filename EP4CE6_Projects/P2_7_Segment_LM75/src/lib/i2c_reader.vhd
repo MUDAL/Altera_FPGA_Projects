@@ -40,9 +40,9 @@ architecture i2c_reader_rtl of i2c_reader is
    signal sda_reg: std_logic;
    signal scl_next: std_logic;
    signal scl_reg: std_logic;
-	signal start: std_logic; --start bit
-	signal scl_l: std_logic; --midpoint of low SCL pulse
-	signal scl_h: std_logic; --midpoint of high SCL pulse
+   signal start: std_logic; --start bit
+   signal scl_l: std_logic; --midpoint of low SCL pulse
+   signal scl_h: std_logic; --midpoint of high SCL pulse
    signal index: integer range 0 to 26;
    signal index_reg: integer range 0 to 26;
    signal i2c_buff: std_logic_vector(0 to 17);
@@ -64,12 +64,12 @@ begin
       end if;
    end process;
    
-	start <= '1' when clks = to_unsigned(START_CYCLE,clks'length)    else '0';
-	scl_l <= '1' when clks = to_unsigned(MID_LOW_PULSE,clks'length)  else '0';
-	scl_h <= '1' when clks = to_unsigned(MID_HIGH_PULSE,clks'length) else '0';
-	
+   start <= '1' when clks = to_unsigned(START_CYCLE,clks'length)    else '0';
+   scl_l <= '1' when clks = to_unsigned(MID_LOW_PULSE,clks'length)  else '0';
+   scl_h <= '1' when clks = to_unsigned(MID_HIGH_PULSE,clks'length) else '0';
+   
    next_state_logic: process(state,en,start,index_reg,
-									  scl_reg,scl_l,scl_h)
+                             scl_reg,scl_l,scl_h)
    begin
       next_state <= state;
       case state is
@@ -136,7 +136,7 @@ begin
    end process;   
    
    mealy_outputs: process(state,en,start,sda,sda_reg,index_reg,
-								  i2c_buff_reg,scl_l,scl_h)
+                          i2c_buff_reg,scl_l,scl_h)
    begin
       sda_next <= sda_reg;
       index <= index_reg;
@@ -170,7 +170,7 @@ begin
             --Read low byte (index 18 to 25)
             if scl_h = '1' then
                i2c_buff(index_reg - 8) <= sda;
-					index <= index_reg + 1;
+               index <= index_reg + 1;
             end if;
          when ST_SEND_NACK =>
             if scl_l = '1' then
