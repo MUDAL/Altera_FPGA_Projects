@@ -31,5 +31,6 @@
 - Check the **Location** column in the image below for the pin mappings used in this project.    
 ![PP_4](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/15e88835-f6bf-49bd-af3e-d34e7ea3d236)  
 
-
+## Helpful resource(s)  
+[HCSR04 datasheet](https://drive.google.com/file/d/16QAANfYQO59LjlhRBzEFDkZxpB2MxlI5/view?usp=sharing)  
 
