@@ -53,7 +53,7 @@ covered by the image are displayed in blue.
 
 ## Helpful resource(s)  
 - FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu
-- tinyvga.com  
+- [tinyvga.com](http://tinyvga.com/)    
 
 
 
