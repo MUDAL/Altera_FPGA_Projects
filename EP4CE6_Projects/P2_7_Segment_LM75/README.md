@@ -37,3 +37,7 @@ the temperature at that point was 32 degrees Celsius.
 
 ### 2. Stop condition
 ![i2c_stop](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/7a26e543-74b4-4dd9-b4a5-3793e2226d4d)  
+
+## Helpful resource(s)  
+- [NXP I2C specification](https://drive.google.com/file/d/1EDwk_8Na_DUPKeOmK8ht-_JMiNgwNDw2/view?usp=drive_link)
+- [LM75 datasheet](https://drive.google.com/file/d/1u7oas4GsBgyu3CEFFpHg-WD4h4YXIpEZ/view?usp=drive_link)  
