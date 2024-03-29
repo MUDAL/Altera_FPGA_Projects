@@ -51,7 +51,9 @@ covered by the image are displayed in blue.
 ### 5. Compilation Report (Resource Utilization)  
 ![Resource_Utilization](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/7e78bd0f-432f-4165-bf0a-5f40c52c67e2)  
 
-
+## Helpful resource(s)  
+- FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu
+- tinyvga.com  
 
 
 
