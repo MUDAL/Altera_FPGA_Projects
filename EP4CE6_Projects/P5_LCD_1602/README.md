@@ -30,7 +30,8 @@
 ## Demo  
 ![fpga_lcd](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/add71547-826c-44c8-8487-06129b02a6c7)  
 
-
+## Helpful resource(s)  
+[HD44780 datasheet](https://drive.google.com/file/d/1kYVwqbIjYVIVPkjs03y40AUIAiwOctcV/view?usp=sharing)  
 
 
 
