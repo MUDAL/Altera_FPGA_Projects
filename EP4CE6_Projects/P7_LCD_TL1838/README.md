@@ -43,7 +43,7 @@ display when pressed.
 ![20240410_083308](https://github.com/MUDAL/FPGA_TL1838/assets/46250887/a429ddeb-845c-4126-b02c-ebc059c2e42b)  
 
 ## Demo  
-![Video Demo](https://drive.google.com/file/d/16wB_Ut3Pbu6KI1LPfc0oO00kMDnGC6wa/view?usp=sharing)    
+[Video Demo](https://drive.google.com/file/d/16wB_Ut3Pbu6KI1LPfc0oO00kMDnGC6wa/view?usp=sharing)    
 
 ## Helpful resources  
 - [NEC Protocol](https://techdocs.altium.com/display/FPGA/NEC%2bInfrared%2bTransmission%2bProtocol)
