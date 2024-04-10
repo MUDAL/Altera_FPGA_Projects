@@ -1,0 +1,105 @@
+L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_lcd_interface.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_lcd_interface.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity tl1838_lcd_interface
+-- Compiling architecture tl1838_lcd_interface_rtl of tl1838_lcd_interface
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/lcd_driver.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/lcd_driver.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity lcd_driver
+-- Compiling architecture lcd_driver_rtl of lcd_driver
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/pack_tb_header.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/pack_tb_header.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package pack_tb
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/ir_lcd_main.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/ir_lcd_main.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ir_lcd_main
+-- Compiling architecture ir_lcd_main_rtl of ir_lcd_main
+-- Loading entity tl1838_decoder
+-- Loading entity tl1838_lcd_interface
+-- Loading entity lcd_driver
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/pack_tb_body.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/pack_tb_body.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package pack_tb
+-- Compiling package body pack_tb
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/ir_lcd_main_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/ir_lcd_main_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Loading package pack_tb
+-- Compiling entity ir_lcd_main_tb
+-- Compiling architecture ir_lcd_main_behav of ir_lcd_main_tb
+-- Loading entity ir_lcd_main
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/tl1838_decoder_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/tl1838_decoder_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Loading package pack_tb
+-- Compiling entity tl1838_decoder_tb
+-- Compiling architecture tl1838_decoder_behav of tl1838_decoder_tb
+-- Loading entity tl1838_decoder
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/tl1838_lcd_interface_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/tl1838_lcd_interface_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Loading package pack_tb
+-- Compiling entity tl1838_lcd_interface_tb
+-- Compiling architecture tl1838_lcd_interface_behav of tl1838_lcd_interface_tb
+-- Loading entity tl1838_lcd_interface
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/lcd_driver_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/lcd_driver_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Loading package pack_tb
+-- Compiling entity lcd_driver_tb
+-- Compiling architecture lcd_driver_behav of lcd_driver_tb
+-- Loading entity lcd_driver
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_decoder.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_decoder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity tl1838_decoder
+-- Compiling architecture tl1838_decoder_rtl of tl1838_decoder
+
+} {} {}}
