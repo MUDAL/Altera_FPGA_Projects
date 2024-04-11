@@ -39,7 +39,7 @@ architecture digital_thermometer_rtl of digital_thermometer is
 begin
    
    --Controller: To coordinate temperature sensing and data output ....
-   -- by periodically toggling the 'en' signal of the I2C core.
+   -- by periodically toggling the 'en' signal of the I2C module.
    control_path: process(rst_n,clk)
    begin
       if rst_n = '0' then
@@ -60,8 +60,8 @@ begin
             scl => scl, data_out => i2c_data, done => i2c_done);
    
    i2c_data_to_bcd: entity work.dec_to_bcd(dec_to_bcd_rtl)
-   port map(rst_n => rst_n, clk => clk, en => i2c_done, dec => i2c_data(8 downto 1),
-            bcd => bcd, done => conversion_done);
+   port map(rst_n => rst_n, clk => clk, en => i2c_done, 
+            dec => i2c_data(8 downto 1), bcd => bcd, done => conversion_done);
    
    display: entity work.seg_display(seg_display_rtl)
    port map(rst_n => rst_n, clk => clk, bcd => bcd, fp => i2c_data(0),

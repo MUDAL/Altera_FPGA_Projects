@@ -133,16 +133,7 @@ clk => clks[7].CLK
 clk => clks[8].CLK
 clk => state~1.DATAIN
 en => next_state_logic.IN1
-en => next_state.OUTPUTSELECT
-en => next_state.OUTPUTSELECT
-en => next_state.OUTPUTSELECT
-en => next_state.OUTPUTSELECT
-en => next_state.OUTPUTSELECT
-en => next_state.OUTPUTSELECT
-en => next_state.OUTPUTSELECT
-en => next_state.OUTPUTSELECT
-en => next_state.OUTPUTSELECT
-en => next_state.OUTPUTSELECT
+en => next_state_logic.IN1
 sda <> sda
 scl <= scl.DB_MAX_OUTPUT_PORT_TYPE
 data_out[0] <= i2c_buff_reg[10].DB_MAX_OUTPUT_PORT_TYPE
@@ -154,7 +145,7 @@ data_out[5] <= i2c_buff_reg[4].DB_MAX_OUTPUT_PORT_TYPE
 data_out[6] <= i2c_buff_reg[3].DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= i2c_buff_reg[2].DB_MAX_OUTPUT_PORT_TYPE
 data_out[8] <= i2c_buff_reg[1].DB_MAX_OUTPUT_PORT_TYPE
-done <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+done <= done.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |digital_thermometer|dec_to_bcd:i2c_data_to_bcd

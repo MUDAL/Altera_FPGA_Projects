@@ -28,21 +28,22 @@ architecture i2c_reader_rtl of i2c_reader is
    constant ADDR: std_logic_vector(0 to 7) := "10010001";--I2C ADDR, R/W = 1
    constant MID_HIGH_PULSE: integer := 124; --Midpoint of high SCL pulse
    constant START_CYCLE: integer := 149; --For the start condition
-   constant HALF_SCL_CYCLE: integer := 249; --Half of SCL cycle
+   constant HALF_CYCLE: integer := 249; --Half of SCL cycle
    constant MID_LOW_PULSE: integer := 374; --Midpoint of low SCL pulse
-   constant FULL_SCL_CYCLE: integer := 499; --Full SCL cycle
+   constant FULL_CYCLE: integer := 499; --Full SCL cycle
    type i2c_state is (ST_IDLE, ST_START, ST_SEND_ADDR, ST_GET_ACK_HIGH_BYTE,
                       ST_SEND_ACK, ST_GET_LOW_BYTE, ST_SEND_NACK, ST_DONE, 
-                      ST_STOP, ST_RESTART);
+                      ST_STOP);
    signal state: i2c_state;
    signal next_state: i2c_state;
    signal sda_next: std_logic;
    signal sda_reg: std_logic;
    signal scl_next: std_logic;
    signal scl_reg: std_logic;
-   signal start: std_logic; --start bit
-   signal scl_l: std_logic; --midpoint of low SCL pulse
-   signal scl_h: std_logic; --midpoint of high SCL pulse
+   signal start: std_logic; --Start condition
+   signal scl_l: std_logic; --Midpoint of low SCL pulse
+   signal scl_h: std_logic; --Midpoint of high SCL pulse
+   signal low_p: std_logic; --Low SCL pulse
    signal index: integer range 0 to 26;
    signal index_reg: integer range 0 to 26;
    signal i2c_buff: std_logic_vector(0 to 17);
@@ -56,7 +57,7 @@ begin
       if rst_n = '0' then
          clks <= (others => '0');   
       elsif rising_edge(clk) then      
-         if clks = to_unsigned(FULL_SCL_CYCLE,clks'length) then
+         if clks = to_unsigned(FULL_CYCLE,clks'length) then
             clks <= (others => '0');
          else
             clks <= clks + 1;
@@ -68,8 +69,7 @@ begin
    scl_l <= '1' when clks = to_unsigned(MID_LOW_PULSE,clks'length)  else '0';
    scl_h <= '1' when clks = to_unsigned(MID_HIGH_PULSE,clks'length) else '0';
    
-   next_state_logic: process(state,en,start,index_reg,
-                             scl_reg,scl_l,scl_h)
+   next_state_logic: process(state,en,start,index_reg,scl_reg,scl_l,scl_h)
    begin
       next_state <= state;
       case state is
@@ -98,7 +98,7 @@ begin
                next_state <= ST_SEND_NACK;
             end if;
          when ST_SEND_NACK =>
-            if index_reg = 0 then
+            if scl_l = '1' then
                next_state <= ST_DONE;
             end if;
          when ST_DONE =>
@@ -106,13 +106,9 @@ begin
                next_state <= ST_STOP;
             end if;        
          when ST_STOP =>
-            if scl_h = '1' then
-               next_state <= ST_RESTART;
-            end if;        
-         when ST_RESTART =>
-            if en = '0' then
+            if scl_h = '1' and en = '0' then
                next_state <= ST_IDLE;
-            end if;        
+            end if;               
       end case;
    end process;
 
@@ -125,15 +121,7 @@ begin
       end if;
    end process;   
    
-   moore_output: process(state)
-   begin 
-      case state is                          
-         when ST_DONE | ST_STOP | ST_RESTART =>
-            done <= '1';
-         when others =>
-            done <= '0';         
-      end case;
-   end process;   
+   moore_output: done <= '1' when state = ST_DONE or state = ST_STOP else '0'; 
    
    mealy_outputs: process(state,en,start,sda,sda_reg,index_reg,
                           i2c_buff_reg,scl_l,scl_h)
@@ -146,7 +134,8 @@ begin
             sda_next <= '1';
             if en = '1' and start = '1' then
                sda_next <= '0';
-            end if;              
+            end if;
+         when ST_START =>
          when ST_SEND_ADDR =>
             if scl_l = '1' then
                sda_next <= ADDR(index_reg);
@@ -185,23 +174,19 @@ begin
             if scl_h = '1' then
                sda_next <= '1';
             end if;
-         when others =>
       end case;   
    end process;
 
    --Generates I2C clock (SCL)
-   scl_clock_gen_mealy_output: process(state,clks,scl_reg)
+   low_p <= '1' when clks <= to_unsigned(HALF_CYCLE,clks'length) else '0';
+   
+   scl_clock: process(state,low_p)
    begin
-      scl_next <= scl_reg;
       case state is
-         when ST_IDLE | ST_RESTART =>
+         when ST_IDLE | ST_STOP =>
             scl_next <= '1';  
-         when ST_STOP =>
-            if clks <= to_unsigned(HALF_SCL_CYCLE,clks'length) then
-               scl_next <= '1';
-            end if;
          when others =>
-            if clks <= to_unsigned(HALF_SCL_CYCLE,clks'length) then
+            if low_p = '1' then
                scl_next <= '1';
             else
                scl_next <= '0';
@@ -210,11 +195,10 @@ begin
    end process;   
    
    --SDA/SCL = 'Z' (releasing SDA/SCL line) implies a logic high.
-   tristate_buffers: 
-   sda <= 'Z' when sda_reg = '1' else '0';
-   scl <= 'Z' when scl_reg = '1' else '0';
+   tristate_buffers: sda <= 'Z' when sda_reg = '1' else '0';
+                     scl <= 'Z' when scl_reg = '1' else '0';
    
-   --bit 9 of 'data_out' is redundant. [Read bits from left to right]
+   --Bit 9 of 'data_out' is redundant (ACK from LM75)
    data_out <= i2c_buff_reg(1 to 8) & i2c_buff_reg(10);
    
    registered_outputs: process(rst_n,clk)
