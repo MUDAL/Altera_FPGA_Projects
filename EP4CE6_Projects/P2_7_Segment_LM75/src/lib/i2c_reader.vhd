@@ -26,10 +26,10 @@ end i2c_reader;
 
 architecture i2c_reader_rtl of i2c_reader is
    constant ADDR: std_logic_vector(0 to 7) := "10010001";--I2C ADDR, R/W = 1
-   constant MID_HIGH_PULSE: integer := 124; --Midpoint of high SCL pulse
+   constant MID_HP: integer := 124; --Midpoint of high SCL pulse
    constant START_CYCLE: integer := 149; --For the start condition
    constant HALF_CYCLE: integer := 249; --Half of SCL cycle
-   constant MID_pulseULSE: integer := 374; --Midpoint of low SCL pulse
+   constant MID_LP: integer := 374; --Midpoint of low SCL pulse
    constant FULL_CYCLE: integer := 499; --Full SCL cycle
    type i2c_state is (ST_IDLE, ST_START, ST_SEND_ADDR, ST_GET_ACK_HIGH_BYTE,
                       ST_SEND_ACK, ST_GET_LOW_BYTE, ST_SEND_NACK, ST_DONE, 
@@ -41,8 +41,8 @@ architecture i2c_reader_rtl of i2c_reader is
    signal scl_next: std_logic;
    signal scl_reg: std_logic;
    signal start: std_logic; --Start condition
-   signal scl_l: std_logic; --Midpoint of low SCL pulse
-   signal scl_h: std_logic; --Midpoint of high SCL pulse
+   signal scl_low: std_logic; --Set when low SCL pulse is at its midpoint
+   signal scl_high: std_logic; --Set when high SCL pulse is at its midpoint
    signal pulse: std_logic; --SCL pulse
    signal index: integer range 0 to 25;
    signal index_reg: integer range 0 to 25;
@@ -50,7 +50,6 @@ architecture i2c_reader_rtl of i2c_reader is
    signal i2c_buff_reg: std_logic_vector(0 to 16);
    signal clks: unsigned(8 downto 0); --Number of system clocks in SCL  
 begin
-   
    --Counts number of system clocks [50MHz] in an I2C clock [100kHz] period 
    clock_counter: process(rst_n,clk)
    begin
@@ -65,16 +64,17 @@ begin
       end if;
    end process;
    
-   start <= '1' when clks = to_unsigned(START_CYCLE,clks'length)    else '0';
-   scl_l <= '1' when clks = to_unsigned(MID_pulseULSE,clks'length)  else '0';
-   scl_h <= '1' when clks = to_unsigned(MID_HIGH_PULSE,clks'length) else '0';
+   start <= '1' when clks = to_unsigned(START_CYCLE,clks'length) else '0';
+   scl_low <= '1' when clks = to_unsigned(MID_LP,clks'length)  else '0';
+   scl_high <= '1' when clks = to_unsigned(MID_HP,clks'length) else '0';
    
-   next_state_logic: process(state,en,start,index_reg,scl_reg,scl_l,scl_h)
+   next_state_logic: process(state,en,start,index_reg,
+                             scl_reg,scl_low,scl_high)
    begin
       next_state <= state;
       case state is
          when ST_IDLE =>
-            if en = '1' and start = '1' then
+            if start = '1' and en = '1' then
                next_state <= ST_START;
             end if;        
          when ST_START =>
@@ -90,7 +90,7 @@ begin
                next_state <= ST_SEND_ACK;
             end if;
          when ST_SEND_ACK =>
-            if scl_h = '1' then
+            if scl_high = '1' then
                next_state <= ST_GET_LOW_BYTE;
             end if;
          when ST_GET_LOW_BYTE =>
@@ -98,15 +98,15 @@ begin
                next_state <= ST_SEND_NACK;
             end if;
          when ST_SEND_NACK =>
-            if scl_l = '1' then
+            if scl_low = '1' then
                next_state <= ST_DONE;
             end if;
          when ST_DONE =>
-            if scl_l = '1' then
+            if scl_low = '1' then
                next_state <= ST_STOP;
             end if;        
          when ST_STOP =>
-            if scl_h = '1' and en = '0' then
+            if scl_high = '1' and en = '0' then
                next_state <= ST_IDLE;
             end if;               
       end case;
@@ -124,7 +124,7 @@ begin
    moore_output: done <= '1' when state = ST_DONE or state = ST_STOP else '0'; 
    
    mealy_outputs: process(state,en,start,sda,sda_reg,index_reg,
-                          i2c_buff_reg,scl_l,scl_h)
+                          i2c_buff_reg,scl_low,scl_high)
    begin
       sda_next <= sda_reg;
       index <= index_reg;
@@ -132,42 +132,42 @@ begin
       case state is
          when ST_IDLE =>
             sda_next <= '1';
-            if en = '1' and start = '1' then
+            if start = '1' and en = '1' then
                sda_next <= '0';
             end if;
          when ST_START =>
          when ST_SEND_ADDR =>
-            if scl_l = '1' then
+            if scl_low = '1' then
                sda_next <= ADDR(index_reg);
-            elsif scl_h = '1' then
+            elsif scl_high = '1' then
                index <= index_reg + 1;
             end if;
          when ST_GET_ACK_HIGH_BYTE =>
             --Receive slave ACK (index 8) and high byte (index 9 to 16)
-            if scl_h = '1' then
+            if scl_high = '1' then
                i2c_buff(index_reg - 8) <= sda;
                index <= index_reg + 1;
             end if;              
          when ST_SEND_ACK => --Master ACK
-            if scl_l = '1' then
+            if scl_low = '1' then
                sda_next <= '0';
             end if;                 
          when ST_GET_LOW_BYTE => --Read low byte (index 17 to 24)
-            if scl_h = '1' then
+            if scl_high = '1' then
                i2c_buff(index_reg - 8) <= sda;
                index <= index_reg + 1;
             end if;
          when ST_SEND_NACK =>
-            if scl_l = '1' then
+            if scl_low = '1' then
                sda_next <= '1';
                index <= 0;
             end if;                       
          when ST_DONE =>
-            if scl_l = '1' then
+            if scl_low = '1' then
                sda_next <= '0';
             end if;
          when ST_STOP =>
-            if scl_h = '1' then
+            if scl_high = '1' then
                sda_next <= '1';
             end if;
       end case;   
