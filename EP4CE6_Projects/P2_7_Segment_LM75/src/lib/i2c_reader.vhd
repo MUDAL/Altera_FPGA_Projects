@@ -29,7 +29,7 @@ architecture i2c_reader_rtl of i2c_reader is
    constant MID_HIGH_PULSE: integer := 124; --Midpoint of high SCL pulse
    constant START_CYCLE: integer := 149; --For the start condition
    constant HALF_CYCLE: integer := 249; --Half of SCL cycle
-   constant MID_LOW_PULSE: integer := 374; --Midpoint of low SCL pulse
+   constant MID_pulseULSE: integer := 374; --Midpoint of low SCL pulse
    constant FULL_CYCLE: integer := 499; --Full SCL cycle
    type i2c_state is (ST_IDLE, ST_START, ST_SEND_ADDR, ST_GET_ACK_HIGH_BYTE,
                       ST_SEND_ACK, ST_GET_LOW_BYTE, ST_SEND_NACK, ST_DONE, 
@@ -43,11 +43,11 @@ architecture i2c_reader_rtl of i2c_reader is
    signal start: std_logic; --Start condition
    signal scl_l: std_logic; --Midpoint of low SCL pulse
    signal scl_h: std_logic; --Midpoint of high SCL pulse
-   signal low_p: std_logic; --Low SCL pulse
-   signal index: integer range 0 to 26;
-   signal index_reg: integer range 0 to 26;
-   signal i2c_buff: std_logic_vector(0 to 17);
-   signal i2c_buff_reg: std_logic_vector(0 to 17);
+   signal pulse: std_logic; --SCL pulse
+   signal index: integer range 0 to 25;
+   signal index_reg: integer range 0 to 25;
+   signal i2c_buff: std_logic_vector(0 to 16);
+   signal i2c_buff_reg: std_logic_vector(0 to 16);
    signal clks: unsigned(8 downto 0); --Number of system clocks in SCL  
 begin
    
@@ -66,7 +66,7 @@ begin
    end process;
    
    start <= '1' when clks = to_unsigned(START_CYCLE,clks'length)    else '0';
-   scl_l <= '1' when clks = to_unsigned(MID_LOW_PULSE,clks'length)  else '0';
+   scl_l <= '1' when clks = to_unsigned(MID_pulseULSE,clks'length)  else '0';
    scl_h <= '1' when clks = to_unsigned(MID_HIGH_PULSE,clks'length) else '0';
    
    next_state_logic: process(state,en,start,index_reg,scl_reg,scl_l,scl_h)
@@ -90,11 +90,11 @@ begin
                next_state <= ST_SEND_ACK;
             end if;
          when ST_SEND_ACK =>
-            if index_reg = 18 then
+            if scl_h = '1' then
                next_state <= ST_GET_LOW_BYTE;
             end if;
          when ST_GET_LOW_BYTE =>
-            if index_reg = 26 then
+            if index_reg = 25 then
                next_state <= ST_SEND_NACK;
             end if;
          when ST_SEND_NACK =>
@@ -148,15 +148,11 @@ begin
                i2c_buff(index_reg - 8) <= sda;
                index <= index_reg + 1;
             end if;              
-         when ST_SEND_ACK =>
-            --Send master ACK
+         when ST_SEND_ACK => --Master ACK
             if scl_l = '1' then
                sda_next <= '0';
-            elsif scl_h = '1' then
-               index <= index_reg + 1;
             end if;                 
-         when ST_GET_LOW_BYTE =>
-            --Read low byte (index 18 to 25)
+         when ST_GET_LOW_BYTE => --Read low byte (index 17 to 24)
             if scl_h = '1' then
                i2c_buff(index_reg - 8) <= sda;
                index <= index_reg + 1;
@@ -178,28 +174,15 @@ begin
    end process;
 
    --Generates I2C clock (SCL)
-   low_p <= '1' when clks <= to_unsigned(HALF_CYCLE,clks'length) else '0';
-   
-   scl_clock: process(state,low_p)
-   begin
-      case state is
-         when ST_IDLE | ST_STOP =>
-            scl_next <= '1';  
-         when others =>
-            if low_p = '1' then
-               scl_next <= '1';
-            else
-               scl_next <= '0';
-            end if;              
-      end case;
-   end process;   
+   pulse <= '1' when clks <= to_unsigned(HALF_CYCLE,clks'length) else '0';
+   scl_next <= '1' when state = ST_IDLE or state = ST_STOP else pulse;  
    
    --SDA/SCL = 'Z' (releasing SDA/SCL line) implies a logic high.
    tristate_buffers: sda <= 'Z' when sda_reg = '1' else '0';
                      scl <= 'Z' when scl_reg = '1' else '0';
    
-   --Bit 9 of 'data_out' is redundant (ACK from LM75)
-   data_out <= i2c_buff_reg(1 to 8) & i2c_buff_reg(10);
+   --Bit 0 of 'i2c_buff_reg' is redundant (ACK from LM75)
+   data_out <= i2c_buff_reg(1 to 9);
    
    registered_outputs: process(rst_n,clk)
    begin

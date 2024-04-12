@@ -80,7 +80,7 @@ sel[3] << seg_display:display.sel[3]
 
 
 |digital_thermometer|i2c_reader:lm75_i2c
-rst_n => i2c_buff_reg[10].ACLR
+rst_n => i2c_buff_reg[9].ACLR
 rst_n => i2c_buff_reg[8].ACLR
 rst_n => i2c_buff_reg[7].ACLR
 rst_n => i2c_buff_reg[6].ACLR
@@ -106,7 +106,7 @@ rst_n => clks[6].ACLR
 rst_n => clks[7].ACLR
 rst_n => clks[8].ACLR
 rst_n => state~3.DATAIN
-clk => i2c_buff_reg[10].CLK
+clk => i2c_buff_reg[9].CLK
 clk => i2c_buff_reg[8].CLK
 clk => i2c_buff_reg[7].CLK
 clk => i2c_buff_reg[6].CLK
@@ -136,7 +136,7 @@ en => next_state_logic.IN1
 en => next_state_logic.IN1
 sda <> sda
 scl <= scl.DB_MAX_OUTPUT_PORT_TYPE
-data_out[0] <= i2c_buff_reg[10].DB_MAX_OUTPUT_PORT_TYPE
+data_out[0] <= i2c_buff_reg[9].DB_MAX_OUTPUT_PORT_TYPE
 data_out[1] <= i2c_buff_reg[8].DB_MAX_OUTPUT_PORT_TYPE
 data_out[2] <= i2c_buff_reg[7].DB_MAX_OUTPUT_PORT_TYPE
 data_out[3] <= i2c_buff_reg[6].DB_MAX_OUTPUT_PORT_TYPE
