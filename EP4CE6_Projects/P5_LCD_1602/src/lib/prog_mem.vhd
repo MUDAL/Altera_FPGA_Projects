@@ -26,7 +26,7 @@ architecture prog_mem_rtl of prog_mem is
                          8 =>  RS_DATA & x"52",  --R
                          9 =>  RS_DATA & x"4C",  --L
                          10 => RS_DATA & x"44",  --D
-                         11 => RS_CODE & x"C6",  --[NEXT ROW]
+                         11 => RS_CODE & x"C6",  --[NEXT ROW, 7TH COLUMN]
                          12 => RS_DATA & x"52",  --R
                          13 => RS_DATA & x"4A",  --J
                          14 => RS_DATA & x"58",  --X
