@@ -1,0 +1,1909 @@
+# Compile of spi_receiver.vhd was successful.
+vsim work.spi_receiver_tb
+# vsim work.spi_receiver_tb 
+# Start time: 10:33:01 on Apr 17,2024
+# Loading std.standard
+# ** Error: (vsim-13) Recompile work.spi_receiver_tb(spi_receiver_behav) because work.spi_receiver has changed.
+# Error loading design
+# End time: 10:33:02 on Apr 17,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+vlog -work work -refresh -force_refresh
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:33:07 on Apr 17,2024
+# vlog -reportprogress 300 -work work -refresh -force_refresh 
+# -- Skipping entity lcd_driver
+# -- Skipping entity lcd_driver_tb
+# -- Skipping package pack_tb
+# -- Skipping entity spi_lcd_main
+# -- Skipping entity spi_lcd_main_tb
+# -- Skipping entity spi_receiver
+# -- Skipping entity spi_receiver_tb
+# End time: 10:33:08 on Apr 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -work work -refresh -force_refresh
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:33:08 on Apr 17,2024
+# vcom -reportprogress 300 -work work -refresh -force_refresh 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity lcd_driver
+# -- Compiling architecture lcd_driver_rtl of lcd_driver
+# -- Loading package std_logic_textio
+# -- Loading package pack_tb
+# -- Compiling entity lcd_driver_tb
+# -- Compiling architecture lcd_driver_behav of lcd_driver_tb
+# -- Loading entity lcd_driver
+# -- Compiling package pack_tb
+# -- Loading package pack_tb
+# -- Compiling package body pack_tb
+# -- Compiling entity spi_lcd_main
+# -- Compiling architecture spi_lcd_main_rtl of spi_lcd_main
+# -- Loading entity spi_receiver
+# -- Loading package pack_tb
+# -- Compiling entity spi_lcd_main_tb
+# -- Compiling architecture spi_lcd_main_behav of spi_lcd_main_tb
+# -- Loading entity spi_lcd_main
+# -- Compiling entity spi_receiver
+# -- Compiling architecture spi_receiver_rtl of spi_receiver
+# -- Compiling entity spi_receiver_tb
+# -- Compiling architecture spi_receiver_behav of spi_receiver_tb
+# -- Loading entity spi_receiver
+# End time: 10:33:08 on Apr 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.spi_receiver_tb
+# vsim work.spi_receiver_tb 
+# Start time: 10:33:11 on Apr 17,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.pack_tb(body)
+# Loading work.spi_receiver_tb(spi_receiver_behav)
+# Loading work.spi_receiver(spi_receiver_rtl)
+run -all
+# ** Note: Expected: 3EB, Got: 3EB, Status: PASS
+#    Time: 3350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2CD, Got: 2CD, Status: PASS
+#    Time: 6550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3DC, Got: 3DC, Status: PASS
+#    Time: 9750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 31C, Got: 31C, Status: PASS
+#    Time: 12950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 17F, Got: 17F, Status: PASS
+#    Time: 16150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2DB, Got: 2DB, Status: PASS
+#    Time: 19350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 332, Got: 332, Status: PASS
+#    Time: 22550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 282, Got: 282, Status: PASS
+#    Time: 25750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 21D, Got: 21D, Status: PASS
+#    Time: 28950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0E0, Got: 0E0, Status: PASS
+#    Time: 32150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2AC, Got: 2AC, Status: PASS
+#    Time: 35350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3D1, Got: 3D1, Status: PASS
+#    Time: 38550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 28C, Got: 28C, Status: PASS
+#    Time: 41750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 201, Got: 201, Status: PASS
+#    Time: 44950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1E0, Got: 1E0, Status: PASS
+#    Time: 48150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 036, Got: 036, Status: PASS
+#    Time: 51350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3F9, Got: 3F9, Status: PASS
+#    Time: 54550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09D, Got: 09D, Status: PASS
+#    Time: 57750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D4, Got: 0D4, Status: PASS
+#    Time: 60950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 20F, Got: 20F, Status: PASS
+#    Time: 64150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 37F, Got: 37F, Status: PASS
+#    Time: 67350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1F8, Got: 1F8, Status: PASS
+#    Time: 70550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1F3, Got: 1F3, Status: PASS
+#    Time: 73750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 018, Got: 018, Status: PASS
+#    Time: 76950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2B4, Got: 2B4, Status: PASS
+#    Time: 80150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2B4, Got: 2B4, Status: PASS
+#    Time: 83350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 30E, Got: 30E, Status: PASS
+#    Time: 86550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3B7, Got: 3B7, Status: PASS
+#    Time: 89750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 007, Got: 007, Status: PASS
+#    Time: 92950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0DA, Got: 0DA, Status: PASS
+#    Time: 96150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0B9, Got: 0B9, Status: PASS
+#    Time: 99350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 172, Got: 172, Status: PASS
+#    Time: 102550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D6, Got: 0D6, Status: PASS
+#    Time: 105750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 04F, Got: 04F, Status: PASS
+#    Time: 108950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 292, Got: 292, Status: PASS
+#    Time: 112150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 275, Got: 275, Status: PASS
+#    Time: 115350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 32C, Got: 32C, Status: PASS
+#    Time: 118550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3A2, Got: 3A2, Status: PASS
+#    Time: 121750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 144, Got: 144, Status: PASS
+#    Time: 124950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 22B, Got: 22B, Status: PASS
+#    Time: 128150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 140, Got: 140, Status: PASS
+#    Time: 131350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 116, Got: 116, Status: PASS
+#    Time: 134550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 221, Got: 221, Status: PASS
+#    Time: 137750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3FA, Got: 3FA, Status: PASS
+#    Time: 140950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 181, Got: 181, Status: PASS
+#    Time: 144150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0FB, Got: 0FB, Status: PASS
+#    Time: 147350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3FA, Got: 3FA, Status: PASS
+#    Time: 150550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2BA, Got: 2BA, Status: PASS
+#    Time: 153750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 17D, Got: 17D, Status: PASS
+#    Time: 156950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 190, Got: 190, Status: PASS
+#    Time: 160150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 160, Got: 160, Status: PASS
+#    Time: 163350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 034, Got: 034, Status: PASS
+#    Time: 166550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0C9, Got: 0C9, Status: PASS
+#    Time: 169750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 313, Got: 313, Status: PASS
+#    Time: 172950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2A0, Got: 2A0, Status: PASS
+#    Time: 176150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 25B, Got: 25B, Status: PASS
+#    Time: 179350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 018, Got: 018, Status: PASS
+#    Time: 182550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 396, Got: 396, Status: PASS
+#    Time: 185750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 03C, Got: 03C, Status: PASS
+#    Time: 188950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 283, Got: 283, Status: PASS
+#    Time: 192150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3D5, Got: 3D5, Status: PASS
+#    Time: 195350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1AC, Got: 1AC, Status: PASS
+#    Time: 198550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E7, Got: 2E7, Status: PASS
+#    Time: 201750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 267, Got: 267, Status: PASS
+#    Time: 204950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09D, Got: 09D, Status: PASS
+#    Time: 208150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 36E, Got: 36E, Status: PASS
+#    Time: 211350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 293, Got: 293, Status: PASS
+#    Time: 214550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 35B, Got: 35B, Status: PASS
+#    Time: 217750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 101, Got: 101, Status: PASS
+#    Time: 220950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 378, Got: 378, Status: PASS
+#    Time: 224150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1C0, Got: 1C0, Status: PASS
+#    Time: 227350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 360, Got: 360, Status: PASS
+#    Time: 230550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 37E, Got: 37E, Status: PASS
+#    Time: 233750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 30A, Got: 30A, Status: PASS
+#    Time: 236950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 214, Got: 214, Status: PASS
+#    Time: 240150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 03B, Got: 03B, Status: PASS
+#    Time: 243350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09B, Got: 09B, Status: PASS
+#    Time: 246550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 259, Got: 259, Status: PASS
+#    Time: 249750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 088, Got: 088, Status: PASS
+#    Time: 252950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 238, Got: 238, Status: PASS
+#    Time: 256150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2D9, Got: 2D9, Status: PASS
+#    Time: 259350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 010, Got: 010, Status: PASS
+#    Time: 262550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 13C, Got: 13C, Status: PASS
+#    Time: 265750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 143, Got: 143, Status: PASS
+#    Time: 268950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 021, Got: 021, Status: PASS
+#    Time: 272150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2FA, Got: 2FA, Status: PASS
+#    Time: 275350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 299, Got: 299, Status: PASS
+#    Time: 278550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 125, Got: 125, Status: PASS
+#    Time: 281750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 239, Got: 239, Status: PASS
+#    Time: 284950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 184, Got: 184, Status: PASS
+#    Time: 288150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 393, Got: 393, Status: PASS
+#    Time: 291350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 10F, Got: 10F, Status: PASS
+#    Time: 294550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 103, Got: 103, Status: PASS
+#    Time: 297750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 293, Got: 293, Status: PASS
+#    Time: 300950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1E0, Got: 1E0, Status: PASS
+#    Time: 304150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 129, Got: 129, Status: PASS
+#    Time: 307350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1C9, Got: 1C9, Status: PASS
+#    Time: 310550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 15A, Got: 15A, Status: PASS
+#    Time: 313750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 218, Got: 218, Status: PASS
+#    Time: 316950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 221, Got: 221, Status: PASS
+#    Time: 320150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 096, Got: 096, Status: PASS
+#    Time: 323350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 02F, Got: 02F, Status: PASS
+#    Time: 326550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 351, Got: 351, Status: PASS
+#    Time: 329750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 053, Got: 053, Status: PASS
+#    Time: 332950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09D, Got: 09D, Status: PASS
+#    Time: 336150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3A7, Got: 3A7, Status: PASS
+#    Time: 339350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 31B, Got: 31B, Status: PASS
+#    Time: 342550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 171, Got: 171, Status: PASS
+#    Time: 345750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 137, Got: 137, Status: PASS
+#    Time: 348950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0C2, Got: 0C2, Status: PASS
+#    Time: 352150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 06D, Got: 06D, Status: PASS
+#    Time: 355350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 279, Got: 279, Status: PASS
+#    Time: 358550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 18D, Got: 18D, Status: PASS
+#    Time: 361750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 287, Got: 287, Status: PASS
+#    Time: 364950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1C6, Got: 1C6, Status: PASS
+#    Time: 368150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 01A, Got: 01A, Status: PASS
+#    Time: 371350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 28D, Got: 28D, Status: PASS
+#    Time: 374550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2D9, Got: 2D9, Status: PASS
+#    Time: 377750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0E7, Got: 0E7, Status: PASS
+#    Time: 380950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 17E, Got: 17E, Status: PASS
+#    Time: 384150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2B0, Got: 2B0, Status: PASS
+#    Time: 387350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0A8, Got: 0A8, Status: PASS
+#    Time: 390550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1BB, Got: 1BB, Status: PASS
+#    Time: 393750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 08C, Got: 08C, Status: PASS
+#    Time: 396950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 334, Got: 334, Status: PASS
+#    Time: 400150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 080, Got: 080, Status: PASS
+#    Time: 403350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3CB, Got: 3CB, Status: PASS
+#    Time: 406550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 18F, Got: 18F, Status: PASS
+#    Time: 409750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1CE, Got: 1CE, Status: PASS
+#    Time: 412950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0FD, Got: 0FD, Status: PASS
+#    Time: 416150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0BA, Got: 0BA, Status: PASS
+#    Time: 419350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 346, Got: 346, Status: PASS
+#    Time: 422550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3B2, Got: 3B2, Status: PASS
+#    Time: 425750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1AA, Got: 1AA, Status: PASS
+#    Time: 428950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 171, Got: 171, Status: PASS
+#    Time: 432150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2A5, Got: 2A5, Status: PASS
+#    Time: 435350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 097, Got: 097, Status: PASS
+#    Time: 438550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 352, Got: 352, Status: PASS
+#    Time: 441750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 378, Got: 378, Status: PASS
+#    Time: 444950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 31F, Got: 31F, Status: PASS
+#    Time: 448150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 218, Got: 218, Status: PASS
+#    Time: 451350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 230, Got: 230, Status: PASS
+#    Time: 454550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09B, Got: 09B, Status: PASS
+#    Time: 457750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 100, Got: 100, Status: PASS
+#    Time: 460950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 274, Got: 274, Status: PASS
+#    Time: 464150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0AD, Got: 0AD, Status: PASS
+#    Time: 467350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 21C, Got: 21C, Status: PASS
+#    Time: 470550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 053, Got: 053, Status: PASS
+#    Time: 473750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 126, Got: 126, Status: PASS
+#    Time: 476950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 346, Got: 346, Status: PASS
+#    Time: 480150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0BC, Got: 0BC, Status: PASS
+#    Time: 483350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 090, Got: 090, Status: PASS
+#    Time: 486550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1C7, Got: 1C7, Status: PASS
+#    Time: 489750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E1, Got: 2E1, Status: PASS
+#    Time: 492950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1E2, Got: 1E2, Status: PASS
+#    Time: 496150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 093, Got: 093, Status: PASS
+#    Time: 499350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1DB, Got: 1DB, Status: PASS
+#    Time: 502550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 171, Got: 171, Status: PASS
+#    Time: 505750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 249, Got: 249, Status: PASS
+#    Time: 508950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 30B, Got: 30B, Status: PASS
+#    Time: 512150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2F8, Got: 2F8, Status: PASS
+#    Time: 515350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 073, Got: 073, Status: PASS
+#    Time: 518550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1A5, Got: 1A5, Status: PASS
+#    Time: 521750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2A7, Got: 2A7, Status: PASS
+#    Time: 524950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 237, Got: 237, Status: PASS
+#    Time: 528150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 030, Got: 030, Status: PASS
+#    Time: 531350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3FC, Got: 3FC, Status: PASS
+#    Time: 534550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 244, Got: 244, Status: PASS
+#    Time: 537750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3E0, Got: 3E0, Status: PASS
+#    Time: 540950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 209, Got: 209, Status: PASS
+#    Time: 544150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3E7, Got: 3E7, Status: PASS
+#    Time: 547350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3BA, Got: 3BA, Status: PASS
+#    Time: 550550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 244, Got: 244, Status: PASS
+#    Time: 553750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 365, Got: 365, Status: PASS
+#    Time: 556950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 326, Got: 326, Status: PASS
+#    Time: 560150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 31C, Got: 31C, Status: PASS
+#    Time: 563350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 109, Got: 109, Status: PASS
+#    Time: 566550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1FD, Got: 1FD, Status: PASS
+#    Time: 569750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 081, Got: 081, Status: PASS
+#    Time: 572950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3E0, Got: 3E0, Status: PASS
+#    Time: 576150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3D5, Got: 3D5, Status: PASS
+#    Time: 579350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 105, Got: 105, Status: PASS
+#    Time: 582550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3DD, Got: 3DD, Status: PASS
+#    Time: 585750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 374, Got: 374, Status: PASS
+#    Time: 588950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 29C, Got: 29C, Status: PASS
+#    Time: 592150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09E, Got: 09E, Status: PASS
+#    Time: 595350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 32B, Got: 32B, Status: PASS
+#    Time: 598550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 398, Got: 398, Status: PASS
+#    Time: 601750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 22E, Got: 22E, Status: PASS
+#    Time: 604950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 129, Got: 129, Status: PASS
+#    Time: 608150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 300, Got: 300, Status: PASS
+#    Time: 611350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0E6, Got: 0E6, Status: PASS
+#    Time: 614550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1D7, Got: 1D7, Status: PASS
+#    Time: 617750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1A6, Got: 1A6, Status: PASS
+#    Time: 620950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 15C, Got: 15C, Status: PASS
+#    Time: 624150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1B3, Got: 1B3, Status: PASS
+#    Time: 627350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 070, Got: 070, Status: PASS
+#    Time: 630550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0B2, Got: 0B2, Status: PASS
+#    Time: 633750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3FC, Got: 3FC, Status: PASS
+#    Time: 636950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2B8, Got: 2B8, Status: PASS
+#    Time: 640150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E6, Got: 2E6, Status: PASS
+#    Time: 643350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 39F, Got: 39F, Status: PASS
+#    Time: 646550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 200, Got: 200, Status: PASS
+#    Time: 649750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 20C, Got: 20C, Status: PASS
+#    Time: 652950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0EE, Got: 0EE, Status: PASS
+#    Time: 656150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 35C, Got: 35C, Status: PASS
+#    Time: 659350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 169, Got: 169, Status: PASS
+#    Time: 662550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 339, Got: 339, Status: PASS
+#    Time: 665750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 381, Got: 381, Status: PASS
+#    Time: 668950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 37E, Got: 37E, Status: PASS
+#    Time: 672150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0BA, Got: 0BA, Status: PASS
+#    Time: 675350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 34A, Got: 34A, Status: PASS
+#    Time: 678550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 06B, Got: 06B, Status: PASS
+#    Time: 681750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 200, Got: 200, Status: PASS
+#    Time: 684950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 056, Got: 056, Status: PASS
+#    Time: 688150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1AB, Got: 1AB, Status: PASS
+#    Time: 691350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 170, Got: 170, Status: PASS
+#    Time: 694550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 04C, Got: 04C, Status: PASS
+#    Time: 697750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 388, Got: 388, Status: PASS
+#    Time: 700950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 34B, Got: 34B, Status: PASS
+#    Time: 704150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0AA, Got: 0AA, Status: PASS
+#    Time: 707350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 15B, Got: 15B, Status: PASS
+#    Time: 710550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 175, Got: 175, Status: PASS
+#    Time: 713750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3BE, Got: 3BE, Status: PASS
+#    Time: 716950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 30A, Got: 30A, Status: PASS
+#    Time: 720150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2EE, Got: 2EE, Status: PASS
+#    Time: 723350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 163, Got: 163, Status: PASS
+#    Time: 726550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 095, Got: 095, Status: PASS
+#    Time: 729750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 062, Got: 062, Status: PASS
+#    Time: 732950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 148, Got: 148, Status: PASS
+#    Time: 736150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 13F, Got: 13F, Status: PASS
+#    Time: 739350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 316, Got: 316, Status: PASS
+#    Time: 742550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1BF, Got: 1BF, Status: PASS
+#    Time: 745750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 317, Got: 317, Status: PASS
+#    Time: 748950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 36B, Got: 36B, Status: PASS
+#    Time: 752150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 025, Got: 025, Status: PASS
+#    Time: 755350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2FB, Got: 2FB, Status: PASS
+#    Time: 758550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 229, Got: 229, Status: PASS
+#    Time: 761750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 010, Got: 010, Status: PASS
+#    Time: 764950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1AB, Got: 1AB, Status: PASS
+#    Time: 768150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 01F, Got: 01F, Status: PASS
+#    Time: 771350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1A4, Got: 1A4, Status: PASS
+#    Time: 774550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 268, Got: 268, Status: PASS
+#    Time: 777750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 12E, Got: 12E, Status: PASS
+#    Time: 780950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E8, Got: 2E8, Status: PASS
+#    Time: 784150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 069, Got: 069, Status: PASS
+#    Time: 787350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 29B, Got: 29B, Status: PASS
+#    Time: 790550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D4, Got: 0D4, Status: PASS
+#    Time: 793750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3B6, Got: 3B6, Status: PASS
+#    Time: 796950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D6, Got: 0D6, Status: PASS
+#    Time: 800150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E9, Got: 2E9, Status: PASS
+#    Time: 803350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 12A, Got: 12A, Status: PASS
+#    Time: 806550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1D7, Got: 1D7, Status: PASS
+#    Time: 809750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 388, Got: 388, Status: PASS
+#    Time: 812950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1B5, Got: 1B5, Status: PASS
+#    Time: 816150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2CA, Got: 2CA, Status: PASS
+#    Time: 819350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1A7, Got: 1A7, Status: PASS
+#    Time: 822550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2CF, Got: 2CF, Status: PASS
+#    Time: 825750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 03B, Got: 03B, Status: PASS
+#    Time: 828950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 20F, Got: 20F, Status: PASS
+#    Time: 832150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 27A, Got: 27A, Status: PASS
+#    Time: 835350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E7, Got: 2E7, Status: PASS
+#    Time: 838550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 276, Got: 276, Status: PASS
+#    Time: 841750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 10B, Got: 10B, Status: PASS
+#    Time: 844950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2F6, Got: 2F6, Status: PASS
+#    Time: 848150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 235, Got: 235, Status: PASS
+#    Time: 851350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 054, Got: 054, Status: PASS
+#    Time: 854550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0B1, Got: 0B1, Status: PASS
+#    Time: 857750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 33E, Got: 33E, Status: PASS
+#    Time: 860950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 291, Got: 291, Status: PASS
+#    Time: 864150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 393, Got: 393, Status: PASS
+#    Time: 867350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 341, Got: 341, Status: PASS
+#    Time: 870550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 295, Got: 295, Status: PASS
+#    Time: 873750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 32C, Got: 32C, Status: PASS
+#    Time: 876950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0DA, Got: 0DA, Status: PASS
+#    Time: 880150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 008, Got: 008, Status: PASS
+#    Time: 883350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 22A, Got: 22A, Status: PASS
+#    Time: 886550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 182, Got: 182, Status: PASS
+#    Time: 889750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 104, Got: 104, Status: PASS
+#    Time: 892950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0F8, Got: 0F8, Status: PASS
+#    Time: 896150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3A3, Got: 3A3, Status: PASS
+#    Time: 899350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 11A, Got: 11A, Status: PASS
+#    Time: 902550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E6, Got: 2E6, Status: PASS
+#    Time: 905750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1B4, Got: 1B4, Status: PASS
+#    Time: 908950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3F7, Got: 3F7, Status: PASS
+#    Time: 912150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1D0, Got: 1D0, Status: PASS
+#    Time: 915350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 16D, Got: 16D, Status: PASS
+#    Time: 918550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 19D, Got: 19D, Status: PASS
+#    Time: 921750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1CE, Got: 1CE, Status: PASS
+#    Time: 924950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 10A, Got: 10A, Status: PASS
+#    Time: 928150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2D8, Got: 2D8, Status: PASS
+#    Time: 931350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 071, Got: 071, Status: PASS
+#    Time: 934550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3F4, Got: 3F4, Status: PASS
+#    Time: 937750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2C6, Got: 2C6, Status: PASS
+#    Time: 940950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 39C, Got: 39C, Status: PASS
+#    Time: 944150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3B3, Got: 3B3, Status: PASS
+#    Time: 947350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2F8, Got: 2F8, Status: PASS
+#    Time: 950550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D3, Got: 0D3, Status: PASS
+#    Time: 953750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 20A, Got: 20A, Status: PASS
+#    Time: 956950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 191, Got: 191, Status: PASS
+#    Time: 960150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Failure: Simulation done
+#    Time: 960150 ns  Iteration: 3  Process: /spi_receiver_tb/output_verification File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd
+# Break in Process output_verification at L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd line 134
+quit -sim
+# End time: 11:06:32 on Apr 17,2024, Elapsed time: 0:33:21
+# Errors: 1, Warnings: 1
+# Compile of spi_receiver.vhd was successful.
+vsim work.spi_receiver_tb
+# vsim work.spi_receiver_tb 
+# Start time: 11:06:48 on Apr 17,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.pack_tb(body)
+# Loading work.spi_receiver_tb(spi_receiver_behav)
+# Loading work.spi_receiver(spi_receiver_rtl)
+run -all
+# ** Note: Expected: 3EB, Got: 3EB, Status: PASS
+#    Time: 3350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2CD, Got: 2CD, Status: PASS
+#    Time: 6550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3DC, Got: 3DC, Status: PASS
+#    Time: 9750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 31C, Got: 31C, Status: PASS
+#    Time: 12950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 17F, Got: 17F, Status: PASS
+#    Time: 16150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2DB, Got: 2DB, Status: PASS
+#    Time: 19350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 332, Got: 332, Status: PASS
+#    Time: 22550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 282, Got: 282, Status: PASS
+#    Time: 25750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 21D, Got: 21D, Status: PASS
+#    Time: 28950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0E0, Got: 0E0, Status: PASS
+#    Time: 32150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2AC, Got: 2AC, Status: PASS
+#    Time: 35350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3D1, Got: 3D1, Status: PASS
+#    Time: 38550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 28C, Got: 28C, Status: PASS
+#    Time: 41750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 201, Got: 201, Status: PASS
+#    Time: 44950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1E0, Got: 1E0, Status: PASS
+#    Time: 48150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 036, Got: 036, Status: PASS
+#    Time: 51350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3F9, Got: 3F9, Status: PASS
+#    Time: 54550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09D, Got: 09D, Status: PASS
+#    Time: 57750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D4, Got: 0D4, Status: PASS
+#    Time: 60950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 20F, Got: 20F, Status: PASS
+#    Time: 64150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 37F, Got: 37F, Status: PASS
+#    Time: 67350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1F8, Got: 1F8, Status: PASS
+#    Time: 70550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1F3, Got: 1F3, Status: PASS
+#    Time: 73750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 018, Got: 018, Status: PASS
+#    Time: 76950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2B4, Got: 2B4, Status: PASS
+#    Time: 80150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2B4, Got: 2B4, Status: PASS
+#    Time: 83350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 30E, Got: 30E, Status: PASS
+#    Time: 86550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3B7, Got: 3B7, Status: PASS
+#    Time: 89750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 007, Got: 007, Status: PASS
+#    Time: 92950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0DA, Got: 0DA, Status: PASS
+#    Time: 96150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0B9, Got: 0B9, Status: PASS
+#    Time: 99350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 172, Got: 172, Status: PASS
+#    Time: 102550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D6, Got: 0D6, Status: PASS
+#    Time: 105750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 04F, Got: 04F, Status: PASS
+#    Time: 108950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 292, Got: 292, Status: PASS
+#    Time: 112150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 275, Got: 275, Status: PASS
+#    Time: 115350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 32C, Got: 32C, Status: PASS
+#    Time: 118550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3A2, Got: 3A2, Status: PASS
+#    Time: 121750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 144, Got: 144, Status: PASS
+#    Time: 124950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 22B, Got: 22B, Status: PASS
+#    Time: 128150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 140, Got: 140, Status: PASS
+#    Time: 131350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 116, Got: 116, Status: PASS
+#    Time: 134550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 221, Got: 221, Status: PASS
+#    Time: 137750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3FA, Got: 3FA, Status: PASS
+#    Time: 140950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 181, Got: 181, Status: PASS
+#    Time: 144150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0FB, Got: 0FB, Status: PASS
+#    Time: 147350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3FA, Got: 3FA, Status: PASS
+#    Time: 150550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2BA, Got: 2BA, Status: PASS
+#    Time: 153750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 17D, Got: 17D, Status: PASS
+#    Time: 156950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 190, Got: 190, Status: PASS
+#    Time: 160150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 160, Got: 160, Status: PASS
+#    Time: 163350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 034, Got: 034, Status: PASS
+#    Time: 166550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0C9, Got: 0C9, Status: PASS
+#    Time: 169750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 313, Got: 313, Status: PASS
+#    Time: 172950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2A0, Got: 2A0, Status: PASS
+#    Time: 176150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 25B, Got: 25B, Status: PASS
+#    Time: 179350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 018, Got: 018, Status: PASS
+#    Time: 182550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 396, Got: 396, Status: PASS
+#    Time: 185750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 03C, Got: 03C, Status: PASS
+#    Time: 188950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 283, Got: 283, Status: PASS
+#    Time: 192150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3D5, Got: 3D5, Status: PASS
+#    Time: 195350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1AC, Got: 1AC, Status: PASS
+#    Time: 198550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E7, Got: 2E7, Status: PASS
+#    Time: 201750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 267, Got: 267, Status: PASS
+#    Time: 204950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09D, Got: 09D, Status: PASS
+#    Time: 208150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 36E, Got: 36E, Status: PASS
+#    Time: 211350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 293, Got: 293, Status: PASS
+#    Time: 214550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 35B, Got: 35B, Status: PASS
+#    Time: 217750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 101, Got: 101, Status: PASS
+#    Time: 220950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 378, Got: 378, Status: PASS
+#    Time: 224150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1C0, Got: 1C0, Status: PASS
+#    Time: 227350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 360, Got: 360, Status: PASS
+#    Time: 230550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 37E, Got: 37E, Status: PASS
+#    Time: 233750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 30A, Got: 30A, Status: PASS
+#    Time: 236950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 214, Got: 214, Status: PASS
+#    Time: 240150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 03B, Got: 03B, Status: PASS
+#    Time: 243350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09B, Got: 09B, Status: PASS
+#    Time: 246550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 259, Got: 259, Status: PASS
+#    Time: 249750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 088, Got: 088, Status: PASS
+#    Time: 252950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 238, Got: 238, Status: PASS
+#    Time: 256150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2D9, Got: 2D9, Status: PASS
+#    Time: 259350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 010, Got: 010, Status: PASS
+#    Time: 262550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 13C, Got: 13C, Status: PASS
+#    Time: 265750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 143, Got: 143, Status: PASS
+#    Time: 268950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 021, Got: 021, Status: PASS
+#    Time: 272150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2FA, Got: 2FA, Status: PASS
+#    Time: 275350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 299, Got: 299, Status: PASS
+#    Time: 278550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 125, Got: 125, Status: PASS
+#    Time: 281750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 239, Got: 239, Status: PASS
+#    Time: 284950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 184, Got: 184, Status: PASS
+#    Time: 288150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 393, Got: 393, Status: PASS
+#    Time: 291350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 10F, Got: 10F, Status: PASS
+#    Time: 294550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 103, Got: 103, Status: PASS
+#    Time: 297750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 293, Got: 293, Status: PASS
+#    Time: 300950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1E0, Got: 1E0, Status: PASS
+#    Time: 304150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 129, Got: 129, Status: PASS
+#    Time: 307350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1C9, Got: 1C9, Status: PASS
+#    Time: 310550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 15A, Got: 15A, Status: PASS
+#    Time: 313750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 218, Got: 218, Status: PASS
+#    Time: 316950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 221, Got: 221, Status: PASS
+#    Time: 320150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 096, Got: 096, Status: PASS
+#    Time: 323350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 02F, Got: 02F, Status: PASS
+#    Time: 326550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 351, Got: 351, Status: PASS
+#    Time: 329750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 053, Got: 053, Status: PASS
+#    Time: 332950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09D, Got: 09D, Status: PASS
+#    Time: 336150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3A7, Got: 3A7, Status: PASS
+#    Time: 339350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 31B, Got: 31B, Status: PASS
+#    Time: 342550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 171, Got: 171, Status: PASS
+#    Time: 345750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 137, Got: 137, Status: PASS
+#    Time: 348950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0C2, Got: 0C2, Status: PASS
+#    Time: 352150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 06D, Got: 06D, Status: PASS
+#    Time: 355350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 279, Got: 279, Status: PASS
+#    Time: 358550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 18D, Got: 18D, Status: PASS
+#    Time: 361750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 287, Got: 287, Status: PASS
+#    Time: 364950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1C6, Got: 1C6, Status: PASS
+#    Time: 368150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 01A, Got: 01A, Status: PASS
+#    Time: 371350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 28D, Got: 28D, Status: PASS
+#    Time: 374550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2D9, Got: 2D9, Status: PASS
+#    Time: 377750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0E7, Got: 0E7, Status: PASS
+#    Time: 380950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 17E, Got: 17E, Status: PASS
+#    Time: 384150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2B0, Got: 2B0, Status: PASS
+#    Time: 387350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0A8, Got: 0A8, Status: PASS
+#    Time: 390550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1BB, Got: 1BB, Status: PASS
+#    Time: 393750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 08C, Got: 08C, Status: PASS
+#    Time: 396950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 334, Got: 334, Status: PASS
+#    Time: 400150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 080, Got: 080, Status: PASS
+#    Time: 403350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3CB, Got: 3CB, Status: PASS
+#    Time: 406550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 18F, Got: 18F, Status: PASS
+#    Time: 409750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1CE, Got: 1CE, Status: PASS
+#    Time: 412950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0FD, Got: 0FD, Status: PASS
+#    Time: 416150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0BA, Got: 0BA, Status: PASS
+#    Time: 419350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 346, Got: 346, Status: PASS
+#    Time: 422550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3B2, Got: 3B2, Status: PASS
+#    Time: 425750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1AA, Got: 1AA, Status: PASS
+#    Time: 428950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 171, Got: 171, Status: PASS
+#    Time: 432150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2A5, Got: 2A5, Status: PASS
+#    Time: 435350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 097, Got: 097, Status: PASS
+#    Time: 438550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 352, Got: 352, Status: PASS
+#    Time: 441750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 378, Got: 378, Status: PASS
+#    Time: 444950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 31F, Got: 31F, Status: PASS
+#    Time: 448150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 218, Got: 218, Status: PASS
+#    Time: 451350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 230, Got: 230, Status: PASS
+#    Time: 454550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09B, Got: 09B, Status: PASS
+#    Time: 457750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 100, Got: 100, Status: PASS
+#    Time: 460950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 274, Got: 274, Status: PASS
+#    Time: 464150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0AD, Got: 0AD, Status: PASS
+#    Time: 467350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 21C, Got: 21C, Status: PASS
+#    Time: 470550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 053, Got: 053, Status: PASS
+#    Time: 473750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 126, Got: 126, Status: PASS
+#    Time: 476950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 346, Got: 346, Status: PASS
+#    Time: 480150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0BC, Got: 0BC, Status: PASS
+#    Time: 483350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 090, Got: 090, Status: PASS
+#    Time: 486550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1C7, Got: 1C7, Status: PASS
+#    Time: 489750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E1, Got: 2E1, Status: PASS
+#    Time: 492950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1E2, Got: 1E2, Status: PASS
+#    Time: 496150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 093, Got: 093, Status: PASS
+#    Time: 499350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1DB, Got: 1DB, Status: PASS
+#    Time: 502550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 171, Got: 171, Status: PASS
+#    Time: 505750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 249, Got: 249, Status: PASS
+#    Time: 508950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 30B, Got: 30B, Status: PASS
+#    Time: 512150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2F8, Got: 2F8, Status: PASS
+#    Time: 515350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 073, Got: 073, Status: PASS
+#    Time: 518550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1A5, Got: 1A5, Status: PASS
+#    Time: 521750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2A7, Got: 2A7, Status: PASS
+#    Time: 524950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 237, Got: 237, Status: PASS
+#    Time: 528150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 030, Got: 030, Status: PASS
+#    Time: 531350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3FC, Got: 3FC, Status: PASS
+#    Time: 534550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 244, Got: 244, Status: PASS
+#    Time: 537750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3E0, Got: 3E0, Status: PASS
+#    Time: 540950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 209, Got: 209, Status: PASS
+#    Time: 544150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3E7, Got: 3E7, Status: PASS
+#    Time: 547350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3BA, Got: 3BA, Status: PASS
+#    Time: 550550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 244, Got: 244, Status: PASS
+#    Time: 553750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 365, Got: 365, Status: PASS
+#    Time: 556950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 326, Got: 326, Status: PASS
+#    Time: 560150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 31C, Got: 31C, Status: PASS
+#    Time: 563350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 109, Got: 109, Status: PASS
+#    Time: 566550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1FD, Got: 1FD, Status: PASS
+#    Time: 569750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 081, Got: 081, Status: PASS
+#    Time: 572950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3E0, Got: 3E0, Status: PASS
+#    Time: 576150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3D5, Got: 3D5, Status: PASS
+#    Time: 579350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 105, Got: 105, Status: PASS
+#    Time: 582550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3DD, Got: 3DD, Status: PASS
+#    Time: 585750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 374, Got: 374, Status: PASS
+#    Time: 588950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 29C, Got: 29C, Status: PASS
+#    Time: 592150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09E, Got: 09E, Status: PASS
+#    Time: 595350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 32B, Got: 32B, Status: PASS
+#    Time: 598550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 398, Got: 398, Status: PASS
+#    Time: 601750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 22E, Got: 22E, Status: PASS
+#    Time: 604950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 129, Got: 129, Status: PASS
+#    Time: 608150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 300, Got: 300, Status: PASS
+#    Time: 611350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0E6, Got: 0E6, Status: PASS
+#    Time: 614550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1D7, Got: 1D7, Status: PASS
+#    Time: 617750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1A6, Got: 1A6, Status: PASS
+#    Time: 620950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 15C, Got: 15C, Status: PASS
+#    Time: 624150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1B3, Got: 1B3, Status: PASS
+#    Time: 627350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 070, Got: 070, Status: PASS
+#    Time: 630550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0B2, Got: 0B2, Status: PASS
+#    Time: 633750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3FC, Got: 3FC, Status: PASS
+#    Time: 636950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2B8, Got: 2B8, Status: PASS
+#    Time: 640150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E6, Got: 2E6, Status: PASS
+#    Time: 643350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 39F, Got: 39F, Status: PASS
+#    Time: 646550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 200, Got: 200, Status: PASS
+#    Time: 649750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 20C, Got: 20C, Status: PASS
+#    Time: 652950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0EE, Got: 0EE, Status: PASS
+#    Time: 656150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 35C, Got: 35C, Status: PASS
+#    Time: 659350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 169, Got: 169, Status: PASS
+#    Time: 662550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 339, Got: 339, Status: PASS
+#    Time: 665750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 381, Got: 381, Status: PASS
+#    Time: 668950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 37E, Got: 37E, Status: PASS
+#    Time: 672150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0BA, Got: 0BA, Status: PASS
+#    Time: 675350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 34A, Got: 34A, Status: PASS
+#    Time: 678550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 06B, Got: 06B, Status: PASS
+#    Time: 681750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 200, Got: 200, Status: PASS
+#    Time: 684950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 056, Got: 056, Status: PASS
+#    Time: 688150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1AB, Got: 1AB, Status: PASS
+#    Time: 691350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 170, Got: 170, Status: PASS
+#    Time: 694550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 04C, Got: 04C, Status: PASS
+#    Time: 697750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 388, Got: 388, Status: PASS
+#    Time: 700950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 34B, Got: 34B, Status: PASS
+#    Time: 704150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0AA, Got: 0AA, Status: PASS
+#    Time: 707350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 15B, Got: 15B, Status: PASS
+#    Time: 710550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 175, Got: 175, Status: PASS
+#    Time: 713750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3BE, Got: 3BE, Status: PASS
+#    Time: 716950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 30A, Got: 30A, Status: PASS
+#    Time: 720150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2EE, Got: 2EE, Status: PASS
+#    Time: 723350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 163, Got: 163, Status: PASS
+#    Time: 726550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 095, Got: 095, Status: PASS
+#    Time: 729750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 062, Got: 062, Status: PASS
+#    Time: 732950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 148, Got: 148, Status: PASS
+#    Time: 736150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 13F, Got: 13F, Status: PASS
+#    Time: 739350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 316, Got: 316, Status: PASS
+#    Time: 742550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1BF, Got: 1BF, Status: PASS
+#    Time: 745750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 317, Got: 317, Status: PASS
+#    Time: 748950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 36B, Got: 36B, Status: PASS
+#    Time: 752150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 025, Got: 025, Status: PASS
+#    Time: 755350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2FB, Got: 2FB, Status: PASS
+#    Time: 758550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 229, Got: 229, Status: PASS
+#    Time: 761750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 010, Got: 010, Status: PASS
+#    Time: 764950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1AB, Got: 1AB, Status: PASS
+#    Time: 768150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 01F, Got: 01F, Status: PASS
+#    Time: 771350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1A4, Got: 1A4, Status: PASS
+#    Time: 774550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 268, Got: 268, Status: PASS
+#    Time: 777750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 12E, Got: 12E, Status: PASS
+#    Time: 780950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E8, Got: 2E8, Status: PASS
+#    Time: 784150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 069, Got: 069, Status: PASS
+#    Time: 787350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 29B, Got: 29B, Status: PASS
+#    Time: 790550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D4, Got: 0D4, Status: PASS
+#    Time: 793750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3B6, Got: 3B6, Status: PASS
+#    Time: 796950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D6, Got: 0D6, Status: PASS
+#    Time: 800150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E9, Got: 2E9, Status: PASS
+#    Time: 803350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 12A, Got: 12A, Status: PASS
+#    Time: 806550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1D7, Got: 1D7, Status: PASS
+#    Time: 809750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 388, Got: 388, Status: PASS
+#    Time: 812950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1B5, Got: 1B5, Status: PASS
+#    Time: 816150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2CA, Got: 2CA, Status: PASS
+#    Time: 819350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1A7, Got: 1A7, Status: PASS
+#    Time: 822550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2CF, Got: 2CF, Status: PASS
+#    Time: 825750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 03B, Got: 03B, Status: PASS
+#    Time: 828950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 20F, Got: 20F, Status: PASS
+#    Time: 832150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 27A, Got: 27A, Status: PASS
+#    Time: 835350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E7, Got: 2E7, Status: PASS
+#    Time: 838550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 276, Got: 276, Status: PASS
+#    Time: 841750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 10B, Got: 10B, Status: PASS
+#    Time: 844950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2F6, Got: 2F6, Status: PASS
+#    Time: 848150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 235, Got: 235, Status: PASS
+#    Time: 851350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 054, Got: 054, Status: PASS
+#    Time: 854550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0B1, Got: 0B1, Status: PASS
+#    Time: 857750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 33E, Got: 33E, Status: PASS
+#    Time: 860950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 291, Got: 291, Status: PASS
+#    Time: 864150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 393, Got: 393, Status: PASS
+#    Time: 867350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 341, Got: 341, Status: PASS
+#    Time: 870550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 295, Got: 295, Status: PASS
+#    Time: 873750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 32C, Got: 32C, Status: PASS
+#    Time: 876950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0DA, Got: 0DA, Status: PASS
+#    Time: 880150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 008, Got: 008, Status: PASS
+#    Time: 883350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 22A, Got: 22A, Status: PASS
+#    Time: 886550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 182, Got: 182, Status: PASS
+#    Time: 889750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 104, Got: 104, Status: PASS
+#    Time: 892950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0F8, Got: 0F8, Status: PASS
+#    Time: 896150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3A3, Got: 3A3, Status: PASS
+#    Time: 899350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 11A, Got: 11A, Status: PASS
+#    Time: 902550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E6, Got: 2E6, Status: PASS
+#    Time: 905750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1B4, Got: 1B4, Status: PASS
+#    Time: 908950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3F7, Got: 3F7, Status: PASS
+#    Time: 912150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1D0, Got: 1D0, Status: PASS
+#    Time: 915350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 16D, Got: 16D, Status: PASS
+#    Time: 918550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 19D, Got: 19D, Status: PASS
+#    Time: 921750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1CE, Got: 1CE, Status: PASS
+#    Time: 924950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 10A, Got: 10A, Status: PASS
+#    Time: 928150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2D8, Got: 2D8, Status: PASS
+#    Time: 931350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 071, Got: 071, Status: PASS
+#    Time: 934550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3F4, Got: 3F4, Status: PASS
+#    Time: 937750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2C6, Got: 2C6, Status: PASS
+#    Time: 940950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 39C, Got: 39C, Status: PASS
+#    Time: 944150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3B3, Got: 3B3, Status: PASS
+#    Time: 947350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2F8, Got: 2F8, Status: PASS
+#    Time: 950550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D3, Got: 0D3, Status: PASS
+#    Time: 953750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 20A, Got: 20A, Status: PASS
+#    Time: 956950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 191, Got: 191, Status: PASS
+#    Time: 960150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Failure: Simulation done
+#    Time: 960150 ns  Iteration: 3  Process: /spi_receiver_tb/output_verification File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd
+# Break in Process output_verification at L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd line 134
+quit -sim
+# End time: 11:21:19 on Apr 17,2024, Elapsed time: 0:14:31
+# Errors: 1, Warnings: 2
+# Compile of spi_receiver.vhd was successful.
+vsim work.spi_receiver_tb
+# vsim work.spi_receiver_tb 
+# Start time: 11:21:33 on Apr 17,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.pack_tb(body)
+# Loading work.spi_receiver_tb(spi_receiver_behav)
+# Loading work.spi_receiver(spi_receiver_rtl)
+run -all
+# ** Note: Expected: 3EB, Got: 3EB, Status: PASS
+#    Time: 3350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2CD, Got: 2CD, Status: PASS
+#    Time: 6550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3DC, Got: 3DC, Status: PASS
+#    Time: 9750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 31C, Got: 31C, Status: PASS
+#    Time: 12950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 17F, Got: 17F, Status: PASS
+#    Time: 16150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2DB, Got: 2DB, Status: PASS
+#    Time: 19350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 332, Got: 332, Status: PASS
+#    Time: 22550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 282, Got: 282, Status: PASS
+#    Time: 25750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 21D, Got: 21D, Status: PASS
+#    Time: 28950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0E0, Got: 0E0, Status: PASS
+#    Time: 32150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2AC, Got: 2AC, Status: PASS
+#    Time: 35350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3D1, Got: 3D1, Status: PASS
+#    Time: 38550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 28C, Got: 28C, Status: PASS
+#    Time: 41750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 201, Got: 201, Status: PASS
+#    Time: 44950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1E0, Got: 1E0, Status: PASS
+#    Time: 48150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 036, Got: 036, Status: PASS
+#    Time: 51350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3F9, Got: 3F9, Status: PASS
+#    Time: 54550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09D, Got: 09D, Status: PASS
+#    Time: 57750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D4, Got: 0D4, Status: PASS
+#    Time: 60950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 20F, Got: 20F, Status: PASS
+#    Time: 64150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 37F, Got: 37F, Status: PASS
+#    Time: 67350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1F8, Got: 1F8, Status: PASS
+#    Time: 70550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1F3, Got: 1F3, Status: PASS
+#    Time: 73750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 018, Got: 018, Status: PASS
+#    Time: 76950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2B4, Got: 2B4, Status: PASS
+#    Time: 80150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2B4, Got: 2B4, Status: PASS
+#    Time: 83350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 30E, Got: 30E, Status: PASS
+#    Time: 86550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3B7, Got: 3B7, Status: PASS
+#    Time: 89750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 007, Got: 007, Status: PASS
+#    Time: 92950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0DA, Got: 0DA, Status: PASS
+#    Time: 96150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0B9, Got: 0B9, Status: PASS
+#    Time: 99350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 172, Got: 172, Status: PASS
+#    Time: 102550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D6, Got: 0D6, Status: PASS
+#    Time: 105750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 04F, Got: 04F, Status: PASS
+#    Time: 108950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 292, Got: 292, Status: PASS
+#    Time: 112150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 275, Got: 275, Status: PASS
+#    Time: 115350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 32C, Got: 32C, Status: PASS
+#    Time: 118550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3A2, Got: 3A2, Status: PASS
+#    Time: 121750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 144, Got: 144, Status: PASS
+#    Time: 124950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 22B, Got: 22B, Status: PASS
+#    Time: 128150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 140, Got: 140, Status: PASS
+#    Time: 131350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 116, Got: 116, Status: PASS
+#    Time: 134550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 221, Got: 221, Status: PASS
+#    Time: 137750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3FA, Got: 3FA, Status: PASS
+#    Time: 140950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 181, Got: 181, Status: PASS
+#    Time: 144150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0FB, Got: 0FB, Status: PASS
+#    Time: 147350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3FA, Got: 3FA, Status: PASS
+#    Time: 150550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2BA, Got: 2BA, Status: PASS
+#    Time: 153750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 17D, Got: 17D, Status: PASS
+#    Time: 156950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 190, Got: 190, Status: PASS
+#    Time: 160150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 160, Got: 160, Status: PASS
+#    Time: 163350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 034, Got: 034, Status: PASS
+#    Time: 166550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0C9, Got: 0C9, Status: PASS
+#    Time: 169750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 313, Got: 313, Status: PASS
+#    Time: 172950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2A0, Got: 2A0, Status: PASS
+#    Time: 176150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 25B, Got: 25B, Status: PASS
+#    Time: 179350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 018, Got: 018, Status: PASS
+#    Time: 182550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 396, Got: 396, Status: PASS
+#    Time: 185750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 03C, Got: 03C, Status: PASS
+#    Time: 188950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 283, Got: 283, Status: PASS
+#    Time: 192150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3D5, Got: 3D5, Status: PASS
+#    Time: 195350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1AC, Got: 1AC, Status: PASS
+#    Time: 198550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E7, Got: 2E7, Status: PASS
+#    Time: 201750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 267, Got: 267, Status: PASS
+#    Time: 204950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09D, Got: 09D, Status: PASS
+#    Time: 208150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 36E, Got: 36E, Status: PASS
+#    Time: 211350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 293, Got: 293, Status: PASS
+#    Time: 214550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 35B, Got: 35B, Status: PASS
+#    Time: 217750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 101, Got: 101, Status: PASS
+#    Time: 220950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 378, Got: 378, Status: PASS
+#    Time: 224150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1C0, Got: 1C0, Status: PASS
+#    Time: 227350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 360, Got: 360, Status: PASS
+#    Time: 230550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 37E, Got: 37E, Status: PASS
+#    Time: 233750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 30A, Got: 30A, Status: PASS
+#    Time: 236950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 214, Got: 214, Status: PASS
+#    Time: 240150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 03B, Got: 03B, Status: PASS
+#    Time: 243350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09B, Got: 09B, Status: PASS
+#    Time: 246550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 259, Got: 259, Status: PASS
+#    Time: 249750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 088, Got: 088, Status: PASS
+#    Time: 252950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 238, Got: 238, Status: PASS
+#    Time: 256150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2D9, Got: 2D9, Status: PASS
+#    Time: 259350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 010, Got: 010, Status: PASS
+#    Time: 262550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 13C, Got: 13C, Status: PASS
+#    Time: 265750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 143, Got: 143, Status: PASS
+#    Time: 268950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 021, Got: 021, Status: PASS
+#    Time: 272150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2FA, Got: 2FA, Status: PASS
+#    Time: 275350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 299, Got: 299, Status: PASS
+#    Time: 278550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 125, Got: 125, Status: PASS
+#    Time: 281750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 239, Got: 239, Status: PASS
+#    Time: 284950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 184, Got: 184, Status: PASS
+#    Time: 288150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 393, Got: 393, Status: PASS
+#    Time: 291350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 10F, Got: 10F, Status: PASS
+#    Time: 294550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 103, Got: 103, Status: PASS
+#    Time: 297750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 293, Got: 293, Status: PASS
+#    Time: 300950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1E0, Got: 1E0, Status: PASS
+#    Time: 304150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 129, Got: 129, Status: PASS
+#    Time: 307350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1C9, Got: 1C9, Status: PASS
+#    Time: 310550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 15A, Got: 15A, Status: PASS
+#    Time: 313750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 218, Got: 218, Status: PASS
+#    Time: 316950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 221, Got: 221, Status: PASS
+#    Time: 320150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 096, Got: 096, Status: PASS
+#    Time: 323350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 02F, Got: 02F, Status: PASS
+#    Time: 326550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 351, Got: 351, Status: PASS
+#    Time: 329750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 053, Got: 053, Status: PASS
+#    Time: 332950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09D, Got: 09D, Status: PASS
+#    Time: 336150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3A7, Got: 3A7, Status: PASS
+#    Time: 339350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 31B, Got: 31B, Status: PASS
+#    Time: 342550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 171, Got: 171, Status: PASS
+#    Time: 345750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 137, Got: 137, Status: PASS
+#    Time: 348950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0C2, Got: 0C2, Status: PASS
+#    Time: 352150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 06D, Got: 06D, Status: PASS
+#    Time: 355350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 279, Got: 279, Status: PASS
+#    Time: 358550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 18D, Got: 18D, Status: PASS
+#    Time: 361750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 287, Got: 287, Status: PASS
+#    Time: 364950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1C6, Got: 1C6, Status: PASS
+#    Time: 368150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 01A, Got: 01A, Status: PASS
+#    Time: 371350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 28D, Got: 28D, Status: PASS
+#    Time: 374550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2D9, Got: 2D9, Status: PASS
+#    Time: 377750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0E7, Got: 0E7, Status: PASS
+#    Time: 380950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 17E, Got: 17E, Status: PASS
+#    Time: 384150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2B0, Got: 2B0, Status: PASS
+#    Time: 387350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0A8, Got: 0A8, Status: PASS
+#    Time: 390550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1BB, Got: 1BB, Status: PASS
+#    Time: 393750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 08C, Got: 08C, Status: PASS
+#    Time: 396950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 334, Got: 334, Status: PASS
+#    Time: 400150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 080, Got: 080, Status: PASS
+#    Time: 403350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3CB, Got: 3CB, Status: PASS
+#    Time: 406550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 18F, Got: 18F, Status: PASS
+#    Time: 409750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1CE, Got: 1CE, Status: PASS
+#    Time: 412950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0FD, Got: 0FD, Status: PASS
+#    Time: 416150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0BA, Got: 0BA, Status: PASS
+#    Time: 419350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 346, Got: 346, Status: PASS
+#    Time: 422550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3B2, Got: 3B2, Status: PASS
+#    Time: 425750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1AA, Got: 1AA, Status: PASS
+#    Time: 428950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 171, Got: 171, Status: PASS
+#    Time: 432150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2A5, Got: 2A5, Status: PASS
+#    Time: 435350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 097, Got: 097, Status: PASS
+#    Time: 438550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 352, Got: 352, Status: PASS
+#    Time: 441750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 378, Got: 378, Status: PASS
+#    Time: 444950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 31F, Got: 31F, Status: PASS
+#    Time: 448150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 218, Got: 218, Status: PASS
+#    Time: 451350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 230, Got: 230, Status: PASS
+#    Time: 454550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09B, Got: 09B, Status: PASS
+#    Time: 457750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 100, Got: 100, Status: PASS
+#    Time: 460950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 274, Got: 274, Status: PASS
+#    Time: 464150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0AD, Got: 0AD, Status: PASS
+#    Time: 467350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 21C, Got: 21C, Status: PASS
+#    Time: 470550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 053, Got: 053, Status: PASS
+#    Time: 473750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 126, Got: 126, Status: PASS
+#    Time: 476950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 346, Got: 346, Status: PASS
+#    Time: 480150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0BC, Got: 0BC, Status: PASS
+#    Time: 483350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 090, Got: 090, Status: PASS
+#    Time: 486550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1C7, Got: 1C7, Status: PASS
+#    Time: 489750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E1, Got: 2E1, Status: PASS
+#    Time: 492950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1E2, Got: 1E2, Status: PASS
+#    Time: 496150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 093, Got: 093, Status: PASS
+#    Time: 499350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1DB, Got: 1DB, Status: PASS
+#    Time: 502550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 171, Got: 171, Status: PASS
+#    Time: 505750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 249, Got: 249, Status: PASS
+#    Time: 508950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 30B, Got: 30B, Status: PASS
+#    Time: 512150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2F8, Got: 2F8, Status: PASS
+#    Time: 515350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 073, Got: 073, Status: PASS
+#    Time: 518550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1A5, Got: 1A5, Status: PASS
+#    Time: 521750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2A7, Got: 2A7, Status: PASS
+#    Time: 524950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 237, Got: 237, Status: PASS
+#    Time: 528150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 030, Got: 030, Status: PASS
+#    Time: 531350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3FC, Got: 3FC, Status: PASS
+#    Time: 534550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 244, Got: 244, Status: PASS
+#    Time: 537750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3E0, Got: 3E0, Status: PASS
+#    Time: 540950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 209, Got: 209, Status: PASS
+#    Time: 544150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3E7, Got: 3E7, Status: PASS
+#    Time: 547350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3BA, Got: 3BA, Status: PASS
+#    Time: 550550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 244, Got: 244, Status: PASS
+#    Time: 553750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 365, Got: 365, Status: PASS
+#    Time: 556950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 326, Got: 326, Status: PASS
+#    Time: 560150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 31C, Got: 31C, Status: PASS
+#    Time: 563350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 109, Got: 109, Status: PASS
+#    Time: 566550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1FD, Got: 1FD, Status: PASS
+#    Time: 569750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 081, Got: 081, Status: PASS
+#    Time: 572950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3E0, Got: 3E0, Status: PASS
+#    Time: 576150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3D5, Got: 3D5, Status: PASS
+#    Time: 579350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 105, Got: 105, Status: PASS
+#    Time: 582550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3DD, Got: 3DD, Status: PASS
+#    Time: 585750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 374, Got: 374, Status: PASS
+#    Time: 588950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 29C, Got: 29C, Status: PASS
+#    Time: 592150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 09E, Got: 09E, Status: PASS
+#    Time: 595350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 32B, Got: 32B, Status: PASS
+#    Time: 598550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 398, Got: 398, Status: PASS
+#    Time: 601750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 22E, Got: 22E, Status: PASS
+#    Time: 604950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 129, Got: 129, Status: PASS
+#    Time: 608150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 300, Got: 300, Status: PASS
+#    Time: 611350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0E6, Got: 0E6, Status: PASS
+#    Time: 614550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1D7, Got: 1D7, Status: PASS
+#    Time: 617750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1A6, Got: 1A6, Status: PASS
+#    Time: 620950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 15C, Got: 15C, Status: PASS
+#    Time: 624150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1B3, Got: 1B3, Status: PASS
+#    Time: 627350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 070, Got: 070, Status: PASS
+#    Time: 630550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0B2, Got: 0B2, Status: PASS
+#    Time: 633750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3FC, Got: 3FC, Status: PASS
+#    Time: 636950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2B8, Got: 2B8, Status: PASS
+#    Time: 640150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E6, Got: 2E6, Status: PASS
+#    Time: 643350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 39F, Got: 39F, Status: PASS
+#    Time: 646550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 200, Got: 200, Status: PASS
+#    Time: 649750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 20C, Got: 20C, Status: PASS
+#    Time: 652950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0EE, Got: 0EE, Status: PASS
+#    Time: 656150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 35C, Got: 35C, Status: PASS
+#    Time: 659350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 169, Got: 169, Status: PASS
+#    Time: 662550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 339, Got: 339, Status: PASS
+#    Time: 665750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 381, Got: 381, Status: PASS
+#    Time: 668950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 37E, Got: 37E, Status: PASS
+#    Time: 672150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0BA, Got: 0BA, Status: PASS
+#    Time: 675350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 34A, Got: 34A, Status: PASS
+#    Time: 678550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 06B, Got: 06B, Status: PASS
+#    Time: 681750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 200, Got: 200, Status: PASS
+#    Time: 684950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 056, Got: 056, Status: PASS
+#    Time: 688150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1AB, Got: 1AB, Status: PASS
+#    Time: 691350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 170, Got: 170, Status: PASS
+#    Time: 694550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 04C, Got: 04C, Status: PASS
+#    Time: 697750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 388, Got: 388, Status: PASS
+#    Time: 700950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 34B, Got: 34B, Status: PASS
+#    Time: 704150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0AA, Got: 0AA, Status: PASS
+#    Time: 707350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 15B, Got: 15B, Status: PASS
+#    Time: 710550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 175, Got: 175, Status: PASS
+#    Time: 713750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3BE, Got: 3BE, Status: PASS
+#    Time: 716950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 30A, Got: 30A, Status: PASS
+#    Time: 720150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2EE, Got: 2EE, Status: PASS
+#    Time: 723350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 163, Got: 163, Status: PASS
+#    Time: 726550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 095, Got: 095, Status: PASS
+#    Time: 729750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 062, Got: 062, Status: PASS
+#    Time: 732950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 148, Got: 148, Status: PASS
+#    Time: 736150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 13F, Got: 13F, Status: PASS
+#    Time: 739350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 316, Got: 316, Status: PASS
+#    Time: 742550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1BF, Got: 1BF, Status: PASS
+#    Time: 745750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 317, Got: 317, Status: PASS
+#    Time: 748950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 36B, Got: 36B, Status: PASS
+#    Time: 752150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 025, Got: 025, Status: PASS
+#    Time: 755350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2FB, Got: 2FB, Status: PASS
+#    Time: 758550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 229, Got: 229, Status: PASS
+#    Time: 761750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 010, Got: 010, Status: PASS
+#    Time: 764950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1AB, Got: 1AB, Status: PASS
+#    Time: 768150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 01F, Got: 01F, Status: PASS
+#    Time: 771350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1A4, Got: 1A4, Status: PASS
+#    Time: 774550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 268, Got: 268, Status: PASS
+#    Time: 777750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 12E, Got: 12E, Status: PASS
+#    Time: 780950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E8, Got: 2E8, Status: PASS
+#    Time: 784150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 069, Got: 069, Status: PASS
+#    Time: 787350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 29B, Got: 29B, Status: PASS
+#    Time: 790550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D4, Got: 0D4, Status: PASS
+#    Time: 793750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3B6, Got: 3B6, Status: PASS
+#    Time: 796950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D6, Got: 0D6, Status: PASS
+#    Time: 800150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E9, Got: 2E9, Status: PASS
+#    Time: 803350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 12A, Got: 12A, Status: PASS
+#    Time: 806550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1D7, Got: 1D7, Status: PASS
+#    Time: 809750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 388, Got: 388, Status: PASS
+#    Time: 812950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1B5, Got: 1B5, Status: PASS
+#    Time: 816150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2CA, Got: 2CA, Status: PASS
+#    Time: 819350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1A7, Got: 1A7, Status: PASS
+#    Time: 822550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2CF, Got: 2CF, Status: PASS
+#    Time: 825750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 03B, Got: 03B, Status: PASS
+#    Time: 828950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 20F, Got: 20F, Status: PASS
+#    Time: 832150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 27A, Got: 27A, Status: PASS
+#    Time: 835350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E7, Got: 2E7, Status: PASS
+#    Time: 838550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 276, Got: 276, Status: PASS
+#    Time: 841750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 10B, Got: 10B, Status: PASS
+#    Time: 844950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2F6, Got: 2F6, Status: PASS
+#    Time: 848150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 235, Got: 235, Status: PASS
+#    Time: 851350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 054, Got: 054, Status: PASS
+#    Time: 854550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0B1, Got: 0B1, Status: PASS
+#    Time: 857750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 33E, Got: 33E, Status: PASS
+#    Time: 860950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 291, Got: 291, Status: PASS
+#    Time: 864150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 393, Got: 393, Status: PASS
+#    Time: 867350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 341, Got: 341, Status: PASS
+#    Time: 870550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 295, Got: 295, Status: PASS
+#    Time: 873750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 32C, Got: 32C, Status: PASS
+#    Time: 876950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0DA, Got: 0DA, Status: PASS
+#    Time: 880150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 008, Got: 008, Status: PASS
+#    Time: 883350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 22A, Got: 22A, Status: PASS
+#    Time: 886550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 182, Got: 182, Status: PASS
+#    Time: 889750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 104, Got: 104, Status: PASS
+#    Time: 892950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0F8, Got: 0F8, Status: PASS
+#    Time: 896150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3A3, Got: 3A3, Status: PASS
+#    Time: 899350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 11A, Got: 11A, Status: PASS
+#    Time: 902550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2E6, Got: 2E6, Status: PASS
+#    Time: 905750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1B4, Got: 1B4, Status: PASS
+#    Time: 908950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3F7, Got: 3F7, Status: PASS
+#    Time: 912150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1D0, Got: 1D0, Status: PASS
+#    Time: 915350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 16D, Got: 16D, Status: PASS
+#    Time: 918550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 19D, Got: 19D, Status: PASS
+#    Time: 921750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 1CE, Got: 1CE, Status: PASS
+#    Time: 924950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 10A, Got: 10A, Status: PASS
+#    Time: 928150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2D8, Got: 2D8, Status: PASS
+#    Time: 931350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 071, Got: 071, Status: PASS
+#    Time: 934550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3F4, Got: 3F4, Status: PASS
+#    Time: 937750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2C6, Got: 2C6, Status: PASS
+#    Time: 940950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 39C, Got: 39C, Status: PASS
+#    Time: 944150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 3B3, Got: 3B3, Status: PASS
+#    Time: 947350 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 2F8, Got: 2F8, Status: PASS
+#    Time: 950550 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 0D3, Got: 0D3, Status: PASS
+#    Time: 953750 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 20A, Got: 20A, Status: PASS
+#    Time: 956950 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Note: Expected: 191, Got: 191, Status: PASS
+#    Time: 960150 ns  Iteration: 3  Instance: /spi_receiver_tb
+# ** Failure: Simulation done
+#    Time: 960150 ns  Iteration: 3  Process: /spi_receiver_tb/output_verification File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd
+# Break in Process output_verification at L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd line 134
+# End time: 11:21:45 on Apr 17,2024, Elapsed time: 0:00:12
+# Errors: 1, Warnings: 2

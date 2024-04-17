@@ -11,7 +11,7 @@
 
 ## How to use  
 - Clone the ``Altera_FPGA_Projects`` repository  
-- Open the the ``EP4CE6_Projects/P4_7_Segment_HCSR04/`` directory  
+- Open the ``EP4CE6_Projects/P4_7_Segment_HCSR04/`` directory  
 - Open the ``distance_sensor.qpf`` project file  
 - Intel Quartus Prime should open after the previous step  
 - After Quartus opens, click on the ``Processing`` tab  

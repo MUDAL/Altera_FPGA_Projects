@@ -1,0 +1,1239 @@
+Timing Analyzer report for spi_lcd_main
+Wed Apr 17 11:16:27 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk'
+ 22. Slow 1200mV 0C Model Hold: 'clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk'
+ 30. Fast 1200mV 0C Model Hold: 'clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; spi_lcd_main                                        ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE6E22C8                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.3%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 342.94 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -1.916 ; -31.644            ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.452 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -50.584                          ;
++-------+--------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                                         ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.916 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.835      ;
+; -1.916 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.835      ;
+; -1.914 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.833      ;
+; -1.912 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.831      ;
+; -1.814 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.733      ;
+; -1.814 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.733      ;
+; -1.813 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.732      ;
+; -1.813 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.732      ;
+; -1.607 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.526      ;
+; -1.607 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.526      ;
+; -1.606 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.525      ;
+; -1.606 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.525      ;
+; -1.550 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.082     ; 2.469      ;
+; -1.465 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 1.000        ; -0.081     ; 2.385      ;
+; -1.452 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.371      ;
+; -1.452 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.371      ;
+; -1.450 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.369      ;
+; -1.448 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.367      ;
+; -1.343 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.082     ; 2.262      ;
+; -1.267 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.186      ;
+; -1.267 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.186      ;
+; -1.266 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.185      ;
+; -1.266 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.185      ;
+; -1.259 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.178      ;
+; -1.259 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.178      ;
+; -1.258 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.177      ;
+; -1.258 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.177      ;
+; -1.258 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 1.000        ; -0.081     ; 2.178      ;
+; -1.242 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|rs_reg                 ; clk          ; clk         ; 1.000        ; -0.082     ; 2.161      ;
+; -1.223 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.081     ; 2.143      ;
+; -1.216 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.082     ; 2.135      ;
+; -1.188 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.107      ;
+; -1.187 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.106      ;
+; -1.187 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.106      ;
+; -1.186 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.082     ; 2.105      ;
+; -1.159 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 1.000        ; -0.081     ; 2.079      ;
+; -1.158 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.083     ; 2.076      ;
+; -1.157 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.083     ; 2.075      ;
+; -1.156 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.083     ; 2.074      ;
+; -1.155 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.083     ; 2.073      ;
+; -1.150 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.083     ; 2.068      ;
+; -1.149 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.083     ; 2.067      ;
+; -1.142 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.082     ; 2.061      ;
+; -1.136 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 1.000        ; -0.082     ; 2.055      ;
+; -1.131 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 1.000        ; -0.081     ; 2.051      ;
+; -1.118 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.083     ; 2.036      ;
+; -1.117 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.083     ; 2.035      ;
+; -1.110 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.081     ; 2.030      ;
+; -1.075 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.993      ;
+; -1.074 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.992      ;
+; -1.073 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.991      ;
+; -1.072 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.990      ;
+; -1.070 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.988      ;
+; -1.069 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.987      ;
+; -1.061 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.082     ; 1.980      ;
+; -1.006 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.082     ; 1.925      ;
+; -1.006 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.082     ; 1.925      ;
+; -1.005 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.082     ; 1.924      ;
+; -1.005 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.082     ; 1.924      ;
+; -0.986 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.906      ;
+; -0.984 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.904      ;
+; -0.983 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.903      ;
+; -0.974 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.892      ;
+; -0.973 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.891      ;
+; -0.970 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.082     ; 1.889      ;
+; -0.967 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.082     ; 1.886      ;
+; -0.956 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.874      ;
+; -0.955 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.873      ;
+; -0.952 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 1.000        ; -0.081     ; 1.872      ;
+; -0.950 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.870      ;
+; -0.941 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.082     ; 1.860      ;
+; -0.939 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.857      ;
+; -0.937 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.855      ;
+; -0.925 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.845      ;
+; -0.896 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.816      ;
+; -0.892 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.810      ;
+; -0.891 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.809      ;
+; -0.888 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.808      ;
+; -0.888 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.808      ;
+; -0.887 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.807      ;
+; -0.880 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.798      ;
+; -0.879 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.797      ;
+; -0.852 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.770      ;
+; -0.851 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.769      ;
+; -0.851 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.769      ;
+; -0.832 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.752      ;
+; -0.831 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.749      ;
+; -0.831 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.749      ;
+; -0.830 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.750      ;
+; -0.829 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.747      ;
+; -0.829 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.749      ;
+; -0.828 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.748      ;
+; -0.828 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.081     ; 1.748      ;
+; -0.825 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 1.000        ; -0.081     ; 1.745      ;
+; -0.809 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 1.000        ; -0.082     ; 1.728      ;
+; -0.793 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.082     ; 1.712      ;
+; -0.791 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 1.000        ; -0.082     ; 1.710      ;
+; -0.757 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 1.000        ; -0.082     ; 1.676      ;
+; -0.739 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.083     ; 1.657      ;
+; -0.724 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[5]              ; clk          ; clk         ; 1.000        ; -0.081     ; 1.644      ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                         ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.452 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 0.000        ; 0.082      ; 0.746      ;
+; 0.453 ; spi_receiver:spi_interface|data_reg[7]       ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; spi_receiver:spi_interface|data_reg[6]       ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; spi_receiver:spi_interface|data_reg[5]       ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; spi_receiver:spi_interface|data_reg[4]       ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; spi_receiver:spi_interface|data_reg[3]       ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; spi_receiver:spi_interface|data_reg[2]       ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; spi_receiver:spi_interface|data_reg[1]       ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; spi_receiver:spi_interface|data_reg[0]       ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; spi_receiver:spi_interface|data_reg[8]       ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; spi_receiver:spi_interface|data_reg[9]       ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.464 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 0.000        ; 0.082      ; 0.758      ;
+; 0.501 ; spi_receiver:spi_interface|data_reg[7]       ; lcd_driver:lcd_module|db_reg[7]              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.794      ;
+; 0.501 ; spi_receiver:spi_interface|data_reg[5]       ; lcd_driver:lcd_module|db_reg[5]              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.794      ;
+; 0.501 ; spi_receiver:spi_interface|data_reg[4]       ; lcd_driver:lcd_module|db_reg[4]              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.794      ;
+; 0.502 ; spi_receiver:spi_interface|data_reg[2]       ; lcd_driver:lcd_module|db_reg[2]              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.795      ;
+; 0.502 ; spi_receiver:spi_interface|data_reg[8]       ; lcd_driver:lcd_module|en_reg                 ; clk          ; clk         ; 0.000        ; 0.081      ; 0.795      ;
+; 0.503 ; spi_receiver:spi_interface|data_reg[0]       ; lcd_driver:lcd_module|db_reg[0]              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.796      ;
+; 0.641 ; spi_receiver:spi_interface|data_reg[3]       ; lcd_driver:lcd_module|db_reg[3]              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.934      ;
+; 0.642 ; spi_receiver:spi_interface|data_reg[1]       ; lcd_driver:lcd_module|db_reg[1]              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.935      ;
+; 0.643 ; spi_receiver:spi_interface|data_reg[6]       ; lcd_driver:lcd_module|db_reg[6]              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.936      ;
+; 0.796 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 0.000        ; 0.082      ; 1.090      ;
+; 0.806 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.099      ;
+; 0.825 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.118      ;
+; 0.826 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.119      ;
+; 0.864 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 0.000        ; 0.082      ; 1.158      ;
+; 0.864 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 0.000        ; 0.082      ; 1.158      ;
+; 0.865 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 0.000        ; 0.082      ; 1.159      ;
+; 0.865 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 0.000        ; 0.082      ; 1.159      ;
+; 0.945 ; spi_receiver:spi_interface|data_reg[9]       ; lcd_driver:lcd_module|rs_reg                 ; clk          ; clk         ; 0.000        ; 0.083      ; 1.240      ;
+; 0.950 ; spi_receiver:spi_interface|state.ST_DONE     ; spi_receiver:spi_interface|done_reg          ; clk          ; clk         ; 0.000        ; 0.081      ; 1.243      ;
+; 0.955 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 0.000        ; 0.082      ; 1.249      ;
+; 0.980 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.274      ;
+; 0.991 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.284      ;
+; 1.019 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.311      ;
+; 1.021 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.313      ;
+; 1.027 ; spi_receiver:spi_interface|state.ST_DONE     ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.081      ; 1.320      ;
+; 1.028 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.322      ;
+; 1.031 ; spi_receiver:spi_interface|state.ST_DONE     ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.324      ;
+; 1.042 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.334      ;
+; 1.042 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.334      ;
+; 1.076 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 0.000        ; 0.082      ; 1.370      ;
+; 1.082 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.376      ;
+; 1.093 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.082      ; 1.387      ;
+; 1.214 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.508      ;
+; 1.235 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.527      ;
+; 1.243 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.535      ;
+; 1.247 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 0.000        ; 0.082      ; 1.541      ;
+; 1.249 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.543      ;
+; 1.251 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.082      ; 1.545      ;
+; 1.277 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.082      ; 1.571      ;
+; 1.283 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.577      ;
+; 1.284 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.578      ;
+; 1.286 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.580      ;
+; 1.331 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.079      ; 1.622      ;
+; 1.331 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 0.000        ; 0.079      ; 1.622      ;
+; 1.332 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 0.000        ; 0.079      ; 1.623      ;
+; 1.339 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.633      ;
+; 1.339 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.633      ;
+; 1.340 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.634      ;
+; 1.353 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[7]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.645      ;
+; 1.353 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[6]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.645      ;
+; 1.353 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[3]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.645      ;
+; 1.353 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[2]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.645      ;
+; 1.353 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|en_reg                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.645      ;
+; 1.354 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.079      ; 1.645      ;
+; 1.355 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 0.000        ; 0.079      ; 1.646      ;
+; 1.356 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 0.000        ; 0.079      ; 1.647      ;
+; 1.356 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.650      ;
+; 1.359 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.653      ;
+; 1.359 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.653      ;
+; 1.360 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.654      ;
+; 1.371 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.082      ; 1.665      ;
+; 1.396 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.690      ;
+; 1.401 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.693      ;
+; 1.402 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.694      ;
+; 1.403 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.695      ;
+; 1.403 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.082      ; 1.697      ;
+; 1.404 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.696      ;
+; 1.418 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.712      ;
+; 1.426 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[5]              ; clk          ; clk         ; 0.000        ; 0.082      ; 1.720      ;
+; 1.426 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[4]              ; clk          ; clk         ; 0.000        ; 0.082      ; 1.720      ;
+; 1.426 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[1]              ; clk          ; clk         ; 0.000        ; 0.082      ; 1.720      ;
+; 1.426 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[0]              ; clk          ; clk         ; 0.000        ; 0.082      ; 1.720      ;
+; 1.431 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 0.000        ; 0.082      ; 1.725      ;
+; 1.431 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 0.000        ; 0.082      ; 1.725      ;
+; 1.431 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 0.000        ; 0.082      ; 1.725      ;
+; 1.432 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 0.000        ; 0.082      ; 1.726      ;
+; 1.444 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.736      ;
+; 1.445 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.737      ;
+; 1.454 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.748      ;
+; 1.458 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.750      ;
+; 1.460 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.752      ;
+; 1.465 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.759      ;
+; 1.474 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.768      ;
+; 1.492 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.786      ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 379.51 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -1.635 ; -27.463           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.400 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -50.584                         ;
++-------+--------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                                          ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.635 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.564      ;
+; -1.634 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.563      ;
+; -1.633 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.562      ;
+; -1.631 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.560      ;
+; -1.593 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.522      ;
+; -1.593 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.522      ;
+; -1.592 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.521      ;
+; -1.592 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.521      ;
+; -1.371 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.300      ;
+; -1.371 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.300      ;
+; -1.370 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.299      ;
+; -1.370 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.299      ;
+; -1.317 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.073     ; 2.246      ;
+; -1.312 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 1.000        ; -0.073     ; 2.241      ;
+; -1.206 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.135      ;
+; -1.205 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.134      ;
+; -1.204 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.133      ;
+; -1.202 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.073     ; 2.131      ;
+; -1.136 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.073     ; 2.065      ;
+; -1.125 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|rs_reg                 ; clk          ; clk         ; 1.000        ; -0.073     ; 2.054      ;
+; -1.090 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 1.000        ; -0.073     ; 2.019      ;
+; -1.067 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.996      ;
+; -1.067 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.996      ;
+; -1.066 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.995      ;
+; -1.066 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.995      ;
+; -1.056 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.985      ;
+; -1.056 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.985      ;
+; -1.055 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.984      ;
+; -1.054 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.983      ;
+; -1.050 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.979      ;
+; -1.048 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.977      ;
+; -1.042 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.971      ;
+; -1.041 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.970      ;
+; -1.041 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.970      ;
+; -1.041 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.970      ;
+; -1.039 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.968      ;
+; -1.038 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.967      ;
+; -1.038 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.967      ;
+; -1.038 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.967      ;
+; -1.037 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.073     ; 1.966      ;
+; -1.034 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.963      ;
+; -1.030 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.073     ; 1.959      ;
+; -1.027 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 1.000        ; -0.073     ; 1.956      ;
+; -0.999 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.928      ;
+; -0.993 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.922      ;
+; -0.993 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.922      ;
+; -0.983 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.912      ;
+; -0.966 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 1.000        ; -0.073     ; 1.895      ;
+; -0.963 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.892      ;
+; -0.961 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.890      ;
+; -0.960 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.889      ;
+; -0.959 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.888      ;
+; -0.939 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.868      ;
+; -0.938 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.867      ;
+; -0.884 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.073     ; 1.813      ;
+; -0.876 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.805      ;
+; -0.875 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.804      ;
+; -0.875 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.804      ;
+; -0.875 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.073     ; 1.804      ;
+; -0.867 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.796      ;
+; -0.847 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.776      ;
+; -0.847 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.776      ;
+; -0.846 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.775      ;
+; -0.845 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.774      ;
+; -0.827 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.073     ; 1.756      ;
+; -0.821 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.750      ;
+; -0.819 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.748      ;
+; -0.813 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.742      ;
+; -0.807 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.736      ;
+; -0.807 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.736      ;
+; -0.805 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 1.000        ; -0.073     ; 1.734      ;
+; -0.794 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.723      ;
+; -0.793 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.722      ;
+; -0.793 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.722      ;
+; -0.778 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.707      ;
+; -0.776 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.073     ; 1.705      ;
+; -0.768 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.073     ; 1.697      ;
+; -0.760 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.689      ;
+; -0.758 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.074     ; 1.686      ;
+; -0.758 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.687      ;
+; -0.757 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.074     ; 1.685      ;
+; -0.756 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.074     ; 1.684      ;
+; -0.751 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.680      ;
+; -0.749 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.678      ;
+; -0.747 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.676      ;
+; -0.734 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.074     ; 1.662      ;
+; -0.734 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.074     ; 1.662      ;
+; -0.732 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.074     ; 1.660      ;
+; -0.729 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.658      ;
+; -0.728 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.657      ;
+; -0.724 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 1.000        ; -0.073     ; 1.653      ;
+; -0.699 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.628      ;
+; -0.698 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.073     ; 1.627      ;
+; -0.698 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 1.000        ; -0.073     ; 1.627      ;
+; -0.698 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.627      ;
+; -0.698 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.627      ;
+; -0.696 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 1.000        ; -0.073     ; 1.625      ;
+; -0.666 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 1.000        ; -0.073     ; 1.595      ;
+; -0.627 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.556      ;
+; -0.617 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.073     ; 1.546      ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                          ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.400 ; spi_receiver:spi_interface|data_reg[5]       ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; spi_receiver:spi_interface|data_reg[4]       ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; spi_receiver:spi_interface|data_reg[1]       ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; spi_receiver:spi_interface|data_reg[0]       ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 0.000        ; 0.074      ; 0.669      ;
+; 0.401 ; spi_receiver:spi_interface|data_reg[7]       ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; spi_receiver:spi_interface|data_reg[6]       ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; spi_receiver:spi_interface|data_reg[3]       ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; spi_receiver:spi_interface|data_reg[2]       ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; spi_receiver:spi_interface|data_reg[8]       ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; spi_receiver:spi_interface|data_reg[9]       ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.416 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.684      ;
+; 0.469 ; spi_receiver:spi_interface|data_reg[5]       ; lcd_driver:lcd_module|db_reg[5]              ; clk          ; clk         ; 0.000        ; 0.074      ; 0.738      ;
+; 0.469 ; spi_receiver:spi_interface|data_reg[4]       ; lcd_driver:lcd_module|db_reg[4]              ; clk          ; clk         ; 0.000        ; 0.074      ; 0.738      ;
+; 0.470 ; spi_receiver:spi_interface|data_reg[7]       ; lcd_driver:lcd_module|db_reg[7]              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.738      ;
+; 0.471 ; spi_receiver:spi_interface|data_reg[2]       ; lcd_driver:lcd_module|db_reg[2]              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.739      ;
+; 0.471 ; spi_receiver:spi_interface|data_reg[0]       ; lcd_driver:lcd_module|db_reg[0]              ; clk          ; clk         ; 0.000        ; 0.074      ; 0.740      ;
+; 0.471 ; spi_receiver:spi_interface|data_reg[8]       ; lcd_driver:lcd_module|en_reg                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.739      ;
+; 0.597 ; spi_receiver:spi_interface|data_reg[1]       ; lcd_driver:lcd_module|db_reg[1]              ; clk          ; clk         ; 0.000        ; 0.074      ; 0.866      ;
+; 0.598 ; spi_receiver:spi_interface|data_reg[3]       ; lcd_driver:lcd_module|db_reg[3]              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.866      ;
+; 0.599 ; spi_receiver:spi_interface|data_reg[6]       ; lcd_driver:lcd_module|db_reg[6]              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.867      ;
+; 0.744 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 0.000        ; 0.073      ; 1.012      ;
+; 0.749 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.018      ;
+; 0.770 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.039      ;
+; 0.771 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.039      ;
+; 0.771 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.039      ;
+; 0.771 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.040      ;
+; 0.772 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.040      ;
+; 0.772 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.040      ;
+; 0.843 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 0.000        ; 0.073      ; 1.111      ;
+; 0.866 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.135      ;
+; 0.873 ; spi_receiver:spi_interface|data_reg[9]       ; lcd_driver:lcd_module|rs_reg                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.141      ;
+; 0.875 ; spi_receiver:spi_interface|state.ST_DONE     ; spi_receiver:spi_interface|done_reg          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.143      ;
+; 0.914 ; spi_receiver:spi_interface|state.ST_DONE     ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.073      ; 1.182      ;
+; 0.915 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.184      ;
+; 0.917 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.186      ;
+; 0.919 ; spi_receiver:spi_interface|state.ST_DONE     ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.187      ;
+; 0.937 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.205      ;
+; 0.938 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.206      ;
+; 0.961 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.229      ;
+; 0.963 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.231      ;
+; 0.968 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.237      ;
+; 0.997 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.265      ;
+; 1.030 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.073      ; 1.298      ;
+; 1.082 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.351      ;
+; 1.097 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.365      ;
+; 1.103 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 0.000        ; 0.073      ; 1.371      ;
+; 1.110 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.378      ;
+; 1.112 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.073      ; 1.380      ;
+; 1.121 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.389      ;
+; 1.134 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.403      ;
+; 1.136 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.405      ;
+; 1.142 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.410      ;
+; 1.178 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.446      ;
+; 1.179 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.447      ;
+; 1.180 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.448      ;
+; 1.182 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.073      ; 1.450      ;
+; 1.199 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.467      ;
+; 1.200 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.468      ;
+; 1.200 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.468      ;
+; 1.208 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.477      ;
+; 1.208 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.477      ;
+; 1.208 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.477      ;
+; 1.218 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.487      ;
+; 1.218 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.487      ;
+; 1.220 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.489      ;
+; 1.224 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.493      ;
+; 1.238 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[7]              ; clk          ; clk         ; 0.000        ; 0.073      ; 1.506      ;
+; 1.238 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[6]              ; clk          ; clk         ; 0.000        ; 0.073      ; 1.506      ;
+; 1.238 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[3]              ; clk          ; clk         ; 0.000        ; 0.073      ; 1.506      ;
+; 1.238 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[2]              ; clk          ; clk         ; 0.000        ; 0.073      ; 1.506      ;
+; 1.238 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|en_reg                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.506      ;
+; 1.249 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.517      ;
+; 1.250 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.518      ;
+; 1.264 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.073      ; 1.532      ;
+; 1.272 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.541      ;
+; 1.281 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.549      ;
+; 1.283 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.551      ;
+; 1.288 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.556      ;
+; 1.288 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.556      ;
+; 1.289 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.557      ;
+; 1.289 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.557      ;
+; 1.292 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.073      ; 1.560      ;
+; 1.297 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.566      ;
+; 1.307 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[5]              ; clk          ; clk         ; 0.000        ; 0.074      ; 1.576      ;
+; 1.307 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[4]              ; clk          ; clk         ; 0.000        ; 0.074      ; 1.576      ;
+; 1.307 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[1]              ; clk          ; clk         ; 0.000        ; 0.074      ; 1.576      ;
+; 1.307 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[0]              ; clk          ; clk         ; 0.000        ; 0.074      ; 1.576      ;
+; 1.315 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.583      ;
+; 1.315 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.584      ;
+; 1.316 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.584      ;
+; 1.320 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.588      ;
+; 1.322 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.590      ;
+; 1.325 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.594      ;
+; 1.335 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.604      ;
+; 1.341 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 0.000        ; 0.074      ; 1.610      ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -0.286 ; -1.356            ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.186 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -44.398                         ;
++-------+--------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                                          ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.286 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.236      ;
+; -0.286 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.236      ;
+; -0.285 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.235      ;
+; -0.283 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.233      ;
+; -0.247 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.197      ;
+; -0.245 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.195      ;
+; -0.245 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.195      ;
+; -0.245 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.195      ;
+; -0.144 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.094      ;
+; -0.142 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.092      ;
+; -0.142 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.092      ;
+; -0.142 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.092      ;
+; -0.115 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.065      ;
+; -0.101 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.037     ; 1.051      ;
+; -0.072 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.022      ;
+; -0.072 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.022      ;
+; -0.071 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.021      ;
+; -0.069 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.037     ; 1.019      ;
+; -0.012 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.962      ;
+; 0.002  ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.037     ; 0.948      ;
+; 0.003  ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.947      ;
+; 0.005  ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.945      ;
+; 0.005  ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.945      ;
+; 0.006  ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.944      ;
+; 0.008  ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.942      ;
+; 0.011  ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.939      ;
+; 0.013  ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.937      ;
+; 0.013  ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.937      ;
+; 0.013  ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.937      ;
+; 0.017  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.933      ;
+; 0.019  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.931      ;
+; 0.019  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.931      ;
+; 0.019  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.931      ;
+; 0.023  ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.927      ;
+; 0.039  ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|rs_reg                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.911      ;
+; 0.049  ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.901      ;
+; 0.053  ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.896      ;
+; 0.054  ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.895      ;
+; 0.056  ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.894      ;
+; 0.063  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.037     ; 0.887      ;
+; 0.064  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.885      ;
+; 0.065  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.884      ;
+; 0.066  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.883      ;
+; 0.066  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.883      ;
+; 0.069  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.880      ;
+; 0.070  ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.037     ; 0.880      ;
+; 0.071  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.878      ;
+; 0.088  ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.861      ;
+; 0.090  ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.859      ;
+; 0.092  ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.857      ;
+; 0.094  ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.855      ;
+; 0.100  ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.850      ;
+; 0.114  ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.836      ;
+; 0.120  ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.829      ;
+; 0.121  ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.828      ;
+; 0.125  ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.825      ;
+; 0.126  ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.824      ;
+; 0.128  ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.037     ; 0.822      ;
+; 0.128  ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.822      ;
+; 0.130  ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.820      ;
+; 0.130  ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.820      ;
+; 0.130  ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.820      ;
+; 0.131  ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.819      ;
+; 0.131  ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.819      ;
+; 0.134  ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.815      ;
+; 0.135  ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.814      ;
+; 0.136  ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.813      ;
+; 0.136  ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.813      ;
+; 0.143  ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.037     ; 0.807      ;
+; 0.147  ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.803      ;
+; 0.151  ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.037     ; 0.799      ;
+; 0.155  ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.794      ;
+; 0.157  ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.792      ;
+; 0.159  ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.037     ; 0.791      ;
+; 0.159  ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.791      ;
+; 0.166  ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.783      ;
+; 0.167  ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.782      ;
+; 0.167  ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.782      ;
+; 0.168  ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.781      ;
+; 0.168  ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.781      ;
+; 0.172  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.778      ;
+; 0.174  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.776      ;
+; 0.175  ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.775      ;
+; 0.176  ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.773      ;
+; 0.178  ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.771      ;
+; 0.184  ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.765      ;
+; 0.185  ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.764      ;
+; 0.186  ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.763      ;
+; 0.191  ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 1.000        ; -0.037     ; 0.759      ;
+; 0.192  ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.758      ;
+; 0.193  ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.757      ;
+; 0.194  ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.756      ;
+; 0.194  ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.756      ;
+; 0.194  ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.756      ;
+; 0.195  ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.755      ;
+; 0.195  ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 1.000        ; -0.037     ; 0.755      ;
+; 0.212  ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 1.000        ; -0.037     ; 0.738      ;
+; 0.215  ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 1.000        ; -0.037     ; 0.735      ;
+; 0.217  ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.732      ;
+; 0.219  ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 1.000        ; -0.038     ; 0.730      ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                          ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.186 ; spi_receiver:spi_interface|data_reg[7]       ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|data_reg[6]       ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|data_reg[5]       ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|data_reg[4]       ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|data_reg[3]       ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|data_reg[2]       ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|data_reg[1]       ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|data_reg[0]       ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|data_reg[8]       ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|data_reg[9]       ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.193 ; spi_receiver:spi_interface|data_reg[7]       ; lcd_driver:lcd_module|db_reg[7]              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.314      ;
+; 0.193 ; spi_receiver:spi_interface|data_reg[5]       ; lcd_driver:lcd_module|db_reg[5]              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.314      ;
+; 0.193 ; spi_receiver:spi_interface|data_reg[4]       ; lcd_driver:lcd_module|db_reg[4]              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.314      ;
+; 0.193 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.314      ;
+; 0.194 ; spi_receiver:spi_interface|data_reg[2]       ; lcd_driver:lcd_module|db_reg[2]              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.315      ;
+; 0.194 ; spi_receiver:spi_interface|data_reg[8]       ; lcd_driver:lcd_module|en_reg                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.315      ;
+; 0.195 ; spi_receiver:spi_interface|data_reg[0]       ; lcd_driver:lcd_module|db_reg[0]              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.316      ;
+; 0.252 ; spi_receiver:spi_interface|data_reg[3]       ; lcd_driver:lcd_module|db_reg[3]              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.373      ;
+; 0.252 ; spi_receiver:spi_interface|data_reg[1]       ; lcd_driver:lcd_module|db_reg[1]              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.373      ;
+; 0.253 ; spi_receiver:spi_interface|data_reg[6]       ; lcd_driver:lcd_module|db_reg[6]              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.374      ;
+; 0.325 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 0.000        ; 0.037      ; 0.446      ;
+; 0.327 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.448      ;
+; 0.332 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.453      ;
+; 0.333 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.454      ;
+; 0.348 ; spi_receiver:spi_interface|data_reg[9]       ; lcd_driver:lcd_module|rs_reg                 ; clk          ; clk         ; 0.000        ; 0.038      ; 0.470      ;
+; 0.349 ; spi_receiver:spi_interface|state.ST_DONE     ; spi_receiver:spi_interface|done_reg          ; clk          ; clk         ; 0.000        ; 0.037      ; 0.470      ;
+; 0.349 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.470      ;
+; 0.349 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.470      ;
+; 0.350 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.471      ;
+; 0.350 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.471      ;
+; 0.374 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 0.000        ; 0.037      ; 0.495      ;
+; 0.383 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.504      ;
+; 0.387 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.508      ;
+; 0.393 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.514      ;
+; 0.394 ; spi_receiver:spi_interface|state.ST_DONE     ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.037      ; 0.515      ;
+; 0.398 ; spi_receiver:spi_interface|state.ST_DONE     ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.519      ;
+; 0.404 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.524      ;
+; 0.406 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.526      ;
+; 0.413 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.533      ;
+; 0.414 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.534      ;
+; 0.426 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.547      ;
+; 0.432 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.553      ;
+; 0.432 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.037      ; 0.553      ;
+; 0.474 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.595      ;
+; 0.482 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_SCK_FALL ; clk          ; clk         ; 0.000        ; 0.037      ; 0.603      ;
+; 0.484 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.604      ;
+; 0.487 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.608      ;
+; 0.489 ; spi_receiver:spi_interface|cs_reg            ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.037      ; 0.610      ;
+; 0.493 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.613      ;
+; 0.507 ; spi_receiver:spi_interface|state.ST_SCK_FALL ; spi_receiver:spi_interface|state.ST_IDLE     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.628      ;
+; 0.513 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.634      ;
+; 0.514 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.635      ;
+; 0.520 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.641      ;
+; 0.520 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.641      ;
+; 0.522 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.643      ;
+; 0.524 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.645      ;
+; 0.532 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.652      ;
+; 0.533 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.653      ;
+; 0.533 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.653      ;
+; 0.537 ; spi_receiver:spi_interface|sck_reg           ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.037      ; 0.658      ;
+; 0.538 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.658      ;
+; 0.539 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.659      ;
+; 0.539 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.660      ;
+; 0.539 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.660      ;
+; 0.540 ; spi_receiver:spi_interface|mosi_reg          ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.660      ;
+; 0.541 ; spi_receiver:spi_interface|state.ST_SCK_RISE ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.662      ;
+; 0.550 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.671      ;
+; 0.554 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[7]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.674      ;
+; 0.554 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[6]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.674      ;
+; 0.554 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[3]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.674      ;
+; 0.554 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[2]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.674      ;
+; 0.554 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|en_reg                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.674      ;
+; 0.554 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[2]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.674      ;
+; 0.556 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[6]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.676      ;
+; 0.559 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.037      ; 0.680      ;
+; 0.559 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[5]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.680      ;
+; 0.563 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[8]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.683      ;
+; 0.564 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[9]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.684      ;
+; 0.569 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.689      ;
+; 0.569 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|state.ST_SCK_RISE ; clk          ; clk         ; 0.000        ; 0.037      ; 0.690      ;
+; 0.569 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[1]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.690      ;
+; 0.571 ; spi_receiver:spi_interface|index_reg[0]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.691      ;
+; 0.571 ; spi_receiver:spi_interface|index_reg[3]      ; spi_receiver:spi_interface|state.ST_DONE     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.692      ;
+; 0.575 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[1]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.696      ;
+; 0.575 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[2]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.696      ;
+; 0.575 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[0]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.696      ;
+; 0.577 ; spi_receiver:spi_interface|state.ST_IDLE     ; spi_receiver:spi_interface|index_reg[3]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.698      ;
+; 0.578 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[5]              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.699      ;
+; 0.578 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[4]              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.699      ;
+; 0.578 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[1]              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.699      ;
+; 0.578 ; spi_receiver:spi_interface|done_reg          ; lcd_driver:lcd_module|db_reg[0]              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.699      ;
+; 0.581 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[0]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.702      ;
+; 0.584 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[3]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.704      ;
+; 0.586 ; spi_receiver:spi_interface|index_reg[1]      ; spi_receiver:spi_interface|data_reg[7]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.706      ;
+; 0.593 ; spi_receiver:spi_interface|index_reg[2]      ; spi_receiver:spi_interface|data_reg[4]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.714      ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.916  ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -1.916  ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -31.644 ; 0.0   ; 0.0      ; 0.0     ; -50.584             ;
+;  clk             ; -31.644 ; 0.000 ; N/A      ; N/A     ; -50.584             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; rw            ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; rs            ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; en            ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; db[0]         ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; db[1]         ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; db[2]         ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; db[3]         ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; db[4]         ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; db[5]         ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; db[6]         ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; db[7]         ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; rst_n                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; mosi                    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; sck                     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; cs                      ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_DATA0~          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; rw            ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
+; rs            ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
+; en            ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
+; db[0]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
+; db[1]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.13 V              ; -0.117 V            ; 0.15 V                               ; 0.263 V                              ; 6.31e-10 s                  ; 4.46e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 6.38e-09 V                  ; 3.13 V             ; -0.117 V           ; 0.15 V                              ; 0.263 V                             ; 6.31e-10 s                 ; 4.46e-10 s                 ; No                        ; No                        ;
+; db[2]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
+; db[3]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.13 V              ; -0.117 V            ; 0.15 V                               ; 0.263 V                              ; 6.31e-10 s                  ; 4.46e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 6.38e-09 V                  ; 3.13 V             ; -0.117 V           ; 0.15 V                              ; 0.263 V                             ; 6.31e-10 s                 ; 4.46e-10 s                 ; No                        ; No                        ;
+; db[4]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.13 V              ; -0.117 V            ; 0.15 V                               ; 0.263 V                              ; 6.31e-10 s                  ; 4.46e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 6.38e-09 V                  ; 3.13 V             ; -0.117 V           ; 0.15 V                              ; 0.263 V                             ; 6.31e-10 s                 ; 4.46e-10 s                 ; No                        ; No                        ;
+; db[5]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.12 V              ; -0.0818 V           ; 0.205 V                              ; 0.244 V                              ; 8.86e-10 s                  ; 6.56e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 6.38e-09 V                  ; 3.12 V             ; -0.0818 V          ; 0.205 V                             ; 0.244 V                             ; 8.86e-10 s                 ; 6.56e-10 s                 ; No                        ; No                        ;
+; db[6]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.09 V              ; -0.011 V            ; 0.226 V                              ; 0.296 V                              ; 4.86e-09 s                  ; 3.55e-09 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 6.38e-09 V                  ; 3.09 V             ; -0.011 V           ; 0.226 V                             ; 0.296 V                             ; 4.86e-09 s                 ; 3.55e-09 s                 ; Yes                       ; Yes                       ;
+; db[7]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.12 V              ; -0.0818 V           ; 0.205 V                              ; 0.244 V                              ; 8.86e-10 s                  ; 6.56e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 6.38e-09 V                  ; 3.12 V             ; -0.0818 V          ; 0.205 V                             ; 0.244 V                             ; 8.86e-10 s                 ; 6.56e-10 s                 ; No                        ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.51e-09 V                   ; 3.18 V              ; -0.157 V            ; 0.147 V                              ; 0.259 V                              ; 2.81e-10 s                  ; 2.53e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.51e-09 V                  ; 3.18 V             ; -0.157 V           ; 0.147 V                             ; 0.259 V                             ; 2.81e-10 s                 ; 2.53e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; rw            ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; rs            ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; en            ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; db[0]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; db[1]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.11 V              ; -0.0624 V           ; 0.233 V                              ; 0.172 V                              ; 6.86e-10 s                  ; 6.33e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 5.04e-07 V                  ; 3.11 V             ; -0.0624 V          ; 0.233 V                             ; 0.172 V                             ; 6.86e-10 s                 ; 6.33e-10 s                 ; Yes                       ; No                        ;
+; db[2]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; db[3]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.11 V              ; -0.0624 V           ; 0.233 V                              ; 0.172 V                              ; 6.86e-10 s                  ; 6.33e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 5.04e-07 V                  ; 3.11 V             ; -0.0624 V          ; 0.233 V                             ; 0.172 V                             ; 6.86e-10 s                 ; 6.33e-10 s                 ; Yes                       ; No                        ;
+; db[4]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.11 V              ; -0.0624 V           ; 0.233 V                              ; 0.172 V                              ; 6.86e-10 s                  ; 6.33e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 5.04e-07 V                  ; 3.11 V             ; -0.0624 V          ; 0.233 V                             ; 0.172 V                             ; 6.86e-10 s                 ; 6.33e-10 s                 ; Yes                       ; No                        ;
+; db[5]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.11 V              ; -0.0469 V           ; 0.191 V                              ; 0.215 V                              ; 1.08e-09 s                  ; 8.62e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 5.04e-07 V                  ; 3.11 V             ; -0.0469 V          ; 0.191 V                             ; 0.215 V                             ; 1.08e-09 s                 ; 8.62e-10 s                 ; Yes                       ; No                        ;
+; db[6]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.08 V              ; -0.0053 V           ; 0.206 V                              ; 0.247 V                              ; 5.77e-09 s                  ; 4.45e-09 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 5.04e-07 V                  ; 3.08 V             ; -0.0053 V          ; 0.206 V                             ; 0.247 V                             ; 5.77e-09 s                 ; 4.45e-09 s                 ; Yes                       ; Yes                       ;
+; db[7]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.11 V              ; -0.0469 V           ; 0.191 V                              ; 0.215 V                              ; 1.08e-09 s                  ; 8.62e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 5.04e-07 V                  ; 3.11 V             ; -0.0469 V          ; 0.191 V                             ; 0.215 V                             ; 1.08e-09 s                 ; 8.62e-10 s                 ; Yes                       ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.6e-07 V                    ; 3.13 V              ; -0.103 V            ; 0.164 V                              ; 0.134 V                              ; 3.14e-10 s                  ; 4.05e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.6e-07 V                   ; 3.13 V             ; -0.103 V           ; 0.164 V                             ; 0.134 V                             ; 3.14e-10 s                 ; 4.05e-10 s                 ; Yes                       ; No                        ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; rw            ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; rs            ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; en            ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; db[0]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; db[1]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.6 V               ; -0.127 V            ; 0.302 V                              ; 0.21 V                               ; 4.55e-10 s                  ; 4.11e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.6 V              ; -0.127 V           ; 0.302 V                             ; 0.21 V                              ; 4.55e-10 s                 ; 4.11e-10 s                 ; No                        ; No                        ;
+; db[2]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; db[3]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.6 V               ; -0.127 V            ; 0.302 V                              ; 0.21 V                               ; 4.55e-10 s                  ; 4.11e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.6 V              ; -0.127 V           ; 0.302 V                             ; 0.21 V                              ; 4.55e-10 s                 ; 4.11e-10 s                 ; No                        ; No                        ;
+; db[4]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.6 V               ; -0.127 V            ; 0.302 V                              ; 0.21 V                               ; 4.55e-10 s                  ; 4.11e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.6 V              ; -0.127 V           ; 0.302 V                             ; 0.21 V                              ; 4.55e-10 s                 ; 4.11e-10 s                 ; No                        ; No                        ;
+; db[5]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.57 V              ; -0.0855 V           ; 0.315 V                              ; 0.175 V                              ; 6.79e-10 s                  ; 6.15e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.57 V             ; -0.0855 V          ; 0.315 V                             ; 0.175 V                             ; 6.79e-10 s                 ; 6.15e-10 s                 ; No                        ; No                        ;
+; db[6]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.48 V              ; -0.0162 V           ; 0.354 V                              ; 0.317 V                              ; 3.88e-09 s                  ; 3.06e-09 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.48 V             ; -0.0162 V          ; 0.354 V                             ; 0.317 V                             ; 3.88e-09 s                 ; 3.06e-09 s                 ; No                        ; No                        ;
+; db[7]         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.57 V              ; -0.0855 V           ; 0.315 V                              ; 0.175 V                              ; 6.79e-10 s                  ; 6.15e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.57 V             ; -0.0855 V          ; 0.315 V                             ; 0.175 V                             ; 6.79e-10 s                 ; 6.15e-10 s                 ; No                        ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 6.54e-08 V                   ; 3.66 V              ; -0.26 V             ; 0.41 V                               ; 0.32 V                               ; 1.57e-10 s                  ; 2.15e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 6.54e-08 V                  ; 3.66 V             ; -0.26 V            ; 0.41 V                              ; 0.32 V                              ; 1.57e-10 s                 ; 2.15e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 193      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 193      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 35    ; 35   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; cs         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; mosi       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sck        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; db[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; en          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rs          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; cs         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; mosi       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sck        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; db[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; db[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; en          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rs          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Apr 17 11:16:25 2024
+Info: Command: quartus_sta spi_lcd_main -c spi_lcd_main
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'spi_lcd_main.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.916
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.916             -31.644 clk 
+Info (332146): Worst-case hold slack is 0.452
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.452               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -50.584 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.635
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.635             -27.463 clk 
+Info (332146): Worst-case hold slack is 0.400
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.400               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -50.584 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.286
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.286              -1.356 clk 
+Info (332146): Worst-case hold slack is 0.186
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.186               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -44.398 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4725 megabytes
+    Info: Processing ended: Wed Apr 17 11:16:27 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

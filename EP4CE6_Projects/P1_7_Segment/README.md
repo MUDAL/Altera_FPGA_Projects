@@ -10,7 +10,7 @@
 
 ## How to use  
 - Clone the ``Altera_FPGA_Projects`` repository  
-- Open the the ``EP4CE6_Projects/P1_7_Segment/`` directory  
+- Open the ``EP4CE6_Projects/P1_7_Segment/`` directory  
 - Open the ``seg_display.qpf`` project file  
 - Intel Quartus Prime should open after the previous step  
 - After Quartus opens, click on the ``Processing`` tab  
