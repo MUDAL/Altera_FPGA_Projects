@@ -2,9 +2,7 @@
 ## Description  
 This task involves configuring an FPGA as a serial-parallel converter that receives data from a microcontroller via SPI, decodes the data, and generates the appropriate signals to drive a 16x2 LCD module. The microcontroller encodes the data and instructions required to drive the LCD in a 16-bit unsigned integer and transmits the data MSB first using the SPI protocol. An SPI mode of 0 (i.e. CPOL = 0 and CPHA = 0) was used in the project. For more information on how SPI communication works, kindly refer to the ``Helpful resources`` section of this README.md document.  
 
-A simple two-digit counter (0 to 99) is implemented in software on the microcontroller. The counter's value is updated every second  
-and transmitted to the FPGA to drive the LCD. The following message is displayed on the LCD: ``Count = <x>``, where ``<x>`` is the  
-current value of the counter which gets incremented every second and stops at ``99``.  
+A simple two-digit counter (0 to 99) is implemented in software on the microcontroller. The counter's value is updated every second and transmitted to the FPGA to drive the LCD. The following message is displayed on the LCD: ``Count = <x>``, where ``<x>`` is the current value of the counter which gets incremented every second and stops at ``99``.  
 
 ## Tools  
 - EP4CE6E22C8N Cyclone IV FPGA development board
