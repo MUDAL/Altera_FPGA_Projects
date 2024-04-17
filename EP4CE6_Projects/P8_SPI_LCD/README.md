@@ -1,7 +1,6 @@
 # Interfacing an FPGA with a microcontroller and a 16x2 LCD      
 ## Description  
-This task involves configuring an FPGA as a serial-parallel converter that receives data from a microcontroller via SPI, decodes the data,   
-and generates the appropriate signals to drive a 16x2 LCD module.  
+This task involves configuring an FPGA as a serial-parallel converter that receives data from a microcontroller via SPI, decodes the data, and generates the appropriate signals to drive a 16x2 LCD module.  
 
 ## Tools  
 - EP4CE6E22C8N Cyclone IV FPGA development board
