@@ -37,8 +37,8 @@ This task involves configuring an FPGA as a serial-parallel converter that recei
 - Check the ``Location`` column in the image below for the pin mappings used in this project.   
 ![PP_SPI_LCD](https://github.com/MUDAL/FPGA_SPI_LCD/assets/46250887/ddd27018-4065-41d5-a454-d9ae979e40a4)  
 
-## SPI Decoding with Saleae Logic Analyzer    
-![Screenshot (493)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/0d1882d4-4e6f-4913-ab79-0ffafae1e332)  
+## SPI Decoding with Saleae Logic Analyzer      
+![LA_SPI](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/64c4b5ef-a050-4d47-acdc-c03bcdfece85)  
 
 ## Demo  
 [Video Demo](https://drive.google.com/file/d/1cUtLpPchJwC3wovYJaJSDl85Mg2qt8qY/view?usp=sharing)      
