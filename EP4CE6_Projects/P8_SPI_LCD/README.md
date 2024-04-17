@@ -36,12 +36,12 @@ A simple two-digit counter (0 to 99) is implemented in software on the microcont
 - Test vectors are generated using the python script in each ``simulation/file/`` directory  
 
 ## Pinouts  
-- Check the ``Location`` column in the image below for the pin mappings used in this project.   
-![PP_SPI_LCD](https://github.com/MUDAL/FPGA_SPI_LCD/assets/46250887/ddd27018-4065-41d5-a454-d9ae979e40a4)  
+- Check the ``Location`` column in the image below for the pin mappings used in this project.     
+![PP_SPI_LCD](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/77cd61f3-bf65-4f05-9a35-cfdccdb77904)  
 
 ## SPI Decoding with Saleae Logic Analyzer  
 [Link to Logic Analyzer's SPI Scan](https://drive.google.com/file/d/1qqzeK3HX5zqDWV7fekwfmXIulcjnjjfN/view?usp=sharing)  
-![LA_SPI](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/64c4b5ef-a050-4d47-acdc-c03bcdfece85)  
+![Screenshot (493)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/9058bcd0-0be6-43cf-a397-4fa16104684b)  
 
 ## Demo  
 [Video Demo](https://drive.google.com/file/d/1cUtLpPchJwC3wovYJaJSDl85Mg2qt8qY/view?usp=sharing)      
