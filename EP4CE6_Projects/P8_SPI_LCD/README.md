@@ -48,4 +48,4 @@ This task involves configuring an FPGA as a serial-parallel converter that recei
 - [Wait Statements in VHDL for Testbenches](https://vhdlwhiz.com/wait-on-wait-until/)     
 - [HD44780 Datasheet](https://drive.google.com/file/d/1kYVwqbIjYVIVPkjs03y40AUIAiwOctcV/view?usp=drive_link)
 - [STM32F401RE Reference Manual](https://drive.google.com/file/d/1LK3bwaFZ2M6wbdH5Iwcwpu26L6r79ED5/view?usp=sharing)  
-- [STM32F401RE User Manual](https://drive.google.com/file/d/1BZInK09INmOfoSB23rfxrVDFSr6pHv2E/view?usp=sharing)  
+- [STM32F401RE Nucleo Board User Manual](https://drive.google.com/file/d/1BZInK09INmOfoSB23rfxrVDFSr6pHv2E/view?usp=sharing)  
