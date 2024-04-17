@@ -4,7 +4,7 @@ This task involves configuring an FPGA as a serial-parallel converter that recei
 
 ## Tools  
 - EP4CE6E22C8N Cyclone IV FPGA development board
-- A microcontroller (an STM32F401RE Nucleo board was used)
+- A Microcontroller (an STM32F401RE Nucleo board was used)
 - STM32CubeIDE (v1.6.0 was used)  
 - 16x2 LCD  
 - Intel Quartus Prime 20.1
@@ -37,7 +37,7 @@ This task involves configuring an FPGA as a serial-parallel converter that recei
 - Check the ``Location`` column in the image below for the pin mappings used in this project.   
 ![PP_SPI_LCD](https://github.com/MUDAL/FPGA_SPI_LCD/assets/46250887/ddd27018-4065-41d5-a454-d9ae979e40a4)  
 
-## SPI Decoding with Saleae Logic Analyzer      
+## SPI Decoding with Saleae Logic Analyzer  
 ![LA_SPI](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/64c4b5ef-a050-4d47-acdc-c03bcdfece85)  
 
 ## Demo  
