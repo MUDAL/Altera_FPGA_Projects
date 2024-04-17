@@ -34,13 +34,13 @@ display when pressed.
 
 ## Pinouts  
 - Check the ``Location`` column in the image below for the pin mappings used in this project.   
-![ir_lcd_main](https://github.com/MUDAL/FPGA_TL1838/assets/46250887/a908aa00-8382-4084-9603-6c17a01d2513)
+![ir_lcd_main](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/41ac8c2d-b343-4167-b42b-620e50b5457f)   
 
-## NEC protocol decoding with a DSO150 oscilloscope   
-![NEC](https://github.com/MUDAL/FPGA_TL1838/assets/46250887/5df4e43c-4808-4f70-9709-6e8c11824f47)   
+## NEC protocol decoding with a DSO150 oscilloscope     
+![NEC](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/8e3bbd63-6ec4-4dc6-a570-4563cf178864)  
 
-## Setup   
-![20240410_083308](https://github.com/MUDAL/FPGA_TL1838/assets/46250887/a429ddeb-845c-4126-b02c-ebc059c2e42b)  
+## Setup    
+![20240410_083308](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/13abb2c0-a762-499d-b388-083469d9e9a7)  
 
 ## Demo  
 [Video Demo](https://drive.google.com/file/d/16wB_Ut3Pbu6KI1LPfc0oO00kMDnGC6wa/view?usp=sharing)    
