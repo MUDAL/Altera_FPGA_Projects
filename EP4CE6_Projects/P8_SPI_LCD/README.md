@@ -45,7 +45,7 @@ This task involves configuring an FPGA as a serial-parallel converter that recei
 [Video Demo](https://drive.google.com/file/d/1cUtLpPchJwC3wovYJaJSDl85Mg2qt8qY/view?usp=sharing)      
 
 ## Helpful resources  
-- [SPI Protocol](https://youtu.be/0nVNwozXsIc?si=wSMJ1dM3-kxuAmv1)   
+- [Understanding the SPI Protocol](https://youtu.be/0nVNwozXsIc?si=wSMJ1dM3-kxuAmv1)   
 - [Wait Statements in VHDL for Testbenches](https://vhdlwhiz.com/wait-on-wait-until/)     
 - [HD44780 Datasheet](https://drive.google.com/file/d/1kYVwqbIjYVIVPkjs03y40AUIAiwOctcV/view?usp=drive_link)
 - [STM32F401RE Reference Manual](https://drive.google.com/file/d/1LK3bwaFZ2M6wbdH5Iwcwpu26L6r79ED5/view?usp=sharing)  
