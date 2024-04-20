@@ -1,5 +1,5 @@
 Fitter report for digital_thermometer
-Fri Apr 12 02:23:38 2024
+Sat Apr 20 12:52:04 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -68,14 +68,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Fri Apr 12 02:23:38 2024       ;
+; Fitter Status                      ; Successful - Sat Apr 20 12:52:04 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; digital_thermometer                         ;
 ; Top-level Entity Name              ; digital_thermometer                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 229 / 6,272 ( 4 % )                         ;
+; Total logic elements               ; 231 / 6,272 ( 4 % )                         ;
 ;     Total combinational functions  ; 227 / 6,272 ( 4 % )                         ;
 ;     Dedicated logic registers      ; 105 / 6,272 ( 2 % )                         ;
 ; Total registers                    ; 105                                         ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.1%      ;
+;     Processor 2            ;   1.4%      ;
 +----------------------------+-------------+
 
 
@@ -221,16 +221,16 @@ The pin-out file can be found in L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_
 +---------------------------------------------+---------------------+
 ; Resource                                    ; Usage               ;
 +---------------------------------------------+---------------------+
-; Total logic elements                        ; 229 / 6,272 ( 4 % ) ;
-;     -- Combinational with no register       ; 124                 ;
-;     -- Register only                        ; 2                   ;
-;     -- Combinational with a register        ; 103                 ;
+; Total logic elements                        ; 231 / 6,272 ( 4 % ) ;
+;     -- Combinational with no register       ; 126                 ;
+;     -- Register only                        ; 4                   ;
+;     -- Combinational with a register        ; 101                 ;
 ;                                             ;                     ;
 ; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 92                  ;
-;     -- 3 input functions                    ; 32                  ;
-;     -- <=2 input functions                  ; 103                 ;
-;     -- Register only                        ; 2                   ;
+;     -- 4 input functions                    ; 94                  ;
+;     -- 3 input functions                    ; 33                  ;
+;     -- <=2 input functions                  ; 100                 ;
+;     -- Register only                        ; 4                   ;
 ;                                             ;                     ;
 ; Logic elements by mode                      ;                     ;
 ;     -- normal mode                          ; 164                 ;
@@ -240,7 +240,7 @@ The pin-out file can be found in L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_
 ;     -- Dedicated logic registers            ; 105 / 6,272 ( 2 % ) ;
 ;     -- I/O registers                        ; 0 / 412 ( 0 % )     ;
 ;                                             ;                     ;
-; Total LABs:  partially or completely used   ; 16 / 392 ( 4 % )    ;
+; Total LABs:  partially or completely used   ; 17 / 392 ( 4 % )    ;
 ; Virtual pins                                ; 0                   ;
 ; I/O pins                                    ; 16 / 92 ( 17 % )    ;
 ;     -- Clock pins                           ; 2 / 3 ( 67 % )      ;
@@ -258,12 +258,12 @@ The pin-out file can be found in L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )       ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )       ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )       ;
-; Average interconnect usage (total/H/V)      ; 0.3% / 0.3% / 0.2%  ;
-; Peak interconnect usage (total/H/V)         ; 0.7% / 0.9% / 0.5%  ;
+; Average interconnect usage (total/H/V)      ; 0.4% / 0.5% / 0.4%  ;
+; Peak interconnect usage (total/H/V)         ; 1.8% / 1.6% / 2.1%  ;
 ; Maximum fan-out                             ; 105                 ;
 ; Highest non-global fan-out                  ; 18                  ;
-; Total fan-out                               ; 1051                ;
-; Average fan-out                             ; 2.77                ;
+; Total fan-out                               ; 1058                ;
+; Average fan-out                             ; 2.78                ;
 +---------------------------------------------+---------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -276,16 +276,16 @@ The pin-out file can be found in L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_
 +---------------------------------------------+--------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                ; Low                            ;
 ;                                             ;                    ;                                ;
-; Total logic elements                        ; 229 / 6272 ( 4 % ) ; 0 / 6272 ( 0 % )               ;
-;     -- Combinational with no register       ; 124                ; 0                              ;
-;     -- Register only                        ; 2                  ; 0                              ;
-;     -- Combinational with a register        ; 103                ; 0                              ;
+; Total logic elements                        ; 231 / 6272 ( 4 % ) ; 0 / 6272 ( 0 % )               ;
+;     -- Combinational with no register       ; 126                ; 0                              ;
+;     -- Register only                        ; 4                  ; 0                              ;
+;     -- Combinational with a register        ; 101                ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Logic element usage by number of LUT inputs ;                    ;                                ;
-;     -- 4 input functions                    ; 92                 ; 0                              ;
-;     -- 3 input functions                    ; 32                 ; 0                              ;
-;     -- <=2 input functions                  ; 103                ; 0                              ;
-;     -- Register only                        ; 2                  ; 0                              ;
+;     -- 4 input functions                    ; 94                 ; 0                              ;
+;     -- 3 input functions                    ; 33                 ; 0                              ;
+;     -- <=2 input functions                  ; 100                ; 0                              ;
+;     -- Register only                        ; 4                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Logic elements by mode                      ;                    ;                                ;
 ;     -- normal mode                          ; 164                ; 0                              ;
@@ -295,7 +295,7 @@ The pin-out file can be found in L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_
 ;     -- Dedicated logic registers            ; 105 / 6272 ( 2 % ) ; 0 / 6272 ( 0 % )               ;
 ;     -- I/O registers                        ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
-; Total LABs:  partially or completely used   ; 16 / 392 ( 4 % )   ; 0 / 392 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 17 / 392 ( 4 % )   ; 0 / 392 ( 0 % )                ;
 ;                                             ;                    ;                                ;
 ; Virtual pins                                ; 0                  ; 0                              ;
 ; I/O pins                                    ; 16                 ; 0                              ;
@@ -311,8 +311,8 @@ The pin-out file can be found in L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_
 ;     -- Registered Output Connections        ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Internal Connections                        ;                    ;                                ;
-;     -- Total Connections                    ; 1046               ; 5                              ;
-;     -- Registered Connections               ; 381                ; 0                              ;
+;     -- Total Connections                    ; 1053               ; 5                              ;
+;     -- Registered Connections               ; 384                ; 0                              ;
 ;                                             ;                    ;                                ;
 ; External Connections                        ;                    ;                                ;
 ;     -- Top                                  ; 2                  ; 0                              ;
@@ -601,10 +601,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                  ; Entity Name         ; Library Name ;
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------+---------------------+--------------+
-; |digital_thermometer            ; 229 (49)    ; 105 (27)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 16   ; 0            ; 124 (22)     ; 2 (0)             ; 103 (27)         ; |digital_thermometer                                 ; digital_thermometer ; work         ;
-;    |dec_to_bcd:i2c_data_to_bcd| ; 52 (52)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 24 (24)          ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd      ; dec_to_bcd          ; work         ;
-;    |i2c_reader:lm75_i2c|        ; 86 (86)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 54 (54)      ; 0 (0)             ; 32 (32)          ; |digital_thermometer|i2c_reader:lm75_i2c             ; i2c_reader          ; work         ;
-;    |seg_display:display|        ; 46 (39)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (13)      ; 2 (2)             ; 24 (24)          ; |digital_thermometer|seg_display:display             ; seg_display         ; work         ;
+; |digital_thermometer            ; 231 (49)    ; 105 (27)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 16   ; 0            ; 126 (22)     ; 4 (0)             ; 101 (27)         ; |digital_thermometer                                 ; digital_thermometer ; work         ;
+;    |dec_to_bcd:i2c_data_to_bcd| ; 55 (55)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (31)      ; 2 (2)             ; 22 (22)          ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd      ; dec_to_bcd          ; work         ;
+;    |i2c_reader:lm75_i2c|        ; 86 (86)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 53 (53)      ; 0 (0)             ; 33 (33)          ; |digital_thermometer|i2c_reader:lm75_i2c             ; i2c_reader          ; work         ;
+;    |seg_display:display|        ; 47 (40)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (13)      ; 2 (2)             ; 25 (25)          ; |digital_thermometer|seg_display:display             ; seg_display         ; work         ;
 ;       |seg_rom:rom|             ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |digital_thermometer|seg_display:display|seg_rom:rom ; seg_rom             ; work         ;
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -628,7 +628,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sel[1] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; sel[2] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; sel[3] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; sda    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; sda    ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; clk    ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; rst_n  ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +--------+----------+---------------+---------------+-----------------------+-----+------+
@@ -640,15 +640,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                          ; Pad To Core Index ; Setting ;
 +----------------------------------------------+-------------------+---------+
 ; sda                                          ;                   ;         ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[9]~0 ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[4]~1 ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[5]~2 ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[6]~3 ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[2]~4 ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[3]~5 ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[1]~6 ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[7]~7 ; 0                 ; 6       ;
-;      - i2c_reader:lm75_i2c|i2c_buff_reg[8]~8 ; 0                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[9]~0 ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[4]~1 ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[5]~2 ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[6]~3 ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[2]~4 ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[3]~5 ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[1]~6 ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[7]~7 ; 1                 ; 6       ;
+;      - i2c_reader:lm75_i2c|i2c_buff_reg[8]~8 ; 1                 ; 6       ;
 ; clk                                          ;                   ;         ;
 ; rst_n                                        ;                   ;         ;
 +----------------------------------------------+-------------------+---------+
@@ -660,13 +660,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                     ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; clk                                      ; PIN_23             ; 105     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; dec_to_bcd:i2c_data_to_bcd|bcd_reg[0]~0  ; LCCOMB_X22_Y21_N20 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; dec_to_bcd:i2c_data_to_bcd|num_reg[2]~0  ; LCCOMB_X23_Y21_N0  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; dec_to_bcd:i2c_data_to_bcd|state.ST_CALC ; FF_X24_Y21_N25     ; 18      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; i2c_reader:lm75_i2c|index_reg[0]~9       ; LCCOMB_X25_Y20_N4  ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; i2c_reader:lm75_i2c|state.ST_SEND_NACK   ; FF_X24_Y20_N7      ; 11      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; dec_to_bcd:i2c_data_to_bcd|bcd_reg[0]~0  ; LCCOMB_X17_Y19_N28 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; dec_to_bcd:i2c_data_to_bcd|num_reg[2]~0  ; LCCOMB_X18_Y19_N4  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; dec_to_bcd:i2c_data_to_bcd|state.ST_CALC ; FF_X21_Y20_N9      ; 18      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; i2c_reader:lm75_i2c|index_reg[0]~14      ; LCCOMB_X21_Y20_N26 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; i2c_reader:lm75_i2c|state.ST_SEND_NACK   ; FF_X22_Y20_N27     ; 11      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 ; rst_n                                    ; PIN_25             ; 105     ; Async. clear ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; seg_display:display|Equal0~4             ; LCCOMB_X18_Y20_N18 ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; seg_display:display|Equal0~4             ; LCCOMB_X17_Y21_N26 ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -675,7 +675,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk   ; PIN_23   ; 105     ; 20                                   ; Global Clock         ; GCLK2            ; --                        ;
+; clk   ; PIN_23   ; 105     ; 33                                   ; Global Clock         ; GCLK2            ; --                        ;
 ; rst_n ; PIN_25   ; 105     ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
@@ -685,50 +685,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 237 / 32,401 ( < 1 % ) ;
-; C16 interconnects     ; 0 / 1,326 ( 0 % )      ;
-; C4 interconnects      ; 44 / 21,816 ( < 1 % )  ;
-; Direct links          ; 117 / 32,401 ( < 1 % ) ;
+; Block interconnects   ; 269 / 32,401 ( < 1 % ) ;
+; C16 interconnects     ; 1 / 1,326 ( < 1 % )    ;
+; C4 interconnects      ; 102 / 21,816 ( < 1 % ) ;
+; Direct links          ; 86 / 32,401 ( < 1 % )  ;
 ; Global clocks         ; 2 / 10 ( 20 % )        ;
-; Local interconnects   ; 160 / 10,320 ( 2 % )   ;
-; R24 interconnects     ; 0 / 1,289 ( 0 % )      ;
-; R4 interconnects      ; 85 / 28,186 ( < 1 % )  ;
+; Local interconnects   ; 145 / 10,320 ( 1 % )   ;
+; R24 interconnects     ; 1 / 1,289 ( < 1 % )    ;
+; R4 interconnects      ; 134 / 28,186 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 14.31) ; Number of LABs  (Total = 16) ;
+; Number of Logic Elements  (Average = 13.59) ; Number of LABs  (Total = 17) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 0                            ;
-; 2                                           ; 1                            ;
+; 1                                           ; 1                            ;
+; 2                                           ; 0                            ;
 ; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
-; 6                                           ; 1                            ;
+; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
-; 8                                           ; 0                            ;
+; 8                                           ; 2                            ;
 ; 9                                           ; 0                            ;
 ; 10                                          ; 0                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 0                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 1                            ;
 ; 13                                          ; 0                            ;
-; 14                                          ; 1                            ;
+; 14                                          ; 0                            ;
 ; 15                                          ; 1                            ;
-; 16                                          ; 12                           ;
+; 16                                          ; 11                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.94) ; Number of LABs  (Total = 16) ;
+; LAB-wide Signals  (Average = 2.00) ; Number of LABs  (Total = 17) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 14                           ;
-; 1 Clock                            ; 14                           ;
+; 1 Async. clear                     ; 16                           ;
+; 1 Clock                            ; 16                           ;
 ; 1 Clock enable                     ; 1                            ;
-; 1 Sync. clear                      ; 1                            ;
 ; 1 Sync. load                       ; 1                            ;
 +------------------------------------+------------------------------+
 
@@ -736,70 +735,68 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 20.75) ; Number of LABs  (Total = 16) ;
+; Number of Signals Sourced  (Average = 19.65) ; Number of LABs  (Total = 17) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 0                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
+; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
+; 12                                           ; 1                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 0                            ;
+; 14                                           ; 1                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 0                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 1                            ;
 ; 18                                           ; 0                            ;
-; 19                                           ; 0                            ;
+; 19                                           ; 3                            ;
 ; 20                                           ; 2                            ;
-; 21                                           ; 4                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 1                            ;
-; 25                                           ; 1                            ;
-; 26                                           ; 2                            ;
-; 27                                           ; 2                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 3                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 3                            ;
+; 27                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.94) ; Number of LABs  (Total = 16) ;
+; Number of Signals Sourced Out  (Average = 9.53) ; Number of LABs  (Total = 17) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 0                            ;
-; 2                                               ; 1                            ;
+; 1                                               ; 1                            ;
+; 2                                               ; 0                            ;
 ; 3                                               ; 0                            ;
-; 4                                               ; 0                            ;
-; 5                                               ; 0                            ;
-; 6                                               ; 2                            ;
+; 4                                               ; 1                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 0                            ;
 ; 7                                               ; 1                            ;
-; 8                                               ; 4                            ;
+; 8                                               ; 0                            ;
 ; 9                                               ; 1                            ;
-; 10                                              ; 0                            ;
+; 10                                              ; 4                            ;
 ; 11                                              ; 1                            ;
-; 12                                              ; 2                            ;
+; 12                                              ; 3                            ;
 ; 13                                              ; 0                            ;
 ; 14                                              ; 2                            ;
 ; 15                                              ; 0                            ;
 ; 16                                              ; 1                            ;
-; 17                                              ; 0                            ;
-; 18                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 13.88) ; Number of LABs  (Total = 16) ;
+; Number of Distinct Inputs  (Average = 14.82) ; Number of LABs  (Total = 17) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
@@ -807,25 +804,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3                                            ; 0                            ;
 ; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 2                            ;
+; 6                                            ; 0                            ;
 ; 7                                            ; 1                            ;
 ; 8                                            ; 2                            ;
-; 9                                            ; 0                            ;
+; 9                                            ; 1                            ;
 ; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
+; 12                                           ; 2                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 3                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 2                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 1                            ;
 ; 19                                           ; 1                            ;
-; 20                                           ; 0                            ;
+; 20                                           ; 2                            ;
 ; 21                                           ; 0                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 2                            ;
+; 22                                           ; 1                            ;
+; 23                                           ; 0                            ;
 ; 24                                           ; 1                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -986,11 +985,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X11_Y12 to location X22_Y24
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X11_Y12 to location X22_Y24
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.18 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.19 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1003,10 +1002,10 @@ Warning (169177): 3 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin rst_n uses I/O standard 3.3-V LVTTL at 25 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/digital_thermometer.vhd Line: 21
 Info (144001): Generated suppressed messages file L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/output_files/digital_thermometer.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5232 megabytes
-    Info: Processing ended: Fri Apr 12 02:23:39 2024
+    Info: Peak virtual memory: 5233 megabytes
+    Info: Processing ended: Sat Apr 20 12:52:05 2024
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +----------------------------+

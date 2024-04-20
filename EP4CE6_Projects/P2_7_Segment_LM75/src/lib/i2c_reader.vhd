@@ -124,7 +124,7 @@ begin
    moore_output: done <= '1' when state = ST_DONE or state = ST_STOP else '0'; 
    
    mealy_outputs: process(state,en,start,sda,sda_reg,index_reg,
-                          i2c_buff_reg,scl_low,scl_high)
+                          i2c_buff_reg,scl_low,scl_high,scl_reg)
    begin
       sda_next <= sda_reg;
       index <= index_reg;
@@ -153,7 +153,9 @@ begin
                sda_next <= '0';
             end if;                 
          when ST_GET_LOW_BYTE => --Read low byte (index 17 to 24)
-            if scl_high = '1' then
+            if scl_reg = '0' then
+               sda_next <= '1'; --Release SDA (LM75 will pull low if needed)
+            elsif scl_high = '1' then
                i2c_buff(index_reg - 8) <= sda;
                index <= index_reg + 1;
             end if;
