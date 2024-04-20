@@ -23,20 +23,19 @@
 - The other modules or design files are located in the **lib** directory  
 
 ## Video demo  
-[FPGA and LM75 demo](https://drive.google.com/file/d/1IZYVgDwNJIAutpPY_AHlGprcI9oUSNfm/view?usp=sharing)
+[FPGA and LM75 demo](https://drive.google.com/file/d/1eEwnFMIoJQOzV3jgmHSaW-fhe6PS-aEH/view?usp=sharing)  
 
 ## Pinouts  
 - Check the **Location** column in the image below for the pin mappings used in this project.  
 ![PP_2](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/69888839-1d70-479d-b965-18ce3b878e52)
 
 ## Logic Analyzer Scans (Debugging the I2C protocol)  
-The data received from the LM75 sensor during this scan was 0x20 which translates to 32 in decimal. Therefore,  
-the temperature at that point was 32 degrees Celsius.
-### 1. Start condition
-![i2c_start](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/9b604072-3510-46fc-86c2-94f13696dc7b)   
-
-### 2. Stop condition
-![i2c_stop](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/7a26e543-74b4-4dd9-b4a5-3793e2226d4d)  
+### 33.5 degree Celsius  
+![Screenshot (497)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/a03eb5cb-55f9-42f9-89a0-6e393c078cd2)  
+### 34.0 degree Celsius  
+![Screenshot (498)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/737295c3-3c22-4a44-a117-4e0d68ca2b44)  
+### 34.5 degree Celsius  
+![Screenshot (499)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/2a40ac7e-20c9-48a8-ab4e-5c4138f61a2e)  
 
 ## Helpful resource(s)  
 - [NXP I2C specification](https://drive.google.com/file/d/1EDwk_8Na_DUPKeOmK8ht-_JMiNgwNDw2/view?usp=drive_link)
