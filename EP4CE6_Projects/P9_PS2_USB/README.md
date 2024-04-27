@@ -34,19 +34,19 @@ This task involves configuring an FPGA as a PS/2-to-UART converter that decodes 
 - Test vectors are generated using the python script in each ``simulation/file/`` directory  
 
 ## Pinouts  
-- Check the ``Location`` column in the image below for the pin mappings used in this project.     
-![Screenshot (506)](https://github.com/MUDAL/FPGA_PS2_UART/assets/46250887/12f99c86-6b1a-4cea-8b96-ba37148bb875)  
- 
+- Check the ``Location`` column in the image below for the pin mappings used in this project.      
+![Screenshot (506)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/afd8d1e4-497f-4943-9ea2-0cd6bd13e7fc)  
+
 ## Decoding the FPGA design (PS/2-to-UART interface)  
-![Screenshot (507)](https://github.com/MUDAL/FPGA_PS2_UART/assets/46250887/63d7cf00-10a2-40b9-854f-d6ee8cbf6106)   
+![Screenshot (507)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/d3b84650-86d8-4381-b935-5300a6171b16)   
   
 ## Demo  
 [TO BE ADDED]      
 
 ## Project Setup  
-![20240427_181320](https://github.com/MUDAL/P9_PS2_USB/assets/46250887/e75ef3dc-514e-41c3-924f-507d69c74b8a)  
-![20240427_181233](https://github.com/MUDAL/P9_PS2_USB/assets/46250887/da6c7ed0-abb7-4a47-aa7c-b1d5eae526e4)  
-![20240427_181252](https://github.com/MUDAL/P9_PS2_USB/assets/46250887/1726c799-66b9-4141-9cbd-791c4e06e7b1)  
+![20240427_181320](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/27cece61-abb1-4e53-8746-534403732a88)  
+![20240427_181233](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/f65fe8f3-8a53-4002-bcfe-3fec135f7642)  
+![20240427_181252](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/ca7db8da-da42-43e9-ab69-ceb9f32889a9)  
 
 ## Helpful resources  
 - [PS/2 Protocol Timing](http://www.pyroelectro.com/tutorials/ps2_keyboard_interface/theory.html)  
