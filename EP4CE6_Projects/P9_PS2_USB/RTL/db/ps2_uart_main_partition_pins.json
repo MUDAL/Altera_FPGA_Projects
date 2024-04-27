@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "uart_out",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_clk",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_data",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

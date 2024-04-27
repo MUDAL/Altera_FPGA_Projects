@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Apr 23 21:06:05 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : ps2_uart_main
+Top-level Entity Name : ps2_uart_main
+Family : Cyclone IV E
+Total logic elements : 83
+    Total combinational functions : 73
+    Dedicated logic registers : 47
+Total registers : 47
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
