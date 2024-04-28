@@ -1,2 +1,113 @@
-# Compile of ir_lcd_main.vhd was successful.
-# Compile of tl1838_decoder.vhd was successful.
+# Compile of lcd_driver.vhd was successful.
+vlog -work work -refresh -force_refresh
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:50:36 on Apr 28,2024
+# vlog -reportprogress 300 -work work -refresh -force_refresh 
+# -- Skipping entity ir_lcd_main
+# -- Skipping entity ir_lcd_main_tb
+# -- Skipping entity lcd_driver
+# -- Skipping entity lcd_driver_tb
+# -- Skipping package pack_tb
+# -- Skipping entity tl1838_decoder
+# -- Skipping entity tl1838_decoder_tb
+# -- Skipping entity tl1838_lcd_interface
+# -- Skipping entity tl1838_lcd_interface_tb
+# End time: 19:50:36 on Apr 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work -refresh -force_refresh
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:50:36 on Apr 28,2024
+# vcom -reportprogress 300 -work work -refresh -force_refresh 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ir_lcd_main
+# -- Compiling architecture ir_lcd_main_rtl of ir_lcd_main
+# -- Loading entity tl1838_decoder
+# -- Loading entity tl1838_lcd_interface
+# -- Loading entity lcd_driver
+# -- Loading package std_logic_textio
+# -- Loading package pack_tb
+# -- Compiling entity ir_lcd_main_tb
+# -- Compiling architecture ir_lcd_main_behav of ir_lcd_main_tb
+# -- Loading entity ir_lcd_main
+# -- Compiling entity lcd_driver
+# -- Compiling architecture lcd_driver_rtl of lcd_driver
+# -- Compiling entity lcd_driver_tb
+# -- Compiling architecture lcd_driver_behav of lcd_driver_tb
+# -- Loading entity lcd_driver
+# -- Compiling package pack_tb
+# -- Loading package pack_tb
+# -- Compiling package body pack_tb
+# -- Compiling entity tl1838_decoder
+# -- Compiling architecture tl1838_decoder_rtl of tl1838_decoder
+# -- Loading package pack_tb
+# -- Compiling entity tl1838_decoder_tb
+# -- Compiling architecture tl1838_decoder_behav of tl1838_decoder_tb
+# -- Loading entity tl1838_decoder
+# -- Compiling entity tl1838_lcd_interface
+# -- Compiling architecture tl1838_lcd_interface_rtl of tl1838_lcd_interface
+# -- Compiling entity tl1838_lcd_interface_tb
+# -- Compiling architecture tl1838_lcd_interface_behav of tl1838_lcd_interface_tb
+# -- Loading entity tl1838_lcd_interface
+# End time: 19:50:36 on Apr 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.ir_lcd_main_tb
+# vsim work.ir_lcd_main_tb 
+# Start time: 19:50:46 on Apr 28,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.pack_tb(body)
+# Loading work.ir_lcd_main_tb(ir_lcd_main_behav)
+# Loading work.ir_lcd_main(ir_lcd_main_rtl)
+# Loading work.tl1838_decoder(tl1838_decoder_rtl)
+# Loading work.tl1838_lcd_interface(tl1838_lcd_interface_rtl)
+# Loading work.lcd_driver(lcd_driver_rtl)
+run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /ir_lcd_main_tb/uut/ir_decoder
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /ir_lcd_main_tb/uut/ir_decoder
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /ir_lcd_main_tb/uut/ir_decoder
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /ir_lcd_main_tb/uut/ir_decoder
+# ** Note: Expected: 001, Got: 001, Status: PASS
+#    Time: 68040450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 130, Got: 130, Status: PASS
+#    Time: 136080450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 131, Got: 131, Status: PASS
+#    Time: 204120450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 132, Got: 132, Status: PASS
+#    Time: 272160450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 133, Got: 133, Status: PASS
+#    Time: 340200450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 134, Got: 134, Status: PASS
+#    Time: 408240450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 135, Got: 135, Status: PASS
+#    Time: 476280450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 136, Got: 136, Status: PASS
+#    Time: 544320450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 137, Got: 137, Status: PASS
+#    Time: 612360450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 138, Got: 138, Status: PASS
+#    Time: 680400450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 139, Got: 139, Status: PASS
+#    Time: 748440450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 080, Got: 080, Status: PASS
+#    Time: 816480450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 0C0, Got: 0C0, Status: PASS
+#    Time: 884520450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 001, Got: 001, Status: PASS
+#    Time: 952560450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Note: Expected: 001, Got: 001, Status: PASS
+#    Time: 1020600450 ns  Iteration: 1  Instance: /ir_lcd_main_tb
+# ** Failure: Simulation done
+#    Time: 1020600450 ns  Iteration: 1  Process: /ir_lcd_main_tb/output_verification File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/ir_lcd_main_tb.vhd
+# Break in Process output_verification at L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/ir_lcd_main_tb.vhd line 166
+# End time: 19:56:39 on Apr 28,2024, Elapsed time: 0:05:53
+# Errors: 1, Warnings: 6

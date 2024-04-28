@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ir_lcd_main
-Sun Apr 28 19:41:47 2024
+Sun Apr 28 23:14:27 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 28 19:41:47 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 28 23:14:27 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; ir_lcd_main                                 ;
 ; Top-level Entity Name              ; ir_lcd_main                                 ;
@@ -351,7 +351,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Apr 28 19:41:33 2024
+    Info: Processing started: Sun Apr 28 23:14:14 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ir_lcd_main -c ir_lcd_main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -377,7 +377,7 @@ Info (12129): Elaborating entity "lcd_driver" using architecture "A:lcd_driver_r
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
-Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_decoder.vhd Line: 160
+Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_decoder.vhd Line: 151
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "rw" is stuck at GND File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/ir_lcd_main.vhd Line: 20
@@ -390,8 +390,8 @@ Info (21057): Implemented 315 device resources after synthesis - the final resou
     Info (21061): Implemented 300 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 4781 megabytes
-    Info: Processing ended: Sun Apr 28 19:41:47 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Processing ended: Sun Apr 28 23:14:27 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:24
 
 

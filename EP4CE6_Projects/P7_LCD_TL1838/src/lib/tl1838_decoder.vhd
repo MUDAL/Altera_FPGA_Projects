@@ -106,18 +106,9 @@ begin
       end if;
    end process;
    
-   moore_outputs: process(state,clks_reg)
-   begin
-      clks_next <= clks_reg;
-      done_next <= '0';
-      case state is
-         when ST_DATA_LOW_PULSE | ST_DATA_HIGH_PULSE =>
-            clks_next <= clks_reg + 1;
-         when ST_DONE =>
-            done_next <= '1';
-         when others =>
-      end case;
-   end process;
+   moore_outputs: done_next <= '1' when state = ST_DONE else '0';
+   clks_next <= clks_reg + 1 when state = ST_DATA_LOW_PULSE or
+                                  state = ST_DATA_HIGH_PULSE else clks_reg;
    
    pw <= clks_reg - stamp_reg;
    data_bit <= '0' when pw < to_unsigned(REF_PW,pw'length) else '1';
