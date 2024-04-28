@@ -1,5 +1,5 @@
 Fitter report for lcd_main
-Sun Apr 28 18:13:36 2024
+Sun Apr 28 19:39:06 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sun Apr 28 18:13:36 2024       ;
+; Fitter Status                      ; Successful - Sun Apr 28 19:39:06 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; lcd_main                                    ;
 ; Top-level Entity Name              ; lcd_main                                    ;
@@ -626,7 +626,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                            ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; clk                             ; PIN_23             ; 40      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; lcd_driver:lcd_1602|WideOr2~0   ; LCCOMB_X11_Y18_N24 ; 21      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; lcd_driver:lcd_1602|WideOr1~0   ; LCCOMB_X11_Y18_N24 ; 21      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 ; lcd_driver:lcd_1602|db_reg[0]~1 ; LCCOMB_X12_Y18_N30 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; rst_n                           ; PIN_25             ; 40      ; Async. clear ; yes    ; Global Clock         ; GCLK3            ; --                        ;
 +---------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
@@ -969,8 +969,8 @@ Warning (169177): 2 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin rst_n uses I/O standard 3.3-V LVTTL at 25 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lcd_main.vhd Line: 14
 Info (144001): Generated suppressed messages file L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/output_files/lcd_main.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5232 megabytes
-    Info: Processing ended: Sun Apr 28 18:13:37 2024
+    Info: Peak virtual memory: 5228 megabytes
+    Info: Processing ended: Sun Apr 28 19:39:07 2024
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 

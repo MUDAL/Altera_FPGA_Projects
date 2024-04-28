@@ -105,40 +105,11 @@ begin
       end if;
    end process;
 
-   moore_outputs: process(state,rs_in)
-   begin
-      case state is
-         when ST_IDLE =>
-            cnt_en <= '0';
-            rs <= '0';  
-            done <= '0';
-         when ST_INIT_1 =>
-            cnt_en <= '1';
-            rs <= '0';
-            done <= '0';
-         when ST_WAIT =>
-            cnt_en <= '0';
-            rs <= '0';
-            done <= '0';
-         when ST_INIT_2 => 
-            cnt_en <= '1';
-            rs <= '0';
-            done <= '0';
-         when ST_CHECK_DATA => 
-            cnt_en <= '0';
-            rs <= '0';
-            done <= '0';
-         when ST_WRITE =>
-            cnt_en <= '1';
-            rs <= rs_in;
-            done <= '0';
-         when ST_END =>
-            cnt_en <= '0';
-            rs <= '0';
-            done <= '1';
-      end case;   
-   end process;
-   
+   moore_outputs: cnt_en <= '1' when state = ST_INIT_1 or state = ST_INIT_2
+                                  or state = ST_WRITE else '0';
+   rs <= rs_in when state = ST_WRITE else '0';
+   done <= '1' when state = ST_END else '0';
+
    mealy_outputs: process(state,clks,d_in,en_reg,db_reg)
    begin
       en_next <= en_reg;

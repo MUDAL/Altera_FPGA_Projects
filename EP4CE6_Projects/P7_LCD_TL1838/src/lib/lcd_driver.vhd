@@ -115,32 +115,9 @@ begin
       end if;
    end process;
 
-   moore_outputs: process(state)
-   begin
-      case state is
-         when ST_IDLE =>
-            cnt_en <= '0';
-            rdy <= '0';
-         when ST_INIT_1 =>
-            cnt_en <= '1';
-            rdy <= '0';
-         when ST_WAIT =>
-            cnt_en <= '0';
-            rdy <= '0';
-         when ST_INIT_2 => 
-            cnt_en <= '1';
-            rdy <= '0';
-         when ST_CHECK_DATA => 
-            cnt_en <= '0';
-            rdy <= '1';
-         when ST_WRITE =>
-            cnt_en <= '1';
-            rdy <= '0';
-         when ST_END =>
-            cnt_en <= '0';
-            rdy <= '0';
-      end case;   
-   end process;
+   moore_outputs: cnt_en <= '1' when state = ST_INIT_1 or state = ST_INIT_2
+                                  or state = ST_WRITE else '0';
+   rdy <= '1' when state = ST_CHECK_DATA else '0';
    
    mealy_outputs: process(state,clks,d_in,rs_in,en_reg,db_reg,rs_reg)
    begin
