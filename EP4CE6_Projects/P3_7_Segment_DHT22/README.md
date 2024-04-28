@@ -29,7 +29,7 @@
 
 ## Pinouts  
 - Check the **Location** column in the image below for the pin mappings used in this project.  
-![PP_3](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/beb583dd-44c8-4b77-8591-7ee5843d913f)  
+![dht22_PP (2)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/081db829-68f9-4ac4-bff6-af8171f3b195)  
 
 ## Helpful resource(s)  
 - [DHT22 datasheet](https://drive.google.com/file/d/1UODtRw4yKURxbqgQWCb-GDCVGRq6kBUn/view?usp=sharing)  
