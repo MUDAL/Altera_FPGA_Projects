@@ -56,7 +56,7 @@ architecture one_wire_rtl of one_wire is
    signal old_io: std_logic;
    signal old_io_reg: std_logic;
    signal check_sum: unsigned(7 downto 0);
-   signal bit_level: std_logic;
+   signal data_bit: std_logic;
 begin
    next_state_logic: process(state,en,pw,index_reg,new_io_reg,old_io_reg)
    begin
@@ -108,13 +108,15 @@ begin
       end if;
    end process;
    
-   moore_outputs: clks_next <= clks_reg + 1;
+   moore_outputs: new_io <= io when state = ST_SAMPLE else new_io_reg;
    done <= '1' when state = ST_DONE or state = ST_CHECK else '0';
-   new_io <= io when state = ST_SAMPLE else new_io_reg;
-   pw <= clks_reg - stamp_reg;
    
+   clks_next <= clks_reg + 1;
+   pw <= clks_reg - stamp_reg;
+   data_bit <= '1' when pw > to_unsigned(MAX_BIT_PULSE,pw'length) else '0'; 
+                
    mealy_outputs: process(state,en,clks_reg,pw,io_reg,index_reg,stamp_reg,
-                          bit_level,data_reg,new_io_reg,old_io_reg)
+                          data_bit,data_reg,new_io_reg,old_io_reg)
    begin
       io_next <= io_reg;
       index <= index_reg;
@@ -146,7 +148,7 @@ begin
                old_io <= '1';
                stamp_next <= clks_reg;
             elsif new_io_reg = '0' and old_io_reg = '1' then
-               data_next(index_reg) <= bit_level;
+               data_next(index_reg) <= data_bit;
                index <= index_reg + 1;
                old_io <= '0';                
             end if;        
@@ -157,16 +159,7 @@ begin
             end if;
          when ST_CHECK =>       
       end case;   
-   end process;
-   
-   bit_level <= '1' when pw > to_unsigned(MAX_BIT_PULSE,pw'length) else '0';
-   
-   --Check sum = Humidity integral + Humidity decimal +
-   --            Temperature integral + Temperature decimal
-   check_sum <= unsigned(data_reg(0 to 7))   + 
-                unsigned(data_reg(8 to 15))  +
-                unsigned(data_reg(16 to 23)) +
-                unsigned(data_reg(24 to 31));   
+   end process;  
                      
    --Tristate buffer: 'Z' implies release of the 1-Wire data line
    io <= 'Z' when io_reg = '1' else '0';
@@ -174,7 +167,14 @@ begin
    --Output data selector
    data_out <= data_reg(0 to 15) when param = '0' else    
                data_reg(16 to 31);
-
+               
+   --Check sum = Humidity integral + Humidity decimal +
+   --            Temperature integral + Temperature decimal
+   check_sum <= unsigned(data_reg(0 to 7))   + 
+                unsigned(data_reg(8 to 15))  +
+                unsigned(data_reg(16 to 23)) +
+                unsigned(data_reg(24 to 31));
+                
    valid <= '1' when check_sum = unsigned(data_reg(32 to 39)) and 
                      state = ST_CHECK else '0'; 
    
