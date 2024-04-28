@@ -1,5 +1,5 @@
 Analysis & Synthesis report for weather_sensor
-Thu Feb 22 19:05:30 2024
+Sun Apr 28 13:56:51 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -49,15 +49,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 22 19:05:30 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 28 13:56:51 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; weather_sensor                              ;
 ; Top-level Entity Name              ; weather_sensor                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 449                                         ;
-;     Total combinational functions  ; 415                                         ;
-;     Dedicated logic registers      ; 196                                         ;
-; Total registers                    ; 196                                         ;
+; Total logic elements               ; 430                                         ;
+;     Total combinational functions  ; 395                                         ;
+;     Dedicated logic registers      ; 177                                         ;
+; Total registers                    ; 177                                         ;
 ; Total pins                         ; 16                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -191,20 +191,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 449       ;
+; Estimated Total logic elements              ; 430       ;
 ;                                             ;           ;
-; Total combinational functions               ; 415       ;
+; Total combinational functions               ; 395       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 177       ;
-;     -- 3 input functions                    ; 83        ;
-;     -- <=2 input functions                  ; 155       ;
+;     -- 4 input functions                    ; 169       ;
+;     -- 3 input functions                    ; 79        ;
+;     -- <=2 input functions                  ; 147       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 276       ;
-;     -- arithmetic mode                      ; 139       ;
+;     -- normal mode                          ; 266       ;
+;     -- arithmetic mode                      ; 129       ;
 ;                                             ;           ;
-; Total registers                             ; 196       ;
-;     -- Dedicated logic registers            ; 196       ;
+; Total registers                             ; 177       ;
+;     -- Dedicated logic registers            ; 177       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 16        ;
@@ -212,9 +212,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 196       ;
-; Total fan-out                               ; 1950      ;
-; Average fan-out                             ; 3.03      ;
+; Maximum fan-out                             ; 177       ;
+; Total fan-out                               ; 1823      ;
+; Average fan-out                             ; 3.01      ;
 +---------------------------------------------+-----------+
 
 
@@ -223,10 +223,10 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                             ; Entity Name    ; Library Name ;
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+----------------+--------------+
-; |weather_sensor                ; 415 (66)            ; 196 (33)                  ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |weather_sensor                                 ; weather_sensor ; work         ;
-;    |dec_to_bcd:dht22_data_bcd| ; 96 (96)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |weather_sensor|dec_to_bcd:dht22_data_bcd       ; dec_to_bcd     ; work         ;
-;    |one_wire:dht22_one_wire|   ; 207 (207)           ; 101 (101)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |weather_sensor|one_wire:dht22_one_wire         ; one_wire       ; work         ;
-;    |seg_display:display|       ; 46 (39)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |weather_sensor|seg_display:display             ; seg_display    ; work         ;
+; |weather_sensor                ; 395 (47)            ; 177 (21)                  ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |weather_sensor                                 ; weather_sensor ; work         ;
+;    |dec_to_bcd:dht22_data_bcd| ; 97 (97)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |weather_sensor|dec_to_bcd:dht22_data_bcd       ; dec_to_bcd     ; work         ;
+;    |one_wire:dht22_one_wire|   ; 206 (206)           ; 98 (98)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |weather_sensor|one_wire:dht22_one_wire         ; one_wire       ; work         ;
+;    |seg_display:display|       ; 45 (38)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |weather_sensor|seg_display:display             ; seg_display    ; work         ;
 ;       |seg_rom:rom|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |weather_sensor|seg_display:display|seg_rom:rom ; seg_rom        ; work         ;
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -245,41 +245,42 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |weather_sensor|one_wire:dht22_one_wire|state                                                                                                                                                                               ;
-+-----------------------+----------------+---------------+-----------------+-----------------------+-----------------+-----------------+--------------+-----------------+------------------+-----------------+----------------+---------------+
-; Name                  ; state.ST_CHECK ; state.ST_DONE ; state.ST_WAIT_4 ; state.ST_PROCESS_DATA ; state.ST_SAMPLE ; state.ST_WAIT_3 ; state.ST_ACK ; state.ST_WAIT_2 ; state.ST_PRE_ACK ; state.ST_WAIT_1 ; state.ST_START ; state.ST_IDLE ;
-+-----------------------+----------------+---------------+-----------------+-----------------------+-----------------+-----------------+--------------+-----------------+------------------+-----------------+----------------+---------------+
-; state.ST_IDLE         ; 0              ; 0             ; 0               ; 0                     ; 0               ; 0               ; 0            ; 0               ; 0                ; 0               ; 0              ; 0             ;
-; state.ST_START        ; 0              ; 0             ; 0               ; 0                     ; 0               ; 0               ; 0            ; 0               ; 0                ; 0               ; 1              ; 1             ;
-; state.ST_WAIT_1       ; 0              ; 0             ; 0               ; 0                     ; 0               ; 0               ; 0            ; 0               ; 0                ; 1               ; 0              ; 1             ;
-; state.ST_PRE_ACK      ; 0              ; 0             ; 0               ; 0                     ; 0               ; 0               ; 0            ; 0               ; 1                ; 0               ; 0              ; 1             ;
-; state.ST_WAIT_2       ; 0              ; 0             ; 0               ; 0                     ; 0               ; 0               ; 0            ; 1               ; 0                ; 0               ; 0              ; 1             ;
-; state.ST_ACK          ; 0              ; 0             ; 0               ; 0                     ; 0               ; 0               ; 1            ; 0               ; 0                ; 0               ; 0              ; 1             ;
-; state.ST_WAIT_3       ; 0              ; 0             ; 0               ; 0                     ; 0               ; 1               ; 0            ; 0               ; 0                ; 0               ; 0              ; 1             ;
-; state.ST_SAMPLE       ; 0              ; 0             ; 0               ; 0                     ; 1               ; 0               ; 0            ; 0               ; 0                ; 0               ; 0              ; 1             ;
-; state.ST_PROCESS_DATA ; 0              ; 0             ; 0               ; 1                     ; 0               ; 0               ; 0            ; 0               ; 0                ; 0               ; 0              ; 1             ;
-; state.ST_WAIT_4       ; 0              ; 0             ; 1               ; 0                     ; 0               ; 0               ; 0            ; 0               ; 0                ; 0               ; 0              ; 1             ;
-; state.ST_DONE         ; 0              ; 1             ; 0               ; 0                     ; 0               ; 0               ; 0            ; 0               ; 0                ; 0               ; 0              ; 1             ;
-; state.ST_CHECK        ; 1              ; 0             ; 0               ; 0                     ; 0               ; 0               ; 0            ; 0               ; 0                ; 0               ; 0              ; 1             ;
-+-----------------------+----------------+---------------+-----------------+-----------------------+-----------------+-----------------+--------------+-----------------+------------------+-----------------+----------------+---------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |weather_sensor|one_wire:dht22_one_wire|state                                                                                             ;
++------------------+----------------+---------------+------------------+-----------------+--------------+------------------+----------------+---------------+
+; Name             ; state.ST_CHECK ; state.ST_DONE ; state.ST_PROCESS ; state.ST_SAMPLE ; state.ST_ACK ; state.ST_PRE_ACK ; state.ST_START ; state.ST_IDLE ;
++------------------+----------------+---------------+------------------+-----------------+--------------+------------------+----------------+---------------+
+; state.ST_IDLE    ; 0              ; 0             ; 0                ; 0               ; 0            ; 0                ; 0              ; 0             ;
+; state.ST_START   ; 0              ; 0             ; 0                ; 0               ; 0            ; 0                ; 1              ; 1             ;
+; state.ST_PRE_ACK ; 0              ; 0             ; 0                ; 0               ; 0            ; 1                ; 0              ; 1             ;
+; state.ST_ACK     ; 0              ; 0             ; 0                ; 0               ; 1            ; 0                ; 0              ; 1             ;
+; state.ST_SAMPLE  ; 0              ; 0             ; 0                ; 1               ; 0            ; 0                ; 0              ; 1             ;
+; state.ST_PROCESS ; 0              ; 0             ; 1                ; 0               ; 0            ; 0                ; 0              ; 1             ;
+; state.ST_DONE    ; 0              ; 1             ; 0                ; 0               ; 0            ; 0                ; 0              ; 1             ;
+; state.ST_CHECK   ; 1              ; 0             ; 0                ; 0               ; 0            ; 0                ; 0              ; 1             ;
++------------------+----------------+---------------+------------------+-----------------+--------------+------------------+----------------+---------------+
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+---------------------------------------+------------------------------------------+
-; Register name                         ; Reason for Removal                       ;
-+---------------------------------------+------------------------------------------+
-; seg_display:display|digit_index[2]    ; Stuck at GND due to stuck port data_in   ;
-; converter_count[0]                    ; Merged with seg_display:display|count[0] ;
-; one_wire_count[0]                     ; Merged with seg_display:display|count[0] ;
-; one_wire_count[1]                     ; Merged with seg_display:display|count[1] ;
-; converter_count[1]                    ; Merged with seg_display:display|count[1] ;
-; converter_count[2]                    ; Merged with one_wire_count[2]            ;
-; one_wire_count[2]                     ; Merged with seg_display:display|count[2] ;
-; one_wire_count[3]                     ; Merged with seg_display:display|count[3] ;
-; Total Number of Removed Registers = 8 ;                                          ;
-+---------------------------------------+------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                       ;
++----------------------------------------+-------------------------------------------------+
+; Register name                          ; Reason for Removal                              ;
++----------------------------------------+-------------------------------------------------+
+; seg_display:display|digit_index[2]     ; Stuck at GND due to stuck port data_in          ;
+; dht22_count[0]                         ; Merged with one_wire:dht22_one_wire|clks_reg[0] ;
+; seg_display:display|count[0]           ; Merged with one_wire:dht22_one_wire|clks_reg[0] ;
+; dht22_count[1]                         ; Merged with one_wire:dht22_one_wire|clks_reg[1] ;
+; seg_display:display|count[1]           ; Merged with one_wire:dht22_one_wire|clks_reg[1] ;
+; dht22_count[2]                         ; Merged with seg_display:display|count[2]        ;
+; seg_display:display|count[2]           ; Merged with one_wire:dht22_one_wire|clks_reg[2] ;
+; dht22_count[3]                         ; Merged with seg_display:display|count[3]        ;
+; seg_display:display|count[3]           ; Merged with one_wire:dht22_one_wire|clks_reg[3] ;
+; dht22_count[4]                         ; Merged with one_wire:dht22_one_wire|clks_reg[4] ;
+; dht22_count[5]                         ; Merged with one_wire:dht22_one_wire|clks_reg[5] ;
+; dht22_count[6]                         ; Merged with one_wire:dht22_one_wire|clks_reg[6] ;
+; dht22_count[7]                         ; Merged with one_wire:dht22_one_wire|clks_reg[7] ;
+; Total Number of Removed Registers = 13 ;                                                 ;
++----------------------------------------+-------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -287,10 +288,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 196   ;
-; Number of registers using Synchronous Clear  ; 20    ;
-; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 196   ;
+; Total registers                              ; 177   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 177   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 53    ;
 ; Number of registers using Preset             ; 0     ;
@@ -305,22 +306,23 @@ Encoding Type:  One-Hot
 ; seg_display:display|shift_reg[1]       ; 2       ;
 ; seg_display:display|shift_reg[2]       ; 2       ;
 ; seg_display:display|shift_reg[3]       ; 2       ;
-; en_dht22                               ; 6       ;
+; en_dht22                               ; 7       ;
 ; one_wire:dht22_one_wire|io_reg         ; 2       ;
 ; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 6:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |weather_sensor|dec_to_bcd:dht22_data_bcd|num_reg[8] ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |weather_sensor|seg_display:display|Mux3             ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |weather_sensor|dec_to_bcd:dht22_data_bcd|Selector2  ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; No         ; |weather_sensor|one_wire:dht22_one_wire|Selector9    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 6:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |weather_sensor|dec_to_bcd:dht22_data_bcd|num_reg[6]  ;
+; 11:1               ; 20 bits   ; 140 LEs       ; 0 LEs                ; 140 LEs                ; Yes        ; |weather_sensor|one_wire:dht22_one_wire|stamp_reg[14] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |weather_sensor|seg_display:display|Mux1              ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |weather_sensor|dec_to_bcd:dht22_data_bcd|Selector0   ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; No         ; |weather_sensor|one_wire:dht22_one_wire|Selector7     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
 +------------------------------------------------------------------------+
@@ -339,24 +341,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 16                          ;
-; cycloneiii_ff         ; 196                         ;
-;     CLR               ; 122                         ;
-;     CLR SCLR          ; 20                          ;
-;     CLR SLD           ; 1                           ;
+; cycloneiii_ff         ; 177                         ;
+;     CLR               ; 118                         ;
+;     CLR SLD           ; 6                           ;
 ;     ENA CLR           ; 53                          ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 421                         ;
-;     arith             ; 139                         ;
-;         2 data inputs ; 96                          ;
-;         3 data inputs ; 43                          ;
-;     normal            ; 282                         ;
+; cycloneiii_lcell_comb ; 401                         ;
+;     arith             ; 129                         ;
+;         2 data inputs ; 85                          ;
+;         3 data inputs ; 44                          ;
+;     normal            ; 272                         ;
 ;         1 data inputs ; 17                          ;
-;         2 data inputs ; 48                          ;
-;         3 data inputs ; 40                          ;
-;         4 data inputs ; 177                         ;
+;         2 data inputs ; 51                          ;
+;         3 data inputs ; 35                          ;
+;         4 data inputs ; 169                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.80                        ;
-; Average LUT depth     ; 4.64                        ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 4.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -375,7 +376,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 22 19:05:16 2024
+    Info: Processing started: Sun Apr 28 13:56:38 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off weather_sensor -c weather_sensor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -398,10 +399,10 @@ Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mappin
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
 Info (12127): Elaborating entity "weather_sensor" for the top level hierarchy
-Info (12129): Elaborating entity "one_wire" using architecture "A:one_wire_rtl" for hierarchy "one_wire:dht22_one_wire" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P3_7_Segment_DHT22/src/weather_sensor.vhd Line: 76
-Info (12129): Elaborating entity "dec_to_bcd" using architecture "A:dec_to_bcd_rtl" for hierarchy "dec_to_bcd:dht22_data_bcd" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P3_7_Segment_DHT22/src/weather_sensor.vhd Line: 80
-Info (12129): Elaborating entity "seg_display" using architecture "A:seg_display_rtl" for hierarchy "seg_display:display" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P3_7_Segment_DHT22/src/weather_sensor.vhd Line: 85
-Info (12129): Elaborating entity "seg_rom" using architecture "A:seg_rom_rtl" for hierarchy "seg_display:display|seg_rom:rom" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P3_7_Segment_DHT22/src/lib/seg_display.vhd Line: 99
+Info (12129): Elaborating entity "one_wire" using architecture "A:one_wire_rtl" for hierarchy "one_wire:dht22_one_wire" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P3_7_Segment_DHT22/src/weather_sensor.vhd Line: 63
+Info (12129): Elaborating entity "dec_to_bcd" using architecture "A:dec_to_bcd_rtl" for hierarchy "dec_to_bcd:dht22_data_bcd" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P3_7_Segment_DHT22/src/weather_sensor.vhd Line: 67
+Info (12129): Elaborating entity "seg_display" using architecture "A:seg_display_rtl" for hierarchy "seg_display:display" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P3_7_Segment_DHT22/src/weather_sensor.vhd Line: 72
+Info (12129): Elaborating entity "seg_rom" using architecture "A:seg_rom_rtl" for hierarchy "seg_display:display|seg_rom:rom" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P3_7_Segment_DHT22/src/lib/seg_display.vhd Line: 104
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "seg_display:display|seg_rom:rom|rom" is uninferred due to inappropriate RAM size File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P3_7_Segment_DHT22/src/lib/seg_rom.vhd Line: 15
 Warning (113028): 4 out of 16 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P3_7_Segment_DHT22/db/weather_sensor.ram0_seg_rom_bebb4cdc.hdl.mif Line: 1
@@ -409,20 +410,20 @@ Warning (113028): 4 out of 16 addresses are uninitialized. The Quartus Prime sof
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
-Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P3_7_Segment_DHT22/src/lib/seg_display.vhd Line: 59
+Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P3_7_Segment_DHT22/src/lib/seg_display.vhd Line: 60
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 465 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 446 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 13 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 449 logic cells
+    Info (21061): Implemented 430 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4779 megabytes
-    Info: Processing ended: Thu Feb 22 19:05:30 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Sun Apr 28 13:56:51 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:28
 
 

@@ -30,13 +30,14 @@ end seg_display;
 
 architecture seg_display_rtl of seg_display is
    constant TIME_TO_SWITCH_DIGIT: integer := 9_999;
-   constant ROM_CELSIUS: integer := 10; --ROM address to display Celsius(C)
-   constant ROM_HUMID: integer := 11; --ROM address to display Humidity(H)
+   constant ROM_C: integer := 10; --ROM address to display Celsius(C)
+   constant ROM_H: integer := 11; --ROM address to display Humidity(H)
    type digit_type is array(0 to 3) of std_logic_vector(3 downto 0);
    signal digit: digit_type;
    signal digit_index: unsigned(2 downto 0);
    signal count: unsigned(15 downto 0);
    signal shift_reg: std_logic_vector(3 downto 0);
+   signal param_unit: unsigned(3 downto 0);
 begin
    --Enables time-based digit switching
    digit_switching_counter: process(rst_n,clk)
@@ -86,10 +87,14 @@ begin
    with digit_index select
       dp <= '0' when to_unsigned(2,digit_index'length),
             '1' when others;
+            
    -- Rightmost segment = 'C' if 'param = 1', else it equals 'H'
+   digit(0) <= std_logic_vector(param_unit);
+   
    with param select
-      digit(0) <= std_logic_vector(to_unsigned(ROM_CELSIUS,digit(0)'length)) when '1',
-                  std_logic_vector(to_unsigned(ROM_HUMID,digit(0)'length)) when others;
+      param_unit <= to_unsigned(ROM_C,param_unit'length) when '1',
+                    to_unsigned(ROM_H,param_unit'length) when others;
+   
    --Other place values
    digit(1) <= bcd(3 downto 0);
    digit(2) <= bcd(7 downto 4);
