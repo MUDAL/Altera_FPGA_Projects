@@ -1,0 +1,10 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity spi_receiver is
+end spi_receiver;
+
+architecture spi_receiver_rtl of spi_receiver is
+begin
+end spi_receiver_rtl;

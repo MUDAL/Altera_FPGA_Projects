@@ -1,5 +1,5 @@
 Analysis & Synthesis report for weather_sensor
-Sun Apr 28 14:42:44 2024
+Sun Apr 28 19:19:32 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -49,13 +49,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 28 14:42:44 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 28 19:19:32 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; weather_sensor                              ;
 ; Top-level Entity Name              ; weather_sensor                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 429                                         ;
-;     Total combinational functions  ; 395                                         ;
+; Total logic elements               ; 424                                         ;
+;     Total combinational functions  ; 390                                         ;
 ;     Dedicated logic registers      ; 176                                         ;
 ; Total registers                    ; 176                                         ;
 ; Total pins                         ; 16                                          ;
@@ -191,16 +191,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 429       ;
+; Estimated Total logic elements              ; 424       ;
 ;                                             ;           ;
-; Total combinational functions               ; 395       ;
+; Total combinational functions               ; 390       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 169       ;
-;     -- 3 input functions                    ; 79        ;
-;     -- <=2 input functions                  ; 147       ;
+;     -- 4 input functions                    ; 163       ;
+;     -- 3 input functions                    ; 76        ;
+;     -- <=2 input functions                  ; 151       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 266       ;
+;     -- normal mode                          ; 261       ;
 ;     -- arithmetic mode                      ; 129       ;
 ;                                             ;           ;
 ; Total registers                             ; 176       ;
@@ -213,7 +213,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 176       ;
-; Total fan-out                               ; 1820      ;
+; Total fan-out                               ; 1803      ;
 ; Average fan-out                             ; 3.01      ;
 +---------------------------------------------+-----------+
 
@@ -223,8 +223,8 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                             ; Entity Name    ; Library Name ;
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+----------------+--------------+
-; |weather_sensor                ; 395 (47)            ; 176 (21)                  ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |weather_sensor                                 ; weather_sensor ; work         ;
-;    |dec_to_bcd:dht22_data_bcd| ; 97 (97)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |weather_sensor|dec_to_bcd:dht22_data_bcd       ; dec_to_bcd     ; work         ;
+; |weather_sensor                ; 390 (47)            ; 176 (21)                  ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |weather_sensor                                 ; weather_sensor ; work         ;
+;    |dec_to_bcd:dht22_data_bcd| ; 92 (92)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |weather_sensor|dec_to_bcd:dht22_data_bcd       ; dec_to_bcd     ; work         ;
 ;    |one_wire:dht22_one_wire|   ; 206 (206)           ; 97 (97)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |weather_sensor|one_wire:dht22_one_wire         ; one_wire       ; work         ;
 ;    |seg_display:display|       ; 45 (38)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |weather_sensor|seg_display:display             ; seg_display    ; work         ;
 ;       |seg_rom:rom|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |weather_sensor|seg_display:display|seg_rom:rom ; seg_rom        ; work         ;
@@ -293,7 +293,7 @@ Encoding Type:  One-Hot
 ; Number of registers using Synchronous Load   ; 6     ;
 ; Number of registers using Asynchronous Clear ; 176   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 53    ;
+; Number of registers using Clock Enable       ; 61    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -312,17 +312,19 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 6:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |weather_sensor|dec_to_bcd:dht22_data_bcd|num_reg[6]  ;
-; 11:1               ; 20 bits   ; 140 LEs       ; 0 LEs                ; 140 LEs                ; Yes        ; |weather_sensor|one_wire:dht22_one_wire|stamp_reg[14] ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |weather_sensor|seg_display:display|Mux1              ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |weather_sensor|dec_to_bcd:dht22_data_bcd|Selector0   ;
-; 16:1               ; 8 bits    ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; No         ; |weather_sensor|one_wire:dht22_one_wire|Selector7     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |weather_sensor|dec_to_bcd:dht22_data_bcd|tens_reg[0]     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |weather_sensor|dec_to_bcd:dht22_data_bcd|hundreds_reg[0] ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |weather_sensor|dec_to_bcd:dht22_data_bcd|num_reg[6]      ;
+; 11:1               ; 20 bits   ; 140 LEs       ; 0 LEs                ; 140 LEs                ; Yes        ; |weather_sensor|one_wire:dht22_one_wire|stamp_reg[5]      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |weather_sensor|seg_display:display|Mux1                  ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |weather_sensor|dec_to_bcd:dht22_data_bcd|Selector2       ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; No         ; |weather_sensor|one_wire:dht22_one_wire|Selector5         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
 +------------------------------------------------------------------------+
@@ -342,22 +344,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; boundary_port         ; 16                          ;
 ; cycloneiii_ff         ; 176                         ;
-;     CLR               ; 117                         ;
+;     CLR               ; 109                         ;
 ;     CLR SLD           ; 6                           ;
-;     ENA CLR           ; 53                          ;
+;     ENA CLR           ; 61                          ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 401                         ;
+; cycloneiii_lcell_comb ; 396                         ;
 ;     arith             ; 129                         ;
 ;         2 data inputs ; 85                          ;
 ;         3 data inputs ; 44                          ;
-;     normal            ; 272                         ;
+;     normal            ; 267                         ;
 ;         1 data inputs ; 17                          ;
-;         2 data inputs ; 51                          ;
-;         3 data inputs ; 35                          ;
-;         4 data inputs ; 169                         ;
+;         2 data inputs ; 55                          ;
+;         3 data inputs ; 32                          ;
+;         4 data inputs ; 163                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 4.83                        ;
+; Average LUT depth     ; 4.78                        ;
 +-----------------------+-----------------------------+
 
 
@@ -376,7 +378,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Apr 28 14:42:31 2024
+    Info: Processing started: Sun Apr 28 19:19:19 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off weather_sensor -c weather_sensor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -415,15 +417,15 @@ Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal 
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 445 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 440 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 13 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 429 logic cells
+    Info (21061): Implemented 424 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 4780 megabytes
-    Info: Processing ended: Sun Apr 28 14:42:44 2024
+    Info: Processing ended: Sun Apr 28 19:19:32 2024
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Total CPU time (on all processors): 00:00:29
 
 

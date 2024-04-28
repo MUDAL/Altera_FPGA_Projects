@@ -178,7 +178,7 @@ begin
    valid <= '1' when check_sum = unsigned(data_reg(32 to 39)) and 
                      state = ST_CHECK else '0'; 
    
-   registered_outputs: process(rst_n,clk)
+   registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
          io_reg <= '1';

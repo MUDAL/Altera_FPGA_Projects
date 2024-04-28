@@ -92,10 +92,8 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sel[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sel[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sel[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sel
-set_location_assignment PIN_113 -to io
+set_location_assignment PIN_115 -to io
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to io
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to read_io
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to valid
 set_location_assignment PIN_84 -to led
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top

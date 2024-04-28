@@ -77,9 +77,9 @@ begin
       end if;
    end process;
   
-   combinational_logic: 
-   process(state,en,dec,num_reg,hundreds_reg,tens_reg,unit_reg,
-           tenths_reg,bcd_reg,done_reg)
+   combinational_logic: process(state,en,dec,num_reg,hundreds_reg,
+                                tens_reg,unit_reg,tenths_reg,bcd_reg,
+                                done_reg)
    begin
       hundreds <= hundreds_reg;
       tens <= tens_reg;
@@ -90,10 +90,6 @@ begin
       done_next <= done_reg;
       case state is
          when ST_IDLE =>
-            hundreds <= (others => '0');
-            tens <= (others => '0');
-            unit <= (others => '0');
-            tenths <= (others => '0');
             num <= unsigned(dec);            
          when ST_CALC =>
             if num_reg >= to_unsigned(100 * FACTOR,num_reg'length) then
@@ -120,6 +116,10 @@ begin
             end if;
          when ST_DONE =>
             if en = '0' then
+               hundreds <= (others => '0');
+               tens <= (others => '0');
+               unit <= (others => '0');
+               tenths <= (others => '0');          
                done_next <= '0';
             end if;
       end case;
@@ -127,7 +127,8 @@ begin
   
    bcd <= std_logic_vector(bcd_reg);
    done <= done_reg;
-   registered_output: process(rst_n,clk)
+   
+   registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
          hundreds_reg <= (others => '0');
@@ -147,5 +148,4 @@ begin
          done_reg <= done_next;
       end if;
    end process;
-  
 end dec_to_bcd_rtl;

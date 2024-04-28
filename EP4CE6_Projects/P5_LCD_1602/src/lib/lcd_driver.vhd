@@ -192,7 +192,7 @@ begin
    en <= en_reg;
    db <= db_reg;
    
-   registered_outputs: process(rst_n,clk)
+   registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
          en_reg <= '0';
@@ -202,6 +202,5 @@ begin
          db_reg <= db_next;
       end if;
    end process;
-   
 end lcd_driver_rtl;
 

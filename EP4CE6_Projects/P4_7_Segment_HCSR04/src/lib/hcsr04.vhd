@@ -91,9 +91,9 @@ begin
       end if;
    end process;
    
-   combinational_outputs: 
-   process(state,micro_clks,echo,trig_reg,new_io_reg,
-           old_io_reg,pos_reg,done_reg)
+   combinational_outputs: process(state,micro_clks,echo,trig_reg,
+                                  new_io_reg,old_io_reg,pos_reg,
+                                  done_reg)
    begin
       trig_next <= trig_reg;
       new_io <= new_io_reg;
@@ -140,7 +140,7 @@ begin
    pulse <= std_logic_vector(pos_reg);
    done <= done_reg;
    
-   registered_outputs: process(rst_n,clk)
+   registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
          trig_reg <= '0';
@@ -156,6 +156,5 @@ begin
          done_reg <= done_next;
       end if;
    end process;
-   
 end hcsr04_rtl;
 

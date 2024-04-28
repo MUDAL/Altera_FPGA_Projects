@@ -46,8 +46,8 @@ architecture i2c_reader_rtl of i2c_reader is
    signal pulse: std_logic; --SCL pulse
    signal index: integer range 0 to 25;
    signal index_reg: integer range 0 to 25;
-   signal i2c_buff: std_logic_vector(0 to 16);
-   signal i2c_buff_reg: std_logic_vector(0 to 16);
+   signal data_next: std_logic_vector(0 to 16);
+   signal data_reg: std_logic_vector(0 to 16);
    signal clks: unsigned(8 downto 0); --Number of system clocks in SCL  
 begin
    --Counts number of system clocks [50MHz] in an I2C clock [100kHz] period 
@@ -124,11 +124,11 @@ begin
    moore_output: done <= '1' when state = ST_DONE or state = ST_STOP else '0'; 
    
    mealy_outputs: process(state,en,start,sda,sda_reg,index_reg,
-                          i2c_buff_reg,scl_low,scl_high,scl_reg)
+                          data_reg,scl_low,scl_high,scl_reg)
    begin
       sda_next <= sda_reg;
       index <= index_reg;
-      i2c_buff <= i2c_buff_reg;
+      data_next <= data_reg;
       case state is
          when ST_IDLE =>
             sda_next <= '1';
@@ -145,7 +145,7 @@ begin
          when ST_GET_ACK_HIGH_BYTE =>
             --Receive slave ACK (index 8) and high byte (index 9 to 16)
             if scl_high = '1' then
-               i2c_buff(index_reg - 8) <= sda;
+               data_next(index_reg - 8) <= sda;
                index <= index_reg + 1;
             end if;              
          when ST_SEND_ACK => --Master ACK
@@ -156,7 +156,7 @@ begin
             if scl_reg = '0' then
                sda_next <= '1'; --Release SDA (LM75 will pull low if needed)
             elsif scl_high = '1' then
-               i2c_buff(index_reg - 8) <= sda;
+               data_next(index_reg - 8) <= sda;
                index <= index_reg + 1;
             end if;
          when ST_SEND_NACK =>
@@ -183,22 +183,21 @@ begin
    tristate_buffers: sda <= 'Z' when sda_reg = '1' else '0';
                      scl <= 'Z' when scl_reg = '1' else '0';
    
-   --Bit 0 of 'i2c_buff_reg' is redundant (ACK from LM75)
-   data_out <= i2c_buff_reg(1 to 9);
+   --Bit 0 of 'data_reg' is redundant (ACK from LM75)
+   data_out <= data_reg(1 to 9);
    
-   registered_outputs: process(rst_n,clk)
+   registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
          sda_reg <= '1';
          scl_reg <= '1';
          index_reg <= 0;
-         i2c_buff_reg <= (others => '0');
+         data_reg <= (others => '0');
       elsif rising_edge(clk) then
          sda_reg <= sda_next;
          scl_reg <= scl_next;
          index_reg <= index;
-         i2c_buff_reg <= i2c_buff;
+         data_reg <= data_next;
       end if;
    end process;
-   
 end i2c_reader_rtl;

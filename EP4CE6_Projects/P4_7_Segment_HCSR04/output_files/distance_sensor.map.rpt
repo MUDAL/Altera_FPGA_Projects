@@ -1,5 +1,5 @@
 Analysis & Synthesis report for distance_sensor
-Thu Feb 22 19:03:31 2024
+Sun Apr 28 19:14:54 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -51,13 +51,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 22 19:03:31 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 28 19:14:54 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; distance_sensor                             ;
 ; Top-level Entity Name              ; distance_sensor                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 451                                         ;
-;     Total combinational functions  ; 433                                         ;
+; Total logic elements               ; 439                                         ;
+;     Total combinational functions  ; 421                                         ;
 ;     Dedicated logic registers      ; 153                                         ;
 ; Total registers                    ; 153                                         ;
 ; Total pins                         ; 16                                          ;
@@ -216,16 +216,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 451       ;
+; Estimated Total logic elements              ; 439       ;
 ;                                             ;           ;
-; Total combinational functions               ; 433       ;
+; Total combinational functions               ; 421       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 167       ;
-;     -- 3 input functions                    ; 77        ;
-;     -- <=2 input functions                  ; 189       ;
+;     -- 4 input functions                    ; 150       ;
+;     -- 3 input functions                    ; 74        ;
+;     -- <=2 input functions                  ; 197       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 252       ;
+;     -- normal mode                          ; 240       ;
 ;     -- arithmetic mode                      ; 181       ;
 ;                                             ;           ;
 ; Total registers                             ; 153       ;
@@ -238,8 +238,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 153       ;
-; Total fan-out                               ; 1881      ;
-; Average fan-out                             ; 3.04      ;
+; Total fan-out                               ; 1848      ;
+; Average fan-out                             ; 3.05      ;
 +---------------------------------------------+-----------+
 
 
@@ -248,8 +248,8 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                ; Entity Name     ; Library Name ;
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |distance_sensor                            ; 433 (45)            ; 153 (27)                  ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |distance_sensor                                                                                                   ; distance_sensor ; work         ;
-;    |dec_to_bcd:dec_to_bcd_inst|             ; 210 (210)           ; 57 (57)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst                                                                        ; dec_to_bcd      ; work         ;
+; |distance_sensor                            ; 421 (45)            ; 153 (27)                  ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |distance_sensor                                                                                                   ; distance_sensor ; work         ;
+;    |dec_to_bcd:dec_to_bcd_inst|             ; 198 (198)           ; 57 (57)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst                                                                        ; dec_to_bcd      ; work         ;
 ;    |hcsr04:hcsr04_inst|                     ; 80 (80)             ; 47 (47)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|hcsr04:hcsr04_inst                                                                                ; hcsr04          ; work         ;
 ;    |lpm_mult:Mult0|                         ; 52 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|lpm_mult:Mult0                                                                                    ; lpm_mult        ; work         ;
 ;       |multcore:mult_core|                  ; 52 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |distance_sensor|lpm_mult:Mult0|multcore:mult_core                                                                 ; multcore        ; work         ;
@@ -310,11 +310,11 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 153   ;
-; Number of registers using Synchronous Clear  ; 6     ;
+; Number of registers using Synchronous Clear  ; 18    ;
 ; Number of registers using Synchronous Load   ; 33    ;
 ; Number of registers using Asynchronous Clear ; 153   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 58    ;
+; Number of registers using Clock Enable       ; 74    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -332,20 +332,24 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |distance_sensor|hcsr04:hcsr04_inst|micro_clks[15]      ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |distance_sensor|hcsr04:hcsr04_inst|clks[5]             ;
-; 7:1                ; 18 bits   ; 72 LEs        ; 54 LEs               ; 18 LEs                 ; Yes        ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst|num_reg[18] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |distance_sensor|hcsr04:hcsr04_inst|pos_reg[10]         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |distance_sensor|seg_display:display_inst|Mux1          ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst|Selector2   ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |distance_sensor|hcsr04:hcsr04_inst|Selector1           ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |distance_sensor|hcsr04:hcsr04_inst|Selector2           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |distance_sensor|hcsr04:hcsr04_inst|micro_clks[4]           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |distance_sensor|hcsr04:hcsr04_inst|clks[2]                 ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst|unit_reg[0]     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst|tens_reg[0]     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst|hundreds_reg[3] ;
+; 7:1                ; 18 bits   ; 72 LEs        ; 54 LEs               ; 18 LEs                 ; Yes        ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst|num_reg[7]      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |distance_sensor|hcsr04:hcsr04_inst|pos_reg[13]             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |distance_sensor|seg_display:display_inst|Mux2              ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |distance_sensor|dec_to_bcd:dec_to_bcd_inst|Selector2       ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |distance_sensor|hcsr04:hcsr04_inst|Selector1               ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |distance_sensor|hcsr04:hcsr04_inst|Selector4               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -420,22 +424,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; boundary_port         ; 16                          ;
 ; cycloneiii_ff         ; 153                         ;
-;     CLR               ; 89                          ;
+;     CLR               ; 73                          ;
 ;     CLR SCLR          ; 6                           ;
-;     ENA CLR           ; 25                          ;
+;     ENA CLR           ; 29                          ;
+;     ENA CLR SCLR      ; 12                          ;
 ;     ENA CLR SLD       ; 33                          ;
-; cycloneiii_lcell_comb ; 438                         ;
+; cycloneiii_lcell_comb ; 426                         ;
 ;     arith             ; 181                         ;
 ;         2 data inputs ; 147                         ;
 ;         3 data inputs ; 34                          ;
-;     normal            ; 257                         ;
+;     normal            ; 245                         ;
 ;         1 data inputs ; 19                          ;
-;         2 data inputs ; 28                          ;
-;         3 data inputs ; 43                          ;
-;         4 data inputs ; 167                         ;
+;         2 data inputs ; 36                          ;
+;         3 data inputs ; 40                          ;
+;         4 data inputs ; 150                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 4.13                        ;
+; Average LUT depth     ; 3.98                        ;
 +-----------------------+-----------------------------+
 
 
@@ -444,7 +449,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -454,13 +459,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 22 19:03:14 2024
+    Info: Processing started: Sun Apr 28 19:14:40 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off distance_sensor -c distance_sensor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file src/distance_sensor.vhd
-    Info (12022): Found design unit 1: distance_sensor-distance_sensor_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 30
-    Info (12023): Found entity 1: distance_sensor File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 20
+    Info (12022): Found design unit 1: distance_sensor-distance_sensor_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 34
+    Info (12023): Found entity 1: distance_sensor File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 24
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/seg_rom.vhd
     Info (12022): Found design unit 1: seg_rom-seg_rom_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/seg_rom.vhd Line: 12
     Info (12023): Found entity 1: seg_rom File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/seg_rom.vhd Line: 7
@@ -477,18 +482,18 @@ Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mappin
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
 Info (12127): Elaborating entity "distance_sensor" for the top level hierarchy
-Info (12129): Elaborating entity "hcsr04" using architecture "A:hcsr04_rtl" for hierarchy "hcsr04:hcsr04_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 58
-Info (12129): Elaborating entity "dec_to_bcd" using architecture "A:dec_to_bcd_rtl" for hierarchy "dec_to_bcd:dec_to_bcd_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 65
-Info (12129): Elaborating entity "seg_display" using architecture "A:seg_display_rtl" for hierarchy "seg_display:display_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 69
+Info (12129): Elaborating entity "hcsr04" using architecture "A:hcsr04_rtl" for hierarchy "hcsr04:hcsr04_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 91
+Info (12129): Elaborating entity "dec_to_bcd" using architecture "A:dec_to_bcd_rtl" for hierarchy "dec_to_bcd:dec_to_bcd_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 95
+Info (12129): Elaborating entity "seg_display" using architecture "A:seg_display_rtl" for hierarchy "seg_display:display_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 99
 Info (12129): Elaborating entity "seg_rom" using architecture "A:seg_rom_rtl" for hierarchy "seg_display:display_inst|seg_rom:rom" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/seg_display.vhd Line: 93
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "seg_display:display_inst|seg_rom:rom|rom" is uninferred due to inappropriate RAM size File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/seg_rom.vhd Line: 15
 Warning (113028): 6 out of 16 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/db/distance_sensor.ram0_seg_rom_bebb4cdc.hdl.mif Line: 1
     Warning (113027): Addresses ranging from 10 to 15 are not initialized File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/db/distance_sensor.ram0_seg_rom_bebb4cdc.hdl.mif Line: 1
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 62
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 62
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 62
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 74
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 74
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 74
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "8"
     Info (12134): Parameter "LPM_WIDTHP" = "24"
@@ -517,14 +522,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 467 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 455 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 451 logic cells
+    Info (21061): Implemented 439 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 4797 megabytes
-    Info: Processing ended: Thu Feb 22 19:03:31 2024
-    Info: Elapsed time: 00:00:17
+    Info: Processing ended: Sun Apr 28 19:14:54 2024
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:30
 
 
