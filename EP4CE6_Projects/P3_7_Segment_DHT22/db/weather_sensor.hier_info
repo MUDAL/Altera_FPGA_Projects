@@ -80,7 +80,6 @@ sel[3] << seg_display:display.sel[3]
 
 
 |weather_sensor|one_wire:dht22_one_wire
-rst_n => done_reg.ACLR
 rst_n => old_io_reg.ACLR
 rst_n => new_io_reg.ACLR
 rst_n => data_reg[39].ACLR
@@ -171,7 +170,6 @@ rst_n => index_reg[4].ACLR
 rst_n => index_reg[5].ACLR
 rst_n => io_reg.PRESET
 rst_n => state~3.DATAIN
-clk => done_reg.CLK
 clk => old_io_reg.CLK
 clk => new_io_reg.CLK
 clk => data_reg[39].CLK
@@ -332,7 +330,7 @@ data_out[12] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
 data_out[13] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
 data_out[14] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
 data_out[15] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-done <= done_reg.DB_MAX_OUTPUT_PORT_TYPE
+done <= done.DB_MAX_OUTPUT_PORT_TYPE
 valid <= valid.DB_MAX_OUTPUT_PORT_TYPE
 
 

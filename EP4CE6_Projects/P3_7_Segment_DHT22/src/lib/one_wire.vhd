@@ -58,8 +58,6 @@ architecture one_wire_rtl of one_wire is
    signal old_io_reg: std_logic;
    signal check_sum: unsigned(7 downto 0);
    signal bit_level: std_logic;
-   signal done_reg: std_logic;
-   signal done_next: std_logic;
 begin
    next_state_logic: process(state,en,pw,index_reg,new_io_reg,old_io_reg)
    begin
@@ -112,7 +110,7 @@ begin
    end process;
    
    moore_outputs: clks_next <= clks_reg + 1;
-   done_next <= '1' when state = ST_DONE or state = ST_CHECK else '0';
+   done <= '1' when state = ST_DONE or state = ST_CHECK else '0';
    new_io <= io when state = ST_SAMPLE else new_io_reg;
    pw <= clks_reg - stamp_reg;
    
@@ -177,8 +175,6 @@ begin
    --Output data selector
    data_out <= data_reg(0 to 15) when param = '0' else    
                data_reg(16 to 31);
-   
-   done <= done_reg;
 
    valid <= '1' when check_sum = unsigned(data_reg(32 to 39)) and 
                      state = ST_CHECK else '0'; 
@@ -193,7 +189,6 @@ begin
          data_reg <= (others => '0');
          new_io_reg <= '0';
          old_io_reg <= '0';
-         done_reg <= '0';
       elsif rising_edge(clk) then
          io_reg <= io_next;
          index_reg <= index;
@@ -202,7 +197,6 @@ begin
          data_reg <= data_next;
          new_io_reg <= new_io;
          old_io_reg <= old_io;
-         done_reg <= done_next;
       end if;
    end process;
 end architecture one_wire_rtl;
