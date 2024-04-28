@@ -41,7 +41,7 @@ This task involves configuring an FPGA as a PS/2-to-UART converter that decodes 
 ![Screenshot (507)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/d3b84650-86d8-4381-b935-5300a6171b16)   
   
 ## Demo  
-[TO BE ADDED]      
+[Video Demo](https://drive.google.com/file/d/17dOrSqlr-xDw76ZnJK9NwBabNZB0npRc/view?usp=sharing)        
 
 ## Project Setup  
 ![20240427_181320](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/27cece61-abb1-4e53-8746-534403732a88)  
