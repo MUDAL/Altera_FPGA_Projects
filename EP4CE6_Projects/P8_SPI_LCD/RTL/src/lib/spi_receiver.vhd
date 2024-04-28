@@ -127,5 +127,4 @@ begin
          done_reg <= done_next;
       end if;
    end process;
-   
 end spi_receiver_rtl;

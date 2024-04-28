@@ -196,25 +196,25 @@ R30
 R12
 R13
 Espi_lcd_main_tb
+Z33 w1713132991
 R15
 R16
 R0
 R1
 R2
-32
-Z33 !s110 1713133008
-!i10b 1
-Z34 w1713132991
-!i122 225
+!i122 231
 R5
-Z35 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_lcd_main_tb.vhd
-Z36 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_lcd_main_tb.vhd
+Z34 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_lcd_main_tb.vhd
+Z35 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_lcd_main_tb.vhd
 l0
 L9 1
 VMWKWNJ4]287og2PgPUaCH1
 !s100 DFO4SmXhITbT0AR^Moiz^2
 R8
-Z37 !s108 1713133008.000000
+32
+Z36 !s110 1713354335
+!i10b 1
+Z37 !s108 1713354334.000000
 Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_lcd_main_tb.vhd|
 Z39 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_lcd_main_tb.vhd|
 !i113 1
@@ -227,16 +227,16 @@ R16
 R0
 R1
 R2
-DEx4 work 15 spi_lcd_main_tb 0 22 MWKWNJ4]287og2PgPUaCH1
-32
-R33
-!i10b 1
-!i122 225
+Z40 DEx4 work 15 spi_lcd_main_tb 0 22 MWKWNJ4]287og2PgPUaCH1
+!i122 231
 l23
-L12 124
-VTz=kZFCnmLMN?_Y[aCm]P3
-!s100 `7PIj`jE`7dICz3Rd=FWC1
+Z41 L12 124
+Z42 VTz=kZFCnmLMN?_Y[aCm]P3
+Z43 !s100 `7PIj`jE`7dICz3Rd=FWC1
 R8
+32
+R36
+!i10b 1
 R37
 R38
 R39
@@ -244,25 +244,25 @@ R39
 R12
 R13
 Espi_receiver
-Z40 w1713348957
+Z44 w1713348957
 R0
 R1
 R2
 !i122 230
 R5
-Z41 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/spi_receiver.vhd
-Z42 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/spi_receiver.vhd
+Z45 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/spi_receiver.vhd
+Z46 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/spi_receiver.vhd
 l0
 L10 1
 VIXGAkPg@5X5fXDkf2idX90
 !s100 LWhb;kX9[MkCddd[ffK3d1
 R8
 32
-Z43 !s110 1713349284
+Z47 !s110 1713349284
 !i10b 1
-Z44 !s108 1713349284.000000
-Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/spi_receiver.vhd|
-Z46 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/spi_receiver.vhd|
+Z48 !s108 1713349284.000000
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/spi_receiver.vhd|
+Z50 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/spi_receiver.vhd|
 !i113 1
 R12
 R13
@@ -278,11 +278,11 @@ VOQ8@]G^dBgBbXV`A1zRn41
 !s100 <clmVDB>hbD4[b4Qf3;cZ3
 R8
 32
-R43
+R47
 !i10b 1
-R44
-R45
-R46
+R48
+R49
+R50
 !i113 1
 R12
 R13
@@ -295,19 +295,19 @@ R2
 32
 R17
 !i10b 1
-Z47 w1713087579
+Z51 w1713087579
 !i122 79
 R5
-Z48 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd
-Z49 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd
+Z52 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd
+Z53 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd
 l0
 L9 1
 VMP@VWM7a_[k<?[5:^zd;Q2
 !s100 i3^dS;YJgm00;4o:>djNO2
 R8
 R21
-Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd|
-Z51 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd|
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd|
+Z55 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_receiver_tb.vhd|
 !i113 1
 R12
 R13
@@ -329,8 +329,8 @@ VCE6mLno6JfX4`LknC?76h2
 !s100 DLMCOM4aP8z]]DGN><XeT3
 R8
 R21
-R50
-R51
+R54
+R55
 !i113 1
 R12
 R13

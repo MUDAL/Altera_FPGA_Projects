@@ -55,6 +55,5 @@ begin
          db_reg <= db_next;
       end if;
    end process;
-   
 end lcd_driver_rtl;
 
