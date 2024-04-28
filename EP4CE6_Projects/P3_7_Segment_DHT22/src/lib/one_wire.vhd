@@ -12,7 +12,6 @@ use IEEE.NUMERIC_STD.ALL;
 -- Final data is read by dividing 16-bit humidity or temperature data  
 -- by 10. Data validity is checked using the checksum byte.
 
-
 entity one_wire is
    port(rst_n: in std_logic;
         clk: in std_logic;
