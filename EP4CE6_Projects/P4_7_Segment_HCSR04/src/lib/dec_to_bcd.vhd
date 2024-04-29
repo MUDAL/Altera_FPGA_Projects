@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 --Decimal to BCD converter  
---NB: I believe there are more efficient algorithms (e.g. the Double Dabble) ...
+--NB: I believe there are more efficient algorithms (e.g. the Double Dabble)
 -- that can achieve this task and I'll encourage you to try them out.
 
 entity dec_to_bcd is
