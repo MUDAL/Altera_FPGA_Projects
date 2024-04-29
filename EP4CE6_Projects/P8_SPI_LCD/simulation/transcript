@@ -1,0 +1,623 @@
+# Compile of lcd_driver.vhd was successful.
+# Compile of spi_receiver.vhd was successful.
+vsim work.spi_lcd_main_tb
+# vsim work.spi_lcd_main_tb 
+# Start time: 19:49:31 on Apr 28,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.pack_tb(body)
+# Loading work.spi_lcd_main_tb(spi_lcd_main_behav)
+# Loading work.spi_lcd_main(spi_lcd_main_rtl)
+# Loading work.spi_receiver(spi_receiver_rtl)
+# Loading work.lcd_driver(lcd_driver_rtl)
+run -all
+# ** Note: Expected: 285, Got: 285, Status: PASS
+#    Time: 3370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1EB, Got: 1EB, Status: PASS
+#    Time: 6570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1A7, Got: 1A7, Status: PASS
+#    Time: 9770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3C6, Got: 3C6, Status: PASS
+#    Time: 12970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 361, Got: 361, Status: PASS
+#    Time: 16170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2DC, Got: 2DC, Status: PASS
+#    Time: 19370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1DD, Got: 1DD, Status: PASS
+#    Time: 22570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 25A, Got: 25A, Status: PASS
+#    Time: 25770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 008, Got: 008, Status: PASS
+#    Time: 28970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 19E, Got: 19E, Status: PASS
+#    Time: 32170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 307, Got: 307, Status: PASS
+#    Time: 35370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 086, Got: 086, Status: PASS
+#    Time: 38570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 318, Got: 318, Status: PASS
+#    Time: 41770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1C9, Got: 1C9, Status: PASS
+#    Time: 44970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 007, Got: 007, Status: PASS
+#    Time: 48170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3E4, Got: 3E4, Status: PASS
+#    Time: 51370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 30D, Got: 30D, Status: PASS
+#    Time: 54570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 10C, Got: 10C, Status: PASS
+#    Time: 57770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 318, Got: 318, Status: PASS
+#    Time: 60970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 015, Got: 015, Status: PASS
+#    Time: 64170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0FD, Got: 0FD, Status: PASS
+#    Time: 67370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 244, Got: 244, Status: PASS
+#    Time: 70570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0A1, Got: 0A1, Status: PASS
+#    Time: 73770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 09E, Got: 09E, Status: PASS
+#    Time: 76970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0F4, Got: 0F4, Status: PASS
+#    Time: 80170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0F0, Got: 0F0, Status: PASS
+#    Time: 83370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 037, Got: 037, Status: PASS
+#    Time: 86570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2A3, Got: 2A3, Status: PASS
+#    Time: 89770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0F1, Got: 0F1, Status: PASS
+#    Time: 92970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 088, Got: 088, Status: PASS
+#    Time: 96170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0CD, Got: 0CD, Status: PASS
+#    Time: 99370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3D7, Got: 3D7, Status: PASS
+#    Time: 102570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 015, Got: 015, Status: PASS
+#    Time: 105770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 211, Got: 211, Status: PASS
+#    Time: 108970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2E0, Got: 2E0, Status: PASS
+#    Time: 112170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 23D, Got: 23D, Status: PASS
+#    Time: 115370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 259, Got: 259, Status: PASS
+#    Time: 118570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0C7, Got: 0C7, Status: PASS
+#    Time: 121770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 104, Got: 104, Status: PASS
+#    Time: 124970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2BF, Got: 2BF, Status: PASS
+#    Time: 128170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2C5, Got: 2C5, Status: PASS
+#    Time: 131370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 043, Got: 043, Status: PASS
+#    Time: 134570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 35F, Got: 35F, Status: PASS
+#    Time: 137770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 060, Got: 060, Status: PASS
+#    Time: 140970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1F4, Got: 1F4, Status: PASS
+#    Time: 144170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 108, Got: 108, Status: PASS
+#    Time: 147370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2EB, Got: 2EB, Status: PASS
+#    Time: 150570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0CC, Got: 0CC, Status: PASS
+#    Time: 153770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1E6, Got: 1E6, Status: PASS
+#    Time: 156970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2B7, Got: 2B7, Status: PASS
+#    Time: 160170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 11D, Got: 11D, Status: PASS
+#    Time: 163370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 36C, Got: 36C, Status: PASS
+#    Time: 166570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 00F, Got: 00F, Status: PASS
+#    Time: 169770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 302, Got: 302, Status: PASS
+#    Time: 172970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0C4, Got: 0C4, Status: PASS
+#    Time: 176170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 38C, Got: 38C, Status: PASS
+#    Time: 179370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 110, Got: 110, Status: PASS
+#    Time: 182570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 04E, Got: 04E, Status: PASS
+#    Time: 185770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 083, Got: 083, Status: PASS
+#    Time: 188970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 039, Got: 039, Status: PASS
+#    Time: 192170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 276, Got: 276, Status: PASS
+#    Time: 195370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2C9, Got: 2C9, Status: PASS
+#    Time: 198570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 349, Got: 349, Status: PASS
+#    Time: 201770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 38F, Got: 38F, Status: PASS
+#    Time: 204970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 251, Got: 251, Status: PASS
+#    Time: 208170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 347, Got: 347, Status: PASS
+#    Time: 211370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0FA, Got: 0FA, Status: PASS
+#    Time: 214570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 29F, Got: 29F, Status: PASS
+#    Time: 217770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 06B, Got: 06B, Status: PASS
+#    Time: 220970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 26D, Got: 26D, Status: PASS
+#    Time: 224170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 329, Got: 329, Status: PASS
+#    Time: 227370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 39F, Got: 39F, Status: PASS
+#    Time: 230570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 267, Got: 267, Status: PASS
+#    Time: 233770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 247, Got: 247, Status: PASS
+#    Time: 236970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1B7, Got: 1B7, Status: PASS
+#    Time: 240170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 273, Got: 273, Status: PASS
+#    Time: 243370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 388, Got: 388, Status: PASS
+#    Time: 246570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2E8, Got: 2E8, Status: PASS
+#    Time: 249770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 035, Got: 035, Status: PASS
+#    Time: 252970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2EB, Got: 2EB, Status: PASS
+#    Time: 256170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 056, Got: 056, Status: PASS
+#    Time: 259370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 157, Got: 157, Status: PASS
+#    Time: 262570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 265, Got: 265, Status: PASS
+#    Time: 265770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 27A, Got: 27A, Status: PASS
+#    Time: 268970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 146, Got: 146, Status: PASS
+#    Time: 272170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2EE, Got: 2EE, Status: PASS
+#    Time: 275370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 334, Got: 334, Status: PASS
+#    Time: 278570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 059, Got: 059, Status: PASS
+#    Time: 281770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 377, Got: 377, Status: PASS
+#    Time: 284970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0CB, Got: 0CB, Status: PASS
+#    Time: 288170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 065, Got: 065, Status: PASS
+#    Time: 291370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 003, Got: 003, Status: PASS
+#    Time: 294570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 286, Got: 286, Status: PASS
+#    Time: 297770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 22E, Got: 22E, Status: PASS
+#    Time: 300970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 23E, Got: 23E, Status: PASS
+#    Time: 304170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3F7, Got: 3F7, Status: PASS
+#    Time: 307370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 214, Got: 214, Status: PASS
+#    Time: 310570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 23A, Got: 23A, Status: PASS
+#    Time: 313770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 25E, Got: 25E, Status: PASS
+#    Time: 316970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1EE, Got: 1EE, Status: PASS
+#    Time: 320170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0DA, Got: 0DA, Status: PASS
+#    Time: 323370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 392, Got: 392, Status: PASS
+#    Time: 326570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2D4, Got: 2D4, Status: PASS
+#    Time: 329770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 301, Got: 301, Status: PASS
+#    Time: 332970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1B8, Got: 1B8, Status: PASS
+#    Time: 336170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3F3, Got: 3F3, Status: PASS
+#    Time: 339370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 17E, Got: 17E, Status: PASS
+#    Time: 342570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 391, Got: 391, Status: PASS
+#    Time: 345770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 15B, Got: 15B, Status: PASS
+#    Time: 348970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0C9, Got: 0C9, Status: PASS
+#    Time: 352170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2DF, Got: 2DF, Status: PASS
+#    Time: 355370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3DB, Got: 3DB, Status: PASS
+#    Time: 358570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2E3, Got: 2E3, Status: PASS
+#    Time: 361770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3C9, Got: 3C9, Status: PASS
+#    Time: 364970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 337, Got: 337, Status: PASS
+#    Time: 368170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 37B, Got: 37B, Status: PASS
+#    Time: 371370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0D6, Got: 0D6, Status: PASS
+#    Time: 374570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 244, Got: 244, Status: PASS
+#    Time: 377770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0CF, Got: 0CF, Status: PASS
+#    Time: 380970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3AA, Got: 3AA, Status: PASS
+#    Time: 384170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 02B, Got: 02B, Status: PASS
+#    Time: 387370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 289, Got: 289, Status: PASS
+#    Time: 390570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 07D, Got: 07D, Status: PASS
+#    Time: 393770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 391, Got: 391, Status: PASS
+#    Time: 396970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3CE, Got: 3CE, Status: PASS
+#    Time: 400170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 35D, Got: 35D, Status: PASS
+#    Time: 403370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3F7, Got: 3F7, Status: PASS
+#    Time: 406570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2DC, Got: 2DC, Status: PASS
+#    Time: 409770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 22A, Got: 22A, Status: PASS
+#    Time: 412970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0CE, Got: 0CE, Status: PASS
+#    Time: 416170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 34C, Got: 34C, Status: PASS
+#    Time: 419370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 105, Got: 105, Status: PASS
+#    Time: 422570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 069, Got: 069, Status: PASS
+#    Time: 425770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 27C, Got: 27C, Status: PASS
+#    Time: 428970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3BD, Got: 3BD, Status: PASS
+#    Time: 432170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 046, Got: 046, Status: PASS
+#    Time: 435370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 339, Got: 339, Status: PASS
+#    Time: 438570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 295, Got: 295, Status: PASS
+#    Time: 441770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 36D, Got: 36D, Status: PASS
+#    Time: 444970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 11B, Got: 11B, Status: PASS
+#    Time: 448170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 148, Got: 148, Status: PASS
+#    Time: 451370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 268, Got: 268, Status: PASS
+#    Time: 454570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 312, Got: 312, Status: PASS
+#    Time: 457770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 33E, Got: 33E, Status: PASS
+#    Time: 460970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1E7, Got: 1E7, Status: PASS
+#    Time: 464170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 07E, Got: 07E, Status: PASS
+#    Time: 467370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 306, Got: 306, Status: PASS
+#    Time: 470570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 11D, Got: 11D, Status: PASS
+#    Time: 473770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 252, Got: 252, Status: PASS
+#    Time: 476970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 176, Got: 176, Status: PASS
+#    Time: 480170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 142, Got: 142, Status: PASS
+#    Time: 483370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 002, Got: 002, Status: PASS
+#    Time: 486570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 342, Got: 342, Status: PASS
+#    Time: 489770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 147, Got: 147, Status: PASS
+#    Time: 492970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 362, Got: 362, Status: PASS
+#    Time: 496170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 333, Got: 333, Status: PASS
+#    Time: 499370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 366, Got: 366, Status: PASS
+#    Time: 502570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 094, Got: 094, Status: PASS
+#    Time: 505770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2F4, Got: 2F4, Status: PASS
+#    Time: 508970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 08D, Got: 08D, Status: PASS
+#    Time: 512170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 13C, Got: 13C, Status: PASS
+#    Time: 515370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 081, Got: 081, Status: PASS
+#    Time: 518570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3A8, Got: 3A8, Status: PASS
+#    Time: 521770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3C6, Got: 3C6, Status: PASS
+#    Time: 524970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1E7, Got: 1E7, Status: PASS
+#    Time: 528170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 351, Got: 351, Status: PASS
+#    Time: 531370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1C2, Got: 1C2, Status: PASS
+#    Time: 534570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 319, Got: 319, Status: PASS
+#    Time: 537770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 264, Got: 264, Status: PASS
+#    Time: 540970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1A2, Got: 1A2, Status: PASS
+#    Time: 544170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2D2, Got: 2D2, Status: PASS
+#    Time: 547370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 205, Got: 205, Status: PASS
+#    Time: 550570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 162, Got: 162, Status: PASS
+#    Time: 553770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 060, Got: 060, Status: PASS
+#    Time: 556970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3BE, Got: 3BE, Status: PASS
+#    Time: 560170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 02C, Got: 02C, Status: PASS
+#    Time: 563370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1A5, Got: 1A5, Status: PASS
+#    Time: 566570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 354, Got: 354, Status: PASS
+#    Time: 569770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3BC, Got: 3BC, Status: PASS
+#    Time: 572970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0F9, Got: 0F9, Status: PASS
+#    Time: 576170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 069, Got: 069, Status: PASS
+#    Time: 579370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 274, Got: 274, Status: PASS
+#    Time: 582570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 323, Got: 323, Status: PASS
+#    Time: 585770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 040, Got: 040, Status: PASS
+#    Time: 588970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0E7, Got: 0E7, Status: PASS
+#    Time: 592170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 046, Got: 046, Status: PASS
+#    Time: 595370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 178, Got: 178, Status: PASS
+#    Time: 598570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 27A, Got: 27A, Status: PASS
+#    Time: 601770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1CC, Got: 1CC, Status: PASS
+#    Time: 604970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 13B, Got: 13B, Status: PASS
+#    Time: 608170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 30B, Got: 30B, Status: PASS
+#    Time: 611370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3BF, Got: 3BF, Status: PASS
+#    Time: 614570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1F0, Got: 1F0, Status: PASS
+#    Time: 617770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2E5, Got: 2E5, Status: PASS
+#    Time: 620970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3FA, Got: 3FA, Status: PASS
+#    Time: 624170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 24B, Got: 24B, Status: PASS
+#    Time: 627370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0CE, Got: 0CE, Status: PASS
+#    Time: 630570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 08D, Got: 08D, Status: PASS
+#    Time: 633770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3FF, Got: 3FF, Status: PASS
+#    Time: 636970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 32D, Got: 32D, Status: PASS
+#    Time: 640170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 227, Got: 227, Status: PASS
+#    Time: 643370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3E4, Got: 3E4, Status: PASS
+#    Time: 646570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 232, Got: 232, Status: PASS
+#    Time: 649770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3D1, Got: 3D1, Status: PASS
+#    Time: 652970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1B0, Got: 1B0, Status: PASS
+#    Time: 656170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2EC, Got: 2EC, Status: PASS
+#    Time: 659370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 11D, Got: 11D, Status: PASS
+#    Time: 662570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2D2, Got: 2D2, Status: PASS
+#    Time: 665770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 113, Got: 113, Status: PASS
+#    Time: 668970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 30D, Got: 30D, Status: PASS
+#    Time: 672170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0C9, Got: 0C9, Status: PASS
+#    Time: 675370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 330, Got: 330, Status: PASS
+#    Time: 678570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3F6, Got: 3F6, Status: PASS
+#    Time: 681770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 094, Got: 094, Status: PASS
+#    Time: 684970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 225, Got: 225, Status: PASS
+#    Time: 688170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 25C, Got: 25C, Status: PASS
+#    Time: 691370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1A4, Got: 1A4, Status: PASS
+#    Time: 694570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1E2, Got: 1E2, Status: PASS
+#    Time: 697770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0EA, Got: 0EA, Status: PASS
+#    Time: 700970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 343, Got: 343, Status: PASS
+#    Time: 704170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 20B, Got: 20B, Status: PASS
+#    Time: 707370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 248, Got: 248, Status: PASS
+#    Time: 710570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 20B, Got: 20B, Status: PASS
+#    Time: 713770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1E7, Got: 1E7, Status: PASS
+#    Time: 716970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 30A, Got: 30A, Status: PASS
+#    Time: 720170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 051, Got: 051, Status: PASS
+#    Time: 723370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 213, Got: 213, Status: PASS
+#    Time: 726570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 17E, Got: 17E, Status: PASS
+#    Time: 729770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2BF, Got: 2BF, Status: PASS
+#    Time: 732970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1F2, Got: 1F2, Status: PASS
+#    Time: 736170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 014, Got: 014, Status: PASS
+#    Time: 739370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 18B, Got: 18B, Status: PASS
+#    Time: 742570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 08D, Got: 08D, Status: PASS
+#    Time: 745770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0D0, Got: 0D0, Status: PASS
+#    Time: 748970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 27C, Got: 27C, Status: PASS
+#    Time: 752170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 286, Got: 286, Status: PASS
+#    Time: 755370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2F4, Got: 2F4, Status: PASS
+#    Time: 758570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 10B, Got: 10B, Status: PASS
+#    Time: 761770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1B6, Got: 1B6, Status: PASS
+#    Time: 764970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2BA, Got: 2BA, Status: PASS
+#    Time: 768170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 07F, Got: 07F, Status: PASS
+#    Time: 771370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 374, Got: 374, Status: PASS
+#    Time: 774570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3B8, Got: 3B8, Status: PASS
+#    Time: 777770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 13A, Got: 13A, Status: PASS
+#    Time: 780970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 150, Got: 150, Status: PASS
+#    Time: 784170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0C5, Got: 0C5, Status: PASS
+#    Time: 787370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3A5, Got: 3A5, Status: PASS
+#    Time: 790570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3BC, Got: 3BC, Status: PASS
+#    Time: 793770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1DB, Got: 1DB, Status: PASS
+#    Time: 796970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2C4, Got: 2C4, Status: PASS
+#    Time: 800170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0A3, Got: 0A3, Status: PASS
+#    Time: 803370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 39D, Got: 39D, Status: PASS
+#    Time: 806570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 224, Got: 224, Status: PASS
+#    Time: 809770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 39A, Got: 39A, Status: PASS
+#    Time: 812970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 027, Got: 027, Status: PASS
+#    Time: 816170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0FE, Got: 0FE, Status: PASS
+#    Time: 819370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0F8, Got: 0F8, Status: PASS
+#    Time: 822570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 348, Got: 348, Status: PASS
+#    Time: 825770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 227, Got: 227, Status: PASS
+#    Time: 828970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 230, Got: 230, Status: PASS
+#    Time: 832170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2A8, Got: 2A8, Status: PASS
+#    Time: 835370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 361, Got: 361, Status: PASS
+#    Time: 838570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 252, Got: 252, Status: PASS
+#    Time: 841770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3B9, Got: 3B9, Status: PASS
+#    Time: 844970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 222, Got: 222, Status: PASS
+#    Time: 848170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 302, Got: 302, Status: PASS
+#    Time: 851370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 373, Got: 373, Status: PASS
+#    Time: 854570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 15C, Got: 15C, Status: PASS
+#    Time: 857770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 16E, Got: 16E, Status: PASS
+#    Time: 860970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 080, Got: 080, Status: PASS
+#    Time: 864170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 339, Got: 339, Status: PASS
+#    Time: 867370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0C9, Got: 0C9, Status: PASS
+#    Time: 870570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 10E, Got: 10E, Status: PASS
+#    Time: 873770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 16C, Got: 16C, Status: PASS
+#    Time: 876970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 0E1, Got: 0E1, Status: PASS
+#    Time: 880170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 019, Got: 019, Status: PASS
+#    Time: 883370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 32B, Got: 32B, Status: PASS
+#    Time: 886570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 291, Got: 291, Status: PASS
+#    Time: 889770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 13C, Got: 13C, Status: PASS
+#    Time: 892970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 095, Got: 095, Status: PASS
+#    Time: 896170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 32A, Got: 32A, Status: PASS
+#    Time: 899370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 160, Got: 160, Status: PASS
+#    Time: 902570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2A1, Got: 2A1, Status: PASS
+#    Time: 905770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 220, Got: 220, Status: PASS
+#    Time: 908970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1DC, Got: 1DC, Status: PASS
+#    Time: 912170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 31E, Got: 31E, Status: PASS
+#    Time: 915370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2E4, Got: 2E4, Status: PASS
+#    Time: 918570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 3D3, Got: 3D3, Status: PASS
+#    Time: 921770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 009, Got: 009, Status: PASS
+#    Time: 924970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2C1, Got: 2C1, Status: PASS
+#    Time: 928170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 133, Got: 133, Status: PASS
+#    Time: 931370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 10F, Got: 10F, Status: PASS
+#    Time: 934570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 273, Got: 273, Status: PASS
+#    Time: 937770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 39D, Got: 39D, Status: PASS
+#    Time: 940970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2F6, Got: 2F6, Status: PASS
+#    Time: 944170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 2A6, Got: 2A6, Status: PASS
+#    Time: 947370 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 230, Got: 230, Status: PASS
+#    Time: 950570 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 1E8, Got: 1E8, Status: PASS
+#    Time: 953770 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 036, Got: 036, Status: PASS
+#    Time: 956970 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Note: Expected: 142, Got: 142, Status: PASS
+#    Time: 960170 ns  Iteration: 3  Instance: /spi_lcd_main_tb
+# ** Failure: Simulation done
+#    Time: 960170 ns  Iteration: 3  Process: /spi_lcd_main_tb/output_verification File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_lcd_main_tb.vhd
+# Break in Process output_verification at L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/simulation/testbench/spi_lcd_main_tb.vhd line 131
+quit -sim
+# End time: 19:50:02 on Apr 28,2024, Elapsed time: 0:00:31
+# Errors: 1, Warnings: 3
+project open L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/LCD_TL1838_Test

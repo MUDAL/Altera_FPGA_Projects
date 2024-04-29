@@ -16,8 +16,8 @@ end hcsr04;
 
 architecture hcsr04_rtl of hcsr04 is
    --50MHz clock: 50 cycles = 1uS
-   constant CLKS_PER_US: integer := 50;
-   constant TRIG_PULSE: integer := 15; --15uS trigger pulse
+   constant CLKS_PER_US: integer := 49;
+   constant TRIG_PULSE: integer := 14; --15uS trigger pulse (0 to 14)
    type fsm is (ST_IDLE, ST_TRIG, ST_SAMPLE, ST_MEASURE, ST_DONE);
    signal state: fsm;
    signal next_state: fsm;
@@ -42,7 +42,7 @@ begin
          micro_clks <= (others => '0');
       elsif rising_edge(clk) then
          if cnt_en = '1' then
-            if clks = to_unsigned(CLKS_PER_US - 1,clks'length) then
+            if clks = to_unsigned(CLKS_PER_US,clks'length) then
                clks <= (others => '0');
                micro_clks <= micro_clks + 1;
             else
@@ -64,7 +64,7 @@ begin
                next_state <= ST_TRIG;
             end if;
          when ST_TRIG =>
-            if micro_clks = to_unsigned(TRIG_PULSE - 1,micro_clks'length) then
+            if micro_clks = to_unsigned(TRIG_PULSE,micro_clks'length) then
                next_state <= ST_SAMPLE;
             end if;
          when ST_SAMPLE =>
@@ -91,22 +91,22 @@ begin
       end if;
    end process;
    
-   combinational_outputs: process(state,micro_clks,echo,trig_reg,
-                                  new_io_reg,old_io_reg,pos_reg,
-                                  done_reg)
+   moore_outputs: done_next <= '0' when state = ST_IDLE
+                       else    '1' when state = ST_DONE
+                       else    done_reg;
+   new_io <= echo when state = ST_SAMPLE else new_io_reg;
+   
+   mealy_outputs: process(state,micro_clks,echo,trig_reg,old_io_reg,pos_reg)
    begin
       trig_next <= trig_reg;
-      new_io <= new_io_reg;
       old_io <= old_io_reg;
       pos_edge <= pos_reg;
-      done_next <= done_reg;
       case state is
          when ST_IDLE =>
             trig_next <= '0';
             cnt_en <= '0';
-            done_next <= '0';
          when ST_TRIG =>
-            if micro_clks = to_unsigned(TRIG_PULSE - 1,micro_clks'length) then
+            if micro_clks = to_unsigned(TRIG_PULSE,micro_clks'length) then
                trig_next <= '0';
                cnt_en <= '0';
             else
@@ -114,7 +114,6 @@ begin
                cnt_en <= '1';
             end if;
          when ST_SAMPLE => 
-            new_io <= echo;
             cnt_en <= old_io_reg;
          when ST_MEASURE =>
             if new_io_reg = '1' and old_io_reg = '0' then
@@ -132,7 +131,6 @@ begin
             end if;
          when ST_DONE =>
             cnt_en <= '0';
-            done_next <= '1';
       end case;
    end process;
    

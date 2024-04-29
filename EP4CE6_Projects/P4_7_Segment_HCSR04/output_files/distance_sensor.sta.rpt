@@ -1,5 +1,5 @@
 Timing Analyzer report for distance_sensor
-Sun Apr 28 19:15:07 2024
+Mon Apr 29 19:35:43 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -104,7 +104,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.9%      ;
+;     Processor 2            ;   2.8%      ;
 +----------------------------+-------------+
 
 
@@ -117,13 +117,13 @@ https://fpgasoftware.intel.com/eula.
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
-+--------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary               ;
-+------------+-----------------+------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
-+------------+-----------------+------------+------+
-; 137.61 MHz ; 137.61 MHz      ; clk        ;      ;
-+------------+-----------------+------------+------+
++-------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary              ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 128.7 MHz ; 128.7 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -138,7 +138,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+--------------------+
 ; Clock ; Slack  ; End Point TNS      ;
 +-------+--------+--------------------+
-; clk   ; -6.267 ; -586.116           ;
+; clk   ; -6.770 ; -589.865           ;
 +-------+--------+--------------------+
 
 
@@ -177,106 +177,106 @@ No paths to report.
 +--------+----------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                              ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -6.267 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.341      ; 7.609      ;
-; -6.263 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.099     ; 7.165      ;
-; -6.220 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.344      ; 7.565      ;
-; -6.219 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.084     ; 7.136      ;
-; -6.215 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.524     ; 6.692      ;
-; -6.207 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.341      ; 7.549      ;
-; -6.203 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; -0.099     ; 7.105      ;
-; -6.180 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.077     ; 7.104      ;
-; -6.176 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.517     ; 6.660      ;
-; -6.172 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.081     ; 7.092      ;
-; -6.160 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.344      ; 7.505      ;
-; -6.159 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.341      ; 7.501      ;
-; -6.145 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.341      ; 7.487      ;
-; -6.141 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; -0.099     ; 7.043      ;
-; -6.133 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.074     ; 7.060      ;
-; -6.124 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.341      ; 7.466      ;
-; -6.120 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.099     ; 7.022      ;
-; -6.111 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.084     ; 7.028      ;
-; -6.099 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.341      ; 7.441      ;
-; -6.098 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.344      ; 7.443      ;
-; -6.095 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.081     ; 7.015      ;
-; -6.091 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.521     ; 6.571      ;
-; -6.089 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.101     ; 6.989      ;
-; -6.077 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.344      ; 7.422      ;
-; -6.076 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.099     ; 6.978      ;
-; -6.072 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.077     ; 6.996      ;
-; -6.063 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.081     ; 6.983      ;
-; -6.059 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.521     ; 6.539      ;
-; -6.053 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.541     ; 6.513      ;
-; -6.049 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.344      ; 7.394      ;
-; -6.048 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.078     ; 6.971      ;
-; -6.043 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.341      ; 7.385      ;
+; -6.770 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.101     ; 7.670      ;
+; -6.756 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.101     ; 7.656      ;
+; -6.671 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.080     ; 7.592      ;
+; -6.657 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.080     ; 7.578      ;
+; -6.650 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.080     ; 7.571      ;
+; -6.636 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.080     ; 7.557      ;
+; -6.557 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.098     ; 7.460      ;
+; -6.543 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.098     ; 7.446      ;
+; -6.541 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.101     ; 7.441      ;
+; -6.527 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.101     ; 7.427      ;
+; -6.492 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.098     ; 7.395      ;
+; -6.487 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.099     ; 7.389      ;
+; -6.478 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.098     ; 7.381      ;
+; -6.474 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.099     ; 7.376      ;
+; -6.413 ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.101     ; 7.313      ;
+; -6.399 ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.101     ; 7.299      ;
+; -6.359 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.098     ; 7.262      ;
+; -6.345 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.098     ; 7.248      ;
+; -6.328 ; dec_to_bcd:dec_to_bcd_inst|num_reg[17] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.105     ; 7.224      ;
+; -6.314 ; dec_to_bcd:dec_to_bcd_inst|num_reg[17] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.105     ; 7.210      ;
+; -6.285 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.080     ; 7.206      ;
+; -6.271 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.080     ; 7.192      ;
+; -6.271 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.101     ; 7.171      ;
+; -6.257 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.101     ; 7.157      ;
+; -6.240 ; dec_to_bcd:dec_to_bcd_inst|num_reg[15] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.114     ; 7.127      ;
+; -6.228 ; dec_to_bcd:dec_to_bcd_inst|num_reg[21] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.574     ; 6.655      ;
+; -6.226 ; dec_to_bcd:dec_to_bcd_inst|num_reg[15] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.114     ; 7.113      ;
+; -6.214 ; dec_to_bcd:dec_to_bcd_inst|num_reg[21] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.574     ; 6.641      ;
+; -6.211 ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.094     ; 7.118      ;
+; -6.198 ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.094     ; 7.105      ;
+; -6.188 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.069     ; 7.120      ;
+; -6.185 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.077     ; 7.109      ;
+; -6.175 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.085     ; 7.091      ;
+; -6.143 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.099     ; 7.045      ;
+; -6.143 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.099     ; 7.045      ;
+; -6.143 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.099     ; 7.045      ;
+; -6.143 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.099     ; 7.045      ;
+; -6.142 ; dec_to_bcd:dec_to_bcd_inst|num_reg[23] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.541     ; 6.602      ;
+; -6.134 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[11]   ; clk          ; clk         ; 1.000        ; -0.068     ; 7.067      ;
+; -6.129 ; dec_to_bcd:dec_to_bcd_inst|num_reg[23] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.541     ; 6.589      ;
+; -6.112 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.101     ; 7.012      ;
+; -6.111 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.114     ; 6.998      ;
+; -6.110 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.081     ; 7.030      ;
+; -6.097 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.114     ; 6.984      ;
+; -6.094 ; hcsr04:hcsr04_inst|pos_reg[4]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.069     ; 7.026      ;
+; -6.086 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.056     ; 7.031      ;
+; -6.076 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.064     ; 7.013      ;
+; -6.074 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.069     ; 7.006      ;
+; -6.065 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.056     ; 7.010      ;
+; -6.055 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.064     ; 6.992      ;
+; -6.052 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.084     ; 6.969      ;
+; -6.047 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.098     ; 6.950      ;
 ; -6.038 ; hcsr04:hcsr04_inst|pos_reg[12]         ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.062     ; 6.977      ;
-; -6.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.341      ; 7.379      ;
-; -6.028 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.524     ; 6.505      ;
-; -6.020 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.362      ; 7.383      ;
-; -6.016 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; -0.099     ; 6.918      ;
-; -6.016 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.341      ; 7.358      ;
-; -6.016 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.078     ; 6.939      ;
-; -6.014 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.098     ; 6.917      ;
-; -6.006 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.116     ; 6.891      ;
-; -6.001 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.081     ; 6.921      ;
-; -5.995 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.328      ; 7.324      ;
-; -5.995 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.084     ; 6.912      ;
-; -5.989 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.517     ; 6.473      ;
-; -5.989 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.344      ; 7.334      ;
-; -5.987 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.081     ; 6.907      ;
-; -5.983 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.341      ; 7.325      ;
-; -5.974 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.099     ; 6.876      ;
-; -5.974 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.099     ; 6.876      ;
-; -5.974 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.099     ; 6.876      ;
-; -5.974 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.099     ; 6.876      ;
-; -5.972 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.063     ; 6.910      ;
-; -5.968 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[14]   ; clk          ; clk         ; 1.000        ; -0.077     ; 6.892      ;
-; -5.964 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[14]   ; clk          ; clk         ; 1.000        ; -0.517     ; 6.448      ;
-; -5.962 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.074     ; 6.889      ;
-; -5.960 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.362      ; 7.323      ;
-; -5.960 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.101     ; 6.860      ;
-; -5.958 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.541     ; 6.418      ;
-; -5.956 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.077     ; 6.880      ;
-; -5.955 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.081     ; 6.875      ;
-; -5.954 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; -0.099     ; 6.856      ;
-; -5.950 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[15]   ; clk          ; clk         ; 1.000        ; -0.053     ; 6.898      ;
-; -5.946 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.097     ; 6.850      ;
-; -5.946 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; -0.116     ; 6.831      ;
-; -5.938 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[12]   ; clk          ; clk         ; 1.000        ; -0.069     ; 6.870      ;
-; -5.936 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.096     ; 6.841      ;
-; -5.936 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.096     ; 6.841      ;
-; -5.936 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.096     ; 6.841      ;
-; -5.936 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.096     ; 6.841      ;
-; -5.934 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.328      ; 7.263      ;
-; -5.933 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.056     ; 6.878      ;
-; -5.933 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.099     ; 6.835      ;
-; -5.930 ; hcsr04:hcsr04_inst|pos_reg[12]         ; dec_to_bcd:dec_to_bcd_inst|num_reg[21]   ; clk          ; clk         ; 1.000        ; 0.388      ; 7.319      ;
-; -5.927 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.344      ; 7.272      ;
-; -5.924 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.539     ; 6.386      ;
-; -5.924 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.539     ; 6.386      ;
-; -5.924 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.539     ; 6.386      ;
-; -5.924 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.539     ; 6.386      ;
-; -5.922 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[11]   ; clk          ; clk         ; 1.000        ; -0.068     ; 6.855      ;
-; -5.921 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.341      ; 7.263      ;
-; -5.921 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[14]   ; clk          ; clk         ; 1.000        ; -0.074     ; 6.848      ;
-; -5.920 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.070     ; 6.851      ;
-; -5.919 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.534     ; 6.386      ;
-; -5.918 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[11]   ; clk          ; clk         ; 1.000        ; -0.508     ; 6.411      ;
-; -5.907 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[21]   ; clk          ; clk         ; 1.000        ; 0.373      ; 7.281      ;
-; -5.907 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.090     ; 6.818      ;
-; -5.906 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.344      ; 7.251      ;
-; -5.904 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.521     ; 6.384      ;
-; -5.903 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[21]   ; clk          ; clk         ; 1.000        ; -0.067     ; 6.837      ;
-; -5.901 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]    ; clk          ; clk         ; 1.000        ; -0.088     ; 6.814      ;
-; -5.900 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.341      ; 7.242      ;
-; -5.899 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[15]   ; clk          ; clk         ; 1.000        ; -0.053     ; 6.847      ;
-; -5.898 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.362      ; 7.261      ;
-; -5.895 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.344      ; 7.240      ;
-; -5.886 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.062     ; 6.825      ;
-; -5.884 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; -0.116     ; 6.769      ;
-; -5.877 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.362      ; 7.240      ;
-; -5.877 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.078     ; 6.800      ;
-; -5.875 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.541     ; 6.335      ;
+; -6.035 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[11]   ; clk          ; clk         ; 1.000        ; -0.047     ; 6.989      ;
+; -6.033 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.098     ; 6.936      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[15]   ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[3]    ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[7]    ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[11]   ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[14]   ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[2]    ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[10]   ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[6]    ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[13]   ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[12]   ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[1]    ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[0]    ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[5]    ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[4]    ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[9]    ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[8]    ; clk          ; clk         ; 1.000        ; -0.099     ; 6.929      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]    ; clk          ; clk         ; 1.000        ; -0.088     ; 6.940      ;
+; -6.014 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[11]   ; clk          ; clk         ; 1.000        ; -0.047     ; 6.968      ;
+; -6.011 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.060     ; 6.952      ;
+; -6.000 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.341      ; 7.342      ;
+; -5.992 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.080     ; 6.913      ;
+; -5.990 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.060     ; 6.931      ;
+; -5.989 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]    ; clk          ; clk         ; 1.000        ; -0.088     ; 6.902      ;
+; -5.987 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.084     ; 6.904      ;
+; -5.972 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.074     ; 6.899      ;
+; -5.971 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.080     ; 6.892      ;
+; -5.963 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[15]   ; clk          ; clk         ; 1.000        ; -0.053     ; 6.911      ;
+; -5.962 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.082     ; 6.881      ;
+; -5.956 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.077     ; 6.880      ;
+; -5.953 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.063     ; 6.891      ;
+; -5.950 ; dec_to_bcd:dec_to_bcd_inst|num_reg[14] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.105     ; 6.846      ;
+; -5.946 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.085     ; 6.862      ;
+; -5.943 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.070     ; 6.874      ;
+; -5.940 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[12]   ; clk          ; clk         ; 1.000        ; -0.069     ; 6.872      ;
+; -5.937 ; hcsr04:hcsr04_inst|pos_reg[6]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.069     ; 6.869      ;
+; -5.936 ; dec_to_bcd:dec_to_bcd_inst|num_reg[14] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.105     ; 6.832      ;
+; -5.935 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.078     ; 6.858      ;
+; -5.935 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.078     ; 6.858      ;
+; -5.935 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.078     ; 6.858      ;
+; -5.935 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.078     ; 6.858      ;
+; -5.932 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.063     ; 6.870      ;
+; -5.930 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.099     ; 6.832      ;
+; -5.930 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.099     ; 6.832      ;
+; -5.930 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.099     ; 6.832      ;
+; -5.930 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.099     ; 6.832      ;
 +--------+----------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -285,11 +285,10 @@ No paths to report.
 +-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                  ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.434 ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; dec_to_bcd:dec_to_bcd_inst|state.ST_DONE   ; dec_to_bcd:dec_to_bcd_inst|state.ST_DONE   ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; dec_to_bcd:dec_to_bcd_inst|state.ST_IDLE   ; dec_to_bcd:dec_to_bcd_inst|state.ST_IDLE   ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
 ; 0.434 ; dec_to_bcd:dec_to_bcd_inst|state.ST_CALC   ; dec_to_bcd:dec_to_bcd_inst|state.ST_CALC   ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.434 ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
-; 0.435 ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; clk          ; clk         ; 0.000        ; 0.099      ; 0.746      ;
 ; 0.452 ; seg_display:display_inst|digit_index[1]    ; seg_display:display_inst|digit_index[1]    ; clk          ; clk         ; 0.000        ; 0.082      ; 0.746      ;
 ; 0.453 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[3] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[3] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
@@ -300,13 +299,14 @@ No paths to report.
 ; 0.453 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; dec_to_bcd:dec_to_bcd_inst|tens_reg[1]     ; dec_to_bcd:dec_to_bcd_inst|tens_reg[1]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
-; 0.453 ; hcsr04:hcsr04_inst|micro_clks[1]           ; hcsr04:hcsr04_inst|micro_clks[1]           ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; hcsr04:hcsr04_inst|micro_clks[13]          ; hcsr04:hcsr04_inst|micro_clks[13]          ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; hcsr04:hcsr04_inst|micro_clks[1]           ; hcsr04:hcsr04_inst|micro_clks[1]           ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; hcsr04:hcsr04_inst|micro_clks[0]           ; hcsr04:hcsr04_inst|micro_clks[0]           ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
-; 0.453 ; hcsr04:hcsr04_inst|micro_clks[2]           ; hcsr04:hcsr04_inst|micro_clks[2]           ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; hcsr04:hcsr04_inst|micro_clks[3]           ; hcsr04:hcsr04_inst|micro_clks[3]           ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; hcsr04:hcsr04_inst|micro_clks[2]           ; hcsr04:hcsr04_inst|micro_clks[2]           ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; hcsr04:hcsr04_inst|micro_clks[4]           ; hcsr04:hcsr04_inst|micro_clks[4]           ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; hcsr04:hcsr04_inst|micro_clks[5]           ; hcsr04:hcsr04_inst|micro_clks[5]           ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
 ; 0.453 ; hcsr04:hcsr04_inst|micro_clks[6]           ; hcsr04:hcsr04_inst|micro_clks[6]           ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
@@ -323,10 +323,10 @@ No paths to report.
 ; 0.454 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3]   ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2]   ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; hcsr04:hcsr04_inst|done_reg                ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; hcsr04:hcsr04_inst|old_io_reg              ; hcsr04:hcsr04_inst|old_io_reg              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; hcsr04:hcsr04_inst|new_io_reg              ; hcsr04:hcsr04_inst|new_io_reg              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; hcsr04:hcsr04_inst|done_reg                ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.464 ; seg_display:display_inst|digit_index[0]    ; seg_display:display_inst|digit_index[0]    ; clk          ; clk         ; 0.000        ; 0.082      ; 0.758      ;
 ; 0.465 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[0] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[0] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.758      ;
 ; 0.465 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[0]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[0]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.758      ;
@@ -336,8 +336,7 @@ No paths to report.
 ; 0.499 ; hcsr04:hcsr04_inst|clks[5]                 ; hcsr04:hcsr04_inst|clks[5]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 0.792      ;
 ; 0.508 ; seg_display:display_inst|shift_reg[0]      ; seg_display:display_inst|shift_reg[1]      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.802      ;
 ; 0.508 ; seg_display:display_inst|shift_reg[3]      ; seg_display:display_inst|shift_reg[0]      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.802      ;
-; 0.512 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|state.ST_MEASURE        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.804      ;
-; 0.513 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.080      ; 0.805      ;
+; 0.512 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.080      ; 0.804      ;
 ; 0.516 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.809      ;
 ; 0.518 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[3] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.811      ;
 ; 0.518 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[2] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.811      ;
@@ -345,14 +344,14 @@ No paths to report.
 ; 0.528 ; seg_display:display_inst|shift_reg[2]      ; seg_display:display_inst|shift_reg[3]      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.822      ;
 ; 0.528 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2]   ; clk          ; clk         ; 0.000        ; 0.080      ; 0.820      ;
 ; 0.528 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; clk          ; clk         ; 0.000        ; 0.080      ; 0.820      ;
-; 0.528 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.820      ;
 ; 0.532 ; dec_to_bcd:dec_to_bcd_inst|state.ST_DONE   ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; clk          ; clk         ; 0.000        ; 0.100      ; 0.844      ;
 ; 0.546 ; hcsr04:hcsr04_inst|new_io_reg              ; hcsr04:hcsr04_inst|old_io_reg              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.838      ;
-; 0.676 ; hcsr04:hcsr04_inst|state.ST_MEASURE        ; hcsr04:hcsr04_inst|state.ST_SAMPLE         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.968      ;
+; 0.675 ; hcsr04:hcsr04_inst|state.ST_MEASURE        ; hcsr04:hcsr04_inst|state.ST_SAMPLE         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.967      ;
 ; 0.689 ; dec_to_bcd:dec_to_bcd_inst|tens_reg[2]     ; dec_to_bcd:dec_to_bcd_inst|tens_reg[3]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.982      ;
-; 0.698 ; seg_display:display_inst|digit_index[0]    ; seg_display:display_inst|digit_index[1]    ; clk          ; clk         ; 0.000        ; 0.082      ; 0.992      ;
+; 0.697 ; seg_display:display_inst|digit_index[0]    ; seg_display:display_inst|digit_index[1]    ; clk          ; clk         ; 0.000        ; 0.082      ; 0.991      ;
 ; 0.699 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3]   ; clk          ; clk         ; 0.000        ; 0.080      ; 0.991      ;
-; 0.719 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|trig_reg                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.011      ;
+; 0.715 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.007      ;
+; 0.716 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|trig_reg                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.008      ;
 ; 0.726 ; seg_display:display_inst|shift_reg[1]      ; seg_display:display_inst|shift_reg[2]      ; clk          ; clk         ; 0.000        ; 0.082      ; 1.020      ;
 ; 0.743 ; clks[20]                                   ; clks[20]                                   ; clk          ; clk         ; 0.000        ; 0.082      ; 1.037      ;
 ; 0.743 ; clks[13]                                   ; clks[13]                                   ; clk          ; clk         ; 0.000        ; 0.082      ; 1.037      ;
@@ -384,6 +383,7 @@ No paths to report.
 ; 0.763 ; hcsr04:hcsr04_inst|clks[3]                 ; hcsr04:hcsr04_inst|clks[3]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
 ; 0.763 ; clks[26]                                   ; clks[26]                                   ; clk          ; clk         ; 0.000        ; 0.082      ; 1.057      ;
 ; 0.763 ; clks[7]                                    ; clks[7]                                    ; clk          ; clk         ; 0.000        ; 0.082      ; 1.057      ;
+; 0.763 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
 ; 0.764 ; seg_display:display_inst|count[14]         ; seg_display:display_inst|count[14]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.058      ;
 +-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -399,7 +399,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 146.95 MHz ; 146.95 MHz      ; clk        ;      ;
+; 137.61 MHz ; 137.61 MHz      ; clk        ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -409,7 +409,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; clk   ; -5.805 ; -533.508          ;
+; clk   ; -6.267 ; -536.910          ;
 +-------+--------+-------------------+
 
 
@@ -448,106 +448,106 @@ No paths to report.
 +--------+----------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                              ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -5.805 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.089     ; 6.718      ;
-; -5.791 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.320      ; 7.113      ;
-; -5.768 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.324      ; 7.094      ;
-; -5.752 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.486     ; 6.268      ;
-; -5.738 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.077     ; 6.663      ;
-; -5.720 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; -0.089     ; 6.633      ;
-; -5.717 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.479     ; 6.240      ;
-; -5.715 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.073     ; 6.644      ;
-; -5.708 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.320      ; 7.030      ;
-; -5.706 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.320      ; 7.028      ;
-; -5.703 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.070     ; 6.635      ;
-; -5.686 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; -0.089     ; 6.599      ;
-; -5.683 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.324      ; 7.009      ;
-; -5.680 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.066     ; 6.616      ;
-; -5.676 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.089     ; 6.589      ;
-; -5.672 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.320      ; 6.994      ;
-; -5.662 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.320      ; 6.984      ;
-; -5.655 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.077     ; 6.580      ;
-; -5.649 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.324      ; 6.975      ;
-; -5.647 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.482     ; 6.167      ;
-; -5.639 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.324      ; 6.965      ;
-; -5.633 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.073     ; 6.562      ;
-; -5.631 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.089     ; 6.544      ;
-; -5.623 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.320      ; 6.945      ;
-; -5.620 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.070     ; 6.552      ;
-; -5.610 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.069     ; 6.543      ;
-; -5.601 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.324      ; 6.927      ;
-; -5.589 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.320      ; 6.911      ;
-; -5.588 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.092     ; 6.498      ;
-; -5.584 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.340      ; 6.926      ;
-; -5.582 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.105     ; 6.479      ;
-; -5.580 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.482     ; 6.100      ;
-; -5.579 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.320      ; 6.901      ;
-; -5.578 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.320      ; 6.900      ;
-; -5.578 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.486     ; 6.094      ;
-; -5.566 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.073     ; 6.495      ;
+; -6.267 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.092     ; 7.177      ;
+; -6.246 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.092     ; 7.156      ;
+; -6.197 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.072     ; 7.127      ;
+; -6.182 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.072     ; 7.112      ;
+; -6.176 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.072     ; 7.106      ;
+; -6.161 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.072     ; 7.091      ;
+; -6.094 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.088     ; 7.008      ;
+; -6.073 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.987      ;
+; -6.056 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.092     ; 6.966      ;
+; -6.035 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.092     ; 6.945      ;
+; -6.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.090     ; 6.939      ;
+; -6.024 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.938      ;
+; -6.006 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.090     ; 6.918      ;
+; -6.003 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.917      ;
+; -5.981 ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.092     ; 6.891      ;
+; -5.960 ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.092     ; 6.870      ;
+; -5.916 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.830      ;
+; -5.895 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.809      ;
+; -5.871 ; dec_to_bcd:dec_to_bcd_inst|num_reg[17] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.095     ; 6.778      ;
+; -5.850 ; dec_to_bcd:dec_to_bcd_inst|num_reg[17] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.095     ; 6.757      ;
+; -5.841 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.092     ; 6.751      ;
+; -5.832 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.072     ; 6.762      ;
+; -5.820 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.092     ; 6.730      ;
+; -5.816 ; dec_to_bcd:dec_to_bcd_inst|num_reg[21] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.531     ; 6.287      ;
+; -5.811 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.072     ; 6.741      ;
+; -5.800 ; dec_to_bcd:dec_to_bcd_inst|num_reg[15] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.103     ; 6.699      ;
+; -5.795 ; dec_to_bcd:dec_to_bcd_inst|num_reg[21] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.531     ; 6.266      ;
+; -5.779 ; dec_to_bcd:dec_to_bcd_inst|num_reg[15] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.103     ; 6.678      ;
+; -5.714 ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.086     ; 6.630      ;
+; -5.705 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.070     ; 6.637      ;
+; -5.702 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.063     ; 6.641      ;
+; -5.695 ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.086     ; 6.611      ;
+; -5.693 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.103     ; 6.592      ;
+; -5.691 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.091     ; 6.602      ;
+; -5.691 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.091     ; 6.602      ;
+; -5.691 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.091     ; 6.602      ;
+; -5.691 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.091     ; 6.602      ;
+; -5.691 ; dec_to_bcd:dec_to_bcd_inst|num_reg[23] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.501     ; 6.192      ;
+; -5.673 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.076     ; 6.599      ;
+; -5.672 ; dec_to_bcd:dec_to_bcd_inst|num_reg[23] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.501     ; 6.173      ;
+; -5.672 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.103     ; 6.571      ;
+; -5.647 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.561      ;
+; -5.644 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.073     ; 6.573      ;
+; -5.635 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.050     ; 6.587      ;
+; -5.626 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.540      ;
+; -5.620 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.050     ; 6.572      ;
+; -5.611 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.092     ; 6.521      ;
+; -5.610 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[11]   ; clk          ; clk         ; 1.000        ; -0.063     ; 6.549      ;
+; -5.603 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.056     ; 6.549      ;
+; -5.592 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]    ; clk          ; clk         ; 1.000        ; -0.079     ; 6.515      ;
+; -5.588 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.056     ; 6.534      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[15]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[3]    ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[7]    ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[11]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[14]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[2]    ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[10]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[6]    ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[13]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[12]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[1]    ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[0]    ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[5]    ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[4]    ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[9]    ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.586 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[8]    ; clk          ; clk         ; 1.000        ; -0.088     ; 6.500      ;
+; -5.583 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.077     ; 6.508      ;
+; -5.580 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.063     ; 6.519      ;
+; -5.574 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.053     ; 6.523      ;
 ; -5.561 ; hcsr04:hcsr04_inst|pos_reg[12]         ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.056     ; 6.507      ;
-; -5.559 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.501     ; 6.060      ;
-; -5.550 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.073     ; 6.479      ;
-; -5.548 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.073     ; 6.477      ;
-; -5.546 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; -0.089     ; 6.459      ;
-; -5.546 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.309      ; 6.857      ;
-; -5.543 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.479     ; 6.066      ;
-; -5.543 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.069     ; 6.476      ;
-; -5.532 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.091     ; 6.443      ;
-; -5.532 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.091     ; 6.443      ;
-; -5.532 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.091     ; 6.443      ;
-; -5.532 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.091     ; 6.443      ;
-; -5.531 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[15]   ; clk          ; clk         ; 1.000        ; -0.049     ; 6.484      ;
-; -5.531 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.057     ; 6.476      ;
-; -5.529 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.502     ; 6.029      ;
-; -5.525 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.077     ; 6.450      ;
-; -5.522 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.436      ;
-; -5.516 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.324      ; 6.842      ;
-; -5.513 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.066     ; 6.449      ;
-; -5.512 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; -0.089     ; 6.425      ;
-; -5.502 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.089     ; 6.415      ;
-; -5.499 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.340      ; 6.841      ;
-; -5.497 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; -0.105     ; 6.394      ;
-; -5.496 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.050     ; 6.448      ;
-; -5.494 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[12]   ; clk          ; clk         ; 1.000        ; -0.061     ; 6.435      ;
-; -5.494 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.495     ; 6.001      ;
-; -5.493 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.320      ; 6.815      ;
-; -5.493 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.088     ; 6.407      ;
-; -5.492 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[14]   ; clk          ; clk         ; 1.000        ; -0.479     ; 6.015      ;
-; -5.490 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.070     ; 6.422      ;
-; -5.483 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.073     ; 6.412      ;
-; -5.482 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.324      ; 6.808      ;
-; -5.478 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.087     ; 6.393      ;
-; -5.478 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.087     ; 6.393      ;
-; -5.478 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.087     ; 6.393      ;
-; -5.478 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.087     ; 6.393      ;
-; -5.478 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[14]   ; clk          ; clk         ; 1.000        ; -0.070     ; 6.410      ;
-; -5.478 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[15]   ; clk          ; clk         ; 1.000        ; -0.049     ; 6.431      ;
-; -5.477 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[21]   ; clk          ; clk         ; 1.000        ; -0.060     ; 6.419      ;
-; -5.473 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.062     ; 6.413      ;
-; -5.473 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.482     ; 5.993      ;
-; -5.472 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.324      ; 6.798      ;
-; -5.466 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.500     ; 5.968      ;
-; -5.466 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.500     ; 5.968      ;
-; -5.466 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.500     ; 5.968      ;
-; -5.466 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.500     ; 5.968      ;
-; -5.465 ; hcsr04:hcsr04_inst|pos_reg[12]         ; dec_to_bcd:dec_to_bcd_inst|num_reg[21]   ; clk          ; clk         ; 1.000        ; 0.363      ; 6.830      ;
-; -5.465 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.340      ; 6.807      ;
-; -5.463 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; -0.105     ; 6.360      ;
-; -5.463 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[21]   ; clk          ; clk         ; 1.000        ; 0.349      ; 6.814      ;
-; -5.462 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.092     ; 6.372      ;
-; -5.461 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.309      ; 6.772      ;
-; -5.460 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.324      ; 6.786      ;
-; -5.459 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.320      ; 6.781      ;
-; -5.458 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.081     ; 6.379      ;
-; -5.455 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.340      ; 6.797      ;
-; -5.455 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[14]   ; clk          ; clk         ; 1.000        ; -0.066     ; 6.391      ;
-; -5.453 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.105     ; 6.350      ;
-; -5.449 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.320      ; 6.771      ;
-; -5.443 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.069     ; 6.376      ;
-; -5.440 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[21]   ; clk          ; clk         ; 1.000        ; 0.353      ; 6.795      ;
-; -5.434 ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.320      ; 6.756      ;
-; -5.427 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.309      ; 6.738      ;
-; -5.426 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.053     ; 6.375      ;
+; -5.559 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.053     ; 6.508      ;
+; -5.540 ; dec_to_bcd:dec_to_bcd_inst|num_reg[14] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.095     ; 6.447      ;
+; -5.540 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[11]   ; clk          ; clk         ; 1.000        ; -0.043     ; 6.499      ;
+; -5.535 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.320      ; 6.857      ;
+; -5.532 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[15]   ; clk          ; clk         ; 1.000        ; -0.049     ; 6.485      ;
+; -5.532 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.066     ; 6.468      ;
+; -5.530 ; dec_to_bcd:dec_to_bcd_inst|num_reg[22] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.501     ; 6.031      ;
+; -5.527 ; hcsr04:hcsr04_inst|pos_reg[4]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.063     ; 6.466      ;
+; -5.525 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[11]   ; clk          ; clk         ; 1.000        ; -0.043     ; 6.484      ;
+; -5.519 ; dec_to_bcd:dec_to_bcd_inst|num_reg[14] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.095     ; 6.426      ;
+; -5.513 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.057     ; 6.458      ;
+; -5.509 ; dec_to_bcd:dec_to_bcd_inst|num_reg[22] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.501     ; 6.010      ;
+; -5.509 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.091     ; 6.420      ;
+; -5.509 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.091     ; 6.420      ;
+; -5.509 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.091     ; 6.420      ;
+; -5.509 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.091     ; 6.420      ;
+; -5.503 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.072     ; 6.433      ;
+; -5.500 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]    ; clk          ; clk         ; 1.000        ; -0.079     ; 6.423      ;
+; -5.500 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.072     ; 6.430      ;
+; -5.498 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.057     ; 6.443      ;
+; -5.494 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.070     ; 6.426      ;
+; -5.493 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[12]   ; clk          ; clk         ; 1.000        ; -0.061     ; 6.434      ;
+; -5.489 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.077     ; 6.414      ;
+; -5.488 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.072     ; 6.418      ;
+; -5.481 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.062     ; 6.421      ;
+; -5.480 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]    ; clk          ; clk         ; 1.000        ; -0.059     ; 6.423      ;
+; -5.471 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.069     ; 6.404      ;
+; -5.471 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]    ; clk          ; clk         ; 1.000        ; -0.059     ; 6.414      ;
+; -5.469 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.087     ; 6.384      ;
 +--------+----------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -556,11 +556,10 @@ No paths to report.
 +-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                  ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.383 ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; dec_to_bcd:dec_to_bcd_inst|state.ST_DONE   ; dec_to_bcd:dec_to_bcd_inst|state.ST_DONE   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; dec_to_bcd:dec_to_bcd_inst|state.ST_IDLE   ; dec_to_bcd:dec_to_bcd_inst|state.ST_IDLE   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; dec_to_bcd:dec_to_bcd_inst|state.ST_CALC   ; dec_to_bcd:dec_to_bcd_inst|state.ST_CALC   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
-; 0.383 ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
-; 0.384 ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
 ; 0.401 ; seg_display:display_inst|digit_index[1]    ; seg_display:display_inst|digit_index[1]    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; hcsr04:hcsr04_inst|trig_reg                ; hcsr04:hcsr04_inst|trig_reg                ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
@@ -569,16 +568,17 @@ No paths to report.
 ; 0.401 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[2]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[2]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; dec_to_bcd:dec_to_bcd_inst|tens_reg[1]     ; dec_to_bcd:dec_to_bcd_inst|tens_reg[1]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; hcsr04:hcsr04_inst|done_reg                ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; hcsr04:hcsr04_inst|micro_clks[1]           ; hcsr04:hcsr04_inst|micro_clks[1]           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; hcsr04:hcsr04_inst|micro_clks[0]           ; hcsr04:hcsr04_inst|micro_clks[0]           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; hcsr04:hcsr04_inst|micro_clks[2]           ; hcsr04:hcsr04_inst|micro_clks[2]           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; hcsr04:hcsr04_inst|micro_clks[3]           ; hcsr04:hcsr04_inst|micro_clks[3]           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; hcsr04:hcsr04_inst|micro_clks[2]           ; hcsr04:hcsr04_inst|micro_clks[2]           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; hcsr04:hcsr04_inst|old_io_reg              ; hcsr04:hcsr04_inst|old_io_reg              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; hcsr04:hcsr04_inst|new_io_reg              ; hcsr04:hcsr04_inst|new_io_reg              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; hcsr04:hcsr04_inst|done_reg                ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; en                                         ; en                                         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.402 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[3] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[3] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
@@ -607,23 +607,22 @@ No paths to report.
 ; 0.464 ; hcsr04:hcsr04_inst|clks[5]                 ; hcsr04:hcsr04_inst|clks[5]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.732      ;
 ; 0.469 ; seg_display:display_inst|shift_reg[0]      ; seg_display:display_inst|shift_reg[1]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.737      ;
 ; 0.469 ; seg_display:display_inst|shift_reg[3]      ; seg_display:display_inst|shift_reg[0]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.737      ;
-; 0.470 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|state.ST_MEASURE        ; clk          ; clk         ; 0.000        ; 0.073      ; 0.738      ;
-; 0.471 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.739      ;
 ; 0.475 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.743      ;
 ; 0.477 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[2]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.745      ;
+; 0.477 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.745      ;
 ; 0.477 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[2] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.744      ;
 ; 0.478 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[3] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.745      ;
 ; 0.487 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.754      ;
 ; 0.487 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.754      ;
 ; 0.489 ; dec_to_bcd:dec_to_bcd_inst|state.ST_DONE   ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; clk          ; clk         ; 0.000        ; 0.091      ; 0.775      ;
-; 0.492 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.073      ; 0.760      ;
 ; 0.494 ; seg_display:display_inst|shift_reg[2]      ; seg_display:display_inst|shift_reg[3]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.762      ;
-; 0.509 ; hcsr04:hcsr04_inst|new_io_reg              ; hcsr04:hcsr04_inst|old_io_reg              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.777      ;
+; 0.512 ; hcsr04:hcsr04_inst|new_io_reg              ; hcsr04:hcsr04_inst|old_io_reg              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.780      ;
 ; 0.624 ; dec_to_bcd:dec_to_bcd_inst|tens_reg[2]     ; dec_to_bcd:dec_to_bcd_inst|tens_reg[3]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.892      ;
-; 0.631 ; hcsr04:hcsr04_inst|state.ST_MEASURE        ; hcsr04:hcsr04_inst|state.ST_SAMPLE         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.899      ;
-; 0.631 ; seg_display:display_inst|digit_index[0]    ; seg_display:display_inst|digit_index[1]    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.899      ;
+; 0.627 ; seg_display:display_inst|digit_index[0]    ; seg_display:display_inst|digit_index[1]    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.895      ;
+; 0.630 ; hcsr04:hcsr04_inst|state.ST_MEASURE        ; hcsr04:hcsr04_inst|state.ST_SAMPLE         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.898      ;
+; 0.635 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.073      ; 0.903      ;
 ; 0.635 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.902      ;
-; 0.638 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|trig_reg                ; clk          ; clk         ; 0.000        ; 0.073      ; 0.906      ;
+; 0.636 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|trig_reg                ; clk          ; clk         ; 0.000        ; 0.073      ; 0.904      ;
 ; 0.670 ; seg_display:display_inst|shift_reg[1]      ; seg_display:display_inst|shift_reg[2]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.938      ;
 ; 0.691 ; clks[13]                                   ; clks[13]                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.959      ;
 ; 0.692 ; clks[19]                                   ; clks[19]                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.960      ;
@@ -638,9 +637,9 @@ No paths to report.
 ; 0.704 ; clks[4]                                    ; clks[4]                                    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.972      ;
 ; 0.705 ; seg_display:display_inst|count[5]          ; seg_display:display_inst|count[5]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.973      ;
 ; 0.705 ; seg_display:display_inst|count[11]         ; seg_display:display_inst|count[11]         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.973      ;
+; 0.706 ; hcsr04:hcsr04_inst|clks[3]                 ; hcsr04:hcsr04_inst|clks[3]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.974      ;
 ; 0.706 ; hcsr04:hcsr04_inst|pos_reg[13]             ; hcsr04:hcsr04_inst|pos_reg[13]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
 ; 0.706 ; hcsr04:hcsr04_inst|pos_reg[3]              ; hcsr04:hcsr04_inst|pos_reg[3]              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
-; 0.706 ; hcsr04:hcsr04_inst|clks[3]                 ; hcsr04:hcsr04_inst|clks[3]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.974      ;
 ; 0.706 ; clks[3]                                    ; clks[3]                                    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.974      ;
 ; 0.706 ; seg_display:display_inst|count[1]          ; seg_display:display_inst|count[1]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.974      ;
 ; 0.707 ; seg_display:display_inst|count[15]         ; seg_display:display_inst|count[15]         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.975      ;
@@ -656,6 +655,7 @@ No paths to report.
 ; 0.709 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
 ; 0.710 ; seg_display:display_inst|count[2]          ; seg_display:display_inst|count[2]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.978      ;
 ; 0.710 ; clks[7]                                    ; clks[7]                                    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.978      ;
+; 0.710 ; clks[5]                                    ; clks[5]                                    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.978      ;
 +-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -670,7 +670,7 @@ No synchronizer chains to report.
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; clk   ; -2.127 ; -165.697          ;
+; clk   ; -2.334 ; -168.074          ;
 +-------+--------+-------------------+
 
 
@@ -700,7 +700,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; clk   ; -3.000 ; -201.386                        ;
+; clk   ; -3.000 ; -201.254                        ;
 +-------+--------+---------------------------------+
 
 
@@ -709,106 +709,106 @@ No paths to report.
 +--------+----------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                              ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -2.127 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.131      ; 3.245      ;
-; -2.126 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.043     ; 3.070      ;
-; -2.124 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.241      ;
-; -2.116 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.131      ; 3.234      ;
-; -2.115 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; -0.043     ; 3.059      ;
-; -2.113 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.230      ;
-; -2.093 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.030     ; 3.050      ;
-; -2.080 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.197      ;
-; -2.069 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.131      ; 3.187      ;
-; -2.069 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.186      ;
-; -2.068 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; -0.043     ; 3.012      ;
-; -2.066 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.183      ;
-; -2.060 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.143      ; 3.190      ;
-; -2.058 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.043     ; 3.002      ;
-; -2.053 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.036     ; 3.004      ;
-; -2.052 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.210     ; 2.829      ;
-; -2.050 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.037     ; 3.000      ;
-; -2.049 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.143      ; 3.179      ;
-; -2.047 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; -0.043     ; 2.991      ;
-; -2.046 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]    ; clk          ; clk         ; 1.000        ; -0.213     ; 2.820      ;
-; -2.046 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.132      ; 3.165      ;
-; -2.045 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.131      ; 3.163      ;
-; -2.044 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]    ; clk          ; clk         ; 1.000        ; -0.040     ; 2.991      ;
-; -2.044 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.043     ; 2.988      ;
-; -2.042 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[12]   ; clk          ; clk         ; 1.000        ; -0.029     ; 3.000      ;
-; -2.042 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.159      ;
-; -2.040 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.038     ; 2.989      ;
-; -2.039 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.212     ; 2.814      ;
-; -2.038 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.030     ; 2.995      ;
-; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.039     ; 2.985      ;
-; -2.035 ; hcsr04:hcsr04_inst|pos_reg[12]         ; dec_to_bcd:dec_to_bcd_inst|num_reg[21]   ; clk          ; clk         ; 1.000        ; 0.159      ; 3.181      ;
-; -2.035 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.132      ; 3.154      ;
-; -2.032 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.983      ;
-; -2.031 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.210     ; 2.808      ;
-; -2.029 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.037     ; 2.979      ;
-; -2.027 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.121      ; 3.135      ;
-; -2.026 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.977      ;
-; -2.025 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[15]   ; clk          ; clk         ; 1.000        ; -0.021     ; 2.991      ;
-; -2.025 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.210     ; 2.802      ;
-; -2.023 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.037     ; 2.973      ;
-; -2.022 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.139      ;
-; -2.018 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.135      ;
-; -2.016 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.121      ; 3.124      ;
-; -2.014 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.056     ; 2.945      ;
+; -2.334 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.049     ; 3.272      ;
+; -2.334 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.049     ; 3.272      ;
+; -2.309 ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.049     ; 3.247      ;
+; -2.277 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.036     ; 3.228      ;
+; -2.277 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.036     ; 3.228      ;
+; -2.271 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.036     ; 3.222      ;
+; -2.271 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.036     ; 3.222      ;
+; -2.253 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.048     ; 3.192      ;
+; -2.253 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.048     ; 3.192      ;
+; -2.224 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.047     ; 3.164      ;
+; -2.224 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.047     ; 3.164      ;
+; -2.223 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.049     ; 3.161      ;
+; -2.223 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.049     ; 3.161      ;
+; -2.223 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.050     ; 3.160      ;
+; -2.223 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.050     ; 3.160      ;
+; -2.187 ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.049     ; 3.125      ;
+; -2.185 ; dec_to_bcd:dec_to_bcd_inst|num_reg[23] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.222     ; 2.950      ;
+; -2.183 ; dec_to_bcd:dec_to_bcd_inst|num_reg[23] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.222     ; 2.948      ;
+; -2.165 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.048     ; 3.104      ;
+; -2.165 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.048     ; 3.104      ;
+; -2.155 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]    ; clk          ; clk         ; 1.000        ; -0.040     ; 3.102      ;
+; -2.154 ; dec_to_bcd:dec_to_bcd_inst|num_reg[21] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.245     ; 2.896      ;
+; -2.154 ; dec_to_bcd:dec_to_bcd_inst|num_reg[21] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.245     ; 2.896      ;
+; -2.143 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.032     ; 3.098      ;
+; -2.135 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.058     ; 3.064      ;
+; -2.133 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.036     ; 3.084      ;
+; -2.133 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.036     ; 3.084      ;
+; -2.123 ; dec_to_bcd:dec_to_bcd_inst|num_reg[15] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.058     ; 3.052      ;
+; -2.123 ; dec_to_bcd:dec_to_bcd_inst|num_reg[15] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.058     ; 3.052      ;
+; -2.118 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.049     ; 3.056      ;
+; -2.118 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.049     ; 3.056      ;
+; -2.104 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.032     ; 3.059      ;
+; -2.100 ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.217      ;
+; -2.092 ; dec_to_bcd:dec_to_bcd_inst|num_reg[17] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.048     ; 3.031      ;
+; -2.092 ; dec_to_bcd:dec_to_bcd_inst|num_reg[17] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.048     ; 3.031      ;
+; -2.087 ; hcsr04:hcsr04_inst|pos_reg[8]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.032     ; 3.042      ;
+; -2.085 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.030     ; 3.042      ;
+; -2.084 ; hcsr04:hcsr04_inst|pos_reg[9]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.032     ; 3.039      ;
+; -2.076 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]    ; clk          ; clk         ; 1.000        ; -0.027     ; 3.036      ;
+; -2.074 ; hcsr04:hcsr04_inst|pos_reg[4]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.032     ; 3.029      ;
+; -2.073 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.047     ; 3.013      ;
+; -2.073 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.047     ; 3.013      ;
+; -2.073 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.047     ; 3.013      ;
+; -2.073 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.047     ; 3.013      ;
+; -2.073 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.058     ; 3.002      ;
+; -2.069 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]    ; clk          ; clk         ; 1.000        ; -0.027     ; 3.029      ;
+; -2.061 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]    ; clk          ; clk         ; 1.000        ; -0.040     ; 3.008      ;
+; -2.057 ; hcsr04:hcsr04_inst|pos_reg[1]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.032     ; 3.012      ;
+; -2.056 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[11]   ; clk          ; clk         ; 1.000        ; -0.028     ; 3.015      ;
+; -2.053 ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.045     ; 2.995      ;
+; -2.052 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.037     ; 3.002      ;
+; -2.052 ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.045     ; 2.994      ;
+; -2.049 ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.037     ; 2.999      ;
+; -2.049 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.037     ; 2.999      ;
+; -2.046 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.030     ; 3.003      ;
+; -2.045 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]    ; clk          ; clk         ; 1.000        ; -0.040     ; 2.992      ;
+; -2.043 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.047     ; 2.983      ;
+; -2.043 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; -0.047     ; 2.983      ;
+; -2.043 ; dec_to_bcd:dec_to_bcd_inst|num_reg[23] ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]    ; clk          ; clk         ; 1.000        ; -0.213     ; 2.817      ;
+; -2.043 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]    ; clk          ; clk         ; 1.000        ; -0.039     ; 2.991      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[15]   ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[3]    ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[7]    ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[11]   ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[14]   ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[2]    ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[10]   ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[6]    ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[13]   ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[12]   ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[1]    ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[0]    ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[5]    ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[4]    ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[9]    ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.037 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[8]    ; clk          ; clk         ; 1.000        ; -0.046     ; 2.978      ;
+; -2.036 ; hcsr04:hcsr04_inst|pos_reg[0]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.032     ; 2.991      ;
+; -2.030 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.037     ; 2.980      ;
+; -2.029 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.049     ; 2.967      ;
+; -2.027 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[12]   ; clk          ; clk         ; 1.000        ; -0.029     ; 2.985      ;
+; -2.024 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]    ; clk          ; clk         ; 1.000        ; -0.041     ; 2.970      ;
+; -2.019 ; hcsr04:hcsr04_inst|pos_reg[3]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.032     ; 2.974      ;
+; -2.017 ; hcsr04:hcsr04_inst|pos_reg[12]         ; dec_to_bcd:dec_to_bcd_inst|num_reg[21]   ; clk          ; clk         ; 1.000        ; 0.159      ; 3.163      ;
+; -2.016 ; hcsr04:hcsr04_inst|pos_reg[4]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.030     ; 2.973      ;
 ; -2.013 ; hcsr04:hcsr04_inst|pos_reg[12]         ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.030     ; 2.970      ;
-; -2.008 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.049     ; 2.946      ;
-; -2.007 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.124      ;
-; -2.007 ; hcsr04:hcsr04_inst|pos_reg[3]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.030     ; 2.964      ;
-; -2.006 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.037     ; 2.956      ;
-; -2.004 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.121      ;
-; -2.003 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; -0.056     ; 2.934      ;
-; -2.002 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.143      ; 3.132      ;
-; -2.002 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.030     ; 2.959      ;
-; -2.000 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; -0.043     ; 2.944      ;
-; -1.998 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.115      ;
-; -1.998 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.048     ; 2.937      ;
-; -1.997 ; dec_to_bcd:dec_to_bcd_inst|num_reg[19] ; dec_to_bcd:dec_to_bcd_inst|num_reg[18]   ; clk          ; clk         ; 1.000        ; -0.222     ; 2.762      ;
-; -1.996 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.129      ; 3.112      ;
-; -1.994 ; hcsr04:hcsr04_inst|pos_reg[4]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.030     ; 2.951      ;
-; -1.993 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.039     ; 2.941      ;
-; -1.989 ; hcsr04:hcsr04_inst|pos_reg[1]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.030     ; 2.946      ;
-; -1.988 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.132      ; 3.107      ;
-; -1.987 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[12]   ; clk          ; clk         ; 1.000        ; -0.029     ; 2.945      ;
-; -1.986 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.024     ; 2.949      ;
-; -1.985 ; dec_to_bcd:dec_to_bcd_inst|num_reg[12] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.129      ; 3.101      ;
-; -1.985 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.037     ; 2.935      ;
-; -1.984 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.210     ; 2.761      ;
-; -1.983 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.047     ; 2.923      ;
-; -1.983 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.047     ; 2.923      ;
-; -1.983 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.047     ; 2.923      ;
-; -1.983 ; dec_to_bcd:dec_to_bcd_inst|num_reg[5]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.047     ; 2.923      ;
-; -1.980 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]    ; clk          ; clk         ; 1.000        ; -0.027     ; 2.940      ;
-; -1.979 ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.037     ; 2.929      ;
-; -1.978 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]    ; clk          ; clk         ; 1.000        ; -0.213     ; 2.752      ;
-; -1.978 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.143      ; 3.108      ;
-; -1.976 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; -0.043     ; 2.920      ;
-; -1.973 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; 0.149      ; 3.109      ;
-; -1.973 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.026     ; 2.934      ;
-; -1.972 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.035     ; 2.924      ;
-; -1.971 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.212     ; 2.746      ;
-; -1.970 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[21]   ; clk          ; clk         ; 1.000        ; 0.159      ; 3.116      ;
-; -1.970 ; hcsr04:hcsr04_inst|pos_reg[5]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[15]   ; clk          ; clk         ; 1.000        ; -0.021     ; 2.936      ;
-; -1.969 ; dec_to_bcd:dec_to_bcd_inst|num_reg[11] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.121      ; 3.077      ;
-; -1.967 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[20]   ; clk          ; clk         ; 1.000        ; 0.131      ; 3.085      ;
-; -1.967 ; hcsr04:hcsr04_inst|pos_reg[11]         ; dec_to_bcd:dec_to_bcd_inst|num_reg[17]   ; clk          ; clk         ; 1.000        ; -0.030     ; 2.924      ;
-; -1.965 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.024     ; 2.928      ;
-; -1.965 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.906      ;
-; -1.965 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.906      ;
-; -1.965 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.906      ;
-; -1.965 ; dec_to_bcd:dec_to_bcd_inst|num_reg[7]  ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.906      ;
-; -1.964 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.132      ; 3.083      ;
-; -1.963 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]    ; clk          ; clk         ; 1.000        ; -0.210     ; 2.740      ;
-; -1.962 ; hcsr04:hcsr04_inst|pos_reg[11]         ; dec_to_bcd:dec_to_bcd_inst|num_reg[21]   ; clk          ; clk         ; 1.000        ; 0.159      ; 3.108      ;
-; -1.960 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.077      ;
-; -1.959 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[10]   ; clk          ; clk         ; 1.000        ; -0.037     ; 2.909      ;
-; -1.959 ; dec_to_bcd:dec_to_bcd_inst|num_reg[18] ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.024     ; 2.922      ;
-; -1.957 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[9]    ; clk          ; clk         ; 1.000        ; -0.210     ; 2.734      ;
-; -1.956 ; dec_to_bcd:dec_to_bcd_inst|num_reg[16] ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; -0.056     ; 2.887      ;
-; -1.956 ; dec_to_bcd:dec_to_bcd_inst|num_reg[13] ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.131      ; 3.074      ;
-; -1.956 ; dec_to_bcd:dec_to_bcd_inst|num_reg[8]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[19]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.073      ;
+; -2.013 ; dec_to_bcd:dec_to_bcd_inst|num_reg[10] ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]    ; clk          ; clk         ; 1.000        ; -0.038     ; 2.962      ;
+; -2.011 ; hcsr04:hcsr04_inst|pos_reg[2]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.032     ; 2.966      ;
+; -2.010 ; hcsr04:hcsr04_inst|pos_reg[7]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[15]   ; clk          ; clk         ; 1.000        ; -0.021     ; 2.976      ;
+; -2.007 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[22]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.124      ;
+; -2.001 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]    ; clk          ; clk         ; 1.000        ; -0.027     ; 2.961      ;
+; -2.000 ; hcsr04:hcsr04_inst|pos_reg[11]         ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.032     ; 2.955      ;
+; -1.999 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[11]   ; clk          ; clk         ; 1.000        ; -0.015     ; 2.971      ;
+; -1.999 ; hcsr04:hcsr04_inst|pos_reg[1]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.030     ; 2.956      ;
+; -1.998 ; dec_to_bcd:dec_to_bcd_inst|num_reg[6]  ; dec_to_bcd:dec_to_bcd_inst|num_reg[23]   ; clk          ; clk         ; 1.000        ; 0.130      ; 3.115      ;
+; -1.995 ; hcsr04:hcsr04_inst|pos_reg[6]          ; dec_to_bcd:dec_to_bcd_inst|num_reg[16]   ; clk          ; clk         ; 1.000        ; -0.032     ; 2.950      ;
+; -1.995 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|num_reg[13]   ; clk          ; clk         ; 1.000        ; -0.024     ; 2.958      ;
+; -1.994 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.947      ;
+; -1.994 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.947      ;
+; -1.994 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.947      ;
+; -1.994 ; dec_to_bcd:dec_to_bcd_inst|num_reg[20] ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.947      ;
 +--------+----------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -817,11 +817,10 @@ No paths to report.
 +-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                  ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.179 ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; dec_to_bcd:dec_to_bcd_inst|state.ST_DONE   ; dec_to_bcd:dec_to_bcd_inst|state.ST_DONE   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; dec_to_bcd:dec_to_bcd_inst|state.ST_IDLE   ; dec_to_bcd:dec_to_bcd_inst|state.ST_IDLE   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; dec_to_bcd:dec_to_bcd_inst|state.ST_CALC   ; dec_to_bcd:dec_to_bcd_inst|state.ST_CALC   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.186 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
 ; 0.186 ; dec_to_bcd:dec_to_bcd_inst|tens_reg[3]     ; dec_to_bcd:dec_to_bcd_inst|tens_reg[3]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
 ; 0.186 ; dec_to_bcd:dec_to_bcd_inst|tens_reg[2]     ; dec_to_bcd:dec_to_bcd_inst|tens_reg[2]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
@@ -838,12 +837,15 @@ No paths to report.
 ; 0.187 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2]   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[3]      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]      ; dec_to_bcd:dec_to_bcd_inst|num_reg[4]      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; hcsr04:hcsr04_inst|micro_clks[1]           ; hcsr04:hcsr04_inst|micro_clks[1]           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; hcsr04:hcsr04_inst|done_reg                ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; hcsr04:hcsr04_inst|micro_clks[13]          ; hcsr04:hcsr04_inst|micro_clks[13]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; hcsr04:hcsr04_inst|micro_clks[1]           ; hcsr04:hcsr04_inst|micro_clks[1]           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; hcsr04:hcsr04_inst|micro_clks[0]           ; hcsr04:hcsr04_inst|micro_clks[0]           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; hcsr04:hcsr04_inst|micro_clks[2]           ; hcsr04:hcsr04_inst|micro_clks[2]           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; hcsr04:hcsr04_inst|micro_clks[3]           ; hcsr04:hcsr04_inst|micro_clks[3]           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; hcsr04:hcsr04_inst|micro_clks[2]           ; hcsr04:hcsr04_inst|micro_clks[2]           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; hcsr04:hcsr04_inst|micro_clks[4]           ; hcsr04:hcsr04_inst|micro_clks[4]           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; hcsr04:hcsr04_inst|micro_clks[5]           ; hcsr04:hcsr04_inst|micro_clks[5]           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; hcsr04:hcsr04_inst|micro_clks[6]           ; hcsr04:hcsr04_inst|micro_clks[6]           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
@@ -857,8 +859,6 @@ No paths to report.
 ; 0.187 ; hcsr04:hcsr04_inst|micro_clks[15]          ; hcsr04:hcsr04_inst|micro_clks[15]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; hcsr04:hcsr04_inst|old_io_reg              ; hcsr04:hcsr04_inst|old_io_reg              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; hcsr04:hcsr04_inst|new_io_reg              ; hcsr04:hcsr04_inst|new_io_reg              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; hcsr04:hcsr04_inst|done_reg                ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.193 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[0]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[0]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.314      ;
 ; 0.193 ; dec_to_bcd:dec_to_bcd_inst|tens_reg[0]     ; dec_to_bcd:dec_to_bcd_inst|tens_reg[0]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.314      ;
 ; 0.194 ; seg_display:display_inst|digit_index[0]    ; seg_display:display_inst|digit_index[0]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.314      ;
@@ -866,7 +866,6 @@ No paths to report.
 ; 0.194 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.314      ;
 ; 0.194 ; hcsr04:hcsr04_inst|state.ST_TRIG           ; hcsr04:hcsr04_inst|state.ST_TRIG           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.314      ;
 ; 0.202 ; hcsr04:hcsr04_inst|clks[5]                 ; hcsr04:hcsr04_inst|clks[5]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.322      ;
-; 0.206 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.326      ;
 ; 0.207 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[3]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.328      ;
 ; 0.208 ; seg_display:display_inst|shift_reg[2]      ; seg_display:display_inst|shift_reg[3]      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.328      ;
 ; 0.209 ; seg_display:display_inst|shift_reg[0]      ; seg_display:display_inst|shift_reg[1]      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.329      ;
@@ -874,18 +873,18 @@ No paths to report.
 ; 0.209 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[1]     ; dec_to_bcd:dec_to_bcd_inst|unit_reg[2]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.330      ;
 ; 0.209 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[3] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.329      ;
 ; 0.209 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[1] ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[2] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.329      ;
-; 0.211 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|state.ST_MEASURE        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.331      ;
-; 0.212 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.332      ;
 ; 0.215 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[2]   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.335      ;
 ; 0.215 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.335      ;
-; 0.215 ; hcsr04:hcsr04_inst|new_io_reg              ; hcsr04:hcsr04_inst|old_io_reg              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.335      ;
-; 0.223 ; dec_to_bcd:dec_to_bcd_inst|state.ST_DONE   ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.351      ;
+; 0.215 ; hcsr04:hcsr04_inst|state.ST_DONE           ; hcsr04:hcsr04_inst|state.ST_IDLE           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.335      ;
+; 0.216 ; hcsr04:hcsr04_inst|new_io_reg              ; hcsr04:hcsr04_inst|old_io_reg              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.336      ;
+; 0.222 ; dec_to_bcd:dec_to_bcd_inst|state.ST_DONE   ; dec_to_bcd:dec_to_bcd_inst|done_reg        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.350      ;
 ; 0.266 ; dec_to_bcd:dec_to_bcd_inst|tens_reg[2]     ; dec_to_bcd:dec_to_bcd_inst|tens_reg[3]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.387      ;
 ; 0.268 ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[1]   ; dec_to_bcd:dec_to_bcd_inst|tenths_reg[3]   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.388      ;
-; 0.270 ; seg_display:display_inst|digit_index[0]    ; seg_display:display_inst|digit_index[1]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.390      ;
+; 0.269 ; seg_display:display_inst|digit_index[0]    ; seg_display:display_inst|digit_index[1]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.389      ;
+; 0.271 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|done_reg                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.391      ;
 ; 0.272 ; hcsr04:hcsr04_inst|state.ST_IDLE           ; hcsr04:hcsr04_inst|trig_reg                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.392      ;
+; 0.281 ; hcsr04:hcsr04_inst|state.ST_MEASURE        ; hcsr04:hcsr04_inst|state.ST_SAMPLE         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.401      ;
 ; 0.282 ; seg_display:display_inst|shift_reg[1]      ; seg_display:display_inst|shift_reg[2]      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.402      ;
-; 0.282 ; hcsr04:hcsr04_inst|state.ST_MEASURE        ; hcsr04:hcsr04_inst|state.ST_SAMPLE         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.402      ;
 ; 0.296 ; clks[13]                                   ; clks[13]                                   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.417      ;
 ; 0.297 ; clks[20]                                   ; clks[20]                                   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.418      ;
 ; 0.297 ; clks[19]                                   ; clks[19]                                   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.418      ;
@@ -902,10 +901,10 @@ No paths to report.
 ; 0.305 ; seg_display:display_inst|count[5]          ; seg_display:display_inst|count[5]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
 ; 0.305 ; seg_display:display_inst|count[11]         ; seg_display:display_inst|count[11]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
 ; 0.305 ; seg_display:display_inst|count[3]          ; seg_display:display_inst|count[3]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; hcsr04:hcsr04_inst|pos_reg[13]             ; hcsr04:hcsr04_inst|pos_reg[13]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; hcsr04:hcsr04_inst|pos_reg[3]              ; hcsr04:hcsr04_inst|pos_reg[3]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
 ; 0.305 ; hcsr04:hcsr04_inst|clks[4]                 ; hcsr04:hcsr04_inst|clks[4]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
 ; 0.305 ; hcsr04:hcsr04_inst|clks[3]                 ; hcsr04:hcsr04_inst|clks[3]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; hcsr04:hcsr04_inst|pos_reg[13]             ; hcsr04:hcsr04_inst|pos_reg[13]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; hcsr04:hcsr04_inst|pos_reg[3]              ; hcsr04:hcsr04_inst|pos_reg[3]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
 ; 0.305 ; clks[27]                                   ; clks[27]                                   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
 ; 0.305 ; clks[24]                                   ; clks[24]                                   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
 ; 0.305 ; clks[15]                                   ; clks[15]                                   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
@@ -917,6 +916,7 @@ No paths to report.
 ; 0.306 ; seg_display:display_inst|count[6]          ; seg_display:display_inst|count[6]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
 ; 0.306 ; seg_display:display_inst|count[2]          ; seg_display:display_inst|count[2]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
 ; 0.306 ; clks[26]                                   ; clks[26]                                   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; clks[23]                                   ; clks[23]                                   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
 +-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -931,10 +931,10 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -6.267   ; 0.179 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; -6.267   ; 0.179 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -586.116 ; 0.0   ; 0.0      ; 0.0     ; -230.511            ;
-;  clk             ; -586.116 ; 0.000 ; N/A      ; N/A     ; -230.511            ;
+; Worst-case Slack ; -6.770   ; 0.179 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -6.770   ; 0.179 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -589.865 ; 0.0   ; 0.0      ; 0.0     ; -230.511            ;
+;  clk             ; -589.865 ; 0.000 ; N/A      ; N/A     ; -230.511            ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -1167,7 +1167,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Apr 28 19:15:05 2024
+    Info: Processing started: Mon Apr 29 19:35:41 2024
 Info: Command: quartus_sta distance_sensor -c distance_sensor
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1184,10 +1184,10 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.267
+Info (332146): Worst-case setup slack is -6.770
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.267            -586.116 clk 
+    Info (332119):    -6.770            -589.865 clk 
 Info (332146): Worst-case hold slack is 0.434
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1204,10 +1204,10 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.805
+Info (332146): Worst-case setup slack is -6.267
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.805            -533.508 clk 
+    Info (332119):    -6.267            -536.910 clk 
 Info (332146): Worst-case hold slack is 0.383
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1222,10 +1222,10 @@ Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.127
+Info (332146): Worst-case setup slack is -2.334
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.127            -165.697 clk 
+    Info (332119):    -2.334            -168.074 clk 
 Info (332146): Worst-case hold slack is 0.179
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1235,12 +1235,12 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -201.386 clk 
+    Info (332119):    -3.000            -201.254 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4732 megabytes
-    Info: Processing ended: Sun Apr 28 19:15:07 2024
+    Info: Peak virtual memory: 4736 megabytes
+    Info: Processing ended: Mon Apr 29 19:35:43 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

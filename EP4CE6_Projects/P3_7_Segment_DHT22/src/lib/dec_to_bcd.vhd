@@ -57,9 +57,9 @@ begin
       end if;
    end process;
   
-   combinational_logic: process(state,en,dec,num_reg,
-                                hundreds_reg,tens_reg,
-                                bcd_reg,done_reg)
+   mealy_outputs: process(state,en,dec,num_reg,
+                          hundreds_reg,tens_reg,
+                          bcd_reg,done_reg)
    begin
       hundreds <= hundreds_reg;
       tens <= tens_reg;

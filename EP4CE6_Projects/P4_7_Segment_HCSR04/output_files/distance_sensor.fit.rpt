@@ -1,5 +1,5 @@
 Fitter report for distance_sensor
-Sun Apr 28 19:15:01 2024
+Mon Apr 29 19:35:37 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sun Apr 28 19:15:01 2024       ;
+; Fitter Status                      ; Successful - Mon Apr 29 19:35:37 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; distance_sensor                             ;
 ; Top-level Entity Name              ; distance_sensor                             ;
@@ -156,12 +156,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.4%      ;
+;     Processor 2            ;   2.7%      ;
 +----------------------------+-------------+
 
 
@@ -259,7 +259,7 @@ The pin-out file can be found in L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )       ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )       ;
 ; Average interconnect usage (total/H/V)      ; 0.9% / 0.8% / 1.0%  ;
-; Peak interconnect usage (total/H/V)         ; 4.3% / 3.8% / 4.9%  ;
+; Peak interconnect usage (total/H/V)         ; 4.3% / 3.8% / 5.1%  ;
 ; Maximum fan-out                             ; 153                 ;
 ; Highest non-global fan-out                  ; 33                  ;
 ; Total fan-out                               ; 1873                ;
@@ -652,15 +652,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk                                          ; PIN_23             ; 153     ; Clock                     ; yes    ; Global Clock         ; GCLK2            ; --                        ;
 ; dec_to_bcd:dec_to_bcd_inst|bcd_reg[0]~0      ; LCCOMB_X18_Y16_N30 ; 17      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 ; dec_to_bcd:dec_to_bcd_inst|hundreds_reg[3]~0 ; LCCOMB_X21_Y16_N28 ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; dec_to_bcd:dec_to_bcd_inst|num_reg[7]~33     ; LCCOMB_X17_Y16_N14 ; 18      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; dec_to_bcd:dec_to_bcd_inst|num_reg[8]~33     ; LCCOMB_X17_Y16_N14 ; 18      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 ; dec_to_bcd:dec_to_bcd_inst|state.ST_CALC     ; FF_X18_Y16_N15     ; 29      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
 ; dec_to_bcd:dec_to_bcd_inst|state.ST_DONE     ; FF_X18_Y16_N19     ; 25      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
 ; dec_to_bcd:dec_to_bcd_inst|tens_reg[0]~0     ; LCCOMB_X17_Y16_N8  ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]~3   ; LCCOMB_X18_Y16_N8  ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; dec_to_bcd:dec_to_bcd_inst|tenths_reg[0]~3   ; LCCOMB_X18_Y16_N28 ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 ; dec_to_bcd:dec_to_bcd_inst|unit_reg[0]~0     ; LCCOMB_X17_Y16_N24 ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 ; hcsr04:hcsr04_inst|Selector4~1               ; LCCOMB_X22_Y13_N12 ; 17      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; hcsr04:hcsr04_inst|micro_clks[4]~2           ; LCCOMB_X21_Y15_N2  ; 22      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; hcsr04:hcsr04_inst|pos_reg[15]~32            ; LCCOMB_X22_Y13_N18 ; 16      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; hcsr04:hcsr04_inst|micro_clks[3]~2           ; LCCOMB_X21_Y15_N2  ; 22      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; hcsr04:hcsr04_inst|pos_reg[15]~32            ; LCCOMB_X22_Y13_N30 ; 16      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 ; rst_n                                        ; PIN_25             ; 153     ; Async. clear              ; yes    ; Global Clock         ; GCLK3            ; --                        ;
 ; seg_display:display_inst|Equal0~4            ; LCCOMB_X12_Y19_N4  ; 11      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
@@ -671,7 +671,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk   ; PIN_23   ; 153     ; 11                                   ; Global Clock         ; GCLK2            ; --                        ;
+; clk   ; PIN_23   ; 153     ; 7                                    ; Global Clock         ; GCLK2            ; --                        ;
 ; rst_n ; PIN_25   ; 153     ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
@@ -681,14 +681,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 548 / 32,401 ( 2 % )   ;
+; Block interconnects   ; 539 / 32,401 ( 2 % )   ;
 ; C16 interconnects     ; 2 / 1,326 ( < 1 % )    ;
-; C4 interconnects      ; 216 / 21,816 ( < 1 % ) ;
-; Direct links          ; 156 / 32,401 ( < 1 % ) ;
+; C4 interconnects      ; 223 / 21,816 ( 1 % )   ;
+; Direct links          ; 153 / 32,401 ( < 1 % ) ;
 ; Global clocks         ; 2 / 10 ( 20 % )        ;
-; Local interconnects   ; 215 / 10,320 ( 2 % )   ;
-; R24 interconnects     ; 3 / 1,289 ( < 1 % )    ;
-; R4 interconnects      ; 236 / 28,186 ( < 1 % ) ;
+; Local interconnects   ; 220 / 10,320 ( 2 % )   ;
+; R24 interconnects     ; 4 / 1,289 ( < 1 % )    ;
+; R4 interconnects      ; 235 / 28,186 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
@@ -719,12 +719,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.86) ; Number of LABs  (Total = 36) ;
+; LAB-wide Signals  (Average = 1.89) ; Number of LABs  (Total = 36) ;
 +------------------------------------+------------------------------+
 ; 1 Async. clear                     ; 24                           ;
 ; 1 Clock                            ; 24                           ;
 ; 1 Clock enable                     ; 10                           ;
-; 1 Sync. load                       ; 8                            ;
+; 1 Sync. load                       ; 9                            ;
 ; 2 Clock enables                    ; 1                            ;
 +------------------------------------+------------------------------+
 
@@ -1017,7 +1017,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.36 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.32 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1030,8 +1030,8 @@ Warning (169177): 3 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin echo uses I/O standard 3.3-V LVTTL at 74 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 27
 Info (144001): Generated suppressed messages file L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/output_files/distance_sensor.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5233 megabytes
-    Info: Processing ended: Sun Apr 28 19:15:02 2024
+    Info: Peak virtual memory: 5235 megabytes
+    Info: Processing ended: Mon Apr 29 19:35:38 2024
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:08
 
