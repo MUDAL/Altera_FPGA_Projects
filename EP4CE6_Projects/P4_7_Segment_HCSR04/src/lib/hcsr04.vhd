@@ -96,8 +96,8 @@ begin
                        else    done_reg;
    new_io <= echo when state = ST_SAMPLE else new_io_reg;
    
-   mealy_outputs: process(state,micro_clks,trig_reg,old_io_reg,
-                          pos_reg,new_io_reg)
+   mealy_outputs: process(state,micro_clks,trig_reg,new_io_reg,
+                          old_io_reg,pos_reg)
    begin
       trig_next <= trig_reg;
       old_io <= old_io_reg;
