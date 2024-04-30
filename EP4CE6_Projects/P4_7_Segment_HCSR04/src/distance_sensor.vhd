@@ -17,9 +17,10 @@ library work;
 --   e. Other combinational logic
 --   f. Control paths
 --4. Two methods of multiplication:
---   a. Using '*' operator (uses slightly fewer resources and enables the
---      system to operate at a higher max frequency. It's the default method.
---   b. Using combinational shifting (uses more resources),
+--   a. Using '*' operator (uses slightly fewer resources but enables the
+--      system to operate at a lower frequency.
+--   b. Using combinational shifting (uses more resources but enables the
+--      system to operate at a higher frequency).
 
 entity distance_sensor is
    port(rst_n: in std_logic;
@@ -71,18 +72,18 @@ begin
    -----------METHOD 1: Multiplication using '*'
    -----------COMMENT METHOD 2 if you want to use METHOD 1
    
-   distance <= unsigned(pulse) * to_unsigned(PULSE_TO_CM,BIT_WIDTH); 
+--   distance <= unsigned(pulse) * to_unsigned(PULSE_TO_CM,BIT_WIDTH); 
    
    -----------METHOD 2: Multiplication through shift operations
    -----------COMMENT METHOD 1 if you want to use METHOD 2
    -----------Multiplication factor = 172 i.e. 128 + 32 + 8 + 4
    
---   p_uns <= unsigned(pulse);
---   p_shift_7 <= ZEROS(7) & p_uns & ZEROS(6 downto 0);
---   p_shift_5 <= ZEROS(7 downto 5) & p_uns & ZEROS(4 downto 0);
---   p_shift_3 <= ZEROS(7 downto 3) & p_uns & ZEROS(2 downto 0);
---   p_shift_2 <= ZEROS(7 downto 2) & p_uns & ZEROS(1 downto 0);
---   distance <= p_shift_7 + p_shift_5 + p_shift_3 + p_shift_2;
+   p_uns <= unsigned(pulse);
+   p_shift_7 <= ZEROS(7) & p_uns & ZEROS(6 downto 0);
+   p_shift_5 <= ZEROS(7 downto 5) & p_uns & ZEROS(4 downto 0);
+   p_shift_3 <= ZEROS(7 downto 3) & p_uns & ZEROS(2 downto 0);
+   p_shift_2 <= ZEROS(7 downto 2) & p_uns & ZEROS(1 downto 0);
+   distance <= p_shift_7 + p_shift_5 + p_shift_3 + p_shift_2;
    
    ------------------------------------------------------------------------
    
