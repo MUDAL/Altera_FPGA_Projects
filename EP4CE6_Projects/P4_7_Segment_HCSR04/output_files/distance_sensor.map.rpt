@@ -1,5 +1,5 @@
 Analysis & Synthesis report for distance_sensor
-Tue Apr 30 08:18:46 2024
+Tue Apr 30 08:30:26 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 30 08:18:46 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 30 08:30:26 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; distance_sensor                             ;
 ; Top-level Entity Name              ; distance_sensor                             ;
@@ -373,7 +373,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Apr 30 08:18:33 2024
+    Info: Processing started: Tue Apr 30 08:30:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off distance_sensor -c distance_sensor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -396,9 +396,9 @@ Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mappin
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
 Info (12127): Elaborating entity "distance_sensor" for the top level hierarchy
-Info (12129): Elaborating entity "hcsr04" using architecture "A:hcsr04_rtl" for hierarchy "hcsr04:hcsr04_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 92
-Info (12129): Elaborating entity "dec_to_bcd" using architecture "A:dec_to_bcd_rtl" for hierarchy "dec_to_bcd:dec_to_bcd_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 96
-Info (12129): Elaborating entity "seg_display" using architecture "A:seg_display_rtl" for hierarchy "seg_display:display_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 100
+Info (12129): Elaborating entity "hcsr04" using architecture "A:hcsr04_rtl" for hierarchy "hcsr04:hcsr04_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 93
+Info (12129): Elaborating entity "dec_to_bcd" using architecture "A:dec_to_bcd_rtl" for hierarchy "dec_to_bcd:dec_to_bcd_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 97
+Info (12129): Elaborating entity "seg_display" using architecture "A:seg_display_rtl" for hierarchy "seg_display:display_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/distance_sensor.vhd Line: 101
 Info (12129): Elaborating entity "seg_rom" using architecture "A:seg_rom_rtl" for hierarchy "seg_display:display_inst|seg_rom:rom" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/seg_display.vhd Line: 93
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "seg_display:display_inst|seg_rom:rom|rom" is uninferred due to inappropriate RAM size File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/src/lib/seg_rom.vhd Line: 15
@@ -418,9 +418,9 @@ Info (21057): Implemented 441 device resources after synthesis - the final resou
     Info (21059): Implemented 13 output pins
     Info (21061): Implemented 425 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4782 megabytes
-    Info: Processing ended: Tue Apr 30 08:18:46 2024
+    Info: Peak virtual memory: 4774 megabytes
+    Info: Processing ended: Tue Apr 30 08:30:26 2024
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Total CPU time (on all processors): 00:00:25
 
 

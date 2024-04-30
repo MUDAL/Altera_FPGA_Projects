@@ -18,9 +18,9 @@ library work;
 --   f. Control paths
 --4. Two methods of multiplication:
 --   a. Using '*' operator (uses slightly fewer resources but enables the
---      system to operate at a lower frequency.
+--      system to operate at a lower maximum frequency.
 --   b. Using combinational shifting (uses more resources but enables the
---      system to operate at a higher frequency).
+--      system to operate at a higher maximum frequency).
 
 entity distance_sensor is
    port(rst_n: in std_logic;
@@ -83,6 +83,7 @@ begin
    p_shift_5 <= ZEROS(7 downto 5) & p_uns & ZEROS(4 downto 0);
    p_shift_3 <= ZEROS(7 downto 3) & p_uns & ZEROS(2 downto 0);
    p_shift_2 <= ZEROS(7 downto 2) & p_uns & ZEROS(1 downto 0);
+   
    distance <= p_shift_7 + p_shift_5 + p_shift_3 + p_shift_2;
    
    ------------------------------------------------------------------------
