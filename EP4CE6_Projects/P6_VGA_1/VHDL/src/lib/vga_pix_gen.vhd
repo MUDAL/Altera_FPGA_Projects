@@ -73,5 +73,4 @@ begin
          rgb_out <= "000"; --Black
       end if;
    end process;
-
 end vga_pix_gen_rtl;

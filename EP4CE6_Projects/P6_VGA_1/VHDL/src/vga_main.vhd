@@ -24,16 +24,20 @@ architecture vga_main_rtl of vga_main is
 begin
    -- Instantiate VGA sync
    vga_sync_unit: entity work.vga_sync(vga_sync_rtl)
-      port map(rst_n => rst_n, clk => clk, valid_pixel => valid_pixel,
-               p_tick => pixel_tick, hsync => hsync, vsync => vsync,
-               pixel_x => pixel_x, pixel_y => pixel_y);
+   port map(rst_n => rst_n, clk => clk, valid_pixel => valid_pixel,
+            p_tick => pixel_tick, hsync => hsync, vsync => vsync,
+            pixel_x => pixel_x, pixel_y => pixel_y);
+               
    -- Instantiate graphic generator
    pixel_gen: entity work.vga_pix_gen(vga_pix_gen_rtl)
-      port map(rst_n => rst_n, clk => clk, p_tick => pixel_tick, 
-               valid_pixel => valid_pixel, pixel_x => pixel_x, 
-               pixel_y => pixel_y, rgb_out => rgb_out);
+   port map(rst_n => rst_n, clk => clk, p_tick => pixel_tick, 
+            valid_pixel => valid_pixel, pixel_x => pixel_x, 
+            pixel_y => pixel_y, rgb_out => rgb_out);
    
-   rgb <= rgb_reg;
+   rgb_output: rgb_next <= rgb_out when pixel_tick = '1' 
+                   else    rgb_reg; 
+   
+   buffered_output: rgb <= rgb_reg; 
    
    rgb_register: process(rst_n,clk)
    begin
@@ -43,15 +47,4 @@ begin
          rgb_reg <= rgb_next;
       end if;
    end process;
-   
-   rgb_output: process(pixel_tick,rgb_reg,rgb_out)
-   begin
-      if pixel_tick = '1' then
-         rgb_next <= rgb_out;
-      else
-         rgb_next <= rgb_reg;
-      end if;
-   end process;
-   
 end vga_main_rtl;
-

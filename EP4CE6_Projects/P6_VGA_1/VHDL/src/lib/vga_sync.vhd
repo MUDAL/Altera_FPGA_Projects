@@ -26,13 +26,18 @@ architecture vga_sync_rtl of vga_sync is
    constant VB: integer := 33; -- v. back porch 
    constant VR: integer := 2;  -- v. retrace 
    -- mod-2 counter 
-   signal mod2_reg, mod2_next: std_logic; 
+   signal mod2_reg: std_logic;
+   signal mod2_next: std_logic; 
    -- sync counters 
-   signal v_count_reg, v_count_next: unsigned(9 downto 0); 
-   signal h_count_reg, h_count_next: unsigned(9 downto 0);  
+   signal v_count_reg: unsigned(9 downto 0); 
+   signal v_count_next: unsigned(9 downto 0); 
+   signal h_count_reg: unsigned(9 downto 0); 
+   signal h_count_next: unsigned(9 downto 0);  
    -- output buffer
-   signal v_sync_reg, v_sync_next: std_logic;
-   signal h_sync_reg, h_sync_next: std_logic; 
+   signal v_sync_reg: std_logic; 
+   signal v_sync_next: std_logic;
+   signal h_sync_reg: std_logic; 
+   signal h_sync_next: std_logic; 
    -- status signal
    signal h_end: std_logic; 
    signal v_end: std_logic; 
@@ -59,6 +64,7 @@ begin
    mod2_next <= not mod2_reg;
    -- 25 MHz pixel tick
    pixel_tick <= mod2_reg;
+   
    -- status (end of : horizontal counter = 799, vertical counter = 524)
    h_end <= '1' when h_count_reg = (HD + HF + HB + HR - 1) else '0';
    v_end <= '1' when v_count_reg = (VD + VF + VB + VR - 1) else '0';
@@ -92,23 +98,21 @@ begin
    end process;
    
    -- horizontal and vertical sync
-   h_sync_next <= 
-      '0' when (h_count_reg >= (HD + HF))                --656
-           and (h_count_reg <= (HD + HF + HR - 1)) else  --751
-      '1';
-   v_sync_next <=
-      '0' when (v_count_reg >= (VD + VF))                --490
-           and (v_count_reg <= (VD + VF + VR - 1)) else  --491
-      '1';
-   valid_pixel <= 
-      '1' when (h_count_reg < HD) and (v_count_reg < VD) else
-      '0';
-   --output signal
+   h_sync_next <= '0' when (h_count_reg >= (HD + HF))          --656
+                       and (h_count_reg <= (HD + HF + HR - 1)) --751
+          else    '1';
+    
+   v_sync_next <= '0' when (v_count_reg >= (VD + VF))          --490
+                       and (v_count_reg <= (VD + VF + VR - 1)) --491
+          else    '1';   
+     
+   valid_pixel <= '1' when (h_count_reg < HD) and (v_count_reg < VD) 
+          else    '0';
+      
+   --output signals
    hsync <= h_sync_reg;
    vsync <= v_sync_reg;
    pixel_x <= std_logic_vector(h_count_reg);
    pixel_y <= std_logic_vector(v_count_reg);
    p_tick <= pixel_tick;
 end vga_sync_rtl;
-
-        
