@@ -1,9 +1,0 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
-library work;
-
-entity spi_lcd_main is
-	port(rst_n: in std_logic;
-		  clk: in std_logic);
-end spi_lcd_main;
