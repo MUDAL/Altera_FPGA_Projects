@@ -16,7 +16,7 @@ System specs:
 
 ## Tools  
 - EP4CE6E22C8N Cyclone IV FPGA development board
-- ILI9341 TFT Display Module  
+- ILI9341 TFT Display Module (2.4 inches, 240 x 320)    
 - HC06 Bluetooth Module     
 - Intel Quartus Prime 20.1
 - ModelSim (for simulation)  
@@ -44,7 +44,16 @@ System specs:
 ![Screenshot (527)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/6c0cce9a-9c37-49e1-9f8b-279e9a46faed)  
 
 ## Decoding SPI (ILI9341) and UART (HC06) with a Logic Analyzer        
-  
+### 1. Configuring the registers of the ILI9341 using data/command sent via SPI from the FPGA     
+![Screenshot (528)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/0282292f-eb6c-4044-9875-005c0e704c82) 
+![Screenshot (529)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/549daa4c-344e-4ed1-b3dc-109f7c86737c)   
+### 2. FPGA receives UART command (``R``) and sends pixel data (Red) to the ILI9341 via SPI   
+![Screenshot (530)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/895cb303-5fae-438e-8b9e-c1635fcc4015)   
+![Screenshot (531)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/0c286f7f-25bb-4f35-9ee9-a1aca96e0abe)    
+
 ## Demo         
+[TO BE ADDED]  
 
 ## Helpful resources   
+- [ILITEK ILI9341 Specifications Document](https://drive.google.com/file/d/1omF5Pk9mfnfzifMGQ6iuK6_T9_BTqp32/view?usp=sharing)
+- FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P.Chu (Check timing diagrams for UART)   
