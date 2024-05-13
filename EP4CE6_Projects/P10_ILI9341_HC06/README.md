@@ -23,7 +23,7 @@ System specs:
 
 ## How to use   
 - Clone the ``Altera_FPGA_Projects`` repository   
-- Open the ``EP4CE6_Projects/P10_ILI9341_HC06/RTL`` directory  
+- Open the ``EP4CE6_Projects/P10_ILI9341_HC06/`` directory  
 - Open the ``rgb_display.qpf`` project file   
 - Intel Quartus Prime should open after the previous step   
 - After Quartus opens, click on the ``Processing`` tab  
@@ -31,7 +31,7 @@ System specs:
 - After compilation, click on ``Program Device(Open Programmer)``  
 - When the Programmer window opens, load the demo project into the FPGA by clicking ``Start`` 
 
-## Project file structure (RTL)   
+## Project file structure     
 - The VHDL design files are located in the ``src`` and ``lib`` directories  
 - The top-level design is the ``rgb_display.vhd``  
 - The other modules or design files are located in the ``lib`` directory
