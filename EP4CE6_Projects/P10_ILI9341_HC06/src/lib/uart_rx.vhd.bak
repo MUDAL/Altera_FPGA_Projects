@@ -1,0 +1,12 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity uart_rx is
+	port(rst_n: in std_logic;
+		  clk: in std_logic);
+end uart_rx;
+
+architecture uart_rx_rtl of uart_rx is
+begin
+end uart_rx_rtl;

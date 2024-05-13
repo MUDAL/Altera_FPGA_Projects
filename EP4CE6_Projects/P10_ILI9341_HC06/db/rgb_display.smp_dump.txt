@@ -1,0 +1,23 @@
+
+State Machine - |rgb_display|spi_tx:spi_interface|state
+Name state.ST_DONE state.ST_SEND_PIXELS state.ST_MEM_WRITE_CMD state.ST_TRIGGER state.ST_120MS state.ST_SLEEP_OUT_CMD state.ST_RGB_SETTING state.ST_MEM_ACCESS_CMD state.ST_BPP_SETTING state.ST_PIXEL_FORMAT_CMD state.ST_DISP_ON_CMD state.ST_5MS state.ST_TFT_RST state.ST_IDLE 
+state.ST_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.ST_TFT_RST 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.ST_5MS 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ST_DISP_ON_CMD 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.ST_PIXEL_FORMAT_CMD 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ST_BPP_SETTING 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.ST_MEM_ACCESS_CMD 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.ST_RGB_SETTING 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.ST_SLEEP_OUT_CMD 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.ST_120MS 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ST_TRIGGER 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.ST_MEM_WRITE_CMD 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.ST_SEND_PIXELS 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ST_DONE 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |rgb_display|uart_rx:uart_interface|state
+Name state.ST_DONE state.ST_RECEIVE state.ST_IDLE 
+state.ST_IDLE 0 0 0 
+state.ST_RECEIVE 0 1 1 
+state.ST_DONE 1 0 1 

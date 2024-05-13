@@ -1,0 +1,8 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity spi_tx is
+	port(rst_n: in std_logic;
+		  clk: in std_logic);
+end spi_tx;

@@ -1,0 +1,13 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+library work;
+
+entity rgb_display is
+	port(rst_n: in std_logic;
+		  clk: in std_logic);
+end rgb_display;
+
+architecture rgb_display_rtl of rgb_display is
+begin
+end rgb_display_rtl;

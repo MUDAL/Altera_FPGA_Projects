@@ -1,0 +1,468 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation
+Eencoder
+Z0 w1715549930
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 165
+Z4 dL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation
+Z5 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/encoder.vhd
+Z6 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/encoder.vhd
+l0
+L9 1
+VWQ66[^a2l@R8fIEFc6zle1
+!s100 j]lc7AQBdgc5US0?;9ZXG2
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1715556326
+!i10b 1
+Z9 !s108 1715556326.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/encoder.vhd|
+Z11 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/encoder.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Aencoder_rtl
+R1
+R2
+R3
+Z14 DEx4 work 7 encoder 0 22 WQ66[^a2l@R8fIEFc6zle1
+!i122 165
+l39
+L18 49
+V6infM[P]7;l[C<n4L1XAQ0
+!s100 V?`=i0Kn524WS@6fll;931
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eencoder_tb
+Z15 w1715556313
+Z16 DPx4 work 7 pack_tb 0 22 VLRFnhV[1M^DV7T:zEL5d3
+Z17 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+R1
+R2
+R3
+!i122 166
+R4
+Z18 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/encoder_tb.vhd
+Z19 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/encoder_tb.vhd
+l0
+L9 1
+Vj7S>jH`j<bcDB82P8Z_O]2
+!s100 D>Dho8N=[?Y3SRZQUIO2<0
+R7
+32
+Z20 !s110 1715556331
+!i10b 1
+Z21 !s108 1715556331.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/encoder_tb.vhd|
+Z23 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/encoder_tb.vhd|
+!i113 1
+R12
+R13
+Aencoder_behav
+R14
+R16
+R17
+R1
+R2
+R3
+DEx4 work 10 encoder_tb 0 22 j7S>jH`j<bcDB82P8Z_O]2
+!i122 166
+l21
+L12 120
+V5^>^?f=P0NImK3ALD6V443
+!s100 di;coH@gD]JbY<QA>G0W;2
+R7
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R12
+R13
+Ppack_tb
+R1
+R2
+R3
+32
+b1
+!s110 1715202161
+!i10b 1
+!i122 3
+w1711661093
+R4
+8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/pack_tb_header.vhd
+FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/pack_tb_header.vhd
+l0
+L5 1
+VVLRFnhV[1M^DV7T:zEL5d3
+!s100 TEcfl97TH4X@@NC75C?Ko2
+R7
+b1
+!s108 1715202161.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/pack_tb_header.vhd|
+!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/pack_tb_header.vhd|
+!i113 1
+R12
+R13
+Bbody
+R16
+R1
+R2
+R3
+32
+!s110 1715202165
+!i10b 1
+!i122 4
+w1711660441
+8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/pack_tb_body.vhd
+FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/pack_tb_body.vhd
+l0
+L7 1
+V1QAI50iOLbXM=b_z2HmYB0
+!s100 H7TLlMmRZ>YoVAkdkhfb10
+R7
+!s108 1715202164.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/pack_tb_body.vhd|
+!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/pack_tb_body.vhd|
+!i113 1
+R12
+R13
+Epll
+Z24 w1715546827
+R2
+R3
+!i122 170
+R4
+Z25 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/pll/pll.vhd
+Z26 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/pll/pll.vhd
+l0
+L43 1
+V]Q5zM991C[OAk=i_4MBh80
+!s100 @[zo<^ljli0CFIID<[n^]1
+R7
+32
+Z27 !s110 1715557865
+!i10b 1
+Z28 !s108 1715557865.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/pll/pll.vhd|
+Z30 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/pll/pll.vhd|
+!i113 1
+R12
+R13
+Asyn
+R2
+R3
+DEx4 work 3 pll 0 22 ]Q5zM991C[OAk=i_4MBh80
+!i122 170
+l128
+L53 149
+VD98;aAc<SIa^koPgA]H@_3
+!s100 J4UPnNR9AhSJlPi[XFmk82
+R7
+32
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R12
+R13
+Ergb_display
+Z31 w1715557064
+R1
+R2
+R3
+!i122 172
+R4
+Z32 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd
+Z33 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd
+l0
+L23 1
+VG>h7^E>5:g2n__TYKl4@F3
+!s100 F?hmkF4<mHjUI=GC>WJ<13
+R7
+32
+!s110 1715557923
+!i10b 1
+!s108 1715557923.000000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd|
+Z35 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd|
+!i113 1
+R12
+R13
+Argb_display_rtl
+DEx4 work 6 spi_tx 0 22 6CN40eT>5EkUH]ifXl9]a2
+R14
+Z36 DEx4 work 7 uart_rx 0 22 O:TDbAG?4CdCQ=Y2II6ZV1
+R1
+R2
+R3
+DEx4 work 11 rgb_display 0 22 CF[Q15>0B36eZD1UD<fRl3
+32
+!s110 1715527485
+!i10b 1
+!i122 161
+l41
+L31 45
+VJFeSemSD7kc^ZJ?M[gPLk0
+!s100 [RO^IYH8]35HIl7^=IVa=0
+R7
+!s108 1715527485.000000
+R34
+R35
+!i113 1
+R12
+R13
+Ergb_display_tb
+Z37 w1715557763
+R16
+R17
+R1
+R2
+R3
+!i122 173
+R4
+Z38 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/rgb_display_tb.vhd
+Z39 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/rgb_display_tb.vhd
+l0
+L9 1
+VdBSHa3d@nzhgCiG8W2]2K0
+!s100 a]HhP4R6^E:Q>zdFV?bLb2
+R7
+32
+Z40 !s110 1715557955
+!i10b 1
+Z41 !s108 1715557955.000000
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/rgb_display_tb.vhd|
+Z43 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/rgb_display_tb.vhd|
+!i113 1
+R12
+R13
+Argb_display_behav
+DEx4 work 11 rgb_display 0 22 G>h7^E>5:g2n__TYKl4@F3
+R16
+R17
+R1
+R2
+R3
+DEx4 work 14 rgb_display_tb 0 22 dBSHa3d@nzhgCiG8W2]2K0
+!i122 173
+l35
+L12 174
+V0VJ7McEzDL3D;k_n3cAl@2
+!s100 K]21L8VB:]=aAZW?`^K_X2
+R7
+32
+R40
+!i10b 1
+R41
+R42
+R43
+!i113 1
+R12
+R13
+Espi_tx
+Z44 w1715586030
+R1
+R2
+R3
+!i122 176
+R4
+Z45 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/spi_tx.vhd
+Z46 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/spi_tx.vhd
+l0
+L16 1
+VHD4B5LYCmZ6K0`[YVbWQ60
+!s100 ^JMEA<lT;5zGfP?YokP==0
+R7
+32
+Z47 !s110 1715586192
+!i10b 1
+Z48 !s108 1715586192.000000
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/spi_tx.vhd|
+Z50 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/spi_tx.vhd|
+!i113 1
+R12
+R13
+Aspi_tx_rtl
+R1
+R2
+R3
+Z51 DEx4 work 6 spi_tx 0 22 HD4B5LYCmZ6K0`[YVbWQ60
+!i122 176
+l126
+Z52 L30 321
+Z53 VoIz>DaDKzi]kVK?=X1:B;0
+Z54 !s100 3`BgHWD7?jg9T=hD?6HUR0
+R7
+32
+R47
+!i10b 1
+R48
+R49
+R50
+!i113 1
+R12
+R13
+Espi_tx_tb
+Z55 w1715557315
+R16
+R17
+R1
+R2
+R3
+!i122 168
+R4
+Z56 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/spi_tx_tb.vhd
+Z57 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/spi_tx_tb.vhd
+l0
+L9 1
+Vo]eofMiJKN8J:oH45_B^<3
+!s100 S`biP4aalKk]UfTTJ_jiA0
+R7
+32
+Z58 !s110 1715557340
+!i10b 1
+Z59 !s108 1715557340.000000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/spi_tx_tb.vhd|
+Z61 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/spi_tx_tb.vhd|
+!i113 1
+R12
+R13
+Aspi_tx_behav
+R51
+R16
+R17
+R1
+R2
+R3
+DEx4 work 9 spi_tx_tb 0 22 o]eofMiJKN8J:oH45_B^<3
+!i122 168
+l30
+L12 147
+VUbim;>]G899cTIbZz]BLW0
+!s100 Nj`>N]AiX8Z2HhCG9II?K3
+R7
+32
+R58
+!i10b 1
+R59
+R60
+R61
+!i113 1
+R12
+R13
+Euart_rx
+Z62 w1715558805
+R1
+R2
+R3
+!i122 174
+R4
+Z63 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/uart_rx.vhd
+Z64 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/uart_rx.vhd
+l0
+L13 1
+VO:TDbAG?4CdCQ=Y2II6ZV1
+!s100 z3JRljG?WLGf4dMXeBmlL1
+R7
+32
+Z65 !s110 1715559143
+!i10b 1
+Z66 !s108 1715559143.000000
+Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/uart_rx.vhd|
+Z68 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/uart_rx.vhd|
+!i113 1
+R12
+R13
+Auart_rx_rtl
+R1
+R2
+R3
+R36
+!i122 174
+l43
+L24 88
+V2>BaBXo5L27KaK9TSKQ4=3
+!s100 12aF>;KcBHI3_3PYUoZL30
+R7
+32
+R65
+!i10b 1
+R66
+R67
+R68
+!i113 1
+R12
+R13
+Euart_rx_tb
+Z69 w1715556111
+R16
+R17
+R1
+R2
+R3
+!i122 164
+R4
+Z70 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/uart_rx_tb.vhd
+Z71 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/uart_rx_tb.vhd
+l0
+L9 1
+Vn<oN_`B@]Jd6KHF<W8n4K2
+!s100 _M==S8ogIaD1AgYYB]oj32
+R7
+32
+Z72 !s110 1715556131
+!i10b 1
+Z73 !s108 1715556130.000000
+Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/uart_rx_tb.vhd|
+Z75 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/simulation/testbench/uart_rx_tb.vhd|
+!i113 1
+R12
+R13
+Auart_rx_behav
+R36
+R16
+R17
+R1
+R2
+R3
+DEx4 work 10 uart_rx_tb 0 22 n<oN_`B@]Jd6KHF<W8n4K2
+!i122 164
+l25
+L12 134
+VfN`0GbE4R3BSgCQ6Qac^L2
+!s100 U34aKhH7TEbo^54LVmHcQ0
+R7
+32
+R72
+!i10b 1
+R73
+R74
+R75
+!i113 1
+R12
+R13
