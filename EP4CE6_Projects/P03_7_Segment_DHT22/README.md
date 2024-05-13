@@ -11,7 +11,7 @@
 
 ## How to use  
 - Clone the ``Altera_FPGA_Projects`` repository  
-- Open the ``EP4CE6_Projects/P3_7_Segment_DHT22/`` directory  
+- Open the ``EP4CE6_Projects/P03_7_Segment_DHT22/`` directory  
 - Open the ``weather_sensor.qpf`` project file  
 - Intel Quartus Prime should open after the previous step  
 - After Quartus opens, click on the ``Processing`` tab  

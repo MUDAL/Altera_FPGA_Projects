@@ -19,7 +19,7 @@ covered by the image are displayed in blue.
 
 ## How to use  
 - Clone the ``Altera_FPGA_Projects`` repository  
-- Open the ``EP4CE6_Projects/P6_VGA_1/VHDL/`` directory  
+- Open the ``EP4CE6_Projects/P06_VGA_1/VHDL/`` directory  
 - Open the ``vga_main.qpf`` project file  
 - Intel Quartus Prime should open after the previous step  
 - After Quartus opens, click on the ``Processing`` tab  

@@ -15,7 +15,7 @@ A simple two-digit counter (0 to 99) is implemented in software on the microcont
 ## How to use  
 ### 1. Setting up the FPGA  
 - Clone the ``Altera_FPGA_Projects`` repository   
-- Open the ``EP4CE6_Projects/P8_SPI_LCD/RTL`` directory  
+- Open the ``EP4CE6_Projects/P08_SPI_LCD/RTL`` directory  
 - Open the ``spi_lcd_main.qpf`` project file   
 - Intel Quartus Prime should open after the previous step   
 - After Quartus opens, click on the ``Processing`` tab  
@@ -24,7 +24,7 @@ A simple two-digit counter (0 to 99) is implemented in software on the microcont
 - When the Programmer window opens, load the demo project into the FPGA by clicking ``Start``
 
 ### 2. Setting up the microcontroller  
-- Open the ``EP4CE6_Projects/P8_SPI_LCD/MCU/SPI_Experiment`` directory
+- Open the ``EP4CE6_Projects/P08_SPI_LCD/MCU/SPI_Experiment`` directory
 - If you have ``STM32CubeIDE`` installed, you can open the project, compile the source code, and flash the STM32 MCU  
 
 ## Project file structure (RTL)   

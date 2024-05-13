@@ -13,7 +13,7 @@ This task involves configuring an FPGA as a PS/2-to-UART converter that decodes 
 ## How to use  
 ### 1. Setting up the FPGA  
 - Clone the ``Altera_FPGA_Projects`` repository   
-- Open the ``EP4CE6_Projects/P9_PS2_USB/RTL`` directory  
+- Open the ``EP4CE6_Projects/P09_PS2_USB/RTL`` directory  
 - Open the ``ps2_uart_main.qpf`` project file   
 - Intel Quartus Prime should open after the previous step   
 - After Quartus opens, click on the ``Processing`` tab  
@@ -22,7 +22,7 @@ This task involves configuring an FPGA as a PS/2-to-UART converter that decodes 
 - When the Programmer window opens, load the demo project into the FPGA by clicking ``Start``
 
 ### 2. Setting up the microcontroller  
-- Open the ``EP4CE6_Projects/P9_PS2_USB/MCU/UART_USB`` directory
+- Open the ``EP4CE6_Projects/P09_PS2_USB/MCU/UART_USB`` directory
 - If you have ``STM32CubeIDE`` installed, you can open the project, compile the source code, and flash the STM32 MCU  
 
 ## Project file structure (RTL)   
