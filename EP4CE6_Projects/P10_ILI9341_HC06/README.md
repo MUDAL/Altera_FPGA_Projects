@@ -3,10 +3,10 @@
 In this project, the FPGA decodes commands received from an HC06 Bluetooth module to determine the colour  
 that should be displayed on the ILI9341 module. There are four colours that can be displayed on the TFT  
 screen. These are: red, green, blue, and white.   
-When 'R' or 'r' is received, the screen will be filled with red.    
-When 'G' or 'g' is received, the screen will be filled with green.   
-When 'B' or 'b' is received, the scrren will be filled with blue.   
-When characters other than the aforementioned ones are received, the screen will be filled with white.   
+- When ``R`` or ``r`` is received, the screen will be filled with red.    
+- When ``G`` or ``g`` is received, the screen will be filled with green.   
+- When ``B`` or ``b`` is received, the scrren will be filled with blue.   
+- When characters other than the aforementioned ones are received, the screen will be filled with white.   
 
 System specs:     
 - 50 MHz main clock     
@@ -41,7 +41,7 @@ System specs:
 
 ## Pinouts  
 - Check the ``Location`` column in the image below for the pin mappings used in this project.      
-
+![Screenshot (527)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/6c0cce9a-9c37-49e1-9f8b-279e9a46faed)  
 
 ## Decoding SPI (ILI9341) and UART (HC06) with a Logic Analyzer        
   
