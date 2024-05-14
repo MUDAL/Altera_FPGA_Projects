@@ -52,7 +52,7 @@ System specs:
 ![Screenshot (531)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/0c286f7f-25bb-4f35-9ee9-a1aca96e0abe)    
 
 ## Demo         
-[TO BE ADDED]  
+[Video Demo](https://drive.google.com/file/d/1j0V4eVPRZ2ItI5fE4JJh-jrtvqcAinYw/view?usp=sharing)   
 
 ## Helpful resources   
 - [ILITEK ILI9341 Specifications Document](https://drive.google.com/file/d/1omF5Pk9mfnfzifMGQ6iuK6_T9_BTqp32/view?usp=sharing)
