@@ -8,7 +8,7 @@ library work;
 --Details:
 --1. "Active low" reset and 7-segment display
 --2. 50MHz system clock
---3. I2C clock
+--3. 100kHz I2C clock
 --4. The design is divided into different parts:
 --   a. ROM  
 --   b. Decimal to BCD converter

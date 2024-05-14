@@ -1,5 +1,5 @@
 Analysis & Synthesis report for digital_thermometer
-Mon Apr 29 19:21:26 2024
+Tue May 14 17:23:42 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 29 19:21:26 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 14 17:23:42 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; digital_thermometer                         ;
 ; Top-level Entity Name              ; digital_thermometer                         ;
@@ -172,17 +172,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                              ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
-; src/digital_thermometer.vhd      ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/digital_thermometer.vhd ;         ;
-; src/lib/dec_to_bcd.vhd           ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/dec_to_bcd.vhd      ;         ;
-; src/lib/i2c_reader.vhd           ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/i2c_reader.vhd      ;         ;
-; src/lib/seg_display.vhd          ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/seg_display.vhd     ;         ;
-; src/lib/seg_rom.vhd              ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/seg_rom.vhd         ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
+; src/digital_thermometer.vhd      ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/digital_thermometer.vhd ;         ;
+; src/lib/dec_to_bcd.vhd           ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/dec_to_bcd.vhd      ;         ;
+; src/lib/i2c_reader.vhd           ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/i2c_reader.vhd      ;         ;
+; src/lib/seg_display.vhd          ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/seg_display.vhd     ;         ;
+; src/lib/seg_rom.vhd              ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/seg_rom.vhd         ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -353,7 +353,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -363,41 +363,41 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Apr 29 19:21:12 2024
+    Info: Processing started: Tue May 14 17:23:29 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off digital_thermometer -c digital_thermometer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file src/digital_thermometer.vhd
-    Info (12022): Found design unit 1: digital_thermometer-digital_thermometer_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/digital_thermometer.vhd Line: 32
-    Info (12023): Found entity 1: digital_thermometer File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/digital_thermometer.vhd Line: 20
+    Info (12022): Found design unit 1: digital_thermometer-digital_thermometer_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/digital_thermometer.vhd Line: 32
+    Info (12023): Found entity 1: digital_thermometer File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/digital_thermometer.vhd Line: 20
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/dec_to_bcd.vhd
-    Info (12022): Found design unit 1: dec_to_bcd-dec_to_bcd_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/dec_to_bcd.vhd Line: 16
-    Info (12023): Found entity 1: dec_to_bcd File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/dec_to_bcd.vhd Line: 7
+    Info (12022): Found design unit 1: dec_to_bcd-dec_to_bcd_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/dec_to_bcd.vhd Line: 16
+    Info (12023): Found entity 1: dec_to_bcd File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/dec_to_bcd.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/i2c_reader.vhd
-    Info (12022): Found design unit 1: i2c_reader-i2c_reader_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/i2c_reader.vhd Line: 27
-    Info (12023): Found entity 1: i2c_reader File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/i2c_reader.vhd Line: 17
+    Info (12022): Found design unit 1: i2c_reader-i2c_reader_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/i2c_reader.vhd Line: 27
+    Info (12023): Found entity 1: i2c_reader File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/i2c_reader.vhd Line: 17
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/seg_display.vhd
-    Info (12022): Found design unit 1: seg_display-seg_display_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/seg_display.vhd Line: 31
-    Info (12023): Found entity 1: seg_display File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/seg_display.vhd Line: 21
+    Info (12022): Found design unit 1: seg_display-seg_display_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/seg_display.vhd Line: 31
+    Info (12023): Found entity 1: seg_display File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/seg_display.vhd Line: 21
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/seg_rom.vhd
-    Info (12022): Found design unit 1: seg_rom-seg_rom_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/seg_rom.vhd Line: 12
-    Info (12023): Found entity 1: seg_rom File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/seg_rom.vhd Line: 7
+    Info (12022): Found design unit 1: seg_rom-seg_rom_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/seg_rom.vhd Line: 12
+    Info (12023): Found entity 1: seg_rom File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/seg_rom.vhd Line: 7
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
 Info (12127): Elaborating entity "digital_thermometer" for the top level hierarchy
-Info (12129): Elaborating entity "i2c_reader" using architecture "A:i2c_reader_rtl" for hierarchy "i2c_reader:lm75_i2c" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/digital_thermometer.vhd Line: 58
-Info (12129): Elaborating entity "dec_to_bcd" using architecture "A:dec_to_bcd_rtl" for hierarchy "dec_to_bcd:i2c_data_to_bcd" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/digital_thermometer.vhd Line: 62
-Info (12129): Elaborating entity "seg_display" using architecture "A:seg_display_rtl" for hierarchy "seg_display:display" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/digital_thermometer.vhd Line: 66
-Info (12129): Elaborating entity "seg_rom" using architecture "A:seg_rom_rtl" for hierarchy "seg_display:display|seg_rom:rom" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/seg_display.vhd Line: 99
+Info (12129): Elaborating entity "i2c_reader" using architecture "A:i2c_reader_rtl" for hierarchy "i2c_reader:lm75_i2c" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/digital_thermometer.vhd Line: 58
+Info (12129): Elaborating entity "dec_to_bcd" using architecture "A:dec_to_bcd_rtl" for hierarchy "dec_to_bcd:i2c_data_to_bcd" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/digital_thermometer.vhd Line: 62
+Info (12129): Elaborating entity "seg_display" using architecture "A:seg_display_rtl" for hierarchy "seg_display:display" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/digital_thermometer.vhd Line: 66
+Info (12129): Elaborating entity "seg_rom" using architecture "A:seg_rom_rtl" for hierarchy "seg_display:display|seg_rom:rom" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/seg_display.vhd Line: 99
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "seg_display:display|seg_rom:rom|rom" is uninferred due to inappropriate RAM size File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/seg_rom.vhd Line: 15
-Warning (113028): 5 out of 16 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/db/digital_thermometer.ram0_seg_rom_bebb4cdc.hdl.mif Line: 1
-    Warning (113027): Addresses ranging from 11 to 15 are not initialized File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/db/digital_thermometer.ram0_seg_rom_bebb4cdc.hdl.mif Line: 1
+    Info (276004): RAM logic "seg_display:display|seg_rom:rom|rom" is uninferred due to inappropriate RAM size File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/seg_rom.vhd Line: 15
+Warning (113028): 5 out of 16 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/db/digital_thermometer.ram0_seg_rom_bebb4cdc.hdl.mif Line: 1
+    Warning (113027): Addresses ranging from 11 to 15 are not initialized File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/db/digital_thermometer.ram0_seg_rom_bebb4cdc.hdl.mif Line: 1
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
-Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/src/lib/seg_display.vhd Line: 58
+Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/seg_display.vhd Line: 58
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -408,9 +408,9 @@ Info (21057): Implemented 252 device resources after synthesis - the final resou
     Info (21060): Implemented 1 bidirectional pins
     Info (21061): Implemented 236 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4780 megabytes
-    Info: Processing ended: Mon Apr 29 19:21:26 2024
-    Info: Elapsed time: 00:00:14
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Tue May 14 17:23:42 2024
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:28
 
 
