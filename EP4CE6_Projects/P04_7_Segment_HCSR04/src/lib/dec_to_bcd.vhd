@@ -105,8 +105,8 @@ begin
                num <= num_reg - FACTOR;
             elsif num_reg >= to_unsigned(FACTOR_DIV_10,num_reg'length) and
                   num_reg < to_unsigned(FACTOR,num_reg'length) then
-                  tenths <= tenths_reg + 1;
-                  num <= num_reg - FACTOR_DIV_10;
+               tenths <= tenths_reg + 1;
+               num <= num_reg - FACTOR_DIV_10;
             else
                bcd_next(15 downto 12) <= hundreds_reg;
                bcd_next(11 downto 8) <= tens_reg;
