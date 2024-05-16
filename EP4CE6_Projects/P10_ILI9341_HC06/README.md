@@ -57,20 +57,17 @@ System specs:
 ## Helpful resources   
 - [ILITEK ILI9341 Specifications Document](https://drive.google.com/file/d/1omF5Pk9mfnfzifMGQ6iuK6_T9_BTqp32/view?usp=sharing)
 - FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P.Chu (Check timing diagrams for UART)   
-- [Altera: Quartus Handbook](https://drive.google.com/file/d/1oJjXx_n8-xdQk2OVQpPyZaf3n0bG2LTP/view?usp=sharing) - A very helpful document from Altera that allowed me to simulate this project in ModelSim. I wasn't able to simulate the top level design initially because of the Altera PLL IP. After searching online (forums) and discovering this document, I was able to compile the top level design (with an instantiated PLL IP) in ModelSim and run the simulation for it. In order to compile and simulate designs that use Altera IP designs, kindly check ``Chapter 1: Mentor Graphics. ModelSim Support. Simulating VHDL Designs. Pg 1-5``.
+- [Altera: Quartus II Handbook, Volume 3. Verification](https://drive.google.com/file/d/1oJjXx_n8-xdQk2OVQpPyZaf3n0bG2LTP/view?usp=sharing) - A very helpful document from Altera that allowed me to simulate this project in ModelSim. I wasn't able to simulate the top level design initially because of the Altera PLL IP. After searching online (forums) and discovering this document, I was able to compile the top level design (with an instantiated PLL IP) in ModelSim and run the simulation for it. In order to compile and simulate designs that use Altera IP designs, kindly check ``Chapter 1: Mentor Graphics, ModelSim Support, Simulating VHDL Designs. Pg 1-5``.
 
 ## Simulating VHDL Designs and Altera IP modules (in ModelSim)  
-### Important commands (from [Altera: Quartus Handbook](https://drive.google.com/file/d/1oJjXx_n8-xdQk2OVQpPyZaf3n0bG2LTP/view?usp=sharing))   
+### Important commands (from [Altera: Quartus II Handbook, Volume 3. Verification](https://drive.google.com/file/d/1oJjXx_n8-xdQk2OVQpPyZaf3n0bG2LTP/view?usp=sharing))   
 
 The following instructions will help you to perform a functional RTL simulation for VHDL designs in the ModelSim-Altera software.  
 
 #### The following steps assume you have already created a ModelSim project.  
 
 #### Create Simulation Libraries
-Creating a simulation library is not required if you are using the ModelSim-Altera software.
-Simulation libraries are needed to simulate a design that contains an LPM function or an Altera megafunction.  
-If you are using the Model TechnologyTM ModelSim software version, you need to create the simulation libraries
-and correctly link them to your design.    
+Creating a simulation library is not required if you are using the ModelSim-Altera software. Simulation libraries are needed to simulate a design that contains an LPM function or an Altera megafunction. If you are using the Model TechnologyTM ModelSim software version, you need to create the simulation libraries and correctly link them to your design.       
 
 1. Choose New > Library (File menu).
 2. In the Create a New Library dialog box select a new Library and a logical linking to it.
