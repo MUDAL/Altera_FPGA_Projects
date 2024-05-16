@@ -60,10 +60,9 @@ System specs:
 - [Altera: Quartus Handbook](https://drive.google.com/file/d/1oJjXx_n8-xdQk2OVQpPyZaf3n0bG2LTP/view?usp=sharing) - A very helpful document from Altera that allowed me to simulate this project in ModelSim. I wasn't able to simulate the top level design initially because of the Altera PLL IP. After searching online (forums) and discovering this document, I was able to compile the top level design (with an instantiated PLL IP) in ModelSim and run the simulation for it. In order to compile and simulate designs that use Altera IP designs, kindly check ``Chapter 1: Mentor Graphics. ModelSim Support. Simulating VHDL Designs. Pg 1-5``.
 
 ## Simulating VHDL Designs and Altera IP modules (in ModelSim)  
-### Important commands (from [Altera: Quartus Handbook](https://drive.google.com/file/d/1oJjXx_n8-xdQk2OVQpPyZaf3n0bG2LTP/view?usp=sharing))  
-```
-The following instructions will help you to perform a functional RTL simulation for VHDL designs
-in the ModelSim-Altera software.
+### Important commands (from [Altera: Quartus Handbook](https://drive.google.com/file/d/1oJjXx_n8-xdQk2OVQpPyZaf3n0bG2LTP/view?usp=sharing))   
+
+The following instructions will help you to perform a functional RTL simulation for VHDL designs in the ModelSim-Altera software.  
 
 #### The following steps assume you have already created a ModelSim project.  
 
@@ -85,23 +84,24 @@ vlib lpm
 vmap lpm lpm
 ```
 
-#### The name of the libraries should be altera_mf (for Altera megafunctions) and  
-lpm (for LPM and Megawizard-generated entities).  
+The name of the libraries should be altera_mf (for Altera megafunctions)   
+and lpm (for LPM and Megawizard-generated entities).   
 
 Compile Simulation Models into Simulation Libraries
-#### The following steps are not required for the ModelSim-Altera software.
+#### The following steps are not required for the ModelSim-Altera software.   
 1. Choose Add to Project (File menu) and select Existing File.
 2. Browse to the <quartus installation folder>/eda/sim_lib> and add the
 necessary simulation model files to your project.
 3. Select the simulation model file and select Properties (View menu).
 4. Set the Compile to Library to the correct library.
    
-#### The altera_mf.vhd should be compiled into the altera_mf
-library. The 220model.vhd should be compiled into the lpm
-library.
+The altera_mf.vhd should be compiled into the altera_mf library.   
+The 220model.vhd should be compiled into the lpm library.  
+
+```
 vcom -work altera_mf <quartus installation directory>/eda/sim_lib/altera_mf_components.vhd>
 vcom -work altera_mf <quartus installation folder/eda/sim_lib/altera_mf.vhd>
 
 vcom -work lpm <quartus installation folder/eda/sim_lib /220pack.vhd>
 vcom -work lpm <quartus installation folder/eda/sim_lib /220model.vhd>  
-```  
+```
