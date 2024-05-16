@@ -64,7 +64,7 @@ System specs:
 
 The following instructions will help you to perform a functional RTL simulation for VHDL designs in the ModelSim-Altera software.  
 
-#### The following steps assume you have already created a ModelSim project.  
+The following steps assume you have already created a ModelSim project.  
 
 #### Create Simulation Libraries
 Creating a simulation library is not required if you are using the ModelSim-Altera software. Simulation libraries are needed to simulate a design that contains an LPM function or an Altera megafunction. If you are using the Model TechnologyTM ModelSim software version, you need to create the simulation libraries and correctly link them to your design.       
