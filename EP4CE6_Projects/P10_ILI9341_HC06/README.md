@@ -66,8 +66,8 @@ The following instructions will help you to perform a functional RTL simulation 
 
 #### The following steps assume you have already created a ModelSim project.  
 
-Create Simulation Libraries
-#### Creating a simulation library is not required if you are using the ModelSim-Altera software.
+#### Create Simulation Libraries
+Creating a simulation library is not required if you are using the ModelSim-Altera software.
 Simulation libraries are needed to simulate a design that contains an LPM function or an Altera megafunction.  
 If you are using the Model TechnologyTM ModelSim software version, you need to create the simulation libraries
 and correctly link them to your design.    
@@ -84,16 +84,14 @@ vlib lpm
 vmap lpm lpm
 ```
 
-The name of the libraries should be altera_mf (for Altera megafunctions)   
-and lpm (for LPM and Megawizard-generated entities).   
+The name of the libraries should be altera_mf (for Altera megafunctions) and lpm (for LPM and Megawizard-generated entities).     
 
-Compile Simulation Models into Simulation Libraries
-#### The following steps are not required for the ModelSim-Altera software.   
+#### Compile Simulation Models into Simulation Libraries
+The following steps are not required for the ModelSim-Altera software.   
 1. Choose Add to Project (File menu) and select Existing File.
-2. Browse to the <quartus installation folder>/eda/sim_lib> and add the
-necessary simulation model files to your project.
-3. Select the simulation model file and select Properties (View menu).
-4. Set the Compile to Library to the correct library.
+2. Browse to the ``<quartus installation folder>/eda/sim_lib>`` and add the necessary simulation model files to your project.  
+4. Select the simulation model file and select Properties (View menu).
+5. Set the Compile to Library to the correct library.
    
 The altera_mf.vhd should be compiled into the altera_mf library.   
 The 220model.vhd should be compiled into the lpm library.  
