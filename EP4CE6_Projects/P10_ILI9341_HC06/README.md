@@ -61,7 +61,7 @@ System specs:
 
 ## Simulating VHDL Designs and Altera IPs (in ModelSim)  
 ### Important commands (from [Altera: Quartus Handbook](https://drive.google.com/file/d/1oJjXx_n8-xdQk2OVQpPyZaf3n0bG2LTP/view?usp=sharing))  
-'''
+```
 The following instructions will help you to perform a functional RTL simulation for VHDL designs in the ModelSim-Altera software.  
 #### The following steps assume you have already created a ModelSim project.  
 
@@ -100,4 +100,4 @@ vcom -work altera_mf <quartus installation folder/eda/sim_lib/altera_mf.vhd>
 
 vcom -work lpm <quartus installation folder/eda/sim_lib /220pack.vhd>
 vcom -work lpm <quartus installation folder/eda/sim_lib /220model.vhd>  
-'''  
+```  
