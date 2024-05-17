@@ -21,6 +21,9 @@ use altera_mf.all;
 -- SPI  clock:  1 MHz (PLL clock / 2)
 
 entity rgb_display is
+   generic(BAUD_RATE: integer := 9600;
+           SYS_FREQ:  integer := 50_000_000; -- MHz
+           CLK_DIV:   integer := 25); 
    port(rst_n: in std_logic;
         clk: in std_logic;
         data_in: in std_logic;
@@ -33,6 +36,8 @@ entity rgb_display is
 end rgb_display;
 
 architecture rgb_display_rtl of rgb_display is
+   constant PLL_FREQ: integer := (SYS_FREQ / CLK_DIV);
+   signal rst_inv: std_logic;
    signal clk_pll: std_logic;
    signal en_uart: std_logic;
    signal data_out: std_logic_vector(7 downto 0);
@@ -44,17 +49,20 @@ architecture rgb_display_rtl of rgb_display is
    signal en_spi: std_logic;
    signal rdy: std_logic;
 begin
+   rst_inv <= not rst_n;
    en_uart <= rdy;
    en_encoder <= uart_done;
    ascii_in <= data_out;
    en_spi <= encoder_done;
    
    pll: entity altera_mf.pll(syn)
-   port map(areset => not rst_n, 
+   port map(areset => rst_inv, 
             inclk0 => clk, 
             c0 => clk_pll);   
    
    uart_interface: entity work.uart_rx(uart_rx_rtl)
+   generic map(BAUD_RATE => BAUD_RATE,
+               CLK_FREQ => PLL_FREQ)
    port map(rst_n => rst_n, 
             clk => clk_pll, 
             en => en_uart, 
@@ -71,6 +79,7 @@ begin
             done => encoder_done);
    
    spi_interface: entity work.spi_tx(spi_tx_rtl)
+   generic map(CLK_FREQ => PLL_FREQ)
    port map(rst_n => rst_n, 
             clk => clk_pll, 
             en => en_spi, 

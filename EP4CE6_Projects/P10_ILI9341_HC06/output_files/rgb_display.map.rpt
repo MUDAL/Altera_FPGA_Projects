@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rgb_display
-Mon May 13 08:41:47 2024
+Thu May 16 19:56:00 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -19,12 +19,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: pll:pll|altpll:altpll_component
- 15. Parameter Settings for User Entity Instance: uart_rx:uart_interface
- 16. altpll Parameter Settings by Entity Instance
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |rgb_display
+ 15. Parameter Settings for User Entity Instance: pll:pll|altpll:altpll_component
+ 16. Parameter Settings for User Entity Instance: uart_rx:uart_interface
+ 17. Parameter Settings for User Entity Instance: spi_tx:spi_interface
+ 18. altpll Parameter Settings by Entity Instance
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -51,7 +53,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 13 08:41:47 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 16 19:56:00 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; rgb_display                                 ;
 ; Top-level Entity Name              ; rgb_display                                 ;
@@ -167,7 +169,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -326,6 +328,18 @@ Encoding Type:  One-Hot
 ; 13:1               ; 5 bits    ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |rgb_display|spi_tx:spi_interface|Selector2      ;
 ; 14:1               ; 2 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |rgb_display|spi_tx:spi_interface|Selector1      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |rgb_display ;
++----------------+----------+-------------------------------------------------+
+; Parameter Name ; Value    ; Type                                            ;
++----------------+----------+-------------------------------------------------+
+; BAUD_RATE      ; 9600     ; Signed Integer                                  ;
+; SYS_FREQ       ; 50000000 ; Signed Integer                                  ;
+; CLK_DIV        ; 25       ; Signed Integer                                  ;
++----------------+----------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------+
@@ -713,6 +727,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: spi_tx:spi_interface ;
++----------------+---------+----------------------------------------+
+; Parameter Name ; Value   ; Type                                   ;
++----------------+---------+----------------------------------------+
+; clk_freq       ; 2000000 ; Signed Integer                         ;
++----------------+---------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                    ;
 +-------------------------------+---------------------------------+
@@ -762,7 +786,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -772,15 +796,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon May 13 08:41:18 2024
+    Info: Processing started: Thu May 16 19:55:42 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rgb_display -c rgb_display
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file src/rgb_display.vhd
-    Info (12022): Found design unit 1: rgb_display-rgb_display_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd Line: 35
+    Info (12022): Found design unit 1: rgb_display-rgb_display_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd Line: 38
     Info (12023): Found entity 1: rgb_display File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd Line: 23
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/spi_tx.vhd
-    Info (12022): Found design unit 1: spi_tx-spi_tx_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/spi_tx.vhd Line: 30
+    Info (12022): Found design unit 1: spi_tx-spi_tx_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/spi_tx.vhd Line: 31
     Info (12023): Found entity 1: spi_tx File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/spi_tx.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/uart_rx.vhd
     Info (12022): Found design unit 1: uart_rx-uart_rx_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/uart_rx.vhd Line: 24
@@ -795,7 +819,7 @@ Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mappin
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
 Info (12127): Elaborating entity "rgb_display" for the top level hierarchy
-Info (12129): Elaborating entity "pll" using architecture "A:syn" for hierarchy "pll:pll" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd Line: 52
+Info (12129): Elaborating entity "pll" using architecture "A:syn" for hierarchy "pll:pll" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd Line: 58
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll|altpll:altpll_component" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/pll/pll.vhd Line: 136
 Info (12130): Elaborated megafunction instantiation "pll:pll|altpll:altpll_component" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/pll/pll.vhd Line: 136
 Info (12133): Instantiated megafunction "pll:pll|altpll:altpll_component" with the following parameter: File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/pll/pll.vhd Line: 136
@@ -856,16 +880,16 @@ Info (12133): Instantiated megafunction "pll:pll|altpll:altpll_component" with t
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12129): Elaborating entity "uart_rx" using architecture "A:uart_rx_rtl" for hierarchy "uart_rx:uart_interface" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd Line: 57
-Info (12129): Elaborating entity "encoder" using architecture "A:encoder_rtl" for hierarchy "encoder:colour_encoder" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd Line: 65
-Info (12129): Elaborating entity "spi_tx" using architecture "A:spi_tx_rtl" for hierarchy "spi_tx:spi_interface" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd Line: 73
+Info (12129): Elaborating entity "uart_rx" using architecture "A:uart_rx_rtl" for hierarchy "uart_rx:uart_interface" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd Line: 63
+Info (12129): Elaborating entity "encoder" using architecture "A:encoder_rtl" for hierarchy "encoder:colour_encoder" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd Line: 73
+Info (12129): Elaborating entity "spi_tx" using architecture "A:spi_tx_rtl" for hierarchy "spi_tx:spi_interface" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd Line: 81
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
-Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/spi_tx.vhd Line: 324
+Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/lib/spi_tx.vhd Line: 325
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "led" is stuck at VCC File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd Line: 27
+    Warning (13410): Pin "led" is stuck at VCC File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P10_ILI9341_HC06/src/rgb_display.vhd Line: 30
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
@@ -875,9 +899,9 @@ Info (21057): Implemented 191 device resources after synthesis - the final resou
     Info (21061): Implemented 181 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4784 megabytes
-    Info: Processing ended: Mon May 13 08:41:47 2024
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Thu May 16 19:56:00 2024
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:33
 
 

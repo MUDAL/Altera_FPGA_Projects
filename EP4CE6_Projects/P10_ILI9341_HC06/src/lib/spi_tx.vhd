@@ -7,13 +7,14 @@ use IEEE.NUMERIC_STD.ALL;
 -- The pixel data (or colours) to be transmitted to the display
 -- module depend on the data from the UART RX module.
 
--- SPI clock: System clock / 2
+-- SPI clock: Input clock / 2
 -- For the SPI transmission, each bit to be transmitted is shifted out  
 -- on the rising edge of SCK, while the index counter for the bit after  
 -- is decremented on the falling edge of SCK.
 -- Data is transmitted MSB first.
 
 entity spi_tx is
+   generic(CLK_FREQ: integer := 2_000_000);
    port(rst_n: in std_logic; -- System reset
         clk: in std_logic;
         en: in std_logic;
@@ -33,9 +34,9 @@ architecture spi_tx_rtl of spi_tx is
    -- To minimize resource utilization due to counters, lower resolution ...
    -- counters are reused for all time delays required by the TFT display.
    -- 1 mS = 2000 clock cycles for a 2 MHz clock.
-   ------------------------------------------------------------------ 
-   constant CNT_RST: integer := 29; -- 15 uS reset period
-   constant CNT_1MS: integer := 1999; -- 1 ms counter period
+   ------------------------------------------------------------------
+   constant CNT_RST: integer := 15 * (CLK_FREQ / 1_000_000) - 1; -- 15 uS
+   constant CNT_1MS: integer := (CLK_FREQ / 1_000) - 1; -- 1 ms
    constant CNT_005: integer := 5 - 1; -- 5 ms waiting time
    constant CNT_120: integer := 120 - 1; -- 120 ms waiting time
    ------------------------------------------------------------------

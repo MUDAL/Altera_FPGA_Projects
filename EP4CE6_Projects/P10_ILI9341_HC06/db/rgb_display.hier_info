@@ -5,12 +5,12 @@ rst_n => spi_tx:spi_interface.rst_n
 rst_n => pll:pll.areset
 clk => pll:pll.inclk0
 data_in => uart_rx:uart_interface.data_in
-led << spi_tx:spi_interface.led
-sck << spi_tx:spi_interface.sck
-mosi << spi_tx:spi_interface.mosi
-dc << spi_tx:spi_interface.dc
-d_rst_n << spi_tx:spi_interface.d_rst_n
-cs << spi_tx:spi_interface.cs
+led <= spi_tx:spi_interface.led
+sck <= spi_tx:spi_interface.sck
+mosi <= spi_tx:spi_interface.mosi
+dc <= spi_tx:spi_interface.dc
+d_rst_n <= spi_tx:spi_interface.d_rst_n
+cs <= spi_tx:spi_interface.cs
 
 
 |rgb_display|pll:pll
