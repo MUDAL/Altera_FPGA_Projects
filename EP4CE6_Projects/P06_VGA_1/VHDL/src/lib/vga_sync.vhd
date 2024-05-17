@@ -2,7 +2,9 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
--- VGA synchronization circuit adapted from Pong P. Chu's book
+-- VGA synchronization circuit adapted from Pong P. Chu's book:
+-- FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version),  
+-- Chapter 12 (Page 264)
 
 entity vga_sync is
    port(rst_n: in std_logic;
