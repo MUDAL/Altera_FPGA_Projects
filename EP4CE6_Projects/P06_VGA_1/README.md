@@ -37,6 +37,18 @@ covered by the image are displayed in blue.
 - Check the **Location** column in the image below for the pin mappings used in this project.    
 ![PP_6](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/3b361a53-b01c-4ff2-b69f-af6d5dd7ba1a)
 
+## Dual-purpose pins  
+Some pins on the Altera EP4CE6 FPGA are dual-purpose i.e. they can be used as regular I/O pins or as programming pins.  
+By default, pin 101 (also known as ``nCEO``) is a programming pin. It is routed to the digital-to-analog converter whose  
+output feeds the ``Hysnc`` line of the VGA port. This means that we can't use pin 101 unless we set it as a normal I/O pin.  
+The images below illustrate how to achieve this.  
+### 1. Click on the ``Assignments`` then ``Device``    
+![Screenshot (541)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/504f5fbe-3d29-4ada-ae67-1d55cd0d6a2b)  
+### 2. Click on ``Device and Pin Options``  
+![Screenshot (542)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/e4060aed-3db8-4fc5-b612-175f24c22a6e)  
+### 3. Click on ``Dual-Purpose Pins`` and set ``nCEO`` as ``Use as regular I/O``  
+![Screenshot (543)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/b380e5d8-d0e3-4c92-b07d-7dc2087eb06e)  
+
 ## Video Demo  
 [FPGA and VGA](https://drive.google.com/file/d/1PZm1XRNfcaJq4v5hTRurt_n4ybjiqp33/view?usp=sharing)   
 ## Images    
@@ -52,11 +64,5 @@ covered by the image are displayed in blue.
 ![Resource_Utilization](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/7e78bd0f-432f-4165-bf0a-5f40c52c67e2)  
 
 ## Helpful resource(s)  
-- FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu
+- FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu  
 - [tinyvga.com](http://tinyvga.com/)    
-
-
-
-
-
-
