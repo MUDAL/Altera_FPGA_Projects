@@ -100,3 +100,16 @@ vcom -work altera_mf <quartus installation folder/eda/sim_lib/altera_mf.vhd>
 vcom -work lpm <quartus installation folder/eda/sim_lib/220pack.vhd>
 vcom -work lpm <quartus installation folder/eda/sim_lib/220model.vhd>  
 ```
+## Compiling Altera IP cores with the ModelSim GUI (without using ModelSim commands)  
+One way to compile designs in ModelSim is to use the GUI. By default, designs are compiled to the ``work`` library. We've  
+seen that some IP cores must be compiled to special libraries (``altera_mf`` and ``lpm``). The ``PLL`` IP in this project  
+compiles to the ``altera_mf`` library. We could invoke the ``vcom`` command to compile it to this library or we could use  
+the GUI as follows:  
+1. Add the design file (``pll.vhd``) to the ModelSim project.
+2. Right click on the file and select ``Properties``.
+3. Check the dialog box that says ``Compile to library`` and select ``altera_mf`` instead of ``work``.
+4. Click ``OK``.
+5. Right click the file again and click ``Compile Selected``.
+
+The image below illustrates this process.  
+![Screenshot (544)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/a7efffa1-00f2-4c50-80d6-1a228a8b5ea2)  
