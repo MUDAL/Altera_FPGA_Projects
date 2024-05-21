@@ -17,6 +17,7 @@ library work;
 --   f. Control paths
 
 entity weather_sensor is
+   generic(DATA_WIDTH: integer := 16);
    port(rst_n: in std_logic;
         clk: in std_logic;
         io: inout std_logic;
@@ -29,7 +30,7 @@ end weather_sensor;
 architecture weather_sensor_rtl of weather_sensor is
    signal en_dht22: std_logic;
    signal en_conv: std_logic;
-   signal dec: std_logic_vector(15 downto 0);
+   signal dec: std_logic_vector(DATA_WIDTH - 1 downto 0);
    signal bcd: std_logic_vector(11 downto 0);
    signal dht22_done: std_logic;
    signal conv_done: std_logic;
