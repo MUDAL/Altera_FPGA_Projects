@@ -17,7 +17,6 @@ library work;
 --   f. Control paths
 
 entity weather_sensor is
-   generic(DATA_WIDTH: integer := 16);
    port(rst_n: in std_logic;
         clk: in std_logic;
         io: inout std_logic;
@@ -28,6 +27,7 @@ entity weather_sensor is
 end weather_sensor;
 
 architecture weather_sensor_rtl of weather_sensor is
+   constant DATA_WIDTH: integer := 16;
    signal en_dht22: std_logic;
    signal en_conv: std_logic;
    signal dec: std_logic_vector(DATA_WIDTH - 1 downto 0);
@@ -36,19 +36,19 @@ architecture weather_sensor_rtl of weather_sensor is
    signal conv_done: std_logic;
    signal valid: std_logic;
    signal param: std_logic;
-   signal dht22_count: unsigned(26 downto 0);
+   signal dht22_count: integer range 0 to 99_999_999;
 begin
-   -- Control paths: Periodically control the one-wire and data conversion 
+   -- Control path: Periodically control the one-wire and data conversion 
    -- (decimal to BCD) designs.
    control_path: process(rst_n,clk)
    begin
       if rst_n = '0' then
-         dht22_count <= (others => '0');
+         dht22_count <= 0;
          en_dht22 <= '1';
          param <= '0';
       elsif rising_edge(clk) then
-         if dht22_count = to_unsigned(99_999_999,dht22_count'length) then
-            dht22_count <= (others => '0');
+         if dht22_count = 99_999_999 then
+            dht22_count <= 0;
             en_dht22 <= not dht22_done;
             param <= not param;
          else
@@ -61,12 +61,12 @@ begin
    
    led <= not valid; --Set when new sensor data is valid. 
    
-   dht22_one_wire: entity work.one_wire(one_wire_rtl)
+   one_wire: entity work.one_wire(one_wire_rtl)
    port map(rst_n => rst_n, clk => clk, en => en_dht22, param => param,
             io => io, data_out => dec, done => dht22_done, valid => valid);
    
-   dht22_data_bcd: entity work.dec_to_bcd(dec_to_bcd_rtl)
-   generic map(DATA_WIDTH => 16)
+   dec_to_bcd: entity work.dec_to_bcd(dec_to_bcd_rtl)
+   generic map(DATA_WIDTH => DATA_WIDTH)
    port map(rst_n => rst_n, clk => clk, en => en_conv, dec => dec,
             bcd => bcd, done => conv_done);
    

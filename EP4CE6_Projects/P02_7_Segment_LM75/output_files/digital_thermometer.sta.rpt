@@ -1,5 +1,5 @@
 Timing Analyzer report for digital_thermometer
-Tue May 21 15:52:49 2024
+Tue May 21 21:22:27 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -99,12 +99,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.4%      ;
+;     Processor 2            ;   2.0%      ;
 +----------------------------+-------------+
 
 
@@ -214,9 +214,9 @@ No paths to report.
 ; -3.375 ; seg_display:display|count[0]                   ; i2c_reader:lm75_i2c|index_reg[0]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.303      ;
 ; -3.375 ; seg_display:display|count[0]                   ; i2c_reader:lm75_i2c|index_reg[1]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.303      ;
 ; -3.375 ; seg_display:display|count[0]                   ; i2c_reader:lm75_i2c|index_reg[2]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.303      ;
-; -3.371 ; clk_count[24]                                  ; clk_count[6]                           ; clk          ; clk         ; 1.000        ; -0.565     ; 3.807      ;
-; -3.371 ; clk_count[24]                                  ; clk_count[11]                          ; clk          ; clk         ; 1.000        ; -0.565     ; 3.807      ;
-; -3.371 ; clk_count[24]                                  ; clk_count[12]                          ; clk          ; clk         ; 1.000        ; -0.565     ; 3.807      ;
+; -3.371 ; clks[24]                                       ; clks[6]                                ; clk          ; clk         ; 1.000        ; -0.565     ; 3.807      ;
+; -3.371 ; clks[24]                                       ; clks[11]                               ; clk          ; clk         ; 1.000        ; -0.565     ; 3.807      ;
+; -3.371 ; clks[24]                                       ; clks[12]                               ; clk          ; clk         ; 1.000        ; -0.565     ; 3.807      ;
 ; -3.341 ; i2c_reader:lm75_i2c|clks[4]                    ; i2c_reader:lm75_i2c|state.ST_SEND_ADDR ; clk          ; clk         ; 1.000        ; -0.066     ; 4.276      ;
 ; -3.329 ; i2c_reader:lm75_i2c|clks[5]                    ; i2c_reader:lm75_i2c|state.ST_SEND_ADDR ; clk          ; clk         ; 1.000        ; -0.066     ; 4.264      ;
 ; -3.323 ; i2c_reader:lm75_i2c|clks[8]                    ; i2c_reader:lm75_i2c|state.ST_SEND_NACK ; clk          ; clk         ; 1.000        ; 0.407      ; 4.731      ;
@@ -230,7 +230,7 @@ No paths to report.
 ; -3.297 ; dec_to_bcd:i2c_data_to_bcd|num_reg[4]          ; dec_to_bcd:i2c_data_to_bcd|num_reg[7]  ; clk          ; clk         ; 1.000        ; -0.080     ; 4.218      ;
 ; -3.289 ; i2c_reader:lm75_i2c|clks[7]                    ; i2c_reader:lm75_i2c|sda_reg            ; clk          ; clk         ; 1.000        ; -0.066     ; 4.224      ;
 ; -3.278 ; i2c_reader:lm75_i2c|clks[2]                    ; i2c_reader:lm75_i2c|sda_reg            ; clk          ; clk         ; 1.000        ; -0.066     ; 4.213      ;
-; -3.273 ; clk_count[24]                                  ; en                                     ; clk          ; clk         ; 1.000        ; -0.579     ; 3.695      ;
+; -3.273 ; clks[24]                                       ; en                                     ; clk          ; clk         ; 1.000        ; -0.579     ; 3.695      ;
 ; -3.269 ; i2c_reader:lm75_i2c|index_reg[2]               ; i2c_reader:lm75_i2c|state.ST_SEND_ACK  ; clk          ; clk         ; 1.000        ; 0.391      ; 4.661      ;
 ; -3.269 ; i2c_reader:lm75_i2c|index_reg[2]               ; i2c_reader:lm75_i2c|state.ST_SEND_NACK ; clk          ; clk         ; 1.000        ; 0.391      ; 4.661      ;
 ; -3.256 ; i2c_reader:lm75_i2c|clks[4]                    ; i2c_reader:lm75_i2c|index_reg[4]       ; clk          ; clk         ; 1.000        ; -0.065     ; 4.192      ;
@@ -245,12 +245,12 @@ No paths to report.
 ; -3.244 ; i2c_reader:lm75_i2c|clks[5]                    ; i2c_reader:lm75_i2c|index_reg[0]       ; clk          ; clk         ; 1.000        ; -0.065     ; 4.180      ;
 ; -3.244 ; i2c_reader:lm75_i2c|clks[5]                    ; i2c_reader:lm75_i2c|index_reg[1]       ; clk          ; clk         ; 1.000        ; -0.065     ; 4.180      ;
 ; -3.244 ; i2c_reader:lm75_i2c|clks[5]                    ; i2c_reader:lm75_i2c|index_reg[2]       ; clk          ; clk         ; 1.000        ; -0.065     ; 4.180      ;
-; -3.234 ; clk_count[8]                                   ; clk_count[6]                           ; clk          ; clk         ; 1.000        ; -0.081     ; 4.154      ;
-; -3.234 ; clk_count[8]                                   ; clk_count[11]                          ; clk          ; clk         ; 1.000        ; -0.081     ; 4.154      ;
-; -3.234 ; clk_count[8]                                   ; clk_count[12]                          ; clk          ; clk         ; 1.000        ; -0.081     ; 4.154      ;
-; -3.229 ; clk_count[6]                                   ; clk_count[6]                           ; clk          ; clk         ; 1.000        ; -0.081     ; 4.149      ;
-; -3.229 ; clk_count[6]                                   ; clk_count[11]                          ; clk          ; clk         ; 1.000        ; -0.081     ; 4.149      ;
-; -3.229 ; clk_count[6]                                   ; clk_count[12]                          ; clk          ; clk         ; 1.000        ; -0.081     ; 4.149      ;
+; -3.234 ; clks[8]                                        ; clks[6]                                ; clk          ; clk         ; 1.000        ; -0.081     ; 4.154      ;
+; -3.234 ; clks[8]                                        ; clks[11]                               ; clk          ; clk         ; 1.000        ; -0.081     ; 4.154      ;
+; -3.234 ; clks[8]                                        ; clks[12]                               ; clk          ; clk         ; 1.000        ; -0.081     ; 4.154      ;
+; -3.229 ; clks[6]                                        ; clks[6]                                ; clk          ; clk         ; 1.000        ; -0.081     ; 4.149      ;
+; -3.229 ; clks[6]                                        ; clks[11]                               ; clk          ; clk         ; 1.000        ; -0.081     ; 4.149      ;
+; -3.229 ; clks[6]                                        ; clks[12]                               ; clk          ; clk         ; 1.000        ; -0.081     ; 4.149      ;
 ; -3.218 ; i2c_reader:lm75_i2c|clks[6]                    ; i2c_reader:lm75_i2c|state.ST_SEND_ADDR ; clk          ; clk         ; 1.000        ; -0.066     ; 4.153      ;
 ; -3.217 ; i2c_reader:lm75_i2c|clks[7]                    ; i2c_reader:lm75_i2c|state.ST_SEND_ADDR ; clk          ; clk         ; 1.000        ; -0.066     ; 4.152      ;
 ; -3.213 ; i2c_reader:lm75_i2c|state.ST_START             ; i2c_reader:lm75_i2c|sda_reg            ; clk          ; clk         ; 1.000        ; -0.573     ; 3.641      ;
@@ -324,30 +324,30 @@ No paths to report.
 ; 0.526 ; dec_to_bcd:i2c_data_to_bcd|tens_reg[0]         ; dec_to_bcd:i2c_data_to_bcd|tens_reg[1]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.818      ;
 ; 0.527 ; dec_to_bcd:i2c_data_to_bcd|tens_reg[0]         ; dec_to_bcd:i2c_data_to_bcd|tens_reg[2]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.819      ;
 ; 0.626 ; dec_to_bcd:i2c_data_to_bcd|state.ST_IDLE       ; dec_to_bcd:i2c_data_to_bcd|num_reg[0]          ; clk          ; clk         ; 0.000        ; 0.534      ; 1.372      ;
-; 0.691 ; clk_count[27]                                  ; clk_count[27]                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.983      ;
+; 0.691 ; clks[27]                                       ; clks[27]                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 0.983      ;
 ; 0.761 ; seg_display:display|count[5]                   ; seg_display:display|count[5]                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
 ; 0.761 ; seg_display:display|count[3]                   ; seg_display:display|count[3]                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
-; 0.761 ; clk_count[4]                                   ; clk_count[4]                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; clks[4]                                        ; clks[4]                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
 ; 0.762 ; seg_display:display|count[11]                  ; seg_display:display|count[11]                  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
-; 0.762 ; clk_count[10]                                  ; clk_count[10]                                  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
-; 0.762 ; clk_count[8]                                   ; clk_count[8]                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
-; 0.762 ; clk_count[2]                                   ; clk_count[2]                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; clks[10]                                       ; clks[10]                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; clks[8]                                        ; clks[8]                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; clks[2]                                        ; clks[2]                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
 ; 0.763 ; seg_display:display|count[15]                  ; seg_display:display|count[15]                  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
 ; 0.763 ; seg_display:display|count[7]                   ; seg_display:display|count[7]                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
 ; 0.763 ; seg_display:display|count[6]                   ; seg_display:display|count[6]                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
-; 0.763 ; clk_count[9]                                   ; clk_count[9]                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
-; 0.763 ; clk_count[3]                                   ; clk_count[3]                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; clks[9]                                        ; clks[9]                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; clks[3]                                        ; clks[3]                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
 ; 0.764 ; dec_to_bcd:i2c_data_to_bcd|state.ST_DONE       ; dec_to_bcd:i2c_data_to_bcd|tens_reg[3]         ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
 ; 0.764 ; seg_display:display|count[2]                   ; seg_display:display|count[2]                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
-; 0.764 ; clk_count[17]                                  ; clk_count[17]                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.764 ; clks[17]                                       ; clks[17]                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
 ; 0.765 ; seg_display:display|count[14]                  ; seg_display:display|count[14]                  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
 ; 0.765 ; seg_display:display|count[12]                  ; seg_display:display|count[12]                  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
-; 0.765 ; clk_count[26]                                  ; clk_count[26]                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
-; 0.765 ; clk_count[15]                                  ; clk_count[15]                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
-; 0.765 ; clk_count[7]                                   ; clk_count[7]                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
-; 0.765 ; clk_count[5]                                   ; clk_count[5]                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
-; 0.766 ; clk_count[25]                                  ; clk_count[25]                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
-; 0.767 ; clk_count[23]                                  ; clk_count[23]                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.059      ;
+; 0.765 ; clks[26]                                       ; clks[26]                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; clks[15]                                       ; clks[15]                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; clks[7]                                        ; clks[7]                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; clks[5]                                        ; clks[5]                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.766 ; clks[25]                                       ; clks[25]                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
+; 0.767 ; clks[23]                                       ; clks[23]                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.059      ;
 ; 0.768 ; dec_to_bcd:i2c_data_to_bcd|state.ST_DONE       ; dec_to_bcd:i2c_data_to_bcd|tens_reg[0]         ; clk          ; clk         ; 0.000        ; 0.080      ; 1.060      ;
 ; 0.771 ; i2c_reader:lm75_i2c|clks[3]                    ; i2c_reader:lm75_i2c|clks[3]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.064      ;
 ; 0.771 ; i2c_reader:lm75_i2c|data_reg[8]                ; dec_to_bcd:i2c_data_to_bcd|num_reg[0]          ; clk          ; clk         ; 0.000        ; 0.099      ; 1.082      ;
@@ -358,7 +358,7 @@ No paths to report.
 ; 0.810 ; seg_display:display|count[0]                   ; seg_display:display|count[0]                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.103      ;
 ; 0.897 ; i2c_reader:lm75_i2c|clks[8]                    ; i2c_reader:lm75_i2c|clks[8]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.190      ;
 ; 0.974 ; dec_to_bcd:i2c_data_to_bcd|tens_reg[1]         ; dec_to_bcd:i2c_data_to_bcd|tens_reg[2]         ; clk          ; clk         ; 0.000        ; 0.080      ; 1.266      ;
-; 1.009 ; clk_count[23]                                  ; clk_count[24]                                  ; clk          ; clk         ; 0.000        ; 0.577      ; 1.798      ;
+; 1.009 ; clks[23]                                       ; clks[24]                                       ; clk          ; clk         ; 0.000        ; 0.577      ; 1.798      ;
 ; 1.009 ; i2c_reader:lm75_i2c|state.ST_STOP              ; i2c_reader:lm75_i2c|state.ST_SEND_ACK          ; clk          ; clk         ; 0.000        ; 0.572      ; 1.793      ;
 ; 1.010 ; i2c_reader:lm75_i2c|state.ST_STOP              ; i2c_reader:lm75_i2c|state.ST_SEND_NACK         ; clk          ; clk         ; 0.000        ; 0.572      ; 1.794      ;
 ; 1.025 ; dec_to_bcd:i2c_data_to_bcd|tens_reg[1]         ; dec_to_bcd:i2c_data_to_bcd|bcd_reg[5]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.319      ;
@@ -371,20 +371,20 @@ No paths to report.
 ; 1.072 ; i2c_reader:lm75_i2c|state.ST_STOP              ; i2c_reader:lm75_i2c|state.ST_IDLE              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.364      ;
 ; 1.080 ; dec_to_bcd:i2c_data_to_bcd|state.ST_CALC       ; dec_to_bcd:i2c_data_to_bcd|done_reg            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.372      ;
 ; 1.116 ; seg_display:display|count[5]                   ; seg_display:display|count[6]                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
-; 1.116 ; clk_count[8]                                   ; clk_count[9]                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
-; 1.116 ; clk_count[2]                                   ; clk_count[3]                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
-; 1.116 ; clk_count[4]                                   ; clk_count[5]                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; clks[8]                                        ; clks[9]                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; clks[2]                                        ; clks[3]                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; clks[4]                                        ; clks[5]                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
 ; 1.117 ; seg_display:display|count[11]                  ; seg_display:display|count[12]                  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.410      ;
-; 1.117 ; clk_count[6]                                   ; clk_count[7]                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.117 ; clks[6]                                        ; clks[7]                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.410      ;
 ; 1.118 ; i2c_reader:lm75_i2c|clks[2]                    ; i2c_reader:lm75_i2c|clks[3]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.411      ;
-; 1.119 ; clk_count[26]                                  ; clk_count[27]                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.411      ;
-; 1.124 ; clk_count[3]                                   ; clk_count[4]                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.417      ;
-; 1.124 ; clk_count[9]                                   ; clk_count[10]                                  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.417      ;
+; 1.119 ; clks[26]                                       ; clks[27]                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.411      ;
+; 1.124 ; clks[3]                                        ; clks[4]                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.417      ;
+; 1.124 ; clks[9]                                        ; clks[10]                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.417      ;
 ; 1.124 ; seg_display:display|count[6]                   ; seg_display:display|count[7]                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.417      ;
 ; 1.125 ; seg_display:display|count[2]                   ; seg_display:display|count[3]                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.418      ;
 ; 1.126 ; seg_display:display|count[14]                  ; seg_display:display|count[15]                  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.419      ;
-; 1.126 ; clk_count[7]                                   ; clk_count[8]                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.419      ;
-; 1.127 ; clk_count[25]                                  ; clk_count[26]                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.419      ;
+; 1.126 ; clks[7]                                        ; clks[8]                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.419      ;
+; 1.127 ; clks[25]                                       ; clks[26]                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.419      ;
 +-------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -478,9 +478,9 @@ No paths to report.
 ; -3.165 ; i2c_reader:lm75_i2c|clks[7]                    ; i2c_reader:lm75_i2c|state.ST_SEND_NACK ; clk          ; clk         ; 1.000        ; 0.388      ; 4.555      ;
 ; -3.164 ; i2c_reader:lm75_i2c|clks[7]                    ; i2c_reader:lm75_i2c|state.ST_SEND_ACK  ; clk          ; clk         ; 1.000        ; 0.388      ; 4.554      ;
 ; -3.134 ; seg_display:display|count[0]                   ; i2c_reader:lm75_i2c|state.ST_START     ; clk          ; clk         ; 1.000        ; 0.383      ; 4.519      ;
-; -3.127 ; clk_count[24]                                  ; clk_count[6]                           ; clk          ; clk         ; 1.000        ; -0.528     ; 3.601      ;
-; -3.127 ; clk_count[24]                                  ; clk_count[11]                          ; clk          ; clk         ; 1.000        ; -0.528     ; 3.601      ;
-; -3.127 ; clk_count[24]                                  ; clk_count[12]                          ; clk          ; clk         ; 1.000        ; -0.528     ; 3.601      ;
+; -3.127 ; clks[24]                                       ; clks[6]                                ; clk          ; clk         ; 1.000        ; -0.528     ; 3.601      ;
+; -3.127 ; clks[24]                                       ; clks[11]                               ; clk          ; clk         ; 1.000        ; -0.528     ; 3.601      ;
+; -3.127 ; clks[24]                                       ; clks[12]                               ; clk          ; clk         ; 1.000        ; -0.528     ; 3.601      ;
 ; -3.101 ; i2c_reader:lm75_i2c|state.ST_GET_ACK_HIGH_BYTE ; i2c_reader:lm75_i2c|sda_reg            ; clk          ; clk         ; 1.000        ; -0.540     ; 3.563      ;
 ; -3.101 ; seg_display:display|count[0]                   ; i2c_reader:lm75_i2c|state.ST_SEND_ADDR ; clk          ; clk         ; 1.000        ; -0.066     ; 4.037      ;
 ; -3.075 ; i2c_reader:lm75_i2c|state.ST_SEND_NACK         ; i2c_reader:lm75_i2c|sda_reg            ; clk          ; clk         ; 1.000        ; -0.540     ; 3.537      ;
@@ -514,7 +514,7 @@ No paths to report.
 ; -2.964 ; i2c_reader:lm75_i2c|index_reg[2]               ; i2c_reader:lm75_i2c|state.ST_SEND_ACK  ; clk          ; clk         ; 1.000        ; 0.375      ; 4.341      ;
 ; -2.964 ; i2c_reader:lm75_i2c|clks[7]                    ; i2c_reader:lm75_i2c|sda_reg            ; clk          ; clk         ; 1.000        ; -0.061     ; 3.905      ;
 ; -2.962 ; i2c_reader:lm75_i2c|clks[6]                    ; i2c_reader:lm75_i2c|sda_reg            ; clk          ; clk         ; 1.000        ; -0.061     ; 3.903      ;
-; -2.961 ; clk_count[24]                                  ; en                                     ; clk          ; clk         ; 1.000        ; -0.543     ; 3.420      ;
+; -2.961 ; clks[24]                                       ; en                                     ; clk          ; clk         ; 1.000        ; -0.543     ; 3.420      ;
 ; -2.961 ; i2c_reader:lm75_i2c|clks[2]                    ; i2c_reader:lm75_i2c|index_reg[4]       ; clk          ; clk         ; 1.000        ; -0.060     ; 3.903      ;
 ; -2.961 ; i2c_reader:lm75_i2c|clks[2]                    ; i2c_reader:lm75_i2c|index_reg[3]       ; clk          ; clk         ; 1.000        ; -0.060     ; 3.903      ;
 ; -2.961 ; i2c_reader:lm75_i2c|clks[2]                    ; i2c_reader:lm75_i2c|index_reg[0]       ; clk          ; clk         ; 1.000        ; -0.060     ; 3.903      ;
@@ -527,13 +527,13 @@ No paths to report.
 ; -2.940 ; i2c_reader:lm75_i2c|clks[6]                    ; i2c_reader:lm75_i2c|state.ST_SEND_ADDR ; clk          ; clk         ; 1.000        ; -0.061     ; 3.881      ;
 ; -2.935 ; i2c_reader:lm75_i2c|state.ST_GET_ACK_HIGH_BYTE ; i2c_reader:lm75_i2c|state.ST_SEND_NACK ; clk          ; clk         ; 1.000        ; -0.091     ; 3.846      ;
 ; -2.934 ; i2c_reader:lm75_i2c|state.ST_GET_ACK_HIGH_BYTE ; i2c_reader:lm75_i2c|state.ST_SEND_ACK  ; clk          ; clk         ; 1.000        ; -0.091     ; 3.845      ;
-; -2.925 ; clk_count[8]                                   ; clk_count[6]                           ; clk          ; clk         ; 1.000        ; -0.072     ; 3.855      ;
-; -2.925 ; clk_count[8]                                   ; clk_count[11]                          ; clk          ; clk         ; 1.000        ; -0.072     ; 3.855      ;
-; -2.925 ; clk_count[8]                                   ; clk_count[12]                          ; clk          ; clk         ; 1.000        ; -0.072     ; 3.855      ;
+; -2.925 ; clks[8]                                        ; clks[6]                                ; clk          ; clk         ; 1.000        ; -0.072     ; 3.855      ;
+; -2.925 ; clks[8]                                        ; clks[11]                               ; clk          ; clk         ; 1.000        ; -0.072     ; 3.855      ;
+; -2.925 ; clks[8]                                        ; clks[12]                               ; clk          ; clk         ; 1.000        ; -0.072     ; 3.855      ;
 ; -2.923 ; i2c_reader:lm75_i2c|clks[7]                    ; i2c_reader:lm75_i2c|state.ST_SEND_ADDR ; clk          ; clk         ; 1.000        ; -0.061     ; 3.864      ;
-; -2.923 ; clk_count[6]                                   ; clk_count[6]                           ; clk          ; clk         ; 1.000        ; -0.072     ; 3.853      ;
-; -2.923 ; clk_count[6]                                   ; clk_count[11]                          ; clk          ; clk         ; 1.000        ; -0.072     ; 3.853      ;
-; -2.923 ; clk_count[6]                                   ; clk_count[12]                          ; clk          ; clk         ; 1.000        ; -0.072     ; 3.853      ;
+; -2.923 ; clks[6]                                        ; clks[6]                                ; clk          ; clk         ; 1.000        ; -0.072     ; 3.853      ;
+; -2.923 ; clks[6]                                        ; clks[11]                               ; clk          ; clk         ; 1.000        ; -0.072     ; 3.853      ;
+; -2.923 ; clks[6]                                        ; clks[12]                               ; clk          ; clk         ; 1.000        ; -0.072     ; 3.853      ;
 ; -2.922 ; i2c_reader:lm75_i2c|clks[2]                    ; i2c_reader:lm75_i2c|state.ST_START     ; clk          ; clk         ; 1.000        ; 0.388      ; 4.312      ;
 ; -2.918 ; i2c_reader:lm75_i2c|clks[8]                    ; i2c_reader:lm75_i2c|state.ST_START     ; clk          ; clk         ; 1.000        ; 0.388      ; 4.308      ;
 ; -2.913 ; i2c_reader:lm75_i2c|state.ST_SEND_ACK          ; i2c_reader:lm75_i2c|state.ST_SEND_NACK ; clk          ; clk         ; 1.000        ; -0.091     ; 3.824      ;
@@ -595,29 +595,29 @@ No paths to report.
 ; 0.491 ; seg_display:display|shift_reg[1]               ; seg_display:display|shift_reg[2]               ; clk          ; clk         ; 0.000        ; 0.073      ; 0.759      ;
 ; 0.492 ; seg_display:display|shift_reg[2]               ; seg_display:display|shift_reg[3]               ; clk          ; clk         ; 0.000        ; 0.073      ; 0.760      ;
 ; 0.536 ; dec_to_bcd:i2c_data_to_bcd|state.ST_IDLE       ; dec_to_bcd:i2c_data_to_bcd|num_reg[0]          ; clk          ; clk         ; 0.000        ; 0.498      ; 1.229      ;
-; 0.619 ; clk_count[27]                                  ; clk_count[27]                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.886      ;
+; 0.619 ; clks[27]                                       ; clks[27]                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.886      ;
 ; 0.705 ; seg_display:display|count[3]                   ; seg_display:display|count[3]                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
-; 0.705 ; clk_count[4]                                   ; clk_count[4]                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; clks[4]                                        ; clks[4]                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
 ; 0.706 ; seg_display:display|count[11]                  ; seg_display:display|count[11]                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
 ; 0.706 ; seg_display:display|count[5]                   ; seg_display:display|count[5]                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
-; 0.707 ; clk_count[17]                                  ; clk_count[17]                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
-; 0.707 ; clk_count[9]                                   ; clk_count[9]                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
-; 0.707 ; clk_count[3]                                   ; clk_count[3]                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; clks[17]                                       ; clks[17]                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; clks[9]                                        ; clks[9]                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; clks[3]                                        ; clks[3]                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
 ; 0.708 ; seg_display:display|count[15]                  ; seg_display:display|count[15]                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
 ; 0.708 ; seg_display:display|count[6]                   ; seg_display:display|count[6]                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
-; 0.708 ; clk_count[10]                                  ; clk_count[10]                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
-; 0.708 ; clk_count[8]                                   ; clk_count[8]                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
-; 0.708 ; clk_count[2]                                   ; clk_count[2]                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; clks[10]                                       ; clks[10]                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; clks[8]                                        ; clks[8]                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; clks[2]                                        ; clks[2]                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
 ; 0.709 ; seg_display:display|count[7]                   ; seg_display:display|count[7]                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
-; 0.709 ; clk_count[25]                                  ; clk_count[25]                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; clks[25]                                       ; clks[25]                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
 ; 0.710 ; seg_display:display|count[2]                   ; seg_display:display|count[2]                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
-; 0.710 ; clk_count[26]                                  ; clk_count[26]                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
-; 0.710 ; clk_count[15]                                  ; clk_count[15]                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
-; 0.711 ; clk_count[7]                                   ; clk_count[7]                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
-; 0.711 ; clk_count[5]                                   ; clk_count[5]                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.710 ; clks[26]                                       ; clks[26]                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.710 ; clks[15]                                       ; clks[15]                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.711 ; clks[7]                                        ; clks[7]                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; clks[5]                                        ; clks[5]                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
 ; 0.712 ; seg_display:display|count[14]                  ; seg_display:display|count[14]                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
 ; 0.712 ; seg_display:display|count[12]                  ; seg_display:display|count[12]                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
-; 0.712 ; clk_count[23]                                  ; clk_count[23]                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; clks[23]                                       ; clks[23]                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
 ; 0.713 ; i2c_reader:lm75_i2c|clks[3]                    ; i2c_reader:lm75_i2c|clks[3]                    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.981      ;
 ; 0.716 ; i2c_reader:lm75_i2c|data_reg[8]                ; dec_to_bcd:i2c_data_to_bcd|num_reg[0]          ; clk          ; clk         ; 0.000        ; 0.089      ; 1.000      ;
 ; 0.719 ; i2c_reader:lm75_i2c|index_reg[2]               ; i2c_reader:lm75_i2c|index_reg[2]               ; clk          ; clk         ; 0.000        ; 0.073      ; 0.987      ;
@@ -631,7 +631,7 @@ No paths to report.
 ; 0.872 ; i2c_reader:lm75_i2c|index_reg[1]               ; i2c_reader:lm75_i2c|data_reg[5]                ; clk          ; clk         ; 0.000        ; 0.567      ; 1.634      ;
 ; 0.885 ; dec_to_bcd:i2c_data_to_bcd|tens_reg[1]         ; dec_to_bcd:i2c_data_to_bcd|tens_reg[2]         ; clk          ; clk         ; 0.000        ; 0.073      ; 1.153      ;
 ; 0.898 ; i2c_reader:lm75_i2c|index_reg[1]               ; i2c_reader:lm75_i2c|data_reg[7]                ; clk          ; clk         ; 0.000        ; 0.567      ; 1.660      ;
-; 0.903 ; clk_count[23]                                  ; clk_count[24]                                  ; clk          ; clk         ; 0.000        ; 0.540      ; 1.638      ;
+; 0.903 ; clks[23]                                       ; clks[24]                                       ; clk          ; clk         ; 0.000        ; 0.540      ; 1.638      ;
 ; 0.912 ; dec_to_bcd:i2c_data_to_bcd|tens_reg[1]         ; dec_to_bcd:i2c_data_to_bcd|bcd_reg[5]          ; clk          ; clk         ; 0.000        ; 0.076      ; 1.183      ;
 ; 0.924 ; i2c_reader:lm75_i2c|clks[8]                    ; i2c_reader:lm75_i2c|scl_reg                    ; clk          ; clk         ; 0.000        ; 0.074      ; 1.193      ;
 ; 0.940 ; i2c_reader:lm75_i2c|state.ST_STOP              ; i2c_reader:lm75_i2c|state.ST_SEND_ACK          ; clk          ; clk         ; 0.000        ; 0.539      ; 1.674      ;
@@ -649,10 +649,10 @@ No paths to report.
 ; 1.019 ; i2c_reader:lm75_i2c|index_reg[2]               ; i2c_reader:lm75_i2c|data_reg[6]                ; clk          ; clk         ; 0.000        ; 0.567      ; 1.781      ;
 ; 1.019 ; i2c_reader:lm75_i2c|index_reg[2]               ; i2c_reader:lm75_i2c|data_reg[1]                ; clk          ; clk         ; 0.000        ; 0.567      ; 1.781      ;
 ; 1.021 ; i2c_reader:lm75_i2c|index_reg[3]               ; i2c_reader:lm75_i2c|data_reg[4]                ; clk          ; clk         ; 0.000        ; 0.567      ; 1.783      ;
-; 1.023 ; clk_count[17]                                  ; clk_count[20]                                  ; clk          ; clk         ; 0.000        ; 0.540      ; 1.758      ;
-; 1.026 ; clk_count[3]                                   ; clk_count[4]                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.293      ;
-; 1.026 ; clk_count[9]                                   ; clk_count[10]                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.293      ;
-; 1.027 ; clk_count[4]                                   ; clk_count[5]                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.023 ; clks[17]                                       ; clks[20]                                       ; clk          ; clk         ; 0.000        ; 0.540      ; 1.758      ;
+; 1.026 ; clks[3]                                        ; clks[4]                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 1.293      ;
+; 1.026 ; clks[9]                                        ; clks[10]                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.293      ;
+; 1.027 ; clks[4]                                        ; clks[5]                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
 ; 1.027 ; seg_display:display|count[6]                   ; seg_display:display|count[7]                   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
 ; 1.028 ; i2c_reader:lm75_i2c|index_reg[2]               ; i2c_reader:lm75_i2c|data_reg[5]                ; clk          ; clk         ; 0.000        ; 0.567      ; 1.790      ;
 ; 1.028 ; i2c_reader:lm75_i2c|index_reg[2]               ; i2c_reader:lm75_i2c|data_reg[7]                ; clk          ; clk         ; 0.000        ; 0.567      ; 1.790      ;
@@ -742,18 +742,18 @@ No paths to report.
 ; -0.924 ; i2c_reader:lm75_i2c|clks[5]                    ; i2c_reader:lm75_i2c|state.ST_SEND_ADDR ; clk          ; clk         ; 1.000        ; -0.030     ; 1.881      ;
 ; -0.919 ; i2c_reader:lm75_i2c|clks[4]                    ; i2c_reader:lm75_i2c|sda_reg            ; clk          ; clk         ; 1.000        ; -0.030     ; 1.876      ;
 ; -0.915 ; i2c_reader:lm75_i2c|clks[5]                    ; i2c_reader:lm75_i2c|sda_reg            ; clk          ; clk         ; 1.000        ; -0.030     ; 1.872      ;
-; -0.913 ; clk_count[6]                                   ; clk_count[6]                           ; clk          ; clk         ; 1.000        ; -0.036     ; 1.864      ;
-; -0.912 ; clk_count[6]                                   ; clk_count[11]                          ; clk          ; clk         ; 1.000        ; -0.036     ; 1.863      ;
-; -0.912 ; clk_count[6]                                   ; clk_count[12]                          ; clk          ; clk         ; 1.000        ; -0.036     ; 1.863      ;
-; -0.912 ; clk_count[8]                                   ; clk_count[6]                           ; clk          ; clk         ; 1.000        ; -0.036     ; 1.863      ;
-; -0.911 ; clk_count[24]                                  ; clk_count[6]                           ; clk          ; clk         ; 1.000        ; -0.228     ; 1.670      ;
-; -0.911 ; clk_count[8]                                   ; clk_count[11]                          ; clk          ; clk         ; 1.000        ; -0.036     ; 1.862      ;
-; -0.911 ; clk_count[8]                                   ; clk_count[12]                          ; clk          ; clk         ; 1.000        ; -0.036     ; 1.862      ;
-; -0.910 ; clk_count[24]                                  ; clk_count[11]                          ; clk          ; clk         ; 1.000        ; -0.228     ; 1.669      ;
-; -0.910 ; clk_count[24]                                  ; clk_count[12]                          ; clk          ; clk         ; 1.000        ; -0.228     ; 1.669      ;
-; -0.905 ; clk_count[11]                                  ; clk_count[6]                           ; clk          ; clk         ; 1.000        ; -0.036     ; 1.856      ;
-; -0.904 ; clk_count[11]                                  ; clk_count[11]                          ; clk          ; clk         ; 1.000        ; -0.036     ; 1.855      ;
-; -0.904 ; clk_count[11]                                  ; clk_count[12]                          ; clk          ; clk         ; 1.000        ; -0.036     ; 1.855      ;
+; -0.913 ; clks[6]                                        ; clks[6]                                ; clk          ; clk         ; 1.000        ; -0.036     ; 1.864      ;
+; -0.912 ; clks[6]                                        ; clks[11]                               ; clk          ; clk         ; 1.000        ; -0.036     ; 1.863      ;
+; -0.912 ; clks[6]                                        ; clks[12]                               ; clk          ; clk         ; 1.000        ; -0.036     ; 1.863      ;
+; -0.912 ; clks[8]                                        ; clks[6]                                ; clk          ; clk         ; 1.000        ; -0.036     ; 1.863      ;
+; -0.911 ; clks[24]                                       ; clks[6]                                ; clk          ; clk         ; 1.000        ; -0.228     ; 1.670      ;
+; -0.911 ; clks[8]                                        ; clks[11]                               ; clk          ; clk         ; 1.000        ; -0.036     ; 1.862      ;
+; -0.911 ; clks[8]                                        ; clks[12]                               ; clk          ; clk         ; 1.000        ; -0.036     ; 1.862      ;
+; -0.910 ; clks[24]                                       ; clks[11]                               ; clk          ; clk         ; 1.000        ; -0.228     ; 1.669      ;
+; -0.910 ; clks[24]                                       ; clks[12]                               ; clk          ; clk         ; 1.000        ; -0.228     ; 1.669      ;
+; -0.905 ; clks[11]                                       ; clks[6]                                ; clk          ; clk         ; 1.000        ; -0.036     ; 1.856      ;
+; -0.904 ; clks[11]                                       ; clks[11]                               ; clk          ; clk         ; 1.000        ; -0.036     ; 1.855      ;
+; -0.904 ; clks[11]                                       ; clks[12]                               ; clk          ; clk         ; 1.000        ; -0.036     ; 1.855      ;
 ; -0.896 ; i2c_reader:lm75_i2c|state.ST_GET_ACK_HIGH_BYTE ; i2c_reader:lm75_i2c|sda_reg            ; clk          ; clk         ; 1.000        ; -0.237     ; 1.646      ;
 ; -0.893 ; i2c_reader:lm75_i2c|clks[4]                    ; i2c_reader:lm75_i2c|index_reg[4]       ; clk          ; clk         ; 1.000        ; -0.029     ; 1.851      ;
 ; -0.893 ; i2c_reader:lm75_i2c|clks[4]                    ; i2c_reader:lm75_i2c|index_reg[3]       ; clk          ; clk         ; 1.000        ; -0.029     ; 1.851      ;
@@ -772,9 +772,9 @@ No paths to report.
 ; -0.873 ; dec_to_bcd:i2c_data_to_bcd|num_reg[4]          ; dec_to_bcd:i2c_data_to_bcd|num_reg[7]  ; clk          ; clk         ; 1.000        ; -0.036     ; 1.824      ;
 ; -0.866 ; seg_display:display|count[0]                   ; i2c_reader:lm75_i2c|state.ST_START     ; clk          ; clk         ; 1.000        ; 0.161      ; 2.014      ;
 ; -0.865 ; i2c_reader:lm75_i2c|clks[6]                    ; i2c_reader:lm75_i2c|state.ST_SEND_ADDR ; clk          ; clk         ; 1.000        ; -0.030     ; 1.822      ;
-; -0.864 ; clk_count[6]                                   ; en                                     ; clk          ; clk         ; 1.000        ; -0.044     ; 1.807      ;
-; -0.863 ; clk_count[8]                                   ; en                                     ; clk          ; clk         ; 1.000        ; -0.044     ; 1.806      ;
-; -0.862 ; clk_count[24]                                  ; en                                     ; clk          ; clk         ; 1.000        ; -0.236     ; 1.613      ;
+; -0.864 ; clks[6]                                        ; en                                     ; clk          ; clk         ; 1.000        ; -0.044     ; 1.807      ;
+; -0.863 ; clks[8]                                        ; en                                     ; clk          ; clk         ; 1.000        ; -0.044     ; 1.806      ;
+; -0.862 ; clks[24]                                       ; en                                     ; clk          ; clk         ; 1.000        ; -0.236     ; 1.613      ;
 ; -0.861 ; i2c_reader:lm75_i2c|state.ST_SEND_NACK         ; i2c_reader:lm75_i2c|sda_reg            ; clk          ; clk         ; 1.000        ; -0.237     ; 1.611      ;
 ; -0.858 ; seg_display:display|count[0]                   ; i2c_reader:lm75_i2c|index_reg[4]       ; clk          ; clk         ; 1.000        ; -0.030     ; 1.815      ;
 ; -0.858 ; seg_display:display|count[0]                   ; i2c_reader:lm75_i2c|index_reg[3]       ; clk          ; clk         ; 1.000        ; -0.030     ; 1.815      ;
@@ -782,7 +782,7 @@ No paths to report.
 ; -0.858 ; seg_display:display|count[0]                   ; i2c_reader:lm75_i2c|index_reg[1]       ; clk          ; clk         ; 1.000        ; -0.030     ; 1.815      ;
 ; -0.858 ; seg_display:display|count[0]                   ; i2c_reader:lm75_i2c|index_reg[2]       ; clk          ; clk         ; 1.000        ; -0.030     ; 1.815      ;
 ; -0.856 ; i2c_reader:lm75_i2c|clks[6]                    ; i2c_reader:lm75_i2c|sda_reg            ; clk          ; clk         ; 1.000        ; -0.030     ; 1.813      ;
-; -0.856 ; clk_count[11]                                  ; en                                     ; clk          ; clk         ; 1.000        ; -0.044     ; 1.799      ;
+; -0.856 ; clks[11]                                       ; en                                     ; clk          ; clk         ; 1.000        ; -0.044     ; 1.799      ;
 ; -0.853 ; i2c_reader:lm75_i2c|state.ST_START             ; i2c_reader:lm75_i2c|state.ST_SEND_ADDR ; clk          ; clk         ; 1.000        ; -0.237     ; 1.603      ;
 ; -0.851 ; i2c_reader:lm75_i2c|state.ST_SEND_ACK          ; i2c_reader:lm75_i2c|state.ST_SEND_NACK ; clk          ; clk         ; 1.000        ; -0.045     ; 1.793      ;
 ; -0.850 ; i2c_reader:lm75_i2c|state.ST_SEND_ACK          ; i2c_reader:lm75_i2c|state.ST_SEND_ACK  ; clk          ; clk         ; 1.000        ; -0.045     ; 1.792      ;
@@ -790,9 +790,9 @@ No paths to report.
 ; -0.840 ; en                                             ; i2c_reader:lm75_i2c|state.ST_SEND_ADDR ; clk          ; clk         ; 1.000        ; -0.023     ; 1.804      ;
 ; -0.839 ; i2c_reader:lm75_i2c|state.ST_GET_LOW_BYTE      ; i2c_reader:lm75_i2c|state.ST_SEND_NACK ; clk          ; clk         ; 1.000        ; -0.045     ; 1.781      ;
 ; -0.838 ; i2c_reader:lm75_i2c|state.ST_GET_LOW_BYTE      ; i2c_reader:lm75_i2c|state.ST_SEND_ACK  ; clk          ; clk         ; 1.000        ; -0.045     ; 1.780      ;
-; -0.836 ; clk_count[7]                                   ; clk_count[6]                           ; clk          ; clk         ; 1.000        ; -0.036     ; 1.787      ;
-; -0.835 ; clk_count[7]                                   ; clk_count[11]                          ; clk          ; clk         ; 1.000        ; -0.036     ; 1.786      ;
-; -0.835 ; clk_count[7]                                   ; clk_count[12]                          ; clk          ; clk         ; 1.000        ; -0.036     ; 1.786      ;
+; -0.836 ; clks[7]                                        ; clks[6]                                ; clk          ; clk         ; 1.000        ; -0.036     ; 1.787      ;
+; -0.835 ; clks[7]                                        ; clks[11]                               ; clk          ; clk         ; 1.000        ; -0.036     ; 1.786      ;
+; -0.835 ; clks[7]                                        ; clks[12]                               ; clk          ; clk         ; 1.000        ; -0.036     ; 1.786      ;
 ; -0.833 ; i2c_reader:lm75_i2c|state.ST_SEND_ADDR         ; i2c_reader:lm75_i2c|state.ST_SEND_NACK ; clk          ; clk         ; 1.000        ; 0.155      ; 1.975      ;
 ; -0.832 ; i2c_reader:lm75_i2c|state.ST_START             ; i2c_reader:lm75_i2c|sda_reg            ; clk          ; clk         ; 1.000        ; -0.237     ; 1.582      ;
 ; -0.832 ; i2c_reader:lm75_i2c|state.ST_SEND_ADDR         ; i2c_reader:lm75_i2c|state.ST_SEND_ACK  ; clk          ; clk         ; 1.000        ; 0.155      ; 1.974      ;
@@ -856,31 +856,31 @@ No paths to report.
 ; 0.213 ; dec_to_bcd:i2c_data_to_bcd|tens_reg[0]         ; dec_to_bcd:i2c_data_to_bcd|tens_reg[2]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.333      ;
 ; 0.213 ; dec_to_bcd:i2c_data_to_bcd|tens_reg[0]         ; dec_to_bcd:i2c_data_to_bcd|tens_reg[1]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.333      ;
 ; 0.253 ; dec_to_bcd:i2c_data_to_bcd|state.ST_IDLE       ; dec_to_bcd:i2c_data_to_bcd|num_reg[0]          ; clk          ; clk         ; 0.000        ; 0.223      ; 0.560      ;
-; 0.262 ; clk_count[27]                                  ; clk_count[27]                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.382      ;
+; 0.262 ; clks[27]                                       ; clks[27]                                       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.382      ;
 ; 0.302 ; dec_to_bcd:i2c_data_to_bcd|state.ST_DONE       ; dec_to_bcd:i2c_data_to_bcd|tens_reg[3]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.422      ;
 ; 0.304 ; seg_display:display|count[15]                  ; seg_display:display|count[15]                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
 ; 0.304 ; seg_display:display|count[3]                   ; seg_display:display|count[3]                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
-; 0.304 ; clk_count[4]                                   ; clk_count[4]                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; clks[4]                                        ; clks[4]                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
 ; 0.305 ; seg_display:display|count[11]                  ; seg_display:display|count[11]                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
 ; 0.305 ; seg_display:display|count[5]                   ; seg_display:display|count[5]                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; clk_count[3]                                   ; clk_count[3]                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; clks[3]                                        ; clks[3]                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
 ; 0.306 ; seg_display:display|count[7]                   ; seg_display:display|count[7]                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
 ; 0.306 ; seg_display:display|count[6]                   ; seg_display:display|count[6]                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
 ; 0.306 ; seg_display:display|count[2]                   ; seg_display:display|count[2]                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; clk_count[25]                                  ; clk_count[25]                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; clk_count[17]                                  ; clk_count[17]                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; clk_count[15]                                  ; clk_count[15]                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; clk_count[10]                                  ; clk_count[10]                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; clk_count[9]                                   ; clk_count[9]                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; clk_count[8]                                   ; clk_count[8]                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; clk_count[5]                                   ; clk_count[5]                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; clk_count[2]                                   ; clk_count[2]                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; clks[25]                                       ; clks[25]                                       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; clks[17]                                       ; clks[17]                                       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; clks[15]                                       ; clks[15]                                       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; clks[10]                                       ; clks[10]                                       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; clks[9]                                        ; clks[9]                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; clks[8]                                        ; clks[8]                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; clks[5]                                        ; clks[5]                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; clks[2]                                        ; clks[2]                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
 ; 0.306 ; dec_to_bcd:i2c_data_to_bcd|state.ST_DONE       ; dec_to_bcd:i2c_data_to_bcd|tens_reg[0]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
 ; 0.307 ; seg_display:display|count[14]                  ; seg_display:display|count[14]                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
 ; 0.307 ; seg_display:display|count[12]                  ; seg_display:display|count[12]                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
-; 0.307 ; clk_count[26]                                  ; clk_count[26]                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
-; 0.307 ; clk_count[23]                                  ; clk_count[23]                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
-; 0.307 ; clk_count[7]                                   ; clk_count[7]                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; clks[26]                                       ; clks[26]                                       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; clks[23]                                       ; clks[23]                                       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; clks[7]                                        ; clks[7]                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
 ; 0.309 ; i2c_reader:lm75_i2c|clks[3]                    ; i2c_reader:lm75_i2c|clks[3]                    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.429      ;
 ; 0.309 ; i2c_reader:lm75_i2c|data_reg[8]                ; dec_to_bcd:i2c_data_to_bcd|num_reg[0]          ; clk          ; clk         ; 0.000        ; 0.044      ; 0.437      ;
 ; 0.311 ; i2c_reader:lm75_i2c|index_reg[2]               ; i2c_reader:lm75_i2c|index_reg[2]               ; clk          ; clk         ; 0.000        ; 0.037      ; 0.432      ;
@@ -897,26 +897,26 @@ No paths to report.
 ; 0.415 ; i2c_reader:lm75_i2c|state.ST_IDLE              ; i2c_reader:lm75_i2c|sda_reg                    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.536      ;
 ; 0.417 ; i2c_reader:lm75_i2c|state.ST_STOP              ; i2c_reader:lm75_i2c|state.ST_IDLE              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.537      ;
 ; 0.417 ; dec_to_bcd:i2c_data_to_bcd|state.ST_DONE       ; dec_to_bcd:i2c_data_to_bcd|tens_reg[2]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.537      ;
-; 0.418 ; clk_count[23]                                  ; clk_count[24]                                  ; clk          ; clk         ; 0.000        ; 0.235      ; 0.737      ;
+; 0.418 ; clks[23]                                       ; clks[24]                                       ; clk          ; clk         ; 0.000        ; 0.235      ; 0.737      ;
 ; 0.418 ; i2c_reader:lm75_i2c|index_reg[1]               ; i2c_reader:lm75_i2c|data_reg[7]                ; clk          ; clk         ; 0.000        ; 0.242      ; 0.744      ;
 ; 0.419 ; dec_to_bcd:i2c_data_to_bcd|state.ST_DONE       ; dec_to_bcd:i2c_data_to_bcd|tens_reg[1]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.539      ;
 ; 0.425 ; i2c_reader:lm75_i2c|index_reg[1]               ; i2c_reader:lm75_i2c|data_reg[5]                ; clk          ; clk         ; 0.000        ; 0.242      ; 0.751      ;
 ; 0.427 ; dec_to_bcd:i2c_data_to_bcd|state.ST_CALC       ; dec_to_bcd:i2c_data_to_bcd|done_reg            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.547      ;
 ; 0.444 ; dec_to_bcd:i2c_data_to_bcd|num_reg[0]          ; dec_to_bcd:i2c_data_to_bcd|bcd_reg[0]          ; clk          ; clk         ; 0.000        ; -0.139     ; 0.389      ;
-; 0.451 ; clk_count[24]                                  ; clk_count[24]                                  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.579      ;
-; 0.452 ; clk_count[20]                                  ; clk_count[20]                                  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.580      ;
-; 0.453 ; clk_count[4]                                   ; clk_count[5]                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.451 ; clks[24]                                       ; clks[24]                                       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.579      ;
+; 0.452 ; clks[20]                                       ; clks[20]                                       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.580      ;
+; 0.453 ; clks[4]                                        ; clks[5]                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.573      ;
 ; 0.454 ; seg_display:display|count[5]                   ; seg_display:display|count[6]                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
 ; 0.454 ; seg_display:display|count[11]                  ; seg_display:display|count[12]                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
-; 0.455 ; clk_count[2]                                   ; clk_count[3]                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.575      ;
-; 0.455 ; clk_count[8]                                   ; clk_count[9]                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.575      ;
-; 0.456 ; clk_count[26]                                  ; clk_count[27]                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.576      ;
-; 0.456 ; clk_count[6]                                   ; clk_count[7]                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.576      ;
+; 0.455 ; clks[2]                                        ; clks[3]                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.575      ;
+; 0.455 ; clks[8]                                        ; clks[9]                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.575      ;
+; 0.456 ; clks[26]                                       ; clks[27]                                       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.576      ;
+; 0.456 ; clks[6]                                        ; clks[7]                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.576      ;
 ; 0.456 ; i2c_reader:lm75_i2c|clks[2]                    ; i2c_reader:lm75_i2c|clks[3]                    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.576      ;
 ; 0.461 ; i2c_reader:lm75_i2c|index_reg[3]               ; i2c_reader:lm75_i2c|data_reg[4]                ; clk          ; clk         ; 0.000        ; 0.242      ; 0.787      ;
 ; 0.462 ; dec_to_bcd:i2c_data_to_bcd|num_reg[3]          ; dec_to_bcd:i2c_data_to_bcd|num_reg[3]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.582      ;
 ; 0.462 ; i2c_reader:lm75_i2c|state.ST_DONE              ; i2c_reader:lm75_i2c|state.ST_STOP              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.590      ;
-; 0.463 ; clk_count[3]                                   ; clk_count[4]                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.583      ;
+; 0.463 ; clks[3]                                        ; clks[4]                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.583      ;
 +-------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -1173,7 +1173,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 21 15:52:46 2024
+    Info: Processing started: Tue May 21 21:22:25 2024
 Info: Command: quartus_sta digital_thermometer -c digital_thermometer
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1246,8 +1246,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4728 megabytes
-    Info: Processing ended: Tue May 21 15:52:49 2024
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Tue May 21 21:22:27 2024
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

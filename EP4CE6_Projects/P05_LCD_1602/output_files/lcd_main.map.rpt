@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lcd_main
-Sun Apr 28 19:39:00 2024
+Tue May 21 21:34:24 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 28 19:39:00 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 21 21:34:24 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; lcd_main                                    ;
 ; Top-level Entity Name              ; lcd_main                                    ;
@@ -166,15 +166,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                   ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
-; src/lcd_main.vhd                 ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lcd_main.vhd       ;         ;
-; src/lib/lcd_driver.vhd           ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lib/lcd_driver.vhd ;         ;
-; src/lib/prog_mem.vhd             ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lib/prog_mem.vhd   ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+; src/lcd_main.vhd                 ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lcd_main.vhd       ;         ;
+; src/lib/lcd_driver.vhd           ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/lcd_driver.vhd ;         ;
+; src/lib/prog_mem.vhd             ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/prog_mem.vhd   ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -312,32 +312,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Apr 28 19:38:46 2024
+    Info: Processing started: Tue May 21 21:34:11 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcd_main -c lcd_main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file src/lcd_main.vhd
-    Info (12022): Found design unit 1: lcd_main-lcd_main_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lcd_main.vhd Line: 22
-    Info (12023): Found entity 1: lcd_main File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lcd_main.vhd Line: 13
+    Info (12022): Found design unit 1: lcd_main-lcd_main_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lcd_main.vhd Line: 22
+    Info (12023): Found entity 1: lcd_main File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lcd_main.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/lcd_driver.vhd
-    Info (12022): Found design unit 1: lcd_driver-lcd_driver_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lib/lcd_driver.vhd Line: 20
-    Info (12023): Found entity 1: lcd_driver File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lib/lcd_driver.vhd Line: 8
+    Info (12022): Found design unit 1: lcd_driver-lcd_driver_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/lcd_driver.vhd Line: 20
+    Info (12023): Found entity 1: lcd_driver File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/lcd_driver.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/prog_mem.vhd
-    Info (12022): Found design unit 1: prog_mem-prog_mem_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lib/prog_mem.vhd Line: 14
-    Info (12023): Found entity 1: prog_mem File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lib/prog_mem.vhd Line: 8
+    Info (12022): Found design unit 1: prog_mem-prog_mem_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/prog_mem.vhd Line: 14
+    Info (12023): Found entity 1: prog_mem File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/prog_mem.vhd Line: 8
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
 Info (12127): Elaborating entity "lcd_main" for the top level hierarchy
-Info (12129): Elaborating entity "prog_mem" using architecture "A:prog_mem_rtl" for hierarchy "prog_mem:program_memory" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lcd_main.vhd Line: 41
-Info (12129): Elaborating entity "lcd_driver" using architecture "A:lcd_driver_rtl" for hierarchy "lcd_driver:lcd_1602" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lcd_main.vhd Line: 48
+Info (12129): Elaborating entity "prog_mem" using architecture "A:prog_mem_rtl" for hierarchy "prog_mem:program_memory" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lcd_main.vhd Line: 41
+Info (12129): Elaborating entity "lcd_driver" using architecture "A:lcd_driver_rtl" for hierarchy "lcd_driver:lcd_1602" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lcd_main.vhd Line: 48
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "prog_mem:program_memory|rom" is uninferred due to inappropriate RAM size File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lib/prog_mem.vhd Line: 18
+    Info (276004): RAM logic "prog_mem:program_memory|rom" is uninferred due to inappropriate RAM size File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/prog_mem.vhd Line: 18
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "rw" is stuck at GND File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P5_LCD_1602/src/lcd_main.vhd Line: 18
+    Warning (13410): Pin "rw" is stuck at GND File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lcd_main.vhd Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -346,9 +346,9 @@ Info (21057): Implemented 127 device resources after synthesis - the final resou
     Info (21059): Implemented 11 output pins
     Info (21061): Implemented 114 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4771 megabytes
-    Info: Processing ended: Sun Apr 28 19:39:00 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Peak virtual memory: 4781 megabytes
+    Info: Processing ended: Tue May 21 21:34:24 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:28
 
 

@@ -23,7 +23,6 @@ library work;
 --      system to operate at a higher maximum frequency).
 
 entity distance_sensor is
-   generic(DATA_WIDTH: integer := 24);
    port(rst_n: in std_logic;
         clk: in std_logic;
         echo: in std_logic;
@@ -34,8 +33,7 @@ entity distance_sensor is
 end distance_sensor;
 
 architecture distance_sensor_rtl of distance_sensor is
---   constant PULSE_TO_CM: integer := 172;
---   constant BIT_WIDTH: integer := 8;
+   constant DATA_WIDTH: integer := 24;
    constant ZEROS: unsigned(7 downto 0) := x"00";
    signal en: std_logic;
    signal done: std_logic;
@@ -44,7 +42,7 @@ architecture distance_sensor_rtl of distance_sensor is
    signal dec: std_logic_vector(DATA_WIDTH - 1 downto 0);
    signal bcd: std_logic_vector(15 downto 0);
    signal pulse: std_logic_vector(15 downto 0);
-   signal clks: unsigned(27 downto 0);
+   signal clks: integer range 0 to 24_999_999;
    -- Signals for manual combinational shifting
    signal p_uns: unsigned(15 downto 0);
    signal p_shift_7: unsigned(DATA_WIDTH - 1 downto 0);
@@ -56,11 +54,11 @@ begin
    control_path: process(rst_n,clk)
    begin
       if rst_n = '0' then
-         clks <= (others => '0');
+         clks <= 0;
          en <= '1';
       elsif rising_edge(clk) then
-         if clks = to_unsigned(39_999_999,clks'length) then
-            clks <= (others => '0');
+         if clks = 24_999_999 then
+            clks <= 0;
             en <= not conv_done;
          else
             clks <= clks + 1;
@@ -68,16 +66,8 @@ begin
       end if;
    end process;
    
-   ------------------------------MULTIPLICATION----------------------------
-   
-   -----------METHOD 1: Multiplication using '*'
-   -----------COMMENT METHOD 2 if you want to use METHOD 1
-   
---   distance <= unsigned(pulse) * to_unsigned(PULSE_TO_CM,BIT_WIDTH); 
-   
-   -----------METHOD 2: Multiplication through shift operations
-   -----------COMMENT METHOD 1 if you want to use METHOD 2
-   -----------Multiplication factor = 172 i.e. 128 + 32 + 8 + 4
+   -- METHOD 2: Multiplication through shift operations
+   -- Multiplication factor = 172 i.e. 128 + 32 + 8 + 4
    
    p_uns <= unsigned(pulse);
    p_shift_7 <= ZEROS(7 downto 7) & p_uns & ZEROS(6 downto 0);

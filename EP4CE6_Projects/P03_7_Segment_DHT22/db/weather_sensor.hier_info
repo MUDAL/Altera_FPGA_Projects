@@ -1,6 +1,6 @@
 |weather_sensor
-rst_n => one_wire:dht22_one_wire.rst_n
-rst_n => dec_to_bcd:dht22_data_bcd.rst_n
+rst_n => one_wire:one_wire.rst_n
+rst_n => dec_to_bcd:dec_to_bcd.rst_n
 rst_n => seg_display:display.rst_n
 rst_n => param.ACLR
 rst_n => en_dht22.PRESET
@@ -31,7 +31,7 @@ rst_n => dht22_count[23].ACLR
 rst_n => dht22_count[24].ACLR
 rst_n => dht22_count[25].ACLR
 rst_n => dht22_count[26].ACLR
-clk => one_wire:dht22_one_wire.clk
+clk => one_wire:one_wire.clk
 clk => param.CLK
 clk => en_dht22.CLK
 clk => dht22_count[0].CLK
@@ -61,10 +61,10 @@ clk => dht22_count[23].CLK
 clk => dht22_count[24].CLK
 clk => dht22_count[25].CLK
 clk => dht22_count[26].CLK
-clk => dec_to_bcd:dht22_data_bcd.clk
+clk => dec_to_bcd:dec_to_bcd.clk
 clk => seg_display:display.clk
-io <> one_wire:dht22_one_wire.io
-led <= one_wire:dht22_one_wire.valid
+io <> one_wire:one_wire.io
+led <= one_wire:one_wire.valid
 dp <= seg_display:display.dp
 seg[0] <= seg_display:display.seg[0]
 seg[1] <= seg_display:display.seg[1]
@@ -79,7 +79,7 @@ sel[2] <= seg_display:display.sel[2]
 sel[3] <= seg_display:display.sel[3]
 
 
-|weather_sensor|one_wire:dht22_one_wire
+|weather_sensor|one_wire:one_wire
 rst_n => old_io_reg.ACLR
 rst_n => new_io_reg.ACLR
 rst_n => data_reg[39].ACLR
@@ -334,7 +334,7 @@ done <= done.DB_MAX_OUTPUT_PORT_TYPE
 valid <= valid.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|weather_sensor|dec_to_bcd:dht22_data_bcd
+|weather_sensor|dec_to_bcd:dec_to_bcd
 rst_n => done_reg.ACLR
 rst_n => bcd_reg[0].ACLR
 rst_n => bcd_reg[1].ACLR

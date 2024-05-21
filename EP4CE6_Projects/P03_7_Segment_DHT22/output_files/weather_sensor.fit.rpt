@@ -1,5 +1,5 @@
 Fitter report for weather_sensor
-Tue May 21 19:44:54 2024
+Tue May 21 21:25:28 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue May 21 19:44:54 2024       ;
+; Fitter Status                      ; Successful - Tue May 21 21:25:28 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; weather_sensor                              ;
 ; Top-level Entity Name              ; weather_sensor                              ;
@@ -160,7 +160,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.7%      ;
+;     Processor 2            ;   2.1%      ;
 +----------------------------+-------------+
 
 
@@ -369,13 +369,13 @@ The pin-out file can be found in L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03
 +--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Bidir Pins                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
-+------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+--------------------------------+
-; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Output Termination ; Termination Control Block ; Output Buffer Pre-emphasis ; Location assigned by ; Output Enable Source ; Output Enable Group            ;
-+------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+--------------------------------+
-; io   ; 115   ; 7        ; 28           ; 24           ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; one_wire:dht22_one_wire|io_reg ;
-+------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+--------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Bidir Pins                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+--------------------------+
+; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Output Termination ; Termination Control Block ; Output Buffer Pre-emphasis ; Location assigned by ; Output Enable Source ; Output Enable Group      ;
++------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+--------------------------+
+; io   ; 115   ; 7        ; 28           ; 24           ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; one_wire:one_wire|io_reg ;
++------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+--------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -595,17 +595,17 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------+------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                            ;
-+--------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node     ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                             ; Entity Name    ; Library Name ;
-+--------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------+----------------+--------------+
-; |weather_sensor                ; 395 (48)    ; 176 (21)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 16   ; 0            ; 219 (27)     ; 5 (0)             ; 171 (20)         ; |weather_sensor                                 ; weather_sensor ; work         ;
-;    |dec_to_bcd:dht22_data_bcd| ; 104 (104)   ; 40 (40)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 64 (64)      ; 3 (3)             ; 37 (37)          ; |weather_sensor|dec_to_bcd:dht22_data_bcd       ; dec_to_bcd     ; work         ;
-;    |one_wire:dht22_one_wire|   ; 206 (206)   ; 97 (97)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 107 (107)    ; 0 (0)             ; 99 (99)          ; |weather_sensor|one_wire:dht22_one_wire         ; one_wire       ; work         ;
-;    |seg_display:display|       ; 47 (40)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (14)      ; 2 (2)             ; 24 (24)          ; |weather_sensor|seg_display:display             ; seg_display    ; work         ;
-;       |seg_rom:rom|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |weather_sensor|seg_display:display|seg_rom:rom ; seg_rom        ; work         ;
-+--------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------+----------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                        ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                             ; Entity Name    ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------+----------------+--------------+
+; |weather_sensor            ; 395 (48)    ; 176 (21)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 16   ; 0            ; 219 (27)     ; 5 (0)             ; 171 (20)         ; |weather_sensor                                 ; weather_sensor ; work         ;
+;    |dec_to_bcd:dec_to_bcd| ; 104 (104)   ; 40 (40)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 64 (64)      ; 3 (3)             ; 37 (37)          ; |weather_sensor|dec_to_bcd:dec_to_bcd           ; dec_to_bcd     ; work         ;
+;    |one_wire:one_wire|     ; 206 (206)   ; 97 (97)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 107 (107)    ; 0 (0)             ; 99 (99)          ; |weather_sensor|one_wire:one_wire               ; one_wire       ; work         ;
+;    |seg_display:display|   ; 47 (40)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (14)      ; 2 (2)             ; 24 (24)          ; |weather_sensor|seg_display:display             ; seg_display    ; work         ;
+;       |seg_rom:rom|        ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |weather_sensor|seg_display:display|seg_rom:rom ; seg_rom        ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -633,34 +633,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+---------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                            ;
-+---------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                         ; Pad To Core Index ; Setting ;
-+---------------------------------------------+-------------------+---------+
-; io                                          ;                   ;         ;
-;      - one_wire:dht22_one_wire|new_io_reg~0 ; 1                 ; 6       ;
-; clk                                         ;                   ;         ;
-; rst_n                                       ;                   ;         ;
-+---------------------------------------------+-------------------+---------+
++---------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                      ;
++---------------------------------------+-------------------+---------+
+; Source Pin / Fanout                   ; Pad To Core Index ; Setting ;
++---------------------------------------+-------------------+---------+
+; io                                    ;                   ;         ;
+;      - one_wire:one_wire|new_io_reg~0 ; 1                 ; 6       ;
+; clk                                   ;                   ;         ;
+; rst_n                                 ;                   ;         ;
++---------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                          ;
-+---------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                        ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Equal0~7                                    ; LCCOMB_X23_Y13_N26 ; 14      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clk                                         ; PIN_23             ; 176     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; dec_to_bcd:dht22_data_bcd|hundreds_reg[0]~0 ; LCCOMB_X19_Y17_N0  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; dec_to_bcd:dht22_data_bcd|num_reg[6]~1      ; LCCOMB_X18_Y17_N2  ; 14      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; dec_to_bcd:dht22_data_bcd|num_reg[6]~3      ; LCCOMB_X18_Y17_N0  ; 14      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; dec_to_bcd:dht22_data_bcd|tens_reg[0]~3     ; LCCOMB_X18_Y17_N28 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; one_wire:dht22_one_wire|stamp_reg[5]~6      ; LCCOMB_X25_Y16_N26 ; 20      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; one_wire:dht22_one_wire|state.ST_PROCESS    ; FF_X26_Y16_N25     ; 16      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; rst_n                                       ; PIN_25             ; 176     ; Async. clear ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; seg_display:display|Equal0~4                ; LCCOMB_X21_Y20_N0  ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+---------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                      ;
++-----------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                    ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Equal0~7                                ; LCCOMB_X23_Y13_N26 ; 14      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clk                                     ; PIN_23             ; 176     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; dec_to_bcd:dec_to_bcd|hundreds_reg[0]~0 ; LCCOMB_X19_Y17_N0  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; dec_to_bcd:dec_to_bcd|num_reg[6]~1      ; LCCOMB_X18_Y17_N2  ; 14      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; dec_to_bcd:dec_to_bcd|num_reg[6]~3      ; LCCOMB_X18_Y17_N0  ; 14      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; dec_to_bcd:dec_to_bcd|tens_reg[0]~3     ; LCCOMB_X18_Y17_N28 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; one_wire:one_wire|stamp_reg[5]~6        ; LCCOMB_X25_Y16_N26 ; 20      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; one_wire:one_wire|state.ST_PROCESS      ; FF_X26_Y16_N25     ; 16      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; rst_n                                   ; PIN_25             ; 176     ; Async. clear ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; seg_display:display|Equal0~4            ; LCCOMB_X21_Y20_N0  ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
++-----------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------+
@@ -973,14 +973,14 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03_7_Segment_DHT22/src/weather_sensor.vhd Line: 22
+Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03_7_Segment_DHT22/src/weather_sensor.vhd Line: 21
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
-Info (176353): Automatically promoted node rst_n~input (placed in PIN 25 (CLK3, DIFFCLK_1n)) File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03_7_Segment_DHT22/src/weather_sensor.vhd Line: 21
+Info (176353): Automatically promoted node rst_n~input (placed in PIN 25 (CLK3, DIFFCLK_1n)) File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03_7_Segment_DHT22/src/weather_sensor.vhd Line: 20
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -993,7 +993,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.29 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.26 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1001,14 +1001,14 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 3 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin io uses I/O standard 3.3-V LVTTL at 115 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03_7_Segment_DHT22/src/weather_sensor.vhd Line: 23
-    Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at 23 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03_7_Segment_DHT22/src/weather_sensor.vhd Line: 22
-    Info (169178): Pin rst_n uses I/O standard 3.3-V LVTTL at 25 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03_7_Segment_DHT22/src/weather_sensor.vhd Line: 21
+    Info (169178): Pin io uses I/O standard 3.3-V LVTTL at 115 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03_7_Segment_DHT22/src/weather_sensor.vhd Line: 22
+    Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at 23 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03_7_Segment_DHT22/src/weather_sensor.vhd Line: 21
+    Info (169178): Pin rst_n uses I/O standard 3.3-V LVTTL at 25 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03_7_Segment_DHT22/src/weather_sensor.vhd Line: 20
 Info (144001): Generated suppressed messages file L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03_7_Segment_DHT22/output_files/weather_sensor.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5237 megabytes
-    Info: Processing ended: Tue May 21 19:44:54 2024
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 5233 megabytes
+    Info: Processing ended: Tue May 21 21:25:28 2024
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:08
 
 
