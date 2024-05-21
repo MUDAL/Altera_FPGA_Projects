@@ -23,6 +23,7 @@ library work;
 --      system to operate at a higher maximum frequency).
 
 entity distance_sensor is
+   generic(DATA_WIDTH: integer := 24);
    port(rst_n: in std_logic;
         clk: in std_logic;
         echo: in std_logic;
@@ -33,23 +34,23 @@ entity distance_sensor is
 end distance_sensor;
 
 architecture distance_sensor_rtl of distance_sensor is
-   constant PULSE_TO_CM: integer := 172;
-   constant BIT_WIDTH: integer := 8;
+--   constant PULSE_TO_CM: integer := 172;
+--   constant BIT_WIDTH: integer := 8;
    constant ZEROS: unsigned(7 downto 0) := x"00";
    signal en: std_logic;
    signal done: std_logic;
    signal conv_done: std_logic;
-   signal distance: unsigned(23 downto 0);
-   signal dec: std_logic_vector(23 downto 0);
+   signal distance: unsigned(DATA_WIDTH - 1 downto 0);
+   signal dec: std_logic_vector(DATA_WIDTH - 1 downto 0);
    signal bcd: std_logic_vector(15 downto 0);
    signal pulse: std_logic_vector(15 downto 0);
    signal clks: unsigned(27 downto 0);
    -- Signals for manual combinational shifting
    signal p_uns: unsigned(15 downto 0);
-   signal p_shift_7: unsigned(23 downto 0);
-   signal p_shift_5: unsigned(23 downto 0);
-   signal p_shift_3: unsigned(23 downto 0);
-   signal p_shift_2: unsigned(23 downto 0);  
+   signal p_shift_7: unsigned(DATA_WIDTH - 1 downto 0);
+   signal p_shift_5: unsigned(DATA_WIDTH - 1 downto 0);
+   signal p_shift_3: unsigned(DATA_WIDTH - 1 downto 0);
+   signal p_shift_2: unsigned(DATA_WIDTH - 1 downto 0);
 begin
    --Periodically trigger the HCSR04 sensor to obtain its readings
    control_path: process(rst_n,clk)
@@ -79,13 +80,12 @@ begin
    -----------Multiplication factor = 172 i.e. 128 + 32 + 8 + 4
    
    p_uns <= unsigned(pulse);
-   p_shift_7 <= ZEROS(7) & p_uns & ZEROS(6 downto 0);
+   p_shift_7 <= ZEROS(7 downto 7) & p_uns & ZEROS(6 downto 0);
    p_shift_5 <= ZEROS(7 downto 5) & p_uns & ZEROS(4 downto 0);
    p_shift_3 <= ZEROS(7 downto 3) & p_uns & ZEROS(2 downto 0);
    p_shift_2 <= ZEROS(7 downto 2) & p_uns & ZEROS(1 downto 0);
    
    distance <= p_shift_7 + p_shift_5 + p_shift_3 + p_shift_2;
-   
    ------------------------------------------------------------------------
    
    dec <= std_logic_vector(distance);

@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P4_7_Segment_HCSR04/output_files/") File("distance_sensor.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6E22) Path("L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/output_files/") File("distance_sensor.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
