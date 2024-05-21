@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P2_7_Segment_LM75/output_files/") File("digital_thermometer.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6E22) Path("L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/output_files/") File("digital_thermometer.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

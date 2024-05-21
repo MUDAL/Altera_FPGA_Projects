@@ -1,5 +1,5 @@
 Analysis & Synthesis report for digital_thermometer
-Tue May 14 17:23:42 2024
+Tue May 21 15:52:34 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,13 +48,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 14 17:23:42 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 21 15:52:34 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; digital_thermometer                         ;
 ; Top-level Entity Name              ; digital_thermometer                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 236                                         ;
-;     Total combinational functions  ; 226                                         ;
+; Total logic elements               ; 237                                         ;
+;     Total combinational functions  ; 227                                         ;
 ;     Dedicated logic registers      ; 105                                         ;
 ; Total registers                    ; 105                                         ;
 ; Total pins                         ; 16                                          ;
@@ -190,16 +190,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 236       ;
+; Estimated Total logic elements              ; 237       ;
 ;                                             ;           ;
-; Total combinational functions               ; 226       ;
+; Total combinational functions               ; 227       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 91        ;
-;     -- 3 input functions                    ; 33        ;
-;     -- <=2 input functions                  ; 102       ;
+;     -- 4 input functions                    ; 87        ;
+;     -- 3 input functions                    ; 39        ;
+;     -- <=2 input functions                  ; 101       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 163       ;
+;     -- normal mode                          ; 164       ;
 ;     -- arithmetic mode                      ; 63        ;
 ;                                             ;           ;
 ; Total registers                             ; 105       ;
@@ -213,7 +213,7 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 105       ;
 ; Total fan-out                               ; 1043      ;
-; Average fan-out                             ; 2.87      ;
+; Average fan-out                             ; 2.86      ;
 +---------------------------------------------+-----------+
 
 
@@ -222,9 +222,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name         ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+---------------------+--------------+
-; |digital_thermometer            ; 226 (49)            ; 105 (27)                  ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |digital_thermometer                                 ; digital_thermometer ; work         ;
+; |digital_thermometer            ; 227 (49)            ; 105 (27)                  ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |digital_thermometer                                 ; digital_thermometer ; work         ;
 ;    |dec_to_bcd:i2c_data_to_bcd| ; 47 (47)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd      ; dec_to_bcd          ; work         ;
-;    |i2c_reader:lm75_i2c|        ; 86 (86)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_thermometer|i2c_reader:lm75_i2c             ; i2c_reader          ; work         ;
+;    |i2c_reader:lm75_i2c|        ; 87 (87)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_thermometer|i2c_reader:lm75_i2c             ; i2c_reader          ; work         ;
 ;    |seg_display:display|        ; 44 (37)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_thermometer|seg_display:display             ; seg_display         ; work         ;
 ;       |seg_rom:rom|             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_thermometer|seg_display:display|seg_rom:rom ; seg_rom             ; work         ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+---------------------+--------------+
@@ -299,7 +299,7 @@ Encoding Type:  One-Hot
 ; seg_display:display|shift_reg[2]       ; 2       ;
 ; seg_display:display|shift_reg[3]       ; 2       ;
 ; i2c_reader:lm75_i2c|scl_reg            ; 5       ;
-; en                                     ; 4       ;
+; en                                     ; 5       ;
 ; i2c_reader:lm75_i2c|sda_reg            ; 2       ;
 ; Total number of inverted registers = 6 ;         ;
 +----------------------------------------+---------+
@@ -310,14 +310,14 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd|tens_reg[3] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd|num_reg[2]  ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |digital_thermometer|i2c_reader:lm75_i2c|index_reg[0]       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |digital_thermometer|seg_display:display|Mux4               ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |digital_thermometer|seg_display:display|Mux3               ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd|Selector2   ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; No         ; |digital_thermometer|i2c_reader:lm75_i2c|Selector2          ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; No         ; |digital_thermometer|i2c_reader:lm75_i2c|Selector7          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd|tens_reg[0] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd|num_reg[4]  ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |digital_thermometer|i2c_reader:lm75_i2c|index_reg[1]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |digital_thermometer|seg_display:display|Mux2               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |digital_thermometer|seg_display:display|Mux1               ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |digital_thermometer|dec_to_bcd:i2c_data_to_bcd|Selector0   ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; No         ; |digital_thermometer|i2c_reader:lm75_i2c|Selector4          ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; No         ; |digital_thermometer|i2c_reader:lm75_i2c|Selector8          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
@@ -333,18 +333,18 @@ Encoding Type:  One-Hot
 ;     ENA CLR SCLR      ; 5                           ;
 ;     ENA CLR SLD       ; 4                           ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 231                         ;
+; cycloneiii_lcell_comb ; 232                         ;
 ;     arith             ; 63                          ;
 ;         2 data inputs ; 61                          ;
 ;         3 data inputs ; 2                           ;
-;     normal            ; 168                         ;
+;     normal            ; 169                         ;
 ;         1 data inputs ; 14                          ;
-;         2 data inputs ; 32                          ;
-;         3 data inputs ; 31                          ;
-;         4 data inputs ; 91                          ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 37                          ;
+;         4 data inputs ; 87                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.58                        ;
+; Average LUT depth     ; 3.57                        ;
 +-----------------------+-----------------------------+
 
 
@@ -363,7 +363,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 14 17:23:29 2024
+    Info: Processing started: Tue May 21 15:52:20 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off digital_thermometer -c digital_thermometer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -390,10 +390,6 @@ Info (12129): Elaborating entity "i2c_reader" using architecture "A:i2c_reader_r
 Info (12129): Elaborating entity "dec_to_bcd" using architecture "A:dec_to_bcd_rtl" for hierarchy "dec_to_bcd:i2c_data_to_bcd" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/digital_thermometer.vhd Line: 62
 Info (12129): Elaborating entity "seg_display" using architecture "A:seg_display_rtl" for hierarchy "seg_display:display" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/digital_thermometer.vhd Line: 66
 Info (12129): Elaborating entity "seg_rom" using architecture "A:seg_rom_rtl" for hierarchy "seg_display:display|seg_rom:rom" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/seg_display.vhd Line: 99
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "seg_display:display|seg_rom:rom|rom" is uninferred due to inappropriate RAM size File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/src/lib/seg_rom.vhd Line: 15
-Warning (113028): 5 out of 16 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/db/digital_thermometer.ram0_seg_rom_bebb4cdc.hdl.mif Line: 1
-    Warning (113027): Addresses ranging from 11 to 15 are not initialized File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P02_7_Segment_LM75/db/digital_thermometer.ram0_seg_rom_bebb4cdc.hdl.mif Line: 1
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
@@ -402,15 +398,15 @@ Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal 
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 252 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 253 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 13 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 236 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info (21061): Implemented 237 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4771 megabytes
-    Info: Processing ended: Tue May 14 17:23:42 2024
-    Info: Elapsed time: 00:00:13
+    Info: Processing ended: Tue May 21 15:52:34 2024
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:28
 
 
