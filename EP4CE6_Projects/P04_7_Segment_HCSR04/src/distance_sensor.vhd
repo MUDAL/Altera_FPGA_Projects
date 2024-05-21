@@ -66,7 +66,7 @@ begin
       end if;
    end process;
    
-   -- METHOD 2: Multiplication through shift operations
+   -- Multiplication using shift operations
    -- Multiplication factor = 172 i.e. 128 + 32 + 8 + 4
    
    p_uns <= unsigned(pulse);
