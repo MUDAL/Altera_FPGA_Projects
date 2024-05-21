@@ -17,9 +17,8 @@ entity dec_to_bcd is
 end dec_to_bcd;
 
 architecture dec_to_bcd_rtl of dec_to_bcd is
-   --Maximum pulse width = 23200uS (dMax x c = 400 x 58)
-   --dMax = maximum distance = 400cm and c = constant (Check datasheet)
-   --Distance = pulse width / 58
+   --Maximum pulse width = 23200uS
+   --Distance = pulse width / 58 (check datasheet)
    --To avoid division and extensive FPGA resource utilization, 
    --I have taken 1/58 as 172. 
    --Maximum distance is approximately = 23200 * 172 = 3,990,400.

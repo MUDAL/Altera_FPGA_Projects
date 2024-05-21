@@ -1,5 +1,5 @@
 Fitter report for seg_display
-Tue May 21 19:39:17 2024
+Tue May 21 20:30:58 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue May 21 19:39:17 2024       ;
+; Fitter Status                      ; Successful - Tue May 21 20:30:58 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; seg_display                                 ;
 ; Top-level Entity Name              ; seg_display                                 ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.0%      ;
+;     Processor 2            ;   1.1%      ;
 +----------------------------+-------------+
 
 
@@ -629,20 +629,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                               ;
-+----------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                             ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Equal0~4                         ; LCCOMB_X22_Y14_N18 ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clk                              ; PIN_23             ; 109     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; rst_n                            ; PIN_25             ; 109     ; Async. clear ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; seg_counter:counter_1|digit[3]~0 ; LCCOMB_X25_Y11_N8  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; seg_counter:counter_1|rise~2     ; LCCOMB_X24_Y11_N30 ; 60      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; seg_counter:counter_2|digit[3]~5 ; LCCOMB_X26_Y10_N8  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; seg_counter:counter_3|digit[3]~5 ; LCCOMB_X22_Y9_N18  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; seg_counter:counter_4|digit[3]~5 ; LCCOMB_X24_Y8_N2   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+----------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                    ;
++---------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                  ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Equal0~4                              ; LCCOMB_X22_Y14_N18 ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clk                                   ; PIN_23             ; 109     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; rst_n                                 ; PIN_25             ; 109     ; Async. clear ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; seg_counter:counter_1|digit_counter~0 ; LCCOMB_X25_Y11_N8  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; seg_counter:counter_1|rise~2          ; LCCOMB_X24_Y11_N30 ; 60      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; seg_counter:counter_2|digit_counter~2 ; LCCOMB_X26_Y10_N8  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; seg_counter:counter_3|digit_counter~2 ; LCCOMB_X22_Y9_N18  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; seg_counter:counter_4|digit_counter~2 ; LCCOMB_X24_Y8_N2   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
++---------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------+
@@ -962,7 +962,7 @@ Info (176353): Automatically promoted node rst_n~input (placed in PIN 25 (CLK3, 
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -975,7 +975,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.21 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -987,10 +987,10 @@ Warning (169177): 2 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin rst_n uses I/O standard 3.3-V LVTTL at 25 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P01_7_Segment/src/seg_display.vhd Line: 19
 Info (144001): Generated suppressed messages file L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P01_7_Segment/output_files/seg_display.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5224 megabytes
-    Info: Processing ended: Tue May 21 19:39:18 2024
+    Info: Peak virtual memory: 5223 megabytes
+    Info: Processing ended: Tue May 21 20:30:59 2024
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +----------------------------+

@@ -14,14 +14,14 @@ end seg_counter;
 
 architecture seg_counter_rtl of seg_counter is
    -- System clock: 50 MHz 
-   -- 10 kHz clock: 5000 cycles of system clock
+   -- 1 period of 10 kHz clock: 5000 cycles of system clock
    -- 10,000 periods of 10 kHz clock = 1 second
    -- Half cycle for 10 kHz: 2500
-   -- Maximum clock cycles for a digit = 10,000 x place value
+   -- Maximum clock cycles (10 kHz) for a digit = 10,000 x place value
    constant HALF_CYCLE: integer := 2499;
-   constant CMAX_10KHZ: integer := (PLACE_VALUE * 10_000) - 1;
+   constant DIGIT_CLKS: integer := (PLACE_VALUE * 10_000) - 1;
    signal cnt1: integer range 0 to HALF_CYCLE;
-   signal cnt2: integer range 0 to CMAX_10KHZ;
+   signal cnt2: integer range 0 to DIGIT_CLKS;
    signal tick: std_logic; 
    signal rise: std_logic; -- Rising edge of 10 kHz clock
    signal digit: unsigned(3 downto 0);
@@ -49,7 +49,7 @@ begin
          cnt2 <= 0;
       elsif rising_edge(clk) then
          if rise = '1' then
-            if cnt2 = CMAX_10KHZ then
+            if cnt2 = DIGIT_CLKS then
                cnt2 <= 0;
             else
                cnt2 <= cnt2 + 1;
@@ -65,14 +65,12 @@ begin
       if rst_n = '0' then
          digit <= (others => '0');     
       elsif rising_edge(clk) then
-         if rise = '1' then
-            if cnt2 = CMAX_10KHZ then
-               if digit = to_unsigned(9,digit'length) then
-                  digit <= (others => '0');
-               else
-                  digit <= digit + 1;
-               end if;        
-            end if;
+         if rise = '1' and cnt2 = DIGIT_CLKS then
+            if digit = to_unsigned(9,digit'length) then
+               digit <= (others => '0');
+            else
+               digit <= digit + 1;
+            end if;        
          end if;
       end if;
    end process;
