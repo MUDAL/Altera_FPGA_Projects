@@ -1,5 +1,5 @@
 Flow report for seg_display
-Wed Apr 24 19:08:05 2024
+Tue May 21 19:39:26 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Apr 24 19:08:05 2024       ;
+; Flow Status                        ; Successful - Tue May 21 19:39:26 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; seg_display                                 ;
 ; Top-level Entity Name              ; seg_display                                 ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 217 / 6,272 ( 3 % )                         ;
-;     Total combinational functions  ; 215 / 6,272 ( 3 % )                         ;
-;     Dedicated logic registers      ; 134 / 6,272 ( 2 % )                         ;
-; Total registers                    ; 134                                         ;
+; Total logic elements               ; 211 / 6,272 ( 3 % )                         ;
+;     Total combinational functions  ; 209 / 6,272 ( 3 % )                         ;
+;     Dedicated logic registers      ; 109 / 6,272 ( 2 % )                         ;
+; Total registers                    ; 109                                         ;
 ; Total pins                         ; 13 / 92 ( 14 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
-; Total PLLs                         ; 1 / 2 ( 50 % )                              ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/24/2024 19:07:39 ;
+; Start date & time ; 05/21/2024 19:38:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; seg_display         ;
 +-------------------+---------------------+
@@ -76,21 +76,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 190090210168440.171398205911448        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 190090210168440.171631673601912        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_ENTRY_SYNTHESIS_TOOL     ; Custom                                 ; <None>        ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
 ; EDA_INPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_design_synthesis              ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation                    ;
+; EDA_OUTPUT_DATA_FORMAT              ; None                                   ; --            ; --          ; eda_simulation                    ;
 ; EDA_RUN_TOOL_AUTOMATICALLY          ; Off                                    ; --            ; --          ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --                                ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                                ;
-; MISC_FILE                           ; IP/pll/pll.cmp                         ; --            ; --          ; --                                ;
-; MISC_FILE                           ; IP/pll/pll.ppf                         ; --            ; --          ; --                                ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --                                ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
@@ -106,12 +103,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4797 MB             ; 00:00:28                           ;
-; Fitter               ; 00:00:04     ; 1.0                     ; 5223 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4677 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4728 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4634 MB             ; 00:00:01                           ;
-; Total                ; 00:00:21     ; --                      ; --                  ; 00:00:37                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4783 MB             ; 00:00:24                           ;
+; Fitter               ; 00:00:06     ; 1.0                     ; 5224 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4675 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4729 MB             ; 00:00:02                           ;
+; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:33                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -124,7 +120,6 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; LAPTOP-OS6SPMFM  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; LAPTOP-OS6SPMFM  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; LAPTOP-OS6SPMFM  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-OS6SPMFM  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

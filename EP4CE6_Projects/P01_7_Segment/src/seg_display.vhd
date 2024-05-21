@@ -9,9 +9,10 @@ library work;
 --Logic low:  Activates the LEDs.
 --Logic high: Deactivates the LEDs.
 --System clock (clk): 50MHz.
---PLL clock output: 10KHz (to drive the 4 counters for each digit).
---10,000 system clock cycles (counter, shift register, and ..................
+--10KHz (to drive the 4 counters for each digit).
+--10,000 system clock cycles (counter, shift register, and ........
 --ROM index counter) to switch from one digit to another.
+
 --Asynchronous reset (active low).
 
 entity seg_display is
@@ -28,8 +29,7 @@ architecture seg_display_rtl of seg_display is
    signal count: unsigned(15 downto 0);
    signal shift_reg: std_logic_vector(3 downto 0);
    signal digit_index: unsigned(2 downto 0);
-begin
-   
+begin   
    --Enables time-based digit switching
    digit_switching_counter: process(rst_n,clk)
    begin
@@ -77,22 +77,22 @@ begin
    --Counter for 'units' digit
    counter_1: entity work.seg_counter(seg_counter_rtl)
    generic map(PLACE_VALUE => 1)
-   port map(rst_n => rst_n, clk => clk, en => '1', digit_out => digit(0));
+   port map(rst_n => rst_n, clk => clk, digit_out => digit(0));
    
    --Counter for 'tens' digit          
    counter_2: entity work.seg_counter(seg_counter_rtl)
    generic map(PLACE_VALUE => 10)
-   port map(rst_n => rst_n, clk => clk, en => '1', digit_out => digit(1));
+   port map(rst_n => rst_n, clk => clk, digit_out => digit(1));
    
    --Counter for 'hundreds' digit         
    counter_3: entity work.seg_counter(seg_counter_rtl)
    generic map(PLACE_VALUE => 100)
-   port map(rst_n => rst_n, clk => clk, en => '1', digit_out => digit(2));
+   port map(rst_n => rst_n, clk => clk, digit_out => digit(2));
    
    --Counter for 'thousands' digit     
    counter_4: entity work.seg_counter(seg_counter_rtl)
    generic map(PLACE_VALUE => 1000)
-   port map(rst_n => rst_n, clk => clk, en => '1', digit_out => digit(3)); 
+   port map(rst_n => rst_n, clk => clk, digit_out => digit(3)); 
    
    --Converts a digit's current value to signals to drive the display
    rom: entity work.seg_rom(seg_rom_rtl)

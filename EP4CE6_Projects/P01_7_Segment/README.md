@@ -19,8 +19,9 @@
 - When the Programmer window opens, load the demo project into the FPGA by clicking ``Start``
 
 ## Project file structure  
-- The **VHDL** design files are located in the **src** directory  
-- The top-level design is the **seg_display.vhd**
+- The **VHDL** design files are located in the **src** and **lib** directories    
+- The top-level design is the **seg_display.vhd**  
+- The other modules or design files are located in the **lib** directory  
 
 ## Video demo  
 [Demo of 0000-9999 counter](https://drive.google.com/file/d/18HfrSjUTn52hrJCpAqxuSTBJbvyD67L0/view?usp=sharing)  

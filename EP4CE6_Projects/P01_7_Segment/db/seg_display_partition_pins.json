@@ -48,11 +48,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "rst_n",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "rst_n",
 					"strict" : false
 				}
 			]

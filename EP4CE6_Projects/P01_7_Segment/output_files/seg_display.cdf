@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P1_7_Segment/output_files/") File("seg_display.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6E22) Path("L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P01_7_Segment/output_files/") File("seg_display.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
