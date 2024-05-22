@@ -1,5 +1,5 @@
 Fitter report for rgb_display
-Tue May 21 00:48:21 2024
+Wed May 22 05:49:30 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue May 21 00:48:21 2024       ;
+; Fitter Status                      ; Successful - Wed May 22 05:49:30 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; rgb_display                                 ;
 ; Top-level Entity Name              ; rgb_display                                 ;
@@ -164,7 +164,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.9%      ;
+;     Processor 2            ;   1.0%      ;
 +----------------------------+-------------+
 
 
@@ -1044,7 +1044,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.12 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1057,9 +1057,9 @@ Warning (169177): 3 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
 Info (144001): Generated suppressed messages file L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/output_files/rgb_display.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 5224 megabytes
-    Info: Processing ended: Tue May 21 00:48:22 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Processing ended: Wed May 22 05:49:31 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +----------------------------+

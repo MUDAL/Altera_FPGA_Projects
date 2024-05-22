@@ -15,8 +15,10 @@ architecture rgb_display_behav of rgb_display_tb is
    -- configuration, hence total number of bits = 1228800 (153600 bytes).
    constant TOTAL_BYTES: integer := 153600;
    constant TEST_BYTES: integer := 10; -- To prevent long simulation
-   constant CLK_DIV: integer := 25;
+   constant CLK_DIV: integer := 10;
    constant PLL_PERIOD: time := CLK_DIV * CLK_PERIOD;
+   constant FIFO_AW: integer := 6;  -- Address Width
+   constant FIFO_DW: integer := 2;  -- Data Width  
    ------------------------------------------------------------------
    constant BAUD_RATE: integer := 9600;
    constant SYS_FREQ: integer := 50_000_000;
@@ -39,7 +41,9 @@ begin
    uut: entity work.rgb_display(rgb_display_rtl)
    generic map(BAUD_RATE => BAUD_RATE,
                SYS_FREQ => SYS_FREQ,
-               CLK_DIV => CLK_DIV)
+               CLK_DIV => CLK_DIV,
+               FIFO_AW => FIFO_AW,
+               FIFO_DW => FIFO_DW)
    port map(rst_n => rst_n,
             clk => clk,
             data_in => data_in,
