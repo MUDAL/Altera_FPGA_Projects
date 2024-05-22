@@ -69,7 +69,7 @@ System specs:
 ## Helpful resources   
 - [ILITEK ILI9341 Specifications Document](https://drive.google.com/file/d/1omF5Pk9mfnfzifMGQ6iuK6_T9_BTqp32/view?usp=sharing)
 - FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P.Chu (Check timing diagrams for UART)   
-- RTL Hardware Design Using VHDL - Pong P. Chu (Check how FIFO buffers work. Apply the knowledge of register-based FIFOs)   
+- RTL Hardware Design Using VHDL - Pong P. Chu (Check how FIFO buffers work)   
 - [Intel Quartus Prime User Guide: Design Recommendations](https://drive.google.com/file/d/10ceeMwrubd7WwAiYCywm3BV2gu6W5p9I/view?usp=sharing)  
 - [Altera: Quartus II Handbook, Volume 3. Verification](https://drive.google.com/file/d/1oJjXx_n8-xdQk2OVQpPyZaf3n0bG2LTP/view?usp=sharing) - A very helpful document from Altera that allowed me to simulate this project in ModelSim. I wasn't able to simulate the top level design initially because of the Altera PLL IP. After searching online (forums) and discovering this document, I was able to compile the top level design (with an instantiated PLL IP) in ModelSim and run the simulation for it. In order to compile and simulate designs that use Altera IP cores, kindly check ``Chapter 1: Mentor Graphics, ModelSim Support, Simulating VHDL Designs. Pg 1-5``.
 - [Project 10](https://github.com/MUDAL/Altera_FPGA_Projects/tree/main/EP4CE6_Projects/P10_ILI9341_HC06)     
