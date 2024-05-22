@@ -5,7 +5,7 @@ that should be displayed on the ILI9341 module. There are four colours that can 
 screen. These are: red, green, blue, and white.   
 - When ``R`` or ``r`` is received, the screen will be filled with red.    
 - When ``G`` or ``g`` is received, the screen will be filled with green.   
-- When ``B`` or ``b`` is received, the scrren will be filled with blue.   
+- When ``B`` or ``b`` is received, the screen will be filled with blue.   
 - When characters other than the aforementioned ones are received, the screen will be filled with white.   
 
 Unlike Project 10, this design uses a RAM-based Synchronous FIFO buffer to ensure that data isn't lost whenever the ``UART RX`` module transmits data faster than the ``SPI TX`` module can receive and decode.
