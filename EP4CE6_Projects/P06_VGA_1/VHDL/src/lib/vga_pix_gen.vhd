@@ -29,6 +29,11 @@ begin
    port map(clk => clk, en => en, address => std_logic_vector(addr_reg), 
             data_out => data_out);
 
+   pix_x <= unsigned(pixel_x);
+   pix_y <= unsigned(pixel_y);
+   valid_img <= '1' when pix_x < IMG_WIDTH and pix_y < IMG_HEIGHT else '0';   
+   en <= valid_img and p_tick;            
+            
    address_register: process(rst_n,clk)
    begin
       if rst_n = '0' then
@@ -38,26 +43,18 @@ begin
       end if;  
    end process;
    
-   --Increment address using pixel tick rate (25 MHz)
-   address_adder: process(valid_img,addr_reg,p_tick)
+   --Increment address using pixel tick rate and valid image boundary
+   address_adder: process(en,addr_reg)
    begin
       addr_next <= addr_reg;
-      if valid_img = '1' then
-         if addr_reg < to_unsigned(ROM_DEPTH,addr_reg'length) then
-            if p_tick = '1' then
-               addr_next <= addr_reg + 1;
-            end if;
+      if en = '1' then
+         if addr_reg < to_unsigned(ROM_DEPTH - 1,addr_reg'length) then
+            addr_next <= addr_reg + 1;
          else
             addr_next <= (others => '0');
          end if;
       end if;  
    end process;
-   
-   pix_x <= unsigned(pixel_x);
-   pix_y <= unsigned(pixel_y);
-   
-   en <= valid_img and p_tick;
-   valid_img <= '1' when pix_x < IMG_WIDTH and pix_y < IMG_HEIGHT else '0';
                       
    display: process(valid_pixel,valid_img,data_out)
    begin

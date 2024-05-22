@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga_main
-Wed May 01 22:20:32 2024
+Wed May 22 00:57:41 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 01 22:20:32 2024       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 22 00:57:41 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; vga_main                                    ;
 ; Top-level Entity Name              ; vga_main                                    ;
@@ -202,9 +202,9 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Total combinational functions               ; 95        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 37        ;
-;     -- 3 input functions                    ; 10        ;
-;     -- <=2 input functions                  ; 48        ;
+;     -- 4 input functions                    ; 38        ;
+;     -- 3 input functions                    ; 8         ;
+;     -- <=2 input functions                  ; 49        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
 ;     -- normal mode                          ; 60        ;
@@ -378,17 +378,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR SCLR      ; 18                          ;
 ; cycloneiii_lcell_comb ; 95                          ;
 ;     arith             ; 35                          ;
-;         2 data inputs ; 34                          ;
-;         3 data inputs ; 1                           ;
+;         2 data inputs ; 35                          ;
 ;     normal            ; 60                          ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 10                          ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 37                          ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 38                          ;
 ; cycloneiii_ram_block  ; 22                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.21                        ;
+; Average LUT depth     ; 3.23                        ;
 +-----------------------+-----------------------------+
 
 
@@ -407,7 +406,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 01 22:20:19 2024
+    Info: Processing started: Wed May 22 00:57:28 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga_main -c vga_main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -420,8 +419,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file src/lib
 Info (12021): Found 1 design units, including 0 entities, in source file src/lib/pkgs.vhd
     Info (12022): Found design unit 1: img_pkg File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/VGA_Part_1/src/lib/pkgs.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/vga_sync.vhd
-    Info (12022): Found design unit 1: vga_sync-vga_sync_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/VGA_Part_1/src/lib/vga_sync.vhd Line: 18
-    Info (12023): Found entity 1: vga_sync File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/VGA_Part_1/src/lib/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: vga_sync-vga_sync_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/VGA_Part_1/src/lib/vga_sync.vhd Line: 20
+    Info (12023): Found entity 1: vga_sync File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/VGA_Part_1/src/lib/vga_sync.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/bitmap_mem.vhd
     Info (12022): Found design unit 1: bitmap_mem-bitmap_mem_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/VGA_Part_1/src/lib/bitmap_mem.vhd Line: 17
     Info (12023): Found entity 1: bitmap_mem File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/VGA_Part_1/src/lib/bitmap_mem.vhd Line: 10
@@ -467,9 +466,9 @@ Info (21057): Implemented 131 device resources after synthesis - the final resou
     Info (21061): Implemented 102 logic cells
     Info (21064): Implemented 22 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4794 megabytes
-    Info: Processing ended: Wed May 01 22:20:32 2024
+    Info: Peak virtual memory: 4795 megabytes
+    Info: Processing ended: Wed May 22 00:57:41 2024
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Total CPU time (on all processors): 00:00:25
 
 
