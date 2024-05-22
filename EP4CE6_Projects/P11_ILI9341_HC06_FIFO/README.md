@@ -8,15 +8,14 @@ screen. These are: red, green, blue, and white.
 - When ``B`` or ``b`` is received, the scrren will be filled with blue.   
 - When characters other than the aforementioned ones are received, the screen will be filled with white.   
 
-Unlike ``Project 10``, this design uses a RAM-based Synchronous FIFO buffer to ensure that data isn't lost  
-whenever the ``UART RX`` module transmits data faster than the ``SPI TX`` module can receive and decode.
+Unlike Project 10, this design uses a RAM-based Synchronous FIFO buffer to ensure that data isn't lost whenever the ``UART RX`` module transmits data faster than the ``SPI TX`` module can receive and decode.
   
 The FIFO consists of two parts:  
 1. The memory section (RAM)   
 2. The controller (address and status signal generator)  
 
-The ``Intel Quartus Prime User Guide: Design Recommendations`` was referenced in order to correctly infer a RAM. 
-The ``Single-Clock, Simple Dual-Port Synchronous RAM with Old Data Read-During-Write Behaviour`` was inferred.   
+The ``Intel Quartus Prime User Guide: Design Recommendations`` was referenced in order to correctly infer a RAM.   
+The ``Single-Clock, Simple Dual-Port Synchronous RAM with Old Data Read-During-Write Behaviour`` was inferred.    
 
 System specs:     
 - Main clock: 50 MHz       
@@ -53,15 +52,16 @@ System specs:
 
 ## Pinouts  
 - Check the ``Location`` column in the image below for the pin mappings used in this project.      
-![Screenshot (527)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/6c0cce9a-9c37-49e1-9f8b-279e9a46faed)  
+![Screenshot (527)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/14a0cb04-4df8-407e-a317-71a74a7a0157)  
 
 ## Decoding SPI (ILI9341) and UART (HC06) with a Logic Analyzer        
 ### 1. Configuring the registers of the ILI9341 using data/command sent via SPI from the FPGA     
-![Screenshot (528)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/0282292f-eb6c-4044-9875-005c0e704c82)   
-![Screenshot (529)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/549daa4c-344e-4ed1-b3dc-109f7c86737c)    
+![Screenshot (528)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/7dd359b2-165c-475a-abd1-dd0fb038b282)  
+![Screenshot (529)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/aa73fe3b-c8a1-4cfe-a5c4-5379f2561e1f)  
+
 ### 2. FPGA receives UART command (``R``) and sends pixel data (Red) to the ILI9341 via SPI   
-![Screenshot (530)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/895cb303-5fae-438e-8b9e-c1635fcc4015)   
-![Screenshot (531)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/0c286f7f-25bb-4f35-9ee9-a1aca96e0abe)    
+![Screenshot (530)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/9d5f9ccf-91c2-427a-9c4a-73b2e9d2ca31)  
+![Screenshot (531)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/2ebbc1a2-6c3f-42cb-a08e-cec818bfb2ee)  
 
 ## Demo         
 [TO BE ADDED]    
@@ -72,5 +72,5 @@ System specs:
 - RTL Hardware Design Using VHDL - Pong P. Chu (Check how FIFO buffers work. Apply the knowledge of register-based FIFOs)   
 - [Intel Quartus Prime User Guide: Design Recommendations](https://drive.google.com/file/d/10ceeMwrubd7WwAiYCywm3BV2gu6W5p9I/view?usp=sharing)  
 - [Altera: Quartus II Handbook, Volume 3. Verification](https://drive.google.com/file/d/1oJjXx_n8-xdQk2OVQpPyZaf3n0bG2LTP/view?usp=sharing) - A very helpful document from Altera that allowed me to simulate this project in ModelSim. I wasn't able to simulate the top level design initially because of the Altera PLL IP. After searching online (forums) and discovering this document, I was able to compile the top level design (with an instantiated PLL IP) in ModelSim and run the simulation for it. In order to compile and simulate designs that use Altera IP cores, kindly check ``Chapter 1: Mentor Graphics, ModelSim Support, Simulating VHDL Designs. Pg 1-5``.
-- [Project 10](https://github.com/MUDAL/Altera_FPGA_Projects/tree/main/EP4CE6_Projects/P10_ILI9341_HC06)    
+- [Project 10](https://github.com/MUDAL/Altera_FPGA_Projects/tree/main/EP4CE6_Projects/P10_ILI9341_HC06)     
 
