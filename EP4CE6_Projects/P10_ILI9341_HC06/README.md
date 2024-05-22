@@ -5,7 +5,7 @@ that should be displayed on the ILI9341 module. There are four colours that can 
 screen. These are: red, green, blue, and white.   
 - When ``R`` or ``r`` is received, the screen will be filled with red.    
 - When ``G`` or ``g`` is received, the screen will be filled with green.   
-- When ``B`` or ``b`` is received, the scrren will be filled with blue.   
+- When ``B`` or ``b`` is received, the screen will be filled with blue.   
 - When characters other than the aforementioned ones are received, the screen will be filled with white.   
 
 System specs:     
