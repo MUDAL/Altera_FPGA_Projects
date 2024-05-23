@@ -113,7 +113,7 @@ begin
    valid_pixel <= '1' when (h_count_reg < HD) and (v_count_reg < VD) 
           else    '0';
       
-   --output signals
+   -- output signals
    hsync <= h_sync_reg;
    vsync <= v_sync_reg;
    pixel_x <= std_logic_vector(to_unsigned(h_count_reg,pixel_x'length));

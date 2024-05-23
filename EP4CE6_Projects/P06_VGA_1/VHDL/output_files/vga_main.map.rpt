@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga_main
-Wed May 22 00:57:41 2024
+Thu May 23 20:34:57 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 22 00:57:41 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 23 20:34:57 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; vga_main                                    ;
 ; Top-level Entity Name              ; vga_main                                    ;
@@ -396,7 +396,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -406,7 +406,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 22 00:57:28 2024
+    Info: Processing started: Thu May 23 20:34:40 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga_main -c vga_main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -466,9 +466,9 @@ Info (21057): Implemented 131 device resources after synthesis - the final resou
     Info (21061): Implemented 102 logic cells
     Info (21064): Implemented 22 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4795 megabytes
-    Info: Processing ended: Wed May 22 00:57:41 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 4786 megabytes
+    Info: Processing ended: Thu May 23 20:34:57 2024
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:27
 
 

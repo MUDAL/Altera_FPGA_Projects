@@ -1,5 +1,5 @@
 Timing Analyzer report for vga_main
-Wed May 22 00:57:54 2024
+Thu May 23 20:35:16 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -104,7 +104,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   5.0%      ;
+;     Processor 2            ;   4.6%      ;
 +----------------------------+-------------+
 
 
@@ -576,9 +576,9 @@ No paths to report.
 ; 0.674 ; vga_pix_gen:pixel_gen|addr_reg[0]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a5~porta_address_reg0  ; clk          ; clk         ; 0.000        ; 0.430      ; 1.334      ;
 ; 0.700 ; vga_pix_gen:pixel_gen|addr_reg[15]    ; vga_pix_gen:pixel_gen|addr_reg[15]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.967      ;
 ; 0.705 ; vga_sync:vga_sync_unit|h_count_reg[1] ; vga_sync:vga_sync_unit|h_count_reg[1]                                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
-; 0.706 ; vga_sync:vga_sync_unit|h_count_reg[3] ; vga_sync:vga_sync_unit|h_count_reg[3]                                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
 ; 0.706 ; vga_pix_gen:pixel_gen|addr_reg[8]     ; vga_pix_gen:pixel_gen|addr_reg[8]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.974      ;
 ; 0.706 ; vga_sync:vga_sync_unit|v_count_reg[7] ; vga_sync:vga_sync_unit|v_count_reg[7]                                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; vga_sync:vga_sync_unit|h_count_reg[3] ; vga_sync:vga_sync_unit|h_count_reg[3]                                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
 ; 0.708 ; vga_pix_gen:pixel_gen|addr_reg[16]    ; vga_pix_gen:pixel_gen|addr_reg[16]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
 ; 0.708 ; vga_sync:vga_sync_unit|h_count_reg[4] ; vga_sync:vga_sync_unit|h_count_reg[4]                                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
 ; 0.711 ; vga_sync:vga_sync_unit|h_count_reg[2] ; vga_sync:vga_sync_unit|h_count_reg[2]                                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
@@ -588,10 +588,10 @@ No paths to report.
 ; 0.713 ; vga_pix_gen:pixel_gen|addr_reg[5]     ; vga_pix_gen:pixel_gen|addr_reg[5]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.981      ;
 ; 0.714 ; vga_pix_gen:pixel_gen|addr_reg[6]     ; vga_pix_gen:pixel_gen|addr_reg[6]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.982      ;
 ; 0.714 ; vga_pix_gen:pixel_gen|addr_reg[7]     ; vga_pix_gen:pixel_gen|addr_reg[7]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.982      ;
-; 0.715 ; vga_pix_gen:pixel_gen|addr_reg[11]    ; vga_pix_gen:pixel_gen|addr_reg[11]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.982      ;
 ; 0.715 ; vga_pix_gen:pixel_gen|addr_reg[1]     ; vga_pix_gen:pixel_gen|addr_reg[1]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.983      ;
-; 0.716 ; vga_sync:vga_sync_unit|h_count_reg[7] ; vga_sync:vga_sync_unit|h_count_reg[7]                                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.983      ;
+; 0.715 ; vga_pix_gen:pixel_gen|addr_reg[11]    ; vga_pix_gen:pixel_gen|addr_reg[11]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.982      ;
 ; 0.716 ; vga_sync:vga_sync_unit|v_count_reg[5] ; vga_sync:vga_sync_unit|v_count_reg[5]                                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.983      ;
+; 0.716 ; vga_sync:vga_sync_unit|h_count_reg[7] ; vga_sync:vga_sync_unit|h_count_reg[7]                                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.983      ;
 ; 0.717 ; vga_pix_gen:pixel_gen|addr_reg[13]    ; vga_pix_gen:pixel_gen|addr_reg[13]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.984      ;
 ; 0.717 ; vga_pix_gen:pixel_gen|addr_reg[14]    ; vga_pix_gen:pixel_gen|addr_reg[14]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.984      ;
 ; 0.719 ; vga_pix_gen:pixel_gen|addr_reg[2]     ; vga_pix_gen:pixel_gen|addr_reg[2]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.987      ;
@@ -601,16 +601,16 @@ No paths to report.
 ; 0.730 ; vga_pix_gen:pixel_gen|addr_reg[3]     ; vga_pix_gen:pixel_gen|addr_reg[3]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.998      ;
 ; 0.734 ; vga_pix_gen:pixel_gen|addr_reg[9]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a13~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.451      ; 1.415      ;
 ; 0.735 ; vga_sync:vga_sync_unit|h_count_reg[0] ; vga_sync:vga_sync_unit|h_count_reg[0]                                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 1.002      ;
-; 0.736 ; vga_pix_gen:pixel_gen|addr_reg[9]     ; vga_pix_gen:pixel_gen|addr_reg[9]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.003      ;
 ; 0.736 ; vga_pix_gen:pixel_gen|addr_reg[4]     ; vga_pix_gen:pixel_gen|addr_reg[4]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 1.004      ;
+; 0.736 ; vga_pix_gen:pixel_gen|addr_reg[9]     ; vga_pix_gen:pixel_gen|addr_reg[9]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.003      ;
 ; 0.740 ; vga_pix_gen:pixel_gen|addr_reg[10]    ; vga_pix_gen:pixel_gen|addr_reg[10]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.007      ;
 ; 0.743 ; vga_pix_gen:pixel_gen|addr_reg[0]     ; vga_pix_gen:pixel_gen|addr_reg[0]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 1.011      ;
 ; 0.749 ; vga_pix_gen:pixel_gen|addr_reg[11]    ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a18~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.445      ; 1.424      ;
 ; 0.751 ; vga_pix_gen:pixel_gen|addr_reg[11]    ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a14~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.431      ; 1.412      ;
 ; 0.770 ; vga_pix_gen:pixel_gen|addr_reg[5]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a7~porta_address_reg0  ; clk          ; clk         ; 0.000        ; 0.439      ; 1.439      ;
 ; 0.774 ; vga_pix_gen:pixel_gen|addr_reg[9]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a10~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.450      ; 1.454      ;
-; 0.783 ; vga_pix_gen:pixel_gen|addr_reg[10]    ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a13~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.451      ; 1.464      ;
 ; 0.783 ; vga_pix_gen:pixel_gen|addr_reg[6]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a9~porta_address_reg0  ; clk          ; clk         ; 0.000        ; 0.443      ; 1.456      ;
+; 0.783 ; vga_pix_gen:pixel_gen|addr_reg[10]    ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a13~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.451      ; 1.464      ;
 ; 0.784 ; vga_pix_gen:pixel_gen|addr_reg[5]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a13~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.439      ; 1.453      ;
 ; 0.786 ; vga_pix_gen:pixel_gen|addr_reg[12]    ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a6~porta_address_reg0  ; clk          ; clk         ; 0.000        ; 0.451      ; 1.467      ;
 ; 0.790 ; vga_pix_gen:pixel_gen|addr_reg[5]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a10~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.438      ; 1.458      ;
@@ -627,8 +627,8 @@ No paths to report.
 ; 0.849 ; vga_pix_gen:pixel_gen|addr_reg[7]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a19~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.443      ; 1.522      ;
 ; 0.851 ; vga_pix_gen:pixel_gen|addr_reg[7]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a10~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.438      ; 1.519      ;
 ; 0.852 ; vga_pix_gen:pixel_gen|addr_reg[6]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a12~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.430      ; 1.512      ;
-; 0.853 ; vga_pix_gen:pixel_gen|addr_reg[9]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a12~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.432      ; 1.515      ;
 ; 0.853 ; vga_pix_gen:pixel_gen|addr_reg[5]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a18~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.443      ; 1.526      ;
+; 0.853 ; vga_pix_gen:pixel_gen|addr_reg[9]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a12~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.432      ; 1.515      ;
 ; 0.861 ; vga_pix_gen:pixel_gen|addr_reg[3]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a11~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.427      ; 1.518      ;
 ; 0.862 ; vga_pix_gen:pixel_gen|addr_reg[7]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a7~porta_address_reg0  ; clk          ; clk         ; 0.000        ; 0.439      ; 1.531      ;
 ; 0.863 ; vga_pix_gen:pixel_gen|addr_reg[7]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a18~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.443      ; 1.536      ;
@@ -642,19 +642,19 @@ No paths to report.
 ; 0.883 ; vga_pix_gen:pixel_gen|addr_reg[4]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a12~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.430      ; 1.543      ;
 ; 0.884 ; vga_pix_gen:pixel_gen|addr_reg[2]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a13~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.439      ; 1.553      ;
 ; 0.886 ; vga_pix_gen:pixel_gen|addr_reg[8]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a9~porta_address_reg0  ; clk          ; clk         ; 0.000        ; 0.443      ; 1.559      ;
-; 0.887 ; vga_pix_gen:pixel_gen|addr_reg[10]    ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a12~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.432      ; 1.549      ;
 ; 0.887 ; vga_pix_gen:pixel_gen|addr_reg[3]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a5~porta_address_reg0  ; clk          ; clk         ; 0.000        ; 0.430      ; 1.547      ;
+; 0.887 ; vga_pix_gen:pixel_gen|addr_reg[10]    ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a12~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.432      ; 1.549      ;
 ; 0.891 ; vga_pix_gen:pixel_gen|addr_reg[8]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a10~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.438      ; 1.559      ;
 ; 0.891 ; vga_pix_gen:pixel_gen|addr_reg[3]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a9~porta_address_reg0  ; clk          ; clk         ; 0.000        ; 0.443      ; 1.564      ;
 ; 0.893 ; vga_pix_gen:pixel_gen|addr_reg[8]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a4~porta_address_reg0  ; clk          ; clk         ; 0.000        ; 0.437      ; 1.560      ;
 ; 0.895 ; vga_pix_gen:pixel_gen|addr_reg[3]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a19~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.443      ; 1.568      ;
-; 0.901 ; vga_pix_gen:pixel_gen|addr_reg[10]    ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a20~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.429      ; 1.560      ;
 ; 0.901 ; vga_pix_gen:pixel_gen|addr_reg[8]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a19~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.443      ; 1.574      ;
+; 0.901 ; vga_pix_gen:pixel_gen|addr_reg[10]    ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a20~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.429      ; 1.560      ;
 ; 0.902 ; vga_pix_gen:pixel_gen|addr_reg[7]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a13~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.439      ; 1.571      ;
+; 0.903 ; vga_pix_gen:pixel_gen|addr_reg[5]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a5~porta_address_reg0  ; clk          ; clk         ; 0.000        ; 0.430      ; 1.563      ;
 ; 0.903 ; vga_sync:vga_sync_unit|mod2_reg       ; rgb_reg[0]                                                                                                                          ; clk          ; clk         ; 0.000        ; 0.568      ; 1.666      ;
 ; 0.903 ; vga_sync:vga_sync_unit|mod2_reg       ; rgb_reg[1]                                                                                                                          ; clk          ; clk         ; 0.000        ; 0.568      ; 1.666      ;
 ; 0.903 ; vga_sync:vga_sync_unit|mod2_reg       ; rgb_reg[2]                                                                                                                          ; clk          ; clk         ; 0.000        ; 0.568      ; 1.666      ;
-; 0.903 ; vga_pix_gen:pixel_gen|addr_reg[5]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a5~porta_address_reg0  ; clk          ; clk         ; 0.000        ; 0.430      ; 1.563      ;
 ; 0.907 ; vga_pix_gen:pixel_gen|addr_reg[1]     ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a17~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.429      ; 1.566      ;
 +-------+---------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -768,8 +768,8 @@ No paths to report.
 ; -2.061 ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a13~porta_address_reg0 ; rgb_reg[2]                                                                                                                          ; clk          ; clk         ; 1.000        ; -0.037     ; 3.011      ;
 ; -2.055 ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a2~porta_address_reg0  ; rgb_reg[0]                                                                                                                          ; clk          ; clk         ; 1.000        ; -0.026     ; 3.016      ;
 ; -2.054 ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a2~porta_address_reg0  ; rgb_reg[2]                                                                                                                          ; clk          ; clk         ; 1.000        ; -0.026     ; 3.015      ;
-; -2.035 ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a9~porta_address_reg0  ; rgb_reg[1]                                                                                                                          ; clk          ; clk         ; 1.000        ; -0.033     ; 2.989      ;
 ; -2.035 ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a6~porta_address_reg0  ; rgb_reg[0]                                                                                                                          ; clk          ; clk         ; 1.000        ; -0.038     ; 2.984      ;
+; -2.035 ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a9~porta_address_reg0  ; rgb_reg[1]                                                                                                                          ; clk          ; clk         ; 1.000        ; -0.033     ; 2.989      ;
 ; -2.034 ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a6~porta_address_reg0  ; rgb_reg[2]                                                                                                                          ; clk          ; clk         ; 1.000        ; -0.038     ; 2.983      ;
 ; -1.946 ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a10~porta_address_reg0 ; rgb_reg[0]                                                                                                                          ; clk          ; clk         ; 1.000        ; -0.037     ; 2.896      ;
 ; -1.945 ; vga_pix_gen:pixel_gen|bitmap_mem:bitmap_memory|altsyncram:rom_rtl_0|altsyncram_v261:auto_generated|ram_block1a10~porta_address_reg0 ; rgb_reg[2]                                                                                                                          ; clk          ; clk         ; 1.000        ; -0.037     ; 2.895      ;
@@ -1112,7 +1112,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 22 00:57:52 2024
+    Info: Processing started: Thu May 23 20:35:14 2024
 Info: Command: quartus_sta vga_main -c vga_main
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1185,7 +1185,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4739 megabytes
-    Info: Processing ended: Wed May 22 00:57:54 2024
+    Info: Processing ended: Thu May 23 20:35:16 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
