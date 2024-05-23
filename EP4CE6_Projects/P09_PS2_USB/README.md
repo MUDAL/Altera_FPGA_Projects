@@ -54,6 +54,6 @@ This task involves configuring an FPGA as a PS/2-to-UART converter that decodes 
 - [STM32 as a USB HID Keyboard](https://www.youtube.com/watch?v=tj1_hsQ5PR0&list=PLfIJKC1ud8ggIvCHlwZv0W25JjQ4Hc3aT&index=4&t=574s)   
 - [USB HID Usage Tables](https://drive.google.com/file/d/17hRtNIAqpqUihBY9VkXl9vElMqQnp7lT/view?usp=sharing) [See Chapter 10]  
 - [USB Device Class Definition for Human Interface Devices (HID)](https://drive.google.com/file/d/1BABTfBDyvYt_BpdM_NCTHxbm8gGNLNiA/view?usp=sharing) [See pg. 56, 59, 60, 69]  
-- FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P.Chu (Check timing diagrams for UART and PS/2)  
+- FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu (Check timing diagrams for UART and PS/2)  
 - [STM32F103C8 Datasheet](https://drive.google.com/file/d/1Rm6P6-ArzKIR0c0EaC8duT7rH70hhuPG/view?usp=sharing)
 - [STM32F103 Reference Manual](https://drive.google.com/file/d/1geeY-mbH-PinQzvFmtgG6RA3AFqcVXZV/view?usp=drive_link)  
