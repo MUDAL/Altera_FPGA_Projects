@@ -11,13 +11,18 @@
 
 ## How to use  
 - Clone the ``Altera_FPGA_Projects`` repository  
-- Open the ``EP4CE6_Projects/P04_7_Segment_HCSR04/`` directory  
+- Open the ``EP4CE6_Projects/P04_7_Segment_HCSR04/Version_x/`` directory  
 - Open the ``distance_sensor.qpf`` project file  
 - Intel Quartus Prime should open after the previous step  
 - After Quartus opens, click on the ``Processing`` tab  
 - Click on ``Start Compilation``  
 - After compilation, click on ``Program Device(Open Programmer)``  
 - When the Programmer window opens, load the demo project into the FPGA by clicking ``Start`` 
+
+## Versions  
+- Version 1 uses a brute force algorithm for the binary to BCD conversion.  
+- Version 2 uses the ``double dabble`` algorithm for binary to BCD conversion.  
+- You can compare the resource utilization and Fmax of both designs. 
 
 ## Project file structure  
 - The **VHDL** design files are located in the **src** and **lib** directories  
@@ -32,5 +37,7 @@
 ![PP_4](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/15e88835-f6bf-49bd-af3e-d34e7ea3d236)  
 
 ## Helpful resource(s)  
-[HCSR04 datasheet](https://drive.google.com/file/d/16QAANfYQO59LjlhRBzEFDkZxpB2MxlI5/view?usp=sharing)  
+- [HCSR04 datasheet](https://drive.google.com/file/d/16QAANfYQO59LjlhRBzEFDkZxpB2MxlI5/view?usp=sharing)   
+- FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu (Check Binary-BCD Conversion Circuit)  
+
 

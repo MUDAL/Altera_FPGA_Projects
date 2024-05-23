@@ -9,13 +9,18 @@
 
 ## How to use  
 - Clone the ``Altera_FPGA_Projects`` repository  
-- Open the ``EP4CE6_Projects/P02_7_Segment_LM75/`` directory  
+- Open the ``EP4CE6_Projects/P02_7_Segment_LM75/Version_x/`` directory  
 - Open the ``digital_thermometer.qpf`` project file  
 - Intel Quartus Prime should open after the previous step  
 - After Quartus opens, click on the ``Processing`` tab  
 - Click on ``Start Compilation``  
 - After compilation, click on ``Program Device(Open Programmer)``  
 - When the Programmer window opens, load the demo project into the FPGA by clicking ``Start`` 
+
+## Versions  
+- Version 1 uses a brute force algorithm for the binary to BCD conversion.  
+- Version 2 uses the ``double dabble algorithm`` for binary to BCD conversion.  
+- You can compare the resource utilization and Fmax of both designs.  
 
 ## Project file structure  
 - The **VHDL** design files are located in the **src** and **lib** directories  
@@ -35,8 +40,10 @@
 ### 34.0 degree Celsius  
 ![Screenshot (498)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/737295c3-3c22-4a44-a117-4e0d68ca2b44)  
 ### 34.5 degree Celsius  
-![Screenshot (499)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/2a40ac7e-20c9-48a8-ab4e-5c4138f61a2e)  
+![Screenshot (499)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/2a40ac7e-20c9-48a8-ab4e-5c4138f61a2e)   
 
 ## Helpful resource(s)  
 - [NXP I2C specification](https://drive.google.com/file/d/1EDwk_8Na_DUPKeOmK8ht-_JMiNgwNDw2/view?usp=drive_link)
 - [LM75 datasheet](https://drive.google.com/file/d/1u7oas4GsBgyu3CEFFpHg-WD4h4YXIpEZ/view?usp=drive_link)  
+- FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu (Check Binary-BCD Conversion Circuit)  
+- [Double Dabble Algorithm](https://www.youtube.com/watch?v=eXIfZ1yKFlA&t=186s)  
