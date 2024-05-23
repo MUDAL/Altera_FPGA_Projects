@@ -61,7 +61,7 @@ The images below illustrate how to achieve this.
 ### 4. RTL Viewer  
 ![RTL_viewer](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/41637fb9-0419-4f69-be40-ffce65dceed5)  
 ### 5. Compilation Report (Resource Utilization)  
-![Resource_Utilization](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/7e78bd0f-432f-4165-bf0a-5f40c52c67e2)  
+![Screenshot (549)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/be6bd208-c4e5-45f9-b2f0-37bbf0fa4d52)   
 
 ## Helpful resource(s)  
 - FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu  
