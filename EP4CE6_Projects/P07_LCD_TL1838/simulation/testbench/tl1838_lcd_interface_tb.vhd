@@ -11,7 +11,7 @@ end tl1838_lcd_interface_tb;
 
 architecture tl1838_lcd_interface_behav of tl1838_lcd_interface_tb is
    -- Short delay to ensure signals are assigned before they're read
-   constant PROPAGATION_DELAY: time := CLK_PERIOD / 10;
+   constant ASSIGN_DELAY: time := CLK_PERIOD / 10;
    signal en: std_logic := '0';
    signal ir_decoder_out: std_logic_vector(15 downto 0);
    signal lcd_rs_in: std_logic;
@@ -61,7 +61,9 @@ begin
       variable status_report: line;
       variable lcd_data: string(1 to 3);
       variable data_str: string(1 to 3); 
-      variable status: string(1 to 4);    
+      variable status: string(1 to 4);
+      variable pass_count: integer := 0;
+      variable fail_count: integer := 0;     
    begin
       file_open(expected_outputs,PATH_1,read_mode);
       file_open(status_reports,PATH_2,write_mode);
@@ -70,7 +72,7 @@ begin
          read(expected_output,lcd_data);
          
          wait until en = '1';
-         wait for PROPAGATION_DELAY;
+         wait for ASSIGN_DELAY;
          -- Convert data output from UUT to string format
          data_str(1) := slv2char(ZEROS & lcd_rs_in);
          data_str(2) := slv2char(lcd_data_in(7 downto 4));        
@@ -78,8 +80,10 @@ begin
          
          if data_str = lcd_data then
             status := "PASS";
+            pass_count := pass_count + 1;
          else
             status := "FAIL";
+            fail_count := fail_count + 1;
          end if;        
 
          -- Display test results on the console
@@ -99,6 +103,16 @@ begin
          writeline(status_reports,status_report);
          wait until en = '0';
       end loop;
+      
+      -- Final report (total successes and failures)
+      report "Passed tests: " & integer'image(pass_count) & ", "  & 
+             "Failed tests: " & integer'image(fail_count);
+      write(status_report,string'("Passed tests: "));
+      write(status_report,string'(integer'image(pass_count)));
+      write(status_report,string'(", "));
+      write(status_report,string'("Failed tests: "));
+      write(status_report,string'(integer'image(fail_count))); 
+      writeline(status_reports,status_report);     
       file_close(expected_outputs);
       file_close(status_reports);
       assert false report "Simulation done" severity failure;

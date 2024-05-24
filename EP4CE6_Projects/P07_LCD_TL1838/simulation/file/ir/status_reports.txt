@@ -8,3 +8,4 @@ Expected: 5AA5, Got: 5AA5, Status: PASS
 Expected: 42BD, Got: 42BD, Status: PASS
 Expected: 4AB5, Got: 4AB5, Status: PASS
 Expected: A25D, Got: A25D, Status: PASS
+Passed tests: 10, Failed tests: 0

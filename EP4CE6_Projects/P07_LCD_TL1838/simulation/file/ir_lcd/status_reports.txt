@@ -13,3 +13,4 @@ Expected: 0C0, Got: 0C0, Status: PASS
 Expected: 001, Got: 001, Status: PASS
 Expected: 001, Got: 001, Status: PASS
 Expected: 001, Got: 001, Status: PASS
+Passed tests: 15, Failed tests: 0

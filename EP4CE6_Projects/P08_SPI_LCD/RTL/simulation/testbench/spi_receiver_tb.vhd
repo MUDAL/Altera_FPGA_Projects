@@ -91,6 +91,8 @@ begin
       variable spi_data_out: string(1 to 3);
       variable data_str: string(1 to 3);
       variable status: string(1 to 4);
+      variable pass_count: integer := 0;
+      variable fail_count: integer := 0;
    begin
       wait until rst_n = '1';
       wait until cs = '0' and sck = '0';
@@ -109,8 +111,10 @@ begin
          
          if data_str = spi_data_out then
             status := "PASS";
+            pass_count := pass_count + 1;
          else
             status := "FAIL";
+            fail_count := fail_count + 1;
          end if;        
          
          -- Display test results on the console
@@ -129,6 +133,16 @@ begin
          write(status_report,string'(status));         
          writeline(status_reports,status_report);
       end loop;
+      
+      -- Final report (total successes and failures)
+      report "Passed tests: " & integer'image(pass_count) & ", "  & 
+             "Failed tests: " & integer'image(fail_count);
+      write(status_report,string'("Passed tests: "));
+      write(status_report,string'(integer'image(pass_count)));
+      write(status_report,string'(", "));
+      write(status_report,string'("Failed tests: "));
+      write(status_report,string'(integer'image(fail_count))); 
+      writeline(status_reports,status_report);     
       file_close(expected_outputs);
       file_close(status_reports);
       assert false report "Simulation done" severity failure;

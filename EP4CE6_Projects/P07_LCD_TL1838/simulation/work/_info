@@ -15,21 +15,21 @@ Z0 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 32
-Z3 !s110 1712955416
+Z3 !s110 1716538579
 !i10b 1
 Z4 w1712659484
-!i122 287
-Z5 dL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation
-Z6 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/ir_lcd_main.vhd
-Z7 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/ir_lcd_main.vhd
+!i122 313
+Z5 dL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation
+Z6 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/ir_lcd_main.vhd
+Z7 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/ir_lcd_main.vhd
 l0
 L14 1
 VR[1aJSfLU6l1TIEJJa_1E1
 !s100 9O<R2;QB``OXA@T1[BgQ81
 Z8 OV;C;2020.1;71
-Z9 !s108 1712955414.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/ir_lcd_main.vhd|
-Z11 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/ir_lcd_main.vhd|
+Z9 !s108 1716538578.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/ir_lcd_main.vhd|
+Z11 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/ir_lcd_main.vhd|
 !i113 1
 Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
@@ -44,7 +44,7 @@ Z17 DEx4 work 11 ir_lcd_main 0 22 R[1aJSfLU6l1TIEJJa_1E1
 32
 R3
 !i10b 1
-!i122 287
+!i122 313
 l36
 L25 31
 V;1G78z0z5aCHP5K1Um7Cc0
@@ -63,21 +63,21 @@ R0
 R1
 R2
 32
-Z20 !s110 1712343661
+Z20 !s110 1716538577
 !i10b 1
-Z21 w1712343624
-!i122 283
+Z21 w1716538489
+!i122 305
 R5
-Z22 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/ir_lcd_main_tb.vhd
-Z23 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/ir_lcd_main_tb.vhd
+Z22 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/ir_lcd_main_tb.vhd
+Z23 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/ir_lcd_main_tb.vhd
 l0
 L9 1
 VGlDe25AZTEBRClPh3zFHO2
 !s100 h]?<Hm<VeJPYLK4FgRL>U3
 R8
-Z24 !s108 1712343660.000000
-Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/ir_lcd_main_tb.vhd|
-Z26 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/ir_lcd_main_tb.vhd|
+Z24 !s108 1716538577.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/ir_lcd_main_tb.vhd|
+Z26 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/ir_lcd_main_tb.vhd|
 !i113 1
 R12
 R13
@@ -92,11 +92,11 @@ DEx4 work 14 ir_lcd_main_tb 0 22 GlDe25AZTEBRClPh3zFHO2
 32
 R20
 !i10b 1
-!i122 283
+!i122 305
 l26
-L12 158
-VJE0;YLJkbNz_c0Pc03:ia2
-!s100 IE1;ck?0B]z4Z[1>nK1ZO2
+L12 172
+VdzDki0_;jFJa=YQ_O1J]S2
+!s100 YQ;A6EgJdm9X[b?c?[zmD3
 R8
 R24
 R25
@@ -109,21 +109,21 @@ R0
 R1
 R2
 32
-Z27 !s110 1714330228
+Z27 !s110 1716538578
 !i10b 1
 Z28 w1714329686
-!i122 289
+!i122 310
 R5
-Z29 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/lcd_driver.vhd
-Z30 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/lcd_driver.vhd
+Z29 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/lib/lcd_driver.vhd
+Z30 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/lib/lcd_driver.vhd
 l0
 L8 1
 V8zZz`h[YW1:j_cPZB4gN^0
 !s100 `=DT9^AYB]RDN4;342M`b3
 R8
-Z31 !s108 1714330228.000000
-Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/lcd_driver.vhd|
-Z33 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/lcd_driver.vhd|
+R9
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/lib/lcd_driver.vhd|
+Z32 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/lib/lcd_driver.vhd|
 !i113 1
 R12
 R13
@@ -135,15 +135,15 @@ R14
 32
 R27
 !i10b 1
-!i122 289
+!i122 310
 l60
 L20 171
 VD?<YglRFRnfNd6ga82::12
 !s100 N^YV^z=6kffC>6^oU3f=c1
 R8
+R9
 R31
 R32
-R33
 !i113 1
 R12
 R13
@@ -154,21 +154,21 @@ R0
 R1
 R2
 32
-Z34 !s110 1711666128
+R20
 !i10b 1
-Z35 w1711666072
-!i122 201
+Z33 w1716538444
+!i122 306
 R5
-Z36 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/lcd_driver_tb.vhd
-Z37 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/lcd_driver_tb.vhd
+Z34 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/lcd_driver_tb.vhd
+Z35 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/lcd_driver_tb.vhd
 l0
 L9 1
 VYXb^3^znKQREG6Lh43z@D3
 !s100 M>AMZcm];[YBNL@X_IZK20
 R8
-Z38 !s108 1711666128.000000
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/lcd_driver_tb.vhd|
-Z40 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/lcd_driver_tb.vhd|
+R24
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/lcd_driver_tb.vhd|
+Z37 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/lcd_driver_tb.vhd|
 !i113 1
 R12
 R13
@@ -181,17 +181,17 @@ R1
 R2
 DEx4 work 13 lcd_driver_tb 0 22 YXb^3^znKQREG6Lh43z@D3
 32
-R34
+R20
 !i10b 1
-!i122 201
+!i122 306
 l23
-L12 104
-V24P2TjVA[HMbFRHF9O]YD0
-!s100 <fG=1BPO9>DGI`5PGe3g>3
+L12 118
+VZ54W5jW[j;dYY0mJ`fI5H1
+!s100 UdHNdZWDM@O99z?_5@`GH2
 R8
-R38
-R39
-R40
+R24
+R36
+R37
 !i113 1
 R12
 R13
@@ -201,28 +201,22 @@ R1
 R2
 32
 b1
-!s110 1711661111
+R20
 !i10b 1
-b1
-b1
-b1
-b1
-b1
-b1
-!i122 188
+!i122 307
 w1711661093
 R5
-8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/pack_tb_header.vhd
-FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/pack_tb_header.vhd
+8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/pack_tb_header.vhd
+FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/pack_tb_header.vhd
 l0
 L5 1
 VVLRFnhV[1M^DV7T:zEL5d3
 !s100 TEcfl97TH4X@@NC75C?Ko2
 R8
 b1
-!s108 1711661110.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/pack_tb_header.vhd|
-!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/pack_tb_header.vhd|
+R24
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/pack_tb_header.vhd|
+!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/pack_tb_header.vhd|
 !i113 1
 R12
 R13
@@ -232,20 +226,20 @@ R0
 R1
 R2
 32
-!s110 1711660686
+R20
 !i10b 1
-!i122 185
+!i122 307
 w1711660441
-8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/pack_tb_body.vhd
-FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/pack_tb_body.vhd
+8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/pack_tb_body.vhd
+FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/pack_tb_body.vhd
 l0
 L7 1
 V1QAI50iOLbXM=b_z2HmYB0
 !s100 H7TLlMmRZ>YoVAkdkhfb10
 R8
-!s108 1711660686.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/pack_tb_body.vhd|
-!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/pack_tb_body.vhd|
+R24
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/pack_tb_body.vhd|
+!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/pack_tb_body.vhd|
 !i113 1
 R12
 R13
@@ -254,21 +248,21 @@ R0
 R1
 R2
 32
-Z41 !s110 1712955418
+R27
 !i10b 1
-Z42 w1712660289
-!i122 288
+Z38 w1714342421
+!i122 311
 R5
-Z43 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_decoder.vhd
-Z44 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_decoder.vhd
+Z39 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/lib/tl1838_decoder.vhd
+Z40 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/lib/tl1838_decoder.vhd
 l0
 L22 1
 VB8TAX6G]cSS@f]XkOVAiI1
 !s100 lOk2>>02iQ17;z;Dzo`R81
 R8
-Z45 !s108 1712955418.000000
-Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_decoder.vhd|
-Z47 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_decoder.vhd|
+R9
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/lib/tl1838_decoder.vhd|
+Z42 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/lib/tl1838_decoder.vhd|
 !i113 1
 R12
 R13
@@ -278,17 +272,17 @@ R1
 R2
 R16
 32
-R41
+R27
 !i10b 1
-!i122 288
+!i122 311
 l62
-L31 146
-V7Ahiomn;IBknBzE0WK1=@3
-!s100 8T<iaE:KM9@9mBzK`U]^D3
+L31 137
+VEUa>?LUDBYHkRM07<z>9?1
+!s100 2oWn^XdeYgZOZb_^4^e_E3
 R8
-R45
-R46
-R47
+R9
+R41
+R42
 !i113 1
 R12
 R13
@@ -299,21 +293,21 @@ R0
 R1
 R2
 32
-Z48 !s110 1712343657
+R27
 !i10b 1
-Z49 w1712343610
-!i122 282
+Z43 w1716538414
+!i122 308
 R5
-Z50 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/tl1838_decoder_tb.vhd
-Z51 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/tl1838_decoder_tb.vhd
+Z44 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/tl1838_decoder_tb.vhd
+Z45 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/tl1838_decoder_tb.vhd
 l0
 L9 1
 VN@U5MSUKE@5?I?oSzU:Ha2
 !s100 Mcbbc9<a0am@mH<IDfi>82
 R8
-Z52 !s108 1712343657.000000
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/tl1838_decoder_tb.vhd|
-Z54 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/tl1838_decoder_tb.vhd|
+R9
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/tl1838_decoder_tb.vhd|
+Z47 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/tl1838_decoder_tb.vhd|
 !i113 1
 R12
 R13
@@ -326,17 +320,17 @@ R1
 R2
 DEx4 work 17 tl1838_decoder_tb 0 22 N@U5MSUKE@5?I?oSzU:Ha2
 32
-R48
+R27
 !i10b 1
-!i122 282
+!i122 308
 l21
-L12 151
-VP2=SIHB?XZQdUO2FGJEGA2
-!s100 36EKd9Tg;Y[h^FaM0dY<b3
+L12 164
+VhknfN6Nod>jhEcbFkLU^f2
+!s100 ;V45]k:Z`ddY59CEz[XDW2
 R8
-R52
-R53
-R54
+R9
+R46
+R47
 !i113 1
 R12
 R13
@@ -345,21 +339,21 @@ R0
 R1
 R2
 32
-Z55 !s110 1712343989
+R27
 !i10b 1
-Z56 w1712343930
-!i122 284
+Z48 w1712343930
+!i122 312
 R5
-Z57 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_lcd_interface.vhd
-Z58 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_lcd_interface.vhd
+Z49 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/lib/tl1838_lcd_interface.vhd
+Z50 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/lib/tl1838_lcd_interface.vhd
 l0
 L7 1
 VYN`jmY[4UUl8^LWb`9gUi3
 !s100 ZLFzR5M=h[GKWE5bNi5il2
 R8
-Z59 !s108 1712343989.000000
-Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_lcd_interface.vhd|
-Z61 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/src/lib/tl1838_lcd_interface.vhd|
+R9
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/lib/tl1838_lcd_interface.vhd|
+Z52 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/src/lib/tl1838_lcd_interface.vhd|
 !i113 1
 R12
 R13
@@ -369,17 +363,17 @@ R1
 R2
 R15
 32
-R55
+R27
 !i10b 1
-!i122 284
+!i122 312
 l46
 L14 62
 VXO17nmJcZH@Oaj3f7fXoA3
 !s100 mS948iJnmQ[K0LN`@dB2O3
 R8
-R59
-R60
-R61
+R9
+R51
+R52
 !i113 1
 R12
 R13
@@ -390,21 +384,21 @@ R0
 R1
 R2
 32
-Z62 !s110 1712343258
+R27
 !i10b 1
-Z63 w1712343038
-!i122 273
+Z53 w1716538385
+!i122 309
 R5
-Z64 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/tl1838_lcd_interface_tb.vhd
-Z65 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/tl1838_lcd_interface_tb.vhd
+Z54 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/tl1838_lcd_interface_tb.vhd
+Z55 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/tl1838_lcd_interface_tb.vhd
 l0
 L9 1
 VAMV4mJ1QIi6m;6bbYQBiJ1
 !s100 hn6el6H3E4]_bX<<_zZ3f1
 R8
-Z66 !s108 1712343258.000000
-Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/tl1838_lcd_interface_tb.vhd|
-Z68 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P7_LCD_TL1838/simulation/testbench/tl1838_lcd_interface_tb.vhd|
+R9
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/tl1838_lcd_interface_tb.vhd|
+Z57 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P07_LCD_TL1838/simulation/testbench/tl1838_lcd_interface_tb.vhd|
 !i113 1
 R12
 R13
@@ -417,17 +411,17 @@ R1
 R2
 DEx4 work 23 tl1838_lcd_interface_tb 0 22 AMV4mJ1QIi6m;6bbYQBiJ1
 32
-R62
+R27
 !i10b 1
-!i122 273
+!i122 309
 l19
-L12 96
-VAEAUMMH>K^n3Y95B4TT0>3
-!s100 ^Znm4GnIU<TMWWAnzXk;]2
+L12 110
+V2gNM=>[7EWgFmZEl8T:VX2
+!s100 ?EOM?;POAWzIVo4bAY_mT0
 R8
-R66
-R67
-R68
+R9
+R56
+R57
 !i113 1
 R12
 R13
