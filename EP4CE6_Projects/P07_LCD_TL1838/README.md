@@ -49,4 +49,24 @@ display when pressed.
 - [NEC Protocol](https://techdocs.altium.com/display/FPGA/NEC%2bInfrared%2bTransmission%2bProtocol)
 - [NEC Protocol and IR Key Codes](https://exploreembedded.com/wiki/NEC_IR_Remote_Control_Interface_with_8051)
 - [TL1838 Datasheet](https://drive.google.com/file/d/1RJ-HkZsTznqVyAxnRvhQzwTLbh1ikSYC/view?usp=sharing)
-- [HD44780 Datasheet](https://drive.google.com/file/d/1kYVwqbIjYVIVPkjs03y40AUIAiwOctcV/view?usp=drive_link)   
+- [HD44780 Datasheet](https://drive.google.com/file/d/1kYVwqbIjYVIVPkjs03y40AUIAiwOctcV/view?usp=drive_link)    
+
+## Simulation results for the top-level design  
+```
+Expected: 001, Got: 001, Status: PASS
+Expected: 130, Got: 130, Status: PASS
+Expected: 131, Got: 131, Status: PASS
+Expected: 132, Got: 132, Status: PASS
+Expected: 133, Got: 133, Status: PASS
+Expected: 134, Got: 134, Status: PASS
+Expected: 135, Got: 135, Status: PASS
+Expected: 136, Got: 136, Status: PASS
+Expected: 137, Got: 137, Status: PASS
+Expected: 138, Got: 138, Status: PASS
+Expected: 139, Got: 139, Status: PASS
+Expected: 080, Got: 080, Status: PASS
+Expected: 0C0, Got: 0C0, Status: PASS
+Expected: 001, Got: 001, Status: PASS
+Expected: 001, Got: 001, Status: PASS
+Passed tests: 15, Failed tests: 0
+```
