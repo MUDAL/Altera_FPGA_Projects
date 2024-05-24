@@ -1,7 +1,8 @@
 # Interfacing FPGA with 16x2 LCD module 
 
 ## Description    
-- Driving a 16x2 LCD module with an EP4CE6 FPGA board.  
+- Driving a 16x2 LCD module with an EP4CE6 FPGA board.
+- Displaying a simple message ("HELLO RJX").  
 
 ## Tools  
 - EP4CE6E22C8N Cyclone IV FPGA development board
@@ -26,6 +27,14 @@
 ## Pinouts  
 - Check the **Location** column in the image below for the pin mappings used in this project.    
 ![PP_5](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/2e42a448-83b7-41f6-9ed2-506079b5d871)
+
+## Timing verification with a logic analyzer  
+### 1. Delay after 1st ``Function Set`` instruction (~ 4.5 ms)  
+![lcd_1](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/f34fe7a0-cd06-4b00-8505-6dae3be1ca59)  
+### 2. Execution time for the ``Clear Display`` instruction (~ 1.665 ms)  
+![lcd_2](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/e3971d5c-f749-4949-8eb2-14e8f0791ef7)  
+### 3. Execution time for other instructions except ``Return Home`` (~ 45 uS)  
+![lcd_3](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/fad6df68-e933-4662-a3af-8fd93ceef4cc)  
 
 ## Demo  
 ![fpga_lcd](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/add71547-826c-44c8-8487-06129b02a6c7)  
