@@ -29,6 +29,17 @@
 - The top-level design is the **weather_sensor.vhd**  
 - The other modules or design files are located in the **lib** directory  
 
+## Timing verification with a logic analyzer  
+The DHT22 sensor operates loosely on the 1-Wire protocol. Since it doesn't use a standard variant that is supported  
+by the logic analyzer, the logic analyzer wouldn't decode the data. However, the logic analyzer will display the  
+waveforms properly and with the correct timings. The image(s) show the distinction between a logic 0 and 1 for the  
+DHT22 sensor.  
+```
+Bit 0: 26-28uS after initial 50uS (minimum) for each DHT22 bit
+Bit 1: 69-71uS after initial 50uS (minimum) for each DHT22 bit
+```
+![Screenshot (575)_LI](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/fcbcbd65-3bc4-4c4f-b830-f244342c420e)   
+
 ## Video demo  
 [FPGA and DHT22 demo](https://drive.google.com/file/d/1Pk7GPQSu7bS2-IVy8dPdvYJIUd7pJAdc/view?usp=sharing)  
 
