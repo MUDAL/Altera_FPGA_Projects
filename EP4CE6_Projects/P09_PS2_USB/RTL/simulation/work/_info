@@ -14,325 +14,321 @@ Ppack_tb
 Z0 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-32
-b1
-!s110 1713819069
-!i10b 1
-b1
-b1
-b1
-!i122 2
+!i122 72
 w1711661093
-Z3 dL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation
-8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/pack_tb_header.vhd
-FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/pack_tb_header.vhd
+Z3 dL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation
+8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/pack_tb_header.vhd
+FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/pack_tb_header.vhd
 l0
 L5 1
 VVLRFnhV[1M^DV7T:zEL5d3
 !s100 TEcfl97TH4X@@NC75C?Ko2
 Z4 OV;C;2020.1;71
+32
 b1
-!s108 1713819069.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/pack_tb_header.vhd|
-!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/pack_tb_header.vhd|
+Z5 !s110 1716540514
+!i10b 1
+Z6 !s108 1716540514.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/pack_tb_header.vhd|
+!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/pack_tb_header.vhd|
 !i113 1
-Z5 o-work work -2002 -explicit
-Z6 tExplicit 1 CvgOpt 0
+Z7 o-work work -2002 -explicit
+Z8 tExplicit 1 CvgOpt 0
 Bbody
-Z7 DPx4 work 7 pack_tb 0 22 VLRFnhV[1M^DV7T:zEL5d3
+Z9 DPx4 work 7 pack_tb 0 22 VLRFnhV[1M^DV7T:zEL5d3
 R0
 R1
 R2
-32
-!s110 1713819073
-!i10b 1
-!i122 3
+!i122 72
 w1711660441
-8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/pack_tb_body.vhd
-FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/pack_tb_body.vhd
+8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/pack_tb_body.vhd
+FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/pack_tb_body.vhd
 l0
 L7 1
 V1QAI50iOLbXM=b_z2HmYB0
 !s100 H7TLlMmRZ>YoVAkdkhfb10
 R4
-!s108 1713819073.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/pack_tb_body.vhd|
-!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/pack_tb_body.vhd|
-!i113 1
+32
 R5
-R6
+!i10b 1
+!s108 1716540513.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/pack_tb_body.vhd|
+!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/pack_tb_body.vhd|
+!i113 1
+R7
+R8
 Eps2
+Z10 w1713872715
 R0
 R1
 R2
-32
-Z8 !s110 1713872764
-!i10b 1
-Z9 w1713872715
-!i122 35
+!i122 76
 R3
-Z10 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/src/lib/ps2.vhd
-Z11 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/src/lib/ps2.vhd
+Z11 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/lib/ps2.vhd
+Z12 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/lib/ps2.vhd
 l0
 L15 1
 VP[Y5NeZEJ3M84_jnQIGTU2
 !s100 AQkm6C1Q0aiXK6a8K2c^10
 R4
-Z12 !s108 1713872764.000000
-Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/src/lib/ps2.vhd|
-Z14 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/src/lib/ps2.vhd|
+32
+Z13 !s110 1716540515
+!i10b 1
+Z14 !s108 1716540515.000000
+Z15 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/lib/ps2.vhd|
+Z16 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/lib/ps2.vhd|
 !i113 1
-R5
-R6
+R7
+R8
 Aps2_rtl
 R0
 R1
 R2
-Z15 DEx4 work 3 ps2 0 22 P[Y5NeZEJ3M84_jnQIGTU2
-32
-R8
-!i10b 1
-!i122 35
+Z17 DEx4 work 3 ps2 0 22 P[Y5NeZEJ3M84_jnQIGTU2
+!i122 76
 l38
 L24 101
 Vnc8_^W7TOkdJCAW07PP<L1
 !s100 SSI3<mjGM5XM9OO`Zif561
 R4
-R12
+32
 R13
+!i10b 1
 R14
+R15
+R16
 !i113 1
-R5
-R6
-Eps2_tb
-Z16 w1713894378
 R7
-Z17 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+R8
+Eps2_tb
+Z18 w1713894378
+R9
+Z19 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R0
 R1
 R2
-!i122 65
+!i122 73
 R3
-Z18 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/ps2_tb.vhd
-Z19 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/ps2_tb.vhd
+Z20 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/ps2_tb.vhd
+Z21 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/ps2_tb.vhd
 l0
 L9 1
 Vj8HdW0Jk4GNlEG2X@MUQ;0
 !s100 lTAK=P`BakV4_1<gFHPzN3
 R4
 32
-Z20 !s110 1713894396
-!i10b 1
-Z21 !s108 1713894396.000000
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/ps2_tb.vhd|
-Z23 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/ps2_tb.vhd|
-!i113 1
 R5
+!i10b 1
 R6
-Aps2_behav
-R15
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/ps2_tb.vhd|
+Z23 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/ps2_tb.vhd|
+!i113 1
 R7
+R8
+Aps2_behav
 R17
+R9
+R19
 R0
 R1
 R2
 DEx4 work 6 ps2_tb 0 22 j8HdW0Jk4GNlEG2X@MUQ;0
-!i122 65
+!i122 73
 l26
 L12 138
 VYCigBe3YLk[YZodB@hjYX1
 !s100 UM7[iFeYd>CbPNVUdRoh91
 R4
 32
-R20
+R5
 !i10b 1
-R21
+R6
 R22
 R23
 !i113 1
-R5
-R6
+R7
+R8
 Eps2_uart_main
+Z24 w1713872522
 R0
 R1
 R2
-32
-Z24 !s110 1713872769
-!i10b 1
-Z25 w1713872522
-!i122 36
+!i122 78
 R3
-Z26 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/src/ps2_uart_main.vhd
-Z27 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/src/ps2_uart_main.vhd
+Z25 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/ps2_uart_main.vhd
+Z26 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/ps2_uart_main.vhd
 l0
 L6 1
 Vh]DJZ?V5;SO]2=SkKjLa32
 !s100 BdGhaDm<9TEFzE@;K2ESQ2
 R4
-Z28 !s108 1713872769.000000
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/src/ps2_uart_main.vhd|
-Z30 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/src/ps2_uart_main.vhd|
-!i113 1
-R5
-R6
-Aps2_uart_main_rtl
-Z31 DEx4 work 4 uart 0 22 afaD]L@7jeXW]<Kl5^3hC1
-R15
-R0
-R1
-R2
-Z32 DEx4 work 13 ps2_uart_main 0 22 h]DJZ?V5;SO]2=SkKjLa32
 32
-R24
+Z27 !s110 1716540516
 !i10b 1
-!i122 36
-l19
-L14 17
-VKhlGiVac:j0iAnWl7lQ<d1
-!s100 [_ICQ9fjoJIzF58B?=NEK3
-R4
-R28
-R29
-R30
+R14
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/ps2_uart_main.vhd|
+!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/ps2_uart_main.vhd|
 !i113 1
-R5
-R6
-Eps2_uart_main_tb
-Z33 w1713894258
 R7
+R8
+Aps2_uart_main_rtl
+Z29 DEx4 work 4 uart 0 22 afaD]L@7jeXW]<Kl5^3hC1
 R17
 R0
 R1
 R2
-!i122 64
+Z30 DEx4 work 13 ps2_uart_main 0 22 h]DJZ?V5;SO]2=SkKjLa32
+!i122 78
+l19
+Z31 L14 17
+Z32 VKhlGiVac:j0iAnWl7lQ<d1
+Z33 !s100 [_ICQ9fjoJIzF58B?=NEK3
+R4
+32
+R27
+!i10b 1
+R14
+R28
+Z34 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/ps2_uart_main.vhd|
+!i113 1
+R7
+R8
+Eps2_uart_main_tb
+Z35 w1713894258
+R9
+R19
+R0
+R1
+R2
+!i122 74
 R3
-Z34 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/ps2_uart_main_tb.vhd
-Z35 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/ps2_uart_main_tb.vhd
+Z36 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/ps2_uart_main_tb.vhd
+Z37 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/ps2_uart_main_tb.vhd
 l0
 L9 1
 V>4i9EHDf[jJMGKHzeiWK40
 !s100 F1M0zXKLCb784lUFSJk`<0
 R4
 32
-Z36 !s110 1713894290
+R13
 !i10b 1
-Z37 !s108 1713894290.000000
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/ps2_uart_main_tb.vhd|
-Z39 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/ps2_uart_main_tb.vhd|
+R14
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/ps2_uart_main_tb.vhd|
+Z39 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/ps2_uart_main_tb.vhd|
 !i113 1
-R5
-R6
-Aps2_uart_main_behav
-R32
 R7
-R17
+R8
+Aps2_uart_main_behav
+R30
+R9
+R19
 R0
 R1
 R2
 DEx4 work 16 ps2_uart_main_tb 0 22 >4i9EHDf[jJMGKHzeiWK40
-!i122 64
+!i122 74
 l30
 L12 156
 V@1nCbm<F7dmUzQ:IamLg>0
 !s100 X]?P07@E@:b4:zc4zA8Dc1
 R4
 32
-R36
+R13
 !i10b 1
-R37
+R14
 R38
 R39
 !i113 1
-R5
-R6
+R7
+R8
 Euart
-Z40 w1713898790
+Z40 w1713902739
 R0
 R1
 R2
-!i122 70
+!i122 77
 R3
-Z41 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/src/lib/uart.vhd
-Z42 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/src/lib/uart.vhd
+Z41 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/lib/uart.vhd
+Z42 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/lib/uart.vhd
 l0
 L13 1
 VafaD]L@7jeXW]<Kl5^3hC1
 !s100 ORTB1`B^5@AI75[0gI[lL1
 R4
 32
-Z43 !s110 1713898883
+R13
 !i10b 1
-Z44 !s108 1713898883.000000
-Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/src/lib/uart.vhd|
-Z46 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/src/lib/uart.vhd|
+R14
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/lib/uart.vhd|
+Z44 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/lib/uart.vhd|
 !i113 1
-R5
-R6
+R7
+R8
 Auart_rtl
 R0
 R1
 R2
-R31
-!i122 70
+R29
+!i122 77
 l40
-Z47 L23 73
+L23 73
 V:R_Y?47:b[R;QEZO@:X[d0
 !s100 I1Le9MQN^62_PUALlI4[M0
 R4
 32
-R43
+R13
 !i10b 1
+R14
+R43
 R44
-R45
-R46
 !i113 1
-R5
-R6
-Euart_tb
-Z48 w1713898048
 R7
-R17
+R8
+Euart_tb
+Z45 w1713898048
+R9
+R19
 R0
 R1
 R2
-!i122 69
+!i122 75
 R3
-Z49 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/uart_tb.vhd
-Z50 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/uart_tb.vhd
+Z46 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/uart_tb.vhd
+Z47 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/uart_tb.vhd
 l0
 L9 1
 VDzneS]I:JkE;;Teo^OP=51
 !s100 SDXo<JYXVab9h_=gi]0`62
 R4
 32
-Z51 !s110 1713898075
+R13
 !i10b 1
-Z52 !s108 1713898075.000000
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/uart_tb.vhd|
-Z54 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P9_PS2_UART/simulation/testbench/uart_tb.vhd|
+R14
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/uart_tb.vhd|
+Z49 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/uart_tb.vhd|
 !i113 1
-R5
-R6
-Auart_behav
-R31
 R7
-R17
+R8
+Auart_behav
+R29
+R9
+R19
 R0
 R1
 R2
 DEx4 work 7 uart_tb 0 22 DzneS]I:JkE;;Teo^OP=51
-!i122 69
+!i122 75
 l23
 L12 137
 V6b_aOQ@:HQeYODOC@G[X40
 !s100 Z_<]BJZ]Y17DcFcZV5RN_3
 R4
 32
-R51
+R13
 !i10b 1
-R52
-R53
-R54
+R14
+R48
+R49
 !i113 1
-R5
-R6
+R7
+R8
