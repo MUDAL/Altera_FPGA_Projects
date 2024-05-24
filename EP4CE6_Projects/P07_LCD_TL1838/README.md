@@ -38,7 +38,7 @@ display when pressed.
 
 ## NEC protocol decoding with a DSO150 oscilloscope     
 From the oscilloscope's waveform, we can see that the signal starts with an initial low pulse of about 9 ms, followed  
-by a 4.5 ms high pulse as expected.  
+by a high pulse of about 4.5 ms as expected (according to the NEC protocol). The data line is idle high.    
 ![NEC](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/8e3bbd63-6ec4-4dc6-a570-4563cf178864)  
 
 ## Setup    
