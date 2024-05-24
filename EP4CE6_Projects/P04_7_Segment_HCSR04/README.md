@@ -34,7 +34,10 @@
 
 ## Pinouts  
 - Check the **Location** column in the image below for the pin mappings used in this project.    
-![PP_4](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/15e88835-f6bf-49bd-af3e-d34e7ea3d236)  
+![PP_4](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/15e88835-f6bf-49bd-af3e-d34e7ea3d236)   
+
+## Verification with an Oscilloscope  
+![image](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/611ff037-3cfc-4fd0-89de-83d912101b7f)  
 
 ## Helpful resource(s)  
 - [HCSR04 datasheet](https://drive.google.com/file/d/16QAANfYQO59LjlhRBzEFDkZxpB2MxlI5/view?usp=sharing)   
