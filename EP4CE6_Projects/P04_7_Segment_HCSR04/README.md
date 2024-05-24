@@ -37,6 +37,11 @@
 ![PP_4](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/15e88835-f6bf-49bd-af3e-d34e7ea3d236)   
 
 ## Verification with an Oscilloscope  
+```
+Distance (in centimeters) ~= pulse width (in microseconds) / 58.
+For a distance of 226.2 cm, the width of the echo pulse should be 13.1 ms approximately.
+For more information on how to calculate the distance, kindly refer to the datasheet.  
+```
 ![image](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/611ff037-3cfc-4fd0-89de-83d912101b7f)  
 
 ## Helpful resource(s)  
