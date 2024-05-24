@@ -40,7 +40,6 @@ A simple two-digit counter (0 to 99) is implemented in software on the microcont
 ![PP_SPI_LCD](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/77cd61f3-bf65-4f05-9a35-cfdccdb77904)  
 
 ## SPI Decoding with Saleae Logic Analyzer  
-[Link to Logic Analyzer's SPI Scan](https://drive.google.com/file/d/1qqzeK3HX5zqDWV7fekwfmXIulcjnjjfN/view?usp=sharing)  
 ![Screenshot (493)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/9058bcd0-0be6-43cf-a397-4fa16104684b)  
 
 ## Demo  
