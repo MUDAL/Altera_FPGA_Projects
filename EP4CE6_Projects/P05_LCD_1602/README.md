@@ -2,7 +2,7 @@
 
 ## Description    
 - Driving a 16x2 LCD module with an EP4CE6 FPGA board.
-- Displaying a simple message ("HELLO RJX").  
+- Displaying ``HELLO WORLD`` on the 1st line and ``RJX`` on the second.  
 
 ## Tools  
 - EP4CE6E22C8N Cyclone IV FPGA development board
