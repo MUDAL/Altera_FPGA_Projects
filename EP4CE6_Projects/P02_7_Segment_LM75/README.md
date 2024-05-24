@@ -34,7 +34,11 @@
 - Check the **Location** column in the image below for the pin mappings used in this project.  
 ![PP_2](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/69888839-1d70-479d-b965-18ce3b878e52)
 
-## Logic Analyzer Scans (Debugging the I2C protocol)  
+## Logic Analyzer Scans (Debugging the I2C protocol)   
+### 30.5 degree Celsius  
+![Screenshot (568)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/99c43e05-9284-4f83-bfe3-3452989f7fa0)  
+### 31.0 degree Celsius  
+![Screenshot (569)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/d1f9fd36-ad73-4fa7-81fe-b4e39451b401)  
 ### 33.5 degree Celsius  
 ![Screenshot (497)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/a03eb5cb-55f9-42f9-89a0-6e393c078cd2)  
 ### 34.0 degree Celsius  
