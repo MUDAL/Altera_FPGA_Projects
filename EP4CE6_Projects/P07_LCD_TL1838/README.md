@@ -37,6 +37,8 @@ display when pressed.
 ![ir_lcd_main](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/41ac8c2d-b343-4167-b42b-620e50b5457f)   
 
 ## NEC protocol decoding with a DSO150 oscilloscope     
+From the oscilloscope's waveform, we can see that the signal starts with an initial low pulse of about 9 ms, followed  
+by a 4.5 ms high pulse as expected.  
 ![NEC](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/8e3bbd63-6ec4-4dc6-a570-4563cf178864)  
 
 ## Setup    
