@@ -58,7 +58,7 @@ begin
    w_en <= '1' when w_valid = '1' and fifo_full = '0' else '0';
    
    ce_next <= '1' when r_ready = '1' and fifo_empty = '0' else '0';
-   oe_next <=  '1'  when ce_next = '1' else '0';
+   oe_next <=  '1' when ce_next = '1' else '0';
    d_next <= d_ram when ce_reg = '1' else d_reg;
    
    buffered_outputs: d_out <= d_reg;
