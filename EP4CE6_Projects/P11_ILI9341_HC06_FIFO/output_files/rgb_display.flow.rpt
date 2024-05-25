@@ -1,5 +1,5 @@
 Flow report for rgb_display
-Sat May 25 16:06:17 2024
+Sat May 25 22:06:20 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat May 25 16:06:17 2024       ;
+; Flow Status                        ; Successful - Sat May 25 22:06:20 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; rgb_display                                 ;
 ; Top-level Entity Name              ; rgb_display                                 ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 202 / 6,272 ( 3 % )                         ;
-;     Total combinational functions  ; 191 / 6,272 ( 3 % )                         ;
-;     Dedicated logic registers      ; 115 / 6,272 ( 2 % )                         ;
-; Total registers                    ; 115                                         ;
+; Total logic elements               ; 193 / 6,272 ( 3 % )                         ;
+;     Total combinational functions  ; 184 / 6,272 ( 3 % )                         ;
+;     Dedicated logic registers      ; 114 / 6,272 ( 2 % )                         ;
+; Total registers                    ; 114                                         ;
 ; Total pins                         ; 9 / 92 ( 10 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 128 / 276,480 ( < 1 % )                     ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/25/2024 16:05:52 ;
+; Start date & time ; 05/25/2024 22:05:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; rgb_display         ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+--------------------------------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value                        ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+--------------------------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 190090210168440.171664955208792        ; --                                   ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 190090210168440.171667115415704        ; --                                   ; --          ; --                                ;
 ; EDA_DESIGN_ENTRY_SYNTHESIS_TOOL     ; Custom                                 ; <None>                               ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                                   ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                                   ; --          ; eda_board_design_boundary_scan    ;
@@ -102,11 +102,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4798 MB             ; 00:00:28                           ;
-; Fitter               ; 00:00:04     ; 1.0                     ; 5225 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 4679 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4797 MB             ; 00:00:27                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 5230 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4679 MB             ; 00:00:01                           ;
 ; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4731 MB             ; 00:00:02                           ;
-; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:36                           ;
+; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

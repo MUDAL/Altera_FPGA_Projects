@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rgb_display
-Sat May 25 16:06:05 2024
+Sat May 25 22:06:07 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -17,25 +17,24 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   9. Analysis & Synthesis IP Cores Summary
  10. State Machine - |rgb_display|spi_tx:spi_interface|state
  11. State Machine - |rgb_display|uart_rx:uart_interface|state
- 12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Registers Packed Into Inferred Megafunctions
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for fifo:sync_fifo|fifo_ram:fifo_ram|altsyncram:ram_rtl_0|altsyncram_kpg1:auto_generated
- 18. Parameter Settings for User Entity Instance: Top-level Entity: |rgb_display
- 19. Parameter Settings for User Entity Instance: pll:pll|altpll:altpll_component
- 20. Parameter Settings for User Entity Instance: uart_rx:uart_interface
- 21. Parameter Settings for User Entity Instance: fifo:sync_fifo
- 22. Parameter Settings for User Entity Instance: fifo:sync_fifo|fifo_control:fifo_control
- 23. Parameter Settings for User Entity Instance: fifo:sync_fifo|fifo_ram:fifo_ram
- 24. Parameter Settings for User Entity Instance: spi_tx:spi_interface
- 25. Parameter Settings for Inferred Entity Instance: fifo:sync_fifo|fifo_ram:fifo_ram|altsyncram:ram_rtl_0
- 26. altpll Parameter Settings by Entity Instance
- 27. altsyncram Parameter Settings by Entity Instance
- 28. Post-Synthesis Netlist Statistics for Top Partition
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for fifo:sync_fifo|fifo_ram:fifo_ram|altsyncram:ram_rtl_0|altsyncram_kpg1:auto_generated
+ 17. Parameter Settings for User Entity Instance: Top-level Entity: |rgb_display
+ 18. Parameter Settings for User Entity Instance: pll:pll|altpll:altpll_component
+ 19. Parameter Settings for User Entity Instance: uart_rx:uart_interface
+ 20. Parameter Settings for User Entity Instance: fifo:sync_fifo
+ 21. Parameter Settings for User Entity Instance: fifo:sync_fifo|fifo_control:fifo_control
+ 22. Parameter Settings for User Entity Instance: fifo:sync_fifo|fifo_ram:fifo_ram
+ 23. Parameter Settings for User Entity Instance: spi_tx:spi_interface
+ 24. Parameter Settings for Inferred Entity Instance: fifo:sync_fifo|fifo_ram:fifo_ram|altsyncram:ram_rtl_0
+ 25. altpll Parameter Settings by Entity Instance
+ 26. altsyncram Parameter Settings by Entity Instance
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
 
 
 
@@ -62,15 +61,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 25 16:06:05 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sat May 25 22:06:07 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; rgb_display                                 ;
 ; Top-level Entity Name              ; rgb_display                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 211                                         ;
-;     Total combinational functions  ; 190                                         ;
-;     Dedicated logic registers      ; 117                                         ;
-; Total registers                    ; 117                                         ;
+; Total logic elements               ; 203                                         ;
+;     Total combinational functions  ; 183                                         ;
+;     Dedicated logic registers      ; 116                                         ;
+; Total registers                    ; 116                                         ;
 ; Total pins                         ; 9                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 128                                         ;
@@ -218,20 +217,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                      ;
 +---------------------------------------------+----------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 211                                                                        ;
+; Estimated Total logic elements              ; 203                                                                        ;
 ;                                             ;                                                                            ;
-; Total combinational functions               ; 190                                                                        ;
+; Total combinational functions               ; 183                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                            ;
-;     -- 4 input functions                    ; 84                                                                         ;
-;     -- 3 input functions                    ; 32                                                                         ;
-;     -- <=2 input functions                  ; 74                                                                         ;
+;     -- 4 input functions                    ; 74                                                                         ;
+;     -- 3 input functions                    ; 36                                                                         ;
+;     -- <=2 input functions                  ; 73                                                                         ;
 ;                                             ;                                                                            ;
 ; Logic elements by mode                      ;                                                                            ;
-;     -- normal mode                          ; 139                                                                        ;
+;     -- normal mode                          ; 132                                                                        ;
 ;     -- arithmetic mode                      ; 51                                                                         ;
 ;                                             ;                                                                            ;
-; Total registers                             ; 117                                                                        ;
-;     -- Dedicated logic registers            ; 117                                                                        ;
+; Total registers                             ; 116                                                                        ;
+;     -- Dedicated logic registers            ; 116                                                                        ;
 ;     -- I/O registers                        ; 0                                                                          ;
 ;                                             ;                                                                            ;
 ; I/O pins                                    ; 9                                                                          ;
@@ -243,9 +242,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                          ;
 ;                                             ;                                                                            ;
 ; Maximum fan-out node                        ; pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 120                                                                        ;
-; Total fan-out                               ; 1071                                                                       ;
-; Average fan-out                             ; 3.27                                                                       ;
+; Maximum fan-out                             ; 119                                                                        ;
+; Total fan-out                               ; 1038                                                                       ;
+; Average fan-out                             ; 3.24                                                                       ;
 +---------------------------------------------+----------------------------------------------------------------------------+
 
 
@@ -254,18 +253,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |rgb_display                                 ; 190 (0)             ; 117 (0)                   ; 128         ; 0            ; 0       ; 0         ; 9    ; 0            ; |rgb_display                                                                                      ; rgb_display     ; work         ;
+; |rgb_display                                 ; 183 (0)             ; 116 (0)                   ; 128         ; 0            ; 0       ; 0         ; 9    ; 0            ; |rgb_display                                                                                      ; rgb_display     ; work         ;
 ;    |encoder:colour_encoder|                  ; 4 (4)               ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|encoder:colour_encoder                                                               ; encoder         ; work         ;
-;    |fifo:sync_fifo|                          ; 20 (1)              ; 18 (4)                    ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|fifo:sync_fifo                                                                       ; fifo            ; work         ;
-;       |fifo_control:fifo_control|            ; 19 (19)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|fifo:sync_fifo|fifo_control:fifo_control                                             ; fifo_control    ; work         ;
+;    |fifo:sync_fifo|                          ; 22 (2)              ; 17 (3)                    ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|fifo:sync_fifo                                                                       ; fifo            ; work         ;
+;       |fifo_control:fifo_control|            ; 20 (20)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|fifo:sync_fifo|fifo_control:fifo_control                                             ; fifo_control    ; work         ;
 ;       |fifo_ram:fifo_ram|                    ; 0 (0)               ; 0 (0)                     ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|fifo:sync_fifo|fifo_ram:fifo_ram                                                     ; fifo_ram        ; work         ;
 ;          |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|fifo:sync_fifo|fifo_ram:fifo_ram|altsyncram:ram_rtl_0                                ; altsyncram      ; work         ;
 ;             |altsyncram_kpg1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|fifo:sync_fifo|fifo_ram:fifo_ram|altsyncram:ram_rtl_0|altsyncram_kpg1:auto_generated ; altsyncram_kpg1 ; work         ;
 ;    |pll:pll|                                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|pll:pll                                                                              ; pll             ; work         ;
 ;       |altpll:altpll_component|              ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|pll:pll|altpll:altpll_component                                                      ; altpll          ; work         ;
 ;          |pll_altpll:auto_generated|         ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|pll:pll|altpll:altpll_component|pll_altpll:auto_generated                            ; pll_altpll      ; work         ;
-;    |spi_tx:spi_interface|                    ; 119 (119)           ; 61 (61)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|spi_tx:spi_interface                                                                 ; spi_tx          ; work         ;
-;    |uart_rx:uart_interface|                  ; 47 (47)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|uart_rx:uart_interface                                                               ; uart_rx         ; work         ;
+;    |spi_tx:spi_interface|                    ; 112 (112)           ; 62 (62)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|spi_tx:spi_interface                                                                 ; spi_tx          ; work         ;
+;    |uart_rx:uart_interface|                  ; 45 (45)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rgb_display|uart_rx:uart_interface                                                               ; uart_rx         ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -289,49 +288,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |rgb_display|spi_tx:spi_interface|state                                                                                                                                                                                                                                                                             ;
-+---------------------------+---------------+----------------------+------------------------+------------------+----------------+------------------------+----------------------+-------------------------+----------------------+---------------------------+----------------------+--------------+------------------+---------------+
-; Name                      ; state.ST_DONE ; state.ST_SEND_PIXELS ; state.ST_MEM_WRITE_CMD ; state.ST_TRIGGER ; state.ST_120MS ; state.ST_SLEEP_OUT_CMD ; state.ST_RGB_SETTING ; state.ST_MEM_ACCESS_CMD ; state.ST_BPP_SETTING ; state.ST_PIXEL_FORMAT_CMD ; state.ST_DISP_ON_CMD ; state.ST_5MS ; state.ST_TFT_RST ; state.ST_IDLE ;
-+---------------------------+---------------+----------------------+------------------------+------------------+----------------+------------------------+----------------------+-------------------------+----------------------+---------------------------+----------------------+--------------+------------------+---------------+
-; state.ST_IDLE             ; 0             ; 0                    ; 0                      ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 0             ;
-; state.ST_TFT_RST          ; 0             ; 0                    ; 0                      ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 1                ; 1             ;
-; state.ST_5MS              ; 0             ; 0                    ; 0                      ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 1            ; 0                ; 1             ;
-; state.ST_DISP_ON_CMD      ; 0             ; 0                    ; 0                      ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 1                    ; 0            ; 0                ; 1             ;
-; state.ST_PIXEL_FORMAT_CMD ; 0             ; 0                    ; 0                      ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 1                         ; 0                    ; 0            ; 0                ; 1             ;
-; state.ST_BPP_SETTING      ; 0             ; 0                    ; 0                      ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 1                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
-; state.ST_MEM_ACCESS_CMD   ; 0             ; 0                    ; 0                      ; 0                ; 0              ; 0                      ; 0                    ; 1                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
-; state.ST_RGB_SETTING      ; 0             ; 0                    ; 0                      ; 0                ; 0              ; 0                      ; 1                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
-; state.ST_SLEEP_OUT_CMD    ; 0             ; 0                    ; 0                      ; 0                ; 0              ; 1                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
-; state.ST_120MS            ; 0             ; 0                    ; 0                      ; 0                ; 1              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
-; state.ST_TRIGGER          ; 0             ; 0                    ; 0                      ; 1                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
-; state.ST_MEM_WRITE_CMD    ; 0             ; 0                    ; 1                      ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
-; state.ST_SEND_PIXELS      ; 0             ; 1                    ; 0                      ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
-; state.ST_DONE             ; 1             ; 0                    ; 0                      ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
-+---------------------------+---------------+----------------------+------------------------+------------------+----------------+------------------------+----------------------+-------------------------+----------------------+---------------------------+----------------------+--------------+------------------+---------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |rgb_display|spi_tx:spi_interface|state                                                                                                                                                                                                                                                                                              ;
++---------------------------+---------------+----------------------+------------------------+----------------+------------------+----------------+------------------------+----------------------+-------------------------+----------------------+---------------------------+----------------------+--------------+------------------+---------------+
+; Name                      ; state.ST_DONE ; state.ST_SEND_PIXELS ; state.ST_MEM_WRITE_CMD ; state.ST_READY ; state.ST_TRIGGER ; state.ST_120MS ; state.ST_SLEEP_OUT_CMD ; state.ST_RGB_SETTING ; state.ST_MEM_ACCESS_CMD ; state.ST_BPP_SETTING ; state.ST_PIXEL_FORMAT_CMD ; state.ST_DISP_ON_CMD ; state.ST_5MS ; state.ST_TFT_RST ; state.ST_IDLE ;
++---------------------------+---------------+----------------------+------------------------+----------------+------------------+----------------+------------------------+----------------------+-------------------------+----------------------+---------------------------+----------------------+--------------+------------------+---------------+
+; state.ST_IDLE             ; 0             ; 0                    ; 0                      ; 0              ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 0             ;
+; state.ST_TFT_RST          ; 0             ; 0                    ; 0                      ; 0              ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 1                ; 1             ;
+; state.ST_5MS              ; 0             ; 0                    ; 0                      ; 0              ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 1            ; 0                ; 1             ;
+; state.ST_DISP_ON_CMD      ; 0             ; 0                    ; 0                      ; 0              ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 1                    ; 0            ; 0                ; 1             ;
+; state.ST_PIXEL_FORMAT_CMD ; 0             ; 0                    ; 0                      ; 0              ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 1                         ; 0                    ; 0            ; 0                ; 1             ;
+; state.ST_BPP_SETTING      ; 0             ; 0                    ; 0                      ; 0              ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 1                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
+; state.ST_MEM_ACCESS_CMD   ; 0             ; 0                    ; 0                      ; 0              ; 0                ; 0              ; 0                      ; 0                    ; 1                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
+; state.ST_RGB_SETTING      ; 0             ; 0                    ; 0                      ; 0              ; 0                ; 0              ; 0                      ; 1                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
+; state.ST_SLEEP_OUT_CMD    ; 0             ; 0                    ; 0                      ; 0              ; 0                ; 0              ; 1                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
+; state.ST_120MS            ; 0             ; 0                    ; 0                      ; 0              ; 0                ; 1              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
+; state.ST_TRIGGER          ; 0             ; 0                    ; 0                      ; 0              ; 1                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
+; state.ST_READY            ; 0             ; 0                    ; 0                      ; 1              ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
+; state.ST_MEM_WRITE_CMD    ; 0             ; 0                    ; 1                      ; 0              ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
+; state.ST_SEND_PIXELS      ; 0             ; 1                    ; 0                      ; 0              ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
+; state.ST_DONE             ; 1             ; 0                    ; 0                      ; 0              ; 0                ; 0              ; 0                      ; 0                    ; 0                       ; 0                    ; 0                         ; 0                    ; 0            ; 0                ; 1             ;
++---------------------------+---------------+----------------------+------------------------+----------------+------------------+----------------+------------------------+----------------------+-------------------------+----------------------+---------------------------+----------------------+--------------+------------------+---------------+
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------+
-; State Machine - |rgb_display|uart_rx:uart_interface|state                           ;
-+------------------+---------------+---------------+------------------+---------------+
-; Name             ; state.ST_WAIT ; state.ST_DONE ; state.ST_RECEIVE ; state.ST_IDLE ;
-+------------------+---------------+---------------+------------------+---------------+
-; state.ST_IDLE    ; 0             ; 0             ; 0                ; 0             ;
-; state.ST_RECEIVE ; 0             ; 0             ; 1                ; 1             ;
-; state.ST_DONE    ; 0             ; 1             ; 0                ; 1             ;
-; state.ST_WAIT    ; 1             ; 0             ; 0                ; 1             ;
-+------------------+---------------+---------------+------------------+---------------+
-
-
-+---------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                        ;
-+---------------------------------------+-----------------------------------+
-; Register name                         ; Reason for Removal                ;
-+---------------------------------------+-----------------------------------+
-; fifo:sync_fifo|oe_reg[0]              ; Merged with fifo:sync_fifo|ce_reg ;
-; Total Number of Removed Registers = 1 ;                                   ;
-+---------------------------------------+-----------------------------------+
++---------------------------------------------------------------------+
+; State Machine - |rgb_display|uart_rx:uart_interface|state           ;
++------------------+---------------+------------------+---------------+
+; Name             ; state.ST_DONE ; state.ST_RECEIVE ; state.ST_IDLE ;
++------------------+---------------+------------------+---------------+
+; state.ST_IDLE    ; 0             ; 0                ; 0             ;
+; state.ST_RECEIVE ; 0             ; 1                ; 1             ;
+; state.ST_DONE    ; 1             ; 0                ; 1             ;
++------------------+---------------+------------------+---------------+
 
 
 +------------------------------------------------------+
@@ -339,10 +328,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 117   ;
+; Total registers                              ; 116   ;
 ; Number of registers using Synchronous Clear  ; 45    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 117   ;
+; Number of registers using Asynchronous Clear ; 116   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 57    ;
 ; Number of registers using Preset             ; 0     ;
@@ -376,15 +365,13 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |rgb_display|spi_tx:spi_interface|cnt1_reg[4]    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |rgb_display|spi_tx:spi_interface|cnt2_reg[0]    ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |rgb_display|spi_tx:spi_interface|cnt1_reg[0]    ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |rgb_display|spi_tx:spi_interface|cnt2_reg[6]    ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |rgb_display|uart_rx:uart_interface|index_reg[3] ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |rgb_display|spi_tx:spi_interface|cnt3_reg[12]   ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |rgb_display|spi_tx:spi_interface|cnt4_reg[1]    ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |rgb_display|spi_tx:spi_interface|index_reg[0]   ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |rgb_display|uart_rx:uart_interface|Selector3    ;
-; 13:1               ; 5 bits    ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |rgb_display|spi_tx:spi_interface|Selector13     ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |rgb_display|spi_tx:spi_interface|Selector1      ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |rgb_display|spi_tx:spi_interface|cnt3_reg[5]    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |rgb_display|spi_tx:spi_interface|cnt4_reg[2]    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |rgb_display|spi_tx:spi_interface|index_reg[1]   ;
+; 13:1               ; 5 bits    ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |rgb_display|spi_tx:spi_interface|Selector2      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 
 
@@ -942,26 +929,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 9                           ;
-; cycloneiii_ff         ; 117                         ;
-;     CLR               ; 50                          ;
+; cycloneiii_ff         ; 116                         ;
+;     CLR               ; 49                          ;
 ;     CLR SCLR          ; 10                          ;
 ;     ENA CLR           ; 22                          ;
 ;     ENA CLR SCLR      ; 35                          ;
-; cycloneiii_lcell_comb ; 192                         ;
+; cycloneiii_lcell_comb ; 185                         ;
 ;     arith             ; 51                          ;
 ;         2 data inputs ; 49                          ;
 ;         3 data inputs ; 2                           ;
-;     normal            ; 141                         ;
+;     normal            ; 134                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 30                          ;
-;         4 data inputs ; 84                          ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 34                          ;
+;         4 data inputs ; 74                          ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 2                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.40                        ;
+; Average LUT depth     ; 3.23                        ;
 +-----------------------+-----------------------------+
 
 
@@ -980,7 +967,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat May 25 16:05:51 2024
+    Info: Processing started: Sat May 25 22:05:54 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rgb_display -c rgb_display
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1076,8 +1063,8 @@ Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll|altpll:altp
 Info (12129): Elaborating entity "uart_rx" using architecture "A:uart_rx_rtl" for hierarchy "uart_rx:uart_interface" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/rgb_display.vhd Line: 58
 Info (12129): Elaborating entity "encoder" using architecture "A:encoder_rtl" for hierarchy "encoder:colour_encoder" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/rgb_display.vhd Line: 67
 Info (12129): Elaborating entity "fifo" using architecture "A:fifo_rtl" for hierarchy "fifo:sync_fifo" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/rgb_display.vhd Line: 75
-Info (12129): Elaborating entity "fifo_control" using architecture "A:fifo_control_rtl" for hierarchy "fifo:sync_fifo|fifo_control:fifo_control" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd Line: 37
-Info (12129): Elaborating entity "fifo_ram" using architecture "A:fifo_ram_rtl" for hierarchy "fifo:sync_fifo|fifo_ram:fifo_ram" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd Line: 48
+Info (12129): Elaborating entity "fifo_control" using architecture "A:fifo_control_rtl" for hierarchy "fifo:sync_fifo|fifo_control:fifo_control" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd Line: 36
+Info (12129): Elaborating entity "fifo_ram" using architecture "A:fifo_ram_rtl" for hierarchy "fifo:sync_fifo|fifo_ram:fifo_ram" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd Line: 47
 Info (12129): Elaborating entity "spi_tx" using architecture "A:spi_tx_rtl" for hierarchy "spi_tx:spi_interface" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/rgb_display.vhd Line: 86
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "fifo:sync_fifo|fifo_ram:fifo_ram|ram_rtl_0" 
@@ -1118,23 +1105,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
-Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd Line: 325
+Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd Line: 329
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "led" is stuck at VCC File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/rgb_display.vhd Line: 31
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 225 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 217 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 213 logic cells
+    Info (21061): Implemented 205 logic cells
     Info (21064): Implemented 2 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4798 megabytes
-    Info: Processing ended: Sat May 25 16:06:05 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 4797 megabytes
+    Info: Processing ended: Sat May 25 22:06:07 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:27
 
 

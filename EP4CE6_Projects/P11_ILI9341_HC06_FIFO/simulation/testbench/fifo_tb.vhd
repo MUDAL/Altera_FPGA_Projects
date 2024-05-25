@@ -57,23 +57,27 @@ begin
       end loop;
       wait until rising_edge(clk);
       w_valid <= '0';
+      wait until rising_edge(clk);
       r_ready <= '1';
       wait;
+      
    end process;
    
    output_verification: process
    begin
       wait until rst_n = '1';
-      wait until r_oe = '1';
-      wait until rising_edge(clk);
+      wait until w_valid = '0';
+      wait until r_ready = '1';
       
       for i in 0 to 2**AW - 1 loop
          report "[R]: " & integer'image(to_integer(unsigned(d_out)));
          wait until rising_edge(clk);
       end loop;
-      
+      report "[R]: " & integer'image(to_integer(unsigned(d_out)));
+      wait until rising_edge(clk);     
       assert false report "Simulation done" severity failure;
       wait;
+      
    end process;
    
 end fifo_behav;

@@ -15,10 +15,10 @@ Z0 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 32
-Z3 !s110 1716649957
+Z3 !s110 1716659411
 !i10b 1
-Z4 w1716353346
-!i122 145
+Z4 w1716653086
+!i122 175
 Z5 dL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation
 Z6 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/encoder.vhd
 Z7 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/encoder.vhd
@@ -27,7 +27,7 @@ L9 1
 VWQ66[^a2l@R8fIEFc6zle1
 !s100 j]lc7AQBdgc5US0?;9ZXG2
 Z8 OV;C;2020.1;71
-Z9 !s108 1716649956.000000
+Z9 !s108 1716659411.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/encoder.vhd|
 Z11 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/encoder.vhd|
 !i113 1
@@ -41,7 +41,7 @@ Z14 DEx4 work 7 encoder 0 22 WQ66[^a2l@R8fIEFc6zle1
 32
 R3
 !i10b 1
-!i122 145
+!i122 175
 l39
 L18 49
 V6infM[P]7;l[C<n4L1XAQ0
@@ -60,10 +60,10 @@ R0
 R1
 R2
 32
-Z17 !s110 1716649958
+Z17 !s110 1716659412
 !i10b 1
 Z18 w1716148983
-!i122 151
+!i122 181
 R5
 Z19 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/encoder_tb.vhd
 Z20 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/encoder_tb.vhd
@@ -72,7 +72,7 @@ L9 1
 Vj7S>jH`j<bcDB82P8Z_O]2
 !s100 D>Dho8N=[?Y3SRZQUIO2<0
 R8
-Z21 !s108 1716649958.000000
+Z21 !s108 1716659412.000000
 Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/encoder_tb.vhd|
 Z23 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/encoder_tb.vhd|
 !i113 1
@@ -89,7 +89,7 @@ DEx4 work 10 encoder_tb 0 22 j7S>jH`j<bcDB82P8Z_O]2
 32
 R17
 !i10b 1
-!i122 151
+!i122 181
 l21
 L12 120
 VzHF<;>kPFVjXaD2;5XBnJ2
@@ -106,43 +106,43 @@ R0
 R1
 R2
 32
-R3
+Z24 !s110 1716671307
 !i10b 1
-Z24 w1716648967
-!i122 148
+Z25 w1716670675
+!i122 202
 R5
-Z25 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd
-Z26 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd
+Z26 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd
+Z27 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd
 l0
 L11 1
 Ve4cN7jFjM3NC9OZ4VYH^j3
 !s100 aSmkYDOeX_OP18SO?gVS30
 R8
-Z27 !s108 1716649957.000000
-Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd|
-Z29 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd|
+Z28 !s108 1716671307.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd|
+Z30 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd|
 !i113 1
 R12
 R13
 Afifo_rtl
-Z30 DEx4 work 8 fifo_ram 0 22 Yf`9im4Qe[cPVc<nT4SZ32
-Z31 DEx4 work 12 fifo_control 0 22 Km87O4WbGFhHQQ?T0h[dT0
+Z31 DEx4 work 8 fifo_ram 0 22 Yf`9im4Qe[cPVc<nT4SZ32
+Z32 DEx4 work 12 fifo_control 0 22 Km87O4WbGFhHQQ?T0h[dT0
 R0
 R1
 R2
-Z32 DEx4 work 4 fifo 0 22 e4cN7jFjM3NC9OZ4VYH^j3
+Z33 DEx4 work 4 fifo 0 22 e4cN7jFjM3NC9OZ4VYH^j3
 32
-R3
+R24
 !i10b 1
-!i122 148
-l36
-L23 58
-VXV_8?:^igQ<?>CX5V^>Q50
-!s100 7he^Qd1QY8@l2jKVQdlDL2
+!i122 202
+l35
+L23 53
+VfgV?AOfA]`<F1STG4Ub_V2
+!s100 I]LNODZ7XTIz@@mZNJO:^1
 R8
-R27
 R28
 R29
+R30
 !i113 1
 R12
 R13
@@ -151,21 +151,21 @@ R0
 R1
 R2
 32
-R3
+R17
 !i10b 1
-Z33 w1716641641
-!i122 149
+Z34 w1716641641
+!i122 179
 R5
-Z34 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_control.vhd
-Z35 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_control.vhd
+Z35 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_control.vhd
+Z36 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_control.vhd
 l0
-Z36 L12 1
+Z37 L12 1
 VKm87O4WbGFhHQQ?T0h[dT0
 !s100 od9]K^`4>oFTWHQ=dA]YJ0
 R8
-R27
-Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_control.vhd|
-Z38 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_control.vhd|
+R21
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_control.vhd|
+Z39 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_control.vhd|
 !i113 1
 R12
 R13
@@ -173,19 +173,19 @@ Afifo_control_rtl
 R0
 R1
 R2
-R31
+R32
 32
-R3
+R17
 !i10b 1
-!i122 149
+!i122 179
 l31
 L24 39
 Vi`dRl4_KLd5nekFMn`jLd1
 !s100 ]4KH5;mT1;gLZW0CBgRRa1
 R8
-R27
-R37
+R21
 R38
+R39
 !i113 1
 R12
 R13
@@ -196,26 +196,26 @@ R0
 R1
 R2
 32
-Z39 !s110 1716649959
+Z40 !s110 1716659413
 !i10b 1
-Z40 w1716636693
-!i122 156
+Z41 w1716636693
+!i122 186
 R5
-Z41 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_control_tb.vhd
-Z42 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_control_tb.vhd
+Z42 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_control_tb.vhd
+Z43 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_control_tb.vhd
 l0
 L9 1
 VWE6WIPDeV]`i<A]UMnIZ]0
 !s100 HDzQCQ=nBFU53nP_IHB;_0
 R8
-Z43 !s108 1716649959.000000
-Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_control_tb.vhd|
-Z45 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_control_tb.vhd|
+Z44 !s108 1716659413.000000
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_control_tb.vhd|
+Z46 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_control_tb.vhd|
 !i113 1
 R12
 R13
 Afifo_control_behav
-R31
+R32
 R15
 R16
 R0
@@ -223,17 +223,17 @@ R1
 R2
 DEx4 work 15 fifo_control_tb 0 22 WE6WIPDeV]`i<A]UMnIZ]0
 32
-R39
+R40
 !i10b 1
-!i122 156
+!i122 186
 l26
 L12 78
 V3AQ5WlSg@3h:lMYcHzCSH3
 !s100 :cA7fOY1UelnAZP`JQzZI0
 R8
-R43
 R44
 R45
+R46
 !i113 1
 R12
 R13
@@ -244,19 +244,19 @@ R2
 32
 R17
 !i10b 1
-Z46 w1716240341
-!i122 150
+Z47 w1716240341
+!i122 180
 R5
-Z47 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_ram.vhd
-Z48 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_ram.vhd
+Z48 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_ram.vhd
+Z49 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_ram.vhd
 l0
-R36
+R37
 VYf`9im4Qe[cPVc<nT4SZ32
 !s100 l4b^2^1ZF<GIDUiD<kW<@3
 R8
 R21
-Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_ram.vhd|
-Z50 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_ram.vhd|
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_ram.vhd|
+Z51 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_ram.vhd|
 !i113 1
 R12
 R13
@@ -264,19 +264,19 @@ Afifo_ram_rtl
 R0
 R1
 R2
-R30
+R31
 32
 R17
 !i10b 1
-!i122 150
+!i122 180
 l28
 L23 16
 VTYRQYg<i00g3z]?aN9@2e1
 !s100 [A=W>bfW]Pc_bQ=R;oj>Y3
 R8
 R21
-R49
 R50
+R51
 !i113 1
 R12
 R13
@@ -287,26 +287,26 @@ R0
 R1
 R2
 32
-R39
+R40
 !i10b 1
-Z51 w1716248536
-!i122 155
+Z52 w1716248536
+!i122 185
 R5
-Z52 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_ram_tb.vhd
-Z53 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_ram_tb.vhd
+Z53 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_ram_tb.vhd
+Z54 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_ram_tb.vhd
 l0
 L9 1
 VfVjC?<YcR;6<RfO89RR8X0
 !s100 8_6D]e<TIJz]EnYSWQ7^P1
 R8
-R43
-Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_ram_tb.vhd|
-Z55 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_ram_tb.vhd|
+R44
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_ram_tb.vhd|
+Z56 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_ram_tb.vhd|
 !i113 1
 R12
 R13
 Afifo_ram_behav
-R30
+R31
 R15
 R16
 R0
@@ -314,17 +314,17 @@ R1
 R2
 DEx4 work 11 fifo_ram_tb 0 22 fVjC?<YcR;6<RfO89RR8X0
 32
-R39
+R40
 !i10b 1
-!i122 155
+!i122 185
 l24
 L12 140
 V<YYFmhZPRMIhIz@nlnERQ2
 !s100 3@5gaej=T`kcKj[]l^I9`1
 R8
-R43
-R54
+R44
 R55
+R56
 !i113 1
 R12
 R13
@@ -335,26 +335,26 @@ R0
 R1
 R2
 32
-R39
+Z57 !s110 1716669583
 !i10b 1
-Z56 w1716642113
-!i122 157
+Z58 w1716669535
+!i122 200
 R5
-Z57 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_tb.vhd
-Z58 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_tb.vhd
+Z59 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_tb.vhd
+Z60 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_tb.vhd
 l0
 L9 1
 V3mE56B6nd;06]GRX1NeKI1
 !s100 <Gz:?UKob@WjH:N`G:N0_2
 R8
-R43
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_tb.vhd|
-Z60 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_tb.vhd|
+Z61 !s108 1716669583.000000
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_tb.vhd|
+Z63 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_tb.vhd|
 !i113 1
 R12
 R13
 Afifo_behav
-R32
+R33
 R15
 R16
 R0
@@ -362,17 +362,17 @@ R1
 R2
 DEx4 work 7 fifo_tb 0 22 3mE56B6nd;06]GRX1NeKI1
 32
-R39
+R57
 !i10b 1
-!i122 157
+!i122 200
 l25
-L12 68
-VEAQ<T^`gTHkd5QZd::5?U2
-!s100 i[3ENjX]CU07APXUY>JBd1
+L12 72
+V>zAaghKci@h10zUSmK1Bj2
+!s100 eH:2PCLiG=6<EBC;JnYmF3
 R8
-R43
-R59
-R60
+R61
+R62
+R63
 !i113 1
 R12
 R13
@@ -384,7 +384,8 @@ R2
 b1
 R17
 !i10b 1
-!i122 152
+b1
+!i122 182
 w1711661093
 R5
 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/pack_tb_header.vhd
@@ -409,7 +410,7 @@ R2
 32
 R17
 !i10b 1
-!i122 152
+!i122 182
 w1711660441
 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/pack_tb_body.vhd
 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/pack_tb_body.vhd
@@ -424,26 +425,122 @@ R21
 !i113 1
 R12
 R13
+Ergb_display
+R0
+R1
+R2
+32
+Z64 !s110 1716659414
+!i10b 1
+Z65 w1716653095
+!i122 189
+R5
+Z66 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/rgb_display.vhd
+Z67 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/rgb_display.vhd
+l0
+L22 1
+Vj0m4m[YJ[76B:kO@Vz93K0
+!s100 nC=C[=gU?7Bl>c3mc^Td80
+R8
+Z68 !s108 1716659414.000000
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/rgb_display.vhd|
+Z70 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/rgb_display.vhd|
+!i113 1
+R12
+R13
+Argb_display_rtl
+Z71 DEx4 work 6 spi_tx 0 22 heACLWF1]j9?E[DLE3?LN1
+R33
+R14
+Z72 DEx4 work 7 uart_rx 0 22 3:BQY=d7@@SoT154k543X1
+DEx9 altera_mf 3 pll 0 22 I<G4QOD_ZEQgzD=e71_LR0
+R0
+R1
+R2
+Z73 DEx4 work 11 rgb_display 0 22 j0m4m[YJ[76B:kO@Vz93K0
+32
+R64
+!i10b 1
+!i122 189
+l50
+L39 61
+VclKFE22oTe<hG=OUPTaY61
+!s100 kM47AQl@?:PTi4kb:h2ca2
+R8
+R68
+R69
+R70
+!i113 1
+R12
+R13
+Ergb_display_tb
+R15
+R16
+R0
+R1
+R2
+32
+R64
+!i10b 1
+Z74 w1716413951
+!i122 188
+R5
+Z75 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/rgb_display_tb.vhd
+Z76 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/rgb_display_tb.vhd
+l0
+L9 1
+VdBSHa3d@nzhgCiG8W2]2K0
+!s100 a]HhP4R6^E:Q>zdFV?bLb2
+R8
+R44
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/rgb_display_tb.vhd|
+Z78 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/rgb_display_tb.vhd|
+!i113 1
+R12
+R13
+Argb_display_behav
+R73
+R15
+R16
+R0
+R1
+R2
+DEx4 work 14 rgb_display_tb 0 22 dBSHa3d@nzhgCiG8W2]2K0
+32
+R64
+!i10b 1
+!i122 188
+l40
+L12 184
+V`EFkVXZl61k^n^0Q9k1ND0
+!s100 nc<@ERkOJEFA>jJ^0[GOM3
+R8
+R44
+R77
+R78
+!i113 1
+R12
+R13
 Espi_tx
 R0
 R1
 R2
 32
-R3
+Z79 !s110 1716665211
 !i10b 1
-Z61 w1716648028
-!i122 146
+Z80 w1716663701
+!i122 190
 R5
-Z62 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd
-Z63 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd
+Z81 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd
+Z82 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd
 l0
 L16 1
 VheACLWF1]j9?E[DLE3?LN1
 !s100 e6>]KnYDdX>Ie@:MdTG0Z3
 R8
-R27
-Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd|
-Z65 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd|
+Z83 !s108 1716665211.000000
+Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd|
+Z85 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd|
 !i113 1
 R12
 R13
@@ -451,19 +548,19 @@ Aspi_tx_rtl
 R0
 R1
 R2
-Z66 DEx4 work 6 spi_tx 0 22 heACLWF1]j9?E[DLE3?LN1
+R71
 32
-R3
+R79
 !i10b 1
-!i122 146
-l127
-L31 321
-VzVHF4_j961o?DhY]g9oHl1
-!s100 0XI3FQW0b]VSf_ST8[XNi3
+!i122 190
+l128
+L31 325
+VAKKk42kkG]7L:R6MgNN0F1
+!s100 MzdRB<KNJ<]Gz^VeBGmgA1
 R8
-R27
-R64
-R65
+R83
+R84
+R85
 !i113 1
 R12
 R13
@@ -474,26 +571,26 @@ R0
 R1
 R2
 32
-R17
+Z86 !s110 1716665754
 !i10b 1
-Z67 w1716148877
-!i122 153
+Z87 w1716665729
+!i122 191
 R5
-Z68 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/spi_tx_tb.vhd
-Z69 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/spi_tx_tb.vhd
+Z88 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/spi_tx_tb.vhd
+Z89 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/spi_tx_tb.vhd
 l0
 L9 1
 Vo]eofMiJKN8J:oH45_B^<3
 !s100 S`biP4aalKk]UfTTJ_jiA0
 R8
-R21
-Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/spi_tx_tb.vhd|
-Z71 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/spi_tx_tb.vhd|
+Z90 !s108 1716665754.000000
+Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/spi_tx_tb.vhd|
+Z92 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/spi_tx_tb.vhd|
 !i113 1
 R12
 R13
 Aspi_tx_behav
-R66
+R71
 R15
 R16
 R0
@@ -501,17 +598,17 @@ R1
 R2
 DEx4 work 9 spi_tx_tb 0 22 o]eofMiJKN8J:oH45_B^<3
 32
-R17
+R86
 !i10b 1
-!i122 153
+!i122 191
 l30
 L12 148
-Vao_2JC:=diFogk5U;EIJd1
-!s100 kXh;LPzY`lI<n@P17m93P1
+VUiKVbjARC_lH^hWh?M>a53
+!s100 ii5NBl7CnQaD]B[VW^n7G1
 R8
-R21
-R70
-R71
+R90
+R91
+R92
 !i113 1
 R12
 R13
@@ -520,21 +617,21 @@ R0
 R1
 R2
 32
-R3
+Z93 !s110 1716665842
 !i10b 1
-Z72 w1716146845
-!i122 147
+Z94 w1716663648
+!i122 192
 R5
-Z73 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/uart_rx.vhd
-Z74 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/uart_rx.vhd
+Z95 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/uart_rx.vhd
+Z96 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/uart_rx.vhd
 l0
 L13 1
 V3:BQY=d7@@SoT154k543X1
 !s100 oE1<<@`AMQ`DYXT6fkWD11
 R8
-R27
-Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/uart_rx.vhd|
-Z76 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/uart_rx.vhd|
+Z97 !s108 1716665842.000000
+Z98 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/uart_rx.vhd|
+Z99 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/uart_rx.vhd|
 !i113 1
 R12
 R13
@@ -542,19 +639,19 @@ Auart_rx_rtl
 R0
 R1
 R2
-Z77 DEx4 work 7 uart_rx 0 22 3:BQY=d7@@SoT154k543X1
+R72
 32
-R3
+R93
 !i10b 1
-!i122 147
+!i122 192
 l42
-L23 96
-VoaVEUlL`@RiOR1;;LQ>a21
-!s100 UTgkR_Nj8T7j7Za7WRHRP3
+L23 88
+V^n;0]LT8<a3:NQQHU=Z>X3
+!s100 G4[U_Vz^ne>Bn:]=12Z=V3
 R8
-R27
-R75
-R76
+R97
+R98
+R99
 !i113 1
 R12
 R13
@@ -565,26 +662,26 @@ R0
 R1
 R2
 32
-R17
+R40
 !i10b 1
-Z78 w1716148631
-!i122 154
+Z100 w1716148631
+!i122 184
 R5
-Z79 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/uart_rx_tb.vhd
-Z80 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/uart_rx_tb.vhd
+Z101 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/uart_rx_tb.vhd
+Z102 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/uart_rx_tb.vhd
 l0
 L9 1
 Vn<oN_`B@]Jd6KHF<W8n4K2
 !s100 _M==S8ogIaD1AgYYB]oj32
 R8
-R21
-Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/uart_rx_tb.vhd|
-Z82 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/uart_rx_tb.vhd|
+R44
+Z103 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/uart_rx_tb.vhd|
+Z104 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/uart_rx_tb.vhd|
 !i113 1
 R12
 R13
 Auart_rx_behav
-R77
+R72
 R15
 R16
 R0
@@ -592,17 +689,17 @@ R1
 R2
 DEx4 work 10 uart_rx_tb 0 22 n<oN_`B@]Jd6KHF<W8n4K2
 32
-R17
+R40
 !i10b 1
-!i122 154
+!i122 184
 l24
 L12 133
 V@02Ro7i57_IV[im@om2oO1
 !s100 NLB<iNd0NQjU5`PAzVIO]1
 R8
-R21
-R81
-R82
+R44
+R103
+R104
 !i113 1
 R12
 R13

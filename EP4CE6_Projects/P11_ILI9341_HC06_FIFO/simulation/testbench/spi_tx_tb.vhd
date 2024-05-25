@@ -69,8 +69,8 @@ begin
          -- Convert test inputs to std_logic_vector (slv)
          data_slv(3 downto 0) := char2slv(data_str(1));        
          
-         wait until rdy = '1';
          en <= '1';
+         wait until rdy = '1';
          colour <= data_slv(1 downto 0);
          wait until rising_edge(clk);
          en <= '0';

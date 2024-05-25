@@ -26,7 +26,7 @@ architecture uart_rx_rtl of uart_rx is
    constant BIT_CLKS: integer := (CLK_FREQ / BAUD_RATE);
    constant HALF_BIT: integer := (BIT_CLKS / 2) - 1;
    constant FULL_BIT: integer := (BIT_CLKS - 1);
-   type fsm is (ST_IDLE, ST_RECEIVE, ST_DONE, ST_WAIT);
+   type fsm is (ST_IDLE, ST_RECEIVE, ST_DONE);
    signal state: fsm;
    signal next_state: fsm;
    -- 9: stop bit, 8 downto 1: data byte, 0: start bit
@@ -53,8 +53,6 @@ begin
                next_state <= ST_DONE;
             end if;
          when ST_DONE =>
-            next_state <= ST_WAIT;
-         when ST_WAIT =>
             next_state <= ST_IDLE;
       end case;
    end process;
@@ -68,6 +66,7 @@ begin
       end if;
    end process;
    
+   moore_output: done_next <= '1' when state = ST_DONE else '0';
    --------------------------------------------------------------------------
    mealy_outputs: process(state,clks_reg,data_reg,index_reg,rx_reg)
    begin
@@ -79,7 +78,6 @@ begin
                data_next(index_reg) <= rx_reg;
             end if;
          when ST_DONE =>
-         when ST_WAIT =>
       end case;
    end process; 
    
@@ -88,13 +86,7 @@ begin
    
    index_next <= index_reg + 1 when index_reg /= 9 and clks_reg = FULL_BIT
          else        0         when state = ST_IDLE and rx_reg = START_BIT
-         else    index_reg;
-
-   done_next <= '0' when state = ST_IDLE
-        else    '1' when state = ST_RECEIVE
-                     and index_reg = 9
-                     and clks_reg = FULL_BIT   
-        else    done_reg;          
+         else    index_reg;          
    --------------------------------------------------------------------------
    buffered_outputs: data_out <= data_reg(8 downto 1);
                      done <= done_reg;

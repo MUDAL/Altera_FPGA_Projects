@@ -90,6 +90,7 @@ architecture spi_tx_rtl of spi_tx is
                 ST_SLEEP_OUT_CMD, 
                 ST_120MS, -- Wait for 120 ms
                 ST_TRIGGER,
+                ST_READY,
                 ST_MEM_WRITE_CMD,
                 ST_SEND_PIXELS, 
                 ST_DONE);
@@ -171,8 +172,10 @@ begin
             end if;
          when ST_TRIGGER =>
             if en = '1' then
-               next_state <= ST_MEM_WRITE_CMD;
+               next_state <= ST_READY;
             end if;
+         when ST_READY =>
+            next_state <= ST_MEM_WRITE_CMD;
          when ST_MEM_WRITE_CMD =>
             if sck2_reg = '1' and index_reg = 0 then
                next_state <= ST_SEND_PIXELS;
@@ -307,14 +310,15 @@ begin
    d_rst_n <= '0' when state = ST_TFT_RST and cnt1_reg /= CNT_RST else '1';
    
    -- TFT display chip select logic
-   cs <= '1' when (state = ST_TRIGGER and en = '0')  
+   cs <= '1' when (state = ST_TRIGGER and en = '0')
+               or  state = ST_READY
                or  state = ST_IDLE 
                or  state = ST_TFT_RST 
                or  state = ST_5MS 
    else  '0';
    
    -- 'Ready' logic for SPI TX module
-   rdy <= '1' when state = ST_TRIGGER else '0';
+   rdy <= '1' when state = ST_READY else '0';
    ------------------------------------------------------------------
    buffered_outputs: sck <= sck3_reg;
                      mosi <= mosi_reg;

@@ -29,10 +29,9 @@ architecture fifo_rtl of fifo is
    signal d_ram: std_logic_vector(DW - 1 downto 0);
    signal d_reg: std_logic_vector(DW - 1 downto 0);
    signal d_next: std_logic_vector(Dw - 1 downto 0);
-   signal ce_reg: std_logic; -- Clock Enable (For output registers)
+   -- Clock Enable (for output data register to FIFO reader) 
+   signal ce_reg: std_logic;  
    signal ce_next: std_logic;   
-   signal oe_reg: std_logic_vector(1 downto 0); -- Output Enable
-   signal oe_next: std_logic;
 begin
    fifo_control: entity work.fifo_control(fifo_control_rtl)
    generic map(AW => AW)
@@ -56,24 +55,20 @@ begin
             d_out => d_ram);
    
    w_en <= '1' when w_valid = '1' and fifo_full = '0' else '0';
-   
    ce_next <= '1' when r_ready = '1' and fifo_empty = '0' else '0';
-   oe_next <=  '1' when ce_next = '1' else '0';
    d_next <= d_ram when ce_reg = '1' else d_reg;
    
-   buffered_outputs: d_out <= d_reg;
-                     r_oe <= oe_reg(1);
+   -- Outputs
+   d_out <= d_reg;   
+   r_oe <= '1' when fifo_empty = '0' else '0';
    
    registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
-         ce_reg <= '0';
-         oe_reg <= (others => '0');    
+         ce_reg <= '0';   
          d_reg <= (others => '0');
       elsif rising_edge(clk) then
-         ce_reg <= ce_next;
-         oe_reg(0) <= oe_next;
-         oe_reg(1) <= oe_reg(0);    
+         ce_reg <= ce_next;   
          d_reg <= d_next;
       end if;
    end process;

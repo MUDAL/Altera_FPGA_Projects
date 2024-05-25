@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sat May 25 16:06:05 2024
+Analysis & Synthesis Status : Successful - Sat May 25 22:06:07 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : rgb_display
 Top-level Entity Name : rgb_display
 Family : Cyclone IV E
-Total logic elements : 211
-    Total combinational functions : 190
-    Dedicated logic registers : 117
-Total registers : 117
+Total logic elements : 203
+    Total combinational functions : 183
+    Dedicated logic registers : 116
+Total registers : 116
 Total pins : 9
 Total virtual pins : 0
 Total memory bits : 128

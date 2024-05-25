@@ -49,14 +49,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling architecture uart_rx_behav of uart_rx_tb
 -- Loading entity uart_rx
 
-} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/pack_tb_header.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/pack_tb_header.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling package pack_tb
-
 } {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/spi_tx_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/spi_tx_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -68,6 +60,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity spi_tx_tb
 -- Compiling architecture spi_tx_behav of spi_tx_tb
 -- Loading entity spi_tx
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/pack_tb_header.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/pack_tb_header.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package pack_tb
 
 } {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_ram.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_ram.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -101,6 +101,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling architecture fifo_behav of fifo_tb
 -- Loading entity fifo
 
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/pll/pll.vhd {1 {vcom -work altera_mf -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/pll/pll.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity pll
+-- Compiling architecture SYN of pll
+
 } {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/pack_tb_body.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/pack_tb_body.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -109,6 +117,32 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package NUMERIC_STD
 -- Loading package pack_tb
 -- Compiling package body pack_tb
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/rgb_display.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/rgb_display.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity rgb_display
+-- Compiling architecture rgb_display_rtl of rgb_display
+-- Loading entity pll
+-- Loading entity uart_rx
+-- Loading entity encoder
+-- Loading entity fifo
+-- Loading entity spi_tx
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/rgb_display_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/rgb_display_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Loading package pack_tb
+-- Compiling entity rgb_display_tb
+-- Compiling architecture rgb_display_behav of rgb_display_tb
+-- Loading entity rgb_display
 
 } {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/encoder_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/encoder_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
