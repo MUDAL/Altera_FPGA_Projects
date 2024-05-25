@@ -29,7 +29,7 @@ architecture fifo_rtl of fifo is
    signal d_ram: std_logic_vector(DW - 1 downto 0);
    signal d_reg: std_logic_vector(DW - 1 downto 0);
    signal d_next: std_logic_vector(Dw - 1 downto 0);
-   -- Clock Enable (for output data register to FIFO reader) 
+   -- Clock Enable (for output data register to FIFO's reader) 
    signal ce_reg: std_logic;  
    signal ce_next: std_logic;   
 begin
