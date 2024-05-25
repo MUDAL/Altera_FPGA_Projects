@@ -1,14 +1,11 @@
-L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_control_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_control_tb.vhd
+L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package std_logic_textio
--- Loading package pack_tb
--- Compiling entity fifo_control_tb
--- Compiling architecture fifo_control_behav of fifo_control_tb
--- Loading entity fifo_control
+-- Compiling entity spi_tx
+-- Compiling architecture spi_tx_rtl of spi_tx
 
 } {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_control.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo_control.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -19,14 +16,17 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity fifo_control
 -- Compiling architecture fifo_control_rtl of fifo_control
 
-} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/spi_tx.vhd
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_control_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_control_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity spi_tx
--- Compiling architecture spi_tx_rtl of spi_tx
+-- Loading package std_logic_textio
+-- Loading package pack_tb
+-- Compiling entity fifo_control_tb
+-- Compiling architecture fifo_control_behav of fifo_control_tb
+-- Loading entity fifo_control
 
 } {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/encoder.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/encoder.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -78,15 +78,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity fifo_ram
 -- Compiling architecture fifo_ram_rtl of fifo_ram
 
-} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/pack_tb_body.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/pack_tb_body.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package pack_tb
--- Compiling package body pack_tb
-
 } {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/src/lib/fifo/fifo.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -97,6 +88,27 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling architecture fifo_rtl of fifo
 -- Loading entity fifo_control
 -- Loading entity fifo_ram
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/fifo_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Loading package pack_tb
+-- Compiling entity fifo_tb
+-- Compiling architecture fifo_behav of fifo_tb
+-- Loading entity fifo
+
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/pack_tb_body.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/pack_tb_body.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package pack_tb
+-- Compiling package body pack_tb
 
 } {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/encoder_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P11_ILI9341_HC06_FIFO/simulation/testbench/encoder_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020

@@ -21,7 +21,7 @@ entity fifo is
 end fifo;
 
 architecture fifo_rtl of fifo is
-   signal w_en: std_logic;
+   signal w_en: std_logic; -- Write Enable (for RAM)
    signal w_addr: std_logic_vector(AW - 1 downto 0);
    signal r_addr: std_logic_vector(AW - 1 downto 0);
    signal fifo_full: std_logic;
@@ -29,11 +29,11 @@ architecture fifo_rtl of fifo is
    signal d_ram: std_logic_vector(DW - 1 downto 0);
    signal d_reg: std_logic_vector(DW - 1 downto 0);
    signal d_next: std_logic_vector(Dw - 1 downto 0);
-   signal r_reg: std_logic_vector(1 downto 0);
-   signal r_next: std_logic;
+   signal ce_reg: std_logic; -- Clock Enable (For output registers)
+   signal ce_next: std_logic;   
+   signal oe_reg: std_logic_vector(1 downto 0); -- Output Enable
+   signal oe_next: std_logic;
 begin
-   w_en <= '1' when w_valid = '1' and fifo_full = '0' else '0';
-
    fifo_control: entity work.fifo_control(fifo_control_rtl)
    generic map(AW => AW)
    port map(rst_n => rst_n,
@@ -55,21 +55,26 @@ begin
             d_in => d_in,
             d_out => d_ram);
    
-   d_next <= d_ram when r_ready = '1' and fifo_empty = '0' else d_reg;
-   r_next <=  '1'  when r_ready = '1' and fifo_empty = '0' else  '0';
+   w_en <= '1' when w_valid = '1' and fifo_full = '0' else '0';
+   
+   ce_next <= '1' when r_ready = '1' and fifo_empty = '0' else '0';
+   oe_next <=  '1'  when ce_next = '1' else '0';
+   d_next <= d_ram when ce_reg = '1' else d_reg;
    
    buffered_outputs: d_out <= d_reg;
-                     r_oe <= r_reg(1);
+                     r_oe <= oe_reg(1);
    
    registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
+         ce_reg <= '0';
+         oe_reg <= (others => '0');    
          d_reg <= (others => '0');
-         r_reg <= (others => '0');
       elsif rising_edge(clk) then
+         ce_reg <= ce_next;
+         oe_reg(0) <= oe_next;
+         oe_reg(1) <= oe_reg(0);    
          d_reg <= d_next;
-         r_reg(0) <= r_next;
-         r_reg(1) <= r_reg(0);
       end if;
    end process;
 end fifo_rtl;

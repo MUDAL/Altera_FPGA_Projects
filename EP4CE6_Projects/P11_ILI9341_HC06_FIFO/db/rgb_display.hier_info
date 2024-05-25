@@ -6,12 +6,12 @@ rst_n => spi_tx:spi_interface.rst_n
 rst_n => pll:pll.areset
 clk => pll:pll.inclk0
 data_in => uart_rx:uart_interface.data_in
-led << spi_tx:spi_interface.led
-sck << spi_tx:spi_interface.sck
-mosi << spi_tx:spi_interface.mosi
-dc << spi_tx:spi_interface.dc
-d_rst_n << spi_tx:spi_interface.d_rst_n
-cs << spi_tx:spi_interface.cs
+led <= spi_tx:spi_interface.led
+sck <= spi_tx:spi_interface.sck
+mosi <= spi_tx:spi_interface.mosi
+dc <= spi_tx:spi_interface.dc
+d_rst_n <= spi_tx:spi_interface.d_rst_n
+cs <= spi_tx:spi_interface.cs
 
 
 |rgb_display|pll:pll
@@ -193,25 +193,27 @@ done <= done_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 |rgb_display|fifo:sync_fifo
 rst_n => fifo_control:fifo_control.rst_n
-rst_n => r_reg[0].ACLR
-rst_n => r_reg[1].ACLR
 rst_n => d_reg[0].ACLR
 rst_n => d_reg[1].ACLR
+rst_n => oe_reg[0].ACLR
+rst_n => oe_reg[1].ACLR
+rst_n => ce_reg.ACLR
 clk => fifo_control:fifo_control.clk
-clk => r_reg[0].CLK
-clk => r_reg[1].CLK
 clk => d_reg[0].CLK
 clk => d_reg[1].CLK
+clk => oe_reg[0].CLK
+clk => oe_reg[1].CLK
+clk => ce_reg.CLK
 clk => fifo_ram:fifo_ram.clk
 w_valid => w_en.IN1
 w_valid => fifo_control:fifo_control.w_valid
-r_ready => r_next.IN1
+r_ready => oe_next.IN1
 r_ready => fifo_control:fifo_control.r_ready
 d_in[0] => fifo_ram:fifo_ram.d_in[0]
 d_in[1] => fifo_ram:fifo_ram.d_in[1]
 d_out[0] <= d_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 d_out[1] <= d_reg[1].DB_MAX_OUTPUT_PORT_TYPE
-r_oe <= r_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+r_oe <= oe_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |rgb_display|fifo:sync_fifo|fifo_control:fifo_control

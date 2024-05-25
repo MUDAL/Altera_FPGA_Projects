@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rgb_display
-Wed May 22 05:49:25 2024
+Sat May 25 16:06:05 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -17,24 +17,25 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   9. Analysis & Synthesis IP Cores Summary
  10. State Machine - |rgb_display|spi_tx:spi_interface|state
  11. State Machine - |rgb_display|uart_rx:uart_interface|state
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Registers Packed Into Inferred Megafunctions
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for fifo:sync_fifo|fifo_ram:fifo_ram|altsyncram:ram_rtl_0|altsyncram_kpg1:auto_generated
- 17. Parameter Settings for User Entity Instance: Top-level Entity: |rgb_display
- 18. Parameter Settings for User Entity Instance: pll:pll|altpll:altpll_component
- 19. Parameter Settings for User Entity Instance: uart_rx:uart_interface
- 20. Parameter Settings for User Entity Instance: fifo:sync_fifo
- 21. Parameter Settings for User Entity Instance: fifo:sync_fifo|fifo_control:fifo_control
- 22. Parameter Settings for User Entity Instance: fifo:sync_fifo|fifo_ram:fifo_ram
- 23. Parameter Settings for User Entity Instance: spi_tx:spi_interface
- 24. Parameter Settings for Inferred Entity Instance: fifo:sync_fifo|fifo_ram:fifo_ram|altsyncram:ram_rtl_0
- 25. altpll Parameter Settings by Entity Instance
- 26. altsyncram Parameter Settings by Entity Instance
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Registers Packed Into Inferred Megafunctions
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for fifo:sync_fifo|fifo_ram:fifo_ram|altsyncram:ram_rtl_0|altsyncram_kpg1:auto_generated
+ 18. Parameter Settings for User Entity Instance: Top-level Entity: |rgb_display
+ 19. Parameter Settings for User Entity Instance: pll:pll|altpll:altpll_component
+ 20. Parameter Settings for User Entity Instance: uart_rx:uart_interface
+ 21. Parameter Settings for User Entity Instance: fifo:sync_fifo
+ 22. Parameter Settings for User Entity Instance: fifo:sync_fifo|fifo_control:fifo_control
+ 23. Parameter Settings for User Entity Instance: fifo:sync_fifo|fifo_ram:fifo_ram
+ 24. Parameter Settings for User Entity Instance: spi_tx:spi_interface
+ 25. Parameter Settings for Inferred Entity Instance: fifo:sync_fifo|fifo_ram:fifo_ram|altsyncram:ram_rtl_0
+ 26. altpll Parameter Settings by Entity Instance
+ 27. altsyncram Parameter Settings by Entity Instance
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
 
 
 
@@ -61,7 +62,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 22 05:49:25 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sat May 25 16:06:05 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; rgb_display                                 ;
 ; Top-level Entity Name              ; rgb_display                                 ;
@@ -321,6 +322,16 @@ Encoding Type:  One-Hot
 ; state.ST_DONE    ; 0             ; 1             ; 0                ; 1             ;
 ; state.ST_WAIT    ; 1             ; 0             ; 0                ; 1             ;
 +------------------+---------------+---------------+------------------+---------------+
+
+
++---------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                        ;
++---------------------------------------+-----------------------------------+
+; Register name                         ; Reason for Removal                ;
++---------------------------------------+-----------------------------------+
+; fifo:sync_fifo|oe_reg[0]              ; Merged with fifo:sync_fifo|ce_reg ;
+; Total Number of Removed Registers = 1 ;                                   ;
++---------------------------------------+-----------------------------------+
 
 
 +------------------------------------------------------+
@@ -969,7 +980,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 22 05:49:11 2024
+    Info: Processing started: Sat May 25 16:05:51 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rgb_display -c rgb_display
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1122,8 +1133,8 @@ Info (21057): Implemented 225 device resources after synthesis - the final resou
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 4798 megabytes
-    Info: Processing ended: Wed May 22 05:49:25 2024
+    Info: Processing ended: Sat May 25 16:06:05 2024
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Total CPU time (on all processors): 00:00:28
 
 

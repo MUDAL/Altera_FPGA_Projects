@@ -63,7 +63,7 @@ begin
       wait until rst_n = '1';
       wait until rising_edge(clk);
       
-      while(fifo_full = '0') loop
+      while fifo_full = '0' loop
          report "[W]: " & integer'image(w_addr_int) & ", " &
                 "[R]: " & integer'image(r_addr_int);
          wait until rising_edge(clk);
@@ -73,7 +73,7 @@ begin
              "[R]: " & integer'image(r_addr_int) & ", " &    
              "FIFO is full";     
       
-      while(fifo_empty = '0') loop
+      while fifo_empty = '0' loop
          report "[W]: " & integer'image(w_addr_int) & ", " &
                 "[R]: " & integer'image(r_addr_int);
          wait until rising_edge(clk);
