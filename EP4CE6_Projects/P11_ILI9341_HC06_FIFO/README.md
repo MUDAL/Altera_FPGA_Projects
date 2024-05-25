@@ -74,3 +74,17 @@ System specs:
 - [Altera: Quartus II Handbook, Volume 3. Verification](https://drive.google.com/file/d/1oJjXx_n8-xdQk2OVQpPyZaf3n0bG2LTP/view?usp=sharing)  
 - [Project 10](https://github.com/MUDAL/Altera_FPGA_Projects/tree/main/EP4CE6_Projects/P10_ILI9341_HC06)     
 
+## Simulation results for the top-level design  
+```
+Expected: 00, Got: 00, Status: PASS
+Expected: 1F, Got: 1F, Status: PASS
+Expected: 00, Got: 00, Status: PASS
+Expected: 1F, Got: 1F, Status: PASS
+Expected: 00, Got: 00, Status: PASS
+Expected: 1F, Got: 1F, Status: PASS
+Expected: 00, Got: 00, Status: PASS
+Expected: 1F, Got: 1F, Status: PASS
+Expected: 00, Got: 00, Status: PASS
+Expected: 1F, Got: 1F, Status: PASS
+Passed tests: 10, Failed tests: 0
+```
