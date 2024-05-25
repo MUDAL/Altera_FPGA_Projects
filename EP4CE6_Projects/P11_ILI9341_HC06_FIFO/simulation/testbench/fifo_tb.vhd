@@ -21,7 +21,6 @@ architecture fifo_behav of fifo_tb is
    signal d_in: std_logic_vector(DW - 1 downto 0);
    signal d_out: std_logic_vector(DW - 1 downto 0);
    signal r_oe: std_logic;
-   
 begin
    uut: entity work.fifo(fifo_rtl)
    generic map(AW => AW,  
