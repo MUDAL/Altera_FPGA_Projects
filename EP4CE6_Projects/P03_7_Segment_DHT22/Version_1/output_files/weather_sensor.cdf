@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03_7_Segment_DHT22/output_files/") File("weather_sensor.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6E22) Path("L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P03_7_Segment_DHT22/Version_1/output_files/") File("weather_sensor.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

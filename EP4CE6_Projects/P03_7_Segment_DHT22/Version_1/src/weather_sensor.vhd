@@ -28,42 +28,56 @@ end weather_sensor;
 
 architecture weather_sensor_rtl of weather_sensor is
    constant DATA_WIDTH: integer := 16;
-   signal en_dht22: std_logic;
+   signal en_dht: std_logic;
    signal en_conv: std_logic;
    signal dec: std_logic_vector(DATA_WIDTH - 1 downto 0);
    signal bcd: std_logic_vector(11 downto 0);
-   signal dht22_done: std_logic;
+   signal dht_done: std_logic;
    signal conv_done: std_logic;
    signal valid: std_logic;
    signal param: std_logic;
-   signal dht22_count: integer range 0 to 99_999_999;
+   signal cnt1: integer range 0 to 99_999_999;
+   signal cnt2: integer range 0 to 999;
 begin
    -- Control path: Periodically control the one-wire and data conversion 
    -- (decimal to BCD) designs.
-   control_path: process(rst_n,clk)
+   one_wire_control: process(rst_n,clk)
    begin
       if rst_n = '0' then
-         dht22_count <= 0;
-         en_dht22 <= '1';
-         param <= '0';
+         cnt1 <= 0;
+         en_dht <= '0';
+         param <= '1';
       elsif rising_edge(clk) then
-         if dht22_count = 99_999_999 then
-            dht22_count <= 0;
-            en_dht22 <= not dht22_done;
+         if cnt1 = 99_999_999 then
+            cnt1 <= 0;
+            en_dht <= not dht_done;
             param <= not param;
          else
-            dht22_count <= dht22_count + 1;
+            cnt1 <= cnt1 + 1;
          end if;
       end if;
    end process;
    
-   en_conv <= not conv_done;
+   dec_to_bcd_control: process(rst_n,clk)
+   begin
+      if rst_n = '0' then
+         cnt2 <= 0;
+         en_conv <= '0';
+      elsif rising_edge(clk) then
+         if cnt2 = 999 then
+            cnt2 <= 0;
+            en_conv <= not conv_done;        
+         else
+            cnt2 <= cnt2 + 1;
+         end if;     
+      end if;
+   end process;
    
    led <= not valid; --Set when new sensor data is valid. 
    
    one_wire: entity work.one_wire(one_wire_rtl)
-   port map(rst_n => rst_n, clk => clk, en => en_dht22, param => param,
-            io => io, data_out => dec, done => dht22_done, valid => valid);
+   port map(rst_n => rst_n, clk => clk, en => en_dht, param => param,
+            io => io, data_out => dec, done => dht_done, valid => valid);
    
    dec_to_bcd: entity work.dec_to_bcd(dec_to_bcd_rtl)
    generic map(DATA_WIDTH => DATA_WIDTH)
