@@ -60,7 +60,10 @@ begin
       end if;
    end process;
 
-   -- Double Dabble: Shift + Add
+   -- Concatenate all BCD digits
+   bcd_out <= bcd_d2 & bcd_d1 & bcd_d0;
+   
+   -- Double-logic (Shift-left)
    bcd_d0 <= shift_reg(02 downto 00) & bin_reg(7) 
              when state = ST_CALC else (others => '0');
      
@@ -69,13 +72,11 @@ begin
      
    bcd_d2 <= shift_reg(10 downto 07) 
              when state = ST_CALC else (others => '0');
-             
+   
+   -- Dabble-logic (Add-3)
    shift_next(03 downto 00) <= bcd_d0 + 3 when bcd_d0 > 4 else bcd_d0;                           
    shift_next(07 downto 04) <= bcd_d1 + 3 when bcd_d1 > 4 else bcd_d1;                         
    shift_next(11 downto 08) <= bcd_d2 + 3 when bcd_d2 > 4 else bcd_d2;   
-   
-   -- Concatenate all BCD digits
-   bcd_out <= bcd_d2 & bcd_d1 & bcd_d0;
    
    -- Moore Outputs
    bin_next <= bin when state = ST_IDLE
@@ -87,6 +88,7 @@ begin
    done_next <= '1' when state = ST_DONE else '0';
        
    -- Mealy Output
+   -- Counter to count number of left shifts
    cnt_next <= cnt_reg - 1 when state = ST_CALC and cnt_reg > 0
        else       7        when state = ST_DONE
        else    cnt_reg;
