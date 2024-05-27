@@ -42,7 +42,7 @@ Bit 1: 69-71uS high pulse after initial 50uS low pulse for each DHT22 bit
 ![Screenshot (575)_LI](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/fcbcbd65-3bc4-4c4f-b830-f244342c420e)   
 
 ## Video demo  
-[FPGA and DHT22 demo](https://drive.google.com/file/d/1Pk7GPQSu7bS2-IVy8dPdvYJIUd7pJAdc/view?usp=sharing)  
+[FPGA and DHT22 demo](https://drive.google.com/file/d/1tKdiLZJzvGX-FAQMI-R3c6fMzs4Az06o/view?usp=sharing)  
 
 ## Pinouts  
 - Check the **Location** column in the image below for the pin mappings used in this project.  
