@@ -1,0 +1,14 @@
+
+State Machine - |distance_sensor|bin_to_bcd:bin_to_bcd_inst|state
+Name state.ST_DONE state.ST_CALC state.ST_IDLE 
+state.ST_IDLE 0 0 0 
+state.ST_CALC 0 1 1 
+state.ST_DONE 1 0 1 
+
+State Machine - |distance_sensor|hcsr04:hcsr04_inst|state
+Name state.ST_DONE state.ST_MEASURE state.ST_SAMPLE state.ST_TRIG state.ST_IDLE 
+state.ST_IDLE 0 0 0 0 0 
+state.ST_TRIG 0 0 0 1 1 
+state.ST_SAMPLE 0 0 1 0 1 
+state.ST_MEASURE 0 1 0 0 1 
+state.ST_DONE 1 0 0 0 1 
