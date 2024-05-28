@@ -51,3 +51,4 @@
 - [LM75 datasheet](https://drive.google.com/file/d/1u7oas4GsBgyu3CEFFpHg-WD4h4YXIpEZ/view?usp=drive_link)  
 - FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu (Check Binary-BCD Conversion Circuit)  
 - [Double Dabble Algorithm](https://www.youtube.com/watch?v=eXIfZ1yKFlA&t=186s)  
+- [Driving a 7-Segment Display](https://www.electronics-tutorials.ws/blog/7-segment-display-tutorial.html)  
