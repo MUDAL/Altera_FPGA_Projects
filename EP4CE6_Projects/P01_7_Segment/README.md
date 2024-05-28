@@ -30,5 +30,5 @@
 - Check the Location column in the image below for the pin mappings used in this project.  
 ![PP_1](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/7777a5f1-e19d-4855-8cc9-40cfad824e8b)
 
-
-
+## Helpful resource(s)  
+[Driving a 7-Segment Display](https://www.electronics-tutorials.ws/blog/7-segment-display-tutorial.html)  
