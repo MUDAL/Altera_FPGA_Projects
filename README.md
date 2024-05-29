@@ -2,7 +2,7 @@
 
 This repository contains demo projects for those who are interested in getting started with FPGA development.  
 The EP4CE6E22C8N FPGA board is a major requirement for running and testing the projects in this repository.  
-All the projects in this repository strictly follow the Synchronous Design Methodology.   
+All the projects in this repository strictly follow the Synchronous Design Methodology and are written in VHDL.   
 
 ## OMDAZZ Altera Cyclone IV EP4CE6 FPGA Board  
 ![88284358383988698](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/394635cd-4e17-49ca-8eac-84a60fd959b3)  
