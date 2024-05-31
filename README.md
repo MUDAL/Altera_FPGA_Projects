@@ -9,6 +9,18 @@ Source: [Vendor's Page](https://a.aliexpress.com/_EQstVsj)
 ![image](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/3b2e60d7-95fb-4722-b8ae-07905272fe2b)  
 ![image](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/985b401d-910c-47cd-a42c-5aa6f8f254fc)  
 
+## Additional components  
+1. [DHT22 sensor](https://a.aliexpress.com/_EzjOeNt)    
+2. [HC-SR04 sensor](https://a.aliexpress.com/_ExUJ4Cn)    
+3. [ILI9341 module: 2.4 inch, 240x320 TFT display with touch](https://a.aliexpress.com/_EwlAMGf)
+4. [16x2 LCD module: green or blue but without I2C interface](https://a.aliexpress.com/_EIEI6jd)       
+5. VGA monitor and cable  
+
+## Optional components  
+Here's a list of components I used for additional debugging/verification beyond testbenches.  
+1. Saleae 24MHz, 8 Channel USB logic analyzer
+2. DSO150 handheld oscilloscope  
+
 ## Helpful resources  
 1. RTL Hardware Design Using VHDL - Pong P. Chu
 2. FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu
