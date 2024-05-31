@@ -14,7 +14,9 @@ Source: [Vendor's Page](https://a.aliexpress.com/_EQstVsj)
 2. [HC-SR04 sensor](https://a.aliexpress.com/_ExUJ4Cn)    
 3. [ILI9341 module: 2.4 inch, 240x320 TFT display with touch](https://a.aliexpress.com/_EwlAMGf)
 4. [16x2 LCD module: green or blue but without I2C interface](https://a.aliexpress.com/_EIEI6jd)       
-5. VGA monitor and cable  
+5. VGA monitor and cable
+6. PS/2 keyboard
+7. Microcontrollers (any MCU with UART, SPI, and USB peripherals would suffice e.g. an STM32F103 microcontroller / STM32 Blue Pill board)  
 
 ## Optional components  
 Here's a list of components I used for additional debugging/verification beyond testbenches.  
