@@ -25,7 +25,7 @@ Here's a list of components I used for additional debugging/verification beyond 
 
 ## Important software  
 1. Intel Quartus (Quartus Prime 20.1)  
-2. ModelSim - Intel FPGA Starter Edition Model Technology ModelSim - Intel FPGA Edition vsim 2020.1 (Quartus Prime 20.1)
+2. ModelSim - Intel FPGA Edition vsim 2020.1 (Quartus Prime 20.1)
 3. STM32CubeIDE (if you have an STM32 microcontroller)
 4. Python (v3.7 upwards)  
 
