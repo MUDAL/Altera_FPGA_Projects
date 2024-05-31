@@ -16,7 +16,7 @@ Source: [Vendor's Page](https://a.aliexpress.com/_EQstVsj)
 4. [16x2 LCD module: green or blue but without I2C interface](https://a.aliexpress.com/_EIEI6jd)       
 5. VGA monitor and cable
 6. PS/2 keyboard
-7. Microcontrollers (any MCU with UART, SPI, and USB peripherals would suffice e.g. an STM32F103 microcontroller / STM32 Blue Pill board)  
+7. Any MCU with UART, SPI, and USB peripherals would suffice e.g. an STM32F103 microcontroller or STM32 Blue Pill board   
 
 ## Optional components  
 Here's a list of components I used for additional debugging/verification beyond testbenches.  
