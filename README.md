@@ -14,10 +14,11 @@ Source: [Vendor's Page](https://a.aliexpress.com/_EQstVsj)
 2. [HC-SR04 sensor](https://a.aliexpress.com/_ExUJ4Cn)    
 3. [ILI9341 module: 2.4 inch, 240x320 TFT display with touch](https://a.aliexpress.com/_EwlAMGf)
 4. [16x2 LCD module: green or blue but without I2C interface](https://a.aliexpress.com/_EIEI6jd)
-5. [HX1838 Infrared remote](https://a.aliexpress.com/_EI0lmAb)         
-6. VGA monitor and cable
-7. PS/2 keyboard
-8. STM32 Blue Pill board or any MCU with UART, SPI, and USB peripherals.    
+5. [HX1838 Infrared remote](https://a.aliexpress.com/_EI0lmAb)
+6. HC-05 or HC-06 Bluetooth module  
+7. VGA monitor and cable
+8. PS/2 keyboard
+9. STM32 Blue Pill board or any MCU with UART, SPI, and USB peripherals.    
 
 ## Optional components  
 Here's a list of components that I used for additional verification of my RTL designs beyond testbenches.  
