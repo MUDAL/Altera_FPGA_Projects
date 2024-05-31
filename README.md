@@ -6,8 +6,7 @@ All the projects in this repository strictly follow the Synchronous Design Metho
 
 ## OMDAZZ Altera Cyclone IV EP4CE6 FPGA Board  
 Source: [Vendor's Page](https://a.aliexpress.com/_EQstVsj)  
-![88284358383988698](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/394635cd-4e17-49ca-8eac-84a60fd959b3)  
-![1673901452-1633988304](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/b74f9c75-28b7-49bc-8ace-2d1dfd585271)  
+![image](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/3b2e60d7-95fb-4722-b8ae-07905272fe2b)  
 
 ## Helpful resources  
 1. RTL Hardware Design Using VHDL - Pong P. Chu
