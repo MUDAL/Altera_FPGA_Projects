@@ -19,7 +19,7 @@ Source: [Vendor's Page](https://a.aliexpress.com/_EQstVsj)
 7. Any MCU with UART, SPI, and USB peripherals would suffice e.g. an STM32F103 microcontroller or STM32 Blue Pill board   
 
 ## Optional components  
-Here's a list of components I used for additional debugging/verification beyond testbenches.  
+Here's a list of components I used for additional debugging or verification beyond testbenches.  
 1. Saleae 24MHz, 8 Channel USB logic analyzer
 2. DSO150 handheld oscilloscope  
 
