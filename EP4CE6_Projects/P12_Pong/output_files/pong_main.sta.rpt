@@ -1,0 +1,1151 @@
+Timing Analyzer report for pong_main
+Sun Jul 14 18:47:52 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1200mV 85C Model Setup Summary
+  9. Slow 1200mV 85C Model Hold Summary
+ 10. Slow 1200mV 85C Model Recovery Summary
+ 11. Slow 1200mV 85C Model Removal Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1200mV 85C Model Setup: 'clock'
+ 14. Slow 1200mV 85C Model Hold: 'clock'
+ 15. Slow 1200mV 85C Model Metastability Summary
+ 16. Slow 1200mV 0C Model Fmax Summary
+ 17. Slow 1200mV 0C Model Setup Summary
+ 18. Slow 1200mV 0C Model Hold Summary
+ 19. Slow 1200mV 0C Model Recovery Summary
+ 20. Slow 1200mV 0C Model Removal Summary
+ 21. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 22. Slow 1200mV 0C Model Setup: 'clock'
+ 23. Slow 1200mV 0C Model Hold: 'clock'
+ 24. Slow 1200mV 0C Model Metastability Summary
+ 25. Fast 1200mV 0C Model Setup Summary
+ 26. Fast 1200mV 0C Model Hold Summary
+ 27. Fast 1200mV 0C Model Recovery Summary
+ 28. Fast 1200mV 0C Model Removal Summary
+ 29. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 30. Fast 1200mV 0C Model Setup: 'clock'
+ 31. Fast 1200mV 0C Model Hold: 'clock'
+ 32. Fast 1200mV 0C Model Metastability Summary
+ 33. Multicorner Timing Analysis Summary
+ 34. Board Trace Model Assignments
+ 35. Input Transition Times
+ 36. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 37. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 38. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; pong_main                                           ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE6E22C8                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.07        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   7.3%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; pong_main.sdc ; OK     ; Sun Jul 14 18:47:50 2024 ;
++---------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clock      ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary              ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 74.22 MHz ; 74.22 MHz       ; clock      ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; clock ; 6.526 ; 0.000               ;
++-------+-------+---------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clock ; 0.449 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+-------+-----------------------------------+
+; Clock ; Slack ; End Point TNS                     ;
++-------+-------+-----------------------------------+
+; clock ; 9.595 ; 0.000                             ;
++-------+-------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clock'                                                                                                                                          ;
++-------+---------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 6.526 ; vga_sync:vga_sync_unit|v_count_reg[6]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.094     ; 13.381     ;
+; 6.578 ; vga_sync:vga_sync_unit|v_count_reg[9]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.094     ; 13.329     ;
+; 6.720 ; vga_sync:vga_sync_unit|v_count_reg[3]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.094     ; 13.187     ;
+; 6.760 ; vga_sync:vga_sync_unit|v_count_reg[7]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.094     ; 13.147     ;
+; 6.760 ; vga_sync:vga_sync_unit|v_count_reg[4]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.094     ; 13.147     ;
+; 6.801 ; vga_sync:vga_sync_unit|h_count_reg[3]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.082     ; 13.118     ;
+; 6.831 ; paddle_logic:right_paddle_module|y_reg[1]   ; ball_logic:ball_module|x_reg[0]                   ; clock        ; clock       ; 20.000       ; -0.084     ; 13.086     ;
+; 6.831 ; paddle_logic:right_paddle_module|y_reg[1]   ; ball_logic:ball_module|x_reg[2]                   ; clock        ; clock       ; 20.000       ; -0.084     ; 13.086     ;
+; 6.831 ; paddle_logic:right_paddle_module|y_reg[1]   ; ball_logic:ball_module|x_reg[3]                   ; clock        ; clock       ; 20.000       ; -0.084     ; 13.086     ;
+; 6.831 ; paddle_logic:right_paddle_module|y_reg[1]   ; ball_logic:ball_module|x_reg[1]                   ; clock        ; clock       ; 20.000       ; -0.084     ; 13.086     ;
+; 6.874 ; vga_sync:vga_sync_unit|v_count_reg[6]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.094     ; 13.033     ;
+; 6.886 ; vga_sync:vga_sync_unit|v_count_reg[5]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.094     ; 13.021     ;
+; 6.890 ; vga_sync:vga_sync_unit|h_count_reg[4]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.082     ; 13.029     ;
+; 6.892 ; vga_sync:vga_sync_unit|v_count_reg[8]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.094     ; 13.015     ;
+; 6.926 ; vga_sync:vga_sync_unit|v_count_reg[9]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.094     ; 12.981     ;
+; 7.001 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.916     ;
+; 7.001 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.916     ;
+; 7.001 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.916     ;
+; 7.001 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.916     ;
+; 7.001 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.916     ;
+; 7.001 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.916     ;
+; 7.001 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.916     ;
+; 7.001 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.916     ;
+; 7.008 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.909     ;
+; 7.008 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.909     ;
+; 7.008 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.909     ;
+; 7.008 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.909     ;
+; 7.008 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.909     ;
+; 7.008 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.909     ;
+; 7.008 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.909     ;
+; 7.008 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.909     ;
+; 7.030 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.908     ;
+; 7.030 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.908     ;
+; 7.030 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.908     ;
+; 7.030 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.908     ;
+; 7.030 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.908     ;
+; 7.030 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.908     ;
+; 7.030 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.908     ;
+; 7.030 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.908     ;
+; 7.053 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.885     ;
+; 7.053 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.885     ;
+; 7.053 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.885     ;
+; 7.053 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.885     ;
+; 7.053 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.885     ;
+; 7.053 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.885     ;
+; 7.053 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.885     ;
+; 7.053 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.885     ;
+; 7.068 ; vga_sync:vga_sync_unit|v_count_reg[3]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.094     ; 12.839     ;
+; 7.088 ; paddle_logic:right_paddle_module|y_reg[1]   ; sound:sound_module|state                          ; clock        ; clock       ; 20.000       ; -0.115     ; 12.798     ;
+; 7.096 ; vga_sync:vga_sync_unit|v_count_reg[2]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.094     ; 12.811     ;
+; 7.100 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|x_reg[0]                   ; clock        ; clock       ; 20.000       ; -0.076     ; 12.825     ;
+; 7.100 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|x_reg[2]                   ; clock        ; clock       ; 20.000       ; -0.076     ; 12.825     ;
+; 7.100 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|x_reg[3]                   ; clock        ; clock       ; 20.000       ; -0.076     ; 12.825     ;
+; 7.100 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|x_reg[1]                   ; clock        ; clock       ; 20.000       ; -0.076     ; 12.825     ;
+; 7.101 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[5]                   ; clock        ; clock       ; 20.000       ; -0.064     ; 12.836     ;
+; 7.101 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[7]                   ; clock        ; clock       ; 20.000       ; -0.064     ; 12.836     ;
+; 7.108 ; vga_sync:vga_sync_unit|v_count_reg[7]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.094     ; 12.799     ;
+; 7.108 ; vga_sync:vga_sync_unit|v_count_reg[4]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.094     ; 12.799     ;
+; 7.110 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[9]                   ; clock        ; clock       ; 20.000       ; -0.064     ; 12.827     ;
+; 7.117 ; vga_sync:vga_sync_unit|h_count_reg[3]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.082     ; 12.802     ;
+; 7.163 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[4]                   ; clock        ; clock       ; 20.000       ; -0.064     ; 12.774     ;
+; 7.164 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[8]                   ; clock        ; clock       ; 20.000       ; -0.064     ; 12.773     ;
+; 7.185 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[6]                   ; clock        ; clock       ; 20.000       ; -0.064     ; 12.752     ;
+; 7.206 ; vga_sync:vga_sync_unit|h_count_reg[4]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.082     ; 12.713     ;
+; 7.208 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.709     ;
+; 7.208 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.709     ;
+; 7.208 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.709     ;
+; 7.208 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.709     ;
+; 7.208 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.709     ;
+; 7.208 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.709     ;
+; 7.208 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.709     ;
+; 7.208 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.709     ;
+; 7.212 ; paddle_logic:right_paddle_module|y_reg[1]   ; ball_logic:ball_module|y_reg[5]                   ; clock        ; clock       ; 20.000       ; -0.072     ; 12.717     ;
+; 7.212 ; paddle_logic:right_paddle_module|y_reg[1]   ; ball_logic:ball_module|y_reg[7]                   ; clock        ; clock       ; 20.000       ; -0.072     ; 12.717     ;
+; 7.221 ; paddle_logic:right_paddle_module|y_reg[1]   ; ball_logic:ball_module|y_reg[9]                   ; clock        ; clock       ; 20.000       ; -0.072     ; 12.708     ;
+; 7.232 ; paddle_logic:left_paddle_module|y_reg[2]    ; ball_logic:ball_module|x_reg[0]                   ; clock        ; clock       ; 20.000       ; -0.076     ; 12.693     ;
+; 7.232 ; paddle_logic:left_paddle_module|y_reg[2]    ; ball_logic:ball_module|x_reg[2]                   ; clock        ; clock       ; 20.000       ; -0.076     ; 12.693     ;
+; 7.232 ; paddle_logic:left_paddle_module|y_reg[2]    ; ball_logic:ball_module|x_reg[3]                   ; clock        ; clock       ; 20.000       ; -0.076     ; 12.693     ;
+; 7.232 ; paddle_logic:left_paddle_module|y_reg[2]    ; ball_logic:ball_module|x_reg[1]                   ; clock        ; clock       ; 20.000       ; -0.076     ; 12.693     ;
+; 7.233 ; paddle_logic:left_paddle_module|y_reg[2]    ; ball_logic:ball_module|y_reg[5]                   ; clock        ; clock       ; 20.000       ; -0.064     ; 12.704     ;
+; 7.233 ; paddle_logic:left_paddle_module|y_reg[2]    ; ball_logic:ball_module|y_reg[7]                   ; clock        ; clock       ; 20.000       ; -0.064     ; 12.704     ;
+; 7.234 ; vga_sync:vga_sync_unit|v_count_reg[5]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.094     ; 12.673     ;
+; 7.237 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.701     ;
+; 7.237 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.701     ;
+; 7.237 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.701     ;
+; 7.237 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.701     ;
+; 7.237 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.701     ;
+; 7.237 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.701     ;
+; 7.237 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.701     ;
+; 7.237 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.701     ;
+; 7.238 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.700     ;
+; 7.238 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.700     ;
+; 7.238 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.700     ;
+; 7.238 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.700     ;
+; 7.238 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.700     ;
+; 7.238 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.700     ;
+; 7.238 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.700     ;
+; 7.238 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.063     ; 12.700     ;
+; 7.240 ; vga_sync:vga_sync_unit|v_count_reg[8]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.094     ; 12.667     ;
+; 7.240 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.084     ; 12.677     ;
++-------+---------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clock'                                                                                                                                                                                                                       ;
++-------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                          ; To Node                                                                                                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.449 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.177      ;
+; 0.449 ; bitmap_generator:game_over_bitmap_gen|addr_reg[6]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.177      ;
+; 0.452 ; ball_logic:ball_module|y_reg[5]                    ; ball_logic:ball_module|y_reg[5]                                                                                        ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; collision_logic:collision_module|direct_reg[1]     ; collision_logic:collision_module|direct_reg[1]                                                                         ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; ball_logic:ball_module|y_reg[6]                    ; ball_logic:ball_module|y_reg[6]                                                                                        ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; ball_logic:ball_module|y_reg[4]                    ; ball_logic:ball_module|y_reg[4]                                                                                        ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; ball_logic:ball_module|y_reg[7]                    ; ball_logic:ball_module|y_reg[7]                                                                                        ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; ball_logic:ball_module|y_reg[8]                    ; ball_logic:ball_module|y_reg[8]                                                                                        ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; ball_logic:ball_module|y_reg[9]                    ; ball_logic:ball_module|y_reg[9]                                                                                        ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; ball_logic:ball_module|x_reg[6]                    ; ball_logic:ball_module|x_reg[6]                                                                                        ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; ball_logic:ball_module|x_reg[7]                    ; ball_logic:ball_module|x_reg[7]                                                                                        ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; ball_logic:ball_module|x_reg[8]                    ; ball_logic:ball_module|x_reg[8]                                                                                        ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; ball_logic:ball_module|x_reg[9]                    ; ball_logic:ball_module|x_reg[9]                                                                                        ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; ball_logic:ball_module|x_reg[4]                    ; ball_logic:ball_module|x_reg[4]                                                                                        ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; ball_logic:ball_module|x_reg[5]                    ; ball_logic:ball_module|x_reg[5]                                                                                        ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; collision_logic:collision_module|paddle_reg[1]     ; collision_logic:collision_module|paddle_reg[1]                                                                         ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; collision_logic:collision_module|paddle_reg[0]     ; collision_logic:collision_module|paddle_reg[0]                                                                         ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; score_logic:scores_calculator|state.ST_CALC        ; score_logic:scores_calculator|state.ST_CALC                                                                            ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; score_logic:scores_calculator|cnt_reg[2]           ; score_logic:scores_calculator|cnt_reg[2]                                                                               ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; score_logic:scores_calculator|cnt_reg[1]           ; score_logic:scores_calculator|cnt_reg[1]                                                                               ; clock        ; clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.453 ; score_logic:scores_calculator|shift1_reg[6]        ; score_logic:scores_calculator|shift1_reg[6]                                                                            ; clock        ; clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; score_logic:scores_calculator|shift2_reg[6]        ; score_logic:scores_calculator|shift2_reg[6]                                                                            ; clock        ; clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; score_logic:scores_calculator|shift2_reg[2]        ; score_logic:scores_calculator|shift2_reg[2]                                                                            ; clock        ; clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; score_logic:scores_calculator|shift1_reg[2]        ; score_logic:scores_calculator|shift1_reg[2]                                                                            ; clock        ; clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[0]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.181      ;
+; 0.453 ; bitmap_generator:game_over_bitmap_gen|state        ; bitmap_generator:game_over_bitmap_gen|state                                                                            ; clock        ; clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; game_config:game_config_module|state.ST_END        ; game_config:game_config_module|state.ST_END                                                                            ; clock        ; clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; game_config:game_config_module|state.ST_IDLE       ; game_config:game_config_module|state.ST_IDLE                                                                           ; clock        ; clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; game_config:game_config_module|state.ST_START      ; game_config:game_config_module|state.ST_START                                                                          ; clock        ; clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.454 ; game_board:game_board_module|toggle_reg            ; game_board:game_board_module|toggle_reg                                                                                ; clock        ; clock       ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; button_logic:down_button_module|btn_o_reg          ; button_logic:down_button_module|btn_o_reg                                                                              ; clock        ; clock       ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; button_logic:down_button_module|state.ST_IDLE      ; button_logic:down_button_module|state.ST_IDLE                                                                          ; clock        ; clock       ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; button_logic:down_button_module|state.ST_RELEASE   ; button_logic:down_button_module|state.ST_RELEASE                                                                       ; clock        ; clock       ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; button_logic:down_button_module|state.ST_PRESS     ; button_logic:down_button_module|state.ST_PRESS                                                                         ; clock        ; clock       ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; sound:sound_module|buzz_reg                        ; sound:sound_module|buzz_reg                                                                                            ; clock        ; clock       ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; bitmap_generator:game_menu_bitmap_gen|state        ; bitmap_generator:game_menu_bitmap_gen|state                                                                            ; clock        ; clock       ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; button_logic:up_button_module|btn_o_reg            ; button_logic:up_button_module|btn_o_reg                                                                                ; clock        ; clock       ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; button_logic:up_button_module|state.ST_PRESS       ; button_logic:up_button_module|state.ST_PRESS                                                                           ; clock        ; clock       ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; button_logic:up_button_module|state.ST_RELEASE     ; button_logic:up_button_module|state.ST_RELEASE                                                                         ; clock        ; clock       ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; button_logic:up_button_module|state.ST_IDLE        ; button_logic:up_button_module|state.ST_IDLE                                                                            ; clock        ; clock       ; 0.000        ; 0.080      ; 0.746      ;
+; 0.457 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.185      ;
+; 0.464 ; score_logic:scores_calculator|cnt_reg[0]           ; score_logic:scores_calculator|cnt_reg[0]                                                                               ; clock        ; clock       ; 0.000        ; 0.082      ; 0.758      ;
+; 0.465 ; score_logic:scores_calculator|shift2_reg[1]        ; score_logic:scores_calculator|shift2_reg[1]                                                                            ; clock        ; clock       ; 0.000        ; 0.081      ; 0.758      ;
+; 0.465 ; score_logic:scores_calculator|shift1_reg[1]        ; score_logic:scores_calculator|shift1_reg[1]                                                                            ; clock        ; clock       ; 0.000        ; 0.081      ; 0.758      ;
+; 0.465 ; vga_sync:vga_sync_unit|mod2_reg                    ; vga_sync:vga_sync_unit|mod2_reg                                                                                        ; clock        ; clock       ; 0.000        ; 0.081      ; 0.758      ;
+; 0.466 ; sound:sound_module|state                           ; sound:sound_module|state                                                                                               ; clock        ; clock       ; 0.000        ; 0.080      ; 0.758      ;
+; 0.473 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[1]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.201      ;
+; 0.481 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[10] ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.209      ;
+; 0.482 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.210      ;
+; 0.486 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.489      ; 1.229      ;
+; 0.488 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[5]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.216      ;
+; 0.493 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[5]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.465      ; 1.212      ;
+; 0.493 ; game_config:game_config_module|state.ST_IDLE       ; game_config:game_config_module|game_menu_reg                                                                           ; clock        ; clock       ; 0.000        ; 0.081      ; 0.786      ;
+; 0.497 ; bitmap_generator:game_over_bitmap_gen|addr_reg[10] ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.475      ; 1.226      ;
+; 0.497 ; score_logic:scores_calculator|cnt_reg[1]           ; score_logic:scores_calculator|cnt_reg[2]                                                                               ; clock        ; clock       ; 0.000        ; 0.082      ; 0.791      ;
+; 0.499 ; score_logic:scores_calculator|state.ST_DONE        ; score_logic:scores_calculator|state.ST_CALC                                                                            ; clock        ; clock       ; 0.000        ; 0.082      ; 0.793      ;
+; 0.500 ; score_logic:scores_calculator|shift1_reg[1]        ; score_logic:scores_calculator|shift1_reg[3]                                                                            ; clock        ; clock       ; 0.000        ; 0.081      ; 0.793      ;
+; 0.500 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[12] ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.228      ;
+; 0.502 ; score_logic:scores_calculator|bin2_reg[5]          ; score_logic:scores_calculator|bin2_reg[6]                                                                              ; clock        ; clock       ; 0.000        ; 0.081      ; 0.795      ;
+; 0.506 ; button_logic:down_button_module|state.ST_IDLE      ; button_logic:down_button_module|state.ST_RELEASE                                                                       ; clock        ; clock       ; 0.000        ; 0.080      ; 0.798      ;
+; 0.508 ; bitmap_generator:game_over_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.236      ;
+; 0.508 ; score_logic:scores_calculator|bin2_reg[7]          ; score_logic:scores_calculator|shift2_reg[1]                                                                            ; clock        ; clock       ; 0.000        ; 0.081      ; 0.801      ;
+; 0.509 ; button_logic:up_button_module|state.ST_IDLE        ; button_logic:up_button_module|state.ST_PRESS                                                                           ; clock        ; clock       ; 0.000        ; 0.080      ; 0.801      ;
+; 0.510 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.238      ;
+; 0.510 ; score_logic:scores_calculator|bin2_reg[7]          ; score_logic:scores_calculator|shift2_reg[2]                                                                            ; clock        ; clock       ; 0.000        ; 0.081      ; 0.803      ;
+; 0.511 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[9]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.239      ;
+; 0.512 ; score_logic:scores_calculator|score2_reg[0]        ; score_logic:scores_calculator|bin2_reg[0]                                                                              ; clock        ; clock       ; 0.000        ; 0.081      ; 0.805      ;
+; 0.513 ; bitmap_generator:game_over_bitmap_gen|addr_reg[0]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.484      ; 1.251      ;
+; 0.515 ; score_logic:scores_calculator|score1_reg[7]        ; score_logic:scores_calculator|bin1_reg[7]                                                                              ; clock        ; clock       ; 0.000        ; 0.082      ; 0.809      ;
+; 0.515 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.484      ; 1.253      ;
+; 0.515 ; score_logic:scores_calculator|cnt_reg[1]           ; score_logic:scores_calculator|state.ST_DONE                                                                            ; clock        ; clock       ; 0.000        ; 0.082      ; 0.809      ;
+; 0.516 ; score_logic:scores_calculator|shift1_reg[4]        ; score_logic:scores_calculator|shift1_reg[5]                                                                            ; clock        ; clock       ; 0.000        ; 0.081      ; 0.809      ;
+; 0.516 ; score_logic:scores_calculator|score1_reg[4]        ; score_logic:scores_calculator|bin1_reg[4]                                                                              ; clock        ; clock       ; 0.000        ; 0.082      ; 0.810      ;
+; 0.517 ; score_logic:scores_calculator|score2_reg[4]        ; score_logic:scores_calculator|bin2_reg[4]                                                                              ; clock        ; clock       ; 0.000        ; 0.081      ; 0.810      ;
+; 0.518 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[9]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.465      ; 1.237      ;
+; 0.521 ; bitmap_generator:game_over_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.489      ; 1.264      ;
+; 0.527 ; score_logic:scores_calculator|bin2_reg[7]          ; score_logic:scores_calculator|bcd2_reg[0]                                                                              ; clock        ; clock       ; 0.000        ; 0.081      ; 0.820      ;
+; 0.528 ; bitmap_generator:game_over_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.256      ;
+; 0.529 ; bitmap_generator:game_over_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a4~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.487      ; 1.270      ;
+; 0.530 ; bitmap_generator:game_over_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.489      ; 1.273      ;
+; 0.532 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a2~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.468      ; 1.254      ;
+; 0.536 ; bitmap_generator:game_over_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a2~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.468      ; 1.258      ;
+; 0.536 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a4~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.487      ; 1.277      ;
+; 0.537 ; bitmap_generator:game_over_bitmap_gen|addr_reg[12] ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.475      ; 1.266      ;
+; 0.538 ; bitmap_generator:game_over_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a4~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.487      ; 1.279      ;
+; 0.545 ; bitmap_generator:game_over_bitmap_gen|addr_reg[1]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.273      ;
+; 0.552 ; button_logic:up_button_module|btn_i_reg            ; button_logic:up_button_module|state.ST_IDLE                                                                            ; clock        ; clock       ; 0.000        ; 0.080      ; 0.844      ;
+; 0.555 ; bitmap_generator:game_over_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a2~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.468      ; 1.277      ;
+; 0.568 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[12] ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.465      ; 1.287      ;
+; 0.581 ; bitmap_generator:game_over_bitmap_gen|addr_reg[5]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.309      ;
+; 0.582 ; bitmap_generator:game_over_bitmap_gen|addr_reg[0]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.474      ; 1.310      ;
+; 0.586 ; bitmap_generator:game_over_bitmap_gen|addr_reg[0]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a2~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.468      ; 1.308      ;
+; 0.641 ; score_logic:scores_calculator|shift2_reg[1]        ; score_logic:scores_calculator|shift2_reg[3]                                                                            ; clock        ; clock       ; 0.000        ; 0.081      ; 0.934      ;
+; 0.641 ; score_logic:scores_calculator|bin2_reg[1]          ; score_logic:scores_calculator|bin2_reg[2]                                                                              ; clock        ; clock       ; 0.000        ; 0.081      ; 0.934      ;
+; 0.641 ; score_logic:scores_calculator|bin1_reg[3]          ; score_logic:scores_calculator|bin1_reg[4]                                                                              ; clock        ; clock       ; 0.000        ; 0.082      ; 0.935      ;
+; 0.642 ; score_logic:scores_calculator|bin2_reg[6]          ; score_logic:scores_calculator|bin2_reg[7]                                                                              ; clock        ; clock       ; 0.000        ; 0.081      ; 0.935      ;
+; 0.642 ; score_logic:scores_calculator|bin2_reg[3]          ; score_logic:scores_calculator|bin2_reg[4]                                                                              ; clock        ; clock       ; 0.000        ; 0.081      ; 0.935      ;
+; 0.644 ; score_logic:scores_calculator|bin2_reg[0]          ; score_logic:scores_calculator|bin2_reg[1]                                                                              ; clock        ; clock       ; 0.000        ; 0.081      ; 0.937      ;
+; 0.644 ; score_logic:scores_calculator|bin1_reg[5]          ; score_logic:scores_calculator|bin1_reg[6]                                                                              ; clock        ; clock       ; 0.000        ; 0.082      ; 0.938      ;
+; 0.656 ; score_logic:scores_calculator|score1_reg[5]        ; score_logic:scores_calculator|bin1_reg[5]                                                                              ; clock        ; clock       ; 0.000        ; 0.082      ; 0.950      ;
++-------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary              ;
++----------+-----------------+------------+------+
+; Fmax     ; Restricted Fmax ; Clock Name ; Note ;
++----------+-----------------+------------+------+
+; 79.2 MHz ; 79.2 MHz        ; clock      ;      ;
++----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clock ; 7.374 ; 0.000              ;
++-------+-------+--------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clock ; 0.400 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; clock ; 9.598 ; 0.000                            ;
++-------+-------+----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clock'                                                                                                                                           ;
++-------+---------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 7.374 ; vga_sync:vga_sync_unit|v_count_reg[6]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.084     ; 12.544     ;
+; 7.418 ; vga_sync:vga_sync_unit|v_count_reg[9]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.084     ; 12.500     ;
+; 7.572 ; vga_sync:vga_sync_unit|v_count_reg[7]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.084     ; 12.346     ;
+; 7.597 ; vga_sync:vga_sync_unit|v_count_reg[3]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.084     ; 12.321     ;
+; 7.644 ; vga_sync:vga_sync_unit|v_count_reg[4]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.084     ; 12.274     ;
+; 7.686 ; vga_sync:vga_sync_unit|h_count_reg[3]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.073     ; 12.243     ;
+; 7.697 ; vga_sync:vga_sync_unit|v_count_reg[8]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.084     ; 12.221     ;
+; 7.703 ; vga_sync:vga_sync_unit|v_count_reg[6]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.084     ; 12.215     ;
+; 7.741 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.207     ;
+; 7.741 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.207     ;
+; 7.741 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.207     ;
+; 7.741 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.207     ;
+; 7.741 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.207     ;
+; 7.741 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.207     ;
+; 7.741 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.207     ;
+; 7.741 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.207     ;
+; 7.741 ; vga_sync:vga_sync_unit|v_count_reg[5]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.084     ; 12.177     ;
+; 7.745 ; paddle_logic:right_paddle_module|y_reg[1]   ; ball_logic:ball_module|x_reg[0]                   ; clock        ; clock       ; 20.000       ; -0.077     ; 12.180     ;
+; 7.745 ; paddle_logic:right_paddle_module|y_reg[1]   ; ball_logic:ball_module|x_reg[2]                   ; clock        ; clock       ; 20.000       ; -0.077     ; 12.180     ;
+; 7.745 ; paddle_logic:right_paddle_module|y_reg[1]   ; ball_logic:ball_module|x_reg[3]                   ; clock        ; clock       ; 20.000       ; -0.077     ; 12.180     ;
+; 7.745 ; paddle_logic:right_paddle_module|y_reg[1]   ; ball_logic:ball_module|x_reg[1]                   ; clock        ; clock       ; 20.000       ; -0.077     ; 12.180     ;
+; 7.747 ; vga_sync:vga_sync_unit|v_count_reg[9]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.084     ; 12.171     ;
+; 7.756 ; vga_sync:vga_sync_unit|h_count_reg[4]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.073     ; 12.173     ;
+; 7.760 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.188     ;
+; 7.760 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.188     ;
+; 7.760 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.188     ;
+; 7.760 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.188     ;
+; 7.760 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.188     ;
+; 7.760 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.188     ;
+; 7.760 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.188     ;
+; 7.760 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.188     ;
+; 7.848 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.079     ;
+; 7.848 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.079     ;
+; 7.848 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.079     ;
+; 7.848 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.079     ;
+; 7.848 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.079     ;
+; 7.848 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.079     ;
+; 7.848 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.079     ;
+; 7.848 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.079     ;
+; 7.854 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.073     ;
+; 7.854 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.073     ;
+; 7.854 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.073     ;
+; 7.854 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.073     ;
+; 7.854 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.073     ;
+; 7.854 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.073     ;
+; 7.854 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.073     ;
+; 7.854 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.075     ; 12.073     ;
+; 7.901 ; vga_sync:vga_sync_unit|v_count_reg[7]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.084     ; 12.017     ;
+; 7.905 ; paddle_logic:right_paddle_module|y_reg[1]   ; sound:sound_module|state                          ; clock        ; clock       ; 20.000       ; -0.105     ; 11.992     ;
+; 7.915 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.033     ;
+; 7.915 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.033     ;
+; 7.915 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.033     ;
+; 7.915 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.033     ;
+; 7.915 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.033     ;
+; 7.915 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.033     ;
+; 7.915 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.033     ;
+; 7.915 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.033     ;
+; 7.926 ; vga_sync:vga_sync_unit|v_count_reg[3]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.084     ; 11.992     ;
+; 7.936 ; vga_sync:vga_sync_unit|v_count_reg[2]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.084     ; 11.982     ;
+; 7.944 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.004     ;
+; 7.944 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.004     ;
+; 7.944 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.004     ;
+; 7.944 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.004     ;
+; 7.944 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.004     ;
+; 7.944 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.004     ;
+; 7.944 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.004     ;
+; 7.944 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.054     ; 12.004     ;
+; 7.967 ; vga_sync:vga_sync_unit|h_count_reg[3]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.073     ; 11.962     ;
+; 7.973 ; vga_sync:vga_sync_unit|v_count_reg[4]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.084     ; 11.945     ;
+; 8.023 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.904     ;
+; 8.023 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.904     ;
+; 8.023 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.904     ;
+; 8.023 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.904     ;
+; 8.023 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.904     ;
+; 8.023 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.904     ;
+; 8.023 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.904     ;
+; 8.023 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.904     ;
+; 8.026 ; vga_sync:vga_sync_unit|v_count_reg[8]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.084     ; 11.892     ;
+; 8.036 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.891     ;
+; 8.036 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.891     ;
+; 8.036 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.891     ;
+; 8.036 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.891     ;
+; 8.036 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.891     ;
+; 8.036 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.891     ;
+; 8.036 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.891     ;
+; 8.036 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.075     ; 11.891     ;
+; 8.037 ; vga_sync:vga_sync_unit|h_count_reg[4]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.073     ; 11.892     ;
+; 8.042 ; score_logic:scores_calculator|score2_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.054     ; 11.906     ;
+; 8.042 ; score_logic:scores_calculator|score2_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.054     ; 11.906     ;
+; 8.042 ; score_logic:scores_calculator|score2_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.054     ; 11.906     ;
+; 8.042 ; score_logic:scores_calculator|score2_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.054     ; 11.906     ;
+; 8.042 ; score_logic:scores_calculator|score2_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.054     ; 11.906     ;
+; 8.042 ; score_logic:scores_calculator|score2_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.054     ; 11.906     ;
+; 8.042 ; score_logic:scores_calculator|score2_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.054     ; 11.906     ;
+; 8.042 ; score_logic:scores_calculator|score2_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.054     ; 11.906     ;
+; 8.070 ; vga_sync:vga_sync_unit|v_count_reg[5]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.084     ; 11.848     ;
+; 8.071 ; vga_sync:vga_sync_unit|h_count_reg[2]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.073     ; 11.858     ;
+; 8.073 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[5]                   ; clock        ; clock       ; 20.000       ; -0.055     ; 11.874     ;
+; 8.073 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[7]                   ; clock        ; clock       ; 20.000       ; -0.055     ; 11.874     ;
+; 8.077 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[9]                   ; clock        ; clock       ; 20.000       ; -0.055     ; 11.870     ;
++-------+---------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clock'                                                                                                                                                                                                                        ;
++-------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                          ; To Node                                                                                                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.400 ; ball_logic:ball_module|y_reg[5]                    ; ball_logic:ball_module|y_reg[5]                                                                                        ; clock        ; clock       ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; collision_logic:collision_module|direct_reg[1]     ; collision_logic:collision_module|direct_reg[1]                                                                         ; clock        ; clock       ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; ball_logic:ball_module|y_reg[6]                    ; ball_logic:ball_module|y_reg[6]                                                                                        ; clock        ; clock       ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; ball_logic:ball_module|y_reg[4]                    ; ball_logic:ball_module|y_reg[4]                                                                                        ; clock        ; clock       ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; ball_logic:ball_module|y_reg[7]                    ; ball_logic:ball_module|y_reg[7]                                                                                        ; clock        ; clock       ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; ball_logic:ball_module|y_reg[8]                    ; ball_logic:ball_module|y_reg[8]                                                                                        ; clock        ; clock       ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; ball_logic:ball_module|y_reg[9]                    ; ball_logic:ball_module|y_reg[9]                                                                                        ; clock        ; clock       ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; collision_logic:collision_module|paddle_reg[1]     ; collision_logic:collision_module|paddle_reg[1]                                                                         ; clock        ; clock       ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; collision_logic:collision_module|paddle_reg[0]     ; collision_logic:collision_module|paddle_reg[0]                                                                         ; clock        ; clock       ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; score_logic:scores_calculator|state.ST_CALC        ; score_logic:scores_calculator|state.ST_CALC                                                                            ; clock        ; clock       ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; score_logic:scores_calculator|cnt_reg[2]           ; score_logic:scores_calculator|cnt_reg[2]                                                                               ; clock        ; clock       ; 0.000        ; 0.074      ; 0.669      ;
+; 0.400 ; score_logic:scores_calculator|cnt_reg[1]           ; score_logic:scores_calculator|cnt_reg[1]                                                                               ; clock        ; clock       ; 0.000        ; 0.074      ; 0.669      ;
+; 0.401 ; score_logic:scores_calculator|shift2_reg[6]        ; score_logic:scores_calculator|shift2_reg[6]                                                                            ; clock        ; clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; score_logic:scores_calculator|shift2_reg[2]        ; score_logic:scores_calculator|shift2_reg[2]                                                                            ; clock        ; clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; bitmap_generator:game_over_bitmap_gen|state        ; bitmap_generator:game_over_bitmap_gen|state                                                                            ; clock        ; clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; ball_logic:ball_module|x_reg[6]                    ; ball_logic:ball_module|x_reg[6]                                                                                        ; clock        ; clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; ball_logic:ball_module|x_reg[7]                    ; ball_logic:ball_module|x_reg[7]                                                                                        ; clock        ; clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; ball_logic:ball_module|x_reg[8]                    ; ball_logic:ball_module|x_reg[8]                                                                                        ; clock        ; clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; ball_logic:ball_module|x_reg[9]                    ; ball_logic:ball_module|x_reg[9]                                                                                        ; clock        ; clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; ball_logic:ball_module|x_reg[4]                    ; ball_logic:ball_module|x_reg[4]                                                                                        ; clock        ; clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; ball_logic:ball_module|x_reg[5]                    ; ball_logic:ball_module|x_reg[5]                                                                                        ; clock        ; clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.402 ; game_board:game_board_module|toggle_reg            ; game_board:game_board_module|toggle_reg                                                                                ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; button_logic:down_button_module|btn_o_reg          ; button_logic:down_button_module|btn_o_reg                                                                              ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; button_logic:down_button_module|state.ST_IDLE      ; button_logic:down_button_module|state.ST_IDLE                                                                          ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; button_logic:down_button_module|state.ST_RELEASE   ; button_logic:down_button_module|state.ST_RELEASE                                                                       ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; button_logic:down_button_module|state.ST_PRESS     ; button_logic:down_button_module|state.ST_PRESS                                                                         ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; sound:sound_module|buzz_reg                        ; sound:sound_module|buzz_reg                                                                                            ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; score_logic:scores_calculator|shift1_reg[6]        ; score_logic:scores_calculator|shift1_reg[6]                                                                            ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; score_logic:scores_calculator|shift1_reg[2]        ; score_logic:scores_calculator|shift1_reg[2]                                                                            ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; bitmap_generator:game_menu_bitmap_gen|state        ; bitmap_generator:game_menu_bitmap_gen|state                                                                            ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; game_config:game_config_module|state.ST_END        ; game_config:game_config_module|state.ST_END                                                                            ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; game_config:game_config_module|state.ST_IDLE       ; game_config:game_config_module|state.ST_IDLE                                                                           ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; game_config:game_config_module|state.ST_START      ; game_config:game_config_module|state.ST_START                                                                          ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; button_logic:up_button_module|btn_o_reg            ; button_logic:up_button_module|btn_o_reg                                                                                ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; button_logic:up_button_module|state.ST_PRESS       ; button_logic:up_button_module|state.ST_PRESS                                                                           ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; button_logic:up_button_module|state.ST_RELEASE     ; button_logic:up_button_module|state.ST_RELEASE                                                                         ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; button_logic:up_button_module|state.ST_IDLE        ; button_logic:up_button_module|state.ST_IDLE                                                                            ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.415 ; score_logic:scores_calculator|cnt_reg[0]           ; score_logic:scores_calculator|cnt_reg[0]                                                                               ; clock        ; clock       ; 0.000        ; 0.074      ; 0.684      ;
+; 0.416 ; score_logic:scores_calculator|shift2_reg[1]        ; score_logic:scores_calculator|shift2_reg[1]                                                                            ; clock        ; clock       ; 0.000        ; 0.073      ; 0.684      ;
+; 0.417 ; score_logic:scores_calculator|shift1_reg[1]        ; score_logic:scores_calculator|shift1_reg[1]                                                                            ; clock        ; clock       ; 0.000        ; 0.072      ; 0.684      ;
+; 0.417 ; sound:sound_module|state                           ; sound:sound_module|state                                                                                               ; clock        ; clock       ; 0.000        ; 0.072      ; 0.684      ;
+; 0.417 ; vga_sync:vga_sync_unit|mod2_reg                    ; vga_sync:vga_sync_unit|mod2_reg                                                                                        ; clock        ; clock       ; 0.000        ; 0.072      ; 0.684      ;
+; 0.425 ; bitmap_generator:game_over_bitmap_gen|addr_reg[6]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.419      ; 1.074      ;
+; 0.429 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[0]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.418      ; 1.077      ;
+; 0.429 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.418      ; 1.077      ;
+; 0.438 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.418      ; 1.086      ;
+; 0.447 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[1]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.418      ; 1.095      ;
+; 0.453 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[10] ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.418      ; 1.101      ;
+; 0.455 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.418      ; 1.103      ;
+; 0.456 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.429      ; 1.115      ;
+; 0.458 ; game_config:game_config_module|state.ST_IDLE       ; game_config:game_config_module|game_menu_reg                                                                           ; clock        ; clock       ; 0.000        ; 0.072      ; 0.725      ;
+; 0.459 ; score_logic:scores_calculator|cnt_reg[1]           ; score_logic:scores_calculator|cnt_reg[2]                                                                               ; clock        ; clock       ; 0.000        ; 0.074      ; 0.728      ;
+; 0.462 ; score_logic:scores_calculator|state.ST_DONE        ; score_logic:scores_calculator|state.ST_CALC                                                                            ; clock        ; clock       ; 0.000        ; 0.074      ; 0.731      ;
+; 0.464 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[5]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.418      ; 1.112      ;
+; 0.466 ; score_logic:scores_calculator|shift1_reg[1]        ; score_logic:scores_calculator|shift1_reg[3]                                                                            ; clock        ; clock       ; 0.000        ; 0.072      ; 0.733      ;
+; 0.467 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[5]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.407      ; 1.104      ;
+; 0.468 ; score_logic:scores_calculator|bin2_reg[7]          ; score_logic:scores_calculator|shift2_reg[1]                                                                            ; clock        ; clock       ; 0.000        ; 0.073      ; 0.736      ;
+; 0.469 ; score_logic:scores_calculator|bin2_reg[7]          ; score_logic:scores_calculator|shift2_reg[2]                                                                            ; clock        ; clock       ; 0.000        ; 0.073      ; 0.737      ;
+; 0.470 ; button_logic:down_button_module|state.ST_IDLE      ; button_logic:down_button_module|state.ST_RELEASE                                                                       ; clock        ; clock       ; 0.000        ; 0.072      ; 0.737      ;
+; 0.470 ; score_logic:scores_calculator|bin2_reg[5]          ; score_logic:scores_calculator|bin2_reg[6]                                                                              ; clock        ; clock       ; 0.000        ; 0.073      ; 0.738      ;
+; 0.470 ; bitmap_generator:game_over_bitmap_gen|addr_reg[10] ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.419      ; 1.119      ;
+; 0.473 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[12] ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.418      ; 1.121      ;
+; 0.475 ; score_logic:scores_calculator|shift1_reg[4]        ; score_logic:scores_calculator|shift1_reg[5]                                                                            ; clock        ; clock       ; 0.000        ; 0.072      ; 0.742      ;
+; 0.475 ; button_logic:up_button_module|state.ST_IDLE        ; button_logic:up_button_module|state.ST_PRESS                                                                           ; clock        ; clock       ; 0.000        ; 0.072      ; 0.742      ;
+; 0.477 ; bitmap_generator:game_over_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.419      ; 1.126      ;
+; 0.479 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.419      ; 1.128      ;
+; 0.481 ; score_logic:scores_calculator|score2_reg[0]        ; score_logic:scores_calculator|bin2_reg[0]                                                                              ; clock        ; clock       ; 0.000        ; 0.073      ; 0.749      ;
+; 0.482 ; score_logic:scores_calculator|cnt_reg[1]           ; score_logic:scores_calculator|state.ST_DONE                                                                            ; clock        ; clock       ; 0.000        ; 0.074      ; 0.751      ;
+; 0.484 ; score_logic:scores_calculator|score1_reg[7]        ; score_logic:scores_calculator|bin1_reg[7]                                                                              ; clock        ; clock       ; 0.000        ; 0.074      ; 0.753      ;
+; 0.484 ; bitmap_generator:game_over_bitmap_gen|addr_reg[0]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.425      ; 1.139      ;
+; 0.484 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.425      ; 1.139      ;
+; 0.485 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[9]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.418      ; 1.133      ;
+; 0.485 ; bitmap_generator:game_over_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.429      ; 1.144      ;
+; 0.487 ; score_logic:scores_calculator|score2_reg[4]        ; score_logic:scores_calculator|bin2_reg[4]                                                                              ; clock        ; clock       ; 0.000        ; 0.073      ; 0.755      ;
+; 0.487 ; score_logic:scores_calculator|score1_reg[4]        ; score_logic:scores_calculator|bin1_reg[4]                                                                              ; clock        ; clock       ; 0.000        ; 0.074      ; 0.756      ;
+; 0.491 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[9]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.407      ; 1.128      ;
+; 0.492 ; score_logic:scores_calculator|bin2_reg[7]          ; score_logic:scores_calculator|bcd2_reg[0]                                                                              ; clock        ; clock       ; 0.000        ; 0.073      ; 0.760      ;
+; 0.496 ; bitmap_generator:game_over_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.429      ; 1.155      ;
+; 0.497 ; bitmap_generator:game_over_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.419      ; 1.146      ;
+; 0.500 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a2~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.410      ; 1.140      ;
+; 0.502 ; bitmap_generator:game_over_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a2~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.410      ; 1.142      ;
+; 0.502 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a4~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.427      ; 1.159      ;
+; 0.502 ; bitmap_generator:game_over_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a4~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.427      ; 1.159      ;
+; 0.502 ; bitmap_generator:game_over_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a4~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.427      ; 1.159      ;
+; 0.504 ; bitmap_generator:game_over_bitmap_gen|addr_reg[12] ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.419      ; 1.153      ;
+; 0.510 ; bitmap_generator:game_over_bitmap_gen|addr_reg[1]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.419      ; 1.159      ;
+; 0.519 ; button_logic:up_button_module|btn_i_reg            ; button_logic:up_button_module|state.ST_IDLE                                                                            ; clock        ; clock       ; 0.000        ; 0.072      ; 0.786      ;
+; 0.527 ; bitmap_generator:game_over_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a2~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.410      ; 1.167      ;
+; 0.533 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[12] ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.407      ; 1.170      ;
+; 0.544 ; bitmap_generator:game_over_bitmap_gen|addr_reg[0]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.419      ; 1.193      ;
+; 0.545 ; bitmap_generator:game_over_bitmap_gen|addr_reg[5]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.419      ; 1.194      ;
+; 0.548 ; bitmap_generator:game_over_bitmap_gen|addr_reg[0]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a2~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.410      ; 1.188      ;
+; 0.595 ; score_logic:scores_calculator|shift2_reg[1]        ; score_logic:scores_calculator|shift2_reg[3]                                                                            ; clock        ; clock       ; 0.000        ; 0.073      ; 0.863      ;
+; 0.597 ; score_logic:scores_calculator|bin1_reg[3]          ; score_logic:scores_calculator|bin1_reg[4]                                                                              ; clock        ; clock       ; 0.000        ; 0.074      ; 0.866      ;
+; 0.598 ; score_logic:scores_calculator|bin2_reg[6]          ; score_logic:scores_calculator|bin2_reg[7]                                                                              ; clock        ; clock       ; 0.000        ; 0.073      ; 0.866      ;
+; 0.598 ; score_logic:scores_calculator|bin2_reg[1]          ; score_logic:scores_calculator|bin2_reg[2]                                                                              ; clock        ; clock       ; 0.000        ; 0.073      ; 0.866      ;
+; 0.598 ; score_logic:scores_calculator|bin2_reg[3]          ; score_logic:scores_calculator|bin2_reg[4]                                                                              ; clock        ; clock       ; 0.000        ; 0.073      ; 0.866      ;
+; 0.600 ; score_logic:scores_calculator|bin1_reg[5]          ; score_logic:scores_calculator|bin1_reg[6]                                                                              ; clock        ; clock       ; 0.000        ; 0.074      ; 0.869      ;
+; 0.601 ; score_logic:scores_calculator|bin2_reg[0]          ; score_logic:scores_calculator|bin2_reg[1]                                                                              ; clock        ; clock       ; 0.000        ; 0.073      ; 0.869      ;
+; 0.613 ; score_logic:scores_calculator|score1_reg[5]        ; score_logic:scores_calculator|bin1_reg[5]                                                                              ; clock        ; clock       ; 0.000        ; 0.074      ; 0.882      ;
++-------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clock ; 14.142 ; 0.000             ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clock ; 0.158 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; clock ; 9.198 ; 0.000                            ;
++-------+-------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clock'                                                                                                                                            ;
++--------+---------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 14.142 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.806      ;
+; 14.142 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.806      ;
+; 14.142 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.806      ;
+; 14.142 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.806      ;
+; 14.142 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.806      ;
+; 14.142 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.806      ;
+; 14.142 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.806      ;
+; 14.142 ; score_logic:scores_calculator|score1_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.806      ;
+; 14.143 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.805      ;
+; 14.143 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.805      ;
+; 14.143 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.805      ;
+; 14.143 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.805      ;
+; 14.143 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.805      ;
+; 14.143 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.805      ;
+; 14.143 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.805      ;
+; 14.143 ; score_logic:scores_calculator|score1_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.805      ;
+; 14.173 ; vga_sync:vga_sync_unit|h_count_reg[3]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.037     ; 5.777      ;
+; 14.177 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.789      ;
+; 14.177 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.789      ;
+; 14.177 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.789      ;
+; 14.177 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.789      ;
+; 14.177 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.789      ;
+; 14.177 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.789      ;
+; 14.177 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.789      ;
+; 14.177 ; score_logic:scores_calculator|score2_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.789      ;
+; 14.185 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.781      ;
+; 14.185 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.781      ;
+; 14.185 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.781      ;
+; 14.185 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.781      ;
+; 14.185 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.781      ;
+; 14.185 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.781      ;
+; 14.185 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.781      ;
+; 14.185 ; score_logic:scores_calculator|score2_reg[4] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.781      ;
+; 14.212 ; vga_sync:vga_sync_unit|h_count_reg[4]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.037     ; 5.738      ;
+; 14.229 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.719      ;
+; 14.229 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.719      ;
+; 14.229 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.719      ;
+; 14.229 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.719      ;
+; 14.229 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.719      ;
+; 14.229 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.719      ;
+; 14.229 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.719      ;
+; 14.229 ; score_logic:scores_calculator|score1_reg[5] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.719      ;
+; 14.238 ; vga_sync:vga_sync_unit|v_count_reg[6]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.042     ; 5.707      ;
+; 14.244 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[5]                   ; clock        ; clock       ; 20.000       ; -0.024     ; 5.719      ;
+; 14.244 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[7]                   ; clock        ; clock       ; 20.000       ; -0.024     ; 5.719      ;
+; 14.244 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|x_reg[0]                   ; clock        ; clock       ; 20.000       ; -0.030     ; 5.713      ;
+; 14.244 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|x_reg[2]                   ; clock        ; clock       ; 20.000       ; -0.030     ; 5.713      ;
+; 14.244 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|x_reg[3]                   ; clock        ; clock       ; 20.000       ; -0.030     ; 5.713      ;
+; 14.244 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|x_reg[1]                   ; clock        ; clock       ; 20.000       ; -0.030     ; 5.713      ;
+; 14.252 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[9]                   ; clock        ; clock       ; 20.000       ; -0.024     ; 5.711      ;
+; 14.258 ; vga_sync:vga_sync_unit|v_count_reg[9]       ; vga_graphics:graph_generator|rgb_reg[1]           ; clock        ; clock       ; 20.000       ; -0.042     ; 5.687      ;
+; 14.263 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.703      ;
+; 14.263 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.703      ;
+; 14.263 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.703      ;
+; 14.263 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.703      ;
+; 14.263 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.703      ;
+; 14.263 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.703      ;
+; 14.263 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.703      ;
+; 14.263 ; score_logic:scores_calculator|score2_reg[7] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.703      ;
+; 14.270 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[4]                   ; clock        ; clock       ; 20.000       ; -0.024     ; 5.693      ;
+; 14.271 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[8]                   ; clock        ; clock       ; 20.000       ; -0.024     ; 5.692      ;
+; 14.283 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.683      ;
+; 14.283 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.683      ;
+; 14.283 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.683      ;
+; 14.283 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.683      ;
+; 14.283 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.683      ;
+; 14.283 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.683      ;
+; 14.283 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.683      ;
+; 14.283 ; score_logic:scores_calculator|score2_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.021     ; 5.683      ;
+; 14.285 ; score_logic:scores_calculator|score1_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.663      ;
+; 14.285 ; score_logic:scores_calculator|score1_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.663      ;
+; 14.285 ; score_logic:scores_calculator|score1_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.663      ;
+; 14.285 ; score_logic:scores_calculator|score1_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.663      ;
+; 14.285 ; score_logic:scores_calculator|score1_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.663      ;
+; 14.285 ; score_logic:scores_calculator|score1_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.663      ;
+; 14.285 ; score_logic:scores_calculator|score1_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.663      ;
+; 14.285 ; score_logic:scores_calculator|score1_reg[6] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.663      ;
+; 14.288 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.660      ;
+; 14.288 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.660      ;
+; 14.288 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.660      ;
+; 14.288 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.660      ;
+; 14.288 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.660      ;
+; 14.288 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.660      ;
+; 14.288 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.660      ;
+; 14.288 ; score_logic:scores_calculator|score1_reg[2] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.660      ;
+; 14.294 ; paddle_logic:left_paddle_module|y_reg[0]    ; ball_logic:ball_module|y_reg[6]                   ; clock        ; clock       ; 20.000       ; -0.024     ; 5.669      ;
+; 14.298 ; score_logic:scores_calculator|score1_reg[3] ; bitmap_generator:game_over_bitmap_gen|addr_reg[3] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.650      ;
+; 14.298 ; score_logic:scores_calculator|score1_reg[3] ; bitmap_generator:game_over_bitmap_gen|addr_reg[7] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.650      ;
+; 14.298 ; score_logic:scores_calculator|score1_reg[3] ; bitmap_generator:game_over_bitmap_gen|addr_reg[5] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.650      ;
+; 14.298 ; score_logic:scores_calculator|score1_reg[3] ; bitmap_generator:game_over_bitmap_gen|addr_reg[6] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.650      ;
+; 14.298 ; score_logic:scores_calculator|score1_reg[3] ; bitmap_generator:game_over_bitmap_gen|addr_reg[4] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.650      ;
+; 14.298 ; score_logic:scores_calculator|score1_reg[3] ; bitmap_generator:game_over_bitmap_gen|addr_reg[2] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.650      ;
+; 14.298 ; score_logic:scores_calculator|score1_reg[3] ; bitmap_generator:game_over_bitmap_gen|addr_reg[1] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.650      ;
+; 14.298 ; score_logic:scores_calculator|score1_reg[3] ; bitmap_generator:game_over_bitmap_gen|addr_reg[0] ; clock        ; clock       ; 20.000       ; -0.039     ; 5.650      ;
+; 14.308 ; vga_sync:vga_sync_unit|h_count_reg[3]       ; vga_graphics:graph_generator|rgb_reg[2]           ; clock        ; clock       ; 20.000       ; -0.037     ; 5.642      ;
+; 14.318 ; paddle_logic:left_paddle_module|y_reg[2]    ; ball_logic:ball_module|y_reg[5]                   ; clock        ; clock       ; 20.000       ; -0.024     ; 5.645      ;
+; 14.318 ; paddle_logic:left_paddle_module|y_reg[2]    ; ball_logic:ball_module|y_reg[7]                   ; clock        ; clock       ; 20.000       ; -0.024     ; 5.645      ;
+; 14.318 ; paddle_logic:left_paddle_module|y_reg[2]    ; ball_logic:ball_module|x_reg[0]                   ; clock        ; clock       ; 20.000       ; -0.030     ; 5.639      ;
+; 14.318 ; paddle_logic:left_paddle_module|y_reg[2]    ; ball_logic:ball_module|x_reg[2]                   ; clock        ; clock       ; 20.000       ; -0.030     ; 5.639      ;
+; 14.318 ; paddle_logic:left_paddle_module|y_reg[2]    ; ball_logic:ball_module|x_reg[3]                   ; clock        ; clock       ; 20.000       ; -0.030     ; 5.639      ;
++--------+---------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clock'                                                                                                                                                                                                                        ;
++-------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                          ; To Node                                                                                                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.158 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.481      ;
+; 0.159 ; bitmap_generator:game_over_bitmap_gen|addr_reg[6]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.482      ;
+; 0.164 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[0]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.487      ;
+; 0.164 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.487      ;
+; 0.168 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.491      ;
+; 0.169 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[1]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.492      ;
+; 0.170 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[5]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.493      ;
+; 0.172 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[5]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.212      ; 0.488      ;
+; 0.172 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[10] ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.495      ;
+; 0.174 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.224      ; 0.502      ;
+; 0.178 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[12] ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.501      ;
+; 0.180 ; bitmap_generator:game_over_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.224      ; 0.508      ;
+; 0.180 ; bitmap_generator:game_over_bitmap_gen|addr_reg[10] ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.503      ;
+; 0.181 ; bitmap_generator:game_over_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.224      ; 0.509      ;
+; 0.184 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[9]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.507      ;
+; 0.185 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[9]  ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.212      ; 0.501      ;
+; 0.186 ; score_logic:scores_calculator|shift2_reg[6]        ; score_logic:scores_calculator|shift2_reg[6]                                                                            ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; bitmap_generator:game_over_bitmap_gen|state        ; bitmap_generator:game_over_bitmap_gen|state                                                                            ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; ball_logic:ball_module|y_reg[5]                    ; ball_logic:ball_module|y_reg[5]                                                                                        ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; collision_logic:collision_module|direct_reg[1]     ; collision_logic:collision_module|direct_reg[1]                                                                         ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; ball_logic:ball_module|y_reg[6]                    ; ball_logic:ball_module|y_reg[6]                                                                                        ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; ball_logic:ball_module|y_reg[4]                    ; ball_logic:ball_module|y_reg[4]                                                                                        ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; ball_logic:ball_module|y_reg[7]                    ; ball_logic:ball_module|y_reg[7]                                                                                        ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; ball_logic:ball_module|y_reg[8]                    ; ball_logic:ball_module|y_reg[8]                                                                                        ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; ball_logic:ball_module|y_reg[9]                    ; ball_logic:ball_module|y_reg[9]                                                                                        ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; collision_logic:collision_module|paddle_reg[1]     ; collision_logic:collision_module|paddle_reg[1]                                                                         ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; collision_logic:collision_module|paddle_reg[0]     ; collision_logic:collision_module|paddle_reg[0]                                                                         ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; score_logic:scores_calculator|state.ST_CALC        ; score_logic:scores_calculator|state.ST_CALC                                                                            ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; score_logic:scores_calculator|cnt_reg[2]           ; score_logic:scores_calculator|cnt_reg[2]                                                                               ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; score_logic:scores_calculator|cnt_reg[1]           ; score_logic:scores_calculator|cnt_reg[1]                                                                               ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.187 ; game_board:game_board_module|toggle_reg            ; game_board:game_board_module|toggle_reg                                                                                ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; button_logic:down_button_module|btn_o_reg          ; button_logic:down_button_module|btn_o_reg                                                                              ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; button_logic:down_button_module|state.ST_IDLE      ; button_logic:down_button_module|state.ST_IDLE                                                                          ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; button_logic:down_button_module|state.ST_RELEASE   ; button_logic:down_button_module|state.ST_RELEASE                                                                       ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; button_logic:down_button_module|state.ST_PRESS     ; button_logic:down_button_module|state.ST_PRESS                                                                         ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; sound:sound_module|buzz_reg                        ; sound:sound_module|buzz_reg                                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; score_logic:scores_calculator|shift1_reg[6]        ; score_logic:scores_calculator|shift1_reg[6]                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; score_logic:scores_calculator|shift2_reg[2]        ; score_logic:scores_calculator|shift2_reg[2]                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; score_logic:scores_calculator|shift1_reg[2]        ; score_logic:scores_calculator|shift1_reg[2]                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; bitmap_generator:game_menu_bitmap_gen|state        ; bitmap_generator:game_menu_bitmap_gen|state                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; game_config:game_config_module|state.ST_END        ; game_config:game_config_module|state.ST_END                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; game_config:game_config_module|state.ST_IDLE       ; game_config:game_config_module|state.ST_IDLE                                                                           ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; game_config:game_config_module|state.ST_START      ; game_config:game_config_module|state.ST_START                                                                          ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; ball_logic:ball_module|x_reg[6]                    ; ball_logic:ball_module|x_reg[6]                                                                                        ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; ball_logic:ball_module|x_reg[7]                    ; ball_logic:ball_module|x_reg[7]                                                                                        ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; ball_logic:ball_module|x_reg[8]                    ; ball_logic:ball_module|x_reg[8]                                                                                        ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; ball_logic:ball_module|x_reg[9]                    ; ball_logic:ball_module|x_reg[9]                                                                                        ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; ball_logic:ball_module|x_reg[4]                    ; ball_logic:ball_module|x_reg[4]                                                                                        ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; ball_logic:ball_module|x_reg[5]                    ; ball_logic:ball_module|x_reg[5]                                                                                        ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; button_logic:up_button_module|btn_o_reg            ; button_logic:up_button_module|btn_o_reg                                                                                ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; button_logic:up_button_module|state.ST_PRESS       ; button_logic:up_button_module|state.ST_PRESS                                                                           ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; button_logic:up_button_module|state.ST_RELEASE     ; button_logic:up_button_module|state.ST_RELEASE                                                                         ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; button_logic:up_button_module|state.ST_IDLE        ; button_logic:up_button_module|state.ST_IDLE                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.188 ; bitmap_generator:game_over_bitmap_gen|addr_reg[0]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.221      ; 0.513      ;
+; 0.189 ; bitmap_generator:game_over_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a4~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.223      ; 0.516      ;
+; 0.190 ; bitmap_generator:game_over_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.513      ;
+; 0.190 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a1~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.221      ; 0.515      ;
+; 0.191 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.514      ;
+; 0.192 ; bitmap_generator:game_over_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.515      ;
+; 0.192 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a4~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.223      ; 0.519      ;
+; 0.193 ; bitmap_generator:game_over_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a4~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.223      ; 0.520      ;
+; 0.193 ; score_logic:scores_calculator|cnt_reg[0]           ; score_logic:scores_calculator|cnt_reg[0]                                                                               ; clock        ; clock       ; 0.000        ; 0.037      ; 0.314      ;
+; 0.194 ; score_logic:scores_calculator|shift2_reg[1]        ; score_logic:scores_calculator|shift2_reg[1]                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.314      ;
+; 0.194 ; score_logic:scores_calculator|shift1_reg[1]        ; score_logic:scores_calculator|shift1_reg[1]                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.314      ;
+; 0.194 ; sound:sound_module|state                           ; sound:sound_module|state                                                                                               ; clock        ; clock       ; 0.000        ; 0.036      ; 0.314      ;
+; 0.194 ; vga_sync:vga_sync_unit|mod2_reg                    ; vga_sync:vga_sync_unit|mod2_reg                                                                                        ; clock        ; clock       ; 0.000        ; 0.036      ; 0.314      ;
+; 0.195 ; score_logic:scores_calculator|bin2_reg[5]          ; score_logic:scores_calculator|bin2_reg[6]                                                                              ; clock        ; clock       ; 0.000        ; 0.036      ; 0.315      ;
+; 0.195 ; bitmap_generator:game_over_bitmap_gen|addr_reg[12] ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.518      ;
+; 0.198 ; bitmap_generator:game_menu_bitmap_gen|addr_reg[12] ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.212      ; 0.514      ;
+; 0.199 ; score_logic:scores_calculator|cnt_reg[1]           ; score_logic:scores_calculator|cnt_reg[2]                                                                               ; clock        ; clock       ; 0.000        ; 0.037      ; 0.320      ;
+; 0.201 ; score_logic:scores_calculator|score1_reg[7]        ; score_logic:scores_calculator|bin1_reg[7]                                                                              ; clock        ; clock       ; 0.000        ; 0.037      ; 0.322      ;
+; 0.201 ; bitmap_generator:game_over_bitmap_gen|addr_reg[2]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a2~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.211      ; 0.516      ;
+; 0.202 ; score_logic:scores_calculator|score1_reg[4]        ; score_logic:scores_calculator|bin1_reg[4]                                                                              ; clock        ; clock       ; 0.000        ; 0.037      ; 0.323      ;
+; 0.202 ; bitmap_generator:game_over_bitmap_gen|addr_reg[1]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.525      ;
+; 0.202 ; score_logic:scores_calculator|score2_reg[0]        ; score_logic:scores_calculator|bin2_reg[0]                                                                              ; clock        ; clock       ; 0.000        ; 0.036      ; 0.322      ;
+; 0.202 ; score_logic:scores_calculator|cnt_reg[1]           ; score_logic:scores_calculator|state.ST_DONE                                                                            ; clock        ; clock       ; 0.000        ; 0.037      ; 0.323      ;
+; 0.203 ; bitmap_generator:game_over_bitmap_gen|addr_reg[4]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a2~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.211      ; 0.518      ;
+; 0.204 ; score_logic:scores_calculator|score2_reg[4]        ; score_logic:scores_calculator|bin2_reg[4]                                                                              ; clock        ; clock       ; 0.000        ; 0.036      ; 0.324      ;
+; 0.204 ; game_config:game_config_module|state.ST_IDLE       ; game_config:game_config_module|game_menu_reg                                                                           ; clock        ; clock       ; 0.000        ; 0.036      ; 0.324      ;
+; 0.205 ; button_logic:down_button_module|state.ST_IDLE      ; button_logic:down_button_module|state.ST_RELEASE                                                                       ; clock        ; clock       ; 0.000        ; 0.036      ; 0.325      ;
+; 0.205 ; score_logic:scores_calculator|shift1_reg[1]        ; score_logic:scores_calculator|shift1_reg[3]                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.325      ;
+; 0.205 ; score_logic:scores_calculator|bin2_reg[7]          ; score_logic:scores_calculator|shift2_reg[1]                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.325      ;
+; 0.206 ; score_logic:scores_calculator|bin2_reg[7]          ; score_logic:scores_calculator|shift2_reg[2]                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.326      ;
+; 0.206 ; score_logic:scores_calculator|state.ST_DONE        ; score_logic:scores_calculator|state.ST_CALC                                                                            ; clock        ; clock       ; 0.000        ; 0.037      ; 0.327      ;
+; 0.207 ; score_logic:scores_calculator|bin2_reg[7]          ; score_logic:scores_calculator|bcd2_reg[0]                                                                              ; clock        ; clock       ; 0.000        ; 0.036      ; 0.327      ;
+; 0.208 ; score_logic:scores_calculator|shift1_reg[4]        ; score_logic:scores_calculator|shift1_reg[5]                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.328      ;
+; 0.208 ; bitmap_generator:game_over_bitmap_gen|addr_reg[3]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a2~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.211      ; 0.523      ;
+; 0.208 ; button_logic:up_button_module|state.ST_IDLE        ; button_logic:up_button_module|state.ST_PRESS                                                                           ; clock        ; clock       ; 0.000        ; 0.036      ; 0.328      ;
+; 0.211 ; bitmap_generator:game_over_bitmap_gen|addr_reg[0]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.534      ;
+; 0.214 ; bitmap_generator:game_over_bitmap_gen|addr_reg[5]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a3~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.219      ; 0.537      ;
+; 0.218 ; bitmap_generator:game_over_bitmap_gen|addr_reg[0]  ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ram_block1a2~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.211      ; 0.533      ;
+; 0.220 ; button_logic:up_button_module|btn_i_reg            ; button_logic:up_button_module|state.ST_IDLE                                                                            ; clock        ; clock       ; 0.000        ; 0.036      ; 0.340      ;
+; 0.252 ; score_logic:scores_calculator|bin1_reg[3]          ; score_logic:scores_calculator|bin1_reg[4]                                                                              ; clock        ; clock       ; 0.000        ; 0.037      ; 0.373      ;
+; 0.253 ; score_logic:scores_calculator|bin2_reg[6]          ; score_logic:scores_calculator|bin2_reg[7]                                                                              ; clock        ; clock       ; 0.000        ; 0.036      ; 0.373      ;
+; 0.253 ; score_logic:scores_calculator|bin2_reg[1]          ; score_logic:scores_calculator|bin2_reg[2]                                                                              ; clock        ; clock       ; 0.000        ; 0.036      ; 0.373      ;
+; 0.253 ; score_logic:scores_calculator|bin2_reg[3]          ; score_logic:scores_calculator|bin2_reg[4]                                                                              ; clock        ; clock       ; 0.000        ; 0.036      ; 0.373      ;
+; 0.255 ; score_logic:scores_calculator|bin1_reg[5]          ; score_logic:scores_calculator|bin1_reg[6]                                                                              ; clock        ; clock       ; 0.000        ; 0.037      ; 0.376      ;
+; 0.256 ; score_logic:scores_calculator|bin2_reg[0]          ; score_logic:scores_calculator|bin2_reg[1]                                                                              ; clock        ; clock       ; 0.000        ; 0.036      ; 0.376      ;
+; 0.261 ; score_logic:scores_calculator|score1_reg[5]        ; score_logic:scores_calculator|bin1_reg[5]                                                                              ; clock        ; clock       ; 0.000        ; 0.037      ; 0.382      ;
+; 0.262 ; score_logic:scores_calculator|shift2_reg[4]        ; score_logic:scores_calculator|bcd2_reg[5]                                                                              ; clock        ; clock       ; 0.000        ; 0.037      ; 0.383      ;
++-------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 6.526 ; 0.158 ; N/A      ; N/A     ; 9.198               ;
+;  clock           ; 6.526 ; 0.158 ; N/A      ; N/A     ; 9.198               ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clock           ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+-------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; hsync         ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; vsync         ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; rgb[0]        ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; rgb[1]        ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; rgb[2]        ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; buzz          ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; rst_n                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; btn_down                ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; btn_up                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_DATA0~          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; hsync         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.12 V              ; -0.0818 V           ; 0.205 V                              ; 0.244 V                              ; 8.86e-10 s                  ; 6.56e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 6.38e-09 V                  ; 3.12 V             ; -0.0818 V          ; 0.205 V                             ; 0.244 V                             ; 8.86e-10 s                 ; 6.56e-10 s                 ; No                        ; No                        ;
+; vsync         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.12 V              ; -0.0818 V           ; 0.205 V                              ; 0.244 V                              ; 8.86e-10 s                  ; 6.56e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 6.38e-09 V                  ; 3.12 V             ; -0.0818 V          ; 0.205 V                             ; 0.244 V                             ; 8.86e-10 s                 ; 6.56e-10 s                 ; No                        ; No                        ;
+; rgb[0]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.13 V              ; -0.117 V            ; 0.15 V                               ; 0.263 V                              ; 6.31e-10 s                  ; 4.46e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 6.38e-09 V                  ; 3.13 V             ; -0.117 V           ; 0.15 V                              ; 0.263 V                             ; 6.31e-10 s                 ; 4.46e-10 s                 ; No                        ; No                        ;
+; rgb[1]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.09 V              ; -0.011 V            ; 0.226 V                              ; 0.296 V                              ; 4.86e-09 s                  ; 3.55e-09 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 6.38e-09 V                  ; 3.09 V             ; -0.011 V           ; 0.226 V                             ; 0.296 V                             ; 4.86e-09 s                 ; 3.55e-09 s                 ; Yes                       ; Yes                       ;
+; rgb[2]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.12 V              ; -0.0818 V           ; 0.205 V                              ; 0.244 V                              ; 8.86e-10 s                  ; 6.56e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 6.38e-09 V                  ; 3.12 V             ; -0.0818 V          ; 0.205 V                             ; 0.244 V                             ; 8.86e-10 s                 ; 6.56e-10 s                 ; No                        ; No                        ;
+; buzz          ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.51e-09 V                   ; 3.18 V              ; -0.157 V            ; 0.147 V                              ; 0.259 V                              ; 2.81e-10 s                  ; 2.53e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.51e-09 V                  ; 3.18 V             ; -0.157 V           ; 0.147 V                             ; 0.259 V                             ; 2.81e-10 s                 ; 2.53e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; hsync         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.11 V              ; -0.0469 V           ; 0.191 V                              ; 0.215 V                              ; 1.08e-09 s                  ; 8.62e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 5.04e-07 V                  ; 3.11 V             ; -0.0469 V          ; 0.191 V                             ; 0.215 V                             ; 1.08e-09 s                 ; 8.62e-10 s                 ; Yes                       ; No                        ;
+; vsync         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.11 V              ; -0.0469 V           ; 0.191 V                              ; 0.215 V                              ; 1.08e-09 s                  ; 8.62e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 5.04e-07 V                  ; 3.11 V             ; -0.0469 V          ; 0.191 V                             ; 0.215 V                             ; 1.08e-09 s                 ; 8.62e-10 s                 ; Yes                       ; No                        ;
+; rgb[0]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.11 V              ; -0.0624 V           ; 0.233 V                              ; 0.172 V                              ; 6.86e-10 s                  ; 6.33e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 5.04e-07 V                  ; 3.11 V             ; -0.0624 V          ; 0.233 V                             ; 0.172 V                             ; 6.86e-10 s                 ; 6.33e-10 s                 ; Yes                       ; No                        ;
+; rgb[1]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.08 V              ; -0.0053 V           ; 0.206 V                              ; 0.247 V                              ; 5.77e-09 s                  ; 4.45e-09 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 5.04e-07 V                  ; 3.08 V             ; -0.0053 V          ; 0.206 V                             ; 0.247 V                             ; 5.77e-09 s                 ; 4.45e-09 s                 ; Yes                       ; Yes                       ;
+; rgb[2]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.11 V              ; -0.0469 V           ; 0.191 V                              ; 0.215 V                              ; 1.08e-09 s                  ; 8.62e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 5.04e-07 V                  ; 3.11 V             ; -0.0469 V          ; 0.191 V                             ; 0.215 V                             ; 1.08e-09 s                 ; 8.62e-10 s                 ; Yes                       ; No                        ;
+; buzz          ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.6e-07 V                    ; 3.13 V              ; -0.103 V            ; 0.164 V                              ; 0.134 V                              ; 3.14e-10 s                  ; 4.05e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.6e-07 V                   ; 3.13 V             ; -0.103 V           ; 0.164 V                             ; 0.134 V                             ; 3.14e-10 s                 ; 4.05e-10 s                 ; Yes                       ; No                        ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; hsync         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.57 V              ; -0.0855 V           ; 0.315 V                              ; 0.175 V                              ; 6.79e-10 s                  ; 6.15e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.57 V             ; -0.0855 V          ; 0.315 V                             ; 0.175 V                             ; 6.79e-10 s                 ; 6.15e-10 s                 ; No                        ; No                        ;
+; vsync         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.57 V              ; -0.0855 V           ; 0.315 V                              ; 0.175 V                              ; 6.79e-10 s                  ; 6.15e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.57 V             ; -0.0855 V          ; 0.315 V                             ; 0.175 V                             ; 6.79e-10 s                 ; 6.15e-10 s                 ; No                        ; No                        ;
+; rgb[0]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.6 V               ; -0.127 V            ; 0.302 V                              ; 0.21 V                               ; 4.55e-10 s                  ; 4.11e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.6 V              ; -0.127 V           ; 0.302 V                             ; 0.21 V                              ; 4.55e-10 s                 ; 4.11e-10 s                 ; No                        ; No                        ;
+; rgb[1]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.48 V              ; -0.0162 V           ; 0.354 V                              ; 0.317 V                              ; 3.88e-09 s                  ; 3.06e-09 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.48 V             ; -0.0162 V          ; 0.354 V                             ; 0.317 V                             ; 3.88e-09 s                 ; 3.06e-09 s                 ; No                        ; No                        ;
+; rgb[2]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.57 V              ; -0.0855 V           ; 0.315 V                              ; 0.175 V                              ; 6.79e-10 s                  ; 6.15e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.57 V             ; -0.0855 V          ; 0.315 V                             ; 0.175 V                             ; 6.79e-10 s                 ; 6.15e-10 s                 ; No                        ; No                        ;
+; buzz          ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 6.54e-08 V                   ; 3.66 V              ; -0.26 V             ; 0.41 V                               ; 0.32 V                               ; 1.57e-10 s                  ; 2.15e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 6.54e-08 V                  ; 3.66 V             ; -0.26 V            ; 0.41 V                              ; 0.32 V                              ; 1.57e-10 s                 ; 2.15e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 210573   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 210573   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clock ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun Jul 14 18:47:49 2024
+Info: Command: quartus_sta pong_main -c pong_main
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'pong_main.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332146): Worst-case setup slack is 6.526
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     6.526               0.000 clock 
+Info (332146): Worst-case hold slack is 0.449
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.449               0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.595
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.595               0.000 clock 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 7.374
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     7.374               0.000 clock 
+Info (332146): Worst-case hold slack is 0.400
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.400               0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.598
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.598               0.000 clock 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 14.142
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    14.142               0.000 clock 
+Info (332146): Worst-case hold slack is 0.158
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.158               0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.198
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.198               0.000 clock 
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4748 megabytes
+    Info: Processing ended: Sun Jul 14 18:47:52 2024
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

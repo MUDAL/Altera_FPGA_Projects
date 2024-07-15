@@ -1,0 +1,25 @@
+
+State Machine - |pong_main|score_logic:scores_calculator|state
+Name state.ST_DONE state.ST_CALC state.ST_WAIT state.ST_IDLE 
+state.ST_IDLE 0 0 0 0 
+state.ST_WAIT 0 0 1 1 
+state.ST_CALC 0 1 0 1 
+state.ST_DONE 1 0 0 1 
+
+State Machine - |pong_main|game_config:game_config_module|state
+Name state.ST_END state.ST_START state.ST_IDLE 
+state.ST_IDLE 0 0 0 
+state.ST_START 0 1 1 
+state.ST_END 1 0 1 
+
+State Machine - |pong_main|button_logic:down_button_module|state
+Name state.ST_RELEASE state.ST_PRESS state.ST_IDLE 
+state.ST_IDLE 0 0 0 
+state.ST_PRESS 0 1 1 
+state.ST_RELEASE 1 0 1 
+
+State Machine - |pong_main|button_logic:up_button_module|state
+Name state.ST_RELEASE state.ST_PRESS state.ST_IDLE 
+state.ST_IDLE 0 0 0 
+state.ST_PRESS 0 1 1 
+state.ST_RELEASE 1 0 1 
