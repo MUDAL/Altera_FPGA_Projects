@@ -58,7 +58,7 @@ The images below illustrate how to achieve this.
 
 ## Simulation report (ModelSim transcript) for the ``score_logic`` module 
 ### Stimulus generator (from testbench)  
-'''
+```
    stimuli: process
       constant DELAY_CLKS: integer := 48;
       ---------------------------------------------------------------
@@ -84,10 +84,10 @@ The images below illustrate how to achieve this.
       end_test <= '1';
       wait; 
    end process;
-'''
+```
 
 ### Transcript
-'''
+```
 # ** Note: [INFO]: Right crash
 #    Time: 40 ns  Iteration: 0  Instance: /score_logic_tb
 # ** Note: Score 1: 01, Score 2: 00
@@ -112,7 +112,7 @@ The images below illustrate how to achieve this.
 #    Time: 2810 ns  Iteration: 4  Instance: /score_logic_tb
 # ** Note: Score 1: 05, Score 2: 05
 #    Time: 3030 ns  Iteration: 4  Instance: /score_logic_tb
-'''
+```
 
 ## Helpful resource(s)  
 - FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu  
