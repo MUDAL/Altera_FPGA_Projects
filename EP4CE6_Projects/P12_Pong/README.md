@@ -1,4 +1,4 @@
-# PONG: Implementation of the classic Pong game on the Altera FPGA
+# PONG
 
 ## Description    
 [To be added]  
@@ -27,7 +27,7 @@
 
 ## Pinouts  
 - Check the **Location** column in the image below for the pin mappings used in this project.    
-[To be added]  
+![PP_12](https://github.com/user-attachments/assets/ee5fcd90-15db-4b84-8235-c84e9ae5a0c2)  
 
 ## Dual-purpose pins  
 Some pins on the Altera EP4CE6 FPGA are dual-purpose i.e. they can be used as regular I/O pins or as programming pins.  
