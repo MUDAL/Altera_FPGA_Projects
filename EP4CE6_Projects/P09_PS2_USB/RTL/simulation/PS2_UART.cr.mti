@@ -1,15 +1,4 @@
-L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/ps2_uart_main.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/ps2_uart_main.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ps2_uart_main
--- Compiling architecture ps2_uart_main_rtl of ps2_uart_main
--- Loading entity ps2
--- Loading entity uart
-
-} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/pack_tb_header.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/pack_tb_header.vhd
+L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/RTL/simulation/testbench/pack_tb_header.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/RTL/simulation/testbench/pack_tb_header.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -17,7 +6,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package NUMERIC_STD
 -- Compiling package pack_tb
 
-} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/uart_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/uart_tb.vhd
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/RTL/simulation/testbench/uart_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/RTL/simulation/testbench/uart_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -29,7 +18,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling architecture uart_behav of uart_tb
 -- Loading entity uart
 
-} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/ps2_uart_main_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/ps2_uart_main_tb.vhd
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/RTL/simulation/testbench/ps2_uart_main_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/RTL/simulation/testbench/ps2_uart_main_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -41,7 +30,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling architecture ps2_uart_main_behav of ps2_uart_main_tb
 -- Loading entity ps2_uart_main
 
-} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/pack_tb_body.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/pack_tb_body.vhd
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/RTL/simulation/testbench/pack_tb_body.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/RTL/simulation/testbench/pack_tb_body.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -50,16 +39,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package pack_tb
 -- Compiling package body pack_tb
 
-} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/lib/uart.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/lib/uart.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity uart
--- Compiling architecture uart_rtl of uart
-
-} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/ps2_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/simulation/testbench/ps2_tb.vhd
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/RTL/simulation/testbench/ps2_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/RTL/simulation/testbench/ps2_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -70,14 +50,5 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity ps2_tb
 -- Compiling architecture ps2_behav of ps2_tb
 -- Loading entity ps2
-
-} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/lib/ps2.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P09_PS2_UART/src/lib/ps2.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ps2
--- Compiling architecture ps2_rtl of ps2
 
 } {} {}}
