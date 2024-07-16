@@ -9,7 +9,8 @@
 - EP4CE6E22C8N Cyclone IV FPGA development board
 - VGA monitor (640 x 480)  
 - VGA cable  
-- Intel Quartus Prime 20.1  
+- Intel Quartus Prime 20.1
+- ModelSim (for simulation)  
 
 ## How to use  
 - Clone the ``Altera_FPGA_Projects`` repository  
