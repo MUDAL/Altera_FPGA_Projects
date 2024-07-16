@@ -45,7 +45,13 @@ The images below illustrate how to achieve this.
 - [First Demo](https://drive.google.com/file/d/1IXlxhgczkGYpq6xn5LyXeJhAHxbl6T_r/view?usp=sharing)      
   
 ## Images    
-[To be added]   
+### 1. Testing the ``Button Debounce`` logic with a 2-Channel Digital Storage Oscilloscope
+![20240630_124618](https://github.com/user-attachments/assets/93ae3ff8-d681-4c52-8472-368ca29ce7ec)    
+![20240630_125431](https://github.com/user-attachments/assets/60c4bf0d-72a1-4d11-982d-2a8d585f6dd7)    
+![20240630_124714](https://github.com/user-attachments/assets/5364ac61-3c94-43d8-aca8-21d42eec8170)    
+### 2. Simulation and Verification of the ``Button Debounce`` logic  
+![Screenshot (593)](https://github.com/user-attachments/assets/00ae062d-da04-4f70-ac43-62da3b28a197)  
+![Screenshot (593)_LI](https://github.com/user-attachments/assets/5754ca1e-477a-47f2-adf1-56af04dc2088)  
 
 ## Helpful resource(s)  
 - FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu  
