@@ -6,7 +6,7 @@ You can experiment with the second script i.e. ``font_rom_gen_2.py`` as it outpu
 
 ### The following steps apply to the two Python scripts    
 1. Open the Python file with the Python IDLE.  
-2. Click on ``Run Module`` to launch the Python Shell and TKinter graphical interface.  
+2. Click on ``Run Module`` to launch the Python Shell and Tkinter graphical interface.  
 ![Screenshot (601)](https://github.com/user-attachments/assets/3d89a318-df0d-489d-8845-aa61fbcdb5cc)  
 3. Draw your pattern on the graphical interface by clicking the boxes and close the window when you're done.  
 ![Screenshot (602)](https://github.com/user-attachments/assets/c11dbb50-1ffa-4d7a-aa8c-caf43f59a29d)  
