@@ -42,7 +42,7 @@ The images below illustrate how to achieve this.
 ![Screenshot (543)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/b380e5d8-d0e3-4c92-b07d-7dc2087eb06e)  
 
 ## Video Demo  
-[To be added]  
+- [First Demo](https://drive.google.com/file/d/1IXlxhgczkGYpq6xn5LyXeJhAHxbl6T_r/view?usp=sharing)      
   
 ## Images    
 [To be added]   
