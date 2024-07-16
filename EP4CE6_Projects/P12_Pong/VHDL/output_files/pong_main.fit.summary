@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Jul 16 10:58:30 2024
+Fitter Status : Successful - Tue Jul 16 15:42:51 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : pong_main
 Top-level Entity Name : pong_main
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 1,266 / 6,272 ( 20 % )
-    Total combinational functions : 1,266 / 6,272 ( 20 % )
-    Dedicated logic registers : 330 / 6,272 ( 5 % )
-Total registers : 330
+Total logic elements : 1,308 / 6,272 ( 21 % )
+    Total combinational functions : 1,306 / 6,272 ( 21 % )
+    Dedicated logic registers : 358 / 6,272 ( 6 % )
+Total registers : 358
 Total pins : 10 / 92 ( 11 % )
 Total virtual pins : 0
 Total memory bits : 52,710 / 276,480 ( 19 % )

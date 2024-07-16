@@ -29,6 +29,7 @@ architecture pong_main_rtl of pong_main is
    constant BALL_DELAY_CLKS: integer := 2 * 89_999; -- Motion delay
    constant PADDLE_DELAY_CLKS: integer := 99_999;
    constant GAMEOVER_DELAY_CLKS: integer := 24_999_999;
+   constant DIFFICULTY_DELAY_CLKS: integer := 24_999_999;
    constant BUZZ_FREQ_HZ: integer := 3_000;
    constant BUZZ_HALF_PERIOD: integer := CLK_FREQ / (2 * BUZZ_FREQ_HZ) - 1;
    constant BUZZ_DELAY: integer := 1_999_999;
@@ -124,6 +125,7 @@ architecture pong_main_rtl of pong_main is
    signal paddle_tick: std_logic;
    signal freq_timer_tick: std_logic;
    signal gameover_tick: std_logic; 
+   signal diff_tick: std_logic;
    ------------------------------------------------------------------
    signal start: std_logic;
    signal trig_sound: std_logic;
@@ -170,6 +172,7 @@ begin
             game_over_bitmap => gameover_bitmap,
             rgb => rgb);
    
+   -- Timer to set the speed of the ball
    ball_timer: entity work.counter(counter_rtl)
    generic map(DELAY_CLKS => BALL_DELAY_CLKS)
    port map(rst_n => rst_n,
@@ -207,18 +210,30 @@ begin
             clk => clk,
             btn_in => btn_down,
             btn_out => btns(1));  
-
+   
+   -- Timer to alter right paddle's reaction time, thereby changing difficulty
+   auto_control_timer: entity work.counter(counter_rtl)
+   generic map(DELAY_CLKS => DIFFICULTY_DELAY_CLKS)
+   port map(rst_n => rst_n,
+            clk => clk,
+            start => start,
+            tick => diff_tick);           
+            
    auto_control_module: entity work.auto_control(auto_control_rtl)
    generic map(XPOS_R_PADDLE => XPOS_R_PADDLE,
                PADDLE_HEIGHT => PADDLE_HEIGHT,
                BALL_LENGTH => BALL_LENGTH)
-   port map(trig_r_paddle => trig_r_paddle,
+   port map(rst_n => rst_n,
+            clk => clk,
+            diff_tick => diff_tick,
+            trig_r_paddle => trig_r_paddle,
             x_ball => x_ball,
             y_ball => y_ball,
             y_r_paddle => y_right,
             up => auto(0),
             down => auto(1));
    
+   -- Timer to set the speed of the paddles
    paddle_timer: entity work.counter(counter_rtl)
    generic map(DELAY_CLKS => PADDLE_DELAY_CLKS)
    port map(rst_n => rst_n,
