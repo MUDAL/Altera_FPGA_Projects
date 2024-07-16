@@ -59,7 +59,7 @@ The images below illustrate how to achieve this.
 [To be added]  
 
 ## Simulation report (ModelSim transcript) for the ``score_logic`` module 
-### 1. Stimulus generator (from testbench)  
+### 1. Stimulus generator (from the **score_logic** testbench)  
 ```
    stimuli: process
       constant DELAY_CLKS: integer := 48;
