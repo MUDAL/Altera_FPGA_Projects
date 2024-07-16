@@ -5,7 +5,6 @@ rst_n => counter:ball_timer.rst_n
 rst_n => ball_logic:ball_module.rst_n
 rst_n => button_logic:up_button_module.rst_n
 rst_n => button_logic:down_button_module.rst_n
-rst_n => counter:auto_control_timer.rst_n
 rst_n => auto_control:auto_control_module.rst_n
 rst_n => counter:paddle_timer.rst_n
 rst_n => paddle_logic:left_paddle_module.rst_n
@@ -25,7 +24,6 @@ clk => counter:ball_timer.clk
 clk => ball_logic:ball_module.clk
 clk => button_logic:up_button_module.clk
 clk => button_logic:down_button_module.clk
-clk => counter:auto_control_timer.clk
 clk => auto_control:auto_control_module.clk
 clk => counter:paddle_timer.clk
 clk => paddle_logic:left_paddle_module.clk
@@ -43,12 +41,12 @@ clk => bitmap_memory:game_over_bitmap_mem.clk
 clk => bitmap_generator:game_over_bitmap_gen.clk
 btn_up => button_logic:up_button_module.btn_in
 btn_down => button_logic:down_button_module.btn_in
-hsync << vga_sync:vga_sync_unit.hsync
-vsync << vga_sync:vga_sync_unit.vsync
-rgb[0] << vga_graphics:graph_generator.rgb[0]
-rgb[1] << vga_graphics:graph_generator.rgb[1]
-rgb[2] << vga_graphics:graph_generator.rgb[2]
-buzz << sound:sound_module.buzz
+hsync <= vga_sync:vga_sync_unit.hsync
+vsync <= vga_sync:vga_sync_unit.vsync
+rgb[0] <= vga_graphics:graph_generator.rgb[0]
+rgb[1] <= vga_graphics:graph_generator.rgb[1]
+rgb[2] <= vga_graphics:graph_generator.rgb[2]
+buzz <= sound:sound_module.buzz
 
 
 |pong_main|vga_sync:vga_sync_unit
@@ -499,61 +497,6 @@ btn_in => btn_i_reg.DATAIN
 btn_out <= btn_o_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pong_main|counter:auto_control_timer
-rst_n => cnt_reg[0].ACLR
-rst_n => cnt_reg[1].ACLR
-rst_n => cnt_reg[2].ACLR
-rst_n => cnt_reg[3].ACLR
-rst_n => cnt_reg[4].ACLR
-rst_n => cnt_reg[5].ACLR
-rst_n => cnt_reg[6].ACLR
-rst_n => cnt_reg[7].ACLR
-rst_n => cnt_reg[8].ACLR
-rst_n => cnt_reg[9].ACLR
-rst_n => cnt_reg[10].ACLR
-rst_n => cnt_reg[11].ACLR
-rst_n => cnt_reg[12].ACLR
-rst_n => cnt_reg[13].ACLR
-rst_n => cnt_reg[14].ACLR
-rst_n => cnt_reg[15].ACLR
-rst_n => cnt_reg[16].ACLR
-rst_n => cnt_reg[17].ACLR
-rst_n => cnt_reg[18].ACLR
-rst_n => cnt_reg[19].ACLR
-rst_n => cnt_reg[20].ACLR
-rst_n => cnt_reg[21].ACLR
-rst_n => cnt_reg[22].ACLR
-rst_n => cnt_reg[23].ACLR
-rst_n => cnt_reg[24].ACLR
-clk => cnt_reg[0].CLK
-clk => cnt_reg[1].CLK
-clk => cnt_reg[2].CLK
-clk => cnt_reg[3].CLK
-clk => cnt_reg[4].CLK
-clk => cnt_reg[5].CLK
-clk => cnt_reg[6].CLK
-clk => cnt_reg[7].CLK
-clk => cnt_reg[8].CLK
-clk => cnt_reg[9].CLK
-clk => cnt_reg[10].CLK
-clk => cnt_reg[11].CLK
-clk => cnt_reg[12].CLK
-clk => cnt_reg[13].CLK
-clk => cnt_reg[14].CLK
-clk => cnt_reg[15].CLK
-clk => cnt_reg[16].CLK
-clk => cnt_reg[17].CLK
-clk => cnt_reg[18].CLK
-clk => cnt_reg[19].CLK
-clk => cnt_reg[20].CLK
-clk => cnt_reg[21].CLK
-clk => cnt_reg[22].CLK
-clk => cnt_reg[23].CLK
-clk => cnt_reg[24].CLK
-start => cnt_next.IN1
-tick <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |pong_main|auto_control:auto_control_module
 rst_n => index_reg[0].ACLR
 rst_n => index_reg[1].ACLR
@@ -561,9 +504,9 @@ rst_n => index_reg[2].ACLR
 clk => index_reg[0].CLK
 clk => index_reg[1].CLK
 clk => index_reg[2].CLK
-diff_tick => index_reg[0].ENA
-diff_tick => index_reg[2].ENA
-diff_tick => index_reg[1].ENA
+l_paddle_hit => index_reg[0].ENA
+l_paddle_hit => index_reg[2].ENA
+l_paddle_hit => index_reg[1].ENA
 trig_r_paddle => up.IN1
 x_ball[0] => LessThan0.IN20
 x_ball[0] => LessThan1.IN20
@@ -833,11 +776,13 @@ paddle[2] <= paddle.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pong_main|collision_logic:collision_module
+rst_n => l_paddle_hit_reg.ACLR
 rst_n => direct_reg[0].ACLR
 rst_n => direct_reg[1].ACLR
 rst_n => direct_reg[2].PRESET
 rst_n => paddle_reg[0].ACLR
 rst_n => paddle_reg[1].ACLR
+clk => l_paddle_hit_reg.CLK
 clk => direct_reg[0].CLK
 clk => direct_reg[1].CLK
 clk => direct_reg[2].CLK
@@ -1070,6 +1015,7 @@ crash[0] <= r_crash.DB_MAX_OUTPUT_PORT_TYPE
 crash[1] <= l_crash.DB_MAX_OUTPUT_PORT_TYPE
 trig_sound <= trig_sound.DB_MAX_OUTPUT_PORT_TYPE
 trig_r_paddle <= Equal8.DB_MAX_OUTPUT_PORT_TYPE
+l_paddle_hit <= l_paddle_pos_edge.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pong_main|game_config:game_config_module

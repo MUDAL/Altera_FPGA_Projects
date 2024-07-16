@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pong_main
-Tue Jul 16 15:42:41 2024
+Tue Jul 16 21:40:37 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -29,33 +29,32 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  21. Parameter Settings for User Entity Instance: ball_logic:ball_module
  22. Parameter Settings for User Entity Instance: button_logic:up_button_module
  23. Parameter Settings for User Entity Instance: button_logic:down_button_module
- 24. Parameter Settings for User Entity Instance: counter:auto_control_timer
- 25. Parameter Settings for User Entity Instance: auto_control:auto_control_module
- 26. Parameter Settings for User Entity Instance: counter:paddle_timer
- 27. Parameter Settings for User Entity Instance: paddle_logic:left_paddle_module
- 28. Parameter Settings for User Entity Instance: paddle_logic:right_paddle_module
- 29. Parameter Settings for User Entity Instance: collision_logic:collision_module
- 30. Parameter Settings for User Entity Instance: counter:gameover_timer
- 31. Parameter Settings for User Entity Instance: game_board:game_board_module
- 32. Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:0:digit_font_module
- 33. Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:1:digit_font_module
- 34. Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:2:digit_font_module
- 35. Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:3:digit_font_module
- 36. Parameter Settings for User Entity Instance: score_logic:scores_calculator
- 37. Parameter Settings for User Entity Instance: counter:sound_freq_timer
- 38. Parameter Settings for User Entity Instance: sound:sound_module
- 39. Parameter Settings for User Entity Instance: bitmap_memory:game_menu_bitmap_mem
- 40. Parameter Settings for User Entity Instance: bitmap_generator:game_menu_bitmap_gen
- 41. Parameter Settings for User Entity Instance: bitmap_memory:game_over_bitmap_mem
- 42. Parameter Settings for User Entity Instance: bitmap_generator:game_over_bitmap_gen
- 43. Parameter Settings for Inferred Entity Instance: bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0
- 44. Parameter Settings for Inferred Entity Instance: bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0
- 45. altsyncram Parameter Settings by Entity Instance
- 46. Port Connectivity Checks: "bitmap_generator:game_menu_bitmap_gen"
- 47. Port Connectivity Checks: "score_logic:scores_calculator"
- 48. Post-Synthesis Netlist Statistics for Top Partition
- 49. Elapsed Time Per Partition
- 50. Analysis & Synthesis Messages
+ 24. Parameter Settings for User Entity Instance: auto_control:auto_control_module
+ 25. Parameter Settings for User Entity Instance: counter:paddle_timer
+ 26. Parameter Settings for User Entity Instance: paddle_logic:left_paddle_module
+ 27. Parameter Settings for User Entity Instance: paddle_logic:right_paddle_module
+ 28. Parameter Settings for User Entity Instance: collision_logic:collision_module
+ 29. Parameter Settings for User Entity Instance: counter:gameover_timer
+ 30. Parameter Settings for User Entity Instance: game_board:game_board_module
+ 31. Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:0:digit_font_module
+ 32. Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:1:digit_font_module
+ 33. Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:2:digit_font_module
+ 34. Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:3:digit_font_module
+ 35. Parameter Settings for User Entity Instance: score_logic:scores_calculator
+ 36. Parameter Settings for User Entity Instance: counter:sound_freq_timer
+ 37. Parameter Settings for User Entity Instance: sound:sound_module
+ 38. Parameter Settings for User Entity Instance: bitmap_memory:game_menu_bitmap_mem
+ 39. Parameter Settings for User Entity Instance: bitmap_generator:game_menu_bitmap_gen
+ 40. Parameter Settings for User Entity Instance: bitmap_memory:game_over_bitmap_mem
+ 41. Parameter Settings for User Entity Instance: bitmap_generator:game_over_bitmap_gen
+ 42. Parameter Settings for Inferred Entity Instance: bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0
+ 43. Parameter Settings for Inferred Entity Instance: bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0
+ 44. altsyncram Parameter Settings by Entity Instance
+ 45. Port Connectivity Checks: "bitmap_generator:game_menu_bitmap_gen"
+ 46. Port Connectivity Checks: "score_logic:scores_calculator"
+ 47. Post-Synthesis Netlist Statistics for Top Partition
+ 48. Elapsed Time Per Partition
+ 49. Analysis & Synthesis Messages
 
 
 
@@ -82,15 +81,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jul 16 15:42:41 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul 16 21:40:36 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; pong_main                                   ;
 ; Top-level Entity Name              ; pong_main                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,312                                       ;
-;     Total combinational functions  ; 1,306                                       ;
-;     Dedicated logic registers      ; 358                                         ;
-; Total registers                    ; 358                                         ;
+; Total logic elements               ; 1,288                                       ;
+;     Total combinational functions  ; 1,282                                       ;
+;     Dedicated logic registers      ; 334                                         ;
+; Total registers                    ; 334                                         ;
 ; Total pins                         ; 10                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 52,710                                      ;
@@ -249,20 +248,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 1,312     ;
+; Estimated Total logic elements              ; 1,288     ;
 ;                                             ;           ;
-; Total combinational functions               ; 1306      ;
+; Total combinational functions               ; 1282      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 531       ;
-;     -- 3 input functions                    ; 343       ;
-;     -- <=2 input functions                  ; 432       ;
+;     -- 4 input functions                    ; 527       ;
+;     -- 3 input functions                    ; 354       ;
+;     -- <=2 input functions                  ; 401       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
 ;     -- normal mode                          ; 814       ;
-;     -- arithmetic mode                      ; 492       ;
+;     -- arithmetic mode                      ; 468       ;
 ;                                             ;           ;
-; Total registers                             ; 358       ;
-;     -- Dedicated logic registers            ; 358       ;
+; Total registers                             ; 334       ;
+;     -- Dedicated logic registers            ; 334       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 10        ;
@@ -271,9 +270,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 365       ;
-; Total fan-out                               ; 5493      ;
-; Average fan-out                             ; 3.25      ;
+; Maximum fan-out                             ; 341       ;
+; Total fan-out                               ; 5352      ;
+; Average fan-out                             ; 3.26      ;
 +---------------------------------------------+-----------+
 
 
@@ -282,11 +281,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Entity Name      ; Library Name ;
 +-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
-; |pong_main                                            ; 1306 (0)            ; 358 (0)                   ; 52710       ; 0            ; 0       ; 0         ; 10   ; 0            ; |pong_main                                                                                                               ; pong_main        ; work         ;
-;    |auto_control:auto_control_module|                 ; 56 (56)             ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|auto_control:auto_control_module                                                                              ; auto_control     ; work         ;
-;    |ball_logic:ball_module|                           ; 95 (95)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|ball_logic:ball_module                                                                                        ; ball_logic       ; work         ;
+; |pong_main                                            ; 1282 (0)            ; 334 (0)                   ; 52710       ; 0            ; 0       ; 0         ; 10   ; 0            ; |pong_main                                                                                                               ; pong_main        ; work         ;
+;    |auto_control:auto_control_module|                 ; 59 (59)             ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|auto_control:auto_control_module                                                                              ; auto_control     ; work         ;
+;    |ball_logic:ball_module|                           ; 93 (93)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|ball_logic:ball_module                                                                                        ; ball_logic       ; work         ;
 ;    |bitmap_generator:game_menu_bitmap_gen|            ; 41 (41)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_generator:game_menu_bitmap_gen                                                                         ; bitmap_generator ; work         ;
-;    |bitmap_generator:game_over_bitmap_gen|            ; 60 (60)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_generator:game_over_bitmap_gen                                                                         ; bitmap_generator ; work         ;
+;    |bitmap_generator:game_over_bitmap_gen|            ; 59 (59)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_generator:game_over_bitmap_gen                                                                         ; bitmap_generator ; work         ;
 ;    |bitmap_memory:game_menu_bitmap_mem|               ; 0 (0)               ; 1 (0)                     ; 14910       ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_memory:game_menu_bitmap_mem                                                                            ; bitmap_memory    ; work         ;
 ;       |altsyncram:rom_rtl_0|                          ; 0 (0)               ; 1 (0)                     ; 14910       ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0                                                       ; altsyncram       ; work         ;
 ;          |altsyncram_7h51:auto_generated|             ; 0 (0)               ; 1 (1)                     ; 14910       ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated                        ; altsyncram_7h51  ; work         ;
@@ -296,23 +295,22 @@ https://fpgasoftware.intel.com/eula.
 ;             |decode_h8a:rden_decode|                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|decode_h8a:rden_decode ; decode_h8a       ; work         ;
 ;    |button_logic:down_button_module|                  ; 34 (34)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|button_logic:down_button_module                                                                               ; button_logic     ; work         ;
 ;    |button_logic:up_button_module|                    ; 34 (34)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|button_logic:up_button_module                                                                                 ; button_logic     ; work         ;
-;    |collision_logic:collision_module|                 ; 231 (231)           ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|collision_logic:collision_module                                                                              ; collision_logic  ; work         ;
-;    |counter:auto_control_timer|                       ; 38 (38)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|counter:auto_control_timer                                                                                    ; counter          ; work         ;
-;    |counter:ball_timer|                               ; 27 (27)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|counter:ball_timer                                                                                            ; counter          ; work         ;
+;    |collision_logic:collision_module|                 ; 232 (232)           ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|collision_logic:collision_module                                                                              ; collision_logic  ; work         ;
+;    |counter:ball_timer|                               ; 29 (29)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|counter:ball_timer                                                                                            ; counter          ; work         ;
 ;    |counter:gameover_timer|                           ; 37 (37)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|counter:gameover_timer                                                                                        ; counter          ; work         ;
 ;    |counter:paddle_timer|                             ; 27 (27)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|counter:paddle_timer                                                                                          ; counter          ; work         ;
 ;    |counter:sound_freq_timer|                         ; 22 (22)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|counter:sound_freq_timer                                                                                      ; counter          ; work         ;
 ;    |font_logic:\digits_in_scores:0:digit_font_module| ; 84 (84)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|font_logic:\digits_in_scores:0:digit_font_module                                                              ; font_logic       ; work         ;
-;    |font_logic:\digits_in_scores:1:digit_font_module| ; 57 (57)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|font_logic:\digits_in_scores:1:digit_font_module                                                              ; font_logic       ; work         ;
-;    |font_logic:\digits_in_scores:2:digit_font_module| ; 85 (85)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|font_logic:\digits_in_scores:2:digit_font_module                                                              ; font_logic       ; work         ;
-;    |font_logic:\digits_in_scores:3:digit_font_module| ; 83 (83)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|font_logic:\digits_in_scores:3:digit_font_module                                                              ; font_logic       ; work         ;
+;    |font_logic:\digits_in_scores:1:digit_font_module| ; 63 (63)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|font_logic:\digits_in_scores:1:digit_font_module                                                              ; font_logic       ; work         ;
+;    |font_logic:\digits_in_scores:2:digit_font_module| ; 89 (89)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|font_logic:\digits_in_scores:2:digit_font_module                                                              ; font_logic       ; work         ;
+;    |font_logic:\digits_in_scores:3:digit_font_module| ; 87 (87)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|font_logic:\digits_in_scores:3:digit_font_module                                                              ; font_logic       ; work         ;
 ;    |game_board:game_board_module|                     ; 12 (12)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|game_board:game_board_module                                                                                  ; game_board       ; work         ;
 ;    |game_config:game_config_module|                   ; 6 (6)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|game_config:game_config_module                                                                                ; game_config      ; work         ;
 ;    |paddle_logic:left_paddle_module|                  ; 41 (41)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|paddle_logic:left_paddle_module                                                                               ; paddle_logic     ; work         ;
-;    |paddle_logic:right_paddle_module|                 ; 49 (49)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|paddle_logic:right_paddle_module                                                                              ; paddle_logic     ; work         ;
-;    |score_logic:scores_calculator|                    ; 91 (91)             ; 69 (69)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|score_logic:scores_calculator                                                                                 ; score_logic      ; work         ;
-;    |sound:sound_module|                               ; 30 (30)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|sound:sound_module                                                                                            ; sound            ; work         ;
-;    |vga_graphics:graph_generator|                     ; 18 (18)             ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|vga_graphics:graph_generator                                                                                  ; vga_graphics     ; work         ;
+;    |paddle_logic:right_paddle_module|                 ; 48 (48)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|paddle_logic:right_paddle_module                                                                              ; paddle_logic     ; work         ;
+;    |score_logic:scores_calculator|                    ; 90 (90)             ; 69 (69)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|score_logic:scores_calculator                                                                                 ; score_logic      ; work         ;
+;    |sound:sound_module|                               ; 31 (31)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|sound:sound_module                                                                                            ; sound            ; work         ;
+;    |vga_graphics:graph_generator|                     ; 16 (16)             ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|vga_graphics:graph_generator                                                                                  ; vga_graphics     ; work         ;
 ;    |vga_sync:vga_sync_unit|                           ; 44 (44)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|vga_sync:vga_sync_unit                                                                                        ; vga_sync         ; work         ;
 +-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -382,10 +380,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 358   ;
-; Number of registers using Synchronous Clear  ; 162   ;
+; Total registers                              ; 334   ;
+; Number of registers using Synchronous Clear  ; 137   ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 354   ;
+; Number of registers using Asynchronous Clear ; 330   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 155   ;
 ; Number of registers using Preset             ; 0     ;
@@ -409,10 +407,10 @@ Encoding Type:  One-Hot
 ; paddle_logic:right_paddle_module|y_reg[1]      ; 10      ;
 ; paddle_logic:right_paddle_module|y_reg[2]      ; 9       ;
 ; paddle_logic:right_paddle_module|y_reg[0]      ; 14      ;
-; ball_logic:ball_module|x_reg[8]                ; 7       ;
+; ball_logic:ball_module|x_reg[8]                ; 8       ;
 ; ball_logic:ball_module|x_reg[5]                ; 10      ;
-; ball_logic:ball_module|x_reg[3]                ; 11      ;
-; ball_logic:ball_module|x_reg[4]                ; 10      ;
+; ball_logic:ball_module|x_reg[3]                ; 10      ;
+; ball_logic:ball_module|x_reg[4]                ; 9       ;
 ; ball_logic:ball_module|x_reg[2]                ; 9       ;
 ; ball_logic:ball_module|y_reg[7]                ; 18      ;
 ; ball_logic:ball_module|y_reg[6]                ; 18      ;
@@ -422,9 +420,9 @@ Encoding Type:  One-Hot
 ; button_logic:down_button_module|btn_o_reg      ; 4       ;
 ; button_logic:up_button_module|btn_o_reg        ; 4       ;
 ; collision_logic:collision_module|direct_reg[2] ; 6       ;
-; score_logic:scores_calculator|cnt_reg[0]       ; 5       ;
-; score_logic:scores_calculator|cnt_reg[2]       ; 3       ;
-; score_logic:scores_calculator|cnt_reg[1]       ; 4       ;
+; score_logic:scores_calculator|cnt_reg[0]       ; 4       ;
+; score_logic:scores_calculator|cnt_reg[2]       ; 2       ;
+; score_logic:scores_calculator|cnt_reg[1]       ; 3       ;
 ; button_logic:down_button_module|btn_i_reg      ; 5       ;
 ; button_logic:up_button_module|btn_i_reg        ; 5       ;
 ; Total number of inverted registers = 30        ;         ;
@@ -446,19 +444,19 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |pong_main|sound:sound_module|delay_reg[3]             ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |pong_main|sound:sound_module|delay_reg[5]             ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |pong_main|score_logic:scores_calculator|score1_reg[0] ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |pong_main|score_logic:scores_calculator|score2_reg[0] ;
-; 10:1               ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |pong_main|ball_logic:ball_module|y_reg[4]             ;
-; 10:1               ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |pong_main|ball_logic:ball_module|x_reg[9]             ;
-; 10:1               ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |pong_main|ball_logic:ball_module|y_reg[7]             ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |pong_main|ball_logic:ball_module|y_reg[0]             ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |pong_main|ball_logic:ball_module|x_reg[0]             ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |pong_main|ball_logic:ball_module|y_reg[2]             ;
 ; 10:1               ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |pong_main|ball_logic:ball_module|x_reg[2]             ;
 ; 3:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |pong_main|button_logic:down_button_module|cnt_next    ;
 ; 3:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |pong_main|button_logic:up_button_module|cnt_next      ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |pong_main|game_config:game_config_module|Selector2    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |pong_main|game_config:game_config_module|Selector0    ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |pong_main|score_logic:scores_calculator|Selector2     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |pong_main|button_logic:down_button_module|Selector0   ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |pong_main|button_logic:up_button_module|Selector0     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |pong_main|button_logic:down_button_module|Selector2   ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |pong_main|button_logic:up_button_module|Selector2     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
@@ -500,7 +498,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+---------------------------------------+
 ; Parameter Name ; Value  ; Type                                  ;
 +----------------+--------+---------------------------------------+
-; delay_clks     ; 179998 ; Signed Integer                        ;
+; delay_clks     ; 149999 ; Signed Integer                        ;
 +----------------+--------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -536,16 +534,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; clk_freq       ; 50000000 ; Signed Integer                                   ;
 ; delay_ms       ; 10       ; Signed Integer                                   ;
 +----------------+----------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: counter:auto_control_timer ;
-+----------------+----------+---------------------------------------------+
-; Parameter Name ; Value    ; Type                                        ;
-+----------------+----------+---------------------------------------------+
-; delay_clks     ; 24999999 ; Signed Integer                              ;
-+----------------+----------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -967,27 +955,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 10                          ;
-; cycloneiii_ff         ; 358                         ;
-;     CLR               ; 75                          ;
-;     CLR SCLR          ; 124                         ;
+; cycloneiii_ff         ; 334                         ;
+;     CLR               ; 76                          ;
+;     CLR SCLR          ; 99                          ;
 ;     ENA CLR           ; 117                         ;
 ;     ENA CLR SCLR      ; 38                          ;
 ;     plain             ; 4                           ;
-; cycloneiii_lcell_comb ; 1306                        ;
-;     arith             ; 492                         ;
+; cycloneiii_lcell_comb ; 1282                        ;
+;     arith             ; 468                         ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 288                         ;
+;         2 data inputs ; 264                         ;
 ;         3 data inputs ; 202                         ;
 ;     normal            ; 814                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 30                          ;
-;         2 data inputs ; 111                         ;
-;         3 data inputs ; 141                         ;
-;         4 data inputs ; 531                         ;
+;         1 data inputs ; 29                          ;
+;         2 data inputs ; 105                         ;
+;         3 data inputs ; 152                         ;
+;         4 data inputs ; 527                         ;
 ; cycloneiii_ram_block  ; 7                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.50                       ;
-; Average LUT depth     ; 6.47                        ;
+; Max LUT depth         ; 13.00                       ;
+; Average LUT depth     ; 6.69                        ;
 +-----------------------+-----------------------------+
 
 
@@ -996,7 +984,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -1006,7 +994,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Jul 16 15:42:22 2024
+    Info: Processing started: Tue Jul 16 21:40:17 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pong_main -c pong_main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1029,7 +1017,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file src/lib
     Info (12022): Found design unit 1: vga_graphics-vga_graphics_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/vga_graphics.vhd Line: 25
     Info (12023): Found entity 1: vga_graphics File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/vga_graphics.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/collision_logic.vhd
-    Info (12022): Found design unit 1: collision_logic-collision_logic_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/collision_logic.vhd Line: 33
+    Info (12022): Found design unit 1: collision_logic-collision_logic_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/collision_logic.vhd Line: 34
     Info (12023): Found entity 1: collision_logic File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/collision_logic.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/score_logic.vhd
     Info (12022): Found design unit 1: score_logic-score_logic_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/score_logic.vhd Line: 22
@@ -1065,32 +1053,32 @@ Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mappin
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
 Info (12127): Elaborating entity "pong_main" for the top level hierarchy
-Info (12129): Elaborating entity "vga_sync" using architecture "A:vga_sync_rtl" for hierarchy "vga_sync:vga_sync_unit" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 147
-Info (12129): Elaborating entity "vga_graphics" using architecture "A:vga_graphics_rtl" for hierarchy "vga_graphics:graph_generator" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 158
-Info (12129): Elaborating entity "counter" using architecture "A:counter_rtl" for hierarchy "counter:ball_timer" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 176
-Info (12129): Elaborating entity "ball_logic" using architecture "A:ball_logic_rtl" for hierarchy "ball_logic:ball_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 183
-Info (12129): Elaborating entity "button_logic" using architecture "A:button_logic_rtl" for hierarchy "button_logic:up_button_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 198
-Info (12129): Elaborating entity "counter" using architecture "A:counter_rtl" for hierarchy "counter:auto_control_timer" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 215
-Info (12129): Elaborating entity "auto_control" using architecture "A:auto_control_rtl" for hierarchy "auto_control:auto_control_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 222
-Info (12129): Elaborating entity "counter" using architecture "A:counter_rtl" for hierarchy "counter:paddle_timer" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 237
-Info (12129): Elaborating entity "paddle_logic" using architecture "A:paddle_logic_rtl" for hierarchy "paddle_logic:left_paddle_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 244
-Info (12129): Elaborating entity "paddle_logic" using architecture "A:paddle_logic_rtl" for hierarchy "paddle_logic:right_paddle_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 260
-Info (12129): Elaborating entity "collision_logic" using architecture "A:collision_logic_rtl" for hierarchy "collision_logic:collision_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 276
-Info (12129): Elaborating entity "game_config" using architecture "A:game_config_rtl" for hierarchy "game_config:game_config_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 299
-Info (12129): Elaborating entity "game_board" using architecture "A:game_board_rtl" for hierarchy "game_board:game_board_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 316
-Info (12129): Elaborating entity "font_logic" using architecture "A:font_logic_rtl" for hierarchy "font_logic:\digits_in_scores:0:digit_font_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 343
-Info (12129): Elaborating entity "font_logic" using architecture "A:font_logic_rtl" for hierarchy "font_logic:\digits_in_scores:1:digit_font_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 343
-Info (12129): Elaborating entity "font_logic" using architecture "A:font_logic_rtl" for hierarchy "font_logic:\digits_in_scores:2:digit_font_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 343
-Info (12129): Elaborating entity "font_logic" using architecture "A:font_logic_rtl" for hierarchy "font_logic:\digits_in_scores:3:digit_font_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 343
-Info (12129): Elaborating entity "score_logic" using architecture "A:score_logic_rtl" for hierarchy "score_logic:scores_calculator" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 354
-Info (12129): Elaborating entity "counter" using architecture "A:counter_rtl" for hierarchy "counter:sound_freq_timer" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 365
-Info (12129): Elaborating entity "sound" using architecture "A:sound_rtl" for hierarchy "sound:sound_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 372
-Info (12129): Elaborating entity "bitmap_memory" using architecture "A:bitmap_memory_rtl" for hierarchy "bitmap_memory:game_menu_bitmap_mem" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 381
+Info (12129): Elaborating entity "vga_sync" using architecture "A:vga_sync_rtl" for hierarchy "vga_sync:vga_sync_unit" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 151
+Info (12129): Elaborating entity "vga_graphics" using architecture "A:vga_graphics_rtl" for hierarchy "vga_graphics:graph_generator" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 162
+Info (12129): Elaborating entity "counter" using architecture "A:counter_rtl" for hierarchy "counter:ball_timer" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 180
+Info (12129): Elaborating entity "ball_logic" using architecture "A:ball_logic_rtl" for hierarchy "ball_logic:ball_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 187
+Info (12129): Elaborating entity "button_logic" using architecture "A:button_logic_rtl" for hierarchy "button_logic:up_button_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 202
+Info (12129): Elaborating entity "auto_control" using architecture "A:auto_control_rtl" for hierarchy "auto_control:auto_control_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 218
+Info (12129): Elaborating entity "counter" using architecture "A:counter_rtl" for hierarchy "counter:paddle_timer" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 233
+Info (12129): Elaborating entity "paddle_logic" using architecture "A:paddle_logic_rtl" for hierarchy "paddle_logic:left_paddle_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 240
+Info (12129): Elaborating entity "paddle_logic" using architecture "A:paddle_logic_rtl" for hierarchy "paddle_logic:right_paddle_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 256
+Info (12129): Elaborating entity "collision_logic" using architecture "A:collision_logic_rtl" for hierarchy "collision_logic:collision_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 272
+Info (12129): Elaborating entity "game_config" using architecture "A:game_config_rtl" for hierarchy "game_config:game_config_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 296
+Info (12129): Elaborating entity "counter" using architecture "A:counter_rtl" for hierarchy "counter:gameover_timer" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 306
+Info (12129): Elaborating entity "game_board" using architecture "A:game_board_rtl" for hierarchy "game_board:game_board_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 313
+Info (12129): Elaborating entity "font_logic" using architecture "A:font_logic_rtl" for hierarchy "font_logic:\digits_in_scores:0:digit_font_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 340
+Info (12129): Elaborating entity "font_logic" using architecture "A:font_logic_rtl" for hierarchy "font_logic:\digits_in_scores:1:digit_font_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 340
+Info (12129): Elaborating entity "font_logic" using architecture "A:font_logic_rtl" for hierarchy "font_logic:\digits_in_scores:2:digit_font_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 340
+Info (12129): Elaborating entity "font_logic" using architecture "A:font_logic_rtl" for hierarchy "font_logic:\digits_in_scores:3:digit_font_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 340
+Info (12129): Elaborating entity "score_logic" using architecture "A:score_logic_rtl" for hierarchy "score_logic:scores_calculator" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 351
+Info (12129): Elaborating entity "counter" using architecture "A:counter_rtl" for hierarchy "counter:sound_freq_timer" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 362
+Info (12129): Elaborating entity "sound" using architecture "A:sound_rtl" for hierarchy "sound:sound_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 369
+Info (12129): Elaborating entity "bitmap_memory" using architecture "A:bitmap_memory_rtl" for hierarchy "bitmap_memory:game_menu_bitmap_mem" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 378
 Warning (10541): VHDL Signal Declaration warning at bitmap_memory.vhd(21): used implicit default value for signal "rom" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/bitmap_memory.vhd Line: 21
-Info (12129): Elaborating entity "bitmap_generator" using architecture "A:bitmap_generator_rtl" for hierarchy "bitmap_generator:game_menu_bitmap_gen" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 388
-Info (12129): Elaborating entity "bitmap_memory" using architecture "A:bitmap_memory_rtl" for hierarchy "bitmap_memory:game_over_bitmap_mem" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 407
+Info (12129): Elaborating entity "bitmap_generator" using architecture "A:bitmap_generator_rtl" for hierarchy "bitmap_generator:game_menu_bitmap_gen" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 385
+Info (12129): Elaborating entity "bitmap_memory" using architecture "A:bitmap_memory_rtl" for hierarchy "bitmap_memory:game_over_bitmap_mem" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 404
 Warning (10541): VHDL Signal Declaration warning at bitmap_memory.vhd(21): used implicit default value for signal "rom" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/bitmap_memory.vhd Line: 21
-Info (12129): Elaborating entity "bitmap_generator" using architecture "A:bitmap_generator_rtl" for hierarchy "bitmap_generator:game_over_bitmap_gen" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 414
+Info (12129): Elaborating entity "bitmap_generator" using architecture "A:bitmap_generator_rtl" for hierarchy "bitmap_generator:game_over_bitmap_gen" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 411
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "bitmap_memory:game_menu_bitmap_mem|rom_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
@@ -1158,15 +1146,15 @@ Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal 
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1342 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1319 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 1325 logic cells
+    Info (21061): Implemented 1302 logic cells
     Info (21064): Implemented 7 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4796 megabytes
-    Info: Processing ended: Tue Jul 16 15:42:41 2024
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:35
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Tue Jul 16 21:40:37 2024
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:29
 
 

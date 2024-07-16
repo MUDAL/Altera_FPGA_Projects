@@ -26,10 +26,9 @@ end pong_main;
 architecture pong_main_rtl of pong_main is
    constant CLK_FREQ: integer := 50_000_000; -- 50 MHz
    constant BTN_DEB_DELAY_MS: integer := 10; -- Button debounce delay
-   constant BALL_DELAY_CLKS: integer := 2 * 89_999; -- Motion delay
+   constant BALL_DELAY_CLKS: integer := 149_999; -- Motion delay
    constant PADDLE_DELAY_CLKS: integer := 99_999;
    constant GAMEOVER_DELAY_CLKS: integer := 24_999_999;
-   constant DIFFICULTY_DELAY_CLKS: integer := 24_999_999;
    constant BUZZ_FREQ_HZ: integer := 3_000;
    constant BUZZ_HALF_PERIOD: integer := CLK_FREQ / (2 * BUZZ_FREQ_HZ) - 1;
    constant BUZZ_DELAY: integer := 1_999_999;
@@ -93,6 +92,11 @@ architecture pong_main_rtl of pong_main is
    constant MENU_ADDR_WIDTH: integer := log_base2(MENU_MEM_DEPTH); 
    constant GAMEOVER_ADDR_WIDTH: integer := log_base2(GAMEOVER_MEM_DEPTH);
    ------------------------------------------------------------------
+   constant MENU_BMP_WIDTH: integer := 210;
+   constant MENU_BMP_HEIGHT: integer := 71;
+   constant GAMEOVER_BMP_WIDTH: integer := 210;
+   constant GAMEOVER_BMP_HEIGHT: integer := 180;   
+   ------------------------------------------------------------------
    signal pixel_x: std_logic_vector(9 downto 0); 
    signal pixel_y: std_logic_vector(9 downto 0);
    signal valid_pixel: std_logic; 
@@ -125,11 +129,11 @@ architecture pong_main_rtl of pong_main is
    signal paddle_tick: std_logic;
    signal freq_timer_tick: std_logic;
    signal gameover_tick: std_logic; 
-   signal diff_tick: std_logic;
    ------------------------------------------------------------------
    signal start: std_logic;
    signal trig_sound: std_logic;
    signal trig_r_paddle: std_logic;
+   signal l_paddle_hit: std_logic; -- Signifies when left paddle is hit
    signal freq_timer_start: std_logic; 
    signal winner: std_logic_vector(1 downto 0); -- Bit 1:0 -> Player 1:2
    signal gameover: std_logic;
@@ -211,21 +215,13 @@ begin
             btn_in => btn_down,
             btn_out => btns(1));  
    
-   -- Timer to alter right paddle's reaction time, thereby changing difficulty
-   auto_control_timer: entity work.counter(counter_rtl)
-   generic map(DELAY_CLKS => DIFFICULTY_DELAY_CLKS)
-   port map(rst_n => rst_n,
-            clk => clk,
-            start => start,
-            tick => diff_tick);           
-            
    auto_control_module: entity work.auto_control(auto_control_rtl)
    generic map(XPOS_R_PADDLE => XPOS_R_PADDLE,
                PADDLE_HEIGHT => PADDLE_HEIGHT,
                BALL_LENGTH => BALL_LENGTH)
    port map(rst_n => rst_n,
             clk => clk,
-            diff_tick => diff_tick,
+            l_paddle_hit => l_paddle_hit,
             trig_r_paddle => trig_r_paddle,
             x_ball => x_ball,
             y_ball => y_ball,
@@ -294,7 +290,8 @@ begin
             direct => direct,
             crash => crash,
             trig_sound => trig_sound,
-            trig_r_paddle => trig_r_paddle);
+            trig_r_paddle => trig_r_paddle,
+            l_paddle_hit => l_paddle_hit);
    
    game_config_module: entity work.game_config(game_config_rtl)
    port map(rst_n => rst_n,
@@ -390,8 +387,8 @@ begin
                XPOS_BMP_C => 217,
                XPOS_BMP_R => 329,
                YPOS_BMP => 100,
-               XSTR_BMP => 210,
-               YSTR_BMP => 71,
+               XSTR_BMP => MENU_BMP_WIDTH,
+               YSTR_BMP => MENU_BMP_HEIGHT,
                MEM_DEPTH => MENU_MEM_DEPTH)
    port map(rst_n => rst_n,
             clk => clk,
@@ -416,8 +413,8 @@ begin
                XPOS_BMP_C => 217,
                XPOS_BMP_R => 369,
                YPOS_BMP => 100,
-               XSTR_BMP => 210,
-               YSTR_BMP => 180,
+               XSTR_BMP => GAMEOVER_BMP_WIDTH,
+               YSTR_BMP => GAMEOVER_BMP_HEIGHT,
                MEM_DEPTH => GAMEOVER_MEM_DEPTH)
    port map(rst_n => rst_n,
             clk => clk,

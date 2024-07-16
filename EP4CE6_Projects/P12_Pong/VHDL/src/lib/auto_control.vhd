@@ -12,7 +12,7 @@ entity auto_control is
            BALL_LENGTH: integer := 5);
    port(rst_n: in std_logic;
         clk: in std_logic;
-        diff_tick: in std_logic;
+        l_paddle_hit: in std_logic; -- Adjust right paddle's reaction time
         trig_r_paddle: in std_logic;
         x_ball: in std_logic_vector(9 downto 0);
         y_ball: in std_logic_vector(9 downto 0);
@@ -24,8 +24,9 @@ end auto_control;
 architecture auto_control_rtl of auto_control is
    -- Maximum distances of the ball from the right paddle
    -- The smaller the distance, the slower the paddle's reaction time.
-   -- The 'auto_control' module periodically changes the maximum distance ...
-   -- in order to prevent the right paddle from being overpowered.
+   -- The 'auto_control' module changes the maximum distance every time ...
+   -- the left paddle is hit in order to prevent the right paddle from ....
+   -- being overpowered.
    constant MAX_DISTANCES: integer := 8; 
    type max_dist_rom_t is array(0 to MAX_DISTANCES - 1) of integer;
    constant dist_rom: max_dist_rom_t := (0 => 180,
@@ -34,7 +35,7 @@ architecture auto_control_rtl of auto_control is
                                          3 => 200,
                                          4 => 150,
                                          5 => 95,
-                                         6 => 2,
+                                         6 => 45,
                                          7 => 50);
    signal x_b: unsigned(9 downto 0);
    signal y_b: unsigned(9 downto 0);
@@ -49,7 +50,7 @@ begin
    
    idx <= to_integer(index_reg);
    
-   index_next <= index_reg + 1 when diff_tick = '1' else index_reg;
+   index_next <= index_reg + 1 when l_paddle_hit = '1' else index_reg;
    
    up <= '0' when trig_r_paddle = '1'
               and x_b < XPOS_R_PADDLE - BALL_LENGTH

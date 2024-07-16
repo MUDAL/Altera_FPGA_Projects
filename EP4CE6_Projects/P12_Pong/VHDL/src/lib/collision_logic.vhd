@@ -27,7 +27,8 @@ entity collision_logic is
         direct: out std_logic_vector(2 downto 0); -- Ball direction
         crash: out std_logic_vector(1 downto 0); -- Bit 1: Left, Bit 0:Right
         trig_sound: out std_logic; -- Trigger sound module
-        trig_r_paddle: out std_logic); -- Trigger right paddle
+        trig_r_paddle: out std_logic; -- Trigger right paddle
+        l_paddle_hit: out std_logic); -- Set when left paddle is hit
 end collision_logic;
 
 architecture collision_logic_rtl of collision_logic is
@@ -87,6 +88,10 @@ architecture collision_logic_rtl of collision_logic is
    -- Signals to indicate border crashes
    signal l_crash: std_logic;
    signal r_crash: std_logic;
+   ------------------------------------------------------------------
+   signal l_paddle_hit_reg: std_logic;
+   signal l_paddle_hit_next: std_logic;
+   signal l_paddle_pos_edge: std_logic;
 begin
    y_l_min <= unsigned(y_left);
    y_r_min <= unsigned(y_right);
@@ -201,6 +206,13 @@ begin
       end case;
    end process;
    
+   l_paddle_hit_next <= '1' when paddle_reg = PADDLE_L else '0';
+   
+   -- Rising edge detector
+   l_paddle_pos_edge <= '1' when l_paddle_hit_reg = '0' 
+                             and l_paddle_hit_next = '1' 
+                else    '0';
+   
    -- Outputs
    direct <= direct_reg;
    crash <= l_crash & r_crash;
@@ -217,14 +229,18 @@ begin
    
    trig_r_paddle <= '1' when paddle_reg /= PADDLE_R else '0';
    
+   l_paddle_hit <= l_paddle_pos_edge;
+   
    registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
          paddle_reg <= PADDLE_N;
          direct_reg <= DIR_L;
+         l_paddle_hit_reg <= '0';
       elsif rising_edge(clk) then
          paddle_reg <= paddle_next;
          direct_reg <= direct_next;
+         l_paddle_hit_reg <= l_paddle_hit_next;
       end if;
    end process;
 end collision_logic_rtl;
