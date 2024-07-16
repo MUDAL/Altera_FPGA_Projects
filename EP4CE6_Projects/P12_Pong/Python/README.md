@@ -1,7 +1,8 @@
 # Python Scripts to generate Font ROMs for the VGA display    
 
 ## How to use  
-In this example, the character **7** is drawn and the VHDL Font ROM code for it is generated.  
+In this example, the character **7** is drawn and the VHDL "Font ROM" code for it is generated.  
+You can experiment with the second script i.e. ``font_rom_gen_2.py`` as it outputs a more detailed VHDL code.  
 
 ### The following steps apply to the two Python scripts    
 1. Open the Python file with the Python IDLE.  
