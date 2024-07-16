@@ -1,4 +1,4 @@
-#Font ROM generator
+# Font ROM generator
 
 '''
     Generates a VHDL type declaration for a font ROM
