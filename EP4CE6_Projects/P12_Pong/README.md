@@ -55,9 +55,11 @@ The images below illustrate how to achieve this.
 ### 2. Simulation and Verification of the ``Button Debounce`` logic  
 ![Screenshot (593)](https://github.com/user-attachments/assets/00ae062d-da04-4f70-ac43-62da3b28a197)  
 ![Screenshot (593)_LI](https://github.com/user-attachments/assets/5754ca1e-477a-47f2-adf1-56af04dc2088)  
+### 3. Debugging 3 kHz sound generation for in-game collisions  
+[To be added]  
 
 ## Simulation report (ModelSim transcript) for the ``score_logic`` module 
-### Stimulus generator (from testbench)  
+### 1. Stimulus generator (from testbench)  
 ```
    stimuli: process
       constant DELAY_CLKS: integer := 48;
@@ -86,7 +88,7 @@ The images below illustrate how to achieve this.
    end process;
 ```
 
-### Transcript
+### 2. Transcript
 ```
 # ** Note: [INFO]: Right crash
 #    Time: 40 ns  Iteration: 0  Instance: /score_logic_tb
