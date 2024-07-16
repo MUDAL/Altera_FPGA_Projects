@@ -1,5 +1,5 @@
 Analysis & Synthesis report for spi_lcd_main
-Sun Apr 28 18:15:09 2024
+Tue Jul 16 10:40:57 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 28 18:15:09 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul 16 10:40:57 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; spi_lcd_main                                ;
 ; Top-level Entity Name              ; spi_lcd_main                                ;
@@ -162,19 +162,19 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                           ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
-; src/spi_lcd_main.vhd             ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/spi_lcd_main.vhd     ;         ;
-; src/lib/spi_receiver.vhd         ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/spi_receiver.vhd ;         ;
-; src/lib/lcd_driver.vhd           ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/lcd_driver.vhd   ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; src/spi_lcd_main.vhd             ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P08_SPI_LCD/RTL/src/spi_lcd_main.vhd     ;         ;
+; src/lib/spi_receiver.vhd         ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P08_SPI_LCD/RTL/src/lib/spi_receiver.vhd ;         ;
+; src/lib/lcd_driver.vhd           ; yes             ; User VHDL File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P08_SPI_LCD/RTL/src/lib/lcd_driver.vhd   ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -301,7 +301,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -311,32 +311,32 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Apr 28 18:14:56 2024
+    Info: Processing started: Tue Jul 16 10:40:26 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off spi_lcd_main -c spi_lcd_main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file src/spi_lcd_main.vhd
-    Info (12022): Found design unit 1: spi_lcd_main-spi_lcd_main_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/spi_lcd_main.vhd Line: 23
-    Info (12023): Found entity 1: spi_lcd_main File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/spi_lcd_main.vhd Line: 11
+    Info (12022): Found design unit 1: spi_lcd_main-spi_lcd_main_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P08_SPI_LCD/RTL/src/spi_lcd_main.vhd Line: 23
+    Info (12023): Found entity 1: spi_lcd_main File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P08_SPI_LCD/RTL/src/spi_lcd_main.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/spi_receiver.vhd
-    Info (12022): Found design unit 1: spi_receiver-spi_receiver_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/spi_receiver.vhd Line: 22
-    Info (12023): Found entity 1: spi_receiver File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/spi_receiver.vhd Line: 10
+    Info (12022): Found design unit 1: spi_receiver-spi_receiver_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P08_SPI_LCD/RTL/src/lib/spi_receiver.vhd Line: 22
+    Info (12023): Found entity 1: spi_receiver File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P08_SPI_LCD/RTL/src/lib/spi_receiver.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/lcd_driver.vhd
-    Info (12022): Found design unit 1: lcd_driver-lcd_driver_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/lcd_driver.vhd Line: 20
-    Info (12023): Found entity 1: lcd_driver File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/lcd_driver.vhd Line: 7
+    Info (12022): Found design unit 1: lcd_driver-lcd_driver_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P08_SPI_LCD/RTL/src/lib/lcd_driver.vhd Line: 20
+    Info (12023): Found entity 1: lcd_driver File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P08_SPI_LCD/RTL/src/lib/lcd_driver.vhd Line: 7
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
 Info (12127): Elaborating entity "spi_lcd_main" for the top level hierarchy
-Info (12129): Elaborating entity "spi_receiver" using architecture "A:spi_receiver_rtl" for hierarchy "spi_receiver:spi_interface" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/spi_lcd_main.vhd Line: 38
-Info (12129): Elaborating entity "lcd_driver" using architecture "A:lcd_driver_rtl" for hierarchy "lcd_driver:lcd_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/spi_lcd_main.vhd Line: 43
+Info (12129): Elaborating entity "spi_receiver" using architecture "A:spi_receiver_rtl" for hierarchy "spi_receiver:spi_interface" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P08_SPI_LCD/RTL/src/spi_lcd_main.vhd Line: 38
+Info (12129): Elaborating entity "lcd_driver" using architecture "A:lcd_driver_rtl" for hierarchy "lcd_driver:lcd_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P08_SPI_LCD/RTL/src/spi_lcd_main.vhd Line: 43
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
-Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/lib/spi_receiver.vhd Line: 114
+Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P08_SPI_LCD/RTL/src/lib/spi_receiver.vhd Line: 114
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "rw" is stuck at GND File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P8_SPI_LCD/src/spi_lcd_main.vhd Line: 17
+    Warning (13410): Pin "rw" is stuck at GND File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P08_SPI_LCD/RTL/src/spi_lcd_main.vhd Line: 17
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -345,9 +345,9 @@ Info (21057): Implemented 64 device resources after synthesis - the final resour
     Info (21059): Implemented 11 output pins
     Info (21061): Implemented 48 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4780 megabytes
-    Info: Processing ended: Sun Apr 28 18:15:09 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Tue Jul 16 10:40:57 2024
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:31
 
 
