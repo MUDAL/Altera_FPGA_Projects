@@ -3,7 +3,7 @@
 
 ## Description    
 - [To be added]   
-- Check additional explanations in the ``README.md`` in the ``MATLAB`` and ``Python`` directories.  
+- Check additional explanations in the ``README.md`` of the ``MATLAB`` and ``Python`` directories.  
 
 ## Tools  
 - EP4CE6E22C8N Cyclone IV FPGA development board
