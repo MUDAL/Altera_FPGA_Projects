@@ -1,5 +1,7 @@
-%Thresholding operation
+% Thresholding operation (with colour inversion)
+
 threshold = 100;
+
 % 1. RGB to Gray
 gamemenu_img = imread('game_menu.jpg');
 gamemenu_gray = rgb2gray(gamemenu_img);
@@ -9,15 +11,15 @@ gameover_gray = rgb2gray(gameover_img);
 
 gamemenu_gray(gamemenu_gray < threshold) = 1;
 gamemenu_gray(gamemenu_gray >= threshold) = 0;
-gamemenu_gray = logical(gamemenu_gray); % Bitmap
+gamemenu_binary = logical(gamemenu_gray); % Bitmap
 
 gameover_gray(gameover_gray < threshold) = 1;
 gameover_gray(gameover_gray >= threshold) = 0;
-gameover_gray = logical(gameover_gray); % Bitmap
+gameover_binary = logical(gameover_gray); % Bitmap
 
-imshow(gamemenu_gray);
+imshow(gamemenu_binary);
 figure
-imshow(gameover_gray);
+imshow(gameover_binary);
 
 img_to_mif(gamemenu_gray,'game_menu.mif');
 img_to_mif(gameover_gray,'game_over.mif');
