@@ -1,0 +1,1159 @@
+Analysis & Synthesis report for pong_main
+Tue Jul 16 10:58:20 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |pong_main|score_logic:scores_calculator|state
+ 10. State Machine - |pong_main|game_config:game_config_module|state
+ 11. State Machine - |pong_main|button_logic:down_button_module|state
+ 12. State Machine - |pong_main|button_logic:up_button_module|state
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Registers Packed Into Inferred Megafunctions
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated
+ 18. Source assignments for bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated
+ 19. Parameter Settings for User Entity Instance: Top-level Entity: |pong_main
+ 20. Parameter Settings for User Entity Instance: counter:ball_timer
+ 21. Parameter Settings for User Entity Instance: ball_logic:ball_module
+ 22. Parameter Settings for User Entity Instance: button_logic:up_button_module
+ 23. Parameter Settings for User Entity Instance: button_logic:down_button_module
+ 24. Parameter Settings for User Entity Instance: auto_control:auto_control_module
+ 25. Parameter Settings for User Entity Instance: counter:paddle_timer
+ 26. Parameter Settings for User Entity Instance: paddle_logic:left_paddle_module
+ 27. Parameter Settings for User Entity Instance: paddle_logic:right_paddle_module
+ 28. Parameter Settings for User Entity Instance: collision_logic:collision_module
+ 29. Parameter Settings for User Entity Instance: counter:gameover_timer
+ 30. Parameter Settings for User Entity Instance: game_board:game_board_module
+ 31. Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:0:digit_font_module
+ 32. Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:1:digit_font_module
+ 33. Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:2:digit_font_module
+ 34. Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:3:digit_font_module
+ 35. Parameter Settings for User Entity Instance: score_logic:scores_calculator
+ 36. Parameter Settings for User Entity Instance: counter:sound_freq_timer
+ 37. Parameter Settings for User Entity Instance: sound:sound_module
+ 38. Parameter Settings for User Entity Instance: bitmap_memory:game_menu_bitmap_mem
+ 39. Parameter Settings for User Entity Instance: bitmap_generator:game_menu_bitmap_gen
+ 40. Parameter Settings for User Entity Instance: bitmap_memory:game_over_bitmap_mem
+ 41. Parameter Settings for User Entity Instance: bitmap_generator:game_over_bitmap_gen
+ 42. Parameter Settings for Inferred Entity Instance: bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0
+ 43. Parameter Settings for Inferred Entity Instance: bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0
+ 44. altsyncram Parameter Settings by Entity Instance
+ 45. Port Connectivity Checks: "bitmap_generator:game_menu_bitmap_gen"
+ 46. Port Connectivity Checks: "score_logic:scores_calculator"
+ 47. Post-Synthesis Netlist Statistics for Top Partition
+ 48. Elapsed Time Per Partition
+ 49. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jul 16 10:58:20 2024       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; pong_main                                   ;
+; Top-level Entity Name              ; pong_main                                   ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,272                                       ;
+;     Total combinational functions  ; 1,266                                       ;
+;     Dedicated logic registers      ; 330                                         ;
+; Total registers                    ; 330                                         ;
+; Total pins                         ; 10                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 52,710                                      ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                            ; pong_main          ; pong_main          ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------+---------+
+; src/lib/vga_sync.vhd             ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/vga_sync.vhd         ;         ;
+; src/lib/font_logic.vhd           ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/font_logic.vhd       ;         ;
+; src/lib/ball_logic.vhd           ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/ball_logic.vhd       ;         ;
+; src/lib/paddle_logic.vhd         ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/paddle_logic.vhd     ;         ;
+; src/lib/button_logic.vhd         ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/button_logic.vhd     ;         ;
+; src/lib/vga_graphics.vhd         ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/vga_graphics.vhd     ;         ;
+; src/lib/collision_logic.vhd      ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/collision_logic.vhd  ;         ;
+; src/lib/score_logic.vhd          ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/score_logic.vhd      ;         ;
+; src/lib/counter.vhd              ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/counter.vhd          ;         ;
+; src/lib/sound.vhd                ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/sound.vhd            ;         ;
+; src/lib/game_board.vhd           ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/game_board.vhd       ;         ;
+; src/lib/pkg.vhd                  ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/pkg.vhd              ;         ;
+; src/lib/bitmap_generator.vhd     ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/bitmap_generator.vhd ;         ;
+; src/lib/bitmap_memory.vhd        ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/bitmap_memory.vhd    ;         ;
+; src/lib/game_config.vhd          ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/game_config.vhd      ;         ;
+; src/pong_main.vhd                ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd            ;         ;
+; src/lib/auto_control.vhd         ; yes             ; User VHDL File                         ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/auto_control.vhd     ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                  ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc           ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                     ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                  ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                  ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                   ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                      ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                      ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                    ;         ;
+; db/altsyncram_7h51.tdf           ; yes             ; Auto-Generated Megafunction            ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/db/altsyncram_7h51.tdf       ;         ;
+; src/mif/game_menu.mif            ; yes             ; Auto-Found Memory Initialization File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/mif/game_menu.mif        ;         ;
+; db/decode_c8a.tdf                ; yes             ; Auto-Generated Megafunction            ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/db/decode_c8a.tdf            ;         ;
+; db/mux_smb.tdf                   ; yes             ; Auto-Generated Megafunction            ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/db/mux_smb.tdf               ;         ;
+; db/altsyncram_jh51.tdf           ; yes             ; Auto-Generated Megafunction            ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/db/altsyncram_jh51.tdf       ;         ;
+; src/mif/game_over.mif            ; yes             ; Auto-Found Memory Initialization File  ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/mif/game_over.mif        ;         ;
+; db/decode_h8a.tdf                ; yes             ; Auto-Generated Megafunction            ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/db/decode_h8a.tdf            ;         ;
+; db/mux_1nb.tdf                   ; yes             ; Auto-Generated Megafunction            ; L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/db/mux_1nb.tdf               ;         ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 1,272     ;
+;                                             ;           ;
+; Total combinational functions               ; 1266      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 534       ;
+;     -- 3 input functions                    ; 341       ;
+;     -- <=2 input functions                  ; 391       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 804       ;
+;     -- arithmetic mode                      ; 462       ;
+;                                             ;           ;
+; Total registers                             ; 330       ;
+;     -- Dedicated logic registers            ; 330       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 10        ;
+; Total memory bits                           ; 52710     ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 337       ;
+; Total fan-out                               ; 5311      ;
+; Average fan-out                             ; 3.27      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                           ;
++-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Entity Name      ; Library Name ;
++-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; |pong_main                                            ; 1266 (0)            ; 330 (0)                   ; 52710       ; 0            ; 0       ; 0         ; 10   ; 0            ; |pong_main                                                                                                               ; pong_main        ; work         ;
+;    |auto_control:auto_control_module|                 ; 35 (35)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|auto_control:auto_control_module                                                                              ; auto_control     ; work         ;
+;    |ball_logic:ball_module|                           ; 92 (92)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|ball_logic:ball_module                                                                                        ; ball_logic       ; work         ;
+;    |bitmap_generator:game_menu_bitmap_gen|            ; 41 (41)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_generator:game_menu_bitmap_gen                                                                         ; bitmap_generator ; work         ;
+;    |bitmap_generator:game_over_bitmap_gen|            ; 59 (59)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_generator:game_over_bitmap_gen                                                                         ; bitmap_generator ; work         ;
+;    |bitmap_memory:game_menu_bitmap_mem|               ; 0 (0)               ; 1 (0)                     ; 14910       ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_memory:game_menu_bitmap_mem                                                                            ; bitmap_memory    ; work         ;
+;       |altsyncram:rom_rtl_0|                          ; 0 (0)               ; 1 (0)                     ; 14910       ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0                                                       ; altsyncram       ; work         ;
+;          |altsyncram_7h51:auto_generated|             ; 0 (0)               ; 1 (1)                     ; 14910       ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated                        ; altsyncram_7h51  ; work         ;
+;    |bitmap_memory:game_over_bitmap_mem|               ; 4 (0)               ; 3 (0)                     ; 37800       ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_memory:game_over_bitmap_mem                                                                            ; bitmap_memory    ; work         ;
+;       |altsyncram:rom_rtl_0|                          ; 4 (0)               ; 3 (0)                     ; 37800       ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0                                                       ; altsyncram       ; work         ;
+;          |altsyncram_jh51:auto_generated|             ; 4 (0)               ; 3 (3)                     ; 37800       ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated                        ; altsyncram_jh51  ; work         ;
+;             |decode_h8a:rden_decode|                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|decode_h8a:rden_decode ; decode_h8a       ; work         ;
+;    |button_logic:down_button_module|                  ; 34 (34)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|button_logic:down_button_module                                                                               ; button_logic     ; work         ;
+;    |button_logic:up_button_module|                    ; 34 (34)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|button_logic:up_button_module                                                                                 ; button_logic     ; work         ;
+;    |collision_logic:collision_module|                 ; 233 (233)           ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|collision_logic:collision_module                                                                              ; collision_logic  ; work         ;
+;    |counter:ball_timer|                               ; 27 (27)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|counter:ball_timer                                                                                            ; counter          ; work         ;
+;    |counter:gameover_timer|                           ; 37 (37)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|counter:gameover_timer                                                                                        ; counter          ; work         ;
+;    |counter:paddle_timer|                             ; 27 (27)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|counter:paddle_timer                                                                                          ; counter          ; work         ;
+;    |counter:sound_freq_timer|                         ; 22 (22)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|counter:sound_freq_timer                                                                                      ; counter          ; work         ;
+;    |font_logic:\digits_in_scores:0:digit_font_module| ; 94 (94)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|font_logic:\digits_in_scores:0:digit_font_module                                                              ; font_logic       ; work         ;
+;    |font_logic:\digits_in_scores:1:digit_font_module| ; 67 (67)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|font_logic:\digits_in_scores:1:digit_font_module                                                              ; font_logic       ; work         ;
+;    |font_logic:\digits_in_scores:2:digit_font_module| ; 89 (89)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|font_logic:\digits_in_scores:2:digit_font_module                                                              ; font_logic       ; work         ;
+;    |font_logic:\digits_in_scores:3:digit_font_module| ; 87 (87)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|font_logic:\digits_in_scores:3:digit_font_module                                                              ; font_logic       ; work         ;
+;    |game_board:game_board_module|                     ; 12 (12)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|game_board:game_board_module                                                                                  ; game_board       ; work         ;
+;    |game_config:game_config_module|                   ; 6 (6)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|game_config:game_config_module                                                                                ; game_config      ; work         ;
+;    |paddle_logic:left_paddle_module|                  ; 41 (41)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|paddle_logic:left_paddle_module                                                                               ; paddle_logic     ; work         ;
+;    |paddle_logic:right_paddle_module|                 ; 41 (41)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|paddle_logic:right_paddle_module                                                                              ; paddle_logic     ; work         ;
+;    |score_logic:scores_calculator|                    ; 89 (89)             ; 69 (69)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|score_logic:scores_calculator                                                                                 ; score_logic      ; work         ;
+;    |sound:sound_module|                               ; 30 (30)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|sound:sound_module                                                                                            ; sound            ; work         ;
+;    |vga_graphics:graph_generator|                     ; 21 (21)             ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|vga_graphics:graph_generator                                                                                  ; vga_graphics     ; work         ;
+;    |vga_sync:vga_sync_unit|                           ; 44 (44)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pong_main|vga_sync:vga_sync_unit                                                                                        ; vga_sync         ; work         ;
++-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                            ;
++---------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+-----------------------+
+; Name                                                                                              ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                   ;
++---------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+-----------------------+
+; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 14910        ; 1            ; --           ; --           ; 14910 ; src/mif/game_menu.mif ;
+; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 37800        ; 1            ; --           ; --           ; 37800 ; src/mif/game_over.mif ;
++---------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+-----------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |pong_main|score_logic:scores_calculator|state                ;
++---------------+---------------+---------------+---------------+---------------+
+; Name          ; state.ST_DONE ; state.ST_CALC ; state.ST_WAIT ; state.ST_IDLE ;
++---------------+---------------+---------------+---------------+---------------+
+; state.ST_IDLE ; 0             ; 0             ; 0             ; 0             ;
+; state.ST_WAIT ; 0             ; 0             ; 1             ; 1             ;
+; state.ST_CALC ; 0             ; 1             ; 0             ; 1             ;
+; state.ST_DONE ; 1             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------+
+; State Machine - |pong_main|game_config:game_config_module|state ;
++----------------+--------------+----------------+----------------+
+; Name           ; state.ST_END ; state.ST_START ; state.ST_IDLE  ;
++----------------+--------------+----------------+----------------+
+; state.ST_IDLE  ; 0            ; 0              ; 0              ;
+; state.ST_START ; 0            ; 1              ; 1              ;
+; state.ST_END   ; 1            ; 0              ; 1              ;
++----------------+--------------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------+
+; State Machine - |pong_main|button_logic:down_button_module|state     ;
++------------------+------------------+----------------+---------------+
+; Name             ; state.ST_RELEASE ; state.ST_PRESS ; state.ST_IDLE ;
++------------------+------------------+----------------+---------------+
+; state.ST_IDLE    ; 0                ; 0              ; 0             ;
+; state.ST_PRESS   ; 0                ; 1              ; 1             ;
+; state.ST_RELEASE ; 1                ; 0              ; 1             ;
++------------------+------------------+----------------+---------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------+
+; State Machine - |pong_main|button_logic:up_button_module|state       ;
++------------------+------------------+----------------+---------------+
+; Name             ; state.ST_RELEASE ; state.ST_PRESS ; state.ST_IDLE ;
++------------------+------------------+----------------+---------------+
+; state.ST_IDLE    ; 0                ; 0              ; 0             ;
+; state.ST_PRESS   ; 0                ; 1              ; 1             ;
+; state.ST_RELEASE ; 1                ; 0              ; 1             ;
++------------------+------------------+----------------+---------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 330   ;
+; Number of registers using Synchronous Clear  ; 137   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 326   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 155   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------+
+; Inverted Register Statistics                             ;
++------------------------------------------------+---------+
+; Inverted Register                              ; Fan out ;
++------------------------------------------------+---------+
+; paddle_logic:right_paddle_module|y_reg[7]      ; 9       ;
+; paddle_logic:right_paddle_module|y_reg[6]      ; 8       ;
+; paddle_logic:right_paddle_module|y_reg[4]      ; 8       ;
+; paddle_logic:right_paddle_module|y_reg[1]      ; 10      ;
+; paddle_logic:right_paddle_module|y_reg[2]      ; 9       ;
+; paddle_logic:right_paddle_module|y_reg[0]      ; 14      ;
+; paddle_logic:left_paddle_module|y_reg[7]       ; 7       ;
+; paddle_logic:left_paddle_module|y_reg[6]       ; 6       ;
+; paddle_logic:left_paddle_module|y_reg[4]       ; 6       ;
+; paddle_logic:left_paddle_module|y_reg[1]       ; 8       ;
+; paddle_logic:left_paddle_module|y_reg[2]       ; 7       ;
+; paddle_logic:left_paddle_module|y_reg[0]       ; 11      ;
+; ball_logic:ball_module|y_reg[7]                ; 18      ;
+; ball_logic:ball_module|y_reg[6]                ; 18      ;
+; ball_logic:ball_module|y_reg[5]                ; 18      ;
+; ball_logic:ball_module|y_reg[3]                ; 18      ;
+; ball_logic:ball_module|y_reg[2]                ; 17      ;
+; ball_logic:ball_module|x_reg[8]                ; 8       ;
+; ball_logic:ball_module|x_reg[5]                ; 9       ;
+; ball_logic:ball_module|x_reg[3]                ; 10      ;
+; ball_logic:ball_module|x_reg[4]                ; 9       ;
+; ball_logic:ball_module|x_reg[2]                ; 9       ;
+; collision_logic:collision_module|direct_reg[2] ; 6       ;
+; button_logic:down_button_module|btn_o_reg      ; 4       ;
+; button_logic:up_button_module|btn_o_reg        ; 4       ;
+; score_logic:scores_calculator|cnt_reg[0]       ; 5       ;
+; score_logic:scores_calculator|cnt_reg[2]       ; 3       ;
+; score_logic:scores_calculator|cnt_reg[1]       ; 4       ;
+; button_logic:down_button_module|btn_i_reg      ; 5       ;
+; button_logic:up_button_module|btn_i_reg        ; 5       ;
+; Total number of inverted registers = 30        ;         ;
++------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                         ;
++------------------------------------------------+----------------------------------------------+------+
+; Register Name                                  ; Megafunction                                 ; Type ;
++------------------------------------------------+----------------------------------------------+------+
+; bitmap_memory:game_menu_bitmap_mem|data_out[0] ; bitmap_memory:game_menu_bitmap_mem|rom_rtl_0 ; RAM  ;
+; bitmap_memory:game_over_bitmap_mem|data_out[0] ; bitmap_memory:game_over_bitmap_mem|rom_rtl_0 ; RAM  ;
++------------------------------------------------+----------------------------------------------+------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |pong_main|sound:sound_module|delay_reg[15]            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |pong_main|score_logic:scores_calculator|score1_reg[7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |pong_main|score_logic:scores_calculator|score2_reg[7] ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |pong_main|ball_logic:ball_module|y_reg[0]             ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |pong_main|ball_logic:ball_module|x_reg[0]             ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |pong_main|ball_logic:ball_module|y_reg[7]             ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |pong_main|ball_logic:ball_module|x_reg[8]             ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |pong_main|button_logic:down_button_module|cnt_next    ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |pong_main|button_logic:up_button_module|cnt_next      ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |pong_main|game_config:game_config_module|Selector0    ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |pong_main|score_logic:scores_calculator|Selector0     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |pong_main|button_logic:down_button_module|Selector2   ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |pong_main|button_logic:up_button_module|Selector0     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Source assignments for bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_7h51:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                              ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                               ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Source assignments for bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0|altsyncram_jh51:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                              ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                               ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |pong_main ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; SCREEN_WIDTH   ; 640   ; Signed Integer                                   ;
+; SCREEN_HEIGHT  ; 480   ; Signed Integer                                   ;
+; PADDLE_WIDTH   ; 5     ; Signed Integer                                   ;
+; PADDLE_HEIGHT  ; 50    ; Signed Integer                                   ;
+; BALL_LENGTH    ; 8     ; Signed Integer                                   ;
+; MAX_SCORE      ; 11    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:ball_timer ;
++----------------+--------+---------------------------------------+
+; Parameter Name ; Value  ; Type                                  ;
++----------------+--------+---------------------------------------+
+; delay_clks     ; 179998 ; Signed Integer                        ;
++----------------+--------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ball_logic:ball_module ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; x_pos          ; 316   ; Signed Integer                             ;
+; y_pos          ; 236   ; Signed Integer                             ;
+; stride         ; 8     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: button_logic:up_button_module ;
++----------------+----------+------------------------------------------------+
+; Parameter Name ; Value    ; Type                                           ;
++----------------+----------+------------------------------------------------+
+; clk_freq       ; 50000000 ; Signed Integer                                 ;
+; delay_ms       ; 10       ; Signed Integer                                 ;
++----------------+----------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: button_logic:down_button_module ;
++----------------+----------+--------------------------------------------------+
+; Parameter Name ; Value    ; Type                                             ;
++----------------+----------+--------------------------------------------------+
+; clk_freq       ; 50000000 ; Signed Integer                                   ;
+; delay_ms       ; 10       ; Signed Integer                                   ;
++----------------+----------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: auto_control:auto_control_module ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; xpos_r_paddle  ; 585   ; Signed Integer                                       ;
+; paddle_height  ; 50    ; Signed Integer                                       ;
+; ball_length    ; 8     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:paddle_timer ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; delay_clks     ; 99999 ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: paddle_logic:left_paddle_module ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; x_pos          ; 50    ; Signed Integer                                      ;
+; y_pos          ; 215   ; Signed Integer                                      ;
+; x_stride       ; 5     ; Signed Integer                                      ;
+; y_stride       ; 50    ; Signed Integer                                      ;
+; screen_height  ; 480   ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: paddle_logic:right_paddle_module ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; x_pos          ; 585   ; Signed Integer                                       ;
+; y_pos          ; 215   ; Signed Integer                                       ;
+; x_stride       ; 5     ; Signed Integer                                       ;
+; y_stride       ; 50    ; Signed Integer                                       ;
+; screen_height  ; 480   ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: collision_logic:collision_module ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; xpos_l_paddle  ; 50    ; Signed Integer                                       ;
+; xpos_r_paddle  ; 585   ; Signed Integer                                       ;
+; paddle_width   ; 5     ; Signed Integer                                       ;
+; paddle_height  ; 50    ; Signed Integer                                       ;
+; ball_length    ; 8     ; Signed Integer                                       ;
+; screen_width   ; 640   ; Signed Integer                                       ;
+; screen_height  ; 480   ; Signed Integer                                       ;
+; upper_border   ; 10    ; Signed Integer                                       ;
+; lower_border   ; 470   ; Signed Integer                                       ;
+; left_border    ; 10    ; Signed Integer                                       ;
+; right_border   ; 630   ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:gameover_timer ;
++----------------+----------+-----------------------------------------+
+; Parameter Name ; Value    ; Type                                    ;
++----------------+----------+-----------------------------------------+
+; delay_clks     ; 24999999 ; Signed Integer                          ;
++----------------+----------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: game_board:game_board_module ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; xpos_hwl       ; 320   ; Signed Integer                                   ;
+; ypos_hwl       ; 10    ; Signed Integer                                   ;
+; xstr_hwl       ; 1     ; Signed Integer                                   ;
+; ystr_hwl       ; 460   ; Signed Integer                                   ;
+; xpos_tb        ; 0     ; Signed Integer                                   ;
+; ypos_tb        ; 0     ; Signed Integer                                   ;
+; xpos_bb        ; 0     ; Signed Integer                                   ;
+; ypos_bb        ; 470   ; Signed Integer                                   ;
+; xpos_lb        ; 0     ; Signed Integer                                   ;
+; ypos_lb        ; 0     ; Signed Integer                                   ;
+; xpos_rb        ; 630   ; Signed Integer                                   ;
+; ypos_rb        ; 0     ; Signed Integer                                   ;
+; xstr_h_border  ; 640   ; Signed Integer                                   ;
+; ystr_h_border  ; 10    ; Signed Integer                                   ;
+; xstr_v_border  ; 10    ; Signed Integer                                   ;
+; ystr_v_border  ; 480   ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:0:digit_font_module ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; x_pos          ; 280   ; Signed Integer                                                       ;
+; y_pos          ; 4     ; Signed Integer                                                       ;
+; x_stride       ; 2     ; Signed Integer                                                       ;
+; y_stride       ; 4     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:1:digit_font_module ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; x_pos          ; 300   ; Signed Integer                                                       ;
+; y_pos          ; 4     ; Signed Integer                                                       ;
+; x_stride       ; 2     ; Signed Integer                                                       ;
+; y_stride       ; 4     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:2:digit_font_module ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; x_pos          ; 323   ; Signed Integer                                                       ;
+; y_pos          ; 4     ; Signed Integer                                                       ;
+; x_stride       ; 2     ; Signed Integer                                                       ;
+; y_stride       ; 4     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: font_logic:\digits_in_scores:3:digit_font_module ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; x_pos          ; 343   ; Signed Integer                                                       ;
+; y_pos          ; 4     ; Signed Integer                                                       ;
+; x_stride       ; 2     ; Signed Integer                                                       ;
+; y_stride       ; 4     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: score_logic:scores_calculator ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; max_score      ; 11    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:sound_freq_timer ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; delay_clks     ; 8332  ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sound:sound_module ;
++----------------+---------+--------------------------------------+
+; Parameter Name ; Value   ; Type                                 ;
++----------------+---------+--------------------------------------+
+; buzz_delay     ; 1999999 ; Signed Integer                       ;
++----------------+---------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bitmap_memory:game_menu_bitmap_mem ;
++----------------+-----------------------+----------------------------------------+
+; Parameter Name ; Value                 ; Type                                   ;
++----------------+-----------------------+----------------------------------------+
+; mif_file       ; src/mif/game_menu.mif ; String                                 ;
+; mem_depth      ; 14910                 ; Signed Integer                         ;
++----------------+-----------------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bitmap_generator:game_menu_bitmap_gen ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; xpos_bmp_l     ; 10    ; Signed Integer                                            ;
+; xpos_bmp_c     ; 217   ; Signed Integer                                            ;
+; xpos_bmp_r     ; 329   ; Signed Integer                                            ;
+; ypos_bmp       ; 100   ; Signed Integer                                            ;
+; xstr_bmp       ; 210   ; Signed Integer                                            ;
+; ystr_bmp       ; 71    ; Signed Integer                                            ;
+; mem_depth      ; 14910 ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bitmap_memory:game_over_bitmap_mem ;
++----------------+-----------------------+----------------------------------------+
+; Parameter Name ; Value                 ; Type                                   ;
++----------------+-----------------------+----------------------------------------+
+; mif_file       ; src/mif/game_over.mif ; String                                 ;
+; mem_depth      ; 37800                 ; Signed Integer                         ;
++----------------+-----------------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bitmap_generator:game_over_bitmap_gen ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; xpos_bmp_l     ; 50    ; Signed Integer                                            ;
+; xpos_bmp_c     ; 217   ; Signed Integer                                            ;
+; xpos_bmp_r     ; 369   ; Signed Integer                                            ;
+; ypos_bmp       ; 100   ; Signed Integer                                            ;
+; xstr_bmp       ; 210   ; Signed Integer                                            ;
+; ystr_bmp       ; 180   ; Signed Integer                                            ;
+; mem_depth      ; 37800 ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0 ;
++------------------------------------+-----------------------+---------------------------------------------+
+; Parameter Name                     ; Value                 ; Type                                        ;
++------------------------------------+-----------------------+---------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                     ; Untyped                                     ;
+; AUTO_CARRY_CHAINS                  ; ON                    ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                   ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS                ; ON                    ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                   ; IGNORE_CASCADE                              ;
+; WIDTH_BYTEENA                      ; 1                     ; Untyped                                     ;
+; OPERATION_MODE                     ; ROM                   ; Untyped                                     ;
+; WIDTH_A                            ; 1                     ; Untyped                                     ;
+; WIDTHAD_A                          ; 14                    ; Untyped                                     ;
+; NUMWORDS_A                         ; 14910                 ; Untyped                                     ;
+; OUTDATA_REG_A                      ; UNREGISTERED          ; Untyped                                     ;
+; ADDRESS_ACLR_A                     ; NONE                  ; Untyped                                     ;
+; OUTDATA_ACLR_A                     ; NONE                  ; Untyped                                     ;
+; WRCONTROL_ACLR_A                   ; NONE                  ; Untyped                                     ;
+; INDATA_ACLR_A                      ; NONE                  ; Untyped                                     ;
+; BYTEENA_ACLR_A                     ; NONE                  ; Untyped                                     ;
+; WIDTH_B                            ; 1                     ; Untyped                                     ;
+; WIDTHAD_B                          ; 1                     ; Untyped                                     ;
+; NUMWORDS_B                         ; 1                     ; Untyped                                     ;
+; INDATA_REG_B                       ; CLOCK1                ; Untyped                                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                ; Untyped                                     ;
+; RDCONTROL_REG_B                    ; CLOCK1                ; Untyped                                     ;
+; ADDRESS_REG_B                      ; CLOCK1                ; Untyped                                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED          ; Untyped                                     ;
+; BYTEENA_REG_B                      ; CLOCK1                ; Untyped                                     ;
+; INDATA_ACLR_B                      ; NONE                  ; Untyped                                     ;
+; WRCONTROL_ACLR_B                   ; NONE                  ; Untyped                                     ;
+; ADDRESS_ACLR_B                     ; NONE                  ; Untyped                                     ;
+; OUTDATA_ACLR_B                     ; NONE                  ; Untyped                                     ;
+; RDCONTROL_ACLR_B                   ; NONE                  ; Untyped                                     ;
+; BYTEENA_ACLR_B                     ; NONE                  ; Untyped                                     ;
+; WIDTH_BYTEENA_A                    ; 1                     ; Untyped                                     ;
+; WIDTH_BYTEENA_B                    ; 1                     ; Untyped                                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                  ; Untyped                                     ;
+; BYTE_SIZE                          ; 8                     ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE             ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ  ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ  ; Untyped                                     ;
+; INIT_FILE                          ; src/mif/game_menu.mif ; Untyped                                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A                ; Untyped                                     ;
+; MAXIMUM_DEPTH                      ; 0                     ; Untyped                                     ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                ; Untyped                                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                ; Untyped                                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                ; Untyped                                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                ; Untyped                                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN       ; Untyped                                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN       ; Untyped                                     ;
+; ENABLE_ECC                         ; FALSE                 ; Untyped                                     ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                 ; Untyped                                     ;
+; WIDTH_ECCSTATUS                    ; 3                     ; Untyped                                     ;
+; DEVICE_FAMILY                      ; Cyclone IV E          ; Untyped                                     ;
+; CBXI_PARAMETER                     ; altsyncram_7h51       ; Untyped                                     ;
++------------------------------------+-----------------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0 ;
++------------------------------------+-----------------------+---------------------------------------------+
+; Parameter Name                     ; Value                 ; Type                                        ;
++------------------------------------+-----------------------+---------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                     ; Untyped                                     ;
+; AUTO_CARRY_CHAINS                  ; ON                    ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                   ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS                ; ON                    ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                   ; IGNORE_CASCADE                              ;
+; WIDTH_BYTEENA                      ; 1                     ; Untyped                                     ;
+; OPERATION_MODE                     ; ROM                   ; Untyped                                     ;
+; WIDTH_A                            ; 1                     ; Untyped                                     ;
+; WIDTHAD_A                          ; 16                    ; Untyped                                     ;
+; NUMWORDS_A                         ; 37800                 ; Untyped                                     ;
+; OUTDATA_REG_A                      ; UNREGISTERED          ; Untyped                                     ;
+; ADDRESS_ACLR_A                     ; NONE                  ; Untyped                                     ;
+; OUTDATA_ACLR_A                     ; NONE                  ; Untyped                                     ;
+; WRCONTROL_ACLR_A                   ; NONE                  ; Untyped                                     ;
+; INDATA_ACLR_A                      ; NONE                  ; Untyped                                     ;
+; BYTEENA_ACLR_A                     ; NONE                  ; Untyped                                     ;
+; WIDTH_B                            ; 1                     ; Untyped                                     ;
+; WIDTHAD_B                          ; 1                     ; Untyped                                     ;
+; NUMWORDS_B                         ; 1                     ; Untyped                                     ;
+; INDATA_REG_B                       ; CLOCK1                ; Untyped                                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                ; Untyped                                     ;
+; RDCONTROL_REG_B                    ; CLOCK1                ; Untyped                                     ;
+; ADDRESS_REG_B                      ; CLOCK1                ; Untyped                                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED          ; Untyped                                     ;
+; BYTEENA_REG_B                      ; CLOCK1                ; Untyped                                     ;
+; INDATA_ACLR_B                      ; NONE                  ; Untyped                                     ;
+; WRCONTROL_ACLR_B                   ; NONE                  ; Untyped                                     ;
+; ADDRESS_ACLR_B                     ; NONE                  ; Untyped                                     ;
+; OUTDATA_ACLR_B                     ; NONE                  ; Untyped                                     ;
+; RDCONTROL_ACLR_B                   ; NONE                  ; Untyped                                     ;
+; BYTEENA_ACLR_B                     ; NONE                  ; Untyped                                     ;
+; WIDTH_BYTEENA_A                    ; 1                     ; Untyped                                     ;
+; WIDTH_BYTEENA_B                    ; 1                     ; Untyped                                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                  ; Untyped                                     ;
+; BYTE_SIZE                          ; 8                     ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE             ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ  ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ  ; Untyped                                     ;
+; INIT_FILE                          ; src/mif/game_over.mif ; Untyped                                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A                ; Untyped                                     ;
+; MAXIMUM_DEPTH                      ; 0                     ; Untyped                                     ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                ; Untyped                                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                ; Untyped                                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                ; Untyped                                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                ; Untyped                                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN       ; Untyped                                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN       ; Untyped                                     ;
+; ENABLE_ECC                         ; FALSE                 ; Untyped                                     ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                 ; Untyped                                     ;
+; WIDTH_ECCSTATUS                    ; 3                     ; Untyped                                     ;
+; DEVICE_FAMILY                      ; Cyclone IV E          ; Untyped                                     ;
+; CBXI_PARAMETER                     ; altsyncram_jh51       ; Untyped                                     ;
++------------------------------------+-----------------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                    ;
++-------------------------------------------+---------------------------------------------------------+
+; Name                                      ; Value                                                   ;
++-------------------------------------------+---------------------------------------------------------+
+; Number of entity instances                ; 2                                                       ;
+; Entity Instance                           ; bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0 ;
+;     -- OPERATION_MODE                     ; ROM                                                     ;
+;     -- WIDTH_A                            ; 1                                                       ;
+;     -- NUMWORDS_A                         ; 14910                                                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                            ;
+;     -- WIDTH_B                            ; 1                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                               ;
+; Entity Instance                           ; bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0 ;
+;     -- OPERATION_MODE                     ; ROM                                                     ;
+;     -- WIDTH_A                            ; 1                                                       ;
+;     -- NUMWORDS_A                         ; 37800                                                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                            ;
+;     -- WIDTH_B                            ; 1                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                               ;
++-------------------------------------------+---------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "bitmap_generator:game_menu_bitmap_gen" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; winner ; Input ; Info     ; Stuck at GND                          ;
++--------+-------+----------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_logic:scores_calculator"                                                              ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; valid_scores ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 10                          ;
+; cycloneiii_ff         ; 330                         ;
+;     CLR               ; 72                          ;
+;     CLR SCLR          ; 99                          ;
+;     ENA CLR           ; 117                         ;
+;     ENA CLR SCLR      ; 38                          ;
+;     plain             ; 4                           ;
+; cycloneiii_lcell_comb ; 1266                        ;
+;     arith             ; 462                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 261                         ;
+;         3 data inputs ; 199                         ;
+;     normal            ; 804                         ;
+;         1 data inputs ; 29                          ;
+;         2 data inputs ; 99                          ;
+;         3 data inputs ; 142                         ;
+;         4 data inputs ; 534                         ;
+; cycloneiii_ram_block  ; 7                           ;
+;                       ;                             ;
+; Max LUT depth         ; 13.00                       ;
+; Average LUT depth     ; 6.51                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:08     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Jul 16 10:57:56 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pong_main -c pong_main
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/vga_sync.vhd
+    Info (12022): Found design unit 1: vga_sync-vga_sync_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/vga_sync.vhd Line: 20
+    Info (12023): Found entity 1: vga_sync File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/vga_sync.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/font_logic.vhd
+    Info (12022): Found design unit 1: font_logic-font_logic_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/font_logic.vhd Line: 20
+    Info (12023): Found entity 1: font_logic File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/font_logic.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/ball_logic.vhd
+    Info (12022): Found design unit 1: ball_logic-ball_logic_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/ball_logic.vhd Line: 25
+    Info (12023): Found entity 1: ball_logic File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/ball_logic.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/paddle_logic.vhd
+    Info (12022): Found design unit 1: paddle_logic-paddle_logic_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/paddle_logic.vhd Line: 24
+    Info (12023): Found entity 1: paddle_logic File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/paddle_logic.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/button_logic.vhd
+    Info (12022): Found design unit 1: button_logic-button_logic_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/button_logic.vhd Line: 16
+    Info (12023): Found entity 1: button_logic File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/button_logic.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/vga_graphics.vhd
+    Info (12022): Found design unit 1: vga_graphics-vga_graphics_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/vga_graphics.vhd Line: 25
+    Info (12023): Found entity 1: vga_graphics File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/vga_graphics.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/collision_logic.vhd
+    Info (12022): Found design unit 1: collision_logic-collision_logic_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/collision_logic.vhd Line: 33
+    Info (12023): Found entity 1: collision_logic File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/collision_logic.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/score_logic.vhd
+    Info (12022): Found design unit 1: score_logic-score_logic_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/score_logic.vhd Line: 22
+    Info (12023): Found entity 1: score_logic File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/score_logic.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/counter.vhd
+    Info (12022): Found design unit 1: counter-counter_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/counter.vhd Line: 15
+    Info (12023): Found entity 1: counter File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/counter.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/sound.vhd
+    Info (12022): Found design unit 1: sound-sound_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/sound.vhd Line: 17
+    Info (12023): Found entity 1: sound File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/sound.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/game_board.vhd
+    Info (12022): Found design unit 1: game_board-game_board_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/game_board.vhd Line: 34
+    Info (12023): Found entity 1: game_board File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/game_board.vhd Line: 7
+Info (12021): Found 2 design units, including 0 entities, in source file src/lib/pkg.vhd
+    Info (12022): Found design unit 1: pkg File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/pkg.vhd Line: 9
+    Info (12022): Found design unit 2: pkg-body File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/pkg.vhd Line: 153
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/bitmap_generator.vhd
+    Info (12022): Found design unit 1: bitmap_generator-bitmap_generator_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/bitmap_generator.vhd Line: 29
+    Info (12023): Found entity 1: bitmap_generator File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/bitmap_generator.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/bitmap_memory.vhd
+    Info (12022): Found design unit 1: bitmap_memory-bitmap_memory_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/bitmap_memory.vhd Line: 19
+    Info (12023): Found entity 1: bitmap_memory File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/bitmap_memory.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/game_config.vhd
+    Info (12022): Found design unit 1: game_config-game_config_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/game_config.vhd Line: 18
+    Info (12023): Found entity 1: game_config File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/game_config.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file src/pong_main.vhd
+    Info (12022): Found design unit 1: pong_main-pong_main_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 26
+    Info (12023): Found entity 1: pong_main File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file src/lib/auto_control.vhd
+    Info (12022): Found design unit 1: auto_control-auto_control_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/auto_control.vhd Line: 21
+    Info (12023): Found entity 1: auto_control File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/auto_control.vhd Line: 9
+Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
+Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
+Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
+Info (12127): Elaborating entity "pong_main" for the top level hierarchy
+Info (12129): Elaborating entity "vga_sync" using architecture "A:vga_sync_rtl" for hierarchy "vga_sync:vga_sync_unit" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 145
+Info (12129): Elaborating entity "vga_graphics" using architecture "A:vga_graphics_rtl" for hierarchy "vga_graphics:graph_generator" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 156
+Info (12129): Elaborating entity "counter" using architecture "A:counter_rtl" for hierarchy "counter:ball_timer" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 173
+Info (12129): Elaborating entity "ball_logic" using architecture "A:ball_logic_rtl" for hierarchy "ball_logic:ball_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 180
+Info (12129): Elaborating entity "button_logic" using architecture "A:button_logic_rtl" for hierarchy "button_logic:up_button_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 195
+Info (12129): Elaborating entity "auto_control" using architecture "A:auto_control_rtl" for hierarchy "auto_control:auto_control_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 211
+Info (12129): Elaborating entity "counter" using architecture "A:counter_rtl" for hierarchy "counter:paddle_timer" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 222
+Info (12129): Elaborating entity "paddle_logic" using architecture "A:paddle_logic_rtl" for hierarchy "paddle_logic:left_paddle_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 229
+Info (12129): Elaborating entity "paddle_logic" using architecture "A:paddle_logic_rtl" for hierarchy "paddle_logic:right_paddle_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 245
+Info (12129): Elaborating entity "collision_logic" using architecture "A:collision_logic_rtl" for hierarchy "collision_logic:collision_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 261
+Info (12129): Elaborating entity "game_config" using architecture "A:game_config_rtl" for hierarchy "game_config:game_config_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 284
+Info (12129): Elaborating entity "counter" using architecture "A:counter_rtl" for hierarchy "counter:gameover_timer" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 294
+Info (12129): Elaborating entity "game_board" using architecture "A:game_board_rtl" for hierarchy "game_board:game_board_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 301
+Info (12129): Elaborating entity "font_logic" using architecture "A:font_logic_rtl" for hierarchy "font_logic:\digits_in_scores:0:digit_font_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 328
+Info (12129): Elaborating entity "font_logic" using architecture "A:font_logic_rtl" for hierarchy "font_logic:\digits_in_scores:1:digit_font_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 328
+Info (12129): Elaborating entity "font_logic" using architecture "A:font_logic_rtl" for hierarchy "font_logic:\digits_in_scores:2:digit_font_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 328
+Info (12129): Elaborating entity "font_logic" using architecture "A:font_logic_rtl" for hierarchy "font_logic:\digits_in_scores:3:digit_font_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 328
+Info (12129): Elaborating entity "score_logic" using architecture "A:score_logic_rtl" for hierarchy "score_logic:scores_calculator" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 339
+Info (12129): Elaborating entity "counter" using architecture "A:counter_rtl" for hierarchy "counter:sound_freq_timer" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 350
+Info (12129): Elaborating entity "sound" using architecture "A:sound_rtl" for hierarchy "sound:sound_module" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 357
+Info (12129): Elaborating entity "bitmap_memory" using architecture "A:bitmap_memory_rtl" for hierarchy "bitmap_memory:game_menu_bitmap_mem" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 366
+Warning (10541): VHDL Signal Declaration warning at bitmap_memory.vhd(21): used implicit default value for signal "rom" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/bitmap_memory.vhd Line: 21
+Info (12129): Elaborating entity "bitmap_generator" using architecture "A:bitmap_generator_rtl" for hierarchy "bitmap_generator:game_menu_bitmap_gen" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 373
+Info (12129): Elaborating entity "bitmap_memory" using architecture "A:bitmap_memory_rtl" for hierarchy "bitmap_memory:game_over_bitmap_mem" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 392
+Warning (10541): VHDL Signal Declaration warning at bitmap_memory.vhd(21): used implicit default value for signal "rom" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/bitmap_memory.vhd Line: 21
+Info (12129): Elaborating entity "bitmap_generator" using architecture "A:bitmap_generator_rtl" for hierarchy "bitmap_generator:game_over_bitmap_gen" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/pong_main.vhd Line: 399
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "bitmap_memory:game_menu_bitmap_mem|rom_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 1
+        Info (286033): Parameter WIDTHAD_A set to 14
+        Info (286033): Parameter NUMWORDS_A set to 14910
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to src/mif/game_menu.mif
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "bitmap_memory:game_over_bitmap_mem|rom_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 1
+        Info (286033): Parameter WIDTHAD_A set to 16
+        Info (286033): Parameter NUMWORDS_A set to 37800
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to src/mif/game_over.mif
+Info (12130): Elaborated megafunction instantiation "bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0"
+Info (12133): Instantiated megafunction "bitmap_memory:game_menu_bitmap_mem|altsyncram:rom_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "1"
+    Info (12134): Parameter "WIDTHAD_A" = "14"
+    Info (12134): Parameter "NUMWORDS_A" = "14910"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "src/mif/game_menu.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7h51.tdf
+    Info (12023): Found entity 1: altsyncram_7h51 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/db/altsyncram_7h51.tdf Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_c8a.tdf
+    Info (12023): Found entity 1: decode_c8a File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/db/decode_c8a.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_smb.tdf
+    Info (12023): Found entity 1: mux_smb File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/db/mux_smb.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0"
+Info (12133): Instantiated megafunction "bitmap_memory:game_over_bitmap_mem|altsyncram:rom_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "1"
+    Info (12134): Parameter "WIDTHAD_A" = "16"
+    Info (12134): Parameter "NUMWORDS_A" = "37800"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "src/mif/game_over.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jh51.tdf
+    Info (12023): Found entity 1: altsyncram_jh51 File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/db/altsyncram_jh51.tdf Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_h8a.tdf
+    Info (12023): Found entity 1: decode_h8a File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/db/decode_h8a.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_1nb.tdf
+    Info (12023): Found entity 1: mux_1nb File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/db/mux_1nb.tdf Line: 23
+Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
+Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
+Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
+Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/src/lib/ball_logic.vhd Line: 89
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1302 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 1285 logic cells
+    Info (21064): Implemented 7 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4805 megabytes
+    Info: Processing ended: Tue Jul 16 10:58:20 2024
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:30
+
+

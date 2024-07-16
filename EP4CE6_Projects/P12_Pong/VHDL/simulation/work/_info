@@ -1,0 +1,266 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+Ebutton_logic
+Z0 w1720209769
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 6
+Z4 dL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/P12_VGA_Text_Gen4/simulation
+Z5 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/P12_VGA_Text_Gen4/src/lib/button_logic.vhd
+Z6 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/P12_VGA_Text_Gen4/src/lib/button_logic.vhd
+l0
+L7 1
+VCRJV0gzDfGhTGY<jCn16a0
+!s100 PY_RUBKbB7hW6LDW_EiB^2
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1720295471
+!i10b 1
+Z9 !s108 1720295469.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/P12_VGA_Text_Gen4/src/lib/button_logic.vhd|
+Z11 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/P12_VGA_Text_Gen4/src/lib/button_logic.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abutton_logic_rtl
+R1
+R2
+R3
+Z14 DEx4 work 12 button_logic 0 22 CRJV0gzDfGhTGY<jCn16a0
+!i122 6
+l29
+L16 83
+VXViTNV0f334MYCQ82j7O61
+!s100 zJAVz>kDz[Iele;16h=Dz3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ebutton_logic_tb
+Z15 w1721119142
+Z16 DPx4 work 7 pack_tb 0 22 VLRFnhV[1M^DV7T:zEL5d3
+R1
+R2
+R3
+!i122 64
+Z17 dL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation
+Z18 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/button_logic_tb.vhd
+Z19 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/button_logic_tb.vhd
+l0
+L7 1
+V^g=8Vk4[;iAez`jh>bMHo3
+!s100 2P@LE<:O0YmjJKJU44@E;2
+R7
+32
+Z20 !s110 1721123841
+!i10b 1
+Z21 !s108 1721123840.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/button_logic_tb.vhd|
+Z23 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/button_logic_tb.vhd|
+!i113 1
+R12
+R13
+Abutton_logic_behav
+R14
+R16
+R1
+R2
+R3
+DEx4 work 15 button_logic_tb 0 22 ^g=8Vk4[;iAez`jh>bMHo3
+!i122 64
+l21
+L10 65
+VhW9;eVC4]_]T>;z8jV<Lg0
+!s100 DzBK8ceZFzPfD7bJN^>LK0
+R7
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R12
+R13
+Pconsts
+Z24 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+R1
+R2
+R3
+!i122 7
+w1720261693
+R4
+8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/P12_VGA_Text_Gen4/src/lib/consts.vhd
+FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/P12_VGA_Text_Gen4/src/lib/consts.vhd
+l0
+L6 1
+Ve1IO?D5L0SJ;[G<WfGnl12
+!s100 K=?l;aeS]HchJ@Cf>;e[W0
+R7
+32
+!s110 1720295540
+!i10b 1
+!s108 1720295540.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/P12_VGA_Text_Gen4/src/lib/consts.vhd|
+!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/P12_VGA_Text_Gen4/src/lib/consts.vhd|
+!i113 1
+R12
+R13
+Ppack_tb
+R1
+R2
+R3
+!i122 65
+w1711661093
+R17
+8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/pack_tb_header.vhd
+FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/pack_tb_header.vhd
+l0
+L5 1
+VVLRFnhV[1M^DV7T:zEL5d3
+!s100 TEcfl97TH4X@@NC75C?Ko2
+R7
+32
+b1
+R20
+!i10b 1
+Z25 !s108 1721123841.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/pack_tb_header.vhd|
+!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/pack_tb_header.vhd|
+!i113 1
+R12
+R13
+Bbody
+R16
+R1
+R2
+R3
+!i122 65
+w1711660441
+8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/pack_tb_body.vhd
+FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/pack_tb_body.vhd
+l0
+L7 1
+V1QAI50iOLbXM=b_z2HmYB0
+!s100 H7TLlMmRZ>YoVAkdkhfb10
+R7
+32
+R20
+!i10b 1
+R25
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/pack_tb_body.vhd|
+!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/pack_tb_body.vhd|
+!i113 1
+R12
+R13
+Escore_logic
+Z26 w1720374572
+R24
+Z27 DPx4 work 6 consts 0 22 e1IO?D5L0SJ;[G<WfGnl12
+R1
+R2
+R3
+!i122 49
+R4
+Z28 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/P12_VGA_Text_Gen4/src/lib/score_logic.vhd
+Z29 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/P12_VGA_Text_Gen4/src/lib/score_logic.vhd
+l0
+L7 1
+VLCLF=Q]mSV?Nj4a1P3^Ja2
+!s100 T6ZPaGb0HP=;1VSng1Kz31
+R7
+32
+Z30 !s110 1720374741
+!i10b 1
+Z31 !s108 1720374741.000000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/P12_VGA_Text_Gen4/src/lib/score_logic.vhd|
+Z33 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/VGA/P12_VGA_Text_Gen4/src/lib/score_logic.vhd|
+!i113 1
+R12
+R13
+Ascore_logic_rtl
+R24
+R27
+R1
+R2
+R3
+Z34 DEx4 work 11 score_logic 0 22 LCLF=Q]mSV?Nj4a1P3^Ja2
+!i122 49
+l63
+L19 188
+VLPb<`0mT5Lk@9Oa5Q]kX@0
+!s100 Zn>WEz[nPNTSK0Kz=IWm]3
+R7
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R12
+R13
+Escore_logic_tb
+Z35 w1721119026
+R16
+R1
+R2
+R3
+!i122 66
+R17
+Z36 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/score_logic_tb.vhd
+Z37 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/score_logic_tb.vhd
+l0
+L7 1
+VSoD:dXSJJ;hz>[XBUhaz;1
+!s100 6l7mB34fdCg>iEG<mfY]h2
+R7
+32
+R20
+!i10b 1
+R25
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/score_logic_tb.vhd|
+!s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/score_logic_tb.vhd|
+!i113 1
+R12
+R13
+Ascore_logic_behav
+R24
+R27
+R34
+R16
+R1
+R2
+R3
+Z39 DEx4 work 14 score_logic_tb 0 22 SoD:dXSJJ;hz>[XBUhaz;1
+!i122 66
+l23
+Z40 L10 80
+Z41 VC8Q2ZhWFh_Fe_B5Tb4>4]2
+Z42 !s100 Xm3PQ[i9dofPnA`X@:L^^0
+R7
+32
+R20
+!i10b 1
+R25
+R38
+Z43 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/score_logic_tb.vhd|
+!i113 1
+R12
+R13
