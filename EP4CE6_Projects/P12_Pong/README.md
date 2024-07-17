@@ -10,7 +10,7 @@ In the Pong game, there are two paddles and a ball. The player controls the left
 3. Upper border of the game board (or screen)
 4. Lower border of the game board (or screen)  
 
-The fonts for the digits are implemented using combinational logic (priority muxes and asynchronous ROMs). Another way to implement them is to use the FPGA's block RAMs (this should give better timing results). I wrote some python scripts to generate VHDL code for the Font ROMs by drawing the desired characters (to be displayed on the VGA monitor) using a simple Tkinter interface.  
+The fonts for the scoreboard's digits are implemented using combinational logic (priority muxes and asynchronous ROMs). Another way to implement them is to use the FPGA's block RAMs (this should give better timing results). I wrote some python scripts to generate VHDL code for the Font ROMs by drawing the desired characters (to be displayed on the VGA monitor) using a simple Tkinter interface.  
 
 The "game menu" and "game over" bitmaps (with respective texts of ``PONG`` and ``GAME OVER``) were generated from a simple MATLAB script that performs thresholding and colour inversion on JPEG files (images containing the ``PONG`` and ``GAME OVER`` texts). The MATLAB script also converts the bitmap images to Memory Initialization Files (.mif) whose contents are loaded into the FPGA's block RAM at compilation time.  
 
