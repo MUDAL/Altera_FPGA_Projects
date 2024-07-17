@@ -132,7 +132,7 @@ The images below illustrate how to achieve this.
 ## Recommendation(s) / Area(s) of improvement 
 1. The text or font aspect of the project can be greatly improved by using ASCII ROMs implemented with block RAMs instead of a purely combinational approach. I used a lot of combinational logic (priority multiplexers) for the digits in the scoreboard. While this wasn't an issue at the end of the day since the design met timing, it won't scale for larger or more complicated projects. With block RAMs, the font ROM's design becomes synchronous and fewer logic elements would be used to implement it.
 
-2. The game can be made more interesting by manipulating the velocity of the ball in other creative ways (i.e. changing the ball's speed and rebound angle after a collision).   
+2. The game can be made more interesting by manipulating the velocity of the ball in other creative ways (i.e. changing the ball's speed and rebound angle after a certain number of collisions).   
 
 ## Helpful resource(s)  
 - FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu  
