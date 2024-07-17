@@ -4,7 +4,7 @@
 ## Description    
 This project implements a classic Pong game with an Altera EP4CE6E22C8N Cyclone IV FPGA board, its tactile buttons and buzzer, and a VGA monitor. The game is designed to be single-player i.e. the player plays against an autonomously controlled opposition.  
 
-In the Pong game, there are two paddles and a ball. The player controls the left paddle using two buttons on the FPGA board. One button enables upward movements, while the other moves the paddle in a downward direction. The right paddle is autonomously controlled by digital logic circuits. The reaction time of the right paddle is adjusted every time the left paddle hits the ball. The changes in the right paddle's response prevent it from being unbeatable. The onboard buzzer generates a 3 kHz sound for a short duration every time it collides with the following game elements:
+In the Pong game, there are two paddles and a ball. The player controls the left paddle using two buttons on the FPGA board. One button enables upward movements, while the other moves the paddle in a downward direction. The right paddle is autonomously controlled by digital logic circuits. The reaction time of the right paddle is adjusted every time the left paddle hits the ball. The changes in the right paddle's response prevent it from being unbeatable. The onboard buzzer generates a 3 kHz sound for a short duration every time the ball collides with the following game elements:
 1. Left paddle  
 2. Right paddle  
 3. Upper border of the game board (or screen)
