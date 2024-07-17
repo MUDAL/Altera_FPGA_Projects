@@ -60,7 +60,7 @@ The images below illustrate how to achieve this.
 ## Video Demo  
 - [First Demo](https://drive.google.com/file/d/1IXlxhgczkGYpq6xn5LyXeJhAHxbl6T_r/view?usp=sharing)      
   
-## Images    
+## Tests    
 ### 1. Testing the ``Button Debounce`` logic with a 2-Channel Digital Storage Oscilloscope
 ![20240630_124618](https://github.com/user-attachments/assets/93ae3ff8-d681-4c52-8472-368ca29ce7ec)    
 ![20240630_125431](https://github.com/user-attachments/assets/60c4bf0d-72a1-4d11-982d-2a8d585f6dd7)    
@@ -70,6 +70,13 @@ The images below illustrate how to achieve this.
 ![Screenshot (593)_LI](https://github.com/user-attachments/assets/5754ca1e-477a-47f2-adf1-56af04dc2088)  
 ### 3. Testing 3 kHz sound generation for in-game collisions  
 ![20240717_124743](https://github.com/user-attachments/assets/5f739067-aae7-484f-896a-1eaeeb6e2829)  
+
+## RTL compilation report
+### 1. Resource utilization    
+![Screenshot (609)](https://github.com/user-attachments/assets/61675dff-8510-40d9-a36c-3ea4aa5ab0f2)   
+
+### 2. Timing report  
+![Screenshot (610)](https://github.com/user-attachments/assets/ccd2067b-9c4b-46b9-ad63-58cc183792fb)  
    
 ## Simulation report (ModelSim transcript) for the ``score_logic`` module 
 ### 1. Stimulus generator (from the **score_logic** testbench)  
