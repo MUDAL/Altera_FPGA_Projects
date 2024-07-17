@@ -56,8 +56,8 @@ The images below illustrate how to achieve this.
 ![Screenshot (593)](https://github.com/user-attachments/assets/00ae062d-da04-4f70-ac43-62da3b28a197)  
 ![Screenshot (593)_LI](https://github.com/user-attachments/assets/5754ca1e-477a-47f2-adf1-56af04dc2088)  
 ### 3. Testing 3 kHz sound generation for in-game collisions  
-![20240717_122220](https://github.com/user-attachments/assets/bb1eb89b-afcc-448a-9ef1-4f40fe8cdd8d)   
-
+![20240717_124743](https://github.com/user-attachments/assets/5f739067-aae7-484f-896a-1eaeeb6e2829)  
+   
 ## Simulation report (ModelSim transcript) for the ``score_logic`` module 
 ### 1. Stimulus generator (from the **score_logic** testbench)  
 ```
