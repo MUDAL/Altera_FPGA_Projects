@@ -2,8 +2,21 @@
 ![20240716_162535](https://github.com/user-attachments/assets/9ee192a8-05d6-4030-ab9e-0dee5d5aeabc)  
 
 ## Description    
-- [To be added]   
-- Check additional explanations in the ``README.md`` of the ``MATLAB`` and ``Python`` directories.  
+This project implements a classic Pong game with an Altera EP4CE6E22C8N Cyclone IV FPGA board, its onboard tactile buttons and buzzer, and a VGA monitor. The game is designed to be single-player i.e. the player plays against an autonomously controlled opposition.  
+
+In the Pong game, there are two paddles and a ball. The player controls the left paddle using two buttons on the FPGA board. One button enables upward movements, while the other moves the paddle in a downward direction. The right paddle is autonomously controlled by digital logic circuits. The reaction time of the right paddle is adjusted every time the left paddle hits the ball. The change in the right paddle's response prevents it from being unbeatable. The onboard buzzer generates a 3 kHz for a short duration every time it collides with the following game elements:
+1. Left paddle  
+2. Right paddle  
+3. Upper border of the game board (or screen)
+4. Lower border of the game board (or screen)  
+
+The fonts for the digits are implemented using combinational logic (priority muxes and asynchronous ROMs). Another way to implement them is to use the FPGA's block RAMs (this should give better timing results). I wrote some python scripts to generate VHDL code for the Font ROMs by drawing the desired characters (to be displayed on the VGA monitor) using a simple Tkinter interface.  
+
+The game menu and game over bitmaps (with respective texts of ``PONG`` and ``GAME OVER``) were generated from a simple MATLAB script that performs thresholding and colour inversion on JPEG files (images containing the ``PONG`` and ``GAME OVER`` texts). The MATLAB script also converts the bitmap images to Memory Initialization Files (.mif) whose contents are loaded into the FPGA's block RAM at compilation time.  
+
+The design is fully constrained and it successfully meets all timing requirements (target frequency of 50 MHz, setup and hold time requirements, etc). The constraints file (pong_main.sdc) can be found in the ``EP4CE6_Projects/P12_Pong/VHDL/`` directory.  
+
+For additional explanations, kindly check the ``README.md`` of the ``MATLAB`` and ``Python`` directories.  
 
 ## Tools  
 - EP4CE6E22C8N Cyclone IV FPGA development board
