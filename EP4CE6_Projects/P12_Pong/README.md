@@ -129,6 +129,9 @@ The images below illustrate how to achieve this.
 #    Time: 3030 ns  Iteration: 4  Instance: /score_logic_tb
 ```
 
+## Recommendation(s) / Area(s) of improvement 
+The text or font aspect of the project can be greatly improved by using ASCII ROMs implemented with block RAMs instead of a purely combinational approach. I used a lot of combinational logic (priority multiplexers) for the digits in the scoreboard. While this wasn't an issue at the end of the day since the design met timing, it won't scale for larger or more complicated projects. With block RAMs, the font ROM's design becomes synchronous and fewer logic elements would be used to implement it.  
+
 ## Helpful resource(s)  
 - FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu  
 - [tinyvga.com](http://tinyvga.com/)
