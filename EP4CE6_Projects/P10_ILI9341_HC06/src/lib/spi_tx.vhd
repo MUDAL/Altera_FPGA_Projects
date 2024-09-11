@@ -31,8 +31,6 @@ end spi_tx;
 architecture spi_tx_rtl of spi_tx is
    -- Reset period (must exceed 10 uS. 15 uS is chosen)
    -- 15 uS = 30 clock cycles for a 2 MHz clock
-   -- To minimize resource utilization due to counters, lower resolution ...
-   -- counters are reused for all time delays required by the TFT display.
    -- 1 mS = 2000 clock cycles for a 2 MHz clock.
    ------------------------------------------------------------------
    constant CNT_RST: integer := 15 * (CLK_FREQ / 1_000_000) - 1; -- 15 uS
