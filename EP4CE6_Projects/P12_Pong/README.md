@@ -58,7 +58,9 @@ The images below illustrate how to achieve this.
 ![Screenshot (543)](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/b380e5d8-d0e3-4c92-b07d-7dc2087eb06e)  
 
 ## Video Demo  
-- [First Demo](https://drive.google.com/file/d/1IXlxhgczkGYpq6xn5LyXeJhAHxbl6T_r/view?usp=sharing)      
+- [First Demo](https://drive.google.com/file/d/1IXlxhgczkGYpq6xn5LyXeJhAHxbl6T_r/view?usp=sharing)
+- [I beat the AI](https://drive.google.com/file/d/1HaW-FE-_YOo6Ki-ZLMIf9oCT8mnksFbz/view?usp=sharing)
+- [The AI beat me]()    
   
 ## Tests    
 ### 1. Testing the ``Button Debounce`` logic with a 2-Channel Digital Storage Oscilloscope
