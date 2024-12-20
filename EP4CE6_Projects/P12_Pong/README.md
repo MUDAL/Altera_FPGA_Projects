@@ -60,7 +60,7 @@ The images below illustrate how to achieve this.
 ## Video Demo  
 - [First Demo](https://drive.google.com/file/d/1IXlxhgczkGYpq6xn5LyXeJhAHxbl6T_r/view?usp=sharing)  
 - [I beat the AI](https://drive.google.com/file/d/1HaW-FE-_YOo6Ki-ZLMIf9oCT8mnksFbz/view?usp=sharing)  
-- [The AI beat me]((https://drive.google.com/file/d/1HirvrqGZgTQL_skde4kLDFoBrUQi2yZQ/view?usp=sharing)    
+- [The AI beat me](https://drive.google.com/file/d/1HirvrqGZgTQL_skde4kLDFoBrUQi2yZQ/view?usp=sharing)    
   
 ## Tests    
 ### 1. Testing the ``Button Debounce`` logic with a 2-Channel Digital Storage Oscilloscope
