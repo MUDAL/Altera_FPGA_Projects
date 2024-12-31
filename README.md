@@ -18,12 +18,14 @@ Source: [Vendor's Page](https://a.aliexpress.com/_EQstVsj)
 6. HC-05 or HC-06 Bluetooth module  
 7. VGA monitor and cable
 8. PS/2 keyboard
-9. STM32 Blue Pill board or any MCU with UART, SPI, and USB peripherals.    
+9. STM32 Blue Pill board or any MCU with UART, SPI, and USB peripherals  
+10. CH340 USB-TTL converter  
 
 ## Optional components  
 Here's a list of components that I used for additional verification of my RTL designs beyond testbenches.  
-1. Saleae 24MHz, 8 Channel USB logic analyzer
-2. DSO150 handheld oscilloscope  
+1. Saleae 24MHz, 8 Channel USB logic analyzer  
+2. Zeeweii DSO3D12 oscilloscope + multimeter + signal generator (3 in 1)   
+3. DSO150 handheld oscilloscope  
 
 ## Important software  
 1. Intel Quartus (Quartus Prime 20.1)  
