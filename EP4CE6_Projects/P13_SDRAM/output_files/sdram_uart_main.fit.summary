@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Dec 31 23:49:42 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : sdram_uart_main
+Top-level Entity Name : sdram_uart_main
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 323 / 6,272 ( 5 % )
+    Total combinational functions : 320 / 6,272 ( 5 % )
+    Dedicated logic registers : 175 / 6,272 ( 3 % )
+Total registers : 175
+Total pins : 43 / 92 ( 47 % )
+Total virtual pins : 0
+Total memory bits : 128 / 276,480 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )
