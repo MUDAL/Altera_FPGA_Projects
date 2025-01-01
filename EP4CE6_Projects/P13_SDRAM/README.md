@@ -25,10 +25,9 @@
 - The ``VHDL`` design files are located in the ``src`` and ``lib`` directories  
 - The top-level design is the ``sdram_uart_main.vhd``  
 
-## Pinouts  
-- From the ``sdram_uart_main.qsf`` file:
+## Pinouts   
+From the ``sdram_uart_main.qsf`` file:
 ```
-
 set_location_assignment PIN_88 -to buttons[0]
 set_location_assignment PIN_91 -to buttons[1]
 set_location_assignment PIN_59 -to addr[11]
@@ -72,7 +71,6 @@ set_location_assignment PIN_25 -to rst_n
 set_location_assignment PIN_69 -to we_n
 set_location_assignment PIN_43 -to sclk
 set_location_assignment PIN_115 -to uart_out
-
 ```
 
 ## Video Demo  
