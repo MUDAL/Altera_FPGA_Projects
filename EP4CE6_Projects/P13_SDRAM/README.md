@@ -87,4 +87,6 @@ set_location_assignment PIN_115 -to uart_out
 ## Helpful resource(s)  
 - [SDRAM Wikipedia](https://en.wikipedia.org/wiki/Synchronous_dynamic_random-access_memory)
 - [A Practical Introduction to SDR SDRAM Memories Using an FPGA](https://www.hackster.io/salvador-canas/a-practical-introduction-to-sdr-sdram-memories-using-an-fpga-8f5949)    
-- [Matthew Hagerty: FPGA VHDL SDRAM Controller](https://dnotq.io/sdram/sdram.html)  
+- [Matthew Hagerty: FPGA VHDL SDRAM Controller](https://dnotq.io/sdram/sdram.html)
+- [Hynix HY57V641620ETP-H SDRAM Datasheet](https://drive.google.com/file/d/1KJ6eZQNpEoCSRrVL5XWgRT3wEJ9XMWKl/view?usp=sharing)
+- [Micron Synchronous DRAM: MT48LC series](https://drive.google.com/file/d/1-jcAcKIaVkb3LXomLF-RawIMkeygFJGp/view?usp=sharing)     
