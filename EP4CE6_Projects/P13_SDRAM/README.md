@@ -85,4 +85,6 @@ set_location_assignment PIN_115 -to uart_out
 ![Screenshot (634)](https://github.com/user-attachments/assets/811ff500-41d0-45fe-9b29-d8f1cc9fa9b2)  
 
 ## Helpful resource(s)  
-[TO BE ADDED]  
+- [SDRAM Wikipedia](https://en.wikipedia.org/wiki/Synchronous_dynamic_random-access_memory)
+- [A Practical Introduction to SDR SDRAM Memories Using an FPGA](https://mail.google.com/mail/u/1/?hl=en#inbox/KtbxLrjGPdrkbKqgMNdVSKqmSrNPKRXdxV)  
+- [Matthew Hagerty: FPGA VHDL SDRAM Controller](https://dnotq.io/sdram/sdram.html)  
