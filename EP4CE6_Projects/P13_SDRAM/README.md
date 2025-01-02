@@ -1,7 +1,8 @@
 # Interfacing the EP4CE6 FPGA board with an SDRAM
  
 ## Description    
-[TO BE ADDED]
+[TO BE ADDED]  
+![Screenshot (635)](https://github.com/user-attachments/assets/d2ff5056-06fe-4801-97c6-8372c032a13a)  
 
 ## Tools  
 - EP4CE6E22C8N Cyclone IV FPGA development board
