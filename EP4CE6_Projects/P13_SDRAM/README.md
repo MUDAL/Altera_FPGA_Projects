@@ -2,7 +2,7 @@
  
 ## Description    
 [TO BE ADDED]  
-![sdram_controller_flowchart drawio_page-0001](https://github.com/user-attachments/assets/f293b8dc-ebec-4dbd-8c5b-98ab187111dd)  
+![sdram_controller_flowchart drawio_page-0001](https://github.com/user-attachments/assets/ef4dcd30-cab8-49b6-8f0f-3e22f9b4544a)  
 ![Screenshot (635)](https://github.com/user-attachments/assets/d2ff5056-06fe-4801-97c6-8372c032a13a)  
 
 ## Tools  
