@@ -4,7 +4,7 @@
 This project aims to design and test a simple SDRAM controller for accessing a single data rate (SDR) SDRAM. The workflow is described as follows:
 1. A button on the FPGA board is pressed to move data from a ROM to the SDRAM.  
 2. When a second button is pressed, data will be transferred from the SDRAM to a FIFO buffer.  
-3. Each data element in the FIFO buffer will be sent to a USB-TTL converter by a UART transmitter. This enables viewing data stored in the SDRAM on a serial terminal application running on a PC.  
+3. Each data element in the FIFO buffer will be sent to a USB-TTL converter by a UART transmitter. This will allow us to view the data stored in the SDRAM on a serial terminal application running on a PC.  
 
 ![sdram_project_workflow drawio_page-0001](https://github.com/user-attachments/assets/122e7276-f202-42e0-8e87-cd13c988150d)   
 ![sdram_controller_flowchart drawio_page-0001](https://github.com/user-attachments/assets/e37ddb11-f410-4444-a604-42459584f0f3)   
