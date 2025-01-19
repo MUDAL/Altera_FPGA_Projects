@@ -47,6 +47,7 @@ begin
    
    -- Select a digit using the switching counter and shift register
    sel <= shift_reg;
+   
    shift_register: process(rst_n,clk)
    begin
       if rst_n = '0' then

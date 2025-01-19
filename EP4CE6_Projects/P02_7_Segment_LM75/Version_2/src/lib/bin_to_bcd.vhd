@@ -93,7 +93,7 @@ begin
        else    cnt_reg;
    
    -- Top-Level Outputs
-   bcd <= std_logic_vector(bcd_reg);
+   bcd  <= std_logic_vector(bcd_reg);
    done <= done_reg;
    
    registers: process(rst_n,clk)

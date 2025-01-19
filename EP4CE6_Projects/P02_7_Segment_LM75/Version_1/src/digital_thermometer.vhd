@@ -42,11 +42,11 @@ begin
    begin
       if rst_n = '0' then
          clks <= (others => '0');
-         en <= '1';
+         en   <= '1';
       elsif rising_edge(clk) then
          if clks = to_unsigned(24_999_999,clks'length) then
             clks <= (others => '0');
-            en <= not conv_done;
+            en   <= not conv_done;
          else
             clks <= clks + 1;
          end if;

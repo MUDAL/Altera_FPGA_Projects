@@ -141,7 +141,7 @@ begin
       end case;
    end process;  
    
-   -- Mooore output
+   -- Moore output
    done <= '1' when state = ST_DONE or state = ST_STOP else '0'; 
    
    mealy_outputs: process(state,
