@@ -6,8 +6,8 @@ library work;
 -- FPGA Exercise: Displaying a bitmap image on a VGA monitor
 
 entity vga_main is
-   port(rst_n: in std_logic;
-        clk:   in std_logic;
+   port(rst_n:  in std_logic;
+        clk:    in std_logic;
         hsync: out std_logic;
         vsync: out std_logic;
         rgb:   out std_logic_vector(2 downto 0));
