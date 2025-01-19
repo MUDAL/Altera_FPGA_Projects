@@ -1,5 +1,5 @@
 Analysis & Synthesis report for distance_sensor
-Tue May 28 23:49:33 2024
+Sun Jan 19 11:24:06 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 28 23:49:33 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan 19 11:24:06 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; distance_sensor                             ;
 ; Top-level Entity Name              ; distance_sensor                             ;
@@ -384,12 +384,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 28 23:49:20 2024
+    Info: Processing started: Sun Jan 19 11:23:52 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off distance_sensor -c distance_sensor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/bin_to_bcd.vhd
-    Info (12022): Found design unit 1: bin_to_bcd-bin_to_bcd_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/lib/bin_to_bcd.vhd Line: 17
+    Info (12022): Found design unit 1: bin_to_bcd-bin_to_bcd_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/lib/bin_to_bcd.vhd Line: 18
     Info (12023): Found entity 1: bin_to_bcd File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/lib/bin_to_bcd.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file src/distance_sensor.vhd
     Info (12022): Found design unit 1: distance_sensor-distance_sensor_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/distance_sensor.vhd Line: 35
@@ -407,10 +407,10 @@ Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mappin
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
 Info (12127): Elaborating entity "distance_sensor" for the top level hierarchy
-Info (12129): Elaborating entity "hcsr04" using architecture "A:hcsr04_rtl" for hierarchy "hcsr04:hcsr04_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/distance_sensor.vhd Line: 83
-Info (12129): Elaborating entity "bin_to_bcd" using architecture "A:bin_to_bcd_rtl" for hierarchy "bin_to_bcd:bin_to_bcd_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/distance_sensor.vhd Line: 87
-Info (12129): Elaborating entity "seg_display" using architecture "A:seg_display_rtl" for hierarchy "seg_display:display_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/distance_sensor.vhd Line: 91
-Info (12129): Elaborating entity "seg_rom" using architecture "A:seg_rom_rtl" for hierarchy "seg_display:display_inst|seg_rom:rom" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/lib/seg_display.vhd Line: 93
+Info (12129): Elaborating entity "hcsr04" using architecture "A:hcsr04_rtl" for hierarchy "hcsr04:hcsr04_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/distance_sensor.vhd Line: 84
+Info (12129): Elaborating entity "bin_to_bcd" using architecture "A:bin_to_bcd_rtl" for hierarchy "bin_to_bcd:bin_to_bcd_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/distance_sensor.vhd Line: 93
+Info (12129): Elaborating entity "seg_display" using architecture "A:seg_display_rtl" for hierarchy "seg_display:display_inst" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/distance_sensor.vhd Line: 101
+Info (12129): Elaborating entity "seg_rom" using architecture "A:seg_rom_rtl" for hierarchy "seg_display:display_inst|seg_rom:rom" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/lib/seg_display.vhd Line: 96
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "seg_display:display_inst|seg_rom:rom|rom" is uninferred due to inappropriate RAM size File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/lib/seg_rom.vhd Line: 15
 Warning (113028): 6 out of 16 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/db/distance_sensor.ram0_seg_rom_bebb4cdc.hdl.mif Line: 1
@@ -418,7 +418,7 @@ Warning (113028): 6 out of 16 addresses are uninitialized. The Quartus Prime sof
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
-Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/lib/seg_display.vhd Line: 56
+Info (13000): Registers with preset signals will power-up high File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P04_7_Segment_HCSR04/Version_2/src/lib/seg_display.vhd Line: 58
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -428,9 +428,9 @@ Info (21057): Implemented 333 device resources after synthesis - the final resou
     Info (21059): Implemented 13 output pins
     Info (21061): Implemented 317 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4780 megabytes
-    Info: Processing ended: Tue May 28 23:49:33 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 4772 megabytes
+    Info: Processing ended: Sun Jan 19 11:24:06 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:29
 
 

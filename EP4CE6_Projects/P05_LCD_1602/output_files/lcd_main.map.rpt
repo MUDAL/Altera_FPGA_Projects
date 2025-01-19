@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lcd_main
-Tue May 21 21:34:24 2024
+Sun Jan 19 11:33:48 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 21 21:34:24 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan 19 11:33:48 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; lcd_main                                    ;
 ; Top-level Entity Name              ; lcd_main                                    ;
@@ -302,7 +302,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -312,7 +312,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 21 21:34:11 2024
+    Info: Processing started: Sun Jan 19 11:33:31 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcd_main -c lcd_main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -323,16 +323,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file src/lib
     Info (12022): Found design unit 1: lcd_driver-lcd_driver_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/lcd_driver.vhd Line: 20
     Info (12023): Found entity 1: lcd_driver File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/lcd_driver.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file src/lib/prog_mem.vhd
-    Info (12022): Found design unit 1: prog_mem-prog_mem_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/prog_mem.vhd Line: 14
+    Info (12022): Found design unit 1: prog_mem-prog_mem_rtl File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/prog_mem.vhd Line: 15
     Info (12023): Found entity 1: prog_mem File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/prog_mem.vhd Line: 8
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
 Info (12127): Elaborating entity "lcd_main" for the top level hierarchy
-Info (12129): Elaborating entity "prog_mem" using architecture "A:prog_mem_rtl" for hierarchy "prog_mem:program_memory" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lcd_main.vhd Line: 41
-Info (12129): Elaborating entity "lcd_driver" using architecture "A:lcd_driver_rtl" for hierarchy "lcd_driver:lcd_1602" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lcd_main.vhd Line: 48
+Info (12129): Elaborating entity "prog_mem" using architecture "A:prog_mem_rtl" for hierarchy "prog_mem:program_memory" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lcd_main.vhd Line: 42
+Info (12129): Elaborating entity "lcd_driver" using architecture "A:lcd_driver_rtl" for hierarchy "lcd_driver:lcd_1602" File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lcd_main.vhd Line: 51
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "prog_mem:program_memory|rom" is uninferred due to inappropriate RAM size File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/prog_mem.vhd Line: 18
+    Info (276004): RAM logic "prog_mem:program_memory|rom" is uninferred due to inappropriate RAM size File: L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P05_LCD_1602/src/lib/prog_mem.vhd Line: 20
 Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
 Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
 Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
@@ -346,9 +346,9 @@ Info (21057): Implemented 127 device resources after synthesis - the final resou
     Info (21059): Implemented 11 output pins
     Info (21061): Implemented 114 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4781 megabytes
-    Info: Processing ended: Tue May 21 21:34:24 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 4779 megabytes
+    Info: Processing ended: Sun Jan 19 11:33:48 2025
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:29
 
 

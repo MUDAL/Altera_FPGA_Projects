@@ -6,11 +6,12 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity bin_to_bcd is
    generic(DATA_WIDTH: integer := 24);
+   
    port(rst_n: in std_logic;
-        clk: in std_logic;
-        en: in std_logic;
-        bin: in std_logic_vector(DATA_WIDTH - 1 downto 0);
-        bcd: out std_logic_vector(15 downto 0);
+        clk:   in std_logic;
+        en:    in std_logic;
+        bin:   in std_logic_vector(DATA_WIDTH - 1 downto 0);
+        bcd:  out std_logic_vector(15 downto 0);
         done: out std_logic);
 end bin_to_bcd;
 
@@ -22,29 +23,34 @@ architecture bin_to_bcd_rtl of bin_to_bcd is
    -- Maximum distance is approximately = 23200 * 172 = 3,990,400.
    -- Using the value above (3,990,400), a maximum of 7 BCD digits  
    -- would be required to represent the distance measurement. 
-   type fsm is (ST_IDLE, ST_CALC, ST_DONE);
-   signal state: fsm;
+   type fsm is (ST_IDLE, 
+                ST_CALC, 
+                ST_DONE);
+   signal state:      fsm;
    signal next_state: fsm;
-   signal cnt_reg: integer range DATA_WIDTH - 1 downto 0;
-   signal cnt_next: integer range DATA_WIDTH - 1 downto 0;
-   signal bin_reg: std_logic_vector(DATA_WIDTH - 1 downto 0);
-   signal bin_next: std_logic_vector(DATA_WIDTH - 1 downto 0);
-   signal shift_reg: unsigned(4 + DATA_WIDTH - 1 downto 0);
+   ------------------------------------------------------------------
+   signal cnt_reg:    integer range DATA_WIDTH - 1 downto 0;
+   signal cnt_next:   integer range DATA_WIDTH - 1 downto 0;
+   signal bin_reg:    std_logic_vector(DATA_WIDTH - 1 downto 0);
+   signal bin_next:   std_logic_vector(DATA_WIDTH - 1 downto 0);
+   signal shift_reg:  unsigned(4 + DATA_WIDTH - 1 downto 0);
    signal shift_next: unsigned(4 + DATA_WIDTH - 1 downto 0);
-   signal bcd_d0: unsigned(3 downto 0);
-   signal bcd_d1: unsigned(3 downto 0);
-   signal bcd_d2: unsigned(3 downto 0);
-   signal bcd_d3: unsigned(3 downto 0);
-   signal bcd_d4: unsigned(3 downto 0);
-   signal bcd_d5: unsigned(3 downto 0);
-   signal bcd_d6: unsigned(3 downto 0);
-   signal bcd_out: unsigned(15 downto 0);
-   signal bcd_reg: unsigned(15 downto 0);
-   signal bcd_next: unsigned(15 downto 0);
-   signal done_reg: std_logic;
-   signal done_next: std_logic;
+   signal bcd_d0:     unsigned(3 downto 0);
+   signal bcd_d1:     unsigned(3 downto 0);
+   signal bcd_d2:     unsigned(3 downto 0);
+   signal bcd_d3:     unsigned(3 downto 0);
+   signal bcd_d4:     unsigned(3 downto 0);
+   signal bcd_d5:     unsigned(3 downto 0);
+   signal bcd_d6:     unsigned(3 downto 0);
+   signal bcd_out:    unsigned(15 downto 0);
+   signal bcd_reg:    unsigned(15 downto 0);
+   signal bcd_next:   unsigned(15 downto 0);
+   signal done_reg:   std_logic;
+   signal done_next:  std_logic;
 begin
-   next_state_logic: process(state,en,cnt_reg)
+   next_state_logic: process(state,
+                             en,
+                             cnt_reg)
    begin
       next_state <= state;
       case state is
@@ -52,24 +58,18 @@ begin
             if en = '1' then
                next_state <= ST_CALC;
             end if;
+            
          when ST_CALC =>
             if cnt_reg = 0 then
                next_state <= ST_DONE;
             end if;
+            
          when ST_DONE =>
             if en = '0' then
                next_state <= ST_IDLE;
             end if;
+            
       end case;
-   end process;
-   
-   state_register: process(rst_n,clk)
-   begin
-      if rst_n = '0' then
-         state <= ST_IDLE;
-      elsif rising_edge(clk) then
-         state <= next_state;
-      end if;
    end process;
 
    -- Concatenate required BCD digits
@@ -117,28 +117,30 @@ begin
        
    -- Mealy Output
    -- Counter to count number of left shifts
-   cnt_next <=  cnt_reg - 1    when state = ST_CALC and cnt_reg > 0
-       else    DATA_WIDTH - 1  when state = ST_DONE
+   cnt_next <=  cnt_reg - 1     when state = ST_CALC and cnt_reg > 0
+       else     DATA_WIDTH - 1  when state = ST_DONE
        else     cnt_reg;
    
    -- Top-Level Outputs
-   bcd <= std_logic_vector(bcd_reg);
+   bcd  <= std_logic_vector(bcd_reg);
    done <= done_reg;
    
    registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
-         cnt_reg <= DATA_WIDTH - 1;
-         bin_reg <= (others => '0');
+         state     <= ST_IDLE;
+         cnt_reg   <= DATA_WIDTH - 1;
+         bin_reg   <= (others => '0');
          shift_reg <= (others => '0');
-         bcd_reg <= (others => '0');
-         done_reg <= '0';
+         bcd_reg   <= (others => '0');
+         done_reg  <= '0';
       elsif rising_edge(clk) then
-         cnt_reg <= cnt_next;
-         bin_reg <= bin_next;
+         state     <= next_state;
+         cnt_reg   <= cnt_next;
+         bin_reg   <= bin_next;
          shift_reg <= shift_next;
-         bcd_reg <= bcd_next;
-         done_reg <= done_next;
+         bcd_reg   <= bcd_next;
+         done_reg  <= done_next;
       end if;
    end process;
 end bin_to_bcd_rtl;

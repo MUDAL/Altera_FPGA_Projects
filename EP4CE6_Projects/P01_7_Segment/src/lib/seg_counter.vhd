@@ -2,13 +2,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
---4-bit generic counter for each digit or segment ...
---of the 4-digit 7 segment display
+-- 4-bit generic counter for each digit or segment ...
+-- of the 4-digit 7 segment display.
 
 entity seg_counter is
    generic(PLACE_VALUE: integer := 1);
-   port(rst_n: in std_logic;
-        clk: in std_logic;
+   
+   port(rst_n:      in std_logic;
+        clk:        in std_logic;
         digit_out: out std_logic_vector(3 downto 0));
 end seg_counter;
 
@@ -20,10 +21,11 @@ architecture seg_counter_rtl of seg_counter is
    -- Maximum clock cycles (10 kHz) for a digit = 10,000 x place value
    constant HALF_CYCLE: integer := 2499;
    constant DIGIT_CLKS: integer := (PLACE_VALUE * 10_000) - 1;
-   signal cnt1: integer range 0 to HALF_CYCLE;
-   signal cnt2: integer range 0 to DIGIT_CLKS;
-   signal tick: std_logic; 
-   signal rise: std_logic; -- Rising edge of 10 kHz clock
+   ------------------------------------------------------------------
+   signal cnt1:  integer range 0 to HALF_CYCLE;
+   signal cnt2:  integer range 0 to DIGIT_CLKS;
+   signal tick:  std_logic; 
+   signal rise:  std_logic; -- Rising edge of 10 kHz clock
    signal digit: unsigned(3 downto 0);
 begin
    clock_10kHz: process(rst_n,clk)
@@ -41,7 +43,8 @@ begin
       end if;
    end process;
    
-   edge_detector: rise <= '1' when tick = '1' and cnt1 = 0 else '0';
+   -- Rising edge detector
+   rise <= '1' when tick = '1' and cnt1 = 0 else '0';
    
    clock_counter_10kHz: process(rst_n,clk)
    begin
@@ -58,7 +61,8 @@ begin
       end if;
    end process;
    
-   buffered_output: digit_out <= std_logic_vector(digit);  
+   -- Buffered output
+   digit_out <= std_logic_vector(digit);  
    
    digit_counter: process(rst_n,clk)
    begin

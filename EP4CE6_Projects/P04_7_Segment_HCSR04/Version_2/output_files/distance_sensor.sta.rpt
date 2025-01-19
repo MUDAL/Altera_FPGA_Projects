@@ -1,5 +1,5 @@
 Timing Analyzer report for distance_sensor
-Tue May 28 23:49:45 2024
+Sun Jan 19 11:24:19 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -557,11 +557,6 @@ No paths to report.
 ; Slack ; From Node                                ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.400 ; seg_display:display_inst|digit_index[1]  ; seg_display:display_inst|digit_index[1]  ; clk          ; clk         ; 0.000        ; 0.074      ; 0.669      ;
-; 0.401 ; hcsr04:hcsr04_inst|trig_reg              ; hcsr04:hcsr04_inst|trig_reg              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; hcsr04:hcsr04_inst|done_reg              ; hcsr04:hcsr04_inst|done_reg              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; hcsr04:hcsr04_inst|state.ST_IDLE         ; hcsr04:hcsr04_inst|state.ST_IDLE         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; hcsr04:hcsr04_inst|new_io_reg            ; hcsr04:hcsr04_inst|new_io_reg            ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; hcsr04:hcsr04_inst|old_io_reg            ; hcsr04:hcsr04_inst|old_io_reg            ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[26] ; bin_to_bcd:bin_to_bcd_inst|shift_reg[26] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[22] ; bin_to_bcd:bin_to_bcd_inst|shift_reg[22] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[18] ; bin_to_bcd:bin_to_bcd_inst|shift_reg[18] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
@@ -590,18 +585,23 @@ No paths to report.
 ; 0.401 ; hcsr04:hcsr04_inst|micro_clks[9]         ; hcsr04:hcsr04_inst|micro_clks[9]         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; hcsr04:hcsr04_inst|micro_clks[10]        ; hcsr04:hcsr04_inst|micro_clks[10]        ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.401 ; en                                       ; en                                       ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; hcsr04:hcsr04_inst|trig_reg              ; hcsr04:hcsr04_inst|trig_reg              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; hcsr04:hcsr04_inst|done_reg              ; hcsr04:hcsr04_inst|done_reg              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; hcsr04:hcsr04_inst|state.ST_IDLE         ; hcsr04:hcsr04_inst|state.ST_IDLE         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; hcsr04:hcsr04_inst|new_io_reg            ; hcsr04:hcsr04_inst|new_io_reg            ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; hcsr04:hcsr04_inst|old_io_reg            ; hcsr04:hcsr04_inst|old_io_reg            ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
 ; 0.402 ; hcsr04:hcsr04_inst|micro_clks[15]        ; hcsr04:hcsr04_inst|micro_clks[15]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; hcsr04:hcsr04_inst|micro_clks[12]        ; hcsr04:hcsr04_inst|micro_clks[12]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; hcsr04:hcsr04_inst|micro_clks[13]        ; hcsr04:hcsr04_inst|micro_clks[13]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; hcsr04:hcsr04_inst|micro_clks[14]        ; hcsr04:hcsr04_inst|micro_clks[14]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.415 ; seg_display:display_inst|digit_index[0]  ; seg_display:display_inst|digit_index[0]  ; clk          ; clk         ; 0.000        ; 0.074      ; 0.684      ;
-; 0.416 ; hcsr04:hcsr04_inst|state.ST_TRIG         ; hcsr04:hcsr04_inst|state.ST_TRIG         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.684      ;
 ; 0.416 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[21] ; bin_to_bcd:bin_to_bcd_inst|shift_reg[21] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.684      ;
 ; 0.416 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[17] ; bin_to_bcd:bin_to_bcd_inst|shift_reg[17] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.684      ;
 ; 0.416 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[13] ; bin_to_bcd:bin_to_bcd_inst|shift_reg[13] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.684      ;
 ; 0.416 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[9]  ; bin_to_bcd:bin_to_bcd_inst|shift_reg[9]  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.684      ;
 ; 0.416 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[5]  ; bin_to_bcd:bin_to_bcd_inst|shift_reg[5]  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.684      ;
 ; 0.416 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[1]  ; bin_to_bcd:bin_to_bcd_inst|shift_reg[1]  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.684      ;
+; 0.416 ; hcsr04:hcsr04_inst|state.ST_TRIG         ; hcsr04:hcsr04_inst|state.ST_TRIG         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.684      ;
 ; 0.462 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[18] ; bin_to_bcd:bin_to_bcd_inst|shift_reg[17] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.730      ;
 ; 0.464 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[17] ; bin_to_bcd:bin_to_bcd_inst|shift_reg[19] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.732      ;
 ; 0.467 ; seg_display:display_inst|shift_reg[3]    ; seg_display:display_inst|shift_reg[0]    ; clk          ; clk         ; 0.000        ; 0.074      ; 0.736      ;
@@ -618,9 +618,9 @@ No paths to report.
 ; 0.479 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[7]  ; bin_to_bcd:bin_to_bcd_inst|shift_reg[9]  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.747      ;
 ; 0.480 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[7]  ; bin_to_bcd:bin_to_bcd_inst|shift_reg[10] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.748      ;
 ; 0.483 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[12] ; bin_to_bcd:bin_to_bcd_inst|shift_reg[13] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.751      ;
-; 0.485 ; hcsr04:hcsr04_inst|state.ST_TRIG         ; hcsr04:hcsr04_inst|trig_reg              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.753      ;
 ; 0.485 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[18] ; bin_to_bcd:bin_to_bcd_inst|bcd_reg[7]    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.753      ;
 ; 0.485 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[13] ; bin_to_bcd:bin_to_bcd_inst|bcd_reg[2]    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.753      ;
+; 0.485 ; hcsr04:hcsr04_inst|state.ST_TRIG         ; hcsr04:hcsr04_inst|trig_reg              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.753      ;
 ; 0.487 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[17] ; bin_to_bcd:bin_to_bcd_inst|bcd_reg[6]    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.755      ;
 ; 0.597 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[10] ; bin_to_bcd:bin_to_bcd_inst|shift_reg[11] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.865      ;
 ; 0.603 ; bin_to_bcd:bin_to_bcd_inst|shift_reg[26] ; bin_to_bcd:bin_to_bcd_inst|bcd_reg[15]   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.871      ;
@@ -647,9 +647,9 @@ No paths to report.
 ; 0.693 ; hcsr04:hcsr04_inst|clks[3]               ; hcsr04:hcsr04_inst|clks[3]               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.960      ;
 ; 0.694 ; clks[4]                                  ; clks[4]                                  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.962      ;
 ; 0.694 ; clks[3]                                  ; clks[3]                                  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.962      ;
+; 0.695 ; clks[7]                                  ; clks[7]                                  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.963      ;
 ; 0.695 ; hcsr04:hcsr04_inst|clks[1]               ; hcsr04:hcsr04_inst|clks[1]               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.962      ;
 ; 0.695 ; hcsr04:hcsr04_inst|clks[5]               ; hcsr04:hcsr04_inst|clks[5]               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.962      ;
-; 0.695 ; clks[7]                                  ; clks[7]                                  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.963      ;
 ; 0.696 ; clks[9]                                  ; clks[9]                                  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.964      ;
 ; 0.697 ; clks[5]                                  ; clks[5]                                  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.965      ;
 ; 0.699 ; hcsr04:hcsr04_inst|clks[4]               ; hcsr04:hcsr04_inst|clks[4]               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.966      ;
@@ -1167,7 +1167,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 28 23:49:43 2024
+    Info: Processing started: Sun Jan 19 11:24:17 2025
 Info: Command: quartus_sta distance_sensor -c distance_sensor
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1240,7 +1240,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4731 megabytes
-    Info: Processing ended: Tue May 28 23:49:45 2024
+    Info: Processing ended: Sun Jan 19 11:24:19 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
