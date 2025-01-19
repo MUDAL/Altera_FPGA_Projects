@@ -184,7 +184,8 @@ begin
          when ST_SEND_ACK => -- Master ACK
             if scl_low = '1' then
                sda_next <= '0';
-            end if;                 
+            end if;
+            
          when ST_GET_LOW_BYTE => -- Read low byte (index 17 to 24)
             if scl_reg = '0' then
                sda_next <= '1'; -- Release SDA (LM75 will pull low if needed)
