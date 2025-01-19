@@ -17,22 +17,22 @@ architecture prog_mem_rtl of prog_mem is
    constant RS_DATA: std_logic := '1';
    type rom_t is array(0 to 2**ADDR_WIDTH - 1) of std_logic_vector(8 downto 0);
    ------------------------------------------------------------------
-   signal rom: rom_t := (0 =>  RS_DATA & x"48",  --H
-                         1 =>  RS_DATA & x"45",  --E
-                         2 =>  RS_DATA & x"4C",  --L
-                         3 =>  RS_DATA & x"4C",  --L
-                         4 =>  RS_DATA & x"4F",  --O
-                         5 =>  RS_DATA & x"20",  --[SPACE]
-                         6 =>  RS_DATA & x"57",  --W
-                         7 =>  RS_DATA & x"4F",  --O
-                         8 =>  RS_DATA & x"52",  --R
-                         9 =>  RS_DATA & x"4C",  --L
-                         10 => RS_DATA & x"44",  --D
-                         11 => RS_CODE & x"C6",  --[NEXT ROW, 7TH COLUMN]
-                         12 => RS_DATA & x"52",  --R
-                         13 => RS_DATA & x"4A",  --J
-                         14 => RS_DATA & x"58",  --X
-                         others => (others => '0')); --NULL
+   signal rom: rom_t := (0 =>  RS_DATA & x"48",      -- H
+                         1 =>  RS_DATA & x"45",      -- E
+                         2 =>  RS_DATA & x"4C",      -- L
+                         3 =>  RS_DATA & x"4C",      -- L
+                         4 =>  RS_DATA & x"4F",      -- O
+                         5 =>  RS_DATA & x"20",      -- [SPACE]
+                         6 =>  RS_DATA & x"57",      -- W
+                         7 =>  RS_DATA & x"4F",      -- O
+                         8 =>  RS_DATA & x"52",      -- R
+                         9 =>  RS_DATA & x"4C",      -- L
+                         10 => RS_DATA & x"44",      -- D
+                         11 => RS_CODE & x"C6",      -- [NEXT ROW, 7TH COLUMN]
+                         12 => RS_DATA & x"52",      -- R
+                         13 => RS_DATA & x"4A",      -- J
+                         14 => RS_DATA & x"58",      -- X
+                         others => (others => '0')); -- NULL
 begin
    instruction <= rom(to_integer(unsigned(addr)));
 end prog_mem_rtl;

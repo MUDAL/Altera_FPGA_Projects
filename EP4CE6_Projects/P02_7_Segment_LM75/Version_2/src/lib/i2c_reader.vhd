@@ -26,17 +26,17 @@ end i2c_reader;
 
 architecture i2c_reader_rtl of i2c_reader is
    -- I2C ADDR, R/W = 1
-   constant ADDR: std_logic_vector(0 to 7) := "10010001";
+   constant ADDR:        std_logic_vector(0 to 7) := "10010001";
    -- Midpoint of high SCL pulse
-   constant MID_HP: integer := 124;
+   constant MID_HP:      integer := 124;
    -- For the start condition
    constant START_CYCLE: integer := 149;
    -- Half of SCL cycle
-   constant HALF_CYCLE: integer := 249;
+   constant HALF_CYCLE:  integer := 249;
    -- Midpoint of low SCL pulse
-   constant MID_LP: integer := 374;
+   constant MID_LP:      integer := 374;
    -- Full SCL cycle
-   constant FULL_CYCLE: integer := 499;
+   constant FULL_CYCLE:  integer := 499;
    
    type i2c_state is (ST_IDLE, 
                       ST_START, 
