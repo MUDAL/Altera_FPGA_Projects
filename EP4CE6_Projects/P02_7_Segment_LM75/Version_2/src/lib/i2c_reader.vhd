@@ -230,7 +230,7 @@ begin
          state     <= ST_IDLE;
          sda_reg   <= '1';
          scl_reg   <= '1';
-         index_reg <= 0;
+         index_reg <=  0;
          data_reg  <= (others => '0');
       elsif rising_edge(clk) then
          state     <= next_state;
