@@ -104,11 +104,16 @@ begin
    shift2_next(7 downto 4) <= bcd2_d1 + 3 when bcd2_d1 > 4 else bcd2_d1;   
    
    moore_outputs: process(state,
-                          shift1_reg,shift2_reg,
-                          score1_reg,score2_reg,
-                          bin1_reg,bin2_reg,
-                          bcd1_reg,bcd2_reg,
-                          bcd1_out,bcd2_out)
+                          shift1_reg,
+                          shift2_reg,
+                          score1_reg,
+                          score2_reg,
+                          bin1_reg,
+                          bin2_reg,
+                          bcd1_reg,
+                          bcd2_reg,
+                          bcd1_out,
+                          bcd2_out)
    begin
       bcd1_d1 <= (others => '0');
       bcd1_d0 <= (others => '0');
@@ -123,7 +128,9 @@ begin
       conv_done <= '0';
       case state is  
          when ST_IDLE =>
+         
          when ST_WAIT =>
+         
          when ST_CALC =>
             bcd1_d1 <= shift1_reg(6 downto 3);
             bcd1_d0 <= shift1_reg(2 downto 0) & bin1_reg(7);            
@@ -134,16 +141,22 @@ begin
             bcd2_d0 <= shift2_reg(2 downto 0) & bin2_reg(7);
             bin2_next <= bin2_reg(6 downto 0) & '0';
             bcd2_next <= bcd2_out;
+            
          when ST_DONE =>     
             conv_done <= '1';
+            
       end case;
    end process;
    
-   mealy_outputs: process(state,score1_reg,score2_reg,crash,cnt_reg)
+   mealy_outputs: process(state,
+                          score1_reg,
+                          score2_reg,
+                          crash,
+                          cnt_reg)
    begin
       score1_next <= score1_reg;
       score2_next <= score2_reg;
-      cnt_next <= cnt_reg; 
+      cnt_next    <= cnt_reg; 
       case state is
          when ST_IDLE =>
             -----------------------------------------------
@@ -152,21 +165,26 @@ begin
                   if score1_reg /= MAX_SCORE then
                      score1_next <= score1_reg + 1;
                   end if;
+                  
                when LEFT_CRASH =>
                   if score2_reg /= MAX_SCORE then
                      score2_next <= score2_reg + 1;
                   end if;
+                  
                when others =>
             end case;
             -----------------------------------------------
          when ST_WAIT =>
+         
          when ST_CALC =>
             if cnt_reg = 0 then
                cnt_next <= 7;
             else
                cnt_next <= cnt_reg - 1;
             end if;
+            
          when ST_DONE =>
+         
       end case;
    end process;  
    
@@ -181,8 +199,8 @@ begin
    score1_bcd_ones <= std_logic_vector(bcd1_reg(3 downto 0));
    score2_bcd_tens <= std_logic_vector(bcd2_reg(7 downto 4));
    score2_bcd_ones <= std_logic_vector(bcd2_reg(3 downto 0));
-   valid_scores <= conv_done;
-   winner <= p1_wins & p2_wins;
+   valid_scores    <= conv_done;
+   winner          <= p1_wins & p2_wins;
    
    registers: process(rst_n,clk)
    begin
