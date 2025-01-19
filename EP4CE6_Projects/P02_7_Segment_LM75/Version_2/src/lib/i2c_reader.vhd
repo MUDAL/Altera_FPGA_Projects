@@ -196,7 +196,7 @@ begin
          when ST_SEND_NACK =>
             if scl_low = '1' then
                sda_next <= '1';
-               index <= 0;
+               index    <=  0;
             end if;
             
          when ST_DONE =>
