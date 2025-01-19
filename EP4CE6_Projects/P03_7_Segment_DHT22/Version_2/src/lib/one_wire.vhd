@@ -217,7 +217,7 @@ begin
       if rst_n = '0' then
          state      <= ST_IDLE;
          io_reg     <= '1';
-         index_reg  <= 0;
+         index_reg  <=  0;
          clks_reg   <= (others => '0');
          stamp_reg  <= (others => '0');
          data_reg   <= (others => '0');

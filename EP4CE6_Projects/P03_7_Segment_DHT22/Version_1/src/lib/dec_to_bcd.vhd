@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
---Decimal to BCD converter
+-- Decimal to BCD converter
 
 entity dec_to_bcd is
    generic(DATA_WIDTH: integer := 16);

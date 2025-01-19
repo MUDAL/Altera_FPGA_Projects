@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
---Decimal (8-bit) to BCD converter
+-- Decimal (8-bit) to BCD converter
 
 entity dec_to_bcd is
    port(rst_n: in std_logic;

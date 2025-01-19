@@ -29,7 +29,7 @@ entity distance_sensor is
         trig: out std_logic;
         dp:   out std_logic;
         seg:  out std_logic_vector(6 downto 0);
-        sel: out std_logic_vector(3 downto 0));
+        sel:  out std_logic_vector(3 downto 0));
 end distance_sensor;
 
 architecture distance_sensor_rtl of distance_sensor is
