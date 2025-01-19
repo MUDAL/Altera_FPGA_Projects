@@ -1,7 +1,0 @@
-
-State Machine - |spi_lcd_main|spi_receiver:spi_interface|state
-Name state.ST_DONE state.ST_SCK_FALL state.ST_SCK_RISE state.ST_IDLE 
-state.ST_IDLE 0 0 0 0 
-state.ST_SCK_RISE 0 0 1 1 
-state.ST_SCK_FALL 0 1 0 1 
-state.ST_DONE 1 0 0 1 

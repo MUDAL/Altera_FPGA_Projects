@@ -1,6 +1,0 @@
-
-State Machine - |vga_main|vga_pix_gen:pixel_gen|state
-Name state.ST_CLR state.ST_ADD state.ST_CHECK 
-state.ST_CHECK 0 0 0 
-state.ST_ADD 0 1 1 
-state.ST_CLR 1 0 1 

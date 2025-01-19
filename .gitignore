@@ -2,3 +2,8 @@ transcript
 vsim.wlf
 *.vhd.bak
 *Zone.Identifier
+
+# Quartus folders
+db/
+incremental_db/
+output_files/
