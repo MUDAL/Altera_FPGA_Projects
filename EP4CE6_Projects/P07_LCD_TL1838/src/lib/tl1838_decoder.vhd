@@ -20,12 +20,12 @@ use IEEE.NUMERIC_STD.ALL;
 -- 50 MHz system clock is used in this design.
 
 entity tl1838_decoder is
-   port(rst_n: in std_logic;
-        clk: in std_logic;
-        ir: in std_logic;
+   port(rst_n:     in std_logic;
+        clk:       in std_logic;
+        ir:        in std_logic;
         data_out: out std_logic_vector(15 downto 0);
-        done: out std_logic;
-        err: out std_logic);
+        done:     out std_logic;
+        err:      out std_logic);
 end tl1838_decoder;
 
 architecture tl1838_decoder_rtl of tl1838_decoder is
@@ -40,27 +40,37 @@ architecture tl1838_decoder_rtl of tl1838_decoder is
    -- 'IDLE' state.     
    constant REF_PW: integer := 29_999;
    constant REPEAT: integer := 149_999;
-   type fsm is (ST_IDLE, ST_LEADING_PULSE, ST_SECOND_PULSE,
-                ST_DATA_LOW_PULSE, ST_DATA_HIGH_PULSE, ST_STOP,
+   
+   type fsm is (ST_IDLE, 
+                ST_LEADING_PULSE, 
+                ST_SECOND_PULSE,
+                ST_DATA_LOW_PULSE, 
+                ST_DATA_HIGH_PULSE, 
+                ST_STOP,
                 ST_DONE);
-   signal state: fsm;
+                
+   signal state:      fsm;
    signal next_state: fsm;
-   signal index_reg: integer range 31 downto 0;
-   signal index_next: integer range 31 downto 0;
-   signal data_reg: std_logic_vector(31 downto 0);
-   signal data_next: std_logic_vector(31 downto 0);
-   signal clks_reg: unsigned(19 downto 0);
-   signal clks_next: unsigned(19 downto 0);
-   signal stamp_reg: unsigned(19 downto 0);
-   signal stamp_next: unsigned(19 downto 0);
-   signal pw: unsigned(19 downto 0); -- high pulse width
-   signal data_bit: std_logic;
-   signal done_reg: std_logic;
-   signal done_next: std_logic;
-   signal ir_reg: std_logic;
-   signal rep_code: std_logic;
+   ------------------------------------------------------------------
+   signal index_reg:   integer range 31 downto 0;
+   signal index_next:  integer range 31 downto 0;
+   signal data_reg:    std_logic_vector(31 downto 0);
+   signal data_next:   std_logic_vector(31 downto 0);
+   signal clks_reg:    unsigned(19 downto 0);
+   signal clks_next:   unsigned(19 downto 0);
+   signal stamp_reg:   unsigned(19 downto 0);
+   signal stamp_next:  unsigned(19 downto 0);
+   signal pw:          unsigned(19 downto 0); -- High pulse width
+   signal data_bit:    std_logic;
+   signal done_reg:    std_logic;
+   signal done_next:   std_logic;
+   signal ir_reg:      std_logic;
+   signal rep_code:    std_logic;
 begin
-   next_state_logic: process(state,ir_reg,index_reg,rep_code)
+   next_state_logic: process(state,
+                             ir_reg,
+                             index_reg,
+                             rep_code)
    begin
       next_state <= state;
       case state is
@@ -68,18 +78,22 @@ begin
             if ir_reg = '0' then
                next_state <= ST_LEADING_PULSE;
             end if;
+            
          when ST_LEADING_PULSE => -- 9 ms low pulse
             if ir_reg = '1' then
                next_state <= ST_SECOND_PULSE;
             end if;
+            
          when ST_SECOND_PULSE => -- 2.25 or 4.5 ms high pulse
             if ir_reg = '0' then
                next_state <= ST_DATA_LOW_PULSE;
             end if;
+            
          when ST_DATA_LOW_PULSE => -- Data/command low pulse
             if ir_reg = '1' then
                next_state <= ST_DATA_HIGH_PULSE;
             end if;
+            
          when ST_DATA_HIGH_PULSE => -- Data/command high pulse
             if ir_reg = '0' and index_reg > 0 then
                next_state <= ST_DATA_LOW_PULSE;
@@ -88,44 +102,47 @@ begin
             elsif ir_reg = '1' and rep_code = '1' then
                next_state <= ST_IDLE;
             end if;
+            
          when ST_STOP => -- End of data reception
             if ir_reg = '1' then
                next_state <= ST_DONE;
             end if;
+            
          when ST_DONE =>
             next_state <= ST_IDLE;
+            
       end case;
    end process;
    
-   state_register: process(rst_n,clk)
-   begin
-      if rst_n = '0' then
-         state <= ST_IDLE;
-      elsif rising_edge(clk) then
-         state <= next_state;
-      end if;
-   end process;
-   
-   moore_outputs: done_next <= '1' when state = ST_DONE else '0';
-   clks_next <= clks_reg + 1 when state = ST_DATA_LOW_PULSE or
-                                  state = ST_DATA_HIGH_PULSE else clks_reg;
-   
    pw <= clks_reg - stamp_reg;
    data_bit <= '0' when pw < to_unsigned(REF_PW,pw'length) else '1';
-   rep_code <= '1' when pw = to_unsigned(REPEAT,pw'length) and  
-                        state = ST_DATA_HIGH_PULSE else '0';
+   rep_code <= '1' when pw = to_unsigned(REPEAT,pw'length) 
+                    and state = ST_DATA_HIGH_PULSE 
+       else    '0';  
    
-   mealy_outputs: process(state,ir_reg,index_reg,data_reg,
-                          clks_reg,stamp_reg,data_bit)
+   -- Moore outputs
+   done_next <= '1' when state = ST_DONE else '0';
+   clks_next <= clks_reg + 1 when state = ST_DATA_LOW_PULSE 
+                               or state = ST_DATA_HIGH_PULSE 
+        else    clks_reg;
+   
+   mealy_outputs: process(state,
+                          ir_reg,
+                          index_reg,
+                          data_reg,
+                          clks_reg,
+                          stamp_reg,
+                          data_bit)
    begin
       index_next <= index_reg;
-      data_next <= data_reg;
+      data_next  <= data_reg;
       stamp_next <= stamp_reg;
       case state is
          when ST_DATA_LOW_PULSE =>
             if ir_reg = '1' then
                stamp_next <= clks_reg;
             end if;
+            
          when ST_DATA_HIGH_PULSE =>
             if ir_reg = '0' and index_reg > 0 then
                index_next <= index_reg - 1;
@@ -134,34 +151,38 @@ begin
                index_next <= 31;
                data_next(index_reg) <= data_bit;
             end if;
+            
          when others =>
       end case;   
    end process;
    
-   buffered_outputs: data_out <= data_reg(15 downto 0);
-                     done <= done_reg;
+   -- Buffered outputs
+   data_out <= data_reg(15 downto 0);
+   done     <= done_reg;
    
    -- To drive active low LED for debugging purposes.
-   err <= '0' when data_reg(7 downto 0) = not(data_reg(15 downto 8)) and
-                   data_reg(23 downto 16) = not(data_reg(31 downto 24)) 
+   err <= '0' when data_reg(07 downto 00) = not(data_reg(15 downto 8)) 
+               and data_reg(23 downto 16) = not(data_reg(31 downto 24)) 
    else   '1';
    
    registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
+         state     <= ST_IDLE;
          index_reg <= 31;
-         data_reg <= (others => '0');
-         clks_reg <= (others => '0');
+         data_reg  <= (others => '0');
+         clks_reg  <= (others => '0');
          stamp_reg <= (others => '0');
-         done_reg <= '0';
-         ir_reg <= '1';
+         done_reg  <= '0';
+         ir_reg    <= '1';
       elsif rising_edge(clk) then
+         state     <= next_state;
          index_reg <= index_next;
-         data_reg <= data_next;
-         clks_reg <= clks_next;
+         data_reg  <= data_next;
+         clks_reg  <= clks_next;
          stamp_reg <= stamp_next;
-         done_reg <= done_next;
-         ir_reg <= ir;
+         done_reg  <= done_next;
+         ir_reg    <= ir;
       end if;  
    end process;
 end tl1838_decoder_rtl;

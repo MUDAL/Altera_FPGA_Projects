@@ -11,23 +11,24 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity fifo_control is
    generic(AW: integer := 6);  -- Address Width (AW)
-   port(rst_n: in std_logic;
-        clk: in std_logic;
-        w_valid: in std_logic; -- FIFO's writer has 'valid' data to send
-        r_ready: in std_logic; -- FIFO's reader is 'ready' to read
-        w_addr: out std_logic_vector(AW - 1 downto 0);
-        r_addr: out std_logic_vector(AW - 1 downto 0);
-        fifo_full: out std_logic;
+   
+   port(rst_n:       in std_logic;
+        clk:         in std_logic;
+        w_valid:     in std_logic; -- FIFO's writer has 'valid' data to send
+        r_ready:     in std_logic; -- FIFO's reader is 'ready' to read
+        w_addr:     out std_logic_vector(AW - 1 downto 0);
+        r_addr:     out std_logic_vector(AW - 1 downto 0);
+        fifo_full:  out std_logic;
         fifo_empty: out std_logic);
 end fifo_control;
 
 architecture fifo_control_rtl of fifo_control is
-   signal w_ptr_reg: unsigned(AW downto 0);
+   signal w_ptr_reg:  unsigned(AW downto 0);
    signal w_ptr_next: unsigned(AW downto 0);
-   signal r_ptr_reg: unsigned(AW downto 0);
+   signal r_ptr_reg:  unsigned(AW downto 0);
    signal r_ptr_next: unsigned(AW downto 0);
-   signal full: std_logic;
-   signal empty: std_logic;
+   signal full:       std_logic;
+   signal empty:      std_logic;
 begin
    full <= '1' when w_ptr_reg(AW) /= r_ptr_reg(AW)
                 and w_ptr_reg(AW - 1 downto 0) = r_ptr_reg(AW - 1 downto 0)
@@ -46,7 +47,7 @@ begin
    w_addr <= std_logic_vector(w_ptr_reg(AW - 1 downto 0));
    r_addr <= std_logic_vector(r_ptr_reg(AW - 1 downto 0));
    
-   fifo_full <= full;
+   fifo_full  <= full;
    fifo_empty <= empty;
    
    registers: process(rst_n,clk)

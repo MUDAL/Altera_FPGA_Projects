@@ -9,7 +9,7 @@ use IEEE.MATH_REAL.ALL;
 package pkg is
    function log_base2(param: integer) return integer;
    -- Memory Initialization File (MIF) parameters
-   constant MIF_LEN: integer := 21;
+   constant MIF_LEN:       integer := 21;
    constant GAME_MENU_MIF: string(1 to MIF_LEN) := "src/mif/game_menu.mif";
    constant GAME_OVER_MIF: string(1 to MIF_LEN) := "src/mif/game_over.mif";
    ------------------------------------------------------------------
@@ -127,7 +127,7 @@ package pkg is
                                6 => "00000000",
                                7 => "00000000");                               
    ------------------------------------------------------------------
-   constant ROM_DEPTH: integer := 16;
+   constant ROM_DEPTH:      integer := 16;
    constant DIG_ADDR_WIDTH: integer := 4; -- Address width for digits in ROM
    ------------------------------------------------------------------
    -- Font ROM

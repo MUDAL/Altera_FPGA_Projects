@@ -5,37 +5,37 @@ use IEEE.NUMERIC_STD.ALL;
 -- Graphics generation module
 
 entity vga_graphics is
-   port(rst_n: in std_logic;
-        clk: in std_logic;
-        pix_tick: in std_logic;
-        valid_pixel: in std_logic;
-        ball: in std_logic_vector(2 downto 0);
-        l_paddle: in std_logic_vector(2 downto 0);
-        r_paddle: in std_logic_vector(2 downto 0);
-        board: in std_logic_vector(2 downto 0);
-        score1_tens: in std_logic_vector(2 downto 0);
-        score1_ones: in std_logic_vector(2 downto 0);
-        score2_tens: in std_logic_vector(2 downto 0);
-        score2_ones: in std_logic_vector(2 downto 0);
+   port(rst_n:            in std_logic;
+        clk:              in std_logic;
+        pix_tick:         in std_logic;
+        valid_pixel:      in std_logic;
+        ball:             in std_logic_vector(2 downto 0);
+        l_paddle:         in std_logic_vector(2 downto 0);
+        r_paddle:         in std_logic_vector(2 downto 0);
+        board:            in std_logic_vector(2 downto 0);
+        score1_tens:      in std_logic_vector(2 downto 0);
+        score1_ones:      in std_logic_vector(2 downto 0);
+        score2_tens:      in std_logic_vector(2 downto 0);
+        score2_ones:      in std_logic_vector(2 downto 0);
         game_menu_bitmap: in std_logic_vector(2 downto 0);
         game_over_bitmap: in std_logic_vector(2 downto 0);
-        rgb: out std_logic_vector(2 downto 0));
+        rgb:             out std_logic_vector(2 downto 0));
 end vga_graphics;
 
 architecture vga_graphics_rtl of vga_graphics is
    signal graph_on: std_logic_vector(2 downto 0);
-   signal rgb_out: std_logic_vector(2 downto 0);
-   signal rgb_reg: std_logic_vector(2 downto 0);
+   signal rgb_out:  std_logic_vector(2 downto 0);
+   signal rgb_reg:  std_logic_vector(2 downto 0);
    signal rgb_next: std_logic_vector(2 downto 0);
 begin
-   graph_on <= ball or 
-               l_paddle or 
-               r_paddle or 
-               board or
-               score1_tens or 
-               score1_ones or
-               score2_tens or 
-               score2_ones or
+   graph_on <= ball             or 
+               l_paddle         or 
+               r_paddle         or 
+               board            or
+               score1_tens      or 
+               score1_ones      or
+               score2_tens      or 
+               score2_ones      or
                game_menu_bitmap or
                game_over_bitmap;
          

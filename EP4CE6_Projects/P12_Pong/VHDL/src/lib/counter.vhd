@@ -7,13 +7,13 @@ use IEEE.NUMERIC_STD.ALL;
 entity counter is
    generic(DELAY_CLKS: integer := 99_999); -- Delay
    port(rst_n: in std_logic;
-        clk: in std_logic;
+        clk:   in std_logic;
         start: in std_logic;
         tick: out std_logic);
 end counter;
 
 architecture counter_rtl of counter is
-   signal cnt_reg: integer range 0 to DELAY_CLKS + 1;
+   signal cnt_reg:  integer range 0 to DELAY_CLKS + 1;
    signal cnt_next: integer range 0 to DELAY_CLKS + 1;
    signal cnt_done: std_logic;
 begin

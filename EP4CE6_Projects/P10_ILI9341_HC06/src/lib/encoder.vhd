@@ -7,12 +7,12 @@ use IEEE.NUMERIC_STD.ALL;
 -- determine the colour that should be displayed on ILI9341 module.
 
 entity encoder is
-   port(rst_n: in std_logic;
-        clk: in std_logic;
-        en: in std_logic;
+   port(rst_n:    in std_logic;
+        clk:      in std_logic;
+        en:       in std_logic;
         ascii_in: in std_logic_vector(7 downto 0);
-        colour: out std_logic_vector(1 downto 0);
-        done: out std_logic);
+        colour:  out std_logic_vector(1 downto 0);
+        done:    out std_logic);
 end encoder;
 
 architecture encoder_rtl of encoder is
@@ -30,12 +30,12 @@ architecture encoder_rtl of encoder is
    constant B: std_logic_vector(1 downto 0) := "10";
    constant W: std_logic_vector(1 downto 0) := "11";
    ------------------------------------------------------------------
-   signal en_reg: std_logic;
-   signal ascii_reg: std_logic_vector(7 downto 0);
-   signal colour_reg: std_logic_vector(1 downto 0);
+   signal en_reg:      std_logic;
+   signal ascii_reg:   std_logic_vector(7 downto 0);
+   signal colour_reg:  std_logic_vector(1 downto 0);
    signal colour_next: std_logic_vector(1 downto 0);
-   signal done_reg: std_logic;
-   signal done_next: std_logic;
+   signal done_reg:    std_logic;
+   signal done_next:   std_logic;
 begin
    -- Encoder
    with ascii_reg select
@@ -46,21 +46,22 @@ begin
    
    done_next <= en_reg;
    
-   buffered_outputs: colour <= colour_reg;
-                     done <= done_reg;
+   -- Buffered outputs
+   colour <= colour_reg;
+   done   <= done_reg;
    
    registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
-         en_reg <= '0';
-         ascii_reg <= (others => '0');
+         en_reg     <= '0';
+         ascii_reg  <= (others => '0');
          colour_reg <= (others => '0');
-         done_reg <= '0';
+         done_reg   <= '0';
       elsif rising_edge(clk) then
-         en_reg <= en;
-         ascii_reg <= ascii_in;
+         en_reg     <= en;
+         ascii_reg  <= ascii_in;
          colour_reg <= colour_next;
-         done_reg <= done_next;
+         done_reg   <= done_next;
       end if;
    end process;
 end encoder_rtl;

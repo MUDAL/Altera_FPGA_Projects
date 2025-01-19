@@ -5,10 +5,10 @@ use IEEE.NUMERIC_STD.ALL;
 -- Module to interface the IR decoder design with the LCD driver design.  
 
 entity tl1838_lcd_interface is
-   port(en: in std_logic;
+   port(en:             in std_logic;
         ir_decoder_out: in std_logic_vector(15 downto 0);
-        lcd_rs_in: out std_logic;
-        lcd_data_in: out std_logic_vector(7 downto 0));
+        lcd_rs_in:     out std_logic;
+        lcd_data_in:   out std_logic_vector(7 downto 0));
 end tl1838_lcd_interface;
 
 architecture tl1838_lcd_interface_rtl of tl1838_lcd_interface is
@@ -46,8 +46,9 @@ architecture tl1838_lcd_interface_rtl of tl1838_lcd_interface is
 begin
    interface_logic: process(en,ir_decoder_out)
    begin
-      lcd_rs_in <= RS_DATA;
+      lcd_rs_in   <= RS_DATA;
       lcd_data_in <= ASCII_NULL;
+      
       if en = '1' then
          case ir_decoder_out is
             when KEY_0 =>  lcd_data_in <= ASCII_0;
@@ -71,6 +72,7 @@ begin
                lcd_data_in <= LCD_CLEAR;
          end case;
       end if;
+      
    end process;
 end tl1838_lcd_interface_rtl;
 

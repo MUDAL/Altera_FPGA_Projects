@@ -12,17 +12,18 @@ use IEEE.NUMERIC_STD.ALL;
 entity fifo_ram is
    generic(AW: integer := 6;  -- Address Width (AW)
            DW: integer := 2); -- Data Width (DW)
-   port(clk: in std_logic;
-        w_en: in std_logic;
+           
+   port(clk:    in std_logic;
+        w_en:   in std_logic;
         w_addr: in std_logic_vector(AW - 1 downto 0);
         r_addr: in std_logic_vector(AW - 1 downto 0);
-        d_in: in std_logic_vector(DW - 1 downto 0);
+        d_in:   in std_logic_vector(DW - 1 downto 0);
         d_out: out std_logic_vector(DW - 1 downto 0));
 end fifo_ram;
 
 architecture fifo_ram_rtl of fifo_ram is
    type ram_t is array(0 to 2**AW - 1) of 
-      std_logic_vector(DW - 1 downto 0);
+        std_logic_vector(DW - 1 downto 0);
    -------------------------------------------------- 
    signal ram: ram_t;
 begin

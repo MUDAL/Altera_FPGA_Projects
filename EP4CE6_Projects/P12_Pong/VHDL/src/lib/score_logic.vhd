@@ -8,15 +8,15 @@ use work.pkg.all;
 
 entity score_logic is
    generic(MAX_SCORE: integer := 11);
-   port(rst_n: in std_logic;
-        clk: in std_logic;
-        crash: in std_logic_vector(1 downto 0);
+   port(rst_n:            in std_logic;
+        clk:              in std_logic;
+        crash:            in std_logic_vector(1 downto 0);
         score1_bcd_tens: out std_logic_vector(DIG_ADDR_WIDTH - 1 downto 0);
         score1_bcd_ones: out std_logic_vector(DIG_ADDR_WIDTH - 1 downto 0);
         score2_bcd_tens: out std_logic_vector(DIG_ADDR_WIDTH - 1 downto 0);
         score2_bcd_ones: out std_logic_vector(DIG_ADDR_WIDTH - 1 downto 0);
-        valid_scores: out std_logic;
-        winner: out std_logic_vector(1 downto 0)); -- Bit 1:0 -> Player 1:2
+        valid_scores:    out std_logic;
+        winner:          out std_logic_vector(1 downto 0)); -- Bit 1:0 -> Player 1:2
 end score_logic;
 
 architecture score_logic_rtl of score_logic is
@@ -27,7 +27,7 @@ architecture score_logic_rtl of score_logic is
                 ST_WAIT,
                 ST_CALC,
                 ST_DONE);
-   signal state: fsm;
+   signal state:      fsm;
    signal next_state: fsm;
    ------------------------------------------------------------------
    signal score1_reg:  unsigned(7 downto 0);
@@ -40,33 +40,35 @@ architecture score_logic_rtl of score_logic is
    signal shift2_reg:  unsigned(7 downto 0);
    signal shift2_next: unsigned(7 downto 0);
    ------------------------------------------------------------------
-   signal bin1_reg:  unsigned(7 downto 0);
-   signal bin1_next: unsigned(7 downto 0);
-   signal bin2_reg:  unsigned(7 downto 0);
-   signal bin2_next: unsigned(7 downto 0);
+   signal bin1_reg:    unsigned(7 downto 0);
+   signal bin1_next:   unsigned(7 downto 0);
+   signal bin2_reg:    unsigned(7 downto 0);
+   signal bin2_next:   unsigned(7 downto 0);
    ------------------------------------------------------------------
-   signal cnt_reg:  integer range 7 downto 0;
-   signal cnt_next: integer range 7 downto 0;
+   signal cnt_reg:     integer range 7 downto 0;
+   signal cnt_next:    integer range 7 downto 0;
    ------------------------------------------------------------------
-   signal bcd1_d0: unsigned(3 downto 0);
-   signal bcd1_d1: unsigned(3 downto 0);
-   signal bcd2_d0: unsigned(3 downto 0);
-   signal bcd2_d1: unsigned(3 downto 0);
+   signal bcd1_d0:     unsigned(3 downto 0);
+   signal bcd1_d1:     unsigned(3 downto 0);
+   signal bcd2_d0:     unsigned(3 downto 0);
+   signal bcd2_d1:     unsigned(3 downto 0);
    ------------------------------------------------------------------
-   signal bcd1_out: unsigned(7 downto 0);
-   signal bcd2_out: unsigned(7 downto 0);
+   signal bcd1_out:    unsigned(7 downto 0);
+   signal bcd2_out:    unsigned(7 downto 0);
    ------------------------------------------------------------------
-   signal bcd1_reg:  unsigned(7 downto 0);
-   signal bcd1_next: unsigned(7 downto 0);
-   signal bcd2_reg:  unsigned(7 downto 0);
-   signal bcd2_next: unsigned(7 downto 0);
+   signal bcd1_reg:    unsigned(7 downto 0);
+   signal bcd1_next:   unsigned(7 downto 0);
+   signal bcd2_reg:    unsigned(7 downto 0);
+   signal bcd2_next:   unsigned(7 downto 0);
    ------------------------------------------------------------------
-   signal en_conv: std_logic; -- Enable binary to BCD conversion
-   signal conv_done: std_logic;
-   signal p1_wins: std_logic;
-   signal p2_wins: std_logic;
+   signal en_conv:     std_logic; -- Enable binary to BCD conversion
+   signal conv_done:   std_logic;
+   signal p1_wins:     std_logic;
+   signal p2_wins:     std_logic;
 begin
-   next_state_logic: process(state,en_conv,cnt_reg)
+   next_state_logic: process(state,
+                             en_conv,
+                             cnt_reg)
    begin
       next_state <= state;
       case state is
@@ -74,24 +76,19 @@ begin
             if en_conv = '1' then
                next_state <= ST_WAIT;
             end if;
+            
          when ST_WAIT =>
             next_state <= ST_CALC;
+            
          when ST_CALC =>
             if cnt_reg = 0 then
                next_state <= ST_DONE;
             end if;
+            
          when ST_DONE =>
             next_state <= ST_IDLE;
+            
       end case;
-   end process;
-   
-   state_register: process(rst_n,clk)
-   begin
-      if rst_n = '0' then
-         state <= ST_IDLE;
-      elsif rising_edge(clk) then
-         state <= next_state;
-      end if;
    end process;
    
    en_conv <= '1' when crash = RIGHT_CRASH or crash = LEFT_CRASH else '0'; 
@@ -190,25 +187,27 @@ begin
    registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
+         state      <= ST_IDLE;
          score1_reg <= (others => '0');
          score2_reg <= (others => '0');
          shift1_reg <= (others => '0');
          shift2_reg <= (others => '0');
-         bin1_reg <= (others => '0');
-         bin2_reg <= (others => '0');
-         bcd1_reg <= (others => '0');
-         bcd2_reg <= (others => '0');
-         cnt_reg <= 7;
+         bin1_reg   <= (others => '0');
+         bin2_reg   <= (others => '0');
+         bcd1_reg   <= (others => '0');
+         bcd2_reg   <= (others => '0');
+         cnt_reg    <= 7;
       elsif rising_edge(clk) then
+         state      <= next_state;
          score1_reg <= score1_next;
          score2_reg <= score2_next;
          shift1_reg <= shift1_next;
          shift2_reg <= shift2_next;
-         bin1_reg <= bin1_next;
-         bin2_reg <= bin2_next;
-         bcd1_reg <= bcd1_next;
-         bcd2_reg <= bcd2_next;
-         cnt_reg <= cnt_next;
+         bin1_reg   <= bin1_next;
+         bin2_reg   <= bin2_next;
+         bcd1_reg   <= bcd1_next;
+         bcd2_reg   <= bcd2_next;
+         cnt_reg    <= cnt_next;
       end if;
    end process;
 end score_logic_rtl;

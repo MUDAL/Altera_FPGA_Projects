@@ -5,28 +5,33 @@ use IEEE.NUMERIC_STD.ALL;
 -- Module to drive a 16x2 LCD.
 
 entity lcd_driver is
-   port(rst_n: in std_logic;
-        clk: in std_logic;
+   port(rst_n:  in std_logic;
+        clk:    in std_logic;
         enable: in std_logic;
-        rs_in: in std_logic;
-        en_in: in std_logic;
-        db_in: in std_logic_vector(7 downto 0);
-        rw: out std_logic;
-        rs: out std_logic;
-        en: out std_logic;
-        db: out std_logic_vector(7 downto 0));
+        rs_in:  in std_logic;
+        en_in:  in std_logic;
+        db_in:  in std_logic_vector(7 downto 0);
+        rw:    out std_logic;
+        rs:    out std_logic;
+        en:    out std_logic;
+        db:    out std_logic_vector(7 downto 0));
 end lcd_driver;
 
 architecture lcd_driver_rtl of lcd_driver is
-   signal rs_reg: std_logic;
+   signal rs_reg:  std_logic;
    signal rs_next: std_logic;
-   signal en_reg: std_logic;
+   signal en_reg:  std_logic;
    signal en_next: std_logic;
-   signal db_reg: std_logic_vector(7 downto 0);
+   signal db_reg:  std_logic_vector(7 downto 0);
    signal db_next: std_logic_vector(7 downto 0);
 begin
-   data_transfer_logic: process(enable,rs_reg,en_reg,db_reg,
-                                rs_in,en_in,db_in)
+   data_transfer_logic: process(enable,
+                                rs_reg,
+                                en_reg,
+                                db_reg,
+                                rs_in,
+                                en_in,
+                                db_in)
    begin
       rs_next <= rs_reg;
       en_next <= en_reg;
@@ -38,10 +43,11 @@ begin
       end if;
    end process;
    
+   -- Outputs
    rw <= '0';
-   buffered_outputs: rs <= rs_reg;
-                     en <= en_reg;
-                     db <= db_reg;
+   rs <= rs_reg;
+   en <= en_reg;
+   db <= db_reg;
    
    registers: process(rst_n,clk)
    begin

@@ -9,16 +9,16 @@ use IEEE.NUMERIC_STD.ALL;
 entity auto_control is
    generic(XPOS_R_PADDLE: integer := 589;
            PADDLE_HEIGHT: integer := 50;
-           BALL_LENGTH: integer := 5);
-   port(rst_n: in std_logic;
-        clk: in std_logic;
-        l_paddle_hit: in std_logic; -- Adjust right paddle's reaction time
+           BALL_LENGTH:   integer := 5);
+   port(rst_n:         in std_logic;
+        clk:           in std_logic;
+        l_paddle_hit:  in std_logic; -- Adjust right paddle's reaction time
         trig_r_paddle: in std_logic;
-        x_ball: in std_logic_vector(9 downto 0);
-        y_ball: in std_logic_vector(9 downto 0);
-        y_r_paddle: in std_logic_vector(9 downto 0);
-        up: out std_logic;
-        down: out std_logic);
+        x_ball:        in std_logic_vector(9 downto 0);
+        y_ball:        in std_logic_vector(9 downto 0);
+        y_r_paddle:    in std_logic_vector(9 downto 0);
+        up:           out std_logic;
+        down:         out std_logic);
 end auto_control;
 
 architecture auto_control_rtl of auto_control is
@@ -37,12 +37,12 @@ architecture auto_control_rtl of auto_control is
                                          5 => 95,
                                          6 => 45,
                                          7 => 50);
-   signal x_b: unsigned(9 downto 0);
-   signal y_b: unsigned(9 downto 0);
-   signal y_r: unsigned(9 downto 0);
-   signal index_reg: unsigned(2 downto 0);
+   signal x_b:        unsigned(9 downto 0);
+   signal y_b:        unsigned(9 downto 0);
+   signal y_r:        unsigned(9 downto 0);
+   signal index_reg:  unsigned(2 downto 0);
    signal index_next: unsigned(2 downto 0);
-   signal idx: integer range 0 to 7; -- Index in integer form
+   signal idx:        integer range 0 to 7; -- Index in integer form
 begin
    x_b <= unsigned(x_ball);
    y_b <= unsigned(y_ball);

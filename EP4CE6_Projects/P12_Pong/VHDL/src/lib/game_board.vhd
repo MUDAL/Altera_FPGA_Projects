@@ -5,46 +5,47 @@ use IEEE.NUMERIC_STD.ALL;
 -- Gameboard
 
 entity game_board is
-   generic(XPOS_HWL: integer := 319;
-           YPOS_HWL: integer := 0;
-           XSTR_HWL: integer := 1;
-           YSTR_HWL: integer := 480;
-           XPOS_TB:  integer := 0;
-           YPOS_TB:  integer := 0;
-           XPOS_BB:  integer := 0;
-           YPOS_BB:  integer := 459;
-           XPOS_LB:  integer := 0;
-           YPOS_LB:  integer := 0;
-           XPOS_RB:  integer := 629;
-           YPOS_RB:  integer := 0;           
+   generic(XPOS_HWL:      integer := 319;
+           YPOS_HWL:      integer := 0;
+           XSTR_HWL:      integer := 1;
+           YSTR_HWL:      integer := 480;
+           XPOS_TB:       integer := 0;
+           YPOS_TB:       integer := 0;
+           XPOS_BB:       integer := 0;
+           YPOS_BB:       integer := 459;
+           XPOS_LB:       integer := 0;
+           YPOS_LB:       integer := 0;
+           XPOS_RB:       integer := 629;
+           YPOS_RB:       integer := 0;           
            XSTR_H_BORDER: integer := 640;
            YSTR_H_BORDER: integer := 20;
            XSTR_V_BORDER: integer := 20;
            YSTR_V_BORDER: integer := 480);
-   port(rst_n: in std_logic;
-        clk: in std_logic;
+           
+   port(rst_n:         in std_logic;
+        clk:           in std_logic;
         gameover_tick: in std_logic;
-        pixel_x: in std_logic_vector(9 downto 0);
-        pixel_y: in std_logic_vector(9 downto 0);
-        winner: in std_logic_vector(1 downto 0); -- Bit 1:0 -> Player 1:2
-        gameover: out std_logic;
-        board: out std_logic_vector(2 downto 0));
+        pixel_x:       in std_logic_vector(9 downto 0);
+        pixel_y:       in std_logic_vector(9 downto 0);
+        winner:        in std_logic_vector(1 downto 0); -- Bit 1:0 -> Player 1:2
+        gameover:     out std_logic;
+        board:        out std_logic_vector(2 downto 0));
 end game_board;
 
 architecture game_board_rtl of game_board is
-   signal pix_x: unsigned(9 downto 0);
-   signal pix_y: unsigned(9 downto 0);
-   signal upper_border: std_logic_vector(2 downto 0);
-   signal lower_border: std_logic_vector(2 downto 0);
-   signal halfway_line: std_logic_vector(2 downto 0);
-   signal right_border: std_logic_vector(2 downto 0);
-   signal left_border: std_logic_vector(2 downto 0);
+   signal pix_x:           unsigned(9 downto 0);
+   signal pix_y:           unsigned(9 downto 0);
+   signal upper_border:    std_logic_vector(2 downto 0);
+   signal lower_border:    std_logic_vector(2 downto 0);
+   signal halfway_line:    std_logic_vector(2 downto 0);
+   signal right_border:    std_logic_vector(2 downto 0);
+   signal left_border:     std_logic_vector(2 downto 0);
    signal gameover_colour: std_logic_vector(2 downto 0);
-   signal toggle_reg: std_logic; -- Toggle colour
-   signal toggle_next: std_logic;
+   signal toggle_reg:      std_logic; -- Toggle colour
+   signal toggle_next:     std_logic;
    -- Player colour selection inputs
-   signal p1_csel: std_logic;
-   signal p2_csel: std_logic;
+   signal p1_csel:         std_logic;
+   signal p2_csel:         std_logic;
 begin
    pix_x <= unsigned(pixel_x);
    pix_y <= unsigned(pixel_y);

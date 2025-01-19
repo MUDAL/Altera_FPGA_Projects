@@ -9,10 +9,11 @@ use work.pkg.all;
 -- on the FPGA's Block RAMs.  
 
 entity bitmap_memory is
-   generic(MIF_FILE: string(1 to MIF_LEN) := GAME_MENU_MIF;
+   generic(MIF_FILE:  string(1 to MIF_LEN) := GAME_MENU_MIF;
            MEM_DEPTH: integer := 14910);
-   port(clk: in std_logic;
-        addr: in std_logic_vector(log_base2(MEM_DEPTH) downto 0);
+           
+   port(clk:       in std_logic;
+        addr:      in std_logic_vector(log_base2(MEM_DEPTH) downto 0);
         data_out: out std_logic_vector(0 downto 0));
 end bitmap_memory;
 

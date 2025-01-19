@@ -15,17 +15,17 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity spi_tx is
    generic(CLK_FREQ: integer := 2_000_000);
-   port(rst_n: in std_logic; -- System reset
-        clk: in std_logic;
-        en: in std_logic;
-        colour: in std_logic_vector(1 downto 0);
-        led: out std_logic; -- Display's LED
-        sck: out std_logic;
-        mosi: out std_logic;
-        dc: out std_logic; -- Register select (Data:1/Command:0)
-        d_rst_n: out std_logic; -- Display reset
-        cs: out std_logic; -- Chip select
-        rdy: out std_logic); -- Ready to receive data
+   port(rst_n:    in std_logic;  -- System reset
+        clk:      in std_logic;
+        en:       in std_logic;
+        colour:   in std_logic_vector(1 downto 0);
+        led:     out std_logic;  -- Display's LED
+        sck:     out std_logic;
+        mosi:    out std_logic;
+        dc:      out std_logic;  -- Register select (Data:1/Command:0)
+        d_rst_n: out std_logic;  -- Display reset
+        cs:      out std_logic;  -- Chip select
+        rdy:     out std_logic); -- Ready to receive data
 end spi_tx;
 
 architecture spi_tx_rtl of spi_tx is
@@ -93,25 +93,25 @@ architecture spi_tx_rtl of spi_tx is
                 ST_SEND_PIXELS, 
                 ST_DONE);
    ------------------------------------------------------------------             
-   signal state: fsm;
+   signal state:      fsm;
    signal next_state: fsm;
-   signal dc_mode: std_logic; -- Data/Command mode
-   signal sck1_reg: std_logic;
-   signal sck1_next: std_logic;
-   signal sck2_reg: std_logic; -- Falling edge detector
-   signal sck2_next: std_logic;
-   signal sck3_reg: std_logic;
-   signal sck3_next: std_logic;
+   signal dc_mode:      std_logic; -- Data/Command mode
+   signal sck1_reg:     std_logic;
+   signal sck1_next:    std_logic;
+   signal sck2_reg:     std_logic; -- Falling edge detector
+   signal sck2_next:    std_logic;
+   signal sck3_reg:     std_logic;
+   signal sck3_next:    std_logic;
    signal mosi_hi_byte: std_logic_vector(7 downto 0);
    signal mosi_lo_byte: std_logic_vector(7 downto 0); 
-   signal mosi_mux: std_logic_vector(7 downto 0);
-   signal mosi_data: std_logic_vector(7 downto 0); 
-   signal mosi_reg: std_logic;
-   signal mosi_next: std_logic;
-   signal bsel_reg: std_logic;
-   signal bsel_next: std_logic;
-   signal dcmd_reg: std_logic;
-   signal dcmd_next: std_logic;
+   signal mosi_mux:     std_logic_vector(7 downto 0);
+   signal mosi_data:    std_logic_vector(7 downto 0); 
+   signal mosi_reg:     std_logic;
+   signal mosi_next:    std_logic;
+   signal bsel_reg:     std_logic;
+   signal bsel_next:    std_logic;
+   signal dcmd_reg:     std_logic;
+   signal dcmd_next:    std_logic;
    ------------------------------------------------------------------
    signal cnt1_reg:   integer range 0 to CNT_1MS;
    signal cnt1_next:  integer range 0 to CNT_1MS;
@@ -124,81 +124,93 @@ architecture spi_tx_rtl of spi_tx is
    signal index_reg:  integer range 7 downto 0;
    signal index_next: integer range 7 downto 0; 
 begin
-   next_state_logic: process(state,en,cnt1_reg,cnt2_reg,
-                             sck2_reg,index_reg,cnt3_reg,
+   next_state_logic: process(state,
+                             en,
+                             cnt1_reg,
+                             cnt2_reg,
+                             sck2_reg,
+                             index_reg,
+                             cnt3_reg,
                              cnt4_reg)
    begin
       next_state <= state;
       case state is
          when ST_IDLE =>
             next_state <= ST_TFT_RST;
+            
          when ST_TFT_RST =>
             if cnt1_reg = CNT_RST then
                next_state <= ST_5MS;
             end if;
+            
          when ST_5MS =>
             if cnt1_reg = CNT_1MS and cnt2_reg = CNT_005 then
                next_state <= ST_DISP_ON_CMD;
             end if;
+            
          when ST_DISP_ON_CMD =>
             if sck2_reg = '1' and index_reg = 0 then
                next_state <= ST_PIXEL_FORMAT_CMD;
             end if;
+            
          when ST_PIXEL_FORMAT_CMD =>
             if sck2_reg = '1' and index_reg = 0 then
                next_state <= ST_BPP_SETTING;
             end if;
+            
          when ST_BPP_SETTING =>
             if sck2_reg = '1' and index_reg = 0 then
                next_state <= ST_MEM_ACCESS_CMD;
             end if;
+            
          when ST_MEM_ACCESS_CMD =>
             if sck2_reg = '1' and index_reg = 0 then
                next_state <= ST_RGB_SETTING;
             end if;
+            
          when ST_RGB_SETTING =>
             if sck2_reg = '1' and index_reg = 0 then
                next_state <= ST_SLEEP_OUT_CMD;
             end if;
+            
          when ST_SLEEP_OUT_CMD =>
             if sck2_reg = '1' and index_reg = 0 then
                next_state <= ST_120MS;
             end if;
+            
          when ST_120MS =>
             if cnt1_reg = CNT_1MS and cnt2_reg = CNT_120 then
                next_state <= ST_TRIGGER;
             end if;
+            
          when ST_TRIGGER =>
             if en = '1' then
                next_state <= ST_READY;
             end if;
+            
          when ST_READY =>
             next_state <= ST_MEM_WRITE_CMD;
+            
          when ST_MEM_WRITE_CMD =>
             if sck2_reg = '1' and index_reg = 0 then
                next_state <= ST_SEND_PIXELS;
             end if;
+            
          when ST_SEND_PIXELS =>
             if sck2_reg = '1' and index_reg = 0 and 
                cnt3_reg = CNT_BYTES and cnt4_reg = CNT_006 then
                next_state <= ST_DONE;
             end if;
+            
          when ST_DONE =>
             next_state <= ST_TRIGGER;
+            
       end case;
    end process;
    
-   state_register: process(rst_n,clk)
-   begin
-      if rst_n = '0' then
-         state <= ST_IDLE;
-      elsif rising_edge(clk) then
-         state <= next_state;
-      end if;
-   end process;
+   -- Turn TFT LED on
+   led <= '1';
    
-   led <= '1'; -- Turn TFT LED on
-   ------------------------------------------------------------------
    -- 'dc_mode' is set when in data/command mode and reset if not.
    dc_mode <= '1' when state = ST_DISP_ON_CMD 
                     or state = ST_PIXEL_FORMAT_CMD
@@ -317,36 +329,39 @@ begin
    
    -- 'Ready' logic for SPI TX module
    rdy <= '1' when state = ST_READY else '0';
-   ------------------------------------------------------------------
-   buffered_outputs: sck <= sck3_reg;
-                     mosi <= mosi_reg;
-                     dc <= dcmd_reg;
+   
+   -- Buffered outputs
+   sck  <= sck3_reg;
+   mosi <= mosi_reg;
+   dc   <= dcmd_reg;
                      
    registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
-         sck1_reg <= '0';
-         sck2_reg <= '0';
-         sck3_reg <= '0';
-         mosi_reg <= '0';
-         bsel_reg <= '0';
-         dcmd_reg <= '0';
-         cnt1_reg <= 0;
-         cnt2_reg <= 0;
-         cnt3_reg <= 0;
-         cnt4_reg <= 0;       
-         index_reg <= 7;
+         state     <= ST_IDLE;
+         sck1_reg  <= '0';
+         sck2_reg  <= '0';
+         sck3_reg  <= '0';
+         mosi_reg  <= '0';
+         bsel_reg  <= '0';
+         dcmd_reg  <= '0';
+         cnt1_reg  <=  0;
+         cnt2_reg  <=  0;
+         cnt3_reg  <=  0;
+         cnt4_reg  <=  0;       
+         index_reg <=  7;
       elsif rising_edge(clk) then
-         sck1_reg <= sck1_next;
-         sck2_reg <= sck2_next;
-         sck3_reg <= sck3_next;
-         mosi_reg <= mosi_next;
-         bsel_reg <= bsel_next;
-         dcmd_reg <= dcmd_next;
-         cnt1_reg <= cnt1_next;
-         cnt2_reg <= cnt2_next;
-         cnt3_reg <= cnt3_next;
-         cnt4_reg <= cnt4_next;        
+         state     <= next_state;
+         sck1_reg  <= sck1_next;
+         sck2_reg  <= sck2_next;
+         sck3_reg  <= sck3_next;
+         mosi_reg  <= mosi_next;
+         bsel_reg  <= bsel_next;
+         dcmd_reg  <= dcmd_next;
+         cnt1_reg  <= cnt1_next;
+         cnt2_reg  <= cnt2_next;
+         cnt3_reg  <= cnt3_next;
+         cnt4_reg  <= cnt4_next;        
          index_reg <= index_next;
       end if;  
    end process;

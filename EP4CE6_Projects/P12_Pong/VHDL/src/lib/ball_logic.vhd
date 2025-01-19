@@ -10,32 +10,36 @@ entity ball_logic is
    generic(X_POS:  integer := 50;
            Y_POS:  integer := 50;
            STRIDE: integer := 5);
-   port(rst_n: in std_logic;
-        clk: in std_logic;
-        tick: in std_logic;
-        pixel_x: in std_logic_vector(9 downto 0);
-        pixel_y: in std_logic_vector(9 downto 0);
-        direct: in std_logic_vector(2 downto 0);
-        crash: in std_logic_vector(1 downto 0);
+           
+   port(rst_n:    in std_logic;
+        clk:      in std_logic;
+        tick:     in std_logic;
+        pixel_x:  in std_logic_vector(9 downto 0);
+        pixel_y:  in std_logic_vector(9 downto 0);
+        direct:   in std_logic_vector(2 downto 0);
+        crash:    in std_logic_vector(1 downto 0);
         x_start: out std_logic_vector(9 downto 0);
         y_start: out std_logic_vector(9 downto 0);
-        ball: out std_logic_vector(2 downto 0));
+        ball:    out std_logic_vector(2 downto 0));
 end ball_logic;
 
 architecture ball_logic_rtl of ball_logic is
-   signal pix_x: unsigned(9 downto 0);
-   signal pix_y: unsigned(9 downto 0);
-   signal x_reg: unsigned(9 downto 0);
+   signal pix_x:  unsigned(9 downto 0);
+   signal pix_y:  unsigned(9 downto 0);
+   signal x_reg:  unsigned(9 downto 0);
    signal x_next: unsigned(9 downto 0);
    signal x_temp: unsigned(9 downto 0);
-   signal y_reg: unsigned(9 downto 0);
+   signal y_reg:  unsigned(9 downto 0);
    signal y_next: unsigned(9 downto 0);
    signal y_temp: unsigned(9 downto 0);
 begin
    pix_x <= unsigned(pixel_x);
    pix_y <= unsigned(pixel_y);
    
-   ball_direction: process(x_reg,y_reg,tick,direct)
+   ball_direction: process(x_reg,
+                           y_reg,
+                           tick,
+                           direct)
    begin
       x_temp <= x_reg;
       y_temp <= y_reg;
@@ -63,7 +67,9 @@ begin
       end if;
    end process;    
    
-   ball_direction_reset_logic: process(crash,x_temp,y_temp)
+   ball_direction_reset_logic: process(crash,
+                                       x_temp,
+                                       y_temp)
    begin
       if crash = "00" then
          x_next <= x_temp;

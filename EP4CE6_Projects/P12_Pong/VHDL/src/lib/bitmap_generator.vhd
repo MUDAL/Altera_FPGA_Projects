@@ -14,34 +14,39 @@ entity bitmap_generator is
            XSTR_BMP:   integer := 210;
            YSTR_BMP:   integer := 71;
            MEM_DEPTH:  integer := 14910);
-   port(rst_n: in std_logic;
-        clk: in std_logic;
-        enable: in std_logic;
-        pix_tick: in std_logic;
-        pixel_x: in std_logic_vector(9 downto 0);
-        pixel_y: in std_logic_vector(9 downto 0);
-        mem_bit: in std_logic_vector(0 downto 0);
-        winner: in std_logic_vector(1 downto 0);
+           
+   port(rst_n:     in std_logic;
+        clk:       in std_logic;
+        enable:    in std_logic;
+        pix_tick:  in std_logic;
+        pixel_x:   in std_logic_vector(9 downto 0);
+        pixel_y:   in std_logic_vector(9 downto 0);
+        mem_bit:   in std_logic_vector(0 downto 0);
+        winner:    in std_logic_vector(1 downto 0);
         mem_addr: out std_logic_vector(log_base2(MEM_DEPTH) downto 0);
-        bitmap: out std_logic_vector(2 downto 0));
+        bitmap:   out std_logic_vector(2 downto 0));
 end bitmap_generator;
 
 architecture bitmap_generator_rtl of bitmap_generator is
    type fsm is (ST_IDLE, ST_ENABLE);
-   signal state: fsm;
+   signal state:      fsm;
    signal next_state: fsm;
-   signal pix_x: unsigned(9 downto 0);
-   signal pix_y: unsigned(9 downto 0);
-   signal x_pos: unsigned(9 downto 0); 
-   signal addr_reg: unsigned(log_base2(MEM_DEPTH) downto 0);
-   signal addr_next: unsigned(log_base2(MEM_DEPTH) downto 0);
-   signal colour: std_logic_vector(2 downto 0); 
-   signal addr_en: std_logic;
+   signal pix_x:        unsigned(9 downto 0);
+   signal pix_y:        unsigned(9 downto 0);
+   signal x_pos:        unsigned(9 downto 0); 
+   signal addr_reg:     unsigned(log_base2(MEM_DEPTH) downto 0);
+   signal addr_next:    unsigned(log_base2(MEM_DEPTH) downto 0);
+   signal colour:       std_logic_vector(2 downto 0); 
+   signal addr_en:      std_logic;
    signal valid_bitmap: std_logic;
    signal valid_enable: std_logic;
-   signal en_bitmap: std_logic;
+   signal en_bitmap:    std_logic;
 begin
-   next_state_logic: process(state,enable,x_pos,pix_x,pix_y)
+   next_state_logic: process(state,
+                             enable,
+                             x_pos,
+                             pix_x,
+                             pix_y)
    begin
       next_state <= state;
       case state is
@@ -51,17 +56,10 @@ begin
                   next_state <= ST_ENABLE;
                end if;
             end if;
+            
          when ST_ENABLE =>
+         
       end case;
-   end process;
-   
-   state_register: process(rst_n,clk)
-   begin
-      if rst_n = '0' then
-         state <= ST_IDLE;
-      elsif rising_edge(clk) then
-         state <= next_state;
-      end if;
    end process;
    
    -- Moore output
@@ -84,7 +82,7 @@ begin
    
    en_bitmap <= valid_enable and valid_bitmap;
    
-   addr_en <= pix_tick and en_bitmap;   
+   addr_en   <= pix_tick and en_bitmap;   
    
    address_generator: process(addr_en,addr_reg)
    begin
@@ -103,13 +101,15 @@ begin
    
    -- Outputs
    mem_addr <= std_logic_vector(addr_reg);
-   bitmap <= colour when en_bitmap = '1' else "000";
+   bitmap   <= colour when en_bitmap = '1' else "000";
    
    registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
+         state    <= ST_IDLE;
          addr_reg <= (others => '0');
       elsif rising_edge(clk) then
+         state    <= next_state;
          addr_reg <= addr_next;
       end if;
    end process;

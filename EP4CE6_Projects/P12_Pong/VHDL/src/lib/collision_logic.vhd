@@ -9,26 +9,27 @@ use work.pkg.all;
 entity collision_logic is
    generic(XPOS_L_PADDLE: integer := 50;
            XPOS_R_PADDLE: integer := 589;
-           PADDLE_WIDTH: integer := 5;
+           PADDLE_WIDTH:  integer := 5;
            PADDLE_HEIGHT: integer := 50;
-           BALL_LENGTH: integer := 5;
-           SCREEN_WIDTH: integer := 640;
+           BALL_LENGTH:   integer := 5;
+           SCREEN_WIDTH:  integer := 640;
            SCREEN_HEIGHT: integer := 480;
-           UPPER_BORDER: integer := 10;
-           LOWER_BORDER: integer := 469;
-           LEFT_BORDER: integer := 10;
-           RIGHT_BORDER: integer := 629);
-   port(rst_n: in std_logic;
-        clk: in std_logic;
-        y_left: in std_logic_vector(9 downto 0); -- Left paddle
-        y_right: in std_logic_vector(9 downto 0); -- Right paddle
-        x_ball: in std_logic_vector(9 downto 0);
-        y_ball: in std_logic_vector(9 downto 0);
-        direct: out std_logic_vector(2 downto 0); -- Ball direction
-        crash: out std_logic_vector(1 downto 0); -- Bit 1: Left, Bit 0:Right
-        trig_sound: out std_logic; -- Trigger sound module
-        trig_r_paddle: out std_logic; -- Trigger right paddle
-        l_paddle_hit: out std_logic); -- Set when left paddle is hit
+           UPPER_BORDER:  integer := 10;
+           LOWER_BORDER:  integer := 469;
+           LEFT_BORDER:   integer := 10;
+           RIGHT_BORDER:  integer := 629);
+           
+   port(rst_n:          in std_logic;
+        clk:            in std_logic;
+        y_left:         in std_logic_vector(9 downto 0); -- Left paddle
+        y_right:        in std_logic_vector(9 downto 0); -- Right paddle
+        x_ball:         in std_logic_vector(9 downto 0);
+        y_ball:         in std_logic_vector(9 downto 0);
+        direct:        out std_logic_vector(2 downto 0); -- Ball direction
+        crash:         out std_logic_vector(1 downto 0); -- Bit 1: Left, Bit 0:Right
+        trig_sound:    out std_logic;  -- Trigger sound module
+        trig_r_paddle: out std_logic;  -- Trigger right paddle
+        l_paddle_hit:  out std_logic); -- Set when left paddle is hit
 end collision_logic;
 
 architecture collision_logic_rtl of collision_logic is
@@ -68,12 +69,12 @@ architecture collision_logic_rtl of collision_logic is
    ---------------------------------------------------------------------------
    -- One-hot encoder for all 10 possible collisions (or hits):
    -- (6 possibilities for the paddles, 4 possibilites for the borders).
-   signal hit: std_logic_vector(9 downto 0);
+   signal hit:         std_logic_vector(9 downto 0);
    -- Signifies which paddle was hit
-   signal paddle_reg: std_logic_vector(1 downto 0);
+   signal paddle_reg:  std_logic_vector(1 downto 0);
    signal paddle_next: std_logic_vector(1 downto 0);
    -- Ball direction register
-   signal direct_reg: std_logic_vector(2 downto 0);
+   signal direct_reg:  std_logic_vector(2 downto 0);
    signal direct_next: std_logic_vector(2 downto 0);
    -- Coordinates
    signal y_l_min: unsigned(9 downto 0);
@@ -89,7 +90,7 @@ architecture collision_logic_rtl of collision_logic is
    signal l_crash: std_logic;
    signal r_crash: std_logic;
    ------------------------------------------------------------------
-   signal l_paddle_hit_reg: std_logic;
+   signal l_paddle_hit_reg:  std_logic;
    signal l_paddle_hit_next: std_logic;
    signal l_paddle_pos_edge: std_logic;
 begin
@@ -161,7 +162,9 @@ begin
                    and  hit = HIT_RB
       else    '0';
    
-   paddle_detect_and_ball_direct: process(hit,paddle_reg,direct_reg)
+   paddle_detect_and_ball_direct: process(hit,
+                                          paddle_reg,
+                                          direct_reg)
    begin
       paddle_next <= paddle_reg;
       direct_next <= direct_reg;
@@ -169,39 +172,49 @@ begin
          when HIT_UL =>
             paddle_next <= PADDLE_L;
             direct_next <= DIR_UR;
+            
          when HIT_ML =>
             paddle_next <= PADDLE_L;
             direct_next <= DIR_R;
+            
          when HIT_DL =>
             paddle_next <= PADDLE_L;
             direct_next <= DIR_DR;
+            
          when HIT_DR =>
             paddle_next <= PADDLE_R;
             direct_next <= DIR_DL;
+            
          when HIT_MR =>
             paddle_next <= PADDLE_R;
             direct_next <= DIR_L;
+            
          when HIT_UR =>
             paddle_next <= PADDLE_R;
             direct_next <= DIR_UL;
+            
          when HIT_TB =>
             if paddle_reg = PADDLE_L then
                direct_next <= DIR_DR;
             elsif paddle_reg = PADDLE_R then
                direct_next <= DIR_DL;
             end if;
+            
          when HIT_LB =>
             paddle_next <= PADDLE_N;
             direct_next <= DIR_R;
+            
          when HIT_BB =>
             if paddle_reg = PADDLE_L then
                direct_next <= DIR_UR;
             elsif paddle_reg = PADDLE_R then
                direct_next <= DIR_UL;
-            end if;        
+            end if;
+            
          when HIT_RB =>
             paddle_next <= PADDLE_N;
             direct_next <= DIR_L;
+            
          when others =>
       end case;
    end process;
@@ -229,17 +242,17 @@ begin
    
    trig_r_paddle <= '1' when paddle_reg /= PADDLE_R else '0';
    
-   l_paddle_hit <= l_paddle_pos_edge;
+   l_paddle_hit  <= l_paddle_pos_edge;
    
    registers: process(rst_n,clk)
    begin
       if rst_n = '0' then
-         paddle_reg <= PADDLE_N;
-         direct_reg <= DIR_L;
+         paddle_reg       <= PADDLE_N;
+         direct_reg       <= DIR_L;
          l_paddle_hit_reg <= '0';
       elsif rising_edge(clk) then
-         paddle_reg <= paddle_next;
-         direct_reg <= direct_next;
+         paddle_reg       <= paddle_next;
+         direct_reg       <= direct_next;
          l_paddle_hit_reg <= l_paddle_hit_next;
       end if;
    end process;

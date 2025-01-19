@@ -7,6 +7,17 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package pack_tb
 -- Compiling package body pack_tb
 
+} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/button_logic_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/button_logic_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package pack_tb
+-- Compiling entity button_logic_tb
+-- Compiling architecture button_logic_behav of button_logic_tb
+-- Loading entity button_logic
+
 } {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/score_logic_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/score_logic_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -19,17 +30,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package MATH_REAL
 -- Loading package consts
 -- Loading entity score_logic
-
-} {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/button_logic_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/button_logic_tb.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package pack_tb
--- Compiling entity button_logic_tb
--- Compiling architecture button_logic_behav of button_logic_tb
--- Loading entity button_logic
 
 } {} {}} L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/pack_tb_header.vhd {1 {vcom -work work -2002 -explicit -stats=none L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P12_Pong/VHDL/simulation/testbench/pack_tb_header.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020

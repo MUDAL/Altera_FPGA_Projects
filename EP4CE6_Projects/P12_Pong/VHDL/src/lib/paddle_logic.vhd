@@ -5,30 +5,31 @@ use IEEE.NUMERIC_STD.ALL;
 -- Module to handle various aspects of the game's paddle logic.
 
 entity paddle_logic is
-   generic(X_POS:  integer := 50;
-           Y_POS:  integer := 50;
-           X_STRIDE: integer := 5;
-           Y_STRIDE: integer := 5;
-           SCREEN_HEIGHT: integer := 480); 
-   port(rst_n: in std_logic;
-        clk: in std_logic;
-        up: in std_logic;
-        down: in std_logic;
-        tick: in std_logic;
-        pixel_x: in std_logic_vector(9 downto 0);
-        pixel_y: in std_logic_vector(9 downto 0);
+   generic(X_POS:         integer := 50;
+           Y_POS:         integer := 50;
+           X_STRIDE:      integer := 5;
+           Y_STRIDE:      integer := 5;
+           SCREEN_HEIGHT: integer := 480);
+           
+   port(rst_n:    in std_logic;
+        clk:      in std_logic;
+        up:       in std_logic;
+        down:     in std_logic;
+        tick:     in std_logic;
+        pixel_x:  in std_logic_vector(9 downto 0);
+        pixel_y:  in std_logic_vector(9 downto 0);
         y_start: out std_logic_vector(9 downto 0);
-        paddle: out std_logic_vector(2 downto 0));
+        paddle:  out std_logic_vector(2 downto 0));
 end paddle_logic;
 
 architecture paddle_logic_rtl of paddle_logic is
-   signal pix_x: unsigned(9 downto 0);
-   signal pix_y: unsigned(9 downto 0); 
-   signal y_reg: unsigned(9 downto 0);
-   signal y_next: unsigned(9 downto 0);
+   signal pix_x:   unsigned(9 downto 0);
+   signal pix_y:   unsigned(9 downto 0); 
+   signal y_reg:   unsigned(9 downto 0);
+   signal y_next:  unsigned(9 downto 0);
    -- Bit 1: Up, Bit 0: Down
-   signal ctrl: std_logic_vector(1 downto 0); -- Paddle control
-   signal move: std_logic_vector(1 downto 0); 
+   signal ctrl:    std_logic_vector(1 downto 0); -- Paddle control
+   signal move:    std_logic_vector(1 downto 0); 
    -- Signals to indicate top/upper and bottom/lower screen borders
    signal y_upper: std_logic;
    signal y_lower: std_logic;
