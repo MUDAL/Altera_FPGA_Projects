@@ -3,7 +3,8 @@ vsim.wlf
 *.vhd.bak
 *Zone.Identifier
 
-# Quartus folders
+# Quartus files and folders
+*.qws
 db/
 incremental_db/
 output_files/
