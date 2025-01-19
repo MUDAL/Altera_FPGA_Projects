@@ -115,13 +115,13 @@ begin
                           bcd1_out,
                           bcd2_out)
    begin
-      bcd1_d1 <= (others => '0');
-      bcd1_d0 <= (others => '0');
+      bcd1_d1   <= (others => '0');
+      bcd1_d0   <= (others => '0');
       bin1_next <= score1_reg;
       bcd1_next <= bcd1_reg;
       -----------------------------------------------
-      bcd2_d1 <= (others => '0');
-      bcd2_d0 <= (others => '0');
+      bcd2_d1   <= (others => '0');
+      bcd2_d0   <= (others => '0');
       bin2_next <= score2_reg;
       bcd2_next <= bcd2_reg;
       -----------------------------------------------
@@ -132,13 +132,13 @@ begin
          when ST_WAIT =>
          
          when ST_CALC =>
-            bcd1_d1 <= shift1_reg(6 downto 3);
-            bcd1_d0 <= shift1_reg(2 downto 0) & bin1_reg(7);            
+            bcd1_d1   <= shift1_reg(6 downto 3);
+            bcd1_d0   <= shift1_reg(2 downto 0) & bin1_reg(7);            
             bin1_next <= bin1_reg(6 downto 0) & '0';
             bcd1_next <= bcd1_out;
             -----------------------------------------------
-            bcd2_d1 <= shift2_reg(6 downto 3);
-            bcd2_d0 <= shift2_reg(2 downto 0) & bin2_reg(7);
+            bcd2_d1   <= shift2_reg(6 downto 3);
+            bcd2_d0   <= shift2_reg(2 downto 0) & bin2_reg(7);
             bin2_next <= bin2_reg(6 downto 0) & '0';
             bcd2_next <= bcd2_out;
             

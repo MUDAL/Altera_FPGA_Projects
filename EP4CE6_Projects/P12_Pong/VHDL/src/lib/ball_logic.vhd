@@ -49,19 +49,25 @@ begin
             when DIR_UR =>
                x_temp <= x_reg + 1;
                y_temp <= y_reg - 1;
+               
             when DIR_R =>
                x_temp <= x_reg + 1;
+               
             when DIR_DR =>
                x_temp <= x_reg + 1;
                y_temp <= y_reg + 1;
+               
             when DIR_DL =>
                x_temp <= x_reg - 1;
                y_temp <= y_reg + 1;
+               
             when DIR_L =>
                x_temp <= x_reg - 1;
+               
             when DIR_UL =>
                x_temp <= x_reg - 1;
                y_temp <= y_reg - 1;
+               
             when others =>
          end case;
       end if;
