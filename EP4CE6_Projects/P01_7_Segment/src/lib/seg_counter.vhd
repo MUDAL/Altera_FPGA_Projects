@@ -31,7 +31,7 @@ begin
    clock_10kHz: process(rst_n,clk)
    begin
       if rst_n = '0' then
-         cnt1 <= 0;
+         cnt1 <=  0;
          tick <= '1';
       elsif rising_edge(clk) then
          if cnt1 = HALF_CYCLE then

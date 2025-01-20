@@ -64,10 +64,10 @@ begin
                           bcd_reg,
                           done_reg)
    begin
-      hundreds <= hundreds_reg;
-      tens <= tens_reg;
-      num <= num_reg;
-      bcd_next <= bcd_reg;
+      hundreds  <= hundreds_reg;
+      tens      <= tens_reg;
+      num       <= num_reg;
+      bcd_next  <= bcd_reg;
       done_next <= done_reg;
       case state is
          when ST_IDLE =>
