@@ -13,8 +13,8 @@ This project aims to design and test a simple SDRAM controller for accessing a s
 The contents of the data source (ROM) are shown below.
 
 Line 1: ABCDEFGHIJKLMN  
-Line 2: abcdefghijklmn
-Line 3: 0123456789:;<=
+Line 2: abcdefghijklmn  
+Line 3: 0123456789:;<=  
 Line 4: OPQRSTUVWXYZyz  
 
 VHDL snippet of the data source's content:  
