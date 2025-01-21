@@ -11,12 +11,12 @@ This project aims to design and test a simple SDRAM controller for accessing a s
 ![Screenshot (635)](https://github.com/user-attachments/assets/d2ff5056-06fe-4801-97c6-8372c032a13a)  
 
 The contents of the data source (ROM) are shown below.
-
+```
 Line 1: ABCDEFGHIJKLMN  
 Line 2: abcdefghijklmn  
 Line 3: 0123456789:;<=  
 Line 4: OPQRSTUVWXYZyz  
-
+```
 VHDL snippet of the data source's content:  
 ```
    constant CHAR_TABLE: char_type := (00 => x"41",  -- A
