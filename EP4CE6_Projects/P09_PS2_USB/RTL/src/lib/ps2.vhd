@@ -130,7 +130,7 @@ begin
          ps2_data_reg <= '1';
          ps2_out_reg  <= (others => '1');
          done_reg     <= '0';
-         index_reg    <= 0;
+         index_reg    <=  0;
       elsif rising_edge(clk) then
          state        <= next_state;
          ps2_clk_reg  <= ps2_clk;

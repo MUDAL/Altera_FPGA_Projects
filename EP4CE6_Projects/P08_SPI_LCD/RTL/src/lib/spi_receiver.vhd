@@ -131,7 +131,7 @@ begin
    begin
       if rst_n = '0' then
          state     <= ST_IDLE;
-         index_reg <= 15;
+         index_reg <=  15;
          mosi_reg  <= '0';
          sck_reg   <= '0';
          cs_reg    <= '1';

@@ -86,8 +86,8 @@ begin
       if rst_n = '0' then
          state       <= ST_IDLE;
          tx_data_reg <= (others => '1');
-         clks_reg    <= 0;
-         index_reg   <= 0;
+         clks_reg    <=  0;
+         index_reg   <=  0;
          data_reg    <= '1';
       elsif rising_edge(clk) then
          state       <= next_state;
