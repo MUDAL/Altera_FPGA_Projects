@@ -81,7 +81,7 @@ set_location_assignment PIN_115 -to uart_out
 ```
 
 ## Video Demo  
-[TO BE ADDED] 
+- [FPGA + SDRAM + UART intro](https://drive.google.com/file/d/1PzCbt33H6xiYLAi3XrsY20Yk45iuUXUo/view?usp=sharing)  
 
 ## RTL compilation report
 ### 1. Resource utilization    
