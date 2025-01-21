@@ -55,9 +55,9 @@ begin
             d_in   => d_in,
             d_out  => d_ram);
    
-   w_en    <=  '1'  when w_valid = '1' and fifo_full =  '0' else '0';
+   w_en    <=  '1'  when w_valid = '1' and fifo_full  = '0' else '0';
    ce_next <=  '1'  when r_ready = '1' and fifo_empty = '0' else '0';
-   d_next  <= d_ram when ce_reg = '1' else d_reg;
+   d_next  <= d_ram when ce_reg  = '1' else d_reg;
    
    -- Outputs
    d_out <= d_reg;   

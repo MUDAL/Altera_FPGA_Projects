@@ -79,7 +79,7 @@ begin
    begin
       if rst_n = '0' then
          state     <= ST_IDLE;
-         delay_reg <= 0;     
+         delay_reg <=  0;     
          buzz_reg  <= '0';
       elsif rising_edge(clk) then
          state     <= next_state;

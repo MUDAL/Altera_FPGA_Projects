@@ -228,7 +228,7 @@ begin
    
    -- Outputs
    direct <= direct_reg;
-   crash <= l_crash & r_crash;
+   crash  <= l_crash & r_crash;
    
    trig_sound <= '1' when hit = HIT_UL 
                        or hit = HIT_ML

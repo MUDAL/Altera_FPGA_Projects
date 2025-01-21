@@ -215,7 +215,9 @@ begin
 
    -- Generates I2C clock (SCL)
    pulse    <= '1' when clks <= to_unsigned(HALF_CYCLE,clks'length) else '0';
-   scl_next <= '1' when state = ST_IDLE or state = ST_STOP          else pulse;  
+   scl_next <= '1' when state = ST_IDLE 
+                     or state = ST_STOP          
+       else    pulse;  
    
    -- Tristate buffer logic:
    -- SDA/SCL = 'Z' (releasing SDA/SCL line) implies a logic high.

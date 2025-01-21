@@ -195,14 +195,14 @@ begin
       end case;   
    end process;  
                      
-   --Tristate buffer: 'Z' implies release of the 1-Wire data line
+   -- Tristate buffer: 'Z' implies release of the 1-Wire data line
    io <= 'Z' when io_reg = '1' else '0';
    
-   --Output data selector
+   -- Output data selector
    data_out <= data_reg(0 to 15) when param = '0' 
        else    data_reg(16 to 31);
                
-   --Checksum = Humidity integral + Humidity decimal +
+   -- Checksum = Humidity integral + Humidity decimal +
    --            Temperature integral + Temperature decimal
    check_sum <= unsigned(data_reg(0 to 7))   + 
                 unsigned(data_reg(8 to 15))  +
