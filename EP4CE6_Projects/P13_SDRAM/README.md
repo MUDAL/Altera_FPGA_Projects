@@ -10,7 +10,7 @@ This project aims to design and test a simple SDRAM controller for accessing a s
 ![sdram_controller_flowchart drawio_page-0001](https://github.com/user-attachments/assets/e37ddb11-f410-4444-a604-42459584f0f3)   
 ![Screenshot (635)](https://github.com/user-attachments/assets/d2ff5056-06fe-4801-97c6-8372c032a13a)  
 
-The contents of the data source (ROM) are shown below.
+The contents of the data source (ASCII ROM) are shown below.
 ```
 Line 1: ABCDEFGHIJKLMN  
 Line 2: abcdefghijklmn  
