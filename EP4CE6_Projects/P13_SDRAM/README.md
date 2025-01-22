@@ -162,7 +162,8 @@ set_location_assignment PIN_115 -to uart_out
 
 ## Video Demo  
 - [FPGA + SDRAM + UART intro](https://drive.google.com/file/d/1Q0aF_pKKTpE8kjtteRTlMMbw9UD-2cdN/view?usp=sharing)
-- [FPGA + SDRAM + UART demo](https://drive.google.com/file/d/1UTwjL2Go0Yo00Y_TW7jsJJBXwxKjUPyz/view?usp=sharing)    
+- [FPGA + SDRAM + UART demo](https://drive.google.com/file/d/1UTwjL2Go0Yo00Y_TW7jsJJBXwxKjUPyz/view?usp=sharing)
+- [Using the Signal Tap Logic Analyzer](https://drive.google.com/file/d/1tOhgmP-M25bKoNxMrgj8BRlLRTDUJhxo/view?usp=sharing)    
 
 ## RTL compilation report
 ### 1. Resource utilization    
