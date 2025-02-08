@@ -10,32 +10,33 @@ entity fifo_control_tb is
 end fifo_control_tb;
 
 architecture fifo_control_behav of fifo_control_tb is
-   constant AW: integer := 6;  -- Address Width (AW)
-   constant PLL_PERIOD: time := 10 * CLK_PERIOD;
+   constant AW:         integer := 6;  -- Address Width (AW)
+   constant PLL_PERIOD: time    := 10 * CLK_PERIOD;
    ------------------------------------------------------------------
-   signal rst_n: std_logic;
-   signal clk: std_logic := '0';
-   signal w_valid: std_logic := '0'; 
-   signal r_ready: std_logic := '0'; 
-   signal w_addr: std_logic_vector(AW - 1 downto 0);
-   signal r_addr: std_logic_vector(AW - 1 downto 0);
-   signal fifo_full: std_logic;
+   signal rst_n:      std_logic;
+   signal clk:        std_logic := '0';
+   signal w_valid:    std_logic := '0'; 
+   signal r_ready:    std_logic := '0'; 
+   signal w_addr:     std_logic_vector(AW - 1 downto 0);
+   signal r_addr:     std_logic_vector(AW - 1 downto 0);
+   signal fifo_full:  std_logic;
    signal fifo_empty: std_logic;
    signal w_addr_int: integer range 0 to 2**AW - 1 := 0; 
    signal r_addr_int: integer range 0 to 2**AW - 1 := 0;
 begin
    uut: entity work.fifo_control(fifo_control_rtl)
-   generic map(AW => AW)
-   port map(rst_n => rst_n,
-            clk => clk,
-            w_valid => w_valid,
-            r_ready => r_ready, 
-            w_addr => w_addr,
-            r_addr => r_addr,
-            fifo_full => fifo_full,
+   generic map(AW      => AW)
+   port map(rst_n      => rst_n,
+            clk        => clk,
+            w_valid    => w_valid,
+            r_ready    => r_ready, 
+            w_addr     => w_addr,
+            r_addr     => r_addr,
+            fifo_full  => fifo_full,
             fifo_empty => fifo_empty);
-            
-   reset: rst_n <= '0', '1' after 2 * PLL_PERIOD;
+   
+   -- Reset generation
+   rst_n <= '0', '1' after 2 * PLL_PERIOD;
    
    clock_generation: process
    begin

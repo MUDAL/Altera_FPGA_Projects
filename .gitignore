@@ -1,6 +1,12 @@
+# ModelSim files
 transcript
 vsim.wlf
+tcl_stacktrace.txt
+
+# VHDL backup files
 *.vhd.bak
+
+# Unnecessary zone identifier file
 *Zone.Identifier
 
 # Quartus files and folders

@@ -11,21 +11,30 @@ end spi_lcd_main_tb;
 
 architecture spi_lcd_main_behav of spi_lcd_main_tb is
    constant SCK_PERIOD: time := 10 * CLK_PERIOD;
+   ------------------------------------------------------------------
    signal rst_n: std_logic;
-   signal clk: std_logic := '0';
-   signal mosi: std_logic;
-   signal sck: std_logic := '0';
-   signal cs: std_logic;
-   signal rw: std_logic;
-   signal rs: std_logic;
-   signal en: std_logic;
-   signal db: std_logic_vector(7 downto 0);
+   signal clk:   std_logic := '0';
+   signal mosi:  std_logic;
+   signal sck:   std_logic := '0';
+   signal cs:    std_logic;
+   signal rw:    std_logic;
+   signal rs:    std_logic;
+   signal en:    std_logic;
+   signal db:    std_logic_vector(7 downto 0);
 begin
    uut: entity work.spi_lcd_main(spi_lcd_main_rtl)
-   port map(rst_n => rst_n, clk => clk, mosi => mosi, sck => sck,
-            cs => cs, rw => rw, rs => rs, en => en, db => db);
+   port map(rst_n => rst_n, 
+            clk   => clk, 
+            mosi  => mosi, 
+            sck   => sck,
+            cs    => cs, 
+            rw    => rw, 
+            rs    => rs, 
+            en    => en, 
+            db    => db);
    
-   reset: rst_n <= '0', '1' after 2 * CLK_PERIOD;
+   -- Reset generation
+   rst_n <= '0', '1' after 2 * CLK_PERIOD;
    
    clock_generation: process
    begin
@@ -33,7 +42,8 @@ begin
       clk <= not clk;
    end process;
    
-   cs_stimulus: cs <= '1', '0' after 5 * CLK_PERIOD;
+   -- "Chip select" stimulus
+   cs <= '1', '0' after 5 * CLK_PERIOD;
    
    sck_stimulus: process
    begin
@@ -47,7 +57,8 @@ begin
    
    mosi_stimulus: process
       constant PATH: string(1 to 23) := "file/main/testcases.txt";
-      file testcases: text;   
+      ---------------------------------------------------------------
+      file testcases:    text;   
       variable testcase: line;
       variable mosi_str: string(1 to 4);
       variable mosi_slv: std_logic_vector(15 downto 0);
@@ -55,6 +66,7 @@ begin
       wait until rst_n = '1';
       wait until cs = '0' and sck = '0';
       file_open(testcases,PATH,read_mode);
+      
       while not endfile(testcases) loop
          readline(testcases,testcase);
          read(testcase,mosi_str);
@@ -72,29 +84,32 @@ begin
             wait until sck = '0';
          end loop;
       end loop;
+      
       file_close(testcases);
       wait;
    end process;
    
    output_verification: process
-      constant PATH_1: string(1 to 30) := "file/main/expected_outputs.txt";
-      constant PATH_2: string(1 to 28) := "file/main/status_reports.txt";
-      constant ZEROS: std_logic_vector(1 downto 0) := "00";
-      constant TIMEOUT: time := 17 * SCK_PERIOD; 
-      file expected_outputs: text; 
-      file status_reports: text;       
+      constant PATH_1:  string(1 to 30) := "file/main/expected_outputs.txt";
+      constant PATH_2:  string(1 to 28) := "file/main/status_reports.txt";
+      constant ZEROS:   std_logic_vector(1 downto 0) := "00";
+      constant TIMEOUT: time := 17 * SCK_PERIOD;
+      ---------------------------------------------------------------
+      file expected_outputs:    text; 
+      file status_reports:      text;       
       variable expected_output: line;
-      variable status_report: line;
-      variable lcd_data_out: string(1 to 3);
-      variable data_str: string(1 to 3);
-      variable status: string(1 to 4);
-      variable pass_count: integer := 0;
-      variable fail_count: integer := 0;
+      variable status_report:   line;
+      variable lcd_data_out:    string(1 to 3);
+      variable data_str:        string(1 to 3);
+      variable status:          string(1 to 4);
+      variable pass_count:      integer := 0;
+      variable fail_count:      integer := 0;
    begin
       wait until rst_n = '1';
       wait until cs = '0' and sck = '0';
       file_open(expected_outputs,PATH_1,read_mode);
       file_open(status_reports,PATH_2,write_mode);
+      
       while not endfile(expected_outputs) loop
          readline(expected_outputs,expected_output);
          read(expected_output,lcd_data_out);
@@ -115,9 +130,14 @@ begin
          end if;        
          
          -- Display test results on the console
-         report "Expected: " & lcd_data_out & ", " &
-                "Got: " & data_str & ", " &
-                "Status: " & status;
+         report "Expected: " 
+                & lcd_data_out 
+                & ", " 
+                & "Got: " 
+                & data_str 
+                & ", " 
+                & "Status: " 
+                & status;
                 
          -- Store test results in the status reports file      
          write(status_report,string'("Expected: "));
@@ -129,17 +149,23 @@ begin
          write(status_report,string'("Status: "));
          write(status_report,string'(status));         
          writeline(status_reports,status_report);
+         
       end loop;
       
       -- Final report (total successes and failures)
-      report "Passed tests: " & integer'image(pass_count) & ", "  & 
-             "Failed tests: " & integer'image(fail_count);
+      report "Passed tests: " 
+             & integer'image(pass_count) 
+             & ", "  
+             & "Failed tests: " 
+             & integer'image(fail_count);
+             
       write(status_report,string'("Passed tests: "));
       write(status_report,string'(integer'image(pass_count)));
       write(status_report,string'(", "));
       write(status_report,string'("Failed tests: "));
       write(status_report,string'(integer'image(fail_count))); 
-      writeline(status_reports,status_report);     
+      writeline(status_reports,status_report);
+      
       file_close(expected_outputs);
       file_close(status_reports);
       assert false report "Simulation done" severity failure;

@@ -12,20 +12,28 @@ end lcd_driver_tb;
 architecture lcd_driver_behav of lcd_driver_tb is
    -- Signals
    signal rst_n: std_logic;
-   signal clk: std_logic := '0';
+   signal clk:   std_logic := '0';
    signal rs_in: std_logic;
-   signal d_in: std_logic_vector(7 downto 0);
-   signal rs: std_logic;
-   signal en: std_logic;
-   signal rw: std_logic;
-   signal db: std_logic_vector(7 downto 0);
-   signal rdy: std_logic;
+   signal d_in:  std_logic_vector(7 downto 0);
+   signal rs:    std_logic;
+   signal en:    std_logic;
+   signal rw:    std_logic;
+   signal db:    std_logic_vector(7 downto 0);
+   signal rdy:   std_logic;
 begin
    uut: entity work.lcd_driver(lcd_driver_rtl)
-   port map(rst_n => rst_n, clk => clk, rs_in => rs_in, d_in => d_in,
-            rs => rs, en => en, rw => rw, db => db, rdy => rdy);
+   port map(rst_n => rst_n, 
+            clk   => clk, 
+            rs_in => rs_in, 
+            d_in  => d_in,
+            rs    => rs, 
+            en    => en, 
+            rw    => rw, 
+            db    => db, 
+            rdy   => rdy);
    
-   reset: rst_n <= '0', '1' after 2 * CLK_PERIOD;
+   -- Reset generation
+   rst_n <= '0', '1' after 2 * CLK_PERIOD;
    
    clock_generation: process
    begin
@@ -35,23 +43,28 @@ begin
    
    stimuli: process
       constant PATH: string(1 to 22) := "file/lcd/testcases.txt";
-      file testcases: text;   
-      variable testcase: line;
-      variable lcd_data_in: string(1 to 3);
+      ---------------------------------------------------------------
+      file testcases:        text;   
+      variable testcase:     line;
+      variable lcd_data_in:  string(1 to 3);
       -- Most significant nibble
       variable testcase_msn: std_logic_vector(3 downto 0); 
    begin
       file_open(testcases,PATH,read_mode);
+      
       while not endfile(testcases) loop
          readline(testcases,testcase);
          read(testcase,lcd_data_in);
          
          wait until rdy = '1';
+         
          testcase_msn := char2slv(lcd_data_in(1));
-         rs_in <= testcase_msn(0);
+         rs_in        <= testcase_msn(0);
+         
          d_in(7 downto 4) <= char2slv(lcd_data_in(2));
          d_in(3 downto 0) <= char2slv(lcd_data_in(3));
       end loop;
+      
       file_close(testcases);
       wait;
    end process;
@@ -59,26 +72,28 @@ begin
    output_verification: process
       constant PATH_1: string(1 to 29) := "file/lcd/expected_outputs.txt";
       constant PATH_2: string(1 to 27) := "file/lcd/status_reports.txt";
-      constant ZEROS: std_logic_vector(2 downto 0) := "000";
-      file expected_outputs: text; 
-      file status_reports: text;       
+      constant ZEROS:  std_logic_vector(2 downto 0) := "000";
+      ---------------------------------------------------------------
+      file expected_outputs:    text; 
+      file status_reports:      text;       
       variable expected_output: line;
-      variable status_report: line;
-      variable lcd_data_out: string(1 to 3);
-      variable data_str: string(1 to 3);
-      variable status: string(1 to 4);
-      variable pass_count: integer := 0;
-      variable fail_count: integer := 0;        
+      variable status_report:   line;
+      variable lcd_data_out:    string(1 to 3);
+      variable data_str:        string(1 to 3);
+      variable status:          string(1 to 4);
+      variable pass_count:      integer := 0;
+      variable fail_count:      integer := 0;        
    begin
       file_open(expected_outputs,PATH_1,read_mode);
       file_open(status_reports,PATH_2,write_mode);
+      
       while not endfile(expected_outputs) loop
          readline(expected_outputs,expected_output);
          read(expected_output,lcd_data_out);
          
          wait until rdy = '1';
          wait until rdy = '0' and en = '1';
-         wait until en = '0';
+         wait until en  = '0';
          wait until rising_edge(clk);
 
          -- Convert data output from UUT to string format
@@ -95,9 +110,14 @@ begin
          end if;        
          
          -- Display test results on the console
-         report "Expected: " & lcd_data_out & ", " &
-                "Got: " & data_str & ", " &
-                "Status: " & status;
+         report "Expected: " 
+                & lcd_data_out 
+                & ", " 
+                & "Got: " 
+                & data_str 
+                & ", " 
+                & "Status: " 
+                & status;
                 
          -- Store test results in the status reports file      
          write(status_report,string'("Expected: "));
@@ -112,14 +132,19 @@ begin
       end loop;
       
       -- Final report (total successes and failures)
-      report "Passed tests: " & integer'image(pass_count) & ", "  & 
-             "Failed tests: " & integer'image(fail_count);
+      report "Passed tests: " 
+             & integer'image(pass_count) 
+             & ", "  
+             & "Failed tests: " 
+             & integer'image(fail_count);
+             
       write(status_report,string'("Passed tests: "));
       write(status_report,string'(integer'image(pass_count)));
       write(status_report,string'(", "));
       write(status_report,string'("Failed tests: "));
       write(status_report,string'(integer'image(fail_count))); 
-      writeline(status_reports,status_report);        
+      writeline(status_reports,status_report); 
+      
       file_close(expected_outputs);
       file_close(status_reports);
       assert false report "Simulation done" severity failure;

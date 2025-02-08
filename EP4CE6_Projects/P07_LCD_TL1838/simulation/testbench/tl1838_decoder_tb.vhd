@@ -13,17 +13,21 @@ architecture tl1838_decoder_behav of tl1838_decoder_tb is
    -- Delay before injecting next stimulus to the UUT
    constant COMMS_INTERVAL: time := 10 * CLK_PERIOD;
    -- Signals
-   signal rst_n: std_logic := '0';
-   signal clk: std_logic := '0';
-   signal ir: std_logic := '1'; -- IR decoder's input
+   signal rst_n:    std_logic := '0';
+   signal clk:      std_logic := '0';
+   signal ir:       std_logic := '1'; -- IR decoder's input
    signal data_out: std_logic_vector(15 downto 0);
-   signal done: std_logic;
+   signal done:     std_logic;
 begin
    uut: entity work.tl1838_decoder(tl1838_decoder_rtl)
-   port map(rst_n => rst_n, clk => clk, ir => ir,
-            data_out => data_out, done => done);
+   port map(rst_n    => rst_n, 
+            clk      => clk, 
+            ir       => ir,
+            data_out => data_out, 
+            done     => done);
    
-   reset: rst_n <= '0', '1' after 2 * CLK_PERIOD;
+   -- Reset generation
+   rst_n <= '0', '1' after 2 * CLK_PERIOD;
    
    clock_generation: process
    begin
@@ -33,20 +37,23 @@ begin
    
    stimuli: process
       constant PATH: string(1 to 21) := "file/ir/testcases.txt";
-      file testcases: text;   
+      ---------------------------------------------------------------
+      file testcases:    text;   
       variable testcase: line;
-      variable keycode: string(1 to 8); -- String indexes start from 1
-      variable ir_tx: std_logic_vector(31 downto 0); -- TL1838's output
+      variable keycode:  string(1 to 8); -- String indexes start from 1
+      variable ir_tx:    std_logic_vector(31 downto 0); -- TL1838's output
       -- Constants for NEC protocol timing
-      constant NEC_START_LOW: time := 450_000 * CLK_PERIOD; -- 9 ms 
-      constant NEC_START_HIGH: time := NEC_START_LOW / 2; -- 4.5 ms
-      constant NEC_LOW_PULSE: time := 28110 * CLK_PERIOD; -- 562.2 uS
+      constant NEC_START_LOW:    time := 450_000 * CLK_PERIOD; -- 9 ms 
+      constant NEC_START_HIGH:   time := NEC_START_LOW / 2; -- 4.5 ms
+      constant NEC_LOW_PULSE:    time := 28110 * CLK_PERIOD; -- 562.2 uS
       constant NEC_HIGH_PULSE_0: time := NEC_LOW_PULSE;     
       constant NEC_HIGH_PULSE_1: time := 84350 * CLK_PERIOD; -- 1.687 ms
    begin
       wait until rst_n = '1';
+      
       -- Read test inputs (keycodes) from the file with the testcases. 
       file_open(testcases,PATH,read_mode);
+      
       while not endfile(testcases) loop
          readline(testcases,testcase);
          read(testcase,keycode);
@@ -82,6 +89,7 @@ begin
                wait for NEC_LOW_PULSE;
                ir <= '1';
                wait for NEC_HIGH_PULSE_0;
+               
             else
                ir <= '0';
                wait for NEC_LOW_PULSE;
@@ -99,6 +107,7 @@ begin
          wait until done = '0';
          wait for COMMS_INTERVAL;         
       end loop;
+      
       file_close(testcases);
       wait;
    end process;
@@ -106,19 +115,21 @@ begin
    output_verification: process
       constant PATH_1: string(1 to 28) := "file/ir/expected_outputs.txt";
       constant PATH_2: string(1 to 26) := "file/ir/status_reports.txt";
-      file expected_outputs: text; 
-      file status_reports: text;       
+      ---------------------------------------------------------------
+      file expected_outputs:    text; 
+      file status_reports:      text;       
       variable expected_output: line;
-      variable status_report: line;
-      variable keycode: string(1 to 4);
-      variable data_str: string(1 to 4); 
-      variable status: string(1 to 4);
-      variable pass_count: integer := 0;
-      variable fail_count: integer := 0;     
+      variable status_report:   line;
+      variable keycode:         string(1 to 4);
+      variable data_str:        string(1 to 4); 
+      variable status:          string(1 to 4);
+      variable pass_count:      integer := 0;
+      variable fail_count:      integer := 0;     
    begin
       wait until rst_n = '1';
       file_open(expected_outputs,PATH_1,read_mode);
       file_open(status_reports,PATH_2,write_mode);
+      
       while not endfile(expected_outputs) loop
          readline(expected_outputs,expected_output);
          read(expected_output,keycode);
@@ -140,9 +151,14 @@ begin
          end if;        
          
          -- Display test results on the console
-         report "Expected: " & keycode & ", " &
-                "Got: " & data_str & ", " &
-                "Status: " & status;
+         report "Expected: " 
+                & keycode 
+                & ", " 
+                & "Got: " 
+                & data_str 
+                & ", " 
+                & "Status: " 
+                & status;
                 
          -- Store test results in the status reports file      
          write(status_report,string'("Expected: "));
@@ -155,19 +171,26 @@ begin
          write(status_report,string'(status));         
          writeline(status_reports,status_report);
          wait until done = '0';
+         
       end loop;
       
       -- Final report (total successes and failures)
-      report "Passed tests: " & integer'image(pass_count) & ", "  & 
-             "Failed tests: " & integer'image(fail_count);
+      report "Passed tests: " 
+             & integer'image(pass_count) 
+             & ", "  
+             & "Failed tests: " 
+             & integer'image(fail_count);
+             
       write(status_report,string'("Passed tests: "));
       write(status_report,string'(integer'image(pass_count)));
       write(status_report,string'(", "));
       write(status_report,string'("Failed tests: "));
       write(status_report,string'(integer'image(fail_count))); 
-      writeline(status_reports,status_report);     
+      writeline(status_reports,status_report);
+      
       file_close(expected_outputs);
       file_close(status_reports);
+      
       assert false report "Simulation done" severity failure;
       wait;
    end process;

@@ -10,25 +10,32 @@ entity ir_lcd_main_tb is
 end ir_lcd_main_tb;
 
 architecture ir_lcd_main_behav of ir_lcd_main_tb is
-   constant LCD_EXEC_TIME: time := 1500 * CLK_PERIOD;
+   constant LCD_EXEC_TIME:  time := 1500 * CLK_PERIOD;
    -- Delay before injecting next stimulus to the UUT
    constant COMMS_INTERVAL: time := 10 * CLK_PERIOD;
    -- Signals
    signal rst_n: std_logic;
-   signal clk: std_logic := '0';
-   signal ir: std_logic;
-   signal rs: std_logic;
-   signal en: std_logic;
-   signal rw: std_logic;
-   signal db: std_logic_vector(7 downto 0);
-   signal err: std_logic;
-   signal done: std_logic := '0';
+   signal clk:   std_logic := '0';
+   signal ir:    std_logic;
+   signal rs:    std_logic;
+   signal en:    std_logic;
+   signal rw:    std_logic;
+   signal db:    std_logic_vector(7 downto 0);
+   signal err:   std_logic;
+   signal done:  std_logic := '0';
 begin
    uut: entity work.ir_lcd_main(ir_lcd_main_rtl)
-   port map(rst_n => rst_n, clk => clk, ir => ir,
-            rs => rs, en => en, rw => rw, db => db, err => err);
-            
-   reset: rst_n <= '0', '1' after 2 * CLK_PERIOD;
+   port map(rst_n => rst_n, 
+            clk   => clk, 
+            ir    => ir,
+            rs    => rs, 
+            en    => en, 
+            rw    => rw, 
+            db    => db, 
+            err   => err);
+   
+   -- Reset generation
+   rst_n <= '0', '1' after 2 * CLK_PERIOD;
    
    clock_generation: process
    begin
@@ -38,20 +45,23 @@ begin
    
    stimuli: process
       constant PATH: string(1 to 23) := "file/main/testcases.txt";
-      file testcases: text;   
+      ---------------------------------------------------------------
+      file testcases:    text;   
       variable testcase: line;
-      variable keycode: string(1 to 8); -- String indexes start from 1
-      variable ir_tx: std_logic_vector(31 downto 0); -- TL1838's output
+      variable keycode:  string(1 to 8); -- String indexes start from 1
+      variable ir_tx:    std_logic_vector(31 downto 0); -- TL1838's output
       -- Constants for NEC protocol timing
-      constant NEC_START_LOW: time := 450_000 * CLK_PERIOD; -- 9 ms 
-      constant NEC_START_HIGH: time := NEC_START_LOW / 2; -- 4.5 ms
-      constant NEC_LOW_PULSE: time := 28110 * CLK_PERIOD; -- 562.2 uS
+      constant NEC_START_LOW:    time := 450_000 * CLK_PERIOD; -- 9 ms 
+      constant NEC_START_HIGH:   time := NEC_START_LOW / 2; -- 4.5 ms
+      constant NEC_LOW_PULSE:    time := 28110 * CLK_PERIOD; -- 562.2 uS
       constant NEC_HIGH_PULSE_0: time := NEC_LOW_PULSE;     
       constant NEC_HIGH_PULSE_1: time := 84350 * CLK_PERIOD; -- 1.687 ms
    begin
       wait until rst_n = '1';
+      
       -- Read test inputs (keycodes) from the file with the testcases. 
       file_open(testcases,PATH,read_mode);
+      
       while not endfile(testcases) loop
          readline(testcases,testcase);
          read(testcase,keycode);
@@ -89,6 +99,7 @@ begin
                wait for NEC_LOW_PULSE;
                ir <= '1';
                wait for NEC_HIGH_PULSE_0;
+               
             else
                ir <= '0';
                wait for NEC_LOW_PULSE;
@@ -112,28 +123,30 @@ begin
    output_verification: process
       constant PATH_1: string(1 to 30) := "file/main/expected_outputs.txt";
       constant PATH_2: string(1 to 28) := "file/main/status_reports.txt";
-      constant ZEROS: std_logic_vector(2 downto 0) := "000";
-      file expected_outputs: text; 
-      file status_reports: text;       
+      constant ZEROS:  std_logic_vector(2 downto 0) := "000";
+      ---------------------------------------------------------------
+      file expected_outputs:    text; 
+      file status_reports:      text;       
       variable expected_output: line;
-      variable status_report: line;
-      variable lcd_data_out: string(1 to 3);
-      variable data_str: string(1 to 3);
-      variable status: string(1 to 4);
-      variable pass_count: integer := 0;
-      variable fail_count: integer := 0;     
+      variable status_report:   line;
+      variable lcd_data_out:    string(1 to 3);
+      variable data_str:        string(1 to 3);
+      variable status:          string(1 to 4);
+      variable pass_count:      integer := 0;
+      variable fail_count:      integer := 0;     
    begin
       wait until rst_n = '1';
       file_open(expected_outputs,PATH_1,read_mode);
       file_open(status_reports,PATH_2,write_mode);
+      
       while not endfile(expected_outputs) loop
          readline(expected_outputs,expected_output);
          read(expected_output,lcd_data_out);
          
          wait for LCD_EXEC_TIME;
          wait until done = '1';
-         wait until en = '1';
-         wait until en = '0';
+         wait until en   = '1';
+         wait until en   = '0';
          wait until rising_edge(clk);
 
          -- Convert data output from UUT to string format
@@ -150,9 +163,14 @@ begin
          end if;        
          
          -- Display test results on the console
-         report "Expected: " & lcd_data_out & ", " &
-                "Got: " & data_str & ", " &
-                "Status: " & status;
+         report "Expected: " 
+                & lcd_data_out 
+                & ", " 
+                & "Got: " 
+                & data_str 
+                & ", " 
+                & "Status: " 
+                & status;
                 
          -- Store test results in the status reports file      
          write(status_report,string'("Expected: "));
@@ -167,14 +185,19 @@ begin
       end loop;
       
       -- Final report (total successes and failures)
-      report "Passed tests: " & integer'image(pass_count) & ", "  & 
-             "Failed tests: " & integer'image(fail_count);
+      report "Passed tests: " 
+             & integer'image(pass_count) 
+             & ", "  
+             & "Failed tests: " 
+             & integer'image(fail_count);
+             
       write(status_report,string'("Passed tests: "));
       write(status_report,string'(integer'image(pass_count)));
       write(status_report,string'(", "));
       write(status_report,string'("Failed tests: "));
       write(status_report,string'(integer'image(fail_count))); 
-      writeline(status_reports,status_report);        
+      writeline(status_reports,status_report);
+      
       file_close(expected_outputs);
       file_close(status_reports);
       assert false report "Simulation done" severity failure;

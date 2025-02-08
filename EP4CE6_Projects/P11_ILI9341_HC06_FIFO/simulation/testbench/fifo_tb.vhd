@@ -10,30 +10,31 @@ entity fifo_tb is
 end fifo_tb;
 
 architecture fifo_behav of fifo_tb is
-   constant AW: integer := 6;
-   constant DW: integer := 2;
+   constant AW:         integer := 6;
+   constant DW:         integer := 2;
    constant PLL_PERIOD: time := 10 * CLK_PERIOD;
    ------------------------------------------------------------------
-   signal rst_n: std_logic;
-   signal clk: std_logic := '0';
+   signal rst_n:   std_logic;
+   signal clk:     std_logic := '0';
    signal w_valid: std_logic := '0'; 
    signal r_ready: std_logic := '0'; 
-   signal d_in: std_logic_vector(DW - 1 downto 0);
-   signal d_out: std_logic_vector(DW - 1 downto 0);
-   signal r_oe: std_logic;
+   signal d_in:    std_logic_vector(DW - 1 downto 0);
+   signal d_out:   std_logic_vector(DW - 1 downto 0);
+   signal r_oe:    std_logic;
 begin
    uut: entity work.fifo(fifo_rtl)
-   generic map(AW => AW,  
-               DW => DW) 
-   port map(rst_n => rst_n,
-            clk => clk,
+   generic map(AW   => AW,  
+               DW   => DW) 
+   port map(rst_n   => rst_n,
+            clk     => clk,
             w_valid => w_valid,
             r_ready => r_ready,
-            d_in => d_in,
-            d_out => d_out,
-            r_oe => r_oe);
-         
-   reset: rst_n <= '0', '1' after 2 * PLL_PERIOD;
+            d_in    => d_in,
+            d_out   => d_out,
+            r_oe    => r_oe);
+   
+   -- Reset generation
+   rst_n <= '0', '1' after 2 * PLL_PERIOD;
    
    clock_generation: process
    begin
@@ -54,17 +55,17 @@ begin
          d_in <= std_logic_vector(to_unsigned(mod4,d_in'length));
          wait until rising_edge(clk);
       end loop;
+      
       wait until rising_edge(clk);
       w_valid <= '0';
       wait until rising_edge(clk);
       r_ready <= '1';
       wait;
-      
    end process;
    
    output_verification: process
    begin
-      wait until rst_n = '1';
+      wait until rst_n   = '1';
       wait until w_valid = '0';
       wait until r_ready = '1';
       
@@ -72,11 +73,11 @@ begin
          report "[R]: " & integer'image(to_integer(unsigned(d_out)));
          wait until rising_edge(clk);
       end loop;
+      
       report "[R]: " & integer'image(to_integer(unsigned(d_out)));
       wait until rising_edge(clk);     
       assert false report "Simulation done" severity failure;
       wait;
-      
    end process;
    
 end fifo_behav;

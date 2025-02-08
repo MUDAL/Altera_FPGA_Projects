@@ -60,4 +60,5 @@ package body pack_tb is
       end case;
       return char;
    end function;
+   
 end package body pack_tb;
