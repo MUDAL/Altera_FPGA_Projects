@@ -15,7 +15,7 @@ Z1 DPx4 work 3 pkg 0 22 ^QW<V?>jb42oTTd>3;CSl3
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 11
+!i122 21
 w1745266984
 Z5 dL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation
 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/pack_tb_header.vhd
@@ -27,9 +27,9 @@ V<ESKV55BgFD^4KnVWfi323
 Z6 OV;C;2020.1;71
 32
 b1
-Z7 !s110 1745267011
+Z7 !s110 1745618053
 !i10b 1
-Z8 !s108 1745267011.000000
+Z8 !s108 1745618053.000000
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/pack_tb_header.vhd|
 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/pack_tb_header.vhd|
 !i113 1
@@ -42,7 +42,7 @@ R1
 R2
 R3
 R4
-!i122 12
+!i122 22
 w1711660441
 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/pack_tb_body.vhd
 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/pack_tb_body.vhd
@@ -65,7 +65,7 @@ R0
 R2
 R3
 R4
-!i122 9
+!i122 19
 Z12 w1735680982
 R5
 Z13 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/src/lib/pkg.vhd
@@ -77,11 +77,11 @@ V^QW<V?>jb42oTTd>3;CSl3
 R6
 32
 b1
-Z15 !s110 1745267010
+R7
 !i10b 1
-Z16 !s108 1745267010.000000
-Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/src/lib/pkg.vhd|
-Z18 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/src/lib/pkg.vhd|
+R8
+Z15 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/src/lib/pkg.vhd|
+Z16 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/src/lib/pkg.vhd|
 !i113 1
 R9
 R10
@@ -91,43 +91,43 @@ R0
 R2
 R3
 R4
-!i122 9
+!i122 19
 l0
 L37 1
 V^_Io0WW?3ReO3]zTld2@R0
 !s100 hLC>^E[[f_G<CkXk=LC<<3
 R6
 32
-R15
+R7
 !i10b 1
+R8
+R15
 R16
-R17
-R18
 !i113 1
 R9
 R10
 Esdram_controller
-Z19 w1735681156
+Z17 w1735681156
 R1
 R0
 R2
 R3
 R4
-!i122 10
+!i122 20
 R5
-Z20 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/src/lib/sdram_controller.vhd
-Z21 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/src/lib/sdram_controller.vhd
+Z18 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/src/lib/sdram_controller.vhd
+Z19 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/src/lib/sdram_controller.vhd
 l0
 L11 1
 V_Vd:318dFGOIlG8c]1nZK2
 !s100 8;>V@hV?KhADNCgeFO?Z[3
 R6
 32
-R15
+R7
 !i10b 1
-R16
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/src/lib/sdram_controller.vhd|
-Z23 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/src/lib/sdram_controller.vhd|
+R8
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/src/lib/sdram_controller.vhd|
+Z21 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/src/lib/sdram_controller.vhd|
 !i113 1
 R9
 R10
@@ -137,84 +137,84 @@ R0
 R2
 R3
 R4
-Z24 DEx4 work 16 sdram_controller 0 22 _Vd:318dFGOIlG8c]1nZK2
-!i122 10
+Z22 DEx4 work 16 sdram_controller 0 22 _Vd:318dFGOIlG8c]1nZK2
+!i122 20
 l131
 L49 365
 VS>C9]:[igzZVJQ]kF<8E`2
 !s100 [Meg?HAUCW0:4>_QDaM_g3
 R6
 32
-R15
+R7
 !i10b 1
-R16
-R22
-R23
+R8
+R20
+R21
 !i113 1
 R9
 R10
 Esdram_controller_tb
-Z25 w1745266959
+Z23 w1745266959
 R11
 R0
 R1
 R2
 R3
 R4
-!i122 13
+!i122 23
 R5
-Z26 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_controller_tb.vhd
-Z27 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_controller_tb.vhd
+Z24 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_controller_tb.vhd
+Z25 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_controller_tb.vhd
 l0
 L8 1
 VTfcfBHI_h:IDIa[B`SOVa1
 !s100 >KjX6R?VgG>ecc223QEdi2
 R6
 32
-R7
+Z26 !s110 1745618054
 !i10b 1
 R8
-Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_controller_tb.vhd|
-Z29 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_controller_tb.vhd|
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_controller_tb.vhd|
+Z28 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_controller_tb.vhd|
 !i113 1
 R9
 R10
 Asdram_controller_behav
-Z30 DEx4 work 11 sdram_model 0 22 3oe=f_Mi8jhd?bM:6<R;N0
+Z29 DEx4 work 11 sdram_model 0 22 3oe=f_Mi8jhd?bM:6<R;N0
 R11
 R0
 R1
 R2
 R3
 R4
-Z31 DEx4 work 19 sdram_controller_tb 0 22 TfcfBHI_h:IDIa[B`SOVa1
-!i122 13
+Z30 DEx4 work 19 sdram_controller_tb 0 22 TfcfBHI_h:IDIa[B`SOVa1
+!i122 23
 l24
-Z32 L11 89
-Z33 Vi12AZ@gEcLeWRa5Y:jHnD2
-Z34 !s100 a51lG633z[RD70mW@k;WM3
+Z31 L11 89
+Z32 Vi12AZ@gEcLeWRa5Y:jHnD2
+Z33 !s100 a51lG633z[RD70mW@k;WM3
 R6
 32
-R7
+R26
 !i10b 1
 R8
+R27
 R28
-R29
 !i113 1
 R9
 R10
 Esdram_model
-Z35 w1745266968
+Z34 w1745618026
 R11
 R0
 R1
 R2
 R3
 R4
-!i122 12
+!i122 22
 R5
-Z36 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_behavioural_model/sdram_model.vhd
-Z37 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_behavioural_model/sdram_model.vhd
+Z35 8L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_behavioural_model/sdram_model.vhd
+Z36 FL:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_behavioural_model/sdram_model.vhd
 l0
 L8 1
 V3oe=f_Mi8jhd?bM:6<R;N0
@@ -224,32 +224,32 @@ R6
 R7
 !i10b 1
 R8
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_behavioural_model/sdram_model.vhd|
-Z39 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_behavioural_model/sdram_model.vhd|
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_behavioural_model/sdram_model.vhd|
+Z38 !s107 L:/VHDL/Intel_FPGA_Projects/EP4CE6_Projects/P13_SDRAM/simulation/testbench/sdram_behavioural_model/sdram_model.vhd|
 !i113 1
 R9
 R10
 Asdram_model_behav
-R24
+R22
 R11
 R0
 R1
 R2
 R3
 R4
-R30
-!i122 12
+R29
+!i122 22
 l36
 L29 98
-VEf7JM5Wk8QMf7DU9c70Vb1
-!s100 P^?>371a`N>dGz^XRD?U32
+VCF7^?;eFSE3N@<0mY>W:83
+!s100 [BK7oe1B:>g=<iTIUg6K;0
 R6
 32
 R7
 !i10b 1
 R8
+R37
 R38
-R39
 !i113 1
 R9
 R10

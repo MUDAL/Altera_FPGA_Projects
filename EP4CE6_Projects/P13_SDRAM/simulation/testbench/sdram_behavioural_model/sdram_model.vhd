@@ -76,8 +76,8 @@ begin
          
          memory_model(to_integer(rows_written), column_count) 
                    <= std_logic_vector(unsigned(data_in));
-                 
-         wait until rising_edge(clk);
+         
+         wait on data_in;
       end loop;
       
       rows_written <= rows_written + 1;
