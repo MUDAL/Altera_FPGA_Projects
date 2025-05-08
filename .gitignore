@@ -6,7 +6,7 @@ tcl_stacktrace.txt
 # VHDL backup files
 *.vhd.bak
 
-# Unnecessary zone identifier file
+# Unnecessary zone identifier file (applies to WSL users)
 *Zone.Identifier
 
 # Quartus files and folders
