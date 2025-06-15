@@ -23,8 +23,10 @@ architecture rgb_display_behav of rgb_display_tb is
    constant BAUD_RATE: integer := 9600;
    constant SYS_FREQ:  integer := 50_000_000;
    constant PLL_FREQ:  integer := SYS_FREQ / CLK_DIV; -- MHz
-   -- Clocks per bit -> time
-   constant BIT_TIME:  time    := PLL_PERIOD * (PLL_FREQ / BAUD_RATE);
+   -- Clocks per bit --> time
+   constant BIT_TIME:    time    := PLL_PERIOD * (PLL_FREQ / BAUD_RATE); 
+   constant RESET_MS:    integer := 1; -- ILI9341 delay after reset
+   constant SLEEPOUT_MS: integer := 1; -- ILI9341 delay after SLEEPOUT
    ------------------------------------------------------------------
    signal rst_n:   std_logic;
    signal clk:     std_logic := '0';
@@ -39,11 +41,13 @@ architecture rgb_display_behav of rgb_display_tb is
    signal done:    std_logic := '0';
 begin
    uut: entity work.rgb_display(rgb_display_rtl)
-   generic map(BAUD_RATE => BAUD_RATE,
-               SYS_FREQ  => SYS_FREQ,
-               CLK_DIV  => CLK_DIV,
-               FIFO_AW  => FIFO_AW,
-               FIFO_DW  => FIFO_DW)
+   generic map(BAUD_RATE              => BAUD_RATE,
+               SYS_FREQ               => SYS_FREQ,
+               CLK_DIV                => CLK_DIV,
+               FIFO_AW                => FIFO_AW,
+               FIFO_DW                => FIFO_DW,
+               DISP_DELAY_RST_MS      => RESET_MS,    -- To quicken the simulation
+               DISP_DELAY_SLEEPOUT_MS => SLEEPOUT_MS) -- To quicken the simulation           
    port map(rst_n       => rst_n,
             clk         => clk,
             data_in     => data_in,
@@ -64,7 +68,7 @@ begin
    end process;
 
    stimuli: process
-      constant PATH: string(1 to 23) := "file/main/testcases.txt";
+      constant PATH: string(1 to 26) := "../file/main/testcases.txt";
       ---------------------------------------------------------------
       file testcases:    text;   
       variable testcase: line;
@@ -80,6 +84,7 @@ begin
 
          wait until rdy = '1';
          wait for PLL_PERIOD;
+         report "Display: Ready (Initialization is over)";
          
          -- Convert test inputs to std_logic_vector (slv)
          data_slv(7 downto 4) := char2slv(data_str(1));
@@ -106,9 +111,35 @@ begin
       wait;    
    end process;
 
+   time_tracker: process
+      constant TIME_LIMIT_MS:   integer := RESET_MS + SLEEPOUT_MS;
+      variable current_time_ms: integer := 0;
+      variable simulation_time: time    := 0 ms;
+   begin
+      wait until rst_n = '1';
+      report "[NOTE]: The UART RX module will receive test data that'll drive the display.";
+      
+      while true loop
+         simulation_time := now;
+         current_time_ms := integer(simulation_time / 1 ms);
+         
+         if current_time_ms = TIME_LIMIT_MS then
+            report "Display initialization will be completed shortly";
+            exit;
+         else
+            report "Simulation time: " 
+                   & integer'image(current_time_ms)
+                   & " ms";
+            wait for 1 ms;
+         end if;
+      end loop;
+      
+      wait;
+   end process;   
+   
    output_verification: process
-      constant PATH_1: string(1 to 30) := "file/main/expected_outputs.txt";
-      constant PATH_2: string(1 to 28) := "file/main/status_reports.txt";
+      constant PATH_1: string(1 to 33) := "../file/main/expected_outputs.txt";
+      constant PATH_2: string(1 to 31) := "../file/main/status_reports.txt";
       ---------------------------------------------------------------
       file expected_outputs:    text; 
       file status_reports:      text;       
@@ -129,11 +160,12 @@ begin
       wait until dc = '1'; -- RGB SETTING
       wait until dc = '0'; -- SLEEP OUT
       wait for 16 * PLL_PERIOD; -- Wait for 'SLEEP OUT' command to be sent
-      wait for 120 * PLL_PERIOD * (PLL_FREQ / 1_000); -- 120 ms
+      wait for SLEEPOUT_MS * PLL_PERIOD * (PLL_FREQ / 1_000);
       wait for PLL_PERIOD;
       
       rdy <= '1';
       wait until done = '1';
+      report "UART RX: Done receiving data";
       wait for 2 * PLL_PERIOD; -- 2 cycles after 'UART RX' is done
       wait for PLL_PERIOD;
       

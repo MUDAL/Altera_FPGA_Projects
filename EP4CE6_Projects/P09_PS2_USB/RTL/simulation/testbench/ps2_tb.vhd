@@ -56,7 +56,7 @@ begin
    end process;
    
    ps2_data_stimulus: process
-      constant PATH: string(1 to 22) := "file/ps2/testcases.txt";
+      constant PATH: string(1 to 25) := "../file/ps2/testcases.txt";
       ---------------------------------------------------------------
       file testcases:    text;   
       variable testcase: line;
@@ -91,8 +91,8 @@ begin
    end process;
    
    output_verification: process
-      constant PATH_1: string(1 to 29) := "file/ps2/expected_outputs.txt";
-      constant PATH_2: string(1 to 27) := "file/ps2/status_reports.txt";
+      constant PATH_1: string(1 to 32) := "../file/ps2/expected_outputs.txt";
+      constant PATH_2: string(1 to 30) := "../file/ps2/status_reports.txt";
       ---------------------------------------------------------------
       file expected_outputs:    text; 
       file status_reports:      text;       

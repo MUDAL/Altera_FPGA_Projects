@@ -4,7 +4,8 @@ use IEEE.NUMERIC_STD.ALL;
 library work;
 use work.pkg.all;
 
--- Digital logic circuit to process and debounce button inputs
+-- Digital logic circuit to process and debounce button inputs.
+-- The onboard buttons are active low.
 
 entity button is
    generic(CLK_FREQ:       integer := BUTTON_CLK_FREQ_HZ;
@@ -31,6 +32,7 @@ architecture button_rtl of button is
    signal button_in_next: std_logic;
    signal debounced_reg:  std_logic;
    signal debounced_next: std_logic;
+   signal debounced:      std_logic;
 begin   
    next_state_logic: process(state,
                              button_in_reg,
@@ -55,11 +57,12 @@ begin
       end case;
    end process;
    
-   debounce_delay_counter: process(state,
-                                   button_in_reg,
-                                   count_reg)
+   debounce_logic: process(state,
+                           button_in_reg,
+                           count_reg)
    begin
       count_next <= count_reg;
+      debounced  <= '0';
       case state is
          when ST_IDLE =>
             count_next <= 0;
@@ -67,7 +70,9 @@ begin
          when ST_PRESS =>
             if count_reg = DELAY_CLKS then
                if button_in_reg = '1' then
-                  count_next <= 0;
+                  count_next <=  0;
+               else
+                  debounced  <= '1';
                end if;
             else
                count_next <= count_reg + 1;
@@ -80,12 +85,11 @@ begin
       end case;
    end process;
    
+   -- Buffers
    button_in_next <= button_in;
+   debounced_next <= debounced;
    
-   debounced_next <= '1' when state = ST_PRESS and count_reg = DELAY_CLKS
-             else    '0';
-   
-   -- Edge detector
+   -- Edge detector (debounced short press)
    single_press <= '1' when debounced_next = '1' and debounced_reg = '0'
            else    '0';
    

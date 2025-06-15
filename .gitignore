@@ -1,17 +1,17 @@
-# ModelSim files
-transcript
-vsim.wlf
-tcl_stacktrace.txt
+# Ignore Quartus build output and auto-generated files and folders
+**/build/
 
-# VHDL backup files
-*.vhd.bak
+# Ignore ModelSim build output and auto-generated files and folders
+**/simulation/build/
+**/simulation/file/
 
-# Unnecessary zone identifier file (applies to WSL users)
-*Zone.Identifier
+# Do not ignore project 7's simulation/file directory (it's not auto-generated)
+!**/P07_LCD_TL1838/simulation/file/
+!**/P07_LCD_TL1838/simulation/
+!**/P07_LCD_TL1838/
 
-# Quartus files and folders
-*.qws
-db/
-incremental_db/
-output_files/
-greybox_tmp/
+# Ignore unnecessary zone identifier file (applies to WSL users)
+**/*Zone.Identifier
+
+# Ignore all VHDL backup files  
+**/*vhd.bak

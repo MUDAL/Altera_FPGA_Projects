@@ -69,7 +69,7 @@ begin
             if cnt_reg = DELAY_CLKS then
                if btn_i_reg = '1' then
                   btn_o_next <= btn_i_reg;
-                  cnt_next <= 0;
+                  cnt_next   <= 0;
                end if;
             else
                cnt_next <= cnt_reg + 1;

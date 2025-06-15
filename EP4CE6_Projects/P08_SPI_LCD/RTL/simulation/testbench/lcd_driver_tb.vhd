@@ -45,7 +45,7 @@ begin
    end process;
    
    stimuli: process
-      constant PATH: string(1 to 22) := "file/lcd/testcases.txt";
+      constant PATH: string(1 to 25) := "../file/lcd/testcases.txt";
       ---------------------------------------------------------------
       file testcases:        text;   
       variable testcase:     line;
@@ -74,8 +74,8 @@ begin
    end process;
    
    output_verification: process
-      constant PATH_1: string(1 to 29) := "file/lcd/expected_outputs.txt";
-      constant PATH_2: string(1 to 27) := "file/lcd/status_reports.txt";
+      constant PATH_1: string(1 to 32) := "../file/lcd/expected_outputs.txt";
+      constant PATH_2: string(1 to 30) := "../file/lcd/status_reports.txt";
       constant ZEROS:  std_logic_vector(1 downto 0) := "00";
       ---------------------------------------------------------------
       file expected_outputs:    text; 

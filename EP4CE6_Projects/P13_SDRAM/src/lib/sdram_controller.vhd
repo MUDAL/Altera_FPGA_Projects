@@ -34,12 +34,12 @@ entity sdram_controller is
         enable_receiver:    out std_logic;
         -- SDRAM signals
         dq:  inout std_logic_vector(DATA_WIDTH - 1 downto 0); -- Data I/O   
-        sclk:  out std_logic; -- SDRAM clock
-        cke:   out std_logic; -- SDRAM clock enable
-        cs_n:  out std_logic; -- SDRAM chip select
-        ras_n: out std_logic; -- SDRAM row address strobe
-        cas_n: out std_logic; -- SDRAM column address strobe
-        we_n:  out std_logic; -- SDRAM write enable
+        sclk:  out std_logic;  -- SDRAM clock
+        cke:   out std_logic;  -- SDRAM clock enable
+        cs_n:  out std_logic;  -- SDRAM chip select
+        ras_n: out std_logic;  -- SDRAM row address strobe
+        cas_n: out std_logic;  -- SDRAM column address strobe
+        we_n:  out std_logic;  -- SDRAM write enable
         addr:  out std_logic_vector(11 downto 00); -- SDRAM address
         bank:  out std_logic_vector(01 downto 00); -- SDRAM bank address
         udqm:  out std_logic;  -- SDRAM data I/O mask: UDQM

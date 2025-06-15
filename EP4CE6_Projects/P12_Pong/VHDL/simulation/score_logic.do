@@ -1,0 +1,19 @@
+# Ensure you're in the build directory before compiling sources and running simulation
+# Reason: ModelSim auto-generated files will be dumped here
+cd ../build
+
+# Create libraries
+vlib work
+
+# Compile source files
+vcom ../../src/lib/pkg.vhd
+vcom ../../src/lib/score_logic.vhd
+vcom ../testbench/pack_tb_header.vhd
+vcom ../testbench/pack_tb_body.vhd
+vcom ../testbench/score_logic_tb.vhd
+
+# Load design unit (compiled file) into the simulation environment
+vsim work.score_logic_tb
+
+# Run the simulation
+run -all

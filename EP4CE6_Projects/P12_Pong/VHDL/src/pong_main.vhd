@@ -26,7 +26,7 @@ end pong_main;
 
 architecture pong_main_rtl of pong_main is
    constant CLK_FREQ:            integer := 50_000_000; -- 50 MHz
-   constant BTN_DEB_DELAY_MS:    integer := 10; -- Button debounce delay
+   constant BTN_DEB_DELAY_MS:    integer := 10;      -- Button debounce delay
    constant BALL_DELAY_CLKS:     integer := 149_999; -- Motion delay
    constant PADDLE_DELAY_CLKS:   integer := 99_999;
    constant GAMEOVER_DELAY_CLKS: integer := 24_999_999;

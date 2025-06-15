@@ -14,7 +14,9 @@ use IEEE.NUMERIC_STD.ALL;
 -- Data is transmitted MSB first.
 
 entity spi_tx is
-   generic(CLK_FREQ: integer := 2_000_000);
+   generic(CLK_FREQ:          integer := 2_000_000;
+           DELAY_RST_MS:      integer := 5;
+           DELAY_SLEEPOUT_MS: integer := 120);
    
    port(rst_n:    in std_logic;  -- System reset
         clk:      in std_logic;
@@ -36,8 +38,8 @@ architecture spi_tx_rtl of spi_tx is
    ------------------------------------------------------------------
    constant CNT_RST: integer := 15 * (CLK_FREQ / 1_000_000) - 1; -- 15 uS
    constant CNT_1MS: integer := (CLK_FREQ / 1_000) - 1; -- 1 ms
-   constant CNT_005: integer := 5 - 1; -- 5 ms waiting time
-   constant CNT_120: integer := 120 - 1; -- 120 ms waiting time
+   constant CNT_005: integer := DELAY_RST_MS - 1;       -- 5 ms waiting time
+   constant CNT_120: integer := DELAY_SLEEPOUT_MS - 1;  -- 120 ms waiting time
    ------------------------------------------------------------------
    -- The ILI9341 TFT display has a resolution of 240x320 pixels i.e.
    -- Total number of pixels = 76800. We're interested in a 16 bits/pixel

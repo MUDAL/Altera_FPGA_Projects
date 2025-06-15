@@ -18,7 +18,7 @@ architecture bitmap_mem_rtl of bitmap_mem is
    type rom_type is array(0 to ROM_DEPTH - 1) of std_logic_vector(0 downto 0);
    signal rom: rom_type;
    attribute ram_init_file: string;
-   attribute ram_init_file of rom: signal is "src/mif/bitmap.mif"; 
+   attribute ram_init_file of rom: signal is "../src/mif/bitmap.mif"; 
 begin
    sync_rom: process(clk)
    begin

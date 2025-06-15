@@ -21,9 +21,11 @@ use altera_mf.all;
 -- SPI  clock:  1 MHz (PLL clock / 2)
 
 entity rgb_display is
-   generic(BAUD_RATE: integer := 9600;
-           SYS_FREQ:  integer := 50_000_000; -- MHz
-           CLK_DIV:   integer := 25); 
+   generic(BAUD_RATE:              integer := 9600;
+           SYS_FREQ:               integer := 50_000_000; -- MHz
+           CLK_DIV:                integer := 25;
+           DISP_DELAY_RST_MS:      integer := 5;    -- ILI9341 delay after reset
+           DISP_DELAY_SLEEPOUT_MS: integer := 120); -- ILI9341 delay after SLEEPOUT
    port(rst_n:    in std_logic;
         clk:      in std_logic;
         data_in:  in std_logic;
@@ -36,7 +38,7 @@ entity rgb_display is
 end rgb_display;
 
 architecture rgb_display_rtl of rgb_display is
-   constant PLL_FREQ: integer := (SYS_FREQ / CLK_DIV);
+   constant PLL_FREQ:   integer := (SYS_FREQ / CLK_DIV);
    ------------------------------------------------------------------
    signal rst_inv:      std_logic;
    signal clk_pll:      std_logic;
@@ -81,7 +83,9 @@ begin
             done     => encoder_done);
    
    spi_interface: entity work.spi_tx(spi_tx_rtl)
-   generic map(CLK_FREQ => PLL_FREQ)
+   generic map(CLK_FREQ          => PLL_FREQ,
+               DELAY_RST_MS      => DISP_DELAY_RST_MS,
+               DELAY_SLEEPOUT_MS => DISP_DELAY_SLEEPOUT_MS)
    port map(rst_n       => rst_n, 
             clk         => clk_pll, 
             en          => en_spi, 

@@ -14,7 +14,7 @@ architecture spi_tx_behav of spi_tx_tb is
    -- Total number of pixels = 76800. We're interested in a 16 bits/pixel
    -- configuration, hence total number of bits = 1228800 (153600 bytes).
    constant TOTAL_BYTES: integer := 153600;
-   constant PLL_PERIOD:  time    := 25 * CLK_PERIOD;
+   constant PLL_PERIOD:  time    := 25 * CLK_PERIOD; 
    ------------------------------------------------------------------
    signal rst_n:   std_logic;
    signal clk:     std_logic := '0';
@@ -28,7 +28,7 @@ architecture spi_tx_behav of spi_tx_tb is
    signal cs:      std_logic;
    signal rdy:     std_logic;
 begin
-   uut: entity work.spi_tx(spi_tx_rtl)
+   uut: entity work.spi_tx(spi_tx_rtl)         
    port map(rst_n   => rst_n, 
             clk     => clk, 
             en      => en, 
@@ -51,7 +51,7 @@ begin
    end process;
    
    stimuli: process
-      constant PATH: string(1 to 22) := "file/spi/testcases.txt";
+      constant PATH: string(1 to 25) := "../file/spi/testcases.txt";
       ---------------------------------------------------------------
       file testcases:    text;   
       variable testcase: line;
@@ -83,8 +83,8 @@ begin
    end process;
    
    output_verification: process
-      constant PATH_1: string(1 to 29) := "file/spi/expected_outputs.txt";
-      constant PATH_2: string(1 to 27) := "file/spi/status_reports.txt";
+      constant PATH_1: string(1 to 32) := "../file/spi/expected_outputs.txt";
+      constant PATH_2: string(1 to 30) := "../file/spi/status_reports.txt";
       ---------------------------------------------------------------
       file expected_outputs:    text; 
       file status_reports:      text;       

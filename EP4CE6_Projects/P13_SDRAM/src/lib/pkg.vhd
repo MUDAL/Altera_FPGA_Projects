@@ -13,7 +13,7 @@ package pkg is
    constant SDRAM_DATA_WIDTH:    integer := DATA_WIDTH;
    constant SDRAM_CLK_FREQ_MHZ:  real    := real(CLK_FREQ_HZ / 1_000_000);
    constant SDRAM_INIT_DELAY_NS: real    := 200_000.0;
-   constant SDRAM_CAS_LATENCY:   integer := 2; -- Either 2 or 3
+   constant SDRAM_CAS_LATENCY:   integer := 2;
    constant SDRAM_MAX_ROWS:      integer := 4;
    constant SDRAM_MAX_COLS:      integer := 16;
    ------------------------------------------------------------------

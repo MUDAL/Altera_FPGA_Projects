@@ -9,9 +9,9 @@ use IEEE.MATH_REAL.ALL;
 package pkg is
    function log_base2(param: integer) return integer;
    -- Memory Initialization File (MIF) parameters
-   constant MIF_LEN:       integer := 21;
-   constant GAME_MENU_MIF: string(1 to MIF_LEN) := "src/mif/game_menu.mif";
-   constant GAME_OVER_MIF: string(1 to MIF_LEN) := "src/mif/game_over.mif";
+   constant MIF_LEN:       integer := 24;
+   constant GAME_MENU_MIF: string(1 to MIF_LEN) := "../src/mif/game_menu.mif";
+   constant GAME_OVER_MIF: string(1 to MIF_LEN) := "../src/mif/game_over.mif";
    ------------------------------------------------------------------
    -- Ball Directions
    constant DIR_UR: std_logic_vector(2 downto 0) := "000"; -- Up + Right

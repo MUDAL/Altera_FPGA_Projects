@@ -212,7 +212,7 @@ begin
    end process;
    
    output_verification: process
-      constant PATH_1: string(1 to 21) := "file/verification.txt";
+      constant PATH_1: string(1 to 24) := "../file/verification.txt";
       ---------------------------------------------------------------
       file verification_file:     text;
       variable verification_line: line;

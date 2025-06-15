@@ -38,7 +38,7 @@ begin
    end process;
    
    stimuli: process
-      constant PATH: string(1 to 22) := "file/enc/testcases.txt";
+      constant PATH: string(1 to 25) := "../file/enc/testcases.txt";
       ---------------------------------------------------------------
       file testcases:    text;   
       variable testcase: line;
@@ -69,8 +69,8 @@ begin
    end process;
    
    output_verification: process
-      constant PATH_1: string(1 to 29) := "file/enc/expected_outputs.txt";
-      constant PATH_2: string(1 to 27) := "file/enc/status_reports.txt";
+      constant PATH_1: string(1 to 32) := "../file/enc/expected_outputs.txt";
+      constant PATH_2: string(1 to 30) := "../file/enc/status_reports.txt";
       ---------------------------------------------------------------
       file expected_outputs:    text; 
       file status_reports:      text;       

@@ -56,7 +56,7 @@ begin
    end process;
    
    mosi_stimulus: process
-      constant PATH: string(1 to 23) := "file/main/testcases.txt";
+      constant PATH: string(1 to 26) := "../file/main/testcases.txt";
       ---------------------------------------------------------------
       file testcases:    text;   
       variable testcase: line;
@@ -90,8 +90,8 @@ begin
    end process;
    
    output_verification: process
-      constant PATH_1:  string(1 to 30) := "file/main/expected_outputs.txt";
-      constant PATH_2:  string(1 to 28) := "file/main/status_reports.txt";
+      constant PATH_1:  string(1 to 33) := "../file/main/expected_outputs.txt";
+      constant PATH_2:  string(1 to 31) := "../file/main/status_reports.txt";
       constant ZEROS:   std_logic_vector(1 downto 0) := "00";
       constant TIMEOUT: time := 17 * SCK_PERIOD;
       ---------------------------------------------------------------

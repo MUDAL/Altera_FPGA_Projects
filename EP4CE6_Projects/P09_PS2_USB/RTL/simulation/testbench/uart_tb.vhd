@@ -52,7 +52,7 @@ begin
    end process;
    
    data_stimulus: process
-      constant PATH: string(1 to 23) := "file/uart/testcases.txt";
+      constant PATH: string(1 to 26) := "../file/uart/testcases.txt";
       ---------------------------------------------------------------
       file testcases:    text;   
       variable testcase: line;
@@ -79,8 +79,8 @@ begin
    end process;
    
    output_verification: process
-      constant PATH_1: string(1 to 30) := "file/uart/expected_outputs.txt";
-      constant PATH_2: string(1 to 28) := "file/uart/status_reports.txt";
+      constant PATH_1: string(1 to 33) := "../file/uart/expected_outputs.txt";
+      constant PATH_2: string(1 to 31) := "../file/uart/status_reports.txt";
       ---------------------------------------------------------------
       file expected_outputs:    text; 
       file status_reports:      text;       
