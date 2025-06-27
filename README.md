@@ -33,6 +33,85 @@ Here's a list of components that I used for additional verification of my RTL de
 3. STM32CubeIDE (if you have an STM32 microcontroller)
 4. Python (v3.7 upwards)  
 
+## Project file hierarchy 
+```
+.
+├── EP4CE6_Projects
+│   ├── P01_7_Segment
+│   │   ├── build
+│   │   ├── README.md
+│   │   ├── seg_display.tcl
+│   │   └── src
+│   ├── P02_7_Segment_LM75
+│   │   ├── README.md
+│   │   ├── Version_1
+│   │   └── Version_2
+│   ├── P03_7_Segment_DHT22
+│   │   ├── README.md
+│   │   ├── Version_1
+│   │   └── Version_2
+│   ├── P04_7_Segment_HCSR04
+│   │   ├── README.md
+│   │   ├── Version_1
+│   │   └── Version_2
+│   ├── P05_LCD_1602
+│   │   ├── lcd_main.tcl
+│   │   ├── README.md
+│   │   └── src
+│   ├── P06_VGA_1
+│   │   ├── MATLAB
+│   │   ├── README.md
+│   │   └── VHDL
+│   ├── P07_LCD_TL1838
+│   │   ├── ir_lcd_main.tcl
+│   │   ├── README.md
+│   │   ├── simulation
+│   │   └── src
+│   ├── P08_SPI_LCD
+│   │   ├── MCU
+│   │   ├── README.md
+│   │   └── RTL
+│   ├── P09_PS2_USB
+│   │   ├── MCU
+│   │   ├── README.md
+│   │   └── RTL
+│   ├── P10_ILI9341_HC06
+│   │   ├── README.md
+│   │   ├── rgb_display.tcl
+│   │   ├── simulation
+│   │   └── src
+│   ├── P11_ILI9341_HC06_FIFO
+│   │   ├── README.md
+│   │   ├── rgb_display.tcl
+│   │   ├── simulation
+│   │   └── src
+│   ├── P12_Pong
+│   │   ├── MATLAB
+│   │   ├── Python
+│   │   ├── README.md
+│   │   ├── Version_1
+│   │   └── Version_2
+│   ├── P13_SDRAM
+│   │   ├── constraints
+│   │   ├── README.md
+│   │   ├── sdram_uart_main.tcl
+│   │   ├── signal_tap
+│   │   ├── simulation
+│   │   └── src
+│   └── P14_Camera_VGA
+│       ├── constraints
+│       ├── frame_capture_main.tcl
+│       ├── README.md
+│       ├── simulation
+│       └── src
+├── LICENSE
+└── README.md
+```
+
+## How to run the projects (OS-agnostic)  
+To test the projects (design and simulation), you'll need to install Quartus and ModelSim.  
+Furthermore, you must add the programs to your system PATH environment variable. This will allow you to invoke both applications from the command line. This applies to Linux and Windows users. Details on how to run design and simulation projects on the command line are discussed in the README section of each project.  
+
 ## Helpful resources  
 1. RTL Hardware Design Using VHDL - Pong P. Chu
 2. FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu
