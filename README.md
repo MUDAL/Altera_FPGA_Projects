@@ -38,7 +38,6 @@ Here's a list of components that I used for additional verification of my RTL de
 .
 ├── EP4CE6_Projects
 │   ├── P01_7_Segment
-│   │   ├── build
 │   │   ├── README.md
 │   │   ├── seg_display.tcl
 │   │   └── src
