@@ -9,23 +9,38 @@
 - 16x2 LCD
 - Intel Quartus Prime 20.1  
 
-## How to use  
-- Clone the ``Altera_FPGA_Projects`` repository  
-- Open the ``EP4CE6_Projects/P05_LCD_1602/`` directory  
-- Open the ``lcd_main.qpf`` project file  
-- Intel Quartus Prime should open after the previous step  
+## Project file structure  
+- The ``VHDL`` design files are located in the ``src`` and ``lib`` directories  
+- The top-level design is the ``lcd_main.vhd``  
+- The other modules or design files are located in the ``lib`` directory  
+```
+.
+├── lcd_main.tcl
+├── README.md
+└── src
+    ├── lcd_main.vhd
+    └── lib
+        ├── lcd_driver.vhd
+        └── prog_mem.vhd
+```
+
+## Building the project from a TCL script  
+Ensure you're in the ``EP4CE6_Projects/P05_LCD_1602/`` directory before running the commands below.  
+```
+1. mkdir build  
+2. cd build
+3. quartus_sh -t ../lcd_main.tcl
+4. quartus lcd_main.qpf
+```
+
+## What to do when Quartus opens    
 - After Quartus opens, click on the ``Processing`` tab  
 - Click on ``Start Compilation``  
 - After compilation, click on ``Program Device(Open Programmer)``  
-- When the Programmer window opens, load the demo project into the FPGA by clicking ``Start`` 
-
-## Project file structure  
-- The **VHDL** design files are located in the **src** and **lib** directories  
-- The top-level design is the **lcd_main.vhd**  
-- The other modules or design files are located in the **lib** directory  
+- When the Programmer window opens, load the demo project into the FPGA by clicking ``Start``
 
 ## Pinouts  
-- Check the **Location** column in the image below for the pin mappings used in this project.    
+- Check the ``Location`` column in the image below for the pin mappings used in this project.    
 ![PP_5](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/2e42a448-83b7-41f6-9ed2-506079b5d871)
 
 ## Timing verification with a logic analyzer  

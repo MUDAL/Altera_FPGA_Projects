@@ -9,31 +9,58 @@
 - Wires  
 - Intel Quartus Prime 20.1  
 
-## How to use  
-- Clone the ``Altera_FPGA_Projects`` repository  
-- Open the ``EP4CE6_Projects/P04_7_Segment_HCSR04/Version_x/`` directory  
-- Open the ``distance_sensor.qpf`` project file  
-- Intel Quartus Prime should open after the previous step  
+## Project file structure  
+- The ``VHDL`` design files are located in the ``src`` and ``lib`` directories  
+- The top-level design is the ``distance_sensor.vhd``  
+- The other modules or design files are located in the ``lib`` directory  
+```
+.
+├── README.md
+├── Version_1
+│   ├── distance_sensor.tcl
+│   └── src
+│       ├── distance_sensor.vhd
+│       └── lib
+│           ├── dec_to_bcd.vhd
+│           ├── hcsr04.vhd
+│           ├── seg_display.vhd
+│           └── seg_rom.vhd
+└── Version_2
+    ├── distance_sensor.tcl
+    └── src
+        ├── distance_sensor.vhd
+        └── lib
+            ├── bin_to_bcd.vhd
+            ├── hcsr04.vhd
+            ├── seg_display.vhd
+            └── seg_rom.vhd
+```
+
+## Building the project from a TCL script  
+Ensure you're in the ``EP4CE6_Projects/P04_7_Segment_HCSR04/Version_x`` directory before running the commands below.  
+```
+1. mkdir build  
+2. cd build
+3. quartus_sh -t ../distance_sensor.tcl
+4. quartus distance_sensor.qpf
+```
+
+## What to do when Quartus opens   
 - After Quartus opens, click on the ``Processing`` tab  
 - Click on ``Start Compilation``  
 - After compilation, click on ``Program Device(Open Programmer)``  
-- When the Programmer window opens, load the demo project into the FPGA by clicking ``Start`` 
+- When the Programmer window opens, load the demo project into the FPGA by clicking ``Start``   
 
 ## Versions  
 - Version 1 uses a brute force algorithm for the binary to BCD conversion.  
 - Version 2 uses the ``double dabble`` algorithm for binary to BCD conversion.  
-- You can compare the resource utilization and Fmax of both designs. 
-
-## Project file structure  
-- The **VHDL** design files are located in the **src** and **lib** directories  
-- The top-level design is the **distance_sensor.vhd**  
-- The other modules or design files are located in the **lib** directory  
+- You can compare the resource utilization and ``Fmax`` of both designs.  
 
 ## Video demo  
 [FPGA and HCSR04](https://drive.google.com/file/d/1daxeoCYMT9oGF4qxWWH_68sKgZeNWnto/view?usp=sharing)  
 
 ## Pinouts  
-- Check the **Location** column in the image below for the pin mappings used in this project.    
+- Check the ``Location`` column in the image below for the pin mappings used in this project.    
 ![PP_4](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/15e88835-f6bf-49bd-af3e-d34e7ea3d236)   
 
 ## Verification with an Oscilloscope  
