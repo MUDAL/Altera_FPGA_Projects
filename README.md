@@ -109,7 +109,7 @@ Here's a list of components that I used for additional verification of my RTL de
 
 ## How to run the projects (OS-agnostic)  
 To test the projects (design and simulation), you'll need to install Quartus and ModelSim.  
-Furthermore, you must add the programs to your system PATH environment variable. This will allow you to invoke both applications from the command line. This applies to Linux and Windows users. Details on how to run design and simulation projects on the command line are discussed in the README section of each project.  
+Furthermore, you must add the programs to your system PATH environment variable. This will allow you to invoke both applications from the command line. This applies to Linux and Windows users. Explanations of how to run design and simulation projects on the command line are given in the README section of each project.  
 
 ## Helpful resources  
 1. RTL Hardware Design Using VHDL - Pong P. Chu
