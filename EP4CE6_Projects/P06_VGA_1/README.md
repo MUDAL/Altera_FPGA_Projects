@@ -61,7 +61,7 @@ Ensure you're in the ``EP4CE6_Projects/P06_VGA_1/VHDL/`` directory before runnin
 - When the Programmer window opens, load the demo project into the FPGA by clicking ``Start``
 
 ## Pinouts  
-- Check the **Location** column in the image below for the pin mappings used in this project.    
+- Check the ``Location`` column in the image below for the pin mappings used in this project.    
 ![PP_6](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/3b361a53-b01c-4ff2-b69f-af6d5dd7ba1a)
 
 ## Dual-purpose pins  
