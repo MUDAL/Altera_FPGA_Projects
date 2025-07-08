@@ -5,7 +5,7 @@ file mkdir file/lcd
 
 # Execute Python script to generate test vectors and status report files
 cd python_scripts
-exec python lcd_testvectors.py
+exec python3 lcd_testvectors.py
 
 # Ensure you're in the build directory before compiling sources and running simulation
 # Reason: ModelSim auto-generated files will be dumped here
