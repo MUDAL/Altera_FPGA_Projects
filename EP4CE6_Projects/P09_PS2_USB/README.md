@@ -7,15 +7,52 @@ This task involves configuring an FPGA as a PS/2-to-UART converter that decodes 
 - A Microcontroller (an STM32F103 Blue Pill board was used)
 - STM32CubeIDE (v1.6.0 was used)  
 - A PS/2 Keyboard    
-- Intel Quartus Prime 20.1
+- Intel Quartus Prime 20.1  
 - ModelSim (for simulation)  
+
+## Project file structure (RTL)   
+- The VHDL design files are located in the ``src`` and ``lib`` directories  
+- The top-level design is the ``ps2_uart_main.vhd``  
+- The other modules or design files are located in the ``lib`` directory
+- Testbenches are located in the ``simulation/testbench`` directory
+- Test vectors for each module in the design can be found in the directories within the ``simulation/file/`` directory.  
+- Test vectors are generated using the python script in the ``simulation/python_scripts/`` directory  
+
+```
+.
+├── ps2_uart_main.tcl
+├── simulation
+│   ├── main.do
+│   ├── ps2.do
+│   ├── python_scripts
+│   │   ├── main_testvectors.py
+│   │   ├── ps2_testvectors.py
+│   │   └── uart_testvectors.py
+│   ├── testbench
+│   │   ├── pack_tb_body.vhd
+│   │   ├── pack_tb_header.vhd
+│   │   ├── ps2_tb.vhd
+│   │   ├── ps2_uart_main_tb.vhd
+│   │   └── uart_tb.vhd
+│   └── uart.do
+└── src
+    ├── lib
+    │   ├── ps2.vhd
+    │   └── uart.vhd
+    └── ps2_uart_main.vhd
+```
 
 ## How to use  
 ### 1. Setting up the FPGA  
-- Clone the ``Altera_FPGA_Projects`` repository   
-- Open the ``EP4CE6_Projects/P09_PS2_USB/RTL`` directory  
-- Open the ``ps2_uart_main.qpf`` project file   
-- Intel Quartus Prime should open after the previous step   
+### a. Building the project from a TCL script  
+Ensure you're in the ``EP4CE6_Projects/P09_PS2_USB/RTL/`` directory before running the commands below.  
+```
+1. mkdir build  
+2. cd build
+3. quartus_sh -t ../ps2_uart_main.tcl
+4. quartus ps2_uart_main.qpf
+```
+### b. What to do when Quartus opens    
 - After Quartus opens, click on the ``Processing`` tab  
 - Click on ``Start Compilation``  
 - After compilation, click on ``Program Device(Open Programmer)``  
@@ -24,14 +61,6 @@ This task involves configuring an FPGA as a PS/2-to-UART converter that decodes 
 ### 2. Setting up the microcontroller  
 - Open the ``EP4CE6_Projects/P09_PS2_USB/MCU/UART_USB`` directory
 - If you have ``STM32CubeIDE`` installed, you can open the project, compile the source code, and flash the STM32 MCU  
-
-## Project file structure (RTL)   
-- The VHDL design files are located in the ``src`` and ``lib`` directories  
-- The top-level design is the ``ps2_uart_main.vhd``  
-- The other modules or design files are located in the ``lib`` directory
-- Testbenches are located in the ``simulation/testbench`` directory
-- Test vectors for each module in the design can be found in the ``simulation/file/`` directory
-- Test vectors are generated using the python script in each ``simulation/file/`` directory  
 
 ## Pinouts  
 - Check the ``Location`` column in the image below for the pin mappings used in this project.      
@@ -58,307 +87,14 @@ This task involves configuring an FPGA as a PS/2-to-UART converter that decodes 
 - [STM32F103C8 Datasheet](https://drive.google.com/file/d/1Rm6P6-ArzKIR0c0EaC8duT7rH70hhuPG/view?usp=sharing)
 - [STM32F103 Reference Manual](https://drive.google.com/file/d/1geeY-mbH-PinQzvFmtgG6RA3AFqcVXZV/view?usp=drive_link)
 
-## Simulation results for the top-level design  
+## Simulating the project with Modelsim  
+Ensure you're in the ``EP4CE6_Projects/P09_PS2_USB/RTL/simulation/`` directory before proceeding to the next steps.  
+The ``.do`` macro files are scripts that contain commands ModelSim uses to compile design files and testbenches. These scripts automate the simulation process by preventing the need to open the ModelSim GUI. For projects with multiple ``.do`` files, the process of executing one script is applicable to the rest. Therefore, the simulation procedure for one script is shown below.  
+
+Procedure for the ``ps2.do`` script (Same for the other scripts).  
 ```
-Expected: DF, Got: DF, Status: PASS
-Expected: B8, Got: B8, Status: PASS
-Expected: C3, Got: C3, Status: PASS
-Expected: 49, Got: 49, Status: PASS
-Expected: 30, Got: 30, Status: PASS
-Expected: 63, Got: 63, Status: PASS
-Expected: 45, Got: 45, Status: PASS
-Expected: F0, Got: F0, Status: PASS
-Expected: 0C, Got: 0C, Status: PASS
-Expected: D5, Got: D5, Status: PASS
-Expected: AD, Got: AD, Status: PASS
-Expected: 01, Got: 01, Status: PASS
-Expected: CA, Got: CA, Status: PASS
-Expected: 27, Got: 27, Status: PASS
-Expected: AE, Got: AE, Status: PASS
-Expected: C6, Got: C6, Status: PASS
-Expected: C6, Got: C6, Status: PASS
-Expected: D3, Got: D3, Status: PASS
-Expected: 15, Got: 15, Status: PASS
-Expected: AE, Got: AE, Status: PASS
-Expected: 2B, Got: 2B, Status: PASS
-Expected: 1F, Got: 1F, Status: PASS
-Expected: 0A, Got: 0A, Status: PASS
-Expected: 02, Got: 02, Status: PASS
-Expected: 25, Got: 25, Status: PASS
-Expected: C3, Got: C3, Status: PASS
-Expected: F4, Got: F4, Status: PASS
-Expected: 54, Got: 54, Status: PASS
-Expected: BF, Got: BF, Status: PASS
-Expected: A6, Got: A6, Status: PASS
-Expected: 83, Got: 83, Status: PASS
-Expected: 57, Got: 57, Status: PASS
-Expected: 76, Got: 76, Status: PASS
-Expected: 4C, Got: 4C, Status: PASS
-Expected: 56, Got: 56, Status: PASS
-Expected: 52, Got: 52, Status: PASS
-Expected: 72, Got: 72, Status: PASS
-Expected: EB, Got: EB, Status: PASS
-Expected: 93, Got: 93, Status: PASS
-Expected: 34, Got: 34, Status: PASS
-Expected: D1, Got: D1, Status: PASS
-Expected: E3, Got: E3, Status: PASS
-Expected: CF, Got: CF, Status: PASS
-Expected: FC, Got: FC, Status: PASS
-Expected: 38, Got: 38, Status: PASS
-Expected: 6C, Got: 6C, Status: PASS
-Expected: 65, Got: 65, Status: PASS
-Expected: AD, Got: AD, Status: PASS
-Expected: BC, Got: BC, Status: PASS
-Expected: A4, Got: A4, Status: PASS
-Expected: 10, Got: 10, Status: PASS
-Expected: 9D, Got: 9D, Status: PASS
-Expected: 94, Got: 94, Status: PASS
-Expected: A8, Got: A8, Status: PASS
-Expected: D3, Got: D3, Status: PASS
-Expected: BE, Got: BE, Status: PASS
-Expected: AF, Got: AF, Status: PASS
-Expected: 43, Got: 43, Status: PASS
-Expected: 20, Got: 20, Status: PASS
-Expected: 79, Got: 79, Status: PASS
-Expected: DA, Got: DA, Status: PASS
-Expected: 80, Got: 80, Status: PASS
-Expected: 2C, Got: 2C, Status: PASS
-Expected: F7, Got: F7, Status: PASS
-Expected: 15, Got: 15, Status: PASS
-Expected: 5B, Got: 5B, Status: PASS
-Expected: 29, Got: 29, Status: PASS
-Expected: 51, Got: 51, Status: PASS
-Expected: 84, Got: 84, Status: PASS
-Expected: 07, Got: 07, Status: PASS
-Expected: 5D, Got: 5D, Status: PASS
-Expected: 4B, Got: 4B, Status: PASS
-Expected: B0, Got: B0, Status: PASS
-Expected: 78, Got: 78, Status: PASS
-Expected: 04, Got: 04, Status: PASS
-Expected: FF, Got: FF, Status: PASS
-Expected: 5C, Got: 5C, Status: PASS
-Expected: 23, Got: 23, Status: PASS
-Expected: 1A, Got: 1A, Status: PASS
-Expected: BD, Got: BD, Status: PASS
-Expected: 97, Got: 97, Status: PASS
-Expected: 83, Got: 83, Status: PASS
-Expected: B1, Got: B1, Status: PASS
-Expected: 4F, Got: 4F, Status: PASS
-Expected: 97, Got: 97, Status: PASS
-Expected: 24, Got: 24, Status: PASS
-Expected: D1, Got: D1, Status: PASS
-Expected: 69, Got: 69, Status: PASS
-Expected: 40, Got: 40, Status: PASS
-Expected: 3A, Got: 3A, Status: PASS
-Expected: C0, Got: C0, Status: PASS
-Expected: 88, Got: 88, Status: PASS
-Expected: 70, Got: 70, Status: PASS
-Expected: DB, Got: DB, Status: PASS
-Expected: 8E, Got: 8E, Status: PASS
-Expected: D8, Got: D8, Status: PASS
-Expected: 66, Got: 66, Status: PASS
-Expected: 88, Got: 88, Status: PASS
-Expected: 3E, Got: 3E, Status: PASS
-Expected: 6E, Got: 6E, Status: PASS
-Expected: 1F, Got: 1F, Status: PASS
-Expected: 8F, Got: 8F, Status: PASS
-Expected: 68, Got: 68, Status: PASS
-Expected: 3C, Got: 3C, Status: PASS
-Expected: D3, Got: D3, Status: PASS
-Expected: 50, Got: 50, Status: PASS
-Expected: FC, Got: FC, Status: PASS
-Expected: 51, Got: 51, Status: PASS
-Expected: 66, Got: 66, Status: PASS
-Expected: E3, Got: E3, Status: PASS
-Expected: 4A, Got: 4A, Status: PASS
-Expected: 30, Got: 30, Status: PASS
-Expected: B9, Got: B9, Status: PASS
-Expected: 87, Got: 87, Status: PASS
-Expected: 3B, Got: 3B, Status: PASS
-Expected: FE, Got: FE, Status: PASS
-Expected: 29, Got: 29, Status: PASS
-Expected: 38, Got: 38, Status: PASS
-Expected: EE, Got: EE, Status: PASS
-Expected: 03, Got: 03, Status: PASS
-Expected: CA, Got: CA, Status: PASS
-Expected: 19, Got: 19, Status: PASS
-Expected: A2, Got: A2, Status: PASS
-Expected: 51, Got: 51, Status: PASS
-Expected: 1C, Got: 1C, Status: PASS
-Expected: 88, Got: 88, Status: PASS
-Expected: F9, Got: F9, Status: PASS
-Expected: 33, Got: 33, Status: PASS
-Expected: F4, Got: F4, Status: PASS
-Expected: 93, Got: 93, Status: PASS
-Expected: 59, Got: 59, Status: PASS
-Expected: 1E, Got: 1E, Status: PASS
-Expected: 94, Got: 94, Status: PASS
-Expected: CB, Got: CB, Status: PASS
-Expected: 6C, Got: 6C, Status: PASS
-Expected: 81, Got: 81, Status: PASS
-Expected: 05, Got: 05, Status: PASS
-Expected: 85, Got: 85, Status: PASS
-Expected: 3D, Got: 3D, Status: PASS
-Expected: D2, Got: D2, Status: PASS
-Expected: A0, Got: A0, Status: PASS
-Expected: 4F, Got: 4F, Status: PASS
-Expected: C9, Got: C9, Status: PASS
-Expected: EC, Got: EC, Status: PASS
-Expected: 57, Got: 57, Status: PASS
-Expected: 8C, Got: 8C, Status: PASS
-Expected: FF, Got: FF, Status: PASS
-Expected: 36, Got: 36, Status: PASS
-Expected: AA, Got: AA, Status: PASS
-Expected: EA, Got: EA, Status: PASS
-Expected: DC, Got: DC, Status: PASS
-Expected: F1, Got: F1, Status: PASS
-Expected: 66, Got: 66, Status: PASS
-Expected: 6C, Got: 6C, Status: PASS
-Expected: 60, Got: 60, Status: PASS
-Expected: AD, Got: AD, Status: PASS
-Expected: 25, Got: 25, Status: PASS
-Expected: DA, Got: DA, Status: PASS
-Expected: 1D, Got: 1D, Status: PASS
-Expected: 83, Got: 83, Status: PASS
-Expected: 7A, Got: 7A, Status: PASS
-Expected: 5F, Got: 5F, Status: PASS
-Expected: 34, Got: 34, Status: PASS
-Expected: 75, Got: 75, Status: PASS
-Expected: 88, Got: 88, Status: PASS
-Expected: A0, Got: A0, Status: PASS
-Expected: 58, Got: 58, Status: PASS
-Expected: C6, Got: C6, Status: PASS
-Expected: 30, Got: 30, Status: PASS
-Expected: D2, Got: D2, Status: PASS
-Expected: B7, Got: B7, Status: PASS
-Expected: 04, Got: 04, Status: PASS
-Expected: 69, Got: 69, Status: PASS
-Expected: 75, Got: 75, Status: PASS
-Expected: 0A, Got: 0A, Status: PASS
-Expected: EF, Got: EF, Status: PASS
-Expected: 4F, Got: 4F, Status: PASS
-Expected: 28, Got: 28, Status: PASS
-Expected: 91, Got: 91, Status: PASS
-Expected: BC, Got: BC, Status: PASS
-Expected: 40, Got: 40, Status: PASS
-Expected: 34, Got: 34, Status: PASS
-Expected: DA, Got: DA, Status: PASS
-Expected: 86, Got: 86, Status: PASS
-Expected: F5, Got: F5, Status: PASS
-Expected: A8, Got: A8, Status: PASS
-Expected: AC, Got: AC, Status: PASS
-Expected: 4A, Got: 4A, Status: PASS
-Expected: F5, Got: F5, Status: PASS
-Expected: 39, Got: 39, Status: PASS
-Expected: 8D, Got: 8D, Status: PASS
-Expected: 0C, Got: 0C, Status: PASS
-Expected: A5, Got: A5, Status: PASS
-Expected: 7B, Got: 7B, Status: PASS
-Expected: 67, Got: 67, Status: PASS
-Expected: AD, Got: AD, Status: PASS
-Expected: 43, Got: 43, Status: PASS
-Expected: 78, Got: 78, Status: PASS
-Expected: FB, Got: FB, Status: PASS
-Expected: 5B, Got: 5B, Status: PASS
-Expected: 29, Got: 29, Status: PASS
-Expected: 1F, Got: 1F, Status: PASS
-Expected: B5, Got: B5, Status: PASS
-Expected: 7B, Got: 7B, Status: PASS
-Expected: CD, Got: CD, Status: PASS
-Expected: B5, Got: B5, Status: PASS
-Expected: 30, Got: 30, Status: PASS
-Expected: 98, Got: 98, Status: PASS
-Expected: B2, Got: B2, Status: PASS
-Expected: 69, Got: 69, Status: PASS
-Expected: 8E, Got: 8E, Status: PASS
-Expected: 15, Got: 15, Status: PASS
-Expected: 30, Got: 30, Status: PASS
-Expected: 21, Got: 21, Status: PASS
-Expected: FE, Got: FE, Status: PASS
-Expected: C5, Got: C5, Status: PASS
-Expected: DF, Got: DF, Status: PASS
-Expected: BA, Got: BA, Status: PASS
-Expected: C2, Got: C2, Status: PASS
-Expected: 0A, Got: 0A, Status: PASS
-Expected: E1, Got: E1, Status: PASS
-Expected: D3, Got: D3, Status: PASS
-Expected: DC, Got: DC, Status: PASS
-Expected: F1, Got: F1, Status: PASS
-Expected: 4F, Got: 4F, Status: PASS
-Expected: CE, Got: CE, Status: PASS
-Expected: 8D, Got: 8D, Status: PASS
-Expected: 70, Got: 70, Status: PASS
-Expected: 33, Got: 33, Status: PASS
-Expected: 49, Got: 49, Status: PASS
-Expected: B6, Got: B6, Status: PASS
-Expected: 0E, Got: 0E, Status: PASS
-Expected: A6, Got: A6, Status: PASS
-Expected: DA, Got: DA, Status: PASS
-Expected: E6, Got: E6, Status: PASS
-Expected: 1F, Got: 1F, Status: PASS
-Expected: 30, Got: 30, Status: PASS
-Expected: AB, Got: AB, Status: PASS
-Expected: 1C, Got: 1C, Status: PASS
-Expected: 05, Got: 05, Status: PASS
-Expected: 6F, Got: 6F, Status: PASS
-Expected: 1D, Got: 1D, Status: PASS
-Expected: CF, Got: CF, Status: PASS
-Expected: C8, Got: C8, Status: PASS
-Expected: B2, Got: B2, Status: PASS
-Expected: FF, Got: FF, Status: PASS
-Expected: AC, Got: AC, Status: PASS
-Expected: F5, Got: F5, Status: PASS
-Expected: D0, Got: D0, Status: PASS
-Expected: FC, Got: FC, Status: PASS
-Expected: E7, Got: E7, Status: PASS
-Expected: 28, Got: 28, Status: PASS
-Expected: E1, Got: E1, Status: PASS
-Expected: 64, Got: 64, Status: PASS
-Expected: 7E, Got: 7E, Status: PASS
-Expected: 2B, Got: 2B, Status: PASS
-Expected: FC, Got: FC, Status: PASS
-Expected: 69, Got: 69, Status: PASS
-Expected: 8F, Got: 8F, Status: PASS
-Expected: FE, Got: FE, Status: PASS
-Expected: 1C, Got: 1C, Status: PASS
-Expected: 80, Got: 80, Status: PASS
-Expected: 1D, Got: 1D, Status: PASS
-Expected: B3, Got: B3, Status: PASS
-Expected: EF, Got: EF, Status: PASS
-Expected: 92, Got: 92, Status: PASS
-Expected: AC, Got: AC, Status: PASS
-Expected: C5, Got: C5, Status: PASS
-Expected: 35, Got: 35, Status: PASS
-Expected: D5, Got: D5, Status: PASS
-Expected: F9, Got: F9, Status: PASS
-Expected: A4, Got: A4, Status: PASS
-Expected: B8, Got: B8, Status: PASS
-Expected: 8A, Got: 8A, Status: PASS
-Expected: 71, Got: 71, Status: PASS
-Expected: D7, Got: D7, Status: PASS
-Expected: 0E, Got: 0E, Status: PASS
-Expected: 4C, Got: 4C, Status: PASS
-Expected: 4E, Got: 4E, Status: PASS
-Expected: 59, Got: 59, Status: PASS
-Expected: 90, Got: 90, Status: PASS
-Expected: 28, Got: 28, Status: PASS
-Expected: F3, Got: F3, Status: PASS
-Expected: 8C, Got: 8C, Status: PASS
-Expected: 57, Got: 57, Status: PASS
-Expected: 3F, Got: 3F, Status: PASS
-Expected: 8E, Got: 8E, Status: PASS
-Expected: 12, Got: 12, Status: PASS
-Expected: 38, Got: 38, Status: PASS
-Expected: 08, Got: 08, Status: PASS
-Expected: D0, Got: D0, Status: PASS
-Expected: 38, Got: 38, Status: PASS
-Expected: F4, Got: F4, Status: PASS
-Expected: DA, Got: DA, Status: PASS
-Expected: 79, Got: 79, Status: PASS
-Expected: B1, Got: B1, Status: PASS
-Expected: F9, Got: F9, Status: PASS
-Expected: B4, Got: B4, Status: PASS
-Expected: 8B, Got: 8B, Status: PASS
-Expected: 5D, Got: 5D, Status: PASS
-Passed tests: 300, Failed tests: 0
+mkdir build
+cd build
+vsim -c -do "do ../ps2.do; quit"
 ```
+Do not panic if the following output shows up on the command line: ``# ** Failure: Simulation done``. This is a VHDL quirk. However, you need to ensure no test fails. Simulation results can be found in the ``status_reports.txt`` files generated by the Python scripts invoked by ModelSim. Refer to the tree diagram in the [Project file structure (RTL)](#project-file-structure-rtl) section of this README document.   
