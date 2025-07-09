@@ -112,6 +112,14 @@ Here's a list of components that I used for additional verification of my RTL de
 To test the projects (design and simulation), you'll need to install Quartus and ModelSim.  
 Furthermore, you must add the programs to your system PATH environment variable. This will allow you to invoke both applications from the command line. This applies to Linux and Windows users. Explanations of how to run design and simulation projects on the command line are given in the README section of each project.  
 
+Adding Quartus to system PATH for Linux (Ubuntu) users:  
+Open the `.bashrc` file and add the following lines.   
+```
+export MY_QUARTUS_PATH="/opt/intelFPGA_lite/20.1/quartus"
+export PATH="$MY_QUARTUS_PATH/bin:$PATH"
+```
+Run `source ~/.bashrc` and restart your terminal.   
+
 ## Helpful resources  
 1. RTL Hardware Design Using VHDL - Pong P. Chu
 2. FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu
