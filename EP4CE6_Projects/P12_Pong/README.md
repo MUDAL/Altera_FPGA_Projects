@@ -213,12 +213,3 @@ Do not panic if the following output shows up on the command line: ``# ** Failur
 # ** Note: Score 1: 05, Score 2: 05
 #    Time: 3030 ns  Iteration: 4  Instance: /score_logic_tb
 ```
-NB: You need to create an environment variable to store the Quartus installation root in order to avoid the following error: "ERROR: quartus_root not set and MY_QUARTUS_PATH environment variable not found." The steps required to achieve this are explained below.  
-
-For Linux (Ubuntu) users:  
-Open the `.bashrc` file and add the following lines.   
-```
-export MY_QUARTUS_PATH="/opt/intelFPGA_lite/20.1/quartus"
-export PATH="$MY_QUARTUS_PATH/bin:$PATH"
-```
-Run `source ~/.bashrc` and restart your terminal.   
