@@ -27,3 +27,6 @@
 
 # STM32CubeIDE launch configs
 **/*.launch*
+
+# STM32CubeIDE IDE-specific metadata
+**/.mxproject
