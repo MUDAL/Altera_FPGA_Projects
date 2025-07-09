@@ -73,12 +73,6 @@ if {$make_assignments} {
 	set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 	set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 	set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-	set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-	set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH vga_main_vhd_tst -section_id eda_simulation
-	set_global_assignment -name EDA_TEST_BENCH_NAME vga_main_vhd_tst -section_id eda_simulation
-	set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id vga_main_vhd_tst
-	set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME vga_main_vhd_tst -section_id vga_main_vhd_tst
-	set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/vga_main.vht -section_id vga_main_vhd_tst
 	set_global_assignment -name MIF_FILE ../src/mif/bitmap.mif
 	set_global_assignment -name VHDL_FILE ../src/vga_main.vhd
 	set_global_assignment -name VHDL_FILE ../src/lib/vga_sync.vhd
