@@ -2,7 +2,8 @@
 
 This repository contains demo projects for those who are interested in getting started with FPGA development.  
 The EP4CE6E22C8N FPGA board is a major requirement for running and testing the projects in this repository.  
-All the projects in this repository strictly follow the Synchronous Design Methodology and are written in VHDL.   
+All the RTL projects in this repository strictly follow the Synchronous Design Methodology and are written in VHDL.  
+The projects have been tested on Windows 10 and Ubuntu 25.04.  
 
 ## OMDAZZ Altera Cyclone IV EP4CE6 FPGA Board  
 Source: [Vendor's Page](https://a.aliexpress.com/_EQstVsj)  
@@ -121,5 +122,6 @@ Furthermore, you must add the programs to your system PATH environment variable.
 7. [Jvitkauskas' Repository](https://github.com/jvitkauskas/Altera-Cyclone-IV-board-V3.0)
 8. [Cyclone IV FPGA Board Schematic](https://drive.google.com/file/d/1_IB7D3a74_Vx75rmCJpaDmrPajFDsQqK/view?usp=sharing)
 9. [Expansion Board Schematic](https://drive.google.com/file/d/1hS64cwsAFvdMkdJV1rCPkyS8_Hy91g8t/view?usp=sharing)    
-10. [Vendor's Page](https://a.aliexpress.com/_EQstVsj)   
+10. [Vendor's Page](https://a.aliexpress.com/_EQstVsj)
+11. [Tcl Tutorial](https://wiki.tcl-lang.org/page/Tcl+Tutorial+Lesson+0)  
     
