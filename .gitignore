@@ -15,3 +15,15 @@
 
 # Ignore all VHDL backup files  
 **/*vhd.bak
+
+# STM32CubeIDE build outputs
+**/Debug/
+**/Release/
+**/*.elf
+**/*.bin
+**/*.hex
+**/*.map
+**/*.lst
+
+# STM32CubeIDE launch configs
+**/*.launch*
