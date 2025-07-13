@@ -1,12 +1,7 @@
 # Interfacing an FPGA with a TL1838 IR receiver and 16x2 LCD    
 ## Description  
 Decoding IR signals from a TL1838 IR receiver using an EP4CE6 FPGA and displaying the decoded data on an LCD.  
-The IR signals being decoded are transmitted by a remote that is based on the ``NEC`` protocol. When the IR remote's  
-keys are pressed, pulse distance encoded signals are sent to the IR receiver for demodulation. The demodulated signals   
-(output of the IR receiver) are decoded by the FPGA to determine the key that was pressed. Once the signals for the  
-numeric keys are decoded, the corresponding numbers will be displayed on the LCD. The ``PREV`` and ``NEXT`` keys are 
-used in selecting the first and second rows of the LCD for data display, while other non-numeric keys will clear the  
-display when pressed.     
+The IR signals being decoded are transmitted by a remote that is based on the ``NEC`` protocol. When the IR remote's keys are pressed, pulse distance encoded signals are sent to the IR receiver for demodulation. The demodulated signals (output of the IR receiver) are decoded by the FPGA to determine the key that was pressed. Once the signals for the numeric keys are decoded, the corresponding numbers will be displayed on the LCD. The ``PREV`` and ``NEXT`` keys are used in selecting the first and second rows of the LCD for data display, while other non-numeric keys will clear the display when pressed.     
 
 ## Tools  
 - EP4CE6E22C8N Cyclone IV FPGA development board
