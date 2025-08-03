@@ -98,22 +98,64 @@ VHDL snippet of the data source's content:
 - Hynix HY57V641620ETP-H SDRAM (on the FPGA board)
 - PuTTY
 
-## How to use  
-- Clone the ``Altera_FPGA_Projects`` repository  
-- Open the ``EP4CE6_Projects/P13_SDRAM/`` directory  
-- Open the ``sdram_uart_main.qpf`` project file  
-- Intel Quartus Prime should open after the previous step  
-- After Quartus opens, click on the ``Processing`` tab  
-- Click on ``Start Compilation``  
-- After compilation, click on ``Program Device(Open Programmer)``  
-- When the Programmer window opens, load the demo project into the FPGA by clicking ``Start`` 
-
 ## Project file structure  
 - The ``VHDL`` design files are located in the ``src`` and ``lib`` directories  
 - The top-level design is the ``sdram_uart_main.vhd``  
+- The other modules or design files are located in the ``lib`` directory  
+- Testbenches are located in the ``simulation/testbench`` directory  
+- The ``simulation/testbench/sdram_behavioural_model/sdram_model.vhd`` is a non-synthesizable HDL code that mimics the behaviour of an actual SDRAM using the working principle of a block RAM. Since the SDRAM is external to the FPGA.   
+```
+.
+├── constraints
+│   └── sdram_uart_main.sdc
+├── README.md
+├── sdram_uart_main.tcl
+├── signal_tap
+│   └── sdram_uart.stp
+├── simulation
+│   ├── sdram.do
+│   └── testbench
+│       ├── pack_tb_body.vhd
+│       ├── pack_tb_header.vhd
+│       ├── sdram_behavioural_model
+│       │   └── sdram_model.vhd
+│       └── sdram_controller_tb.vhd
+└── src
+    ├── lib
+    │   ├── button.vhd
+    │   ├── data_source.vhd
+    │   ├── fifo
+    │   │   ├── fifo_control.vhd
+    │   │   ├── fifo_main.vhd
+    │   │   └── fifo_ram.vhd
+    │   ├── pkg.vhd
+    │   ├── pll
+    │   │   ├── pll.cmp
+    │   │   ├── pll.ppf
+    │   │   ├── pll.qip
+    │   │   └── pll.vhd
+    │   ├── sdram_controller.vhd
+    │   └── uart_tx.vhd
+    └── sdram_uart_main.vhd
+```
+
+## Building the project from a TCL script  
+Ensure you're in the ``EP4CE6_Projects/P13_SDRAM/`` directory before running the commands below.  
+```
+1. mkdir build  
+2. cd build
+3. quartus_sh -t ../sdram_uart_main.tcl
+4. quartus sdram_uart_main.qpf
+```
+
+## What to do when Quartus opens  
+- After Quartus opens, click on the ``Processing`` tab  
+- Click on ``Start Compilation``  
+- After compilation, click on ``Program Device(Open Programmer)``  
+- When the Programmer window opens, load the demo project into the FPGA by clicking ``Start``  
 
 ## Pinouts   
-From the ``sdram_uart_main.qsf`` file:
+From the ``sdram_uart_main.tcl`` file:  
 ```
 set_location_assignment PIN_88 -to buttons[0]
 set_location_assignment PIN_91 -to buttons[1]
@@ -161,16 +203,9 @@ set_location_assignment PIN_115 -to uart_out
 ```
 
 ## Video Demo  
-- [FPGA + SDRAM + UART intro](https://drive.google.com/file/d/1Q0aF_pKKTpE8kjtteRTlMMbw9UD-2cdN/view?usp=sharing)
-- [FPGA + SDRAM + UART demo](https://drive.google.com/file/d/1UTwjL2Go0Yo00Y_TW7jsJJBXwxKjUPyz/view?usp=sharing)
+- [FPGA + SDRAM + UART intro](https://drive.google.com/file/d/1Q0aF_pKKTpE8kjtteRTlMMbw9UD-2cdN/view?usp=sharing)  
+- [FPGA + SDRAM + UART demo](https://drive.google.com/file/d/1UTwjL2Go0Yo00Y_TW7jsJJBXwxKjUPyz/view?usp=sharing)  
 - [Using the Signal Tap Logic Analyzer](https://drive.google.com/file/d/1tOhgmP-M25bKoNxMrgj8BRlLRTDUJhxo/view?usp=sharing)    
-
-## RTL compilation report
-### 1. Resource utilization    
-![Screenshot (633)](https://github.com/user-attachments/assets/6152fa4e-2398-42bd-9f61-644ceef6163c)  
-
-### 2. Timing report  
-![Screenshot (634)](https://github.com/user-attachments/assets/811ff500-41d0-45fe-9b29-d8f1cc9fa9b2)  
 
 ## Helpful resource(s)  
 - [SDRAM Wikipedia](https://en.wikipedia.org/wiki/Synchronous_dynamic_random-access_memory)
@@ -178,3 +213,14 @@ set_location_assignment PIN_115 -to uart_out
 - [Matthew Hagerty: FPGA VHDL SDRAM Controller](https://dnotq.io/sdram/sdram.html)
 - [Hynix HY57V641620ETP-H SDRAM Datasheet](https://drive.google.com/file/d/1KJ6eZQNpEoCSRrVL5XWgRT3wEJ9XMWKl/view?usp=sharing)
 - [Micron Synchronous DRAM: MT48LC Series Datasheet](https://drive.google.com/file/d/1-jcAcKIaVkb3LXomLF-RawIMkeygFJGp/view?usp=sharing)     
+
+## Simulating the project with Modelsim  
+Ensure you're in the ``EP4CE6_Projects/P13_SDRAM/simulation/`` directory before proceeding to the next steps.  
+The ``.do`` macro files are scripts that contain commands ModelSim uses to compile design files and testbenches. These scripts automate the simulation process by preventing the need to open the ModelSim GUI. For projects with multiple ``.do`` files, the process of executing one script is applicable to the rest. Therefore, the simulation procedure for one script is shown below.  
+
+Procedure for the ``sdram.do`` script  
+```
+mkdir build
+cd build
+vsim -c -do "do ../sdram.do; quit"  
+
