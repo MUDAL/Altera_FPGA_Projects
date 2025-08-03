@@ -117,3 +117,52 @@ export MY_QUARTUS_PATH="/opt/intelFPGA_lite/20.1/quartus"
 export PATH="$MY_QUARTUS_PATH/bin:$PATH"
 ```
 Run `source ~/.bashrc` and restart your terminal.   
+
+## Recommendation(s)/Area(s) of improvement   
+At the time of creating this project, I wanted to experiment with concurrent statements a bit more. After successfully running and testing this design, I realized the `spi_tx.vhd` could use some work as far as readability and simplicity go. I could have expressed some parts of the design with **processes** instead of overusing the concurrent statements with nested combinational logic. A snippet of `spi_tx.vhd` design that can be improved is shown below.   
+```
+   -- Counters
+   cnt1_next <= cnt1_reg + 1 when (state = ST_TFT_RST and cnt1_reg /= CNT_RST)
+                               or (state = ST_5MS and cnt1_reg /= CNT_1MS)
+                               or (state = ST_120MS and cnt1_reg /= CNT_1MS)
+                               
+        else        0        when (state = ST_TFT_RST and cnt1_reg = CNT_RST)
+                               or (state = ST_5MS and cnt1_reg = CNT_1MS)
+                               or (state = ST_120MS and cnt1_reg = CNT_1MS)                         
+        else    cnt1_reg;
+   
+   cnt2_next <= cnt2_reg + 1 when (state = ST_5MS and cnt1_reg = CNT_1MS
+                                   and cnt2_reg /= CNT_005) 
+                               or (state = ST_120MS and cnt1_reg = CNT_1MS
+                                   and cnt2_reg /= CNT_120)
+                               
+        else        0        when (state = ST_5MS and cnt1_reg = CNT_1MS
+                                   and cnt2_reg = CNT_005)
+                               or (state = ST_120MS and cnt1_reg = CNT_1MS
+                                   and cnt2_reg = CNT_120)
+        else    cnt2_reg;
+   
+   index_next <= index_reg - 1 when dc_mode = '1' and sck2_reg = '1' 
+                                and index_reg > 0
+                               
+         else        7         when dc_mode = '1' and sck2_reg = '1'
+                                and index_reg = 0
+         else    index_reg;
+   
+   cnt3_next <= cnt3_reg + 1 when state = ST_SEND_PIXELS and sck2_reg = '1'
+                              and index_reg = 0 and cnt3_reg /= CNT_BYTES
+         
+         else       0        when state = ST_SEND_PIXELS and sck2_reg = '1'
+                              and index_reg = 0 and cnt3_reg = CNT_BYTES
+         else   cnt3_reg;
+   
+   cnt4_next <= cnt4_reg + 1 when state = ST_SEND_PIXELS and sck2_reg = '1'
+                              and index_reg = 0 and cnt3_reg = CNT_BYTES
+                              and cnt4_reg /= CNT_006
+                              
+        else        0        when state = ST_SEND_PIXELS and sck2_reg = '1' 
+                              and index_reg = 0 and cnt3_reg = CNT_BYTES 
+                              and cnt4_reg = CNT_006
+        else    cnt4_reg;
+```
+
