@@ -149,3 +149,6 @@ export MY_QUARTUS_PATH="/opt/intelFPGA_lite/20.1/quartus"
 export PATH="$MY_QUARTUS_PATH/bin:$PATH"
 ```
 Run `source ~/.bashrc` and restart your terminal.   
+
+## Recommendation(s)/Area(s) of improvement  
+Same as project 10.  
