@@ -103,7 +103,7 @@ VHDL snippet of the data source's content:
 - The top-level design is the ``sdram_uart_main.vhd``  
 - The other modules or design files are located in the ``lib`` directory  
 - Testbenches are located in the ``simulation/testbench`` directory  
-- The ``simulation/testbench/sdram_behavioural_model/sdram_model.vhd`` is a non-synthesizable HDL code that mimics the behaviour of an actual SDRAM using the working principle of a block RAM. Since the SDRAM is external to the FPGA, there is no direct way of verifying the correctness of the SDRAM controller in simulation without creating a behavioural HDL model to emulate its modes operation.  
+- The ``simulation/testbench/sdram_behavioural_model/sdram_model.vhd`` is a non-synthesizable HDL code that mimics the behaviour of an actual SDRAM using the working principle of a block RAM. Since the SDRAM is external to the FPGA, there is no direct way of verifying the correctness of the SDRAM controller in simulation without creating a behavioural HDL model to emulate the SDRAM's operation.  
 ```
 .
 ├── constraints
