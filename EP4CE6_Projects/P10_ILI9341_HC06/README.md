@@ -119,7 +119,9 @@ export PATH="$MY_QUARTUS_PATH/bin:$PATH"
 Run `source ~/.bashrc` and restart your terminal.   
 
 ## Recommendation(s)/Area(s) of improvement   
-At the time of creating this project, I wanted to experiment with concurrent statements a bit more. After successfully running and testing this design, I realized the `spi_tx.vhd` could use some work as far as readability and simplicity go. I could have expressed some parts of the design with **processes** instead of overusing the concurrent statements with nested combinational logic. A snippet of `spi_tx.vhd` design that can be improved is shown below.   
+At the time of creating this project, I wanted to experiment with concurrent statements a bit more. After successfully testing and running this design, I realized the `spi_tx.vhd` could use some work as far as readability and simplicity go. I could have expressed some parts of the design with **processes** instead of overusing the concurrent statements with nested combinational logic. Furthermore, the naming convention can be made more intuitive. The SPI finite state machine (FSM) can be made more modular by separating the logic for initializing the ILI9341 hardware from the logic that writes pixel data to it. A snippet of `spi_tx.vhd` design that can be improved is shown below.   
+
+**Processes/sequential statements would be easier to read.**  
 ```
    -- Counters
    cnt1_next <= cnt1_reg + 1 when (state = ST_TFT_RST and cnt1_reg /= CNT_RST)
