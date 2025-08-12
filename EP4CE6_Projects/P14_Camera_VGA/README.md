@@ -16,7 +16,10 @@ This project interfaces the Altera Cyclone IV FPGA board with an OV7670 camera m
 ## Video Demos  
 1. [Demo 1](https://drive.google.com/file/d/1hyCfR6MCVKNZgMHqDQ0QiwqhTbvfTtTr/view?usp=sharing)    
 2. [Demo 2](https://drive.google.com/file/d/19gjCazF4Rb4gBiK5P6o5fEhqkvj4tZh7/view?usp=sharing)     
-3. [Demo 3](https://drive.google.com/file/d/1_qkbfj5sArfDHk0tcXBcBg_l4YmisaVn/view?usp=sharing)       
+3. [Demo 3](https://drive.google.com/file/d/1_qkbfj5sArfDHk0tcXBcBg_l4YmisaVn/view?usp=sharing)
+
+## Helpful resource(s)  
+- [Embedded Programmer: Hacking the OV7670 camera module (SCCB cheat sheet inside)](http://embeddedprogrammer.blogspot.com/2012/07/hacking-ov7670-camera-module-sccb-cheat.html)    
 
 
 
