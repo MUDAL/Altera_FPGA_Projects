@@ -21,11 +21,67 @@ This project interfaces the Altera Cyclone IV FPGA board with an OV7670 camera m
 - CH340 USB-TTL Converter
 - Hynix HY57V641620ETP-H SDRAM (on the FPGA board)
 
-## Project file structure  
-
+## Project file structure   
+- The ``VHDL`` design files are located in the ``src`` and ``lib`` directories  
+- The top-level design is the ``frame_capture_main.vhd``  
+- The other modules or design files are located in the ``lib`` directory  
+- Testbenches are located in the ``simulation/testbench`` directory  
+- The ``simulation/testbench/sdram_behavioural_model/sdram_model.vhd`` is a non-synthesizable HDL code that mimics the behaviour of an actual SDRAM using the working principle of a block RAM. Since the SDRAM is external to the FPGA, there is no direct way of verifying the correctness of the SDRAM controller in simulation without creating a behavioural HDL model to emulate the SDRAM's operation.  
+```
+.
+├── constraints
+│   └── frame_capture_main.sdc
+├── frame_capture_main.tcl
+├── README.md
+├── simulation
+│   ├── main.do
+│   └── testbench
+│       ├── camera_interface_tb.vhd
+│       ├── clock_divider_tb.vhd
+│       ├── fifo_control_tb.vhd
+│       ├── frame_capture_main_tb.vhd
+│       ├── grayscale_circuit_tb.vhd
+│       ├── pack_tb_body.vhd
+│       ├── pack_tb_header.vhd
+│       ├── sdram_behavioural_model
+│       │   └── sdram_model.vhd
+│       ├── sdram_controller_tb.vhd
+│       └── vga_main_tb.vhd
+└── src
+    ├── frame_capture_main.vhd
+    └── lib
+        ├── button.vhd
+        ├── camera_interface.vhd
+        ├── clock_divider.vhd
+        ├── fifo
+        │   ├── fifo_control.vhd
+        │   ├── fifo_main.vhd
+        │   └── fifo_ram.vhd
+        ├── grayscale_circuit.vhd
+        ├── pkg.vhd
+        ├── pll
+        │   ├── pll.ppf
+        │   ├── pll.qip
+        │   └── pll.vhd
+        ├── sdram_controller.vhd
+        └── vga
+            ├── vga_main.vhd
+            └── vga_sync.vhd
+```
 ## Building the project from a TCL script 
+Ensure you're in the ``EP4CE6_Projects/P14_Camera_VGA/`` directory before running the commands below.  
+```
+1. mkdir build  
+2. cd build
+3. quartus_sh -t ../frame_capture_main.tcl
+4. quartus frame_capture_main.qpf
+```
 
 ## What to do when Quartus opens  
+- After Quartus opens, click on the ``Processing`` tab  
+- Click on ``Start Compilation``  
+- After compilation, click on ``Program Device(Open Programmer)``  
+- When the Programmer window opens, load the demo project into the FPGA by clicking ``Start``  
 
 ## Pinouts  
 
