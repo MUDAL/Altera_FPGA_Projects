@@ -84,6 +84,79 @@ Ensure you're in the ``EP4CE6_Projects/P14_Camera_VGA/`` directory before runnin
 - When the Programmer window opens, load the demo project into the FPGA by clicking ``Start``  
 
 ## Pinouts  
+```
+set_location_assignment PIN_59 -to addr[11]
+set_location_assignment PIN_75 -to addr[10]
+set_location_assignment PIN_60 -to addr[9]
+set_location_assignment PIN_64 -to addr[8]
+set_location_assignment PIN_65 -to addr[7]
+set_location_assignment PIN_66 -to addr[6]
+set_location_assignment PIN_67 -to addr[5]
+set_location_assignment PIN_68 -to addr[4]
+set_location_assignment PIN_83 -to addr[3]
+set_location_assignment PIN_80 -to addr[2]
+set_location_assignment PIN_77 -to addr[1]
+set_location_assignment PIN_76 -to addr[0]
+set_location_assignment PIN_74 -to bank[1]
+set_location_assignment PIN_73 -to bank[0]
+set_location_assignment PIN_70 -to cas_n
+set_location_assignment PIN_58 -to cke
+set_location_assignment PIN_23 -to clk
+set_location_assignment PIN_72 -to cs_n
+set_location_assignment PIN_98 -to data_in[7]
+set_location_assignment PIN_99 -to data_in[6]
+set_location_assignment PIN_100 -to data_in[5]
+set_location_assignment PIN_101 -to data_in[4]
+set_location_assignment PIN_103 -to data_in[3]
+set_location_assignment PIN_104 -to data_in[2]
+set_location_assignment PIN_105 -to data_in[1]
+set_location_assignment PIN_106 -to data_in[0]
+set_location_assignment PIN_44 -to dq[15]
+set_location_assignment PIN_46 -to dq[14]
+set_location_assignment PIN_49 -to dq[13]
+set_location_assignment PIN_50 -to dq[12]
+set_location_assignment PIN_51 -to dq[11]
+set_location_assignment PIN_52 -to dq[10]
+set_location_assignment PIN_53 -to dq[9]
+set_location_assignment PIN_54 -to dq[8]
+set_location_assignment PIN_39 -to dq[7]
+set_location_assignment PIN_38 -to dq[6]
+set_location_assignment PIN_34 -to dq[5]
+set_location_assignment PIN_33 -to dq[4]
+set_location_assignment PIN_32 -to dq[3]
+set_location_assignment PIN_31 -to dq[2]
+set_location_assignment PIN_30 -to dq[1]
+set_location_assignment PIN_28 -to dq[0]
+set_location_assignment PIN_42 -to ldqm
+set_location_assignment PIN_55 -to udqm
+set_location_assignment PIN_71 -to ras_n
+set_location_assignment PIN_25 -to rst_n
+set_location_assignment PIN_69 -to we_n
+set_location_assignment PIN_89 -to href
+set_location_assignment PIN_90 -to pclk
+set_location_assignment PIN_88 -to vsync
+set_location_assignment PIN_87 -to xclk
+set_location_assignment PIN_43 -to sclk
+set_location_assignment PIN_11 -to vga_hsync
+set_location_assignment PIN_128 -to vga_rgb[15]
+set_location_assignment PIN_129 -to vga_rgb[14]
+set_location_assignment PIN_132 -to vga_rgb[13]
+set_location_assignment PIN_133 -to vga_rgb[12]
+set_location_assignment PIN_135 -to vga_rgb[11]
+set_location_assignment PIN_136 -to vga_rgb[10]
+set_location_assignment PIN_137 -to vga_rgb[9]
+set_location_assignment PIN_138 -to vga_rgb[8]
+set_location_assignment PIN_141 -to vga_rgb[7]
+set_location_assignment PIN_142 -to vga_rgb[6]
+set_location_assignment PIN_143 -to vga_rgb[5]
+set_location_assignment PIN_144 -to vga_rgb[4]
+set_location_assignment PIN_1 -to vga_rgb[3]
+set_location_assignment PIN_2 -to vga_rgb[2]
+set_location_assignment PIN_3 -to vga_rgb[1]
+set_location_assignment PIN_10 -to vga_rgb[0]
+set_location_assignment PIN_7 -to vga_vsync
+set_location_assignment PIN_91 -to button_in
+```
 
 ## Video Demos  
 1. [Demo 1](https://drive.google.com/file/d/1hyCfR6MCVKNZgMHqDQ0QiwqhTbvfTtTr/view?usp=sharing)    
