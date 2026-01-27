@@ -173,7 +173,6 @@ The images below illustrate how to achieve this.
 
 ## Helpful resource(s)  
 - FPGA Prototyping By VHDL Examples (Xilinx Spartan-3 Version) - Pong P. Chu  
-- [tinyvga.com](http://tinyvga.com/)
 - [Generating Memory Initialization File with MATLAB: Paul_sysu](https://stackoverflow.com/questions/29862161/extracting-memory-initialization-file-mif-from-a-bmp-photo)  
 
 ## Simulating the project with Modelsim  
