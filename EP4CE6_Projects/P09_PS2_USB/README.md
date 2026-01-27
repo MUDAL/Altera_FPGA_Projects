@@ -79,7 +79,6 @@ Ensure you're in the ``EP4CE6_Projects/P09_PS2_USB/RTL/`` directory before runni
 
 ## Helpful resources  
 - [PS/2 Protocol Timing](http://www.pyroelectro.com/tutorials/ps2_keyboard_interface/theory.html)  
-- [PS/2 Keyboard Scan Codes](https://techdocs.altium.com/display/FPGA/PS2+Keyboard+Scan+Codes)
 - [STM32 as a USB HID Keyboard](https://www.youtube.com/watch?v=tj1_hsQ5PR0&list=PLfIJKC1ud8ggIvCHlwZv0W25JjQ4Hc3aT&index=4&t=574s)   
 - [USB HID Usage Tables](https://drive.google.com/file/d/17hRtNIAqpqUihBY9VkXl9vElMqQnp7lT/view?usp=sharing) [See Chapter 10]  
 - [USB Device Class Definition for Human Interface Devices (HID)](https://drive.google.com/file/d/1BABTfBDyvYt_BpdM_NCTHxbm8gGNLNiA/view?usp=sharing) [See pg. 56, 59, 60, 69]  
