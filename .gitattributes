@@ -1,5 +1,7 @@
 # Remove STM32CubeMX-generated code from Git's language statistics. 
-**/Core/** linguist-vendored
+**/Core/Src/** linguist-vendored
+**/Core/Startup/** linguist-vendored
+**/Core/Inc/** linguist-vendored
 **/Drivers/** linguist-vendored
 **/.settings/** linguist-vendored
 **/Middlewares/** linguist-vendored
