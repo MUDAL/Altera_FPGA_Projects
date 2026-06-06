@@ -1,5 +1,9 @@
 # Remove STM32CubeMX-generated code from Git's language statistics. 
-**/Core/Src/** linguist-vendored
+**/Core/Src/stm32*_hal_msp.c linguist-generated=true  
+**/Core/Src/stm32*_it.c linguist-generated=true 
+**/Core/Src/syscalls.c linguist-generated=true  
+**/Core/Src/sysmem.c linguist-generated=true  
+**/Core/Src/system_stm32*.c linguist-generated=true  
 **/Core/Startup/** linguist-vendored
 **/Core/Inc/** linguist-vendored
 **/Drivers/** linguist-vendored
@@ -7,6 +11,5 @@
 **/Middlewares/** linguist-vendored
 **/USB_DEVICE/** linguist-vendored
 
-# Re-include main application code as part of language statistics.  
-**/Core/Src/main.c linguist-vendored=false 
-**/Core/Inc/main.h linguist-vendored=false
+# DO files are essentially Tcl scripts.
+*.do linguist-language=Tcl
