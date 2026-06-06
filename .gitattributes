@@ -12,4 +12,4 @@
 **/USB_DEVICE/** linguist-vendored
 
 # DO files are essentially Tcl scripts.
-*.do linguist-language=Tcl
+*.do linguist-language=Tcl 
