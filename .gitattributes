@@ -6,3 +6,7 @@
 **/.settings/** linguist-vendored
 **/Middlewares/** linguist-vendored
 **/USB_DEVICE/** linguist-vendored
+
+# Re-include main application code as part of language statistics.  
+**/Core/Src/main.c linguist-vendored=false 
+**/Core/Inc/main.h linguist-vendored=false
