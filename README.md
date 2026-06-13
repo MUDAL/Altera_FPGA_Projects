@@ -1,6 +1,6 @@
 # Altera_FPGA_Projects  
 
-This repository contains demo projects for those who are interested in getting started with FPGA development. The EP4CE6E22C8N FPGA board is a major requirement for running and testing the projects in this repository. Nearly all custom RTL designs (over 95%) in this repository were developed from scratch using VHDL, and all projects strictly comply with the Synchronous Design Methodology. The projects have been tested on Windows 10 and Ubuntu 25.04.  
+This repository contains demo projects for those who are interested in getting started with FPGA development. The EP4CE6E22C8N FPGA board is a major requirement for running and testing the projects in this repository. Nearly all custom RTL designs (over 95%) in this repository were developed from scratch using VHDL, and all projects strictly comply with the Synchronous Design Methodology. The projects have been tested on Windows 10/11, Ubuntu 25.04, 25.10, and 26.04.  
 
 ## OMDAZZ Altera Cyclone IV EP4CE6 FPGA Board  
 Source: [Vendor's Page](https://a.aliexpress.com/_EQstVsj)  
