@@ -1,11 +1,17 @@
 # Altera_FPGA_Projects  
 
-This repository contains demo projects for those who are interested in getting started with FPGA development. The EP4CE6E22C8N FPGA board is a major requirement for running and testing the projects in this repository. All the RTL projects in this repository strictly follow the Synchronous Design Methodology and are written in VHDL. The projects have been tested on Windows 10 and Ubuntu 25.04.  
+This repository contains demo projects for those who are interested in getting started with FPGA development. The EP4CE6E22C8N FPGA board is a major requirement for running and testing the projects in this repository. Nearly all custom RTL designs (over 95%) in this repository were developed from scratch using VHDL, and all projects strictly comply with the Synchronous Design Methodology. The projects have been tested on Windows 10/11, Ubuntu 25.04, 25.10, and 26.04.  
 
 ## OMDAZZ Altera Cyclone IV EP4CE6 FPGA Board  
 Source: [Vendor's Page](https://a.aliexpress.com/_EQstVsj)  
-![image](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/3b2e60d7-95fb-4722-b8ae-07905272fe2b)  
-![image](https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/985b401d-910c-47cd-a42c-5aa6f8f254fc)  
+
+<p align="center">
+    <img width=80% src="https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/3b2e60d7-95fb-4722-b8ae-07905272fe2b">
+</p>  
+
+<p align="center">
+    <img width=80% src="https://github.com/MUDAL/Altera_FPGA_Projects/assets/46250887/985b401d-910c-47cd-a42c-5aa6f8f254fc">
+</p>  
 
 ## Additional components  
 1. [AM2302 DHT22 sensor: The module with a red PCB](https://a.aliexpress.com/_EzjOeNt)    
@@ -129,4 +135,7 @@ Run `source ~/.bashrc` and restart your terminal.
 9. [Expansion Board Schematic](https://drive.google.com/file/d/1hS64cwsAFvdMkdJV1rCPkyS8_Hy91g8t/view?usp=sharing)    
 10. [Vendor's Page](https://a.aliexpress.com/_EQstVsj)
 11. [Tcl Tutorial](https://wiki.tcl-lang.org/page/Tcl+Tutorial+Lesson+0)  
-    
+
+## Contact info  
+- Gmail: eolaoluwaraji@gmail.com   
+- [LinkedIn](https://www.linkedin.com/in/olaoluwa-raji-043a18155/)        
